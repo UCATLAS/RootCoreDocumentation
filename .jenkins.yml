@@ -10,14 +10,14 @@ before_script:
 script:
   - doxygen
   - ls
-  - ls docs/
-  - ls docs/${ABV}
-  - ls tagfiles
   - git checkout master
   - git remote -v
   - git status
   - mv temp/${ABV}/html docs/${ABV}
   - mv temp/rootcore_${ABV}.tag tagfiles/*${ABV}.tag
+  - ls docs/
+  - ls docs/${ABV}
+  - ls tagfiles
   - git add docs/${ABV} tagfiles/*${ABV}.tag
   - git status
   - git commit -m "Adding docs for ${ABV}"
