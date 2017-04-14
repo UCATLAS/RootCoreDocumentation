@@ -11,8 +11,10 @@ script:
   - ls
   - ls docs/
   - ls docs/${ABV}
-  - ls tagfiles
+  - ls tagfile
+  - git stash
   - git checkout master
+  - git stash pop
   - git remote -v
   - git status
   - git add docs/${ABV} tagfiles/*${ABV}.tag
