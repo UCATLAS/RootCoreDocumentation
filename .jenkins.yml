@@ -12,4 +12,11 @@ script:
   - ls docs/
   - ls docs/${ABV}
   - ls tagfiles
-
+  - git checkout master
+  - git remote -v
+  - git status
+  - git add docs/${ABV} tagfiles/*${ABV}.tag
+  - git status
+  - git commit "Adding docs for ${ABV}"
+  - git status
+  - git push
