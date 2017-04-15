@@ -8,7 +8,7 @@ mv temp/rootcore_${ABV}.tag tagfiles/rootcore_${ABV}.tag
 echo ${ABV} >> releases
 sort -ur releases
 > docs/index.html
-for release in releases; do echo "<li><a href='${release}/'>${release}</a></li>" >> docs/index.html; done
+for release in `cat releases`; do echo "<li><a href='${release}/'>${release}</a></li>" >> docs/index.html; done
 ls docs/
 ls docs/${ABV}
 ls tagfiles
