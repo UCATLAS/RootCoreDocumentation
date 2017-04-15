@@ -1,6 +1,15 @@
 doxygen
 ls
 git remote -v
+# this part handles moving the xml over
+git checkout xml
+mkdir -p xml/${ABV}
+cp -R temp/${ABV}/xml/* xml/${ABV}/.
+git add xml/${ABV}
+git commit -m "Adding xml for ${ABV}" --author="xAH-bot <giordon.holtsberg.stark@cern.ch>"
+git status -uno
+git push origin xml
+# this part handles moving the html over
 git checkout master
 git status -uno
 mkdir -p docs/${ABV}
@@ -15,11 +24,4 @@ ls docs/${ABV}
 ls tagfiles
 git add docs/${ABV} tagfiles/*${ABV}.tag docs/index.html releases
 git commit -m "Adding docs for ${ABV}" --author="xAH-bot <giordon.holtsberg.stark@cern.ch>"
-git status -uno
-# this part handles moving the xml over
-git checkout xml
-mkdir -p xml/${ABV}
-cp -R temp/${ABV}/xml/* xml/${ABV}/.
-git add xml/${ABV}
-git commit -m "Adding xml for ${ABV}" --author="xAH-bot <giordon.holtsberg.stark@cern.ch>"
 git status -uno
