@@ -4,8 +4,8 @@ git remote -v
 git checkout master
 git status -uno
 mkdir -p docs/${ABV}
-mv temp/${ABV}/html/* docs/${ABV}/.
-mv temp/rootcore_${ABV}.tag tagfiles/rootcore_${ABV}.tag
+cp -R temp/${ABV}/html/* docs/${ABV}/.
+cp -R temp/rootcore_${ABV}.tag tagfiles/rootcore_${ABV}.tag
 echo ${ABV} >> releases
 sort -ur -o releases releases
 > docs/index.html
@@ -19,7 +19,7 @@ git status -uno
 # this part handles moving the xml over
 git checkout xml
 mkdir -p xml/${ABV}
-mv temp/${ABV}/xml/* xml/${ABV}/.
+cp -R temp/${ABV}/xml/* xml/${ABV}/.
 git add xml/${ABV}
 git commit -m "Adding xml for ${ABV}" --author="xAH-bot <giordon.holtsberg.stark@cern.ch>"
 git status -uno
