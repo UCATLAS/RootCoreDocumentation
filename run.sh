@@ -3,7 +3,7 @@ ls
 git checkout master
 git remote -v
 git status
-mv temp/${ABV}/html docs/${ABV}
+mv temp/${ABV}/html/* docs/${ABV}
 mv temp/rootcore_${ABV}.tag tagfiles/rootcore_${ABV}.tag
 echo ${ABV} >> releases
 sort -ur -o releases releases
