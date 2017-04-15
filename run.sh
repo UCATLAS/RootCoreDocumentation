@@ -2,7 +2,6 @@ doxygen
 ls
 git remote -v
 git checkout master
-git pull
 git status -uno
 mkdir -p docs/${ABV}
 mv temp/${ABV}/html/* docs/${ABV}/.
@@ -19,7 +18,6 @@ git commit -m "Adding docs for ${ABV}" --author="xAH-bot <giordon.holtsberg.star
 git status -uno
 # this part handles moving the xml over
 git checkout xml
-git pull
 mkdir -p xml/${ABV}
 mv temp/${ABV}/xml/* xml/${ABV}/.
 git add xml/${ABV}
