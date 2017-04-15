@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d7/d03/classIJetGroomer" kind="class" prot="public">
+    <compoundname>IJetGroomer</compoundname>
+    <basecompoundref refid="d4/d20/classasg_1_1IAsgTool" prot="public" virt="virtual">asg::IAsgTool</basecompoundref>
+    <derivedcompoundref refid="d6/d19/classJetPruner" prot="public" virt="virtual">JetPruner</derivedcompoundref>
+    <derivedcompoundref refid="da/dda/classJetReclusterer" prot="public" virt="virtual">JetReclusterer</derivedcompoundref>
+    <derivedcompoundref refid="da/d6c/classJetSplitter" prot="public" virt="virtual">JetSplitter</derivedcompoundref>
+    <derivedcompoundref refid="dd/d22/classJetTrimmer" prot="public" virt="virtual">JetTrimmer</derivedcompoundref>
+    <includes refid="de/d66/IJetGroomer_8h" local="no">IJetGroomer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d7/d03/classIJetGroomer_1a1ce9ffc7c6a82a5a8d54646c4f330ba9" prot="private" static="no" mutable="no">
+        <type>const <ref refid="d9/df2/classIJetPseudojetRetriever" kindref="compound">IJetPseudojetRetriever</ref> *</type>
+        <definition>const IJetPseudojetRetriever* IJetGroomer::m_ppjr</definition>
+        <argsstring></argsstring>
+        <name>m_ppjr</name>
+        <briefdescription>
+<para>Pseudojet retriever. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetGroomer.h" line="44" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetGroomer.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d7/d03/classIJetGroomer_1a6b14ccb43ab5f63cc2615f13fa7ea8ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>IJetGroomer::IJetGroomer</definition>
+        <argsstring>()</argsstring>
+        <name>IJetGroomer</name>
+        <briefdescription>
+<para>Ctor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetGroomer.h" line="23" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/Root/IJetGroomer.cxx" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d03/classIJetGroomer_1a68f0a13d71490306bf5df16490dc3b71" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>IJetGroomer::~IJetGroomer</definition>
+        <argsstring>()</argsstring>
+        <name>~IJetGroomer</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetGroomer.h" line="26" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/Root/IJetGroomer.cxx" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d03/classIJetGroomer_1a895336fc42d4ccdfe4505d397449d9b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int IJetGroomer::groom</definition>
+        <argsstring>(const xAOD::Jet &amp;jin, xAOD::JetContainer &amp;jout) const =0</argsstring>
+        <name>groom</name>
+        <reimplementedby refid="dd/d22/classJetTrimmer_1ae8536808eaf5a044c6c9928fe80c0328">groom</reimplementedby>
+        <reimplementedby refid="da/d6c/classJetSplitter_1a4b10284a6193e2bd38bba65190660037">groom</reimplementedby>
+        <reimplementedby refid="da/dda/classJetReclusterer_1ac86d200e83ea657f47fdc1f7f6a9e352">groom</reimplementedby>
+        <reimplementedby refid="d6/d19/classJetPruner_1a19918940056318270c9728a1603cf077">groom</reimplementedby>
+        <param>
+          <type>const <ref refid="db/d9c/classxAOD_1_1Jet__v1" kindref="compound">xAOD::Jet</ref> &amp;</type>
+          <declname>jin</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::JetContainer</ref> &amp;</type>
+          <declname>jout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Transform jet. If accepted, the new jet is added to the container. Return codes:<itemizedlist>
+<listitem><para>0 for success.</para></listitem><listitem><para>&gt;0 if jet is rejected</para></listitem><listitem><para>&lt;0 for error </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetGroomer.h" line="33"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d03/classIJetGroomer_1a1c66fd10dad09918ed21fc99e118d0df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="d9/df2/classIJetPseudojetRetriever" kindref="compound">IJetPseudojetRetriever</ref> *</type>
+        <definition>const IJetPseudojetRetriever * IJetGroomer::pseudojetRetriever</definition>
+        <argsstring>() const </argsstring>
+        <name>pseudojetRetriever</name>
+        <briefdescription>
+<para>Return the pseudojet retriever associated with this tool. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetGroomer.h" line="36" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/Root/IJetGroomer.cxx" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d03/classIJetGroomer_1a44a7371676a8656b0a91264123728804" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void IJetGroomer::setPseudojetRetriever</definition>
+        <argsstring>(const IJetPseudojetRetriever *ppjr)</argsstring>
+        <name>setPseudojetRetriever</name>
+        <param>
+          <type>const <ref refid="d9/df2/classIJetPseudojetRetriever" kindref="compound">IJetPseudojetRetriever</ref> *</type>
+          <declname>ppjr</declname>
+        </param>
+        <briefdescription>
+<para>Set the pseudojet retriever associated with this tool. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetGroomer.h" line="39" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/Root/IJetGroomer.cxx" bodystart="23" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="d7/d03/classIJetGroomer" kindref="compound">IJetGroomer</ref> is a dual-use tool interface for grooming jets, i.e. transforming one jet into another. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="9655">
+        <label>JetSplitter</label>
+        <link refid="da/d6c/classJetSplitter"/>
+        <childnode refid="9651" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9653">
+        <label>JetPruner</label>
+        <link refid="d6/d19/classJetPruner"/>
+        <childnode refid="9651" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9652">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="9651">
+        <label>IJetGroomer</label>
+        <link refid="d7/d03/classIJetGroomer"/>
+        <childnode refid="9652" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9654">
+        <label>JetReclusterer</label>
+        <link refid="da/dda/classJetReclusterer"/>
+        <childnode refid="9651" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9656">
+        <label>JetTrimmer</label>
+        <link refid="dd/d22/classJetTrimmer"/>
+        <childnode refid="9651" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9659">
+        <label>IJetPseudojetRetriever</label>
+        <link refid="d9/df2/classIJetPseudojetRetriever"/>
+        <childnode refid="9658" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9658">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="9657">
+        <label>IJetGroomer</label>
+        <link refid="d7/d03/classIJetGroomer"/>
+        <childnode refid="9658" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9659" relation="usage">
+          <edgelabel>m_ppjr</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetGroomer.h" line="17" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetGroomer.h" bodystart="17" bodyend="46"/>
+    <listofallmembers>
+      <member refid="d7/d03/classIJetGroomer_1a895336fc42d4ccdfe4505d397449d9b1" prot="public" virt="pure-virtual"><scope>IJetGroomer</scope><name>groom</name></member>
+      <member refid="d7/d03/classIJetGroomer_1a6b14ccb43ab5f63cc2615f13fa7ea8ee" prot="public" virt="non-virtual"><scope>IJetGroomer</scope><name>IJetGroomer</name></member>
+      <member refid="d7/d03/classIJetGroomer_1a1ce9ffc7c6a82a5a8d54646c4f330ba9" prot="private" virt="non-virtual"><scope>IJetGroomer</scope><name>m_ppjr</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1af1aac990b958e92bf38123318d926e67" prot="public" virt="pure-virtual"><scope>IJetGroomer</scope><name>print</name></member>
+      <member refid="d7/d03/classIJetGroomer_1a1c66fd10dad09918ed21fc99e118d0df" prot="public" virt="virtual"><scope>IJetGroomer</scope><name>pseudojetRetriever</name></member>
+      <member refid="d7/d03/classIJetGroomer_1a44a7371676a8656b0a91264123728804" prot="public" virt="virtual"><scope>IJetGroomer</scope><name>setPseudojetRetriever</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1a77b49d52f1f8c272cb665b8309d6082d" prot="public" virt="virtual"><scope>IJetGroomer</scope><name>~IAsgTool</name></member>
+      <member refid="d7/d03/classIJetGroomer_1a68f0a13d71490306bf5df16490dc3b71" prot="public" virt="virtual"><scope>IJetGroomer</scope><name>~IJetGroomer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

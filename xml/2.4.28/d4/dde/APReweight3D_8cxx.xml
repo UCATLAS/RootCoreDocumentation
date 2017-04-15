@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d4/dde/APReweight3D_8cxx" kind="file">
+    <compoundname>APReweight3D.cxx</compoundname>
+    <includes refid="d9/d5d/APReweight3D_8h" local="yes">ReweightUtils/APReweight3D.h</includes>
+    <includes refid="d5/d5c/APWeightEntry_8h" local="yes">ReweightUtils/APWeightEntry.h</includes>
+    <includes refid="de/df3/MathTools_8h" local="yes">ReweightUtils/MathTools.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="yes">TTree.h</includes>
+    <includes local="yes">TH3.h</includes>
+    <incdepgraph>
+      <node id="261613">
+        <label>APReweightBase.h</label>
+        <link refid="d3/d99/APReweightBase_8h_source"/>
+        <childnode refid="261614" relation="include">
+        </childnode>
+      </node>
+      <node id="261611">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweight3D.cxx</label>
+        <link refid="APReweight3D.cxx"/>
+        <childnode refid="261612" relation="include">
+        </childnode>
+        <childnode refid="261616" relation="include">
+        </childnode>
+        <childnode refid="261618" relation="include">
+        </childnode>
+        <childnode refid="261619" relation="include">
+        </childnode>
+        <childnode refid="261620" relation="include">
+        </childnode>
+        <childnode refid="261621" relation="include">
+        </childnode>
+      </node>
+      <node id="261616">
+        <label>ReweightUtils/APWeightEntry.h</label>
+        <link refid="d5/d5c/APWeightEntry_8h_source"/>
+        <childnode refid="261617" relation="include">
+        </childnode>
+      </node>
+      <node id="261612">
+        <label>ReweightUtils/APReweight3D.h</label>
+        <link refid="d9/d5d/APReweight3D_8h_source"/>
+        <childnode refid="261613" relation="include">
+        </childnode>
+        <childnode refid="261615" relation="include">
+        </childnode>
+      </node>
+      <node id="261615">
+        <label>vector</label>
+      </node>
+      <node id="261617">
+        <label>Rtypes.h</label>
+      </node>
+      <node id="261619">
+        <label>iostream</label>
+      </node>
+      <node id="261614">
+        <label>TNamed.h</label>
+      </node>
+      <node id="261620">
+        <label>TTree.h</label>
+      </node>
+      <node id="261621">
+        <label>TH3.h</label>
+      </node>
+      <node id="261618">
+        <label>ReweightUtils/MathTools.h</label>
+        <link refid="de/df3/MathTools_8h_source"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="d4/dde/APReweight3D_8cxx_1a52c022012cbc82c53ae835fbe8d4d655" prot="public" static="no">
+        <name>APReweight3D_cxx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweight3D.cxx" line="1" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweight3D.cxx" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#define<sp/>APReweight3D_cxx</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;ReweightUtils/APReweight3D.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ReweightUtils/APWeightEntry.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ReweightUtils/MathTools.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TTree.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TH3.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="d3/d07/classAPReweight3D_1a8884fd7dfdcc2bcd63a761ae96d0c59f" kindref="member">APReweight3D::APReweight3D</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><ref refid="d5/d8d/classAPReweightBase" kindref="compound">APReweightBase</ref>(),</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>_denominator_hist(0),</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>_numerator_hist(0),</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>_n_bins_x(0),</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>_n_bins_y(0),</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>_n_bins_z(0),</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>_axis_x(0),</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>_axis_y(0),</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>_axis_z(0)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>_isQuiet<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="d3/d07/classAPReweight3D_1a8884fd7dfdcc2bcd63a761ae96d0c59f" kindref="member">APReweight3D::APReweight3D</ref>(TH3*<sp/>denominator_in,<sp/>TH3*<sp/>numerator_in,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isTrig)<sp/>:<sp/><ref refid="d5/d8d/classAPReweightBase" kindref="compound">APReweightBase</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>_empty_weight<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>(0,<sp/>0,<sp/>1.);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>_denominator_hist<sp/>=<sp/>(TH3D*)<sp/>denominator_in-&gt;Clone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>_numerator_hist<sp/>=<sp/>(TH3D*)<sp/>numerator_in-&gt;Clone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>_axis_x<sp/>=<sp/>(TAxis*)<sp/>_denominator_hist-&gt;GetXaxis()-&gt;Clone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>_axis_y<sp/>=<sp/>(TAxis*)<sp/>_denominator_hist-&gt;GetYaxis()-&gt;Clone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>_axis_z<sp/>=<sp/>(TAxis*)<sp/>_denominator_hist-&gt;GetZaxis()-&gt;Clone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>_n_bins_x<sp/>=<sp/>_denominator_hist-&gt;GetNbinsX();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>_n_bins_y<sp/>=<sp/>_denominator_hist-&gt;GetNbinsY();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>_n_bins_z<sp/>=<sp/>_denominator_hist-&gt;GetNbinsZ();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>_scale<sp/>=<sp/>(double)<sp/>denominator_in-&gt;GetEntries()<sp/>/<sp/>(double)<sp/>numerator_in-&gt;GetEntries();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>_isTrig<sp/>=<sp/>isTrig;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>_isQuiet<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>_n_bins_x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>_weights.push_back(vector&lt;<sp/>vector&lt;APWeightEntry*&gt;<sp/>&gt;());</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>_n_bins_y;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_weights[i].push_back(vector&lt;APWeightEntry*&gt;());</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>_n_bins_z;<sp/>++k)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>*<sp/>temp_entry<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>_denominator_hist-&gt;GetBinContent(i<sp/>+<sp/>1,<sp/>j<sp/>+<sp/>1,<sp/>k<sp/>+<sp/>1),<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)<sp/>_numerator_hist-&gt;GetBinContent(i<sp/>+<sp/>1,<sp/>j<sp/>+<sp/>1,<sp/>k<sp/>+<sp/>1),<sp/>_scale,<sp/>_isTrig);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;int&gt;<sp/>temp_vec(3,0);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;int&gt;<sp/>temp_vec_axes(3,0);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_vec[0]<sp/>=<sp/>i+1;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_vec[1]<sp/>=<sp/>j+1;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_vec[2]<sp/>=<sp/>k+1;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_vec_axes[0]<sp/>=<sp/>_n_bins_x;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_vec_axes[1]<sp/>=<sp/>_n_bins_y;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_vec_axes[2]<sp/>=<sp/>_n_bins_z;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_entry-&gt;SetCoordinates(temp_vec,temp_vec_axes);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_entry-&gt;<ref refid="d1/d16/classAPWeightEntry_1a14f659558878599eb4711c1f77ad271e" kindref="member">SetID</ref>(_ID);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_weights[i][j].push_back(temp_entry);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>_isTrig<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>_numerator_hist-&gt;GetNbinsX()*_numerator_hist-&gt;GetNbinsY()*_numerator_hist-&gt;GetNbinsZ();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>_numerator_hist-&gt;GetBinContent(i)<sp/>&gt;<sp/>_denominator_hist-&gt;GetBinContent(i)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;WARNING<sp/>in<sp/>APReweight3D::~APReweight3D(TH3*<sp/>denominator_in,<sp/>TH3*<sp/>numerator_in,<sp/>bool<sp/>isTrig)<sp/>:<sp/>Using<sp/>histograms<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>_numerator_hist-&gt;GetName()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>and<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>_denominator_hist-&gt;GetName()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>the<sp/>efficiency<sp/>is<sp/>larger<sp/>than<sp/>1<sp/>for<sp/>bin<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>i<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;!<sp/>This<sp/>is<sp/>inconsistent<sp/>and<sp/>can<sp/>lead<sp/>to<sp/>unwanted<sp/>behaviour<sp/>(weights<sp/>&gt;<sp/>1,<sp/>variance<sp/>&lt;<sp/>0<sp/>)!<sp/>Please<sp/>check<sp/>your<sp/>input<sp/>histograms.<sp/>In<sp/>order<sp/>to<sp/>avoid<sp/>negative<sp/>variances,<sp/>the<sp/>efficiency<sp/>in<sp/>this<sp/>bin<sp/>will<sp/>be<sp/>set<sp/>to<sp/>0.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_numerator_hist-&gt;SetBinContent(i,0);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d07/classAPReweight3D_1a207615905edf5bcd330fbc2124d93e6b" kindref="member">APReweight3D::ReadEfficiency</ref>(TH3*<sp/>efficiency_in,<sp/>TH3*<sp/>err_low_in,<sp/>TH3*<sp/>err_high_in)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err_high_in<sp/>==<sp/>0)<sp/>err_high_in<sp/>=<sp/>err_low_in;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><ref refid="d5/d8d/classAPReweightBase_1ad15d436b3818e80a88cd9dd7ddbac6c8" kindref="member">_empty_weight</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>(0,<sp/>0,<sp/>1.);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>_denominator_hist<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH3D(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>1,<sp/>0.,<sp/>1.,<sp/>1,<sp/>0.,<sp/>1.,<sp/>1,<sp/>0.,<sp/>1.);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>_numerator_hist<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH3D(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>1,<sp/>0.,<sp/>1.,<sp/>1,<sp/>0.,<sp/>1.,<sp/>1,<sp/>0.,<sp/>1.);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>_axis_x<sp/>=<sp/>(TAxis*)<sp/>efficiency_in-&gt;GetXaxis()-&gt;Clone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>_axis_y<sp/>=<sp/>(TAxis*)<sp/>efficiency_in-&gt;GetYaxis()-&gt;Clone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>_axis_z<sp/>=<sp/>(TAxis*)<sp/>efficiency_in-&gt;GetZaxis()-&gt;Clone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>_n_bins_x<sp/>=<sp/>efficiency_in-&gt;GetNbinsX();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>_n_bins_y<sp/>=<sp/>efficiency_in-&gt;GetNbinsY();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>_n_bins_z<sp/>=<sp/>efficiency_in-&gt;GetNbinsZ();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="d5/d8d/classAPReweightBase_1a33b2bc5e6e743b11af4a79c15d024a40" kindref="member">_scale</ref><sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><ref refid="d5/d8d/classAPReweightBase_1aaa9eeec4436a6d116d26ee3987cf0fc8" kindref="member">_isTrig</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>_n_bins_x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>_weights.push_back(vector&lt;<sp/>vector&lt;APWeightEntry*&gt;<sp/>&gt;());</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>_n_bins_y;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_weights[i].push_back(vector&lt;APWeightEntry*&gt;());</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>_n_bins_z;<sp/>++k)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref><sp/>*temp_entry<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_entry-&gt;<ref refid="d1/d16/classAPWeightEntry_1a263117cc573f120b9833f3dc2fa87a0c" kindref="member">ReadEfficiency</ref>(efficiency_in-&gt;GetBinContent(i<sp/>+<sp/>1,<sp/>j<sp/>+<sp/>1,<sp/>k<sp/>+<sp/>1),<sp/>err_low_in-&gt;GetBinContent(i<sp/>+<sp/>1,<sp/>j<sp/>+<sp/>1,<sp/>k<sp/>+<sp/>1),<sp/>err_high_in-&gt;GetBinContent(i<sp/>+<sp/>1,<sp/>j<sp/>+<sp/>1,<sp/>k<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;int&gt;<sp/>temp_vec(3,0);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;int&gt;<sp/>temp_vec_axes(3,0);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_vec[0]<sp/>=<sp/>i+1;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_vec[1]<sp/>=<sp/>j+1;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_vec[2]<sp/>=<sp/>k+1;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_vec_axes[0]<sp/>=<sp/>_n_bins_x;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_vec_axes[1]<sp/>=<sp/>_n_bins_y;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_vec_axes[2]<sp/>=<sp/>_n_bins_z;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_entry-&gt;SetCoordinates(temp_vec,temp_vec_axes);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_entry-&gt;<ref refid="d1/d16/classAPWeightEntry_1a14f659558878599eb4711c1f77ad271e" kindref="member">SetID</ref>(<ref refid="d5/d8d/classAPReweightBase_1a3257ca3dca895cb399a11226a5edb508" kindref="member">_ID</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_weights[i][j].push_back(temp_entry);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><ref refid="d3/d07/classAPReweight3D_1a067a9cf02b0127434c0344408da04df6" kindref="member">APReweight3D::~APReweight3D</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_denominator_hist;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_numerator_hist;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="d5/d8d/classAPReweightBase_1ad15d436b3818e80a88cd9dd7ddbac6c8" kindref="member">_empty_weight</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_axis_x;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_axis_y;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_axis_z;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>_n_bins_x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>_n_bins_y;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(vector&lt;APWeightEntry*&gt;::reverse_iterator<sp/>it<sp/>=<sp/>_weights[i][j].rbegin();<sp/>it<sp/>!=<sp/>_weights[i][j].rend();<sp/>++it)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>*it;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>_weights.clear();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>*<sp/><ref refid="d3/d07/classAPReweight3D_1a17bc52e4887bbcbf93bb086c10e35299" kindref="member">APReweight3D::GetBinWeight</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bin_x,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bin_y,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bin_z)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bin_x<sp/>==<sp/>0<sp/>||<sp/>bin_y<sp/>==<sp/>0<sp/>||<sp/>bin_z<sp/>==<sp/>0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d5/d8d/classAPReweightBase_1ad15d436b3818e80a88cd9dd7ddbac6c8" kindref="member">_empty_weight</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_weights[bin_x<sp/>-<sp/>1][bin_y<sp/>-<sp/>1][bin_z<sp/>-<sp/>1];</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>*<sp/><ref refid="d3/d07/classAPReweight3D_1a6aad35bc84a6ec1705d9506a826fda1c" kindref="member">APReweight3D::GetWeight</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value_x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value_y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value_z)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d3/d07/classAPReweight3D_1a17bc52e4887bbcbf93bb086c10e35299" kindref="member">GetBinWeight</ref>(<ref refid="d3/d07/classAPReweight3D_1af049a430c4453ed0368dfdd87c27329e" kindref="member">GetBinX</ref>(value_x),<sp/><ref refid="d3/d07/classAPReweight3D_1aad8b4043b9b3154555a3ba8e2cdbb135" kindref="member">GetBinY</ref>(value_y),<sp/><ref refid="d3/d07/classAPReweight3D_1a82cd5ba3c971b76e55318dca00c61f60" kindref="member">GetBinZ</ref>(value_z));</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal">TH3D*<sp/><ref refid="d3/d07/classAPReweight3D_1a78364085e9522270afe827eafc675604" kindref="member">APReweight3D::GetDenominatorHist</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_denominator_hist;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal">TH3D*<sp/><ref refid="d3/d07/classAPReweight3D_1a242878235d8ed3f474c1a72817cf59c7" kindref="member">APReweight3D::GetNumeratorHist</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_numerator_hist;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="d3/d07/classAPReweight3D_1a6a0f64b59c244bebb964d56001efa65a" kindref="member">APReweight3D::GetSampleScale</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d5/d8d/classAPReweightBase_1a33b2bc5e6e743b11af4a79c15d024a40" kindref="member">_scale</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d3/d07/classAPReweight3D_1ac31eb160affaf72534e3f206be7fa997" kindref="member">APReweight3D::NBins</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_n_bins_x<sp/>*<sp/>_n_bins_y*_n_bins_z;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d3/d07/classAPReweight3D_1af049a430c4453ed0368dfdd87c27329e" kindref="member">APReweight3D::GetBinX</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;=<sp/>_n_bins_x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>&gt;=<sp/>_axis_x-&gt;GetBinLowEdge(i)<sp/>&amp;&amp;<sp/>value<sp/>&lt;<sp/>_axis_x-&gt;GetBinUpEdge(i))<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="d5/d8d/classAPReweightBase_1a7662580ec2cef7f62400ce5b7a915487" kindref="member">_isQuiet</ref>)<sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;WARNING<sp/>in<sp/>APReweight3D::GetBinX:<sp/>Value<sp/>out<sp/>of<sp/>range!<sp/>Returning<sp/>0.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d3/d07/classAPReweight3D_1aad8b4043b9b3154555a3ba8e2cdbb135" kindref="member">APReweight3D::GetBinY</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;=<sp/>_n_bins_y;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>&gt;=<sp/>_axis_y-&gt;GetBinLowEdge(i)<sp/>&amp;&amp;<sp/>value<sp/>&lt;<sp/>_axis_y-&gt;GetBinUpEdge(i))<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="d5/d8d/classAPReweightBase_1a7662580ec2cef7f62400ce5b7a915487" kindref="member">_isQuiet</ref>)<sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;WARNING<sp/>in<sp/>APReweight3D::GetBinY:<sp/>Value<sp/>out<sp/>of<sp/>range!<sp/>Returning<sp/>0.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d3/d07/classAPReweight3D_1a82cd5ba3c971b76e55318dca00c61f60" kindref="member">APReweight3D::GetBinZ</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;=<sp/>_n_bins_z;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>&gt;=<sp/>_axis_z-&gt;GetBinLowEdge(i)<sp/>&amp;&amp;<sp/>value<sp/>&lt;<sp/>_axis_z-&gt;GetBinUpEdge(i))<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="d5/d8d/classAPReweightBase_1a7662580ec2cef7f62400ce5b7a915487" kindref="member">_isQuiet</ref>)<sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;WARNING<sp/>in<sp/>APReweight3D::GetBinZ:<sp/>Value<sp/>out<sp/>of<sp/>range!<sp/>Returning<sp/>0.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d07/classAPReweight3D_1aedcb06cd8423f880fa09b09af7d47036" kindref="member">APReweight3D::SetSystUncert</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rel_uncert)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>_n_bins_x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>_n_bins_y;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>_n_bins_z;<sp/>++k)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d07/classAPReweight3D_1a17bc52e4887bbcbf93bb086c10e35299" kindref="member">GetBinWeight</ref>(i,<sp/>j,<sp/>k)-&gt;<ref refid="d1/d16/classAPWeightEntry_1ada0f0515884c4262406a13c558bef135" kindref="member">SetSystUncert</ref>(rel_uncert);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d07/classAPReweight3D_1aed8d1a69b734b1a5d013028afd0b058e" kindref="member">APReweight3D::SetQuietMode</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isQuiet)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><ref refid="d5/d8d/classAPReweightBase_1a7662580ec2cef7f62400ce5b7a915487" kindref="member">_isQuiet</ref><sp/>=<sp/>isQuiet;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweight3D.cxx"/>
+  </compounddef>
+</doxygen>

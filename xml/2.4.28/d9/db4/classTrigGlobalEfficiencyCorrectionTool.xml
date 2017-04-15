@@ -1,0 +1,2737 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d9/db4/classTrigGlobalEfficiencyCorrectionTool" kind="class" prot="public">
+    <compoundname>TrigGlobalEfficiencyCorrectionTool</compoundname>
+    <basecompoundref refid="d5/dbb/classasg_1_1AsgTool" prot="public" virt="non-virtual">asg::AsgTool</basecompoundref>
+    <basecompoundref refid="db/d4a/classITrigGlobalEfficiencyCorrectionTool" prot="public" virt="virtual">ITrigGlobalEfficiencyCorrectionTool</basecompoundref>
+    <innerclass refid="d2/d1a/structTrigGlobalEfficiencyCorrectionTool_1_1CachedEfficiencies" prot="public">TrigGlobalEfficiencyCorrectionTool::CachedEfficiencies</innerclass>
+    <innerclass refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" prot="public">TrigGlobalEfficiencyCorrectionTool::Efficiencies</innerclass>
+    <innerclass refid="db/d1b/structTrigGlobalEfficiencyCorrectionTool_1_1Hierarchy" prot="public">TrigGlobalEfficiencyCorrectionTool::Hierarchy</innerclass>
+    <innerclass refid="dc/da9/classTrigGlobalEfficiencyCorrectionTool_1_1LeptonDetails" prot="public">TrigGlobalEfficiencyCorrectionTool::LeptonDetails</innerclass>
+    <innerclass refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" prot="public">TrigGlobalEfficiencyCorrectionTool::Leptons</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607c" prot="private" static="no">
+        <name>@26</name>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca6cb9d7fd653bb8561fc1875092f1a015" prot="private">
+          <name>TT_GENERIC_SINGLELEPTON</name>
+          <initializer> 0x100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca4132f8b9ec7fa10184b39006e1a3a1dd" prot="private">
+          <name>TT_SINGLE_E</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607cae0b1b861866424ecd4e6bed620c775fe" prot="private">
+          <name>TT_SINGLE_MU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca332363cffdf5f44569691e7ab8b93086" prot="private">
+          <name>TT_GENERIC_DILEPTON</name>
+          <initializer> 0x200</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607caf4bf46f60f2dc499294f34d25eb92c77" prot="private">
+          <name>TT_2E_SYM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca847c2f14ce4c750060dacb35a5a41f6f" prot="private">
+          <name>TT_2E_ASYM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca3ba0e1e74f4ee0be28da206ef0cc5cc6" prot="private">
+          <name>TT_EMU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca329ac9dcb21f4bdc8d4270c1468057e4" prot="private">
+          <name>TT_2MU_SYM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607cac31cedec72fbd7688157371c294b9750" prot="private">
+          <name>TT_2MU_ASYM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607caed20830a7e53fa511fd88bea1f84f117" prot="private">
+          <name>TT_GENERIC_TRILEPTON</name>
+          <initializer> 0x400</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607cacb418ef9b26a61f6a7cfdc87da51dda4" prot="private">
+          <name>TT_3E_SYM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607caec5dbd0f436269a6461c82ba03b0d32e" prot="private">
+          <name>TT_3E_HALFSYM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca3162cc8fb88886192cde0019a7304ec0" prot="private">
+          <name>TT_3E_ASYM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca0fdce66e5edfe2a33ed996b273774bcd" prot="private">
+          <name>TT_2E_MU_SYM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607caed02381ac407d157d6c0b96681aedfd1" prot="private">
+          <name>TT_2E_MU_ASYM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607cae1e6f37f570f10749ec47f82e6bc58a9" prot="private">
+          <name>TT_2MU_E_SYM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607cacc83c5ba3a41de896b90ac82fc3641d0" prot="private">
+          <name>TT_2MU_E_ASYM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca9e296bed7a15929ac645f29e6efdaa53" prot="private">
+          <name>TT_3MU_SYM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca468336ba737bc6675508f5d3a9d97636" prot="private">
+          <name>TT_3MU_HALFSYM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca440f2c1bc187e09d1f701cd6fcb59f6c" prot="private">
+          <name>TT_3MU_ASYM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="136" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="135" bodyend="145"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ab62db821f2daab01cc2ca2352abe6844" prot="private" static="no" mutable="no">
+        <type>ToolHandleArray&lt; <ref refid="d6/db7/classIAsgElectronEfficiencyCorrectionTool" kindref="compound">IAsgElectronEfficiencyCorrectionTool</ref> &gt;</type>
+        <definition>ToolHandleArray&lt;IAsgElectronEfficiencyCorrectionTool&gt; TrigGlobalEfficiencyCorrectionTool::m_suppliedElectronEfficiencyTools</definition>
+        <argsstring></argsstring>
+        <name>m_suppliedElectronEfficiencyTools</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="49" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aec5a613414d033ff61bcd5be35c2f9ab" prot="private" static="no" mutable="no">
+        <type>ToolHandleArray&lt; <ref refid="d6/db7/classIAsgElectronEfficiencyCorrectionTool" kindref="compound">IAsgElectronEfficiencyCorrectionTool</ref> &gt;</type>
+        <definition>ToolHandleArray&lt;IAsgElectronEfficiencyCorrectionTool&gt; TrigGlobalEfficiencyCorrectionTool::m_suppliedElectronScaleFactorTools</definition>
+        <argsstring></argsstring>
+        <name>m_suppliedElectronScaleFactorTools</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="50" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ac590eaacb298c455b1c714a8c4c3f0b4" prot="private" static="no" mutable="no">
+        <type>ToolHandleArray&lt; <ref refid="d4/d3a/classCP_1_1IMuonTriggerScaleFactors" kindref="compound">CP::IMuonTriggerScaleFactors</ref> &gt;</type>
+        <definition>ToolHandleArray&lt;CP::IMuonTriggerScaleFactors&gt; TrigGlobalEfficiencyCorrectionTool::m_suppliedMuonTools</definition>
+        <argsstring></argsstring>
+        <name>m_suppliedMuonTools</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="51" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ae5491226a7e8b38db87f9b412650eceb" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; TrigGlobalEfficiencyCorrectionTool::m_legsPerTool</definition>
+        <argsstring></argsstring>
+        <name>m_legsPerTool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="52" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a7027b53b936b937d60c8169abd675c36" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; TrigGlobalEfficiencyCorrectionTool::m_triggerCb</definition>
+        <argsstring></argsstring>
+        <name>m_triggerCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="53" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1afe88c689a93f2623fd0b9db9eb3fdf03" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TrigGlobalEfficiencyCorrectionTool::m_triggerCb15</definition>
+        <argsstring></argsstring>
+        <name>m_triggerCb15</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="54" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a0b74f6a0e6f54037ac1a133502ea6927" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TrigGlobalEfficiencyCorrectionTool::m_triggerCb16</definition>
+        <argsstring></argsstring>
+        <name>m_triggerCb16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="55" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a6884880a4e5f91b832fc252f7629dd62" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::m_guessHierarchy</definition>
+        <argsstring></argsstring>
+        <name>m_guessHierarchy</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="56" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a995fce02eec5aa5cbc145b31be905496" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TrigGlobalEfficiencyCorrectionTool::m_leptonTagDecorations</definition>
+        <argsstring></argsstring>
+        <name>m_leptonTagDecorations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="57" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a494df8e2d33da700a51c4e7014f049fd" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; TrigGlobalEfficiencyCorrectionTool::m_tagsPerTool</definition>
+        <argsstring></argsstring>
+        <name>m_tagsPerTool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="58" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a8510743d94f07925f9fbe722077e5558" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; TrigGlobalEfficiencyCorrectionTool::m_electronLegsPerTag</definition>
+        <argsstring></argsstring>
+        <name>m_electronLegsPerTag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="59" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a3329aea6b8983ead50c9557249856a66" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; TrigGlobalEfficiencyCorrectionTool::m_muonLegsPerTag</definition>
+        <argsstring></argsstring>
+        <name>m_muonLegsPerTag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="60" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ab3548588a168bd9ad57056caf9112990" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long TrigGlobalEfficiencyCorrectionTool::m_numberOfToys</definition>
+        <argsstring></argsstring>
+        <name>m_numberOfToys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="61" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1afccbfa06a51278456411788ad0e618bc" prot="private" static="no" mutable="no">
+        <type>std::hash&lt; std::string &gt;</type>
+        <definition>std::hash&lt;std::string&gt; TrigGlobalEfficiencyCorrectionTool::m_hasher</definition>
+        <argsstring></argsstring>
+        <name>m_hasher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="64" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1af29cd28e5d50a312384b4704753fe717" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::tuple&lt; std::string, float, float &gt; &gt;</type>
+        <definition>std::vector&lt;std::tuple&lt;std::string,float,float&gt; &gt; TrigGlobalEfficiencyCorrectionTool::m_declaredHierarchies</definition>
+        <argsstring></argsstring>
+        <name>m_declaredHierarchies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="67" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a34e4487fd20cfce49f24f1b0d1fc616c" prot="private" static="no" mutable="no">
+        <type>std::map&lt; size_t, std::tuple&lt; int, size_t, size_t, size_t &gt; &gt;</type>
+        <definition>std::map&lt;size_t, std::tuple&lt;int,size_t,size_t,size_t&gt; &gt; TrigGlobalEfficiencyCorrectionTool::m_declaredTriggers</definition>
+        <argsstring></argsstring>
+        <name>m_declaredTriggers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="68" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aab474e9d7cd3c41c22a22ecfeaae7870" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::pair&lt; int, int &gt; &gt;</type>
+        <definition>std::map&lt;std::string, std::pair&lt;int,int&gt; &gt; TrigGlobalEfficiencyCorrectionTool::m_declaredPeriods</definition>
+        <argsstring></argsstring>
+        <name>m_declaredPeriods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="69" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a8ce2a433cc851df8a11ec711a786c7b5" prot="private" static="no" mutable="no">
+        <type>std::map&lt; size_t, float &gt;</type>
+        <definition>std::map&lt;size_t,float &gt; TrigGlobalEfficiencyCorrectionTool::m_declaredThresholds</definition>
+        <argsstring></argsstring>
+        <name>m_declaredThresholds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="72" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1adaaffedabe6d96f006af2fc68e2b097a" prot="private" static="no" mutable="no">
+        <type>std::multimap&lt; size_t, std::tuple&lt; float, float, unsigned long &gt; &gt;</type>
+        <definition>std::multimap&lt;size_t,std::tuple&lt;float,float,unsigned long&gt; &gt; TrigGlobalEfficiencyCorrectionTool::m_cachedLegRankings</definition>
+        <argsstring></argsstring>
+        <name>m_cachedLegRankings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="73" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a035a2ad30df2189f5c7a850356df3e2c" prot="private" static="no" mutable="no">
+        <type>std::map&lt; size_t, ToolHandle&lt; <ref refid="d6/db7/classIAsgElectronEfficiencyCorrectionTool" kindref="compound">IAsgElectronEfficiencyCorrectionTool</ref> &gt; * &gt;</type>
+        <definition>std::map&lt;size_t, ToolHandle&lt;IAsgElectronEfficiencyCorrectionTool&gt;* &gt; TrigGlobalEfficiencyCorrectionTool::m_electronSfTools</definition>
+        <argsstring></argsstring>
+        <name>m_electronSfTools</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="74" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a4390ecb846793af81b2491b3c57cd88b" prot="private" static="no" mutable="no">
+        <type>std::map&lt; size_t, ToolHandle&lt; <ref refid="d6/db7/classIAsgElectronEfficiencyCorrectionTool" kindref="compound">IAsgElectronEfficiencyCorrectionTool</ref> &gt; * &gt;</type>
+        <definition>std::map&lt;size_t, ToolHandle&lt;IAsgElectronEfficiencyCorrectionTool&gt;* &gt; TrigGlobalEfficiencyCorrectionTool::m_electronEffTools</definition>
+        <argsstring></argsstring>
+        <name>m_electronEffTools</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="75" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aaa3bab0e31867b074bd90377b535f335" prot="private" static="no" mutable="no">
+        <type>std::map&lt; size_t, ToolHandle&lt; <ref refid="d4/d3a/classCP_1_1IMuonTriggerScaleFactors" kindref="compound">CP::IMuonTriggerScaleFactors</ref> &gt; * &gt;</type>
+        <definition>std::map&lt;size_t, ToolHandle&lt;CP::IMuonTriggerScaleFactors&gt;* &gt; TrigGlobalEfficiencyCorrectionTool::m_muonTools</definition>
+        <argsstring></argsstring>
+        <name>m_muonTools</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="76" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aa611afff73c840dbeec8e219478d0099" prot="private" static="no" mutable="no">
+        <type>std::set&lt; size_t &gt;</type>
+        <definition>std::set&lt;size_t&gt; TrigGlobalEfficiencyCorrectionTool::m_validLegTagPairs</definition>
+        <argsstring></argsstring>
+        <name>m_validLegTagPairs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="77" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ae433d0365b9a8968e43e0a3d9fec604a" prot="private" static="no" mutable="no">
+        <type>std::map&lt; size_t, std::string &gt;</type>
+        <definition>std::map&lt;size_t, std::string&gt; TrigGlobalEfficiencyCorrectionTool::m_muonTriggerNames</definition>
+        <argsstring></argsstring>
+        <name>m_muonTriggerNames</name>
+        <briefdescription>
+<para>// only filled for muons </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="78" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a7028f0ac4c1e12e6c4d10daadb8ad4d6" prot="private" static="no" mutable="no">
+        <type>std::map&lt; size_t, std::string &gt;</type>
+        <definition>std::map&lt;size_t, std::string&gt; TrigGlobalEfficiencyCorrectionTool::m_dictionary</definition>
+        <argsstring></argsstring>
+        <name>m_dictionary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="79" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a373b5bfd25596b4da0729266bcc2402c" prot="private" static="no" mutable="no">
+        <type><ref refid="db/d1b/structTrigGlobalEfficiencyCorrectionTool_1_1Hierarchy" kindref="compound">Hierarchy</ref> *</type>
+        <definition>Hierarchy* TrigGlobalEfficiencyCorrectionTool::m_hierarchies</definition>
+        <argsstring></argsstring>
+        <name>m_hierarchies</name>
+        <initializer> nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="82" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a9dd169a0a6f02e28e9d5a577038fc427" prot="private" static="no" mutable="no">
+        <type>size_t *</type>
+        <definition>size_t* TrigGlobalEfficiencyCorrectionTool::m_hierarchyData</definition>
+        <argsstring></argsstring>
+        <name>m_hierarchyData</name>
+        <initializer> nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="83" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1af0f8bef1654cac37761c1e328419af09" prot="private" static="no" mutable="no">
+        <type>short</type>
+        <definition>short TrigGlobalEfficiencyCorrectionTool::m_nHierarchies</definition>
+        <argsstring></argsstring>
+        <name>m_nHierarchies</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="84" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ac247bde5174d8eb125d9133c3a8a82ec" prot="private" static="no" mutable="no">
+        <type><ref refid="d2/d1a/structTrigGlobalEfficiencyCorrectionTool_1_1CachedEfficiencies" kindref="compound">CachedEfficiencies</ref> *</type>
+        <definition>CachedEfficiencies* TrigGlobalEfficiencyCorrectionTool::m_cachedEfficiencies</definition>
+        <argsstring></argsstring>
+        <name>m_cachedEfficiencies</name>
+        <initializer> nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="86" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a2248fba3684168fab9cbd40a968692f6" prot="private" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short TrigGlobalEfficiencyCorrectionTool::m_cachedEfficienciesSize</definition>
+        <argsstring></argsstring>
+        <name>m_cachedEfficienciesSize</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="87" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a0bb22a85240b909ab6d2a4b1b5d91e23" prot="private" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short TrigGlobalEfficiencyCorrectionTool::m_cachedEfficienciesCapacity</definition>
+        <argsstring></argsstring>
+        <name>m_cachedEfficienciesCapacity</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="88" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a610a5d566ee50bb3f6174ba37d3857e4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::m_usingTags</definition>
+        <argsstring></argsstring>
+        <name>m_usingTags</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="90" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a56d5478728b66fd6113b9c4c68ad31a8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::m_initialized</definition>
+        <argsstring></argsstring>
+        <name>m_initialized</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="92" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a18d4186a26df41238434ad9aa4b8857a" prot="private" static="no" mutable="no">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CP::CorrectionCode</ref></type>
+        <definition>CP::CorrectionCode TrigGlobalEfficiencyCorrectionTool::m_cpCode</definition>
+        <argsstring></argsstring>
+        <name>m_cpCode</name>
+        <initializer> CP::CorrectionCode::Ok</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="93" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a3864ebc92d3a1e8e3dd4b2e5f00c270a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::tuple&lt; <ref refid="d3/d59/classSG_1_1AuxElement_1_1Decorator" kindref="compound">SG::AuxElement::Decorator</ref>&lt; char &gt;, size_t, bool &gt; &gt;</type>
+        <definition>std::vector&lt;std::tuple&lt;SG::AuxElement::Decorator&lt;char&gt;,size_t,bool&gt; &gt; TrigGlobalEfficiencyCorrectionTool::m_leptonTagDecorators</definition>
+        <argsstring></argsstring>
+        <name>m_leptonTagDecorators</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="95" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a4c9423671ddf9bda185d03cd99f47b77" prot="private" static="no" mutable="no">
+        <type><ref refid="d3/d59/classSG_1_1AuxElement_1_1Decorator" kindref="compound">SG::AuxElement::Decorator</ref>&lt; unsigned int &gt;</type>
+        <definition>SG::AuxElement::Decorator&lt;unsigned int&gt; TrigGlobalEfficiencyCorrectionTool::m_runNumberDecorator</definition>
+        <argsstring></argsstring>
+        <name>m_runNumberDecorator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="96" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a4c3c474b6e225642318d9b16f9804ebb" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::pair&lt; unsigned, unsigned &gt;, std::function&lt; bool(const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;, unsigned, <ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;)&gt; &gt;</type>
+        <definition>std::map&lt;std::pair&lt;unsigned,unsigned&gt;, std::function&lt;bool(const Leptons&amp;,unsigned,Efficiencies&amp;)&gt; &gt; TrigGlobalEfficiencyCorrectionTool::m_globalEfficiencyFunctions</definition>
+        <argsstring></argsstring>
+        <name>m_globalEfficiencyFunctions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="98" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1adeee3f6e9c2073e100ca7b7dd93c5b1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TrigGlobalEfficiencyCorrectionTool::TrigGlobalEfficiencyCorrectionTool</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>TrigGlobalEfficiencyCorrectionTool</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="26" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="88" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ae17388712f20b3dacea8ad6f00449f71" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>TrigGlobalEfficiencyCorrectionTool::~TrigGlobalEfficiencyCorrectionTool</definition>
+        <argsstring>()</argsstring>
+        <name>~TrigGlobalEfficiencyCorrectionTool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="27" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="111" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ae56af748d2e8289d323ab305ed373387" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode TrigGlobalEfficiencyCorrectionTool::initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>initialize</name>
+        <reimplements refid="d5/dbb/classasg_1_1AsgTool_1a55b3c013a3e54ae4c1d0d76de8e1e726">initialize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dummy implementation of the initialisation function</para><para>It&apos;s here to allow the dual-use tools to skip defining an initialisation function. Since many are doing so... </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="29" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="118" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1afddc66ad6c7a11735c443de36e222043" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CP::CorrectionCode</ref></type>
+        <definition>CP::CorrectionCode TrigGlobalEfficiencyCorrectionTool::getEfficiencyScaleFactor</definition>
+        <argsstring>(const std::vector&lt; const xAOD::Electron * &gt; &amp;electrons, const std::vector&lt; const xAOD::Muon * &gt; &amp;muons, double &amp;efficiencyScaleFactor) override</argsstring>
+        <name>getEfficiencyScaleFactor</name>
+        <reimplements refid="db/d4a/classITrigGlobalEfficiencyCorrectionTool_1a5d18b2137b16955f511d041d325a0cc3">getEfficiencyScaleFactor</reimplements>
+        <param>
+          <type>const std::vector&lt; const <ref refid="dd/da6/classxAOD_1_1Electron" kindref="compound">xAOD::Electron</ref> * &gt; &amp;</type>
+          <declname>electrons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; const <ref refid="d2/d30/classxAOD_1_1Muon__v1" kindref="compound">xAOD::Muon</ref> * &gt; &amp;</type>
+          <declname>muons</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>efficiencyScaleFactor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="31" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="957" bodyend="962"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aca3451aee6ae80be3d7923d31f57a711" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CP::CorrectionCode</ref></type>
+        <definition>CP::CorrectionCode TrigGlobalEfficiencyCorrectionTool::getEfficiencyScaleFactor</definition>
+        <argsstring>(unsigned runNumber, const std::vector&lt; const xAOD::Electron * &gt; &amp;electrons, const std::vector&lt; const xAOD::Muon * &gt; &amp;muons, double &amp;efficiencyScaleFactor) override</argsstring>
+        <name>getEfficiencyScaleFactor</name>
+        <reimplements refid="db/d4a/classITrigGlobalEfficiencyCorrectionTool_1a8afbc9227e994f12b5ee1398f97ac46a">getEfficiencyScaleFactor</reimplements>
+        <param>
+          <type>unsigned</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; const <ref refid="dd/da6/classxAOD_1_1Electron" kindref="compound">xAOD::Electron</ref> * &gt; &amp;</type>
+          <declname>electrons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; const <ref refid="d2/d30/classxAOD_1_1Muon__v1" kindref="compound">xAOD::Muon</ref> * &gt; &amp;</type>
+          <declname>muons</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>efficiencyScaleFactor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="32" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="964" bodyend="970"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a2909ca497c224d45ae7b54a5f428fe09" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CP::CorrectionCode</ref></type>
+        <definition>CP::CorrectionCode TrigGlobalEfficiencyCorrectionTool::getEfficiency</definition>
+        <argsstring>(const std::vector&lt; const xAOD::Electron * &gt; &amp;electrons, const std::vector&lt; const xAOD::Muon * &gt; &amp;muons, double &amp;efficiencyData, double &amp;efficiencyMc) override</argsstring>
+        <name>getEfficiency</name>
+        <reimplements refid="db/d4a/classITrigGlobalEfficiencyCorrectionTool_1ab0a11fb1a718bb4e74c0a54c4f78dba4">getEfficiency</reimplements>
+        <param>
+          <type>const std::vector&lt; const <ref refid="dd/da6/classxAOD_1_1Electron" kindref="compound">xAOD::Electron</ref> * &gt; &amp;</type>
+          <declname>electrons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; const <ref refid="d2/d30/classxAOD_1_1Muon__v1" kindref="compound">xAOD::Muon</ref> * &gt; &amp;</type>
+          <declname>muons</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>efficiencyData</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>efficiencyMc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="33" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="972" bodyend="977"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a423b993cecbffa8a03463830e150b6f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CP::CorrectionCode</ref></type>
+        <definition>CP::CorrectionCode TrigGlobalEfficiencyCorrectionTool::getEfficiency</definition>
+        <argsstring>(unsigned runNumber, const std::vector&lt; const xAOD::Electron * &gt; &amp;electrons, const std::vector&lt; const xAOD::Muon * &gt; &amp;muons, double &amp;efficiencyData, double &amp;efficiencyMc) override</argsstring>
+        <name>getEfficiency</name>
+        <reimplements refid="db/d4a/classITrigGlobalEfficiencyCorrectionTool_1a43ef7a04a34100b7a0d94b7c5a01ab5f">getEfficiency</reimplements>
+        <param>
+          <type>unsigned</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; const <ref refid="dd/da6/classxAOD_1_1Electron" kindref="compound">xAOD::Electron</ref> * &gt; &amp;</type>
+          <declname>electrons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; const <ref refid="d2/d30/classxAOD_1_1Muon__v1" kindref="compound">xAOD::Muon</ref> * &gt; &amp;</type>
+          <declname>muons</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>efficiencyData</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>efficiencyMc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="34" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="979" bodyend="985"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a15d0b9d99a464db8f56a381711fa0195" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CP::CorrectionCode</ref></type>
+        <definition>CP::CorrectionCode TrigGlobalEfficiencyCorrectionTool::getEfficiencyScaleFactor</definition>
+        <argsstring>(const std::vector&lt; const xAOD::IParticle * &gt; &amp;particles, double &amp;efficiencyScaleFactor) override</argsstring>
+        <name>getEfficiencyScaleFactor</name>
+        <reimplements refid="db/d4a/classITrigGlobalEfficiencyCorrectionTool_1adf7e11096bb4ea98a83cd84e293a2384">getEfficiencyScaleFactor</reimplements>
+        <param>
+          <type>const std::vector&lt; const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">xAOD::IParticle</ref> * &gt; &amp;</type>
+          <declname>particles</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>efficiencyScaleFactor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="36" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="987" bodyend="992"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aa3c4de629ed033b2810a33137c99714f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CP::CorrectionCode</ref></type>
+        <definition>CP::CorrectionCode TrigGlobalEfficiencyCorrectionTool::getEfficiencyScaleFactor</definition>
+        <argsstring>(unsigned runNumber, const std::vector&lt; const xAOD::IParticle * &gt; &amp;particles, double &amp;efficiencyScaleFactor) override</argsstring>
+        <name>getEfficiencyScaleFactor</name>
+        <reimplements refid="db/d4a/classITrigGlobalEfficiencyCorrectionTool_1a5e7c7f3eb50cfb12084088083ff31492">getEfficiencyScaleFactor</reimplements>
+        <param>
+          <type>unsigned</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">xAOD::IParticle</ref> * &gt; &amp;</type>
+          <declname>particles</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>efficiencyScaleFactor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="37" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="994" bodyend="999"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aa97f4a819f9fd1dd84ce8358ca8ebd94" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CP::CorrectionCode</ref></type>
+        <definition>CP::CorrectionCode TrigGlobalEfficiencyCorrectionTool::getEfficiency</definition>
+        <argsstring>(const std::vector&lt; const xAOD::IParticle * &gt; &amp;particles, double &amp;efficiencyData, double &amp;efficiencyMc) override</argsstring>
+        <name>getEfficiency</name>
+        <reimplements refid="db/d4a/classITrigGlobalEfficiencyCorrectionTool_1a14b2ed835569802ac5e635d71874e104">getEfficiency</reimplements>
+        <param>
+          <type>const std::vector&lt; const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">xAOD::IParticle</ref> * &gt; &amp;</type>
+          <declname>particles</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>efficiencyData</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>efficiencyMc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="38" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1001" bodyend="1006"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a50b77ce3a38898aa18a1bfe313a351dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CP::CorrectionCode</ref></type>
+        <definition>CP::CorrectionCode TrigGlobalEfficiencyCorrectionTool::getEfficiency</definition>
+        <argsstring>(unsigned runNumber, const std::vector&lt; const xAOD::IParticle * &gt; &amp;particles, double &amp;efficiencyData, double &amp;efficiencyMc) override</argsstring>
+        <name>getEfficiency</name>
+        <reimplements refid="db/d4a/classITrigGlobalEfficiencyCorrectionTool_1af755aa852ab7f2811b6732069954fb4d">getEfficiency</reimplements>
+        <param>
+          <type>unsigned</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">xAOD::IParticle</ref> * &gt; &amp;</type>
+          <declname>particles</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>efficiencyData</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>efficiencyMc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="39" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1008" bodyend="1013"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a9157357d79732b41e06beed4dc23b799" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TrigGlobalEfficiencyCorrectionTool::declareHierarchies</definition>
+        <argsstring>()</argsstring>
+        <name>declareHierarchies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Add new declarations below: </para>        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="102" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool_Declarations.icc" bodystart="7" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aea57d00911d5dc5a6a9e9a2bce8c1452" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TrigGlobalEfficiencyCorrectionTool::declareTriggers</definition>
+        <argsstring>()</argsstring>
+        <name>declareTriggers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Add new declarations below: </para>        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="103" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool_Declarations.icc" bodystart="50" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a7a415d475bd952d8b2c8c1429391f47c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TrigGlobalEfficiencyCorrectionTool::declareThresholds</definition>
+        <argsstring>()</argsstring>
+        <name>declareThresholds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Add new declarations below: </para>        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="104" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool_Declarations.icc" bodystart="130" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a6fc6825e163ca1a3e7916bd394fa9231" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TrigGlobalEfficiencyCorrectionTool::declarePeriods</definition>
+        <argsstring>()</argsstring>
+        <name>declarePeriods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Add new declarations below: </para>        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="105" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool_Declarations.icc" bodystart="194" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a01fde7b1f8a3ffe3aa77496596e2da48" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::loadHierarchies</definition>
+        <argsstring>()</argsstring>
+        <name>loadHierarchies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="106" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="285" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a9d7b9c349f49d2dd48f97577ac9e151c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::enumerateTools</definition>
+        <argsstring>(bool &amp;useDefaultTools)</argsstring>
+        <name>enumerateTools</name>
+        <param>
+          <type>bool &amp;</type>
+          <declname>useDefaultTools</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="107" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="161" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a2d00be03bc96e0897d49a9dc5e35e9ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::loadTriggerCombination</definition>
+        <argsstring>(bool useDefaultTools)</argsstring>
+        <name>loadTriggerCombination</name>
+        <param>
+          <type>bool</type>
+          <declname>useDefaultTools</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Classify the declared triggers, and make sure all necessary info is available -- also roughly sort legs so that all electron legs come before muon legs, to ease further processing</para><para>Parse the trigger string(s)</para><para>Choose the appropriate function to compute efficiencies for this particular trigger combination </para>        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="108" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="320" bodyend="674"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a4d63edbecf3789d6b66f89e154b2f26e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::loadTagsConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>loadTagsConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Initialize decorators </para>        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="109" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="676" bodyend="760"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a261f9335797c92d506dde001be5986aa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::getPeriodBoundaries</definition>
+        <argsstring>(const std::string &amp;period, std::pair&lt; unsigned, unsigned &gt; &amp;boundaries)</argsstring>
+        <name>getPeriodBoundaries</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>period</declname>
+        </param>
+        <param>
+          <type>std::pair&lt; unsigned, unsigned &gt; &amp;</type>
+          <declname>boundaries</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="110" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="762" bodyend="803"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aafad3e7921472fa4538d33edfec9e0b4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::retrieveRunNumber</definition>
+        <argsstring>(unsigned &amp;runNumber)</argsstring>
+        <name>retrieveRunNumber</name>
+        <param>
+          <type>unsigned &amp;</type>
+          <declname>runNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="111" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="909" bodyend="920"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ade909c8e54a1579ef720d9d37244e782" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::aboveThreshold</definition>
+        <argsstring>(const LeptonDetails &amp;p, size_t leg) const </argsstring>
+        <name>aboveThreshold</name>
+        <param>
+          <type>const <ref refid="dc/da9/classTrigGlobalEfficiencyCorrectionTool_1_1LeptonDetails" kindref="compound">LeptonDetails</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="112" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1310" bodyend="1317"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1abcd64d42f9e12df6b4ad24177edb049c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::chooseLegs</definition>
+        <argsstring>(float pt, const std::map&lt; size_t, bool &gt; &amp;legs, size_t &amp;tightestMatchedLeg, size_t &amp;loosestUnmatchedLeg)</argsstring>
+        <name>chooseLegs</name>
+        <param>
+          <type>float</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; size_t, bool &gt; &amp;</type>
+          <declname>legs</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>tightestMatchedLeg</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>loosestUnmatchedLeg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="113" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1129" bodyend="1179"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a88682346d348e6f5eeba3816b1ad45b6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long TrigGlobalEfficiencyCorrectionTool::getCachedTriggerLegsRanking</definition>
+        <argsstring>(float pt, const flat_set&lt; size_t &gt; &amp;legs)</argsstring>
+        <name>getCachedTriggerLegsRanking</name>
+        <param>
+          <type>float</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>legs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="114" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1181" bodyend="1200"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a8baad964cfa0869814a19f9b6c1bc128" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t TrigGlobalEfficiencyCorrectionTool::getLoosestLegAboveThreshold</definition>
+        <argsstring>(const LeptonDetails &amp;lepton, const flat_set&lt; size_t &gt; &amp;legs, bool &amp;success)</argsstring>
+        <name>getLoosestLegAboveThreshold</name>
+        <param>
+          <type>const <ref refid="dc/da9/classTrigGlobalEfficiencyCorrectionTool_1_1LeptonDetails" kindref="compound">LeptonDetails</ref> &amp;</type>
+          <declname>lepton</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>legs</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>success</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="115" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1355" bodyend="1369"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a43b88072db0a62d7c2c84edc1d822887" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TrigGlobalEfficiencyCorrectionTool::getLoosestLegIndex</definition>
+        <argsstring>(const LeptonDetails &amp;lepton, const flat_set&lt; size_t &gt; &amp;legs, bool &amp;success)</argsstring>
+        <name>getLoosestLegIndex</name>
+        <param>
+          <type>const <ref refid="dc/da9/classTrigGlobalEfficiencyCorrectionTool_1_1LeptonDetails" kindref="compound">LeptonDetails</ref> &amp;</type>
+          <declname>lepton</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>legs</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>success</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="116" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1344" bodyend="1353"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a62e82c327b0a1c6cebbce27c56c64034" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t TrigGlobalEfficiencyCorrectionTool::getLoosestLeg</definition>
+        <argsstring>(const LeptonDetails &amp;lepton, const flat_set&lt; size_t &gt; &amp;legs, bool &amp;success)</argsstring>
+        <name>getLoosestLeg</name>
+        <param>
+          <type>const <ref refid="dc/da9/classTrigGlobalEfficiencyCorrectionTool_1_1LeptonDetails" kindref="compound">LeptonDetails</ref> &amp;</type>
+          <declname>lepton</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>legs</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>success</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="117" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1319" bodyend="1328"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a8cf31cdd03e489f429fd6730622d9f3e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; size_t, size_t &gt;</type>
+        <definition>std::pair&lt; size_t, size_t &gt; TrigGlobalEfficiencyCorrectionTool::getTwoLoosestLegs</definition>
+        <argsstring>(const LeptonDetails &amp;lepton, const flat_set&lt; size_t &gt; &amp;legs, bool &amp;success)</argsstring>
+        <name>getTwoLoosestLegs</name>
+        <param>
+          <type>const <ref refid="dc/da9/classTrigGlobalEfficiencyCorrectionTool_1_1LeptonDetails" kindref="compound">LeptonDetails</ref> &amp;</type>
+          <declname>lepton</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>legs</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>success</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="118" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1330" bodyend="1342"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a427b8a2fa250a061d90913cb41bdd41c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::rankTriggerLegs</definition>
+        <argsstring>(float pt, const flat_set&lt; size_t &gt; &amp;legs, unsigned long &amp;ranking, float &amp;ptmin, float &amp;ptmax)</argsstring>
+        <name>rankTriggerLegs</name>
+        <param>
+          <type>float</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>legs</declname>
+        </param>
+        <param>
+          <type>unsigned long &amp;</type>
+          <declname>ranking</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>ptmin</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>ptmax</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>future: might search recursively whether some order can be found via transitivity through an intermediate leg </para>        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="119" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1202" bodyend="1254"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1af17ac4ac920107ff1ef5133b9fb85bf7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::pair&lt; size_t, unsigned &gt; &gt;</type>
+        <definition>std::vector&lt; std::pair&lt; size_t, unsigned &gt; &gt; TrigGlobalEfficiencyCorrectionTool::sortLegs</definition>
+        <argsstring>(float pt, const std::map&lt; size_t, bool &gt; &amp;legs, float &amp;ptmin, float &amp;ptmax)</argsstring>
+        <name>sortLegs</name>
+        <param>
+          <type>float</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; size_t, bool &gt; &amp;</type>
+          <declname>legs</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>ptmin</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>ptmax</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>future: might search recursively whether some order can be found via transitivity through an intermediate leg </para>        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="120" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1256" bodyend="1308"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ae9f23022f250a32147d2f4badf33922d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Particle</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::updateLeptonsContainer</definition>
+        <argsstring>(Leptons &amp;leptons, const std::vector&lt; const Particle * &gt; &amp;particles)</argsstring>
+        <name>updateLeptonsContainer</name>
+        <param>
+          <type><ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <declname>leptons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; const Particle * &gt; &amp;</type>
+          <declname>particles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="121" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="923" bodyend="955"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1af535799f583d4fca3a214945d311f79a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TrigGlobalEfficiencyCorrectionTool::updateMuonTriggerNames</definition>
+        <argsstring>(size_t leg, const std::string &amp;name)</argsstring>
+        <name>updateMuonTriggerNames</name>
+        <param>
+          <type>size_t</type>
+          <declname>leg</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="122"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aa508eaf67c9c915cbcf490925d0ec983" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::getTriggerLegEfficiencies</definition>
+        <argsstring>(const xAOD::Electron *p, size_t leg, size_t tag, Efficiencies &amp;efficiencies)</argsstring>
+        <name>getTriggerLegEfficiencies</name>
+        <param>
+          <type>const <ref refid="dd/da6/classxAOD_1_1Electron" kindref="compound">xAOD::Electron</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <declname>efficiencies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="123" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="805" bodyend="831"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1abdc1cb6c218f76c3bb3d10b37cb0029c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::getTriggerLegEfficiencies</definition>
+        <argsstring>(const xAOD::Muon *p, unsigned runNumber, size_t leg, Efficiencies &amp;efficiencies)</argsstring>
+        <name>getTriggerLegEfficiencies</name>
+        <param>
+          <type>const <ref refid="d2/d30/classxAOD_1_1Muon__v1" kindref="compound">xAOD::Muon</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <declname>efficiencies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="124" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="833" bodyend="860"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a3b95a747ed0e39bcda568b9703f29e01" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref></type>
+        <definition>auto TrigGlobalEfficiencyCorrectionTool::getCachedTriggerLegEfficiencies</definition>
+        <argsstring>(const LeptonDetails &amp;p, unsigned runNumber, size_t leg, bool &amp;success)</argsstring>
+        <name>getCachedTriggerLegEfficiencies</name>
+        <param>
+          <type>const <ref refid="dc/da9/classTrigGlobalEfficiencyCorrectionTool_1_1LeptonDetails" kindref="compound">LeptonDetails</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>success</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="125" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="862" bodyend="907"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a8b391f306c19143cadde04cd0fa7650a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CP::CorrectionCode</ref></type>
+        <definition>CP::CorrectionCode TrigGlobalEfficiencyCorrectionTool::getEfficiencyScaleFactor</definition>
+        <argsstring>(unsigned runNumber, const Leptons &amp;leptons, double &amp;efficiencyScaleFactor)</argsstring>
+        <name>getEfficiencyScaleFactor</name>
+        <param>
+          <type>unsigned</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <declname>leptons</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>efficiencyScaleFactor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Generic mode </para>        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="126" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1015" bodyend="1069"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ae6e57367886276d20a3bf79be1c25f26" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CP::CorrectionCode</ref></type>
+        <definition>CP::CorrectionCode TrigGlobalEfficiencyCorrectionTool::getEfficiency</definition>
+        <argsstring>(unsigned runNumber, const Leptons &amp;leptons, double &amp;efficiencyData, double &amp;efficiencyMc)</argsstring>
+        <name>getEfficiency</name>
+        <param>
+          <type>unsigned</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <declname>leptons</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>efficiencyData</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>efficiencyMc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="127" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1071" bodyend="1127"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a18574209abd8357953468c52bd0545d9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::checkAndRecord</definition>
+        <argsstring>(CP::CorrectionCode &amp;&amp;cc)</argsstring>
+        <name>checkAndRecord</name>
+        <param>
+          <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CP::CorrectionCode</ref> &amp;&amp;</type>
+          <declname>cc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="129" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="128" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aaa785b9540e43cf6cd3d256dcfc42db0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_One1L</definition>
+        <argsstring>(const Leptons &amp;, unsigned, xAOD::Type::ObjectType type, size_t leg, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_One1L</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434" kindref="member">xAOD::Type::ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="147" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1371" bodyend="1385"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a9853d0f1d60f835f514dbeb925a01562" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_One1EOne1Mu</definition>
+        <argsstring>(const Leptons &amp;, unsigned, size_t electronLeg, size_t muonLeg, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_One1EOne1Mu</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>electronLeg</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>muonLeg</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="148" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1387" bodyend="1401"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a3ef92a3e8a6991c4048fd1257abc84bc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_Several1L</definition>
+        <argsstring>(const Leptons &amp;, unsigned, const flat_set&lt; size_t &gt; &amp;electronLegs, const flat_set&lt; size_t &gt; &amp;muonLegs, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_Several1L</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>electronLegs</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>muonLegs</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="149" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1403" bodyend="1420"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a5d6ef50a1e610b1d2491e3083ff374d3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_Several1L</definition>
+        <argsstring>(const Leptons &amp;, unsigned, xAOD::Type::ObjectType type, const flat_set&lt; size_t &gt; &amp;legs, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_Several1L</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434" kindref="member">xAOD::Type::ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>legs</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="150" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1422" bodyend="1439"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1acf89cdb4b6f80cc21ee9142fa46ff459" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_One2Lsym</definition>
+        <argsstring>(const Leptons &amp;, unsigned, xAOD::Type::ObjectType type, size_t leg, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_One2Lsym</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434" kindref="member">xAOD::Type::ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="151" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1452" bodyend="1468"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ad29796bb269f151214406c90d72b5905" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_One2Lasym</definition>
+        <argsstring>(const Leptons &amp;, unsigned, xAOD::Type::ObjectType type, size_t leg1, size_t leg2, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_One2Lasym</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434" kindref="member">xAOD::Type::ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg1</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg2</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="152" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1470" bodyend="1500"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a8abcea285df9f164c87aed782ca232e4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_OneEMu</definition>
+        <argsstring>(const Leptons &amp;, unsigned, size_t electronLeg, size_t muonLeg, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_OneEMu</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>electronLeg</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>muonLeg</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="153" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1441" bodyend="1450"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a86083c314fc319460339d0cc197bcf38" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_OneEMuSeveral1L</definition>
+        <argsstring>(const Leptons &amp;, unsigned, size_t dilepElectronLeg, size_t dilepMuonLeg, const flat_set&lt; size_t &gt; &amp;singleElectronLegs, const flat_set&lt; size_t &gt; &amp;singleMuonLegs, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_OneEMuSeveral1L</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dilepElectronLeg</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dilepMuonLeg</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>singleElectronLegs</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>singleMuonLegs</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="155" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1502" bodyend="1526"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a7d7ffd47740fbe2b8dc58041734ec083" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_One2LsymSeveral1L</definition>
+        <argsstring>(const Leptons &amp;, unsigned, xAOD::Type::ObjectType type, size_t leg2L, const flat_set&lt; size_t &gt; &amp;legs1L, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_One2LsymSeveral1L</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434" kindref="member">xAOD::Type::ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg2L</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>legs1L</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="156" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1528" bodyend="1553"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a1a6cd204943663a37d6fc2e1b91fbaac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_One2LasymSeveral1L</definition>
+        <argsstring>(const Leptons &amp;, unsigned, xAOD::Type::ObjectType type, size_t leg2L1, size_t leg2L2, const flat_set&lt; size_t &gt; &amp;legs1L, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_One2LasymSeveral1L</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434" kindref="member">xAOD::Type::ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg2L1</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg2L2</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>legs1L</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="157" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1555" bodyend="1593"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a6430e788ec5076c6b5544264a3a57c5f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_Two2LsymSeveral1L</definition>
+        <argsstring>(const Leptons &amp;, unsigned, xAOD::Type::ObjectType type, size_t leg2Lsym1, size_t leg2Lsym2, const flat_set&lt; size_t &gt; &amp;legs1L, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_Two2LsymSeveral1L</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434" kindref="member">xAOD::Type::ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg2Lsym1</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg2Lsym2</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>legs1L</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="158" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1595" bodyend="1637"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a10a1982700b8f5b1204d910adbae573e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_One2LasymOne2LsymSeveral1L</definition>
+        <argsstring>(const Leptons &amp;, unsigned, xAOD::Type::ObjectType type, size_t leg2Lasym1, size_t leg2Lasym2, size_t leg2Lsym, const flat_set&lt; size_t &gt; &amp;legs1L, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_One2LasymOne2LsymSeveral1L</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434" kindref="member">xAOD::Type::ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg2Lasym1</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg2Lasym2</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg2Lsym</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>legs1L</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="160" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1639" bodyend="1725"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a9e5191356760a1e7ff8ed3eff7afe037" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_One3Lsym</definition>
+        <argsstring>(const Leptons &amp;, unsigned, xAOD::Type::ObjectType type, size_t leg, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_One3Lsym</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434" kindref="member">xAOD::Type::ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="161" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1727" bodyend="1744"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a162f3fbacaa7c6486b35a4218b618826" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_One3Lhalfsym</definition>
+        <argsstring>(const Leptons &amp;, unsigned, xAOD::Type::ObjectType type, size_t legAsym, size_t legSym, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_One3Lhalfsym</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434" kindref="member">xAOD::Type::ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>legAsym</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>legSym</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="162" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1746" bodyend="1785"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a45a10eb0375b1431d6a887829c6a7a23" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_One2LOneEmu</definition>
+        <argsstring>(const Leptons &amp;, unsigned, xAOD::Type::ObjectType type, size_t dilepLeg1, size_t dilepLeg2, size_t emuElectronLeg, size_t emuMuonLeg, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_One2LOneEmu</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434" kindref="member">xAOD::Type::ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dilepLeg1</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dilepLeg2</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>emuElectronLeg</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>emuMuonLeg</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="164" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1787" bodyend="1798"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a3a67cbf92ecc51f49599080b5026e189" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_One2EOneEmuOne2Mu</definition>
+        <argsstring>(const Leptons &amp;, unsigned, size_t diELeg1, size_t diELeg2, size_t emuELeg, size_t emuMuLeg, size_t diMuLeg1, size_t diMuLeg2, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_One2EOneEmuOne2Mu</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>diELeg1</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>diELeg2</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>emuELeg</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>emuMuLeg</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>diMuLeg1</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>diMuLeg2</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="166" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1800" bodyend="1821"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a6272f45e22ca960414a32d6cff502c5d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_One2EOneEmuOne2MuSeveral1L</definition>
+        <argsstring>(const Leptons &amp;, unsigned, size_t diELeg1, size_t diELeg2, size_t emuELeg, size_t emuMuLeg, size_t diMuLeg1, size_t diMuLeg2, const flat_set&lt; size_t &gt; &amp;singleElectronLegs, const flat_set&lt; size_t &gt; &amp;singleMuonLegs, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_One2EOneEmuOne2MuSeveral1L</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>diELeg1</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>diELeg2</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>emuELeg</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>emuMuLeg</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>diMuLeg1</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>diMuLeg2</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>singleElectronLegs</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>singleMuonLegs</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="168" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1823" bodyend="1851"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ae2d2e58ca58e07a414619a17c6aa0de2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_Two2ETwoEmuTwo2MuSeveral1L</definition>
+        <argsstring>(const Leptons &amp;, unsigned, size_t diELegAsym1, size_t diELegAsym2, size_t diELegSym, size_t emu1ELeg, size_t emu1MuLeg, size_t emu2ELeg, size_t emu2MuLeg, size_t diMuLegAsym1, size_t diMuLegAsym2, size_t diMuLegSym, const flat_set&lt; size_t &gt; &amp;singleElectronLegs, const flat_set&lt; size_t &gt; &amp;singleMuonLegs, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_Two2ETwoEmuTwo2MuSeveral1L</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>diELegAsym1</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>diELegAsym2</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>diELegSym</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>emu1ELeg</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>emu1MuLeg</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>emu2ELeg</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>emu2MuLeg</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>diMuLegAsym1</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>diMuLegAsym2</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>diMuLegSym</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>singleElectronLegs</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; size_t &gt; &amp;</type>
+          <declname>singleMuonLegs</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="171" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1853" bodyend="1931"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ab9e31788174582f49fc3e5cf17cef2cd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_One3Lmixed</definition>
+        <argsstring>(const Leptons &amp;leptons, unsigned runNumber, xAOD::Type::ObjectType dominantType, size_t leg1a, size_t leg1b, size_t leg2, Efficiencies &amp;globalEfficiencies)</argsstring>
+        <name>globalEfficiency_One3Lmixed</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <declname>leptons</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434" kindref="member">xAOD::Type::ObjectType</ref></type>
+          <declname>dominantType</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg1a</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg1b</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>leg2</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <declname>globalEfficiencies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="173" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1933" bodyend="1944"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a6d83d65908d98818bdca7252d30f315d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_Two3LmixedCompl</definition>
+        <argsstring>(const Leptons &amp;, unsigned, size_t legE1a, size_t legE1b, size_t legE2, size_t legM1, size_t legM2a, size_t legM2b, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_Two3LmixedCompl</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>legE1a</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>legE1b</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>legE2</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>legM1</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>legM2a</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>legM2b</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="175" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1946" bodyend="1981"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aeaf40ca53140c848ada7c8f7bb2ab24e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrigGlobalEfficiencyCorrectionTool::globalEfficiency_Toys</definition>
+        <argsstring>(const Leptons &amp;, unsigned, const std::vector&lt; std::tuple&lt; int, size_t, size_t, size_t &gt; &gt; &amp;triggers, Efficiencies &amp;)</argsstring>
+        <name>globalEfficiency_Toys</name>
+        <param>
+          <type>const <ref refid="d4/df1/classTrigGlobalEfficiencyCorrectionTool_1_1Leptons" kindref="compound">Leptons</ref> &amp;</type>
+          <defname>leptons</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>runNumber</defname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::tuple&lt; int, size_t, size_t, size_t &gt; &gt; &amp;</type>
+          <declname>triggers</declname>
+        </param>
+        <param>
+          <type><ref refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies" kindref="compound">Efficiencies</ref> &amp;</type>
+          <defname>globalEfficiencies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="177" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/Root/TrigGlobalEfficiencyCorrectionTool.cxx" bodystart="1983" bodyend="2178"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="21159">
+        <label>ITrigGlobalEfficiencyCorrectionTool</label>
+        <link refid="db/d4a/classITrigGlobalEfficiencyCorrectionTool"/>
+        <childnode refid="21158" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21157">
+        <label>asg::AsgTool</label>
+        <link refid="d5/dbb/classasg_1_1AsgTool"/>
+        <childnode refid="21158" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21158">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="21156">
+        <label>TrigGlobalEfficiencyCorrectionTool</label>
+        <link refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool"/>
+        <childnode refid="21157" relation="public-inheritance">
+        </childnode>
+        <childnode refid="21159" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="21179">
+        <label>Internal::rehash_base&lt;Internal::prime_rehash_policy , hashtable&lt;Value , Value , Alloc , Internal::identity&lt; Value &gt; , Pred , Hash , Internal::mod_range_hashing , Internal::default_ranged_hash , Internal::prime_rehash_policy , cache_hash_code, constant_iterators, unique_keys&gt; &gt;</label>
+        <link refid="db/d2b/classInternal_1_1rehash__base"/>
+      </node>
+      <node id="21180">
+        <label>Internal::hash_code_base&lt;Value , Value , Internal::identity&lt; Value &gt; , Pred , Hash , Internal::mod_range_hashing , Internal::default_ranged_hash , cache_hash_code&gt;</label>
+        <link refid="d0/d2e/classInternal_1_1hash__code__base"/>
+      </node>
+      <node id="21186">
+        <label>SG::AuxElement::Decorator&lt; unsigned int &gt;</label>
+        <link refid="d3/d59/classSG_1_1AuxElement_1_1Decorator"/>
+      </node>
+      <node id="21175">
+        <label>xAOD::TVirtualEvent</label>
+        <link refid="de/daf/classxAOD_1_1TVirtualEvent"/>
+      </node>
+      <node id="21184">
+        <label>SG::AuxElementData</label>
+        <link refid="dc/dfb/classSG_1_1AuxElementData"/>
+        <childnode refid="21169" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21178">
+        <label>SG::hashtable&lt; Value, Value, Alloc, Internal::identity&lt; Value &gt;, Pred, Hash, Internal::mod_range_hashing, Internal::default_ranged_hash, Internal::prime_rehash_policy, cache_hash_code, true, true &gt;</label>
+        <link refid="de/d63/classSG_1_1hashtable"/>
+        <childnode refid="21179" relation="public-inheritance">
+        </childnode>
+        <childnode refid="21180" relation="public-inheritance">
+        </childnode>
+        <childnode refid="21181" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21173">
+        <label>SelectNoInstance</label>
+        <link refid="d9/dec/classSelectNoInstance"/>
+      </node>
+      <node id="21187">
+        <label>string</label>
+      </node>
+      <node id="21185">
+        <label>TrigGlobalEfficiencyCorrectionTool::Efficiencies</label>
+        <link refid="df/d7a/classTrigGlobalEfficiencyCorrectionTool_1_1Efficiencies"/>
+      </node>
+      <node id="21163">
+        <label>ITrigGlobalEfficiencyCorrectionTool</label>
+        <link refid="db/d4a/classITrigGlobalEfficiencyCorrectionTool"/>
+        <childnode refid="21162" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21188">
+        <label>TrigGlobalEfficiencyCorrectionTool::Hierarchy</label>
+        <link refid="db/d1b/structTrigGlobalEfficiencyCorrectionTool_1_1Hierarchy"/>
+      </node>
+      <node id="21165">
+        <label>TrigGlobalEfficiencyCorrectionTool::LeptonDetails</label>
+        <link refid="dc/da9/classTrigGlobalEfficiencyCorrectionTool_1_1LeptonDetails"/>
+        <childnode refid="21166" relation="usage">
+          <edgelabel>m_obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="21164">
+        <label>TrigGlobalEfficiencyCorrectionTool::CachedEfficiencies</label>
+        <link refid="d2/d1a/structTrigGlobalEfficiencyCorrectionTool_1_1CachedEfficiencies"/>
+        <childnode refid="21165" relation="usage">
+          <edgelabel>lepton</edgelabel>
+        </childnode>
+        <childnode refid="21185" relation="usage">
+          <edgelabel>efficiencies</edgelabel>
+        </childnode>
+      </node>
+      <node id="21174">
+        <label>DataLinkBase</label>
+        <link refid="dd/d9d/classDataLinkBase"/>
+      </node>
+      <node id="21168">
+        <label>SG::IAuxElement</label>
+        <link refid="df/dca/classSG_1_1IAuxElement"/>
+      </node>
+      <node id="21161">
+        <label>asg::AsgTool</label>
+        <link refid="d5/dbb/classasg_1_1AsgTool"/>
+        <childnode refid="21162" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21162">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="21166">
+        <label>xAOD::IParticle</label>
+        <link refid="d5/d4c/classxAOD_1_1IParticle"/>
+        <childnode refid="21167" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21171">
+        <label>SG::IConstAuxStore</label>
+        <link refid="d3/dd5/classSG_1_1IConstAuxStore"/>
+      </node>
+      <node id="21172">
+        <label>DataLink&lt; SG::IConstAuxStore &gt;</label>
+        <link refid="da/da2/classDataLink"/>
+        <childnode refid="21173" relation="public-inheritance">
+        </childnode>
+        <childnode refid="21174" relation="public-inheritance">
+        </childnode>
+        <childnode refid="21175" relation="usage">
+          <edgelabel>m_event</edgelabel>
+        </childnode>
+        <childnode refid="21171" relation="usage">
+          <edgelabel>m_object</edgelabel>
+        </childnode>
+      </node>
+      <node id="21160">
+        <label>TrigGlobalEfficiencyCorrectionTool</label>
+        <link refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool"/>
+        <childnode refid="21161" relation="public-inheritance">
+        </childnode>
+        <childnode refid="21163" relation="public-inheritance">
+        </childnode>
+        <childnode refid="21164" relation="usage">
+          <edgelabel>m_cachedEfficiencies</edgelabel>
+        </childnode>
+        <childnode refid="21186" relation="usage">
+          <edgelabel>m_runNumberDecorator</edgelabel>
+        </childnode>
+        <childnode refid="21187" relation="usage">
+          <edgelabel>m_triggerCb15</edgelabel>
+          <edgelabel>m_triggerCb16</edgelabel>
+          <edgelabel>m_leptonTagDecorations</edgelabel>
+        </childnode>
+        <childnode refid="21188" relation="usage">
+          <edgelabel>m_hierarchies</edgelabel>
+        </childnode>
+        <childnode refid="21189" relation="usage">
+          <edgelabel>m_cpCode</edgelabel>
+        </childnode>
+      </node>
+      <node id="21170">
+        <label>SG::IAuxStore</label>
+        <link refid="dc/d05/classSG_1_1IAuxStore"/>
+        <childnode refid="21171" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21177">
+        <label>SG::unordered_set&lt; Value, Hash, Pred, Alloc, cache_hash_code &gt;</label>
+        <link refid="dd/dac/classSG_1_1unordered__set"/>
+        <childnode refid="21178" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21181">
+        <label>Internal::map_base&lt;Value , Value , Internal::identity&lt; Value &gt; , unique_keys, hashtable&lt;Value , Value , Alloc , Internal::identity&lt; Value &gt; , Pred , Hash , Internal::mod_range_hashing , Internal::default_ranged_hash , Internal::prime_rehash_policy , cache_hash_code, constant_iterators, unique_keys&gt; &gt;</label>
+        <link refid="d1/d54/classInternal_1_1map__base"/>
+      </node>
+      <node id="21182">
+        <label>SG::AuxVectorData::Cache</label>
+        <childnode refid="21183" relation="usage">
+          <edgelabel>m_cache</edgelabel>
+        </childnode>
+      </node>
+      <node id="21176">
+        <label>mutex</label>
+      </node>
+      <node id="21167">
+        <label>SG::AuxElement</label>
+        <link refid="dc/db0/classSG_1_1AuxElement"/>
+        <childnode refid="21168" relation="public-inheritance">
+        </childnode>
+        <childnode refid="21169" relation="usage">
+          <edgelabel>m_container</edgelabel>
+        </childnode>
+        <childnode refid="21184" relation="usage">
+          <edgelabel>m_privateData</edgelabel>
+          <edgelabel>s_privatePlaceholder</edgelabel>
+        </childnode>
+      </node>
+      <node id="21183">
+        <label>void</label>
+      </node>
+      <node id="21169">
+        <label>SG::AuxVectorData</label>
+        <link refid="db/dd6/classSG_1_1AuxVectorData"/>
+        <childnode refid="21170" relation="usage">
+          <edgelabel>m_store</edgelabel>
+        </childnode>
+        <childnode refid="21172" relation="usage">
+          <edgelabel>m_constStoreLink</edgelabel>
+        </childnode>
+        <childnode refid="21171" relation="usage">
+          <edgelabel>m_constStore</edgelabel>
+        </childnode>
+        <childnode refid="21176" relation="usage">
+          <edgelabel>m_mutex</edgelabel>
+        </childnode>
+        <childnode refid="21177" relation="usage">
+          <edgelabel>s_emptySet</edgelabel>
+        </childnode>
+        <childnode refid="21182" relation="usage">
+          <edgelabel>m_cache</edgelabel>
+          <edgelabel>m_constCache</edgelabel>
+          <edgelabel>m_decorCache</edgelabel>
+        </childnode>
+      </node>
+      <node id="21189">
+        <label>CP::CorrectionCode</label>
+        <link refid="db/d8a/classCP_1_1CorrectionCode"/>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" line="22" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrection/TrigGlobalEfficiencyCorrectionTool.h" bodystart="21" bodyend="178"/>
+    <listofallmembers>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ade909c8e54a1579ef720d9d37244e782" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>aboveThreshold</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a47f02c756c6d6026d03e0d4d68d82a94" prot="public" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>AsgTool</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a18574209abd8357953468c52bd0545d9" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>checkAndRecord</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1abcd64d42f9e12df6b4ad24177edb049c" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>chooseLegs</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a9157357d79732b41e06beed4dc23b799" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>declareHierarchies</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a6fc6825e163ca1a3e7916bd394fa9231" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>declarePeriods</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a7a415d475bd952d8b2c8c1429391f47c" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>declareThresholds</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aea57d00911d5dc5a6a9e9a2bce8c1452" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>declareTriggers</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a9d7b9c349f49d2dd48f97577ac9e151c" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>enumerateTools</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a3b95a747ed0e39bcda568b9703f29e01" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getCachedTriggerLegEfficiencies</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a88682346d348e6f5eeba3816b1ad45b6" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getCachedTriggerLegsRanking</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a2909ca497c224d45ae7b54a5f428fe09" prot="public" virt="virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getEfficiency</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a423b993cecbffa8a03463830e150b6f4" prot="public" virt="virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getEfficiency</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aa97f4a819f9fd1dd84ce8358ca8ebd94" prot="public" virt="virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getEfficiency</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a50b77ce3a38898aa18a1bfe313a351dc" prot="public" virt="virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getEfficiency</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ae6e57367886276d20a3bf79be1c25f26" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getEfficiency</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1afddc66ad6c7a11735c443de36e222043" prot="public" virt="virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getEfficiencyScaleFactor</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aca3451aee6ae80be3d7923d31f57a711" prot="public" virt="virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getEfficiencyScaleFactor</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a15d0b9d99a464db8f56a381711fa0195" prot="public" virt="virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getEfficiencyScaleFactor</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aa3c4de629ed033b2810a33137c99714f" prot="public" virt="virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getEfficiencyScaleFactor</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a8b391f306c19143cadde04cd0fa7650a" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getEfficiencyScaleFactor</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a62e82c327b0a1c6cebbce27c56c64034" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getLoosestLeg</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a8baad964cfa0869814a19f9b6c1bc128" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getLoosestLegAboveThreshold</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a43b88072db0a62d7c2c84edc1d822887" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getLoosestLegIndex</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a261f9335797c92d506dde001be5986aa" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getPeriodBoundaries</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a5d9d9eae0988784fb6c257e0a2440ca6" prot="public" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getProperty</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aa508eaf67c9c915cbcf490925d0ec983" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getTriggerLegEfficiencies</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1abdc1cb6c218f76c3bb3d10b37cb0029c" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getTriggerLegEfficiencies</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a8cf31cdd03e489f429fd6730622d9f3e" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>getTwoLoosestLegs</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a9853d0f1d60f835f514dbeb925a01562" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_One1EOne1Mu</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aaa785b9540e43cf6cd3d256dcfc42db0" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_One1L</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a3a67cbf92ecc51f49599080b5026e189" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_One2EOneEmuOne2Mu</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a6272f45e22ca960414a32d6cff502c5d" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_One2EOneEmuOne2MuSeveral1L</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ad29796bb269f151214406c90d72b5905" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_One2Lasym</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a10a1982700b8f5b1204d910adbae573e" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_One2LasymOne2LsymSeveral1L</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a1a6cd204943663a37d6fc2e1b91fbaac" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_One2LasymSeveral1L</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a45a10eb0375b1431d6a887829c6a7a23" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_One2LOneEmu</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1acf89cdb4b6f80cc21ee9142fa46ff459" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_One2Lsym</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a7d7ffd47740fbe2b8dc58041734ec083" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_One2LsymSeveral1L</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a162f3fbacaa7c6486b35a4218b618826" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_One3Lhalfsym</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ab9e31788174582f49fc3e5cf17cef2cd" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_One3Lmixed</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a9e5191356760a1e7ff8ed3eff7afe037" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_One3Lsym</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a8abcea285df9f164c87aed782ca232e4" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_OneEMu</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a86083c314fc319460339d0cc197bcf38" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_OneEMuSeveral1L</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a3ef92a3e8a6991c4048fd1257abc84bc" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_Several1L</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a5d6ef50a1e610b1d2491e3083ff374d3" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_Several1L</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aeaf40ca53140c848ada7c8f7bb2ab24e" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_Toys</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ae2d2e58ca58e07a414619a17c6aa0de2" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_Two2ETwoEmuTwo2MuSeveral1L</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a6430e788ec5076c6b5544264a3a57c5f" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_Two2LsymSeveral1L</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a6d83d65908d98818bdca7252d30f315d" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>globalEfficiency_Two3LmixedCompl</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ae56af748d2e8289d323ab305ed373387" prot="public" virt="virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>initialize</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a01fde7b1f8a3ffe3aa77496596e2da48" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>loadHierarchies</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a4d63edbecf3789d6b66f89e154b2f26e" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>loadTagsConfiguration</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a2d00be03bc96e0897d49a9dc5e35e9ed" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>loadTriggerCombination</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ac247bde5174d8eb125d9133c3a8a82ec" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_cachedEfficiencies</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a0bb22a85240b909ab6d2a4b1b5d91e23" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_cachedEfficienciesCapacity</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a2248fba3684168fab9cbd40a968692f6" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_cachedEfficienciesSize</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1adaaffedabe6d96f006af2fc68e2b097a" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_cachedLegRankings</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a18d4186a26df41238434ad9aa4b8857a" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_cpCode</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1af29cd28e5d50a312384b4704753fe717" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_declaredHierarchies</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aab474e9d7cd3c41c22a22ecfeaae7870" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_declaredPeriods</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a8ce2a433cc851df8a11ec711a786c7b5" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_declaredThresholds</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a34e4487fd20cfce49f24f1b0d1fc616c" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_declaredTriggers</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a7028f0ac4c1e12e6c4d10daadb8ad4d6" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_dictionary</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a4390ecb846793af81b2491b3c57cd88b" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_electronEffTools</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a8510743d94f07925f9fbe722077e5558" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_electronLegsPerTag</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a035a2ad30df2189f5c7a850356df3e2c" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_electronSfTools</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a4c3c474b6e225642318d9b16f9804ebb" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_globalEfficiencyFunctions</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a6884880a4e5f91b832fc252f7629dd62" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_guessHierarchy</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1afccbfa06a51278456411788ad0e618bc" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_hasher</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a373b5bfd25596b4da0729266bcc2402c" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_hierarchies</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a9dd169a0a6f02e28e9d5a577038fc427" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_hierarchyData</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a56d5478728b66fd6113b9c4c68ad31a8" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_initialized</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ae5491226a7e8b38db87f9b412650eceb" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_legsPerTool</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a995fce02eec5aa5cbc145b31be905496" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_leptonTagDecorations</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a3864ebc92d3a1e8e3dd4b2e5f00c270a" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_leptonTagDecorators</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a3329aea6b8983ead50c9557249856a66" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_muonLegsPerTag</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aaa3bab0e31867b074bd90377b535f335" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_muonTools</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ae433d0365b9a8968e43e0a3d9fec604a" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_muonTriggerNames</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1af0f8bef1654cac37761c1e328419af09" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_nHierarchies</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ab3548588a168bd9ad57056caf9112990" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_numberOfToys</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a4c9423671ddf9bda185d03cd99f47b77" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_runNumberDecorator</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ab62db821f2daab01cc2ca2352abe6844" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_suppliedElectronEfficiencyTools</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aec5a613414d033ff61bcd5be35c2f9ab" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_suppliedElectronScaleFactorTools</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ac590eaacb298c455b1c714a8c4c3f0b4" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_suppliedMuonTools</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a494df8e2d33da700a51c4e7014f049fd" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_tagsPerTool</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a7027b53b936b937d60c8169abd675c36" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_triggerCb</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1afe88c689a93f2623fd0b9db9eb3fdf03" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_triggerCb15</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a0b74f6a0e6f54037ac1a133502ea6927" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_triggerCb16</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a610a5d566ee50bb3f6174ba37d3857e4" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_usingTags</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aa611afff73c840dbeec8e219478d0099" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>m_validLegTagPairs</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a3aeba8f7ad5ade0197f5848fe9e4480e" prot="public" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>msg_level_name</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1af4cc6ba53b6505045c2866d4e30e821d" prot="public" virt="virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>print</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1a427b8a2fa250a061d90913cb41bdd41c" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>rankTriggerLegs</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aafad3e7921472fa4538d33edfec9e0b4" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>retrieveRunNumber</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1af17ac4ac920107ff1ef5133b9fb85bf7" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>sortLegs</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1adeee3f6e9c2073e100ca7b7dd93c5b1c" prot="public" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TrigGlobalEfficiencyCorrectionTool</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca847c2f14ce4c750060dacb35a5a41f6f" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_2E_ASYM</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607caed02381ac407d157d6c0b96681aedfd1" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_2E_MU_ASYM</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca0fdce66e5edfe2a33ed996b273774bcd" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_2E_MU_SYM</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607caf4bf46f60f2dc499294f34d25eb92c77" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_2E_SYM</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607cac31cedec72fbd7688157371c294b9750" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_2MU_ASYM</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607cacc83c5ba3a41de896b90ac82fc3641d0" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_2MU_E_ASYM</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607cae1e6f37f570f10749ec47f82e6bc58a9" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_2MU_E_SYM</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca329ac9dcb21f4bdc8d4270c1468057e4" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_2MU_SYM</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca3162cc8fb88886192cde0019a7304ec0" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_3E_ASYM</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607caec5dbd0f436269a6461c82ba03b0d32e" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_3E_HALFSYM</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607cacb418ef9b26a61f6a7cfdc87da51dda4" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_3E_SYM</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca440f2c1bc187e09d1f701cd6fcb59f6c" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_3MU_ASYM</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca468336ba737bc6675508f5d3a9d97636" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_3MU_HALFSYM</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca9e296bed7a15929ac645f29e6efdaa53" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_3MU_SYM</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca3ba0e1e74f4ee0be28da206ef0cc5cc6" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_EMU</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca332363cffdf5f44569691e7ab8b93086" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_GENERIC_DILEPTON</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca6cb9d7fd653bb8561fc1875092f1a015" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_GENERIC_SINGLELEPTON</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607caed20830a7e53fa511fd88bea1f84f117" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_GENERIC_TRILEPTON</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607ca4132f8b9ec7fa10184b39006e1a3a1dd" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_SINGLE_E</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1aac52e58b1367a9d8315d41597921607cae0b1b861866424ecd4e6bed620c775fe" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>TT_SINGLE_MU</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ae9f23022f250a32147d2f4badf33922d" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>updateLeptonsContainer</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1af535799f583d4fca3a214945d311f79a" prot="private" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>updateMuonTriggerNames</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1abf22f7aa60258c67b79cf67bf70a3a5b" prot="public" virt="non-virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>~AsgTool</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1a77b49d52f1f8c272cb665b8309d6082d" prot="public" virt="virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>~IAsgTool</name></member>
+      <member refid="d9/db4/classTrigGlobalEfficiencyCorrectionTool_1ae17388712f20b3dacea8ad6f00449f71" prot="public" virt="virtual"><scope>TrigGlobalEfficiencyCorrectionTool</scope><name>~TrigGlobalEfficiencyCorrectionTool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

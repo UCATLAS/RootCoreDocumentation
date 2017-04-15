@@ -1,0 +1,497 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d5/dc1/classSG_1_1PackedParameters" kind="class" prot="public">
+    <compoundname>SG::PackedParameters</compoundname>
+    <includes refid="d4/d43/PackedParameters_8h" local="no">PackedParameters.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="d5/dc1/classSG_1_1PackedParameters_1aa049bba0c7bd2de4b60f3b5a1453ebda" prot="public" static="no">
+        <name>@3</name>
+        <enumvalue id="d5/dc1/classSG_1_1PackedParameters_1aa049bba0c7bd2de4b60f3b5a1453ebdaaa8a933f579e0c5f9950fef8870513a03" prot="public">
+          <name>FLAG_IS_SIGNED</name>
+          <initializer> (1&lt;&lt;0)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d5/dc1/classSG_1_1PackedParameters_1aa049bba0c7bd2de4b60f3b5a1453ebdaa36e1f3b6ac09ad59c6aae27af517f41a" prot="public">
+          <name>FLAG_IS_FLOAT</name>
+          <initializer> (1&lt;&lt;1)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d5/dc1/classSG_1_1PackedParameters_1aa049bba0c7bd2de4b60f3b5a1453ebdaacd33ae6f78b811a61dd0b8035f1441f3" prot="public">
+          <name>FLAG_HAS_SCALE</name>
+          <initializer> (1&lt;&lt;2)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d5/dc1/classSG_1_1PackedParameters_1aa049bba0c7bd2de4b60f3b5a1453ebdaa18c8b5caf638b42b72d1f2d167d62d33" prot="public">
+          <name>FLAG_ROUNDING</name>
+          <initializer> (1&lt;&lt;3)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Define bit assignments for the flags field. Existing flag assignments should never be changed, as the persistent format may depend on them. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="261" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" bodystart="261" bodyend="266"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d5/dc1/classSG_1_1PackedParameters_1af2a88e81a766fa96e107952e03df7719" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SG::PackedParameters::m_nbits</definition>
+        <argsstring></argsstring>
+        <name>m_nbits</name>
+        <briefdescription>
+<para>The number of bits to use for each element. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="271" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/dc1/classSG_1_1PackedParameters_1aa1b85f8f230794dedddd0ee8c50e12a0" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SG::PackedParameters::m_nmantissa</definition>
+        <argsstring></argsstring>
+        <name>m_nmantissa</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of bits for the mantissa of floating-point representations. Does not include the sign bit. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="275" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/dc1/classSG_1_1PackedParameters_1ac95550bc174247207f4a1f58a1c0772c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SG::PackedParameters::m_scale</definition>
+        <argsstring></argsstring>
+        <name>m_scale</name>
+        <briefdescription>
+<para>If nonzero, divide floating-point numbers by this before writing. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="278" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/dc1/classSG_1_1PackedParameters_1a23233cb1c3882df552f58cc66bd6685c" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SG::PackedParameters::m_flags</definition>
+        <argsstring></argsstring>
+        <name>m_flags</name>
+        <briefdescription>
+<para>Additional flags. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="281" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1aefdef2b2be2e4036694714583d486a7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SG::PackedParameters::PackedParameters</definition>
+        <argsstring>()</argsstring>
+        <name>PackedParameters</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Set up to write unsigned integers with 32 bits. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="68" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/PackedParameters.cxx" bodystart="21" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1afa31dcb767bd01751defae314786c5f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SG::PackedParameters::PackedParameters</definition>
+        <argsstring>(uint8_t nbits, uint8_t flags)</argsstring>
+        <name>PackedParameters</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>nbits</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Constructor from nbits and flags. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nbits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bits for each element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Extra flags describing the packing.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Additionally nmantissa is set to correspond to a fixed-point representation and the scale is cleared.</para><para>This is meant to be used by the read converter. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="81" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/PackedParameters.cxx" bodystart="40" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1a5511c58b3836c7a51eac41c85f062311" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>SG::PackedParameters::PackedParameters</definition>
+        <argsstring>(T)</argsstring>
+        <name>PackedParameters</name>
+        <param>
+          <type><ref refid="d1/def/classT" kindref="compound">T</ref></type>
+        </param>
+        <briefdescription>
+<para>Initialize with default packing parameters for type <computeroutput><ref refid="d1/def/classT" kindref="compound">T</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>For integer types, the number of bits and signedness is set to match <computeroutput><ref refid="d1/def/classT" kindref="compound">T</ref></computeroutput>. For floating types, nbits is set to 32, nmantissa to 23, isSigned to true, and the scale is cleared. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="92" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.icc" bodystart="21" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1ab00ae71fdadeea196896a0a7fc85426a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SG::PackedParameters::nbits</definition>
+        <argsstring>() const </argsstring>
+        <name>nbits</name>
+        <briefdescription>
+<para>The number of bits used to store each element. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="98" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.icc" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1af705c32cce991271601d9f59f7f302fd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SG::PackedParameters::nmantissa</definition>
+        <argsstring>() const </argsstring>
+        <name>nmantissa</name>
+        <briefdescription>
+<para>The number of bits used for the mantissa portion of a float-point representation, excluding a sign bit (if any). </para>        </briefdescription>
+        <detaileddescription>
+<para>If there are at least two bits left over after accounting for the mantissa and sign bits, then numbers will be saved in a floating-point format; otherwise, fixed-point. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="109" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.icc" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1a2f1971577699df4279cb2b0803cca255" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SG::PackedParameters::flags</definition>
+        <argsstring>() const </argsstring>
+        <name>flags</name>
+        <briefdescription>
+<para>Additional flags describing the packing. </para>        </briefdescription>
+        <detaileddescription>
+<para>(This should really only be used by converters.) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="117" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.icc" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1a2841715b42294fcde806e44b818a9d71" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SG::PackedParameters::scale</definition>
+        <argsstring>() const </argsstring>
+        <name>scale</name>
+        <briefdescription>
+<para>Return the scale for floating-point numbers. </para>        </briefdescription>
+        <detaileddescription>
+<para>If enabled, float-point numbers will be divided by this value before being saved. If not enabled, this may return 0. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="126" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.icc" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1ae9c63dc34ab78d75897b526a28518455" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SG::PackedParameters::isSigned</definition>
+        <argsstring>() const </argsstring>
+        <name>isSigned</name>
+        <briefdescription>
+<para>Are elements being written as signed numbers? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="132" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.icc" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1a13e88b496167d3bc4c8ff7d96bf73ddc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SG::PackedParameters::isFloat</definition>
+        <argsstring>() const </argsstring>
+        <name>isFloat</name>
+        <briefdescription>
+<para>Are elements being written as floating-point numbers? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="138" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.icc" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1aacf60a8d55d998374064a260ac58c007" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SG::PackedParameters::hasScale</definition>
+        <argsstring>() const </argsstring>
+        <name>hasScale</name>
+        <briefdescription>
+<para>Should floats be rescaled before writing? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="144" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.icc" bodystart="111" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1a8b991c9260dfd8e8ecdb617d9b2b7d75" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SG::PackedParameters::rounding</definition>
+        <argsstring>() const </argsstring>
+        <name>rounding</name>
+        <briefdescription>
+<para>Should floats be rounded during writing? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="150" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.icc" bodystart="121" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1a44550d4e5aea2dfec93e19913e65e9cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SG::PackedParameters::setNbits</definition>
+        <argsstring>(uint8_t nbits)</argsstring>
+        <name>setNbits</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>nbits</declname>
+        </param>
+        <briefdescription>
+<para>Set the number of bits to be used for each element. </para>        </briefdescription>
+        <detaileddescription>
+<para>nbits The desired number of bits. <computeroutput>nbits</computeroutput> must be in the range 1-32 for unsigned numbers, 2-32 for signed numbers.</para><para>If necessary, <computeroutput>nmantissa</computeroutput> will be adjusted so that it still fits within the requested number of bits.</para><para>Returns true if successful, false otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="165" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/PackedParameters.cxx" bodystart="65" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1a8f0db66e9e394f5623f42dd66463629f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SG::PackedParameters::setNmantissa</definition>
+        <argsstring>(uint8_t nmantissa)</argsstring>
+        <name>setNmantissa</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>nmantissa</declname>
+        </param>
+        <briefdescription>
+<para>Set the number of mantissa bits used in the packed representation. </para>        </briefdescription>
+        <detaileddescription>
+<para>nmantissa The desired number of mantissa bits. This has an effect only when saving floating-point types.</para><para><computeroutput>nmantissa</computeroutput> must fit within the requested number of bits. <computeroutput>nmantissa</computeroutput> does not include the sign bit. If there are at least two bits left over, then numbers will be saved in a floating-point format; otherwise, fixed point will be used.</para><para>Returns true if successful, false otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="181" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/PackedParameters.cxx" bodystart="91" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1aa85188c0b04fd4f53245f824e6d8e3aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SG::PackedParameters::setScale</definition>
+        <argsstring>(float scale)</argsstring>
+        <name>setScale</name>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+<para>Set the scale to use when packing floating-point data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new scale, or 0 to disable.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This has an effect only when saving floating-point types.</para><para>If set to something non-zero, then floating-point numbers will be divided by this value before being written.</para><para>Returns true to indicate success. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="195" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/PackedParameters.cxx" bodystart="112" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1ae9c9c89c0fd8bc3247af0fce0e410c0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SG::PackedParameters::setSigned</definition>
+        <argsstring>(bool flag)</argsstring>
+        <name>setSigned</name>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Set the signedness flag for the packed representation. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should elements be saved as signed numbers?</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+If the flag is false (unsigned), this always succeeds. If the flag is true (signed), then this fails if <computeroutput>nbits</computeroutput> is 1. <computeroutput>nmantissa</computeroutput> will be adjusted if there are now insufficient bits for it.</para><para>Returns true if successful, false otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="209" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/PackedParameters.cxx" bodystart="134" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1a3f260dad30c53288316a60bde64225bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SG::PackedParameters::setRounding</definition>
+        <argsstring>(bool flag)</argsstring>
+        <name>setRounding</name>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Set the rounding mode. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should numbers be rounded when being written?</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This has an effect only when saving floating-point types.</para><para>Returns true to indicate success. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="220" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/PackedParameters.cxx" bodystart="157" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1a7ce48614e33a7cc69abbece8a6085eff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SG::PackedParameters::setFloat</definition>
+        <argsstring>(bool flag)</argsstring>
+        <name>setFloat</name>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Set the floating-point flag. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should numbers be written as floating-point?</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+If true, numbers will be written in a floating/fixed point representation; otherwise, they will be written as integers.</para><para>Returns true to indicate success. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="232" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/PackedParameters.cxx" bodystart="176" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1a53a1b2a959f1f54d131e82fefa7cc947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SG::PackedParameters::setOption</definition>
+        <argsstring>(const AuxDataOption &amp;option)</argsstring>
+        <name>setOption</name>
+        <param>
+          <type>const <ref refid="d7/d31/classSG_1_1AuxDataOption" kindref="compound">AuxDataOption</ref> &amp;</type>
+          <declname>option</declname>
+        </param>
+        <briefdescription>
+<para>Set a packing option.  option The option to set. </para>        </briefdescription>
+        <detaileddescription>
+<para>Recognized options are `nbits&apos;, `nmantissa&apos;, `scale&apos;, `signed&apos;, `rounding&apos;, and `float&apos;. See the setter functions above for details on their semantics.</para><para>Returns true on success; false otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="255" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/PackedParameters.cxx" bodystart="218" bodyend="239"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d5/dc1/classSG_1_1PackedParameters_1a00cad74348560687381e448c7780e757" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SG::PackedParameters::isValidOption</definition>
+        <argsstring>(const AuxDataOption &amp;option)</argsstring>
+        <name>isValidOption</name>
+        <param>
+          <type>const <ref refid="d7/d31/classSG_1_1AuxDataOption" kindref="compound">AuxDataOption</ref> &amp;</type>
+          <declname>option</declname>
+        </param>
+        <briefdescription>
+<para>Test to see if <computeroutput>option</computeroutput> is a recognized packing option. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>option</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The option to test.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns <computeroutput>true</computeroutput> if the name of <computeroutput>option</computeroutput> is recognized as a valid packing option; <computeroutput>false</computeroutput> otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="242" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/PackedParameters.cxx" bodystart="193" bodyend="205"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Describe how the contents of a <computeroutput><ref refid="dd/d01/classSG_1_1PackedContainer" kindref="compound">PackedContainer</ref></computeroutput> are to be saved. </para>    </briefdescription>
+    <detaileddescription>
+<para>When a <computeroutput><ref refid="dd/d01/classSG_1_1PackedContainer" kindref="compound">PackedContainer</ref></computeroutput> is saved to a root file, the contents may be stored with reduced precision. How this packing is done is described by the parameters held in this structure. These include:</para><para><itemizedlist>
+<listitem><para>nbits: This is the overall number of bits used to hold one container element. May be in the range 1-32, inclusive.</para></listitem><listitem><para>isSigned: If true, then the elements are saved as signed numbers; otherwise as unsigned numbers. If this is set, then one bit is used for the sign; nbits must therefore be at least 2.</para></listitem><listitem><para>isFloat: If true, the elements are saved as floating-point numbers; otherwise as integers. It may occasionally be useful to save floating-point values as integers. The converse should also work, but is likely to be less useful.</para></listitem></itemizedlist>
+</para><para>The remaining parameters are only used when elements are being saved as floating-point.</para><para><itemizedlist>
+<listitem><para>nmantissa: The number of bits to be used for the mantissa part of the representation. Does not include a sign bit. Any bits left out of nbits after removing nmantissa bits and (optionally) the sign bit are used as the exponent. If fewer than 2 bits are available for the exponent, then the number is saved using a fixed-point representation, with a range [0, 1).</para></listitem><listitem><para>scale: If set, then numbers will be divided by this value before being saved. This allows extending a fixed-point format to an arbitrary range.</para></listitem><listitem><para>rounding: If true, numbers will be rounded to the nearest value when written. Otherwise (the default), they will be truncated.</para></listitem></itemizedlist>
+</para><para>User code will should usually not interact with this class directly. Use the <computeroutput>setOption</computeroutput> interfaces instead. </para>    </detaileddescription>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" line="61" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedParameters.h" bodystart="60" bodyend="282"/>
+    <listofallmembers>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1aa049bba0c7bd2de4b60f3b5a1453ebdaacd33ae6f78b811a61dd0b8035f1441f3" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>FLAG_HAS_SCALE</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1aa049bba0c7bd2de4b60f3b5a1453ebdaa36e1f3b6ac09ad59c6aae27af517f41a" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>FLAG_IS_FLOAT</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1aa049bba0c7bd2de4b60f3b5a1453ebdaaa8a933f579e0c5f9950fef8870513a03" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>FLAG_IS_SIGNED</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1aa049bba0c7bd2de4b60f3b5a1453ebdaa18c8b5caf638b42b72d1f2d167d62d33" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>FLAG_ROUNDING</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1a2f1971577699df4279cb2b0803cca255" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>flags</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1aacf60a8d55d998374064a260ac58c007" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>hasScale</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1a13e88b496167d3bc4c8ff7d96bf73ddc" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>isFloat</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1ae9c63dc34ab78d75897b526a28518455" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>isSigned</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1a00cad74348560687381e448c7780e757" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>isValidOption</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1a23233cb1c3882df552f58cc66bd6685c" prot="private" virt="non-virtual"><scope>SG::PackedParameters</scope><name>m_flags</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1af2a88e81a766fa96e107952e03df7719" prot="private" virt="non-virtual"><scope>SG::PackedParameters</scope><name>m_nbits</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1aa1b85f8f230794dedddd0ee8c50e12a0" prot="private" virt="non-virtual"><scope>SG::PackedParameters</scope><name>m_nmantissa</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1ac95550bc174247207f4a1f58a1c0772c" prot="private" virt="non-virtual"><scope>SG::PackedParameters</scope><name>m_scale</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1ab00ae71fdadeea196896a0a7fc85426a" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>nbits</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1af705c32cce991271601d9f59f7f302fd" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>nmantissa</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1aefdef2b2be2e4036694714583d486a7c" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>PackedParameters</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1afa31dcb767bd01751defae314786c5f1" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>PackedParameters</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1a5511c58b3836c7a51eac41c85f062311" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>PackedParameters</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1a8b991c9260dfd8e8ecdb617d9b2b7d75" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>rounding</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1a2841715b42294fcde806e44b818a9d71" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>scale</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1a7ce48614e33a7cc69abbece8a6085eff" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>setFloat</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1a44550d4e5aea2dfec93e19913e65e9cb" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>setNbits</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1a8f0db66e9e394f5623f42dd66463629f" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>setNmantissa</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1a53a1b2a959f1f54d131e82fefa7cc947" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>setOption</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1a3f260dad30c53288316a60bde64225bb" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>setRounding</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1aa85188c0b04fd4f53245f824e6d8e3aa" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>setScale</name></member>
+      <member refid="d5/dc1/classSG_1_1PackedParameters_1ae9c9c89c0fd8bc3247af0fce0e410c0b" prot="public" virt="non-virtual"><scope>SG::PackedParameters</scope><name>setSigned</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

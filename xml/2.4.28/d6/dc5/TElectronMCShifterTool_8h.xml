@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d6/dc5/TElectronMCShifterTool_8h" kind="file">
+    <compoundname>TElectronMCShifterTool.h</compoundname>
+    <includes local="no">map</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="d7/dbb/ElectronPhotonShowerShapeFudgeTool_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonShowerShapeFudgeTool/ElectronPhotonShowerShapeFudgeTool/ElectronPhotonShowerShapeFudgeTool.h</includedby>
+    <includedby refid="d3/d16/TElectronMCShifterTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonShowerShapeFudgeTool/Root/TElectronMCShifterTool.cxx</includedby>
+    <incdepgraph>
+      <node id="126530">
+        <label>map</label>
+      </node>
+      <node id="126531">
+        <label>vector</label>
+      </node>
+      <node id="126529">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonShowerShapeFudgeTool/ElectronPhotonShowerShapeFudgeTool/TElectronMCShifterTool.h</label>
+        <link refid="TElectronMCShifterTool.h"/>
+        <childnode refid="126530" relation="include">
+        </childnode>
+        <childnode refid="126531" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="126534">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonShowerShapeFudgeTool/ElectronPhotonShowerShapeFudgeTool/ElectronPhotonShowerShapeFudgeToolDict.h</label>
+        <link refid="dc/d25/ElectronPhotonShowerShapeFudgeToolDict_8h_source"/>
+      </node>
+      <node id="126533">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonShowerShapeFudgeTool/ElectronPhotonShowerShapeFudgeTool/ElectronPhotonShowerShapeFudgeTool.h</label>
+        <link refid="d7/dbb/ElectronPhotonShowerShapeFudgeTool_8h_source"/>
+        <childnode refid="126534" relation="include">
+        </childnode>
+      </node>
+      <node id="126532">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonShowerShapeFudgeTool/ElectronPhotonShowerShapeFudgeTool/TElectronMCShifterTool.h</label>
+        <link refid="TElectronMCShifterTool.h"/>
+        <childnode refid="126533" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="da/d5e/classTElectronMCShifterTool" prot="public">TElectronMCShifterTool</innerclass>
+    <innernamespace refid="d8/d0f/namespaceElePIDNames">ElePIDNames</innernamespace>
+    <briefdescription>
+<para><ref refid="d4/dc4/structA" kindref="compound">A</ref> Tool used to shift MC varibles. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Rob Roy Fletcher (<ulink url="mailto:robflet@sas.upenn.edu">robflet@sas.upenn.edu</ulink>) </para></simplesect>
+<simplesect kind="version"><para>0.1 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="51"><highlight class="preprocessor">#ifndef<sp/>TELECTRONMCSHIFTERTOOL_H</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TELECTRONMCSHIFTERTOOL_H</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ElePIDNames{</highlight></codeline>
+<codeline lineno="68" refid="d8/d0f/namespaceElePIDNames_1a0eb6db6cbb50f1e3b863408e16c7e205" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="d8/d0f/namespaceElePIDNames_1a0eb6db6cbb50f1e3b863408e16c7e205" kindref="member">Var</ref><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>DeltaPoverP</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>,TRTHighTOutliersRatio</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>,d0significance</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>,deltaeta1</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>,deltaphi2</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>,deltaphiRescaled</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>,eratio</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>,f1</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>,f3</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>,fside</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>,reta</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>,rhad</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>,rphi</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>,trackd0pvunbiased</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>,weta2</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>,ws3</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>,wstot</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>,e277</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>,DeltaE</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"></codeline>
+<codeline lineno="95" refid="da/d5e/classTElectronMCShifterTool" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="da/d5e/classTElectronMCShifterTool" kindref="compound" tooltip="The base class for the Shifter tool. Holds all shift values.">TElectronMCShifterTool</ref>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><ref refid="da/d5e/classTElectronMCShifterTool_1aca8aeb6ec4d97167552215ddabf8f5b1" kindref="member" tooltip="Default constructor.">TElectronMCShifterTool</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><ref refid="da/d5e/classTElectronMCShifterTool_1aba9341fc3e670646c7808566c75c974a" kindref="member" tooltip="Default destructor.">~TElectronMCShifterTool</ref>();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"></codeline>
+<codeline lineno="114" refid="da/d5e/classTElectronMCShifterTool_1ad91f298d079089d06dd24fc7ada0c806" refkind="member"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="da/d5e/classTElectronMCShifterTool_1ad91f298d079089d06dd24fc7ada0c806" kindref="member" tooltip="Get the shift amount.">getShiftDelta</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eT,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eta,<sp/><ref refid="d8/d0f/namespaceElePIDNames_1a0eb6db6cbb50f1e3b863408e16c7e205" kindref="member">ElePIDNames::Var</ref><sp/>var){</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ibin_combined<sp/>=<sp/>getShifterEtBin(eT)*6+getShifterEtaBin(eta);<sp/></highlight><highlight class="comment">//Convert<sp/>the<sp/>2d</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Shifts[var].at(ibin_combined);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"></codeline>
+<codeline lineno="127" refid="da/d5e/classTElectronMCShifterTool_1a302aad0a24f52f5dbe82cb258b59099b" refkind="member"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="da/d5e/classTElectronMCShifterTool_1a302aad0a24f52f5dbe82cb258b59099b" kindref="member" tooltip="Get the shift value from bin numbers.">getShiftDeltaByBin</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>eT,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>eta,<sp/><ref refid="d8/d0f/namespaceElePIDNames_1a0eb6db6cbb50f1e3b863408e16c7e205" kindref="member">ElePIDNames::Var</ref><sp/>var){</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ibin_combined<sp/>=<sp/>getShifterEtBin(eT)*6+getShifterEtaBin(eta);<sp/></highlight><highlight class="comment">//Convert<sp/>the<sp/>2d</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Shifts[var].at(ibin_combined);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="da/d5e/classTElectronMCShifterTool_1a4bdaf378d382c32da715f2a31a1247df" kindref="member" tooltip="Shift a variable.">shiftVar</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eT,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eta,<ref refid="d8/d0f/namespaceElePIDNames_1a0eb6db6cbb50f1e3b863408e16c7e205" kindref="member">ElePIDNames::Var</ref><sp/>var,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="da/d5e/classTElectronMCShifterTool_1aef01f5a5467242f2477fcd164be4a339" kindref="member" tooltip="Shift a variable by the eT and eta bins.">shiftVarByBin</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>eTBin,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>etaBin,<ref refid="d8/d0f/namespaceElePIDNames_1a0eb6db6cbb50f1e3b863408e16c7e205" kindref="member">ElePIDNames::Var</ref><sp/>var,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="da/d5e/classTElectronMCShifterTool_1a52b440d2af25061ea2e987187ae8890e" kindref="member" tooltip="shift all variables as references.">shiftAll</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>eT,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>eta,</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>rhad1<sp/><sp/>,</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>rhad<sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>reta<sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>rphi<sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>weta2<sp/><sp/>,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>f1<sp/><sp/><sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>f3<sp/><sp/><sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>fside<sp/><sp/>,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>ws3<sp/><sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>wstot<sp/><sp/>,</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>eratio<sp/>,</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>e277<sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>DeltaE<sp/>,</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>deltaeta1,</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>deltaphiRescaled</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/></highlight><highlight class="comment">//static<sp/>const<sp/>double<sp/>Shifts[17][54];<sp/>//<sp/>17<sp/>variables<sp/>x<sp/>9<sp/>eta<sp/>bins<sp/>x<sp/>6<sp/>et<sp/>bins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/>std::map&lt;ElePIDNames::Var,<sp/>std::vector&lt;float&gt;<sp/>&gt;<sp/>Shifts;</highlight></codeline>
+<codeline lineno="190" refid="da/d5e/classTElectronMCShifterTool_1a57e654fc7ec0d8d2e5982d4707eea557" refkind="member"><highlight class="normal"><sp/>std::map&lt;ElePIDNames::Var,<sp/>std::vector&lt;float&gt;<sp/>&gt;<sp/><ref refid="da/d5e/classTElectronMCShifterTool_1a57e654fc7ec0d8d2e5982d4707eea557" kindref="member" tooltip="vector to hold the widths to be applied">Widths</ref>;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>:</highlight></codeline>
+<codeline lineno="194"></codeline>
+<codeline lineno="199"></codeline>
+<codeline lineno="200"></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getShifterEtBin(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eT)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getShifterEtaBin(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eta)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonShowerShapeFudgeTool/ElectronPhotonShowerShapeFudgeTool/TElectronMCShifterTool.h"/>
+  </compounddef>
+</doxygen>

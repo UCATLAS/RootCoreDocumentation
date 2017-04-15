@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d5/dba/namespacexAOD_1_1Utils" kind="namespace">
+    <compoundname>xAOD::Utils</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d5/dba/namespacexAOD_1_1Utils_1a08af00b733a74513aa0edb77084f8890" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xAOD::Utils::timeToString</definition>
+        <argsstring>(::Double_t secs)</argsstring>
+        <name>timeToString</name>
+        <param>
+          <type>::Double_t</type>
+          <declname>secs</declname>
+        </param>
+        <briefdescription>
+<para>Function creating a human-readable elapsed time printout. </para>        </briefdescription>
+        <detaileddescription>
+<para>Since I wasn&apos;t able to find a nice function printing elapsed times in a human-readable format, I ended up writing one. This function is used in printing the statistics about an analysis.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>secs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An amount of time passed, expressed in seconds </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d4/dc4/structA" kindref="compound">A</ref> formatted, human-readable version of the amount of time passed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/tools/Utils.h" line="17" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/Root/Utils.cxx" bodystart="95" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dba/namespacexAOD_1_1Utils_1a17c4a89cea32992c9bc6c5a0c71a4c82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xAOD::Utils::sizeToString</definition>
+        <argsstring>(::Long64_t bytes)</argsstring>
+        <name>sizeToString</name>
+        <param>
+          <type>::Long64_t</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+<para>Function for printing data sizes in human-readable format. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used to produce nicely readable printouts for amounts of data.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of data expressed in bytes </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d4/dc4/structA" kindref="compound">A</ref> human-readable printout of the data size </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/tools/Utils.h" line="20" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/Root/Utils.cxx" bodystart="125" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dba/namespacexAOD_1_1Utils_1a10ef9a0f96f4f703c9383d6e83f75ed1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xAOD::Utils::speedToString</definition>
+        <argsstring>(::Double_t bytespersec)</argsstring>
+        <name>speedToString</name>
+        <param>
+          <type>::Double_t</type>
+          <declname>bytespersec</declname>
+        </param>
+        <briefdescription>
+<para>Function for printing data processing speeds in a human-readable format. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytespersec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The speed expressed in bytes / seconds </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d4/dc4/structA" kindref="compound">A</ref> human-readable printout of the data processing speed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/tools/Utils.h" line="23" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/Root/Utils.cxx" bodystart="147" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dba/namespacexAOD_1_1Utils_1aa89b7535ddadb123805480696cc08aad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t xAOD::Utils::hash</definition>
+        <argsstring>(const std::string &amp;key)</argsstring>
+        <name>hash</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Function creating a hash out of a &quot;key name&quot;. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function provides a hashed version of the key (branch) names used in the <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> file, similar to how <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref> saves hashed numbers in persistent ElementLinks.</para><para>Since <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref> uses the top 2 bits in an ElementLink&apos;s 32-bit hashed key to save additional state information about the link, the top 2 bits of the hash are always set to 0.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name that we want to create a unique hash for </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d4/dc4/structA" kindref="compound">A</ref> more or less unique hash for the string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/Utils.cxx" line="127"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dba/namespacexAOD_1_1Utils_1a8e77128c07b897ed1d0cf12c3a6bb102" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xAOD::Utils::dynBranchPrefix</definition>
+        <argsstring>(const std::string &amp;key)</argsstring>
+        <name>dynBranchPrefix</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Get the dynamic auxiliary variable prefix based on a container name. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used to figure out what to name dynamic auxiliary branches coming from a container called <computeroutput>key</computeroutput>. It needs to work in sync wiht how it is done in the offline code, so will eventually probably end up in another package.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key/branch name of the auxiliary container </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The prefix of the dynamic variables created based on the contents of the object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/Utils.cxx" line="144"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dba/namespacexAOD_1_1Utils_1a1d3da0ce453802f311d1b0ddd9693648" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::type_info &amp;</type>
+        <definition>const std::type_info &amp; xAOD::Utils::getTypeInfo</definition>
+        <argsstring>(EDataType type)</argsstring>
+        <name>getTypeInfo</name>
+        <param>
+          <type>EDataType</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Get the type info of a primitive variable, as declared by ROOT. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used when reading a primitive branch from an input file without the user explicitly asking for it.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type taken from ROOT </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The typeid of the primitive type in question </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/Utils.cxx" line="169"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dba/namespacexAOD_1_1Utils_1aad95f39be75a0ce07769e9090de8e8dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char xAOD::Utils::rootType</definition>
+        <argsstring>(char typeidType)</argsstring>
+        <name>rootType</name>
+        <param>
+          <type>char</type>
+          <declname>typeidType</declname>
+        </param>
+        <briefdescription>
+<para>Get the character describing a given primitive type for ROOT. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used internally in the code when creating primitive dynamic auxiliary branches. I just took the code from SFrame to be honest...</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>typeidType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type name coming from typeid(...).name() </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The character describing this type for TTree::Branch(...) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/Utils.cxx" line="226"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dba/namespacexAOD_1_1Utils_1af6c51b4c068a61be660d3402624cdbef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xAOD::Utils::getTypeName</definition>
+        <argsstring>(const std::type_info &amp;ti)</argsstring>
+        <name>getTypeName</name>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <briefdescription>
+<para>Get the type name as it is known to ROOT, based on std::type_info. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is necessary in order to create type names that ROOT can understand. For instance, a type name like <computeroutput>std::vector&lt;<ref refid="d6/d6e/classElementLink" kindref="compound">ElementLink</ref>&lt;DataVector&lt;xAOD::IParticle, DataModel_detail::NoBase&gt; &gt;, std::allocator&lt;<ref refid="d6/d6e/classElementLink" kindref="compound">ElementLink</ref>&lt;DataVector&lt;xAOD::IParticle, DataModel_detail::NoBase&gt; &gt; &gt; &gt;</computeroutput> as seen by the compiler, needs to become <computeroutput>std::vector&lt;<ref refid="d6/d6e/classElementLink" kindref="compound">ElementLink</ref>&lt;DataVector&lt;xAOD::IParticle&gt; &gt; &gt;</computeroutput> for ROOT to find a dictionary for it.</para><para>This function executes the string manipulation necessary to do this.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type for which we want to find a string type name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The type name in a format that ROOT understands </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/Utils.cxx" line="285"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/tools/Utils.h" line="14"/>
+  </compounddef>
+</doxygen>

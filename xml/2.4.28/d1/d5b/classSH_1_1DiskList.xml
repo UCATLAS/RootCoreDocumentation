@@ -1,0 +1,344 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d1/d5b/classSH_1_1DiskList" kind="class" prot="public">
+    <compoundname>SH::DiskList</compoundname>
+    <derivedcompoundref refid="da/d47/classSH_1_1DiskListEOS" prot="public" virt="non-virtual">SH::DiskListEOS</derivedcompoundref>
+    <derivedcompoundref refid="d5/d9f/classSH_1_1DiskListLocal" prot="public" virt="non-virtual">SH::DiskListLocal</derivedcompoundref>
+    <derivedcompoundref refid="d0/d9b/classSH_1_1DiskListSRM" prot="public" virt="non-virtual">SH::DiskListSRM</derivedcompoundref>
+    <derivedcompoundref refid="d8/d5e/classSH_1_1DiskListXRD" prot="public" virt="non-virtual">SH::DiskListXRD</derivedcompoundref>
+    <includes refid="dc/d37/DiskList_8h" local="no">DiskList.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="d1/d5b/classSH_1_1DiskList_1a6be33401d2703bbfbcc846e715e1e4d8" prot="private" static="no">
+        <name>State</name>
+        <enumvalue id="d1/d5b/classSH_1_1DiskList_1a6be33401d2703bbfbcc846e715e1e4d8af293f6b27c91b5336461202cdb53e044" prot="private">
+          <name>S_BLANK</name>
+          <briefdescription>
+<para>just initialized </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d5b/classSH_1_1DiskList_1a6be33401d2703bbfbcc846e715e1e4d8a6f3ebc746765d96a825dee32a7943be2" prot="private">
+          <name>S_VALID</name>
+          <briefdescription>
+<para>holding a valid entry </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d5b/classSH_1_1DiskList_1a6be33401d2703bbfbcc846e715e1e4d8abb38ce739fbbca7bc4953389966e95cb" prot="private">
+          <name>S_DONE</name>
+          <briefdescription>
+<para>finished reading entries </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d5b/classSH_1_1DiskList_1a6be33401d2703bbfbcc846e715e1e4d8ad5cdd3c467d18a5d4d8ae8b0c1d04d14" prot="private">
+          <name>S_BROKEN</name>
+          <briefdescription>
+<para>an error occured </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>the current state </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" line="163" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" bodystart="162" bodyend="168"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d1/d5b/classSH_1_1DiskList_1a88094eeefdc8ea27fbb99324e875d48b" prot="private" static="no" mutable="no">
+        <type>State</type>
+        <definition>State SH::DiskList::m_state</definition>
+        <argsstring></argsstring>
+        <name>m_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="State"></copydoc>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" line="170" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/d5b/classSH_1_1DiskList_1afe1f3b7accb6b9f2b3536956daf72d0f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SH::DiskList::testInvariant</definition>
+        <argsstring>() const </argsstring>
+        <name>testInvariant</name>
+        <reimplementedby refid="d8/d5e/classSH_1_1DiskListXRD_1abdd7d01fb0fb05e6b69424909d8c7e90">testInvariant</reimplementedby>
+        <reimplementedby refid="d0/d9b/classSH_1_1DiskListSRM_1abb108b296e857d6e58d1605bff6e55a7">testInvariant</reimplementedby>
+        <reimplementedby refid="d5/d9f/classSH_1_1DiskListLocal_1a737a46c21387326936cd743219df5650">testInvariant</reimplementedby>
+        <reimplementedby refid="da/d47/classSH_1_1DiskListEOS_1ab3d9efa7012b536b7cf6cabf48a3fd79">testInvariant</reimplementedby>
+        <briefdescription>
+<para>test the invariant of this object </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" line="38" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/Root/DiskList.cxx" bodystart="26" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5b/classSH_1_1DiskList_1aba03cd19b877c25e63b78c5fd27da7c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>SH::DiskList::~DiskList</definition>
+        <argsstring>()</argsstring>
+        <name>~DiskList</name>
+        <briefdescription>
+<para>standard destructor </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+<simplesect kind="par"><title>Rationale</title><para>virtual destructor for base class </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" line="48" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/Root/DiskList.cxx" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5b/classSH_1_1DiskList_1ac7620eb6d2d21d8533fe4edd66f7680c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SH::DiskList::next</definition>
+        <argsstring>()</argsstring>
+        <name>next</name>
+        <briefdescription>
+<para>get the next list entry </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>whether we found another entry </para></simplesect>
+<simplesect kind="par"><title>Guarantee</title><para>basic </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>i/o errors </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" line="59" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/Root/DiskList.cxx" bodystart="51" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5b/classSH_1_1DiskList_1a260a5bf756383588dadee7b6dfe67138" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string SH::DiskList::path</definition>
+        <argsstring>() const </argsstring>
+        <name>path</name>
+        <briefdescription>
+<para>the path for the current entry. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the path for the current entry </para></simplesect>
+<simplesect kind="pre"><para>(soft) <ref refid="d1/d5b/classSH_1_1DiskList_1ac7620eb6d2d21d8533fe4edd66f7680c" kindref="member">next()</ref> has been called successfully </para></simplesect>
+<simplesect kind="par"><title>Guarantee</title><para>strong failures: out of memory III </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" line="70" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/Root/DiskList.cxx" bodystart="75" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5b/classSH_1_1DiskList_1a17d746155a8cacb20f97fd34bd11e427" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string SH::DiskList::fileName</definition>
+        <argsstring>() const </argsstring>
+        <name>fileName</name>
+        <briefdescription>
+<para>the filename for the current entry </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the filename for the current entry </para></simplesect>
+<simplesect kind="pre"><para>(soft) <ref refid="d1/d5b/classSH_1_1DiskList_1ac7620eb6d2d21d8533fe4edd66f7680c" kindref="member">next()</ref> has been called successfully </para></simplesect>
+<simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>out of memory III </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" line="82" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/Root/DiskList.cxx" bodystart="85" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5b/classSH_1_1DiskList_1af847547a93cff6e6e27c75c8a84dd2f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/d5b/classSH_1_1DiskList" kindref="compound">DiskList</ref> *</type>
+        <definition>DiskList * SH::DiskList::openDir</definition>
+        <argsstring>() const </argsstring>
+        <name>openDir</name>
+        <briefdescription>
+<para>make a new list object for the sub-directory </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a new list object for the sub-directory, or <computeroutput>NULL</computeroutput> if it is not a directory </para></simplesect>
+<simplesect kind="pre"><para>(soft) <ref refid="d1/d5b/classSH_1_1DiskList_1ac7620eb6d2d21d8533fe4edd66f7680c" kindref="member">next()</ref> has been called successfully </para></simplesect>
+<simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>out of memory III </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" line="95" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/Root/DiskList.cxx" bodystart="98" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5b/classSH_1_1DiskList_1a663385469f51471d4cd3053f7671f741" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string SH::DiskList::dirname</definition>
+        <argsstring>() const </argsstring>
+        <name>dirname</name>
+        <briefdescription>
+<para>the base path for the directory listed </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>out of memory II </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" line="104" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/Root/DiskList.cxx" bodystart="108" bodyend="112"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="d1/d5b/classSH_1_1DiskList_1ae4be65474961b630fec4158f7ce3185e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SH::DiskList::DiskList</definition>
+        <argsstring>()</argsstring>
+        <name>DiskList</name>
+        <briefdescription>
+<para>standard constructor </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>out of memory I </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" line="119" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/Root/DiskList.cxx" bodystart="42" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5b/classSH_1_1DiskList_1abdeb673c1a9e9c0db6719d888247130f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool SH::DiskList::getNext</definition>
+        <argsstring>()=0</argsstring>
+        <name>getNext</name>
+        <reimplementedby refid="d8/d5e/classSH_1_1DiskListXRD_1a40a8bfa760fc01de022cce65ed335668">getNext</reimplementedby>
+        <reimplementedby refid="d0/d9b/classSH_1_1DiskListSRM_1a6372afe61bfbee45d3d7dd036a62d95b">getNext</reimplementedby>
+        <reimplementedby refid="d5/d9f/classSH_1_1DiskListLocal_1afef9187960ea9cf9ce72267cfa0f77a2">getNext</reimplementedby>
+        <reimplementedby refid="da/d47/classSH_1_1DiskListEOS_1abe5e2cd99e3eba368dff7af3e1e9472a">getNext</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="next()"><para>get the next list entry </para><para><simplesect kind="return"><para>whether we found another entry </para></simplesect>
+<simplesect kind="par"><title>Guarantee</title><para>basic </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>i/o errors </para></simplesect>
+</para></copydoc>
+ <simplesect kind="par"><title>Rationale</title><para>the virtual part of <ref refid="d1/d5b/classSH_1_1DiskList_1ac7620eb6d2d21d8533fe4edd66f7680c" kindref="member">DiskList::next()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" line="131"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5b/classSH_1_1DiskList_1abdd1551b406aad8a16ad3a06e5b50dad" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string SH::DiskList::getPath</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getPath</name>
+        <reimplementedby refid="d8/d5e/classSH_1_1DiskListXRD_1a31ae85c52fbbbbaff891c6923ad51705">getPath</reimplementedby>
+        <reimplementedby refid="d0/d9b/classSH_1_1DiskListSRM_1afa1c1e566bdb1def2bbc2a5a2c36c872">getPath</reimplementedby>
+        <reimplementedby refid="d5/d9f/classSH_1_1DiskListLocal_1a6ae7c8fbc603604a0b1d226b0a13e75b">getPath</reimplementedby>
+        <reimplementedby refid="da/d47/classSH_1_1DiskListEOS_1ac8cc836f1d1fe2103bcee6965900e1f5">getPath</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="path()"><para>the path for the current entry. </para><para><simplesect kind="return"><para>the path for the current entry </para></simplesect>
+<simplesect kind="pre"><para>(soft) <ref refid="d1/d5b/classSH_1_1DiskList_1ac7620eb6d2d21d8533fe4edd66f7680c" kindref="member">next()</ref> has been called successfully </para></simplesect>
+<simplesect kind="par"><title>Guarantee</title><para>strong failures: out of memory III </para></simplesect>
+</para></copydoc>
+ <simplesect kind="par"><title>Rationale</title><para>the virtual part of <ref refid="d1/d5b/classSH_1_1DiskList_1a260a5bf756383588dadee7b6dfe67138" kindref="member">DiskList::path()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" line="138"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5b/classSH_1_1DiskList_1a93f295d8f42dbdab1dbb8a7e03004a32" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d1/d5b/classSH_1_1DiskList" kindref="compound">DiskList</ref> *</type>
+        <definition>virtual DiskList* SH::DiskList::doOpenDir</definition>
+        <argsstring>() const =0</argsstring>
+        <name>doOpenDir</name>
+        <reimplementedby refid="d8/d5e/classSH_1_1DiskListXRD_1a75cec3eb643f2b9dab322e1afa910a70">doOpenDir</reimplementedby>
+        <reimplementedby refid="d0/d9b/classSH_1_1DiskListSRM_1a3b45d8af241b2e6d5a0a213a881f5c3b">doOpenDir</reimplementedby>
+        <reimplementedby refid="d5/d9f/classSH_1_1DiskListLocal_1a8fff56e343209d845034d963ce86061a">doOpenDir</reimplementedby>
+        <reimplementedby refid="da/d47/classSH_1_1DiskListEOS_1ace67606617b2a1c8ac55cc94c37f00b2">doOpenDir</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="openDir()"><para>make a new list object for the sub-directory </para><para><simplesect kind="return"><para>a new list object for the sub-directory, or <computeroutput>NULL</computeroutput> if it is not a directory </para></simplesect>
+<simplesect kind="pre"><para>(soft) <ref refid="d1/d5b/classSH_1_1DiskList_1ac7620eb6d2d21d8533fe4edd66f7680c" kindref="member">next()</ref> has been called successfully </para></simplesect>
+<simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>out of memory III </para></simplesect>
+</para></copydoc>
+ <simplesect kind="par"><title>Rationale</title><para>the virtual part of <ref refid="d1/d5b/classSH_1_1DiskList_1af847547a93cff6e6e27c75c8a84dd2f3" kindref="member">DiskList::openDir()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" line="145"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5b/classSH_1_1DiskList_1a55ab282c7345c5c4e6acafa9b5972fd6" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string SH::DiskList::getDirname</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getDirname</name>
+        <reimplementedby refid="d8/d5e/classSH_1_1DiskListXRD_1aac86f2137eb4ae7074d2f438c7d951b5">getDirname</reimplementedby>
+        <reimplementedby refid="d0/d9b/classSH_1_1DiskListSRM_1af187656e45b29a9f245f1fe62558296a">getDirname</reimplementedby>
+        <reimplementedby refid="d5/d9f/classSH_1_1DiskListLocal_1aa784637a907de6816058ddc8f8e57d89">getDirname</reimplementedby>
+        <reimplementedby refid="da/d47/classSH_1_1DiskListEOS_1a7378c815d8e903e6a83c712038dfc9fd">getDirname</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="dirname()"><para>the base path for the directory listed </para><para><simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>out of memory II </para></simplesect>
+</para></copydoc>
+ <simplesect kind="par"><title>Rationale</title><para>the virtual part of <ref refid="d1/d5b/classSH_1_1DiskList_1a663385469f51471d4cd3053f7671f741" kindref="member">DiskList::dirname()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" line="152"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>an interface for listing directory contents, locally or on a file server </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Rationale:</title><para>this interface was introduced to allow the various data discovery methods to work with the various kinds of file servers without having to specialize them all individually. </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="5119">
+        <label>SH::DiskList</label>
+        <link refid="d1/d5b/classSH_1_1DiskList"/>
+      </node>
+      <node id="5122">
+        <label>SH::DiskListSRM</label>
+        <link refid="d0/d9b/classSH_1_1DiskListSRM"/>
+        <childnode refid="5119" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5123">
+        <label>SH::DiskListXRD</label>
+        <link refid="d8/d5e/classSH_1_1DiskListXRD"/>
+        <childnode refid="5119" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5121">
+        <label>SH::DiskListLocal</label>
+        <link refid="d5/d9f/classSH_1_1DiskListLocal"/>
+        <childnode refid="5119" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5120">
+        <label>SH::DiskListEOS</label>
+        <link refid="da/d47/classSH_1_1DiskListEOS"/>
+        <childnode refid="5119" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" line="28" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/DiskList.h" bodystart="27" bodyend="171"/>
+    <listofallmembers>
+      <member refid="d1/d5b/classSH_1_1DiskList_1a663385469f51471d4cd3053f7671f741" prot="public" virt="non-virtual"><scope>SH::DiskList</scope><name>dirname</name></member>
+      <member refid="d1/d5b/classSH_1_1DiskList_1ae4be65474961b630fec4158f7ce3185e" prot="protected" virt="non-virtual"><scope>SH::DiskList</scope><name>DiskList</name></member>
+      <member refid="d1/d5b/classSH_1_1DiskList_1a93f295d8f42dbdab1dbb8a7e03004a32" prot="protected" virt="pure-virtual"><scope>SH::DiskList</scope><name>doOpenDir</name></member>
+      <member refid="d1/d5b/classSH_1_1DiskList_1a17d746155a8cacb20f97fd34bd11e427" prot="public" virt="non-virtual"><scope>SH::DiskList</scope><name>fileName</name></member>
+      <member refid="d1/d5b/classSH_1_1DiskList_1a55ab282c7345c5c4e6acafa9b5972fd6" prot="protected" virt="pure-virtual"><scope>SH::DiskList</scope><name>getDirname</name></member>
+      <member refid="d1/d5b/classSH_1_1DiskList_1abdeb673c1a9e9c0db6719d888247130f" prot="protected" virt="pure-virtual"><scope>SH::DiskList</scope><name>getNext</name></member>
+      <member refid="d1/d5b/classSH_1_1DiskList_1abdd1551b406aad8a16ad3a06e5b50dad" prot="protected" virt="pure-virtual"><scope>SH::DiskList</scope><name>getPath</name></member>
+      <member refid="d1/d5b/classSH_1_1DiskList_1a88094eeefdc8ea27fbb99324e875d48b" prot="private" virt="non-virtual"><scope>SH::DiskList</scope><name>m_state</name></member>
+      <member refid="d1/d5b/classSH_1_1DiskList_1ac7620eb6d2d21d8533fe4edd66f7680c" prot="public" virt="non-virtual"><scope>SH::DiskList</scope><name>next</name></member>
+      <member refid="d1/d5b/classSH_1_1DiskList_1af847547a93cff6e6e27c75c8a84dd2f3" prot="public" virt="non-virtual"><scope>SH::DiskList</scope><name>openDir</name></member>
+      <member refid="d1/d5b/classSH_1_1DiskList_1a260a5bf756383588dadee7b6dfe67138" prot="public" virt="non-virtual"><scope>SH::DiskList</scope><name>path</name></member>
+      <member refid="d1/d5b/classSH_1_1DiskList_1a6be33401d2703bbfbcc846e715e1e4d8af293f6b27c91b5336461202cdb53e044" prot="private" virt="non-virtual"><scope>SH::DiskList</scope><name>S_BLANK</name></member>
+      <member refid="d1/d5b/classSH_1_1DiskList_1a6be33401d2703bbfbcc846e715e1e4d8ad5cdd3c467d18a5d4d8ae8b0c1d04d14" prot="private" virt="non-virtual"><scope>SH::DiskList</scope><name>S_BROKEN</name></member>
+      <member refid="d1/d5b/classSH_1_1DiskList_1a6be33401d2703bbfbcc846e715e1e4d8abb38ce739fbbca7bc4953389966e95cb" prot="private" virt="non-virtual"><scope>SH::DiskList</scope><name>S_DONE</name></member>
+      <member refid="d1/d5b/classSH_1_1DiskList_1a6be33401d2703bbfbcc846e715e1e4d8a6f3ebc746765d96a825dee32a7943be2" prot="private" virt="non-virtual"><scope>SH::DiskList</scope><name>S_VALID</name></member>
+      <member refid="d1/d5b/classSH_1_1DiskList_1a6be33401d2703bbfbcc846e715e1e4d8" prot="private" virt="non-virtual"><scope>SH::DiskList</scope><name>State</name></member>
+      <member refid="d1/d5b/classSH_1_1DiskList_1afe1f3b7accb6b9f2b3536956daf72d0f" prot="public" virt="non-virtual"><scope>SH::DiskList</scope><name>testInvariant</name></member>
+      <member refid="d1/d5b/classSH_1_1DiskList_1aba03cd19b877c25e63b78c5fd27da7c5" prot="public" virt="virtual"><scope>SH::DiskList</scope><name>~DiskList</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1060 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool" kind="class" prot="public">
+    <compoundname>TauAnalysisTools::TauEfficiencyCorrectionsTool</compoundname>
+    <basecompoundref refid="d9/d7c/classTauAnalysisTools_1_1ITauEfficiencyCorrectionsTool" prot="public" virt="virtual">TauAnalysisTools::ITauEfficiencyCorrectionsTool</basecompoundref>
+    <basecompoundref refid="da/dfd/classasg_1_1AsgMetadataTool" prot="public" virt="non-virtual">asg::AsgMetadataTool</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ada2bf4cc4d756c7c902abe6c39307dc9" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool" kindref="compound">TauEfficiencyCorrectionsTool</ref>(const std::string &amp;sName, <ref refid="d8/d9f/classTauAnalysisTools_1_1TauSelectionTool" kindref="compound">TauSelectionTool</ref> *tTauSelectionTool) __attribute__((deprecated(&quot;This function is deprecated. Please pass the <ref refid="d8/d9f/classTauAnalysisTools_1_1TauSelectionTool" kindref="compound">TauSelectionTool</ref> as a ToolHandle via the property \&quot;TauSelectionTool\&quot;. The function will be removed in the future without further notice.\nFor further information please refer to the README StatusCod</type>
+        <definition>StatusCode TauAnalysisTools::TauEfficiencyCorrectionsTool::initialize</definition>
+        <argsstring>)()</argsstring>
+        <name>initialize</name>
+        <briefdescription>
+<para>Function initialising the tool. </para>        </briefdescription>
+        <detaileddescription>
+<para>Create a constructor for standalone usage with preconfiguration for scale factors types depending on applied cuts from TauSelection Tool </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="54" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="147" bodyend="232"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a284627e98ea411f1864590d096cfdf0b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; TauAnalysisTools::TauEfficiencyCorrectionsTool::m_vEfficiencyCorrectionTypes</definition>
+        <argsstring></argsstring>
+        <name>m_vEfficiencyCorrectionTypes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="100" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ae82a9cb8914d797c17f075c588195ffc" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; asg::AnaToolHandle&lt; <ref refid="d9/d7c/classTauAnalysisTools_1_1ITauEfficiencyCorrectionsTool" kindref="compound">ITauEfficiencyCorrectionsTool</ref> &gt; * &gt;</type>
+        <definition>std::vector&lt; asg::AnaToolHandle&lt;ITauEfficiencyCorrectionsTool&gt;* &gt; TauAnalysisTools::TauEfficiencyCorrectionsTool::m_vCommonEfficiencyTools</definition>
+        <argsstring></argsstring>
+        <name>m_vCommonEfficiencyTools</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="101" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a3496e20bfd8ff7a32a82a54acf8fb500" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; asg::AnaToolHandle&lt; <ref refid="d9/d7c/classTauAnalysisTools_1_1ITauEfficiencyCorrectionsTool" kindref="compound">ITauEfficiencyCorrectionsTool</ref> &gt; * &gt;</type>
+        <definition>std::vector&lt; asg::AnaToolHandle&lt;ITauEfficiencyCorrectionsTool&gt;* &gt; TauAnalysisTools::TauEfficiencyCorrectionsTool::m_vTriggerEfficiencyTools</definition>
+        <argsstring></argsstring>
+        <name>m_vTriggerEfficiencyTools</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="102" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1aba8cce7a48fb9245a0dfabc7feb6b8d9" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sInputFilePathRecoHadTau</definition>
+        <argsstring></argsstring>
+        <name>m_sInputFilePathRecoHadTau</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="103" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1acb66ec89c1f6cada3f1a8aa8c5be49eb" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sInputFilePathEleOLRHadTau</definition>
+        <argsstring></argsstring>
+        <name>m_sInputFilePathEleOLRHadTau</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="104" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a72488b6fed09ec954f566d7398b10ea4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sInputFilePathEleOLRElectron</definition>
+        <argsstring></argsstring>
+        <name>m_sInputFilePathEleOLRElectron</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="105" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a57b9da69c3aee3ea59304c292b2a4a84" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sInputFilePathJetIDHadTau</definition>
+        <argsstring></argsstring>
+        <name>m_sInputFilePathJetIDHadTau</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="106" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a193749a41631f96bcc0dc771fc1482c7" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sInputFilePathContJetIDHadTau</definition>
+        <argsstring></argsstring>
+        <name>m_sInputFilePathContJetIDHadTau</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="107" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1af1142535e1c28fcb500619bf965e561a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sInputFilePathEleIDHadTau</definition>
+        <argsstring></argsstring>
+        <name>m_sInputFilePathEleIDHadTau</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="108" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a2998e26a864b5d044ba14e2e697a1448" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sInputFilePathTriggerHadTau</definition>
+        <argsstring></argsstring>
+        <name>m_sInputFilePathTriggerHadTau</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="109" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ae16bf3ae561a60a4b0d8bae5d4c22495" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sVarNameBase</definition>
+        <argsstring></argsstring>
+        <name>m_sVarNameBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="110" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ae81b8ef47c4b0b1d316ed4760988e0ca" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sVarNameRecoHadTau</definition>
+        <argsstring></argsstring>
+        <name>m_sVarNameRecoHadTau</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="111" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1abe5ad1379828ee49b4f254c39b9dd4bd" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sVarNameEleOLRHadTau</definition>
+        <argsstring></argsstring>
+        <name>m_sVarNameEleOLRHadTau</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="112" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ae6fc16092eb6986f85e50a9e25714f2d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sVarNameEleOLRElectron</definition>
+        <argsstring></argsstring>
+        <name>m_sVarNameEleOLRElectron</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="113" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a01abf60c44b30db4af7541d0149ed484" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sVarNameJetIDHadTau</definition>
+        <argsstring></argsstring>
+        <name>m_sVarNameJetIDHadTau</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="114" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a3daf98fade2b39949192d3c173d55572" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sVarNameContJetIDHadTau</definition>
+        <argsstring></argsstring>
+        <name>m_sVarNameContJetIDHadTau</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="115" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1af36c2dcce2ab44cb71c8819fe5f4c648" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sVarNameEleIDHadTau</definition>
+        <argsstring></argsstring>
+        <name>m_sVarNameEleIDHadTau</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="116" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a86ff61dcaf1b12670fbd60f94deb6ea5" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sVarNameTriggerHadTau</definition>
+        <argsstring></argsstring>
+        <name>m_sVarNameTriggerHadTau</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="117" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1aa4f9ed1a8eb9ba7cf9b411f316e8de35" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sRecommendationTag</definition>
+        <argsstring></argsstring>
+        <name>m_sRecommendationTag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="118" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a577a6b832565ab8e29aa125a3c6d8580" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sTriggerName</definition>
+        <argsstring></argsstring>
+        <name>m_sTriggerName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="119" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a7df38e5c235110f50e7d31907b7db011" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sTriggerYear</definition>
+        <argsstring></argsstring>
+        <name>m_sTriggerYear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="120" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a5aedad393e4eada861b1e9f4f0f194a6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TauAnalysisTools::TauEfficiencyCorrectionsTool::m_bSkipTruthMatchCheck</definition>
+        <argsstring></argsstring>
+        <name>m_bSkipTruthMatchCheck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="121" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a767c37be0ccbf9c537abdf4b61bc0151" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TauAnalysisTools::TauEfficiencyCorrectionsTool::m_bUseIDExclusiveSF</definition>
+        <argsstring></argsstring>
+        <name>m_bUseIDExclusiveSF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="123" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ac16fd3a67cb75182efb8b92b2ae9782f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TauAnalysisTools::TauEfficiencyCorrectionsTool::m_bUseInclusiveEta</definition>
+        <argsstring></argsstring>
+        <name>m_bUseInclusiveEta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="124" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a35d7182fcbf74b64b76fac810e3823a1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TauAnalysisTools::TauEfficiencyCorrectionsTool::m_bUseTriggerInclusiveEta</definition>
+        <argsstring></argsstring>
+        <name>m_bUseTriggerInclusiveEta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="125" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a9a08207345b421f003645e5fbfc0afe6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TauAnalysisTools::TauEfficiencyCorrectionsTool::m_bUsePtBinnedSF</definition>
+        <argsstring></argsstring>
+        <name>m_bUsePtBinnedSF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="126" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a41a4232a076c96234b6a6128f6411c7d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TauAnalysisTools::TauEfficiencyCorrectionsTool::m_bUseHighPtUncert</definition>
+        <argsstring></argsstring>
+        <name>m_bUseHighPtUncert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="127" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a06c675322cce2903fb6c5519ea3ca5ac" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TauAnalysisTools::TauEfficiencyCorrectionsTool::m_bIsData</definition>
+        <argsstring></argsstring>
+        <name>m_bIsData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="128" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a575765e64429e7374d6625599a2073ac" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TauAnalysisTools::TauEfficiencyCorrectionsTool::m_bIsConfigured</definition>
+        <argsstring></argsstring>
+        <name>m_bIsConfigured</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="129" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a9e161bf9d77f941da7b67b3b4fc34365" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TauAnalysisTools::TauEfficiencyCorrectionsTool::m_iIDLevel</definition>
+        <argsstring></argsstring>
+        <name>m_iIDLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="130" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ab6f124a32272cce04fcb4dbf601aa7b5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TauAnalysisTools::TauEfficiencyCorrectionsTool::m_iEVLevel</definition>
+        <argsstring></argsstring>
+        <name>m_iEVLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="131" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1aa7c53e013bd5b9e69df7135859cdcb16" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TauAnalysisTools::TauEfficiencyCorrectionsTool::m_iOLRLevel</definition>
+        <argsstring></argsstring>
+        <name>m_iOLRLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="132" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a157b7b7a8fe285244b68aaf6e9e6e731" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TauAnalysisTools::TauEfficiencyCorrectionsTool::m_iContSysType</definition>
+        <argsstring></argsstring>
+        <name>m_iContSysType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="133" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a535cb5b45abc8aaa53c3239632bac08b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TauAnalysisTools::TauEfficiencyCorrectionsTool::m_iTriggerPeriodBinning</definition>
+        <argsstring></argsstring>
+        <name>m_iTriggerPeriodBinning</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="134" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a095680ac5b4e6791bca118b6e51ce8a7" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int TauAnalysisTools::TauEfficiencyCorrectionsTool::m_iRunNumber</definition>
+        <argsstring></argsstring>
+        <name>m_iRunNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="136" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a3d5bc18eb612d15f90c7ef602c5736d1" prot="private" static="no" mutable="no">
+        <type>ToolHandle&lt; <ref refid="d5/de2/classTauAnalysisTools_1_1ITauSelectionTool" kindref="compound">TauAnalysisTools::ITauSelectionTool</ref> &gt;</type>
+        <definition>ToolHandle&lt;TauAnalysisTools::ITauSelectionTool&gt; TauAnalysisTools::TauEfficiencyCorrectionsTool::m_tTauSelectionToolHandle</definition>
+        <argsstring></argsstring>
+        <name>m_tTauSelectionToolHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="138" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1aacd0e4165e17cfad8d150d768c638327" prot="private" static="no" mutable="no">
+        <type><ref refid="d8/d9f/classTauAnalysisTools_1_1TauSelectionTool" kindref="compound">TauSelectionTool</ref> *</type>
+        <definition>TauSelectionTool* TauAnalysisTools::TauEfficiencyCorrectionsTool::m_tTauSelectionTool</definition>
+        <argsstring></argsstring>
+        <name>m_tTauSelectionTool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="142" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a262ef132e6c74127c2a46537b21d9e63" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::m_sEventInfoName</definition>
+        <argsstring></argsstring>
+        <name>m_sEventInfoName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="144" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1aaeacdf491b98682a939b5af7b201a5ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TauAnalysisTools::TauEfficiencyCorrectionsTool::TauEfficiencyCorrectionsTool</definition>
+        <argsstring>(const std::string &amp;sName)</argsstring>
+        <name>TauEfficiencyCorrectionsTool</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>sName</declname>
+        </param>
+        <briefdescription>
+<para>Create a proper constructor for <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Create a constructor for standalone usage </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="45" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="15" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a927cb76bb7e4a3f1394a18345cf5995b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TauAnalysisTools::TauEfficiencyCorrectionsTool::printConfig</definition>
+        <argsstring>(bool bAlways=true)</argsstring>
+        <name>printConfig</name>
+        <param>
+          <type>bool</type>
+          <declname>bAlways</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Print tool configuration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="57" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="259" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a047a8231a08729c8b3a65a349ef87477" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CP::CorrectionCode</ref></type>
+        <definition>CP::CorrectionCode TauAnalysisTools::TauEfficiencyCorrectionsTool::getEfficiencyScaleFactor</definition>
+        <argsstring>(const xAOD::TauJet &amp;xTau, double &amp;eff)</argsstring>
+        <name>getEfficiencyScaleFactor</name>
+        <reimplements refid="d9/d7c/classTauAnalysisTools_1_1ITauEfficiencyCorrectionsTool_1ab55ce0406e2fe8374a54d420d4e1a664">getEfficiencyScaleFactor</reimplements>
+        <param>
+          <type>const <ref refid="d5/d20/classxAOD_1_1TauJet__v2" kindref="compound">xAOD::TauJet</ref> &amp;</type>
+          <declname>xTau</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>eff</declname>
+        </param>
+        <briefdescription>
+<para>Get the &quot;tau efficiency&quot; as a return value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="61" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="328" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a0d450b7f74d60a127d132a1f3995af0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CP::CorrectionCode</ref></type>
+        <definition>CP::CorrectionCode TauAnalysisTools::TauEfficiencyCorrectionsTool::applyEfficiencyScaleFactor</definition>
+        <argsstring>(const xAOD::TauJet &amp;xTau)</argsstring>
+        <name>applyEfficiencyScaleFactor</name>
+        <reimplements refid="d9/d7c/classTauAnalysisTools_1_1ITauEfficiencyCorrectionsTool_1a24b6819c523039ae9bdc3d8bd34db6d4">applyEfficiencyScaleFactor</reimplements>
+        <param>
+          <type>const <ref refid="d5/d20/classxAOD_1_1TauJet__v2" kindref="compound">xAOD::TauJet</ref> &amp;</type>
+          <declname>xTau</declname>
+        </param>
+        <briefdescription>
+<para>Decorate the tau with its efficiency. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="63" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="358" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a9e50579903168012e26f235b5c45f930" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool TauAnalysisTools::TauEfficiencyCorrectionsTool::isAffectedBySystematic</definition>
+        <argsstring>(const CP::SystematicVariation &amp;systematic) const </argsstring>
+        <name>isAffectedBySystematic</name>
+        <reimplements refid="d4/d5c/classCP_1_1ISystematicsTool_1a04aa5fb3e693dc6536b27354c7b2c71e">isAffectedBySystematic</reimplements>
+        <param>
+          <type>const <ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref> &amp;</type>
+          <declname>systematic</declname>
+        </param>
+        <briefdescription>
+<para>returns: whether this tool is affected by the given systematis </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="66" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="382" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a170ff7607f2f4f7ea8222b5b27ffff8a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">CP::SystematicSet</ref></type>
+        <definition>CP::SystematicSet TauAnalysisTools::TauEfficiencyCorrectionsTool::affectingSystematics</definition>
+        <argsstring>() const </argsstring>
+        <name>affectingSystematics</name>
+        <reimplements refid="d4/d5c/classCP_1_1ISystematicsTool_1abc7cfc4bece0b5aaf372e75c33ba2122">affectingSystematics</reimplements>
+        <briefdescription>
+<para>returns: the list of all systematics this tool can be affected by </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="69" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="395" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a26e36c51fdfc2c5fb0a30229a5ae1e23" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">CP::SystematicSet</ref></type>
+        <definition>CP::SystematicSet TauAnalysisTools::TauEfficiencyCorrectionsTool::recommendedSystematics</definition>
+        <argsstring>() const </argsstring>
+        <name>recommendedSystematics</name>
+        <reimplements refid="d4/d5c/classCP_1_1ISystematicsTool_1a6d2b283af1c21f9d40588ef87eb6c4b3">recommendedSystematics</reimplements>
+        <briefdescription>
+<para>returns: the list of all systematics this tool recommends to use </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="72" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="407" bodyend="415"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1abc66e810d566e56ad1eb8e8945bb80e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d1/d38/classCP_1_1SystematicCode" kindref="compound">CP::SystematicCode</ref></type>
+        <definition>CP::SystematicCode TauAnalysisTools::TauEfficiencyCorrectionsTool::applySystematicVariation</definition>
+        <argsstring>(const CP::SystematicSet &amp;systConfig)</argsstring>
+        <name>applySystematicVariation</name>
+        <reimplements refid="d4/d5c/classCP_1_1ISystematicsTool_1a73f35f85955411a7e14cb208721a242d">applySystematicVariation</reimplements>
+        <param>
+          <type>const <ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">CP::SystematicSet</ref> &amp;</type>
+          <declname>systConfig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: configure this tool for the given list of systematic variations. any requested systematics that are not affecting this tool will be silently ignored (unless they cause other errors). failures: systematic unknown failures: requesting multiple variations on the same systematic (e.g. up &amp; down) failures: requesting an unsupported variation on an otherwise supported systematic (e.g. a 2 sigma variation and the tool only supports 1 sigma variations) failures: unsupported combination of supported systematic failures: other tool specific errors </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="74" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="418" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a49fca460cea8953fd259d4bca3b59dfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool TauAnalysisTools::TauEfficiencyCorrectionsTool::isSupportedRunNumber</definition>
+        <argsstring>(int iRunNumber)</argsstring>
+        <name>isSupportedRunNumber</name>
+        <reimplements refid="d9/d7c/classTauAnalysisTools_1_1ITauEfficiencyCorrectionsTool_1a5861921185039a65be005b69fc56be82">isSupportedRunNumber</reimplements>
+        <param>
+          <type>int</type>
+          <declname>iRunNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="77" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="76" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ad4458db536667418e2c2545a0cbf6199" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode TauAnalysisTools::TauEfficiencyCorrectionsTool::beginEvent</definition>
+        <argsstring>()</argsstring>
+        <name>beginEvent</name>
+        <reimplements refid="da/dfd/classasg_1_1AsgMetadataTool_1a197cfa14f94c758c53a770544b7dad88">beginEvent</reimplements>
+        <briefdescription>
+<para>Function called when a new events is loaded. </para>        </briefdescription>
+        <detaileddescription>
+<para>Dummy implementation that can be overridden by the derived tool. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="83" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="234" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1aab724f9f44d301a318dfb62675c83c8d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::ConvertJetIDToString</definition>
+        <argsstring>(const int &amp;iLevel)</argsstring>
+        <name>ConvertJetIDToString</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>iLevel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="85" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="1103" bodyend="1142"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1aa75e03ab22087c3272d5a3f42ba30de7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::ConvertEleOLRToString</definition>
+        <argsstring>(const int &amp;iLevel)</argsstring>
+        <name>ConvertEleOLRToString</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>iLevel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="86" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="1144" bodyend="1165"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1af42b9920e643be5c4a38b9a2dfd4fb97" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string TauAnalysisTools::TauEfficiencyCorrectionsTool::ConvertTriggerIDToString</definition>
+        <argsstring>(const int &amp;iLevel)</argsstring>
+        <name>ConvertTriggerIDToString</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>iLevel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="87" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="1168" bodyend="1186"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a53914bf3642ace053abef38e0a7a581a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode TauAnalysisTools::TauEfficiencyCorrectionsTool::initializeWithTauSelectionTool</definition>
+        <argsstring>()</argsstring>
+        <name>initializeWithTauSelectionTool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="89" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="87" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a10f72743caa309c5b884544c1dda25f2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode TauAnalysisTools::TauEfficiencyCorrectionsTool::initializeTools_2017_moriond</definition>
+        <argsstring>()</argsstring>
+        <name>initializeTools_2017_moriond</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="91" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="432" bodyend="581"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a69b0aae0a7d3fc7efd2c102a935a6f78" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode TauAnalysisTools::TauEfficiencyCorrectionsTool::initializeTools_2016_fall</definition>
+        <argsstring>()</argsstring>
+        <name>initializeTools_2016_fall</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="92" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="584" bodyend="733"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a96b7d059335c9b88d340413882322f90" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode TauAnalysisTools::TauEfficiencyCorrectionsTool::initializeTools_2016_ichep</definition>
+        <argsstring>()</argsstring>
+        <name>initializeTools_2016_ichep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="93" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="736" bodyend="872"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a8216c23e789c32f83dd140005de66324" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode TauAnalysisTools::TauEfficiencyCorrectionsTool::initializeTools_mc15_moriond</definition>
+        <argsstring>()</argsstring>
+        <name>initializeTools_mc15_moriond</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="94" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="875" bodyend="960"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ab68b0e84175f0ef285ccd20b643ff33e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode TauAnalysisTools::TauEfficiencyCorrectionsTool::initializeTools_mc15_pre_recommendations</definition>
+        <argsstring>()</argsstring>
+        <name>initializeTools_mc15_pre_recommendations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="95" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="963" bodyend="1034"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a21eae1f50980919ed7fa34c144d96bad" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode TauAnalysisTools::TauEfficiencyCorrectionsTool::initializeTools_mc12_final</definition>
+        <argsstring>()</argsstring>
+        <name>initializeTools_mc12_final</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="96" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyCorrectionsTool.cxx" bodystart="1037" bodyend="1100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="18275">
+        <label>asg::AsgMetadataTool</label>
+        <link refid="da/dfd/classasg_1_1AsgMetadataTool"/>
+        <childnode refid="18276" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18271">
+        <label>TauAnalysisTools::TauEfficiencyCorrectionsTool</label>
+        <link refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool"/>
+        <childnode refid="18272" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18275" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18276">
+        <label>asg::AsgTool</label>
+        <link refid="d5/dbb/classasg_1_1AsgTool"/>
+        <childnode refid="18273" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18273">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="18272">
+        <label>TauAnalysisTools::ITauEfficiencyCorrectionsTool</label>
+        <link refid="d9/d7c/classTauAnalysisTools_1_1ITauEfficiencyCorrectionsTool"/>
+        <childnode refid="18273" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18274" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18274">
+        <label>CP::ISystematicsTool</label>
+        <link refid="d4/d5c/classCP_1_1ISystematicsTool"/>
+        <childnode refid="18273" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="18281">
+        <label>asg::AsgMetadataTool</label>
+        <link refid="da/dfd/classasg_1_1AsgMetadataTool"/>
+        <childnode refid="18282" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18277">
+        <label>TauAnalysisTools::TauEfficiencyCorrectionsTool</label>
+        <link refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool"/>
+        <childnode refid="18278" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18281" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18283" relation="usage">
+          <edgelabel>m_tTauSelectionTool</edgelabel>
+        </childnode>
+        <childnode refid="18277" relation="usage">
+          <edgelabel>initialize</edgelabel>
+        </childnode>
+        <childnode refid="18287" relation="usage">
+          <edgelabel>m_sTriggerName</edgelabel>
+          <edgelabel>m_sInputFilePathTriggerHadTau</edgelabel>
+          <edgelabel>m_sInputFilePathJetIDHadTau</edgelabel>
+          <edgelabel>m_sVarNameEleIDHadTau</edgelabel>
+          <edgelabel>m_sVarNameEleOLRHadTau</edgelabel>
+          <edgelabel>m_sInputFilePathContJetIDHadTau</edgelabel>
+          <edgelabel>m_sInputFilePathEleOLRElectron</edgelabel>
+          <edgelabel>m_sVarNameJetIDHadTau</edgelabel>
+          <edgelabel>m_sVarNameRecoHadTau</edgelabel>
+          <edgelabel>m_sEventInfoName</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="18287">
+        <label>string</label>
+      </node>
+      <node id="18285">
+        <label>TauAnalysisTools::ITauSelectionTool</label>
+        <link refid="d5/de2/classTauAnalysisTools_1_1ITauSelectionTool"/>
+        <childnode refid="18279" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18286">
+        <label>Root::TAccept</label>
+        <link refid="d0/d75/classRoot_1_1TAccept"/>
+      </node>
+      <node id="18282">
+        <label>asg::AsgTool</label>
+        <link refid="d5/dbb/classasg_1_1AsgTool"/>
+        <childnode refid="18279" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18279">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="18283">
+        <label>TauAnalysisTools::TauSelectionTool</label>
+        <link refid="d8/d9f/classTauAnalysisTools_1_1TauSelectionTool"/>
+        <childnode refid="18284" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18285" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18281" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18286" relation="usage">
+          <edgelabel>m_aAccept</edgelabel>
+        </childnode>
+        <childnode refid="18287" relation="usage">
+          <edgelabel>m_sJetIDWP</edgelabel>
+          <edgelabel>m_sEleOLRFilePath</edgelabel>
+          <edgelabel>m_sConfigPath</edgelabel>
+          <edgelabel>m_sMuonContainerName</edgelabel>
+          <edgelabel>m_sEleBDTWP</edgelabel>
+          <edgelabel>m_sElectronContainerName</edgelabel>
+        </childnode>
+      </node>
+      <node id="18284">
+        <label>IAsgSelectionTool</label>
+        <link refid="d9/db3/classIAsgSelectionTool"/>
+        <childnode refid="18279" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18278">
+        <label>TauAnalysisTools::ITauEfficiencyCorrectionsTool</label>
+        <link refid="d9/d7c/classTauAnalysisTools_1_1ITauEfficiencyCorrectionsTool"/>
+        <childnode refid="18279" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18280" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18280">
+        <label>CP::ISystematicsTool</label>
+        <link refid="d4/d5c/classCP_1_1ISystematicsTool"/>
+        <childnode refid="18279" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" line="39" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h" bodystart="36" bodyend="145"/>
+    <listofallmembers>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a170ff7607f2f4f7ea8222b5b27ffff8a" prot="public" virt="virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>affectingSystematics</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a0d450b7f74d60a127d132a1f3995af0a" prot="public" virt="virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>applyEfficiencyScaleFactor</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1abc66e810d566e56ad1eb8e8945bb80e3" prot="public" virt="virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>applySystematicVariation</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1a59a741dd8ea7efecf776cc39470c87de" prot="public" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>AsgMetadataTool</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a47f02c756c6d6026d03e0d4d68d82a94" prot="public" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>AsgTool</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ad4458db536667418e2c2545a0cbf6199" prot="private" virt="virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>beginEvent</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1a0f88194c53ae0af538819858bdff07da" prot="protected" virt="virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>beginInputFile</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1aa75e03ab22087c3272d5a3f42ba30de7" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>ConvertEleOLRToString</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1aab724f9f44d301a318dfb62675c83c8d" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>ConvertJetIDToString</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1af42b9920e643be5c4a38b9a2dfd4fb97" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>ConvertTriggerIDToString</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1a96c1e806bc026046faec3c695ca1fa2b" prot="protected" virt="virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>endInputFile</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a047a8231a08729c8b3a65a349ef87477" prot="public" virt="virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>getEfficiencyScaleFactor</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a5d9d9eae0988784fb6c257e0a2440ca6" prot="public" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>getProperty</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1a530a60a4a450f07baec2e3895f567656" prot="protected" virt="virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>handle</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ada2bf4cc4d756c7c902abe6c39307dc9" prot="public" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>initialize</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a55b3c013a3e54ae4c1d0d76de8e1e726" prot="public" virt="virtual" ambiguityscope="asg::AsgMetadataTool::"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>initialize</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a69b0aae0a7d3fc7efd2c102a935a6f78" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>initializeTools_2016_fall</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a96b7d059335c9b88d340413882322f90" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>initializeTools_2016_ichep</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a10f72743caa309c5b884544c1dda25f2" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>initializeTools_2017_moriond</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a21eae1f50980919ed7fa34c144d96bad" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>initializeTools_mc12_final</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a8216c23e789c32f83dd140005de66324" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>initializeTools_mc15_moriond</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ab68b0e84175f0ef285ccd20b643ff33e" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>initializeTools_mc15_pre_recommendations</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a53914bf3642ace053abef38e0a7a581a" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>initializeWithTauSelectionTool</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1ae352e92bf7637cdd3fec63ca2df4bb79" prot="public" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>inputMetaStore</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a9e50579903168012e26f235b5c45f930" prot="public" virt="virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>isAffectedBySystematic</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a49fca460cea8953fd259d4bca3b59dfa" prot="public" virt="virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>isSupportedRunNumber</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a575765e64429e7374d6625599a2073ac" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_bIsConfigured</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a06c675322cce2903fb6c5519ea3ca5ac" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_bIsData</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a5aedad393e4eada861b1e9f4f0f194a6" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_bSkipTruthMatchCheck</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a41a4232a076c96234b6a6128f6411c7d" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_bUseHighPtUncert</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a767c37be0ccbf9c537abdf4b61bc0151" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_bUseIDExclusiveSF</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ac16fd3a67cb75182efb8b92b2ae9782f" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_bUseInclusiveEta</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a9a08207345b421f003645e5fbfc0afe6" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_bUsePtBinnedSF</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a35d7182fcbf74b64b76fac810e3823a1" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_bUseTriggerInclusiveEta</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a157b7b7a8fe285244b68aaf6e9e6e731" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_iContSysType</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ab6f124a32272cce04fcb4dbf601aa7b5" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_iEVLevel</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a9e161bf9d77f941da7b67b3b4fc34365" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_iIDLevel</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1aa7c53e013bd5b9e69df7135859cdcb16" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_iOLRLevel</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a095680ac5b4e6791bca118b6e51ce8a7" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_iRunNumber</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a535cb5b45abc8aaa53c3239632bac08b" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_iTriggerPeriodBinning</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a262ef132e6c74127c2a46537b21d9e63" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sEventInfoName</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a193749a41631f96bcc0dc771fc1482c7" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sInputFilePathContJetIDHadTau</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1af1142535e1c28fcb500619bf965e561a" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sInputFilePathEleIDHadTau</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a72488b6fed09ec954f566d7398b10ea4" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sInputFilePathEleOLRElectron</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1acb66ec89c1f6cada3f1a8aa8c5be49eb" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sInputFilePathEleOLRHadTau</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a57b9da69c3aee3ea59304c292b2a4a84" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sInputFilePathJetIDHadTau</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1aba8cce7a48fb9245a0dfabc7feb6b8d9" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sInputFilePathRecoHadTau</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a2998e26a864b5d044ba14e2e697a1448" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sInputFilePathTriggerHadTau</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1aa4f9ed1a8eb9ba7cf9b411f316e8de35" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sRecommendationTag</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a577a6b832565ab8e29aa125a3c6d8580" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sTriggerName</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a7df38e5c235110f50e7d31907b7db011" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sTriggerYear</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ae16bf3ae561a60a4b0d8bae5d4c22495" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sVarNameBase</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a3daf98fade2b39949192d3c173d55572" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sVarNameContJetIDHadTau</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1af36c2dcce2ab44cb71c8819fe5f4c648" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sVarNameEleIDHadTau</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ae6fc16092eb6986f85e50a9e25714f2d" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sVarNameEleOLRElectron</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1abe5ad1379828ee49b4f254c39b9dd4bd" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sVarNameEleOLRHadTau</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a01abf60c44b30db4af7541d0149ed484" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sVarNameJetIDHadTau</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ae81b8ef47c4b0b1d316ed4760988e0ca" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sVarNameRecoHadTau</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a86ff61dcaf1b12670fbd60f94deb6ea5" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_sVarNameTriggerHadTau</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1aacd0e4165e17cfad8d150d768c638327" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_tTauSelectionTool</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a3d5bc18eb612d15f90c7ef602c5736d1" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_tTauSelectionToolHandle</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1ae82a9cb8914d797c17f075c588195ffc" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_vCommonEfficiencyTools</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a284627e98ea411f1864590d096cfdf0b" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_vEfficiencyCorrectionTypes</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a3496e20bfd8ff7a32a82a54acf8fb500" prot="private" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>m_vTriggerEfficiencyTools</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1abb00c6ab139868a879d647adabbddc2c" prot="protected" virt="virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>metaDataStop</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a3aeba8f7ad5ade0197f5848fe9e4480e" prot="public" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>msg_level_name</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1aecc5130b7f5a7e9342e974891b562e1c" prot="public" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>outputMetaStore</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1af1aac990b958e92bf38123318d926e67" prot="public" virt="pure-virtual" ambiguityscope="TauAnalysisTools::"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>print</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1af4cc6ba53b6505045c2866d4e30e821d" prot="public" virt="virtual" ambiguityscope="asg::AsgMetadataTool::"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>print</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a927cb76bb7e4a3f1394a18345cf5995b" prot="public" virt="virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>printConfig</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1a26e36c51fdfc2c5fb0a30229a5ae1e23" prot="public" virt="virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>recommendedSystematics</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1abe82065a516344e4f0f0abb2f23d9f8a" prot="public" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>retrieveMetadata</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1af0c49a5d93cf0f25cbb0a2f12e5394d9" prot="public" virt="virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>sysInitialize</name></member>
+      <member refid="d3/d19/classTauAnalysisTools_1_1TauEfficiencyCorrectionsTool_1aaeacdf491b98682a939b5af7b201a5ab" prot="public" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>TauEfficiencyCorrectionsTool</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1a5e5666d87754b5f3b8d572512c41d5af" prot="public" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>~AsgMetadataTool</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1abf22f7aa60258c67b79cf67bf70a3a5b" prot="public" virt="non-virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>~AsgTool</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1a77b49d52f1f8c272cb665b8309d6082d" prot="public" virt="virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>~IAsgTool</name></member>
+      <member refid="d4/d5c/classCP_1_1ISystematicsTool_1a18391a9c9b1789aa9045082bcd65c6ee" prot="public" virt="virtual"><scope>TauAnalysisTools::TauEfficiencyCorrectionsTool</scope><name>~ISystematicsTool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

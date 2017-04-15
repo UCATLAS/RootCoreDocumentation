@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dd/d2e/DirectWorker_8h" kind="file">
+    <compoundname>DirectWorker.h</compoundname>
+    <includes refid="d1/daf/EventLoop_2EventLoop_2Global_8h" local="no">EventLoop/Global.h</includes>
+    <includes local="no">string</includes>
+    <includes refid="dc/db3/Worker_8h" local="no">EventLoop/Worker.h</includes>
+    <includes refid="d3/deb/SamplePtr_8h" local="no">SampleHandler/SamplePtr.h</includes>
+    <includedby refid="db/d49/DirectDriver_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/DirectDriver.cxx</includedby>
+    <includedby refid="dc/d29/DirectWorker_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/DirectWorker.cxx</includedby>
+    <incdepgraph>
+      <node id="127014">
+        <label>TList.h</label>
+      </node>
+      <node id="127008">
+        <label>string</label>
+      </node>
+      <node id="127010">
+        <label>map</label>
+      </node>
+      <node id="127007">
+        <label>EventLoop/Global.h</label>
+        <link refid="d1/daf/EventLoop_2EventLoop_2Global_8h_source"/>
+      </node>
+      <node id="127012">
+        <label>vector</label>
+      </node>
+      <node id="127013">
+        <label>Rtypes.h</label>
+      </node>
+      <node id="127009">
+        <label>EventLoop/Worker.h</label>
+        <link refid="dc/db3/Worker_8h_source"/>
+        <childnode refid="127007" relation="include">
+        </childnode>
+        <childnode refid="127010" relation="include">
+        </childnode>
+        <childnode refid="127011" relation="include">
+        </childnode>
+        <childnode refid="127012" relation="include">
+        </childnode>
+        <childnode refid="127013" relation="include">
+        </childnode>
+        <childnode refid="127014" relation="include">
+        </childnode>
+        <childnode refid="127015" relation="include">
+        </childnode>
+      </node>
+      <node id="127016">
+        <label>SampleHandler/SamplePtr.h</label>
+        <link refid="d3/deb/SamplePtr_8h_source"/>
+        <childnode refid="127015" relation="include">
+        </childnode>
+        <childnode refid="127011" relation="include">
+        </childnode>
+      </node>
+      <node id="127006">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/DirectWorker.h</label>
+        <link refid="DirectWorker.h"/>
+        <childnode refid="127007" relation="include">
+        </childnode>
+        <childnode refid="127008" relation="include">
+        </childnode>
+        <childnode refid="127009" relation="include">
+        </childnode>
+        <childnode refid="127016" relation="include">
+        </childnode>
+      </node>
+      <node id="127015">
+        <label>SampleHandler/Global.h</label>
+        <link refid="d3/df9/SampleHandler_2SampleHandler_2Global_8h_source"/>
+      </node>
+      <node id="127011">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="d0/dd1/classEL_1_1DirectWorker" prot="public">EL::DirectWorker</innerclass>
+    <innernamespace refid="da/d9f/namespaceEL">EL</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>EVENT_LOOP_DIRECT_WORKER_HH</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>EVENT_LOOP_DIRECT_WORKER_HH</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>Nils<sp/>Krumnack<sp/>2011.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>(See<sp/>accompanying<sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Please<sp/>feel<sp/>free<sp/>to<sp/>contact<sp/>me<sp/>(krumnack@iastate.edu)<sp/>for<sp/>bug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>reports,<sp/>feature<sp/>suggestions,<sp/>praise<sp/>and<sp/>complaints.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;EventLoop/Global.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;EventLoop/Worker.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SampleHandler/SamplePtr.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">EL</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="d0/dd1/classEL_1_1DirectWorker" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d0/dd1/classEL_1_1DirectWorker" kindref="compound">DirectWorker</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="da/d12/classEL_1_1Worker" kindref="compound">Worker</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>public<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/dd1/classEL_1_1DirectWorker_1ad5968fddef61d299a4cb368e9dfd2300" kindref="member">testInvariant</ref><sp/>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/dd1/classEL_1_1DirectWorker_1a006faca65d76afec17b23f5dde8fa053" kindref="member">DirectWorker</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d8/d8a/classSH_1_1SamplePtr" kindref="compound" tooltip="A smart pointer class that holds a single Sample object.">SH::SamplePtr</ref>&amp;<sp/>sample,<sp/>TList<sp/>*output,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="da/dbb/classEL_1_1Job" kindref="compound">Job</ref>&amp;<sp/>job,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>location,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="db/d3a/classSH_1_1MetaObject" kindref="compound" tooltip="A class that manages meta-data to be associated with an object.">SH::MetaObject</ref><sp/>*meta);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/dd1/classEL_1_1DirectWorker_1a938810ffe25625e167db4c46dc091aa7" kindref="member">run</ref><sp/>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>interface<sp/>inherited<sp/>from<sp/>Worker</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>private<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/d8a/classSH_1_1SamplePtr" kindref="compound" tooltip="A smart pointer class that holds a single Sample object.">SH::SamplePtr</ref><sp/>m_sample;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>m_location;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/DirectWorker.h"/>
+  </compounddef>
+</doxygen>

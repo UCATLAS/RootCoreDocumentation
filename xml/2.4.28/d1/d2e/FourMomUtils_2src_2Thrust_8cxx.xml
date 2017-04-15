@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d1/d2e/FourMomUtils_2src_2Thrust_8cxx" kind="file">
+    <compoundname>Thrust.cxx</compoundname>
+    <includes refid="da/d72/FourMomUtils_2FourMomUtils_2Thrust_8h" local="yes">FourMomUtils/Thrust.h</includes>
+    <includes refid="db/daa/P4Sorters_8h" local="yes">FourMomUtils/P4Sorters.h</includes>
+    <includes local="no">cmath</includes>
+    <incdepgraph>
+      <node id="132625">
+        <label>functional</label>
+      </node>
+      <node id="132619">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/FourMomUtils/src/Thrust.cxx</label>
+        <link refid="FourMomUtils/src/Thrust.cxx"/>
+        <childnode refid="132620" relation="include">
+        </childnode>
+        <childnode refid="132623" relation="include">
+        </childnode>
+        <childnode refid="132626" relation="include">
+        </childnode>
+      </node>
+      <node id="132623">
+        <label>FourMomUtils/P4Sorters.h</label>
+        <link refid="db/daa/P4Sorters_8h_source"/>
+        <childnode refid="132624" relation="include">
+        </childnode>
+        <childnode refid="132629" relation="include">
+        </childnode>
+      </node>
+      <node id="132626">
+        <label>cmath</label>
+      </node>
+      <node id="132621">
+        <label>EventKernel/INavigable4Momentum.h</label>
+      </node>
+      <node id="132628">
+        <label>EventKernel/I4Momentum.h</label>
+      </node>
+      <node id="132620">
+        <label>FourMomUtils/Thrust.h</label>
+        <link refid="da/d72/FourMomUtils_2FourMomUtils_2Thrust_8h_source"/>
+        <childnode refid="132621" relation="include">
+        </childnode>
+        <childnode refid="132622" relation="include">
+        </childnode>
+      </node>
+      <node id="132627">
+        <label>CxxUtils/fpcompare.h</label>
+        <link refid="df/df0/fpcompare_8h"/>
+        <childnode refid="132626" relation="include">
+        </childnode>
+        <childnode refid="132625" relation="include">
+        </childnode>
+      </node>
+      <node id="132629">
+        <label>FourMomUtils/P4DescendingSorters.h</label>
+        <link refid="d7/dbe/P4DescendingSorters_8h_source"/>
+        <childnode refid="132625" relation="include">
+        </childnode>
+        <childnode refid="132626" relation="include">
+        </childnode>
+        <childnode refid="132627" relation="include">
+        </childnode>
+        <childnode refid="132628" relation="include">
+        </childnode>
+      </node>
+      <node id="132622">
+        <label>NavFourMom/INavigable4MomentumCollection.h</label>
+      </node>
+      <node id="132624">
+        <label>FourMomUtils/P4AscendingSorters.h</label>
+        <link refid="d9/d77/P4AscendingSorters_8h_source"/>
+        <childnode refid="132625" relation="include">
+        </childnode>
+        <childnode refid="132626" relation="include">
+        </childnode>
+        <childnode refid="132627" relation="include">
+        </childnode>
+        <childnode refid="132628" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="d6/dc9/namespaceFourMomUtils">FourMomUtils</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;FourMomUtils/Thrust.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;FourMomUtils/P4Sorters.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>AthAnalysisBase/ManaCore<sp/>doesn&apos;t<sp/>currently<sp/>include<sp/>the<sp/>Trigger<sp/>Service</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>XAOD_ANALYSIS</highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">FourMomUtils<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::abs;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::exp;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">CLHEP::Hep3Vector</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">thrust(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>I4MomIter_t<sp/>iBeg,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>I4MomIter_t<sp/>iEnd,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>thrust_major,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>thrust_minor,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>useThreeD)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>Finding<sp/>the<sp/>thrust<sp/>axis<sp/>in<sp/>an<sp/>event<sp/>is<sp/>not<sp/>trivial.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"></highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>Here,<sp/>we<sp/>follow<sp/>the<sp/>procedure<sp/>described<sp/>in<sp/>the<sp/>PYTHIA<sp/>manual<sp/>JHEP<sp/>05<sp/>(2006)<sp/>026,</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>also<sp/>hep-ph/0603175.<sp/>The<sp/>approach<sp/>is<sp/>to<sp/>use<sp/>an<sp/>iterative<sp/>method,<sp/>which<sp/>usually</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>converges<sp/>quickly.<sp/>As<sp/>the<sp/>minimization<sp/>can<sp/>find<sp/>just<sp/>a<sp/>local<sp/>minimum,<sp/>different</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>starting<sp/>points<sp/>for<sp/>the<sp/>thrust<sp/>axis<sp/>are<sp/>tried.<sp/>By<sp/>default,<sp/>first<sp/>the<sp/>direction</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>of<sp/>the<sp/>four<sp/>most<sp/>energetic<sp/>particles<sp/>are<sp/>tried,<sp/>if<sp/>their<sp/>result<sp/>disagrees,<sp/>all</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>16<sp/>permutations<sp/>of<sp/>the<sp/>sum<sp/>of<sp/>all<sp/>4<sp/>particles<sp/>are<sp/>tried<sp/>(with<sp/>coefficients<sp/>+-<sp/>1)</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"></highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>Note,<sp/>that<sp/>the<sp/>thrust<sp/>is<sp/>calculated<sp/>for<sp/>_ALL_<sp/>particles.<sp/>If<sp/>you<sp/>want<sp/>only<sp/>a<sp/>subset</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>of<sp/>particles,<sp/>you<sp/>have<sp/>to<sp/>apply<sp/>a<sp/>cut<sp/>beforehand.</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>See<sp/>e.g.<sp/>Reconstruction/EventShapes/EventShapeTools<sp/>for<sp/>examples.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>CLHEP::Hep3Vector<sp/>thrust(0,0,0);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>agree=0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>disagree=0;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>CLHEP::Hep3Vector<sp/>n_0[20];</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>add0[20]<sp/>=<sp/>{<sp/>1,<sp/>0,<sp/>0,<sp/>0,<sp/>1,<sp/>1,<sp/>1,<sp/>1,<sp/>1,<sp/>1,<sp/>1,<sp/>1,-1,-1,-1,-1,-1,-1,-1,-1<sp/>};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>add1[20]<sp/>=<sp/>{<sp/>0,<sp/>1,<sp/>0,<sp/>0,<sp/>1,<sp/>1,<sp/>1,<sp/>1,-1,-1,-1,-1,<sp/>1,<sp/>1,<sp/>1,<sp/>1,-1,-1,-1,-1<sp/>};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>add2[20]<sp/>=<sp/>{<sp/>0,<sp/>0,<sp/>1,<sp/>0,<sp/>1,<sp/>1,-1,-1,<sp/>1,<sp/>1,-1,-1,<sp/>1,<sp/>1,-1,-1,<sp/>1,<sp/>1,-1,-1<sp/>};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>add3[20]<sp/>=<sp/>{<sp/>0,<sp/>0,<sp/>0,<sp/>1,<sp/>1,-1,<sp/>1,-1,<sp/>1,-1,<sp/>1,-1,<sp/>1,-1,<sp/>1,-1,<sp/>1,-1,<sp/>1,-1<sp/>};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>std::vector&lt;const<sp/>INavigable4Momentum*&gt;<sp/>v_copy(4);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>partial_sort_copy<sp/>sorts<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>collection<sp/>according<sp/>to<sp/>energy<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>returns<sp/>only<sp/>the<sp/>first<sp/>four<sp/>elements<sp/>(minimum<sp/>of<sp/>input<sp/>collection<sp/>size<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>pre-allocated<sp/>output<sp/>vector<sp/>v_copy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>partial_sort_copy(<sp/>iBeg,<sp/>iEnd,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v_copy.begin(),<sp/>v_copy.end(),</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d46/classP4Sorters_1_1Descending_1_1Ene" kindref="compound">P4Sorters::Descending::Ene</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_tests=0;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_tests=std::min&lt;int&gt;(20,<sp/>std::distance(iBeg,<sp/>iEnd));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>n_0[n_tests]=CLHEP::Hep3Vector(0,0,0);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>assign<sp/>direction<sp/>of<sp/>four<sp/>most<sp/>energetic<sp/>particles</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>n_0[n_tests]<sp/>+=</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>add0[n_tests]<sp/>*<sp/>CLHEP::Hep3Vector(v_copy.at(0)-&gt;px(),<sp/>v_copy.at(0)-&gt;py(),<sp/>v_copy.at(0)-&gt;pz())<sp/>+</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>add1[n_tests]<sp/>*<sp/>CLHEP::Hep3Vector(v_copy.at(1)-&gt;px(),<sp/>v_copy.at(1)-&gt;py(),<sp/>v_copy.at(1)-&gt;pz())<sp/>+</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>add2[n_tests]<sp/>*<sp/>CLHEP::Hep3Vector(v_copy.at(2)-&gt;px(),<sp/>v_copy.at(2)-&gt;py(),<sp/>v_copy.at(2)-&gt;pz())<sp/>+</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>add3[n_tests]<sp/>*<sp/>CLHEP::Hep3Vector(v_copy.at(3)-&gt;px(),<sp/>v_copy.at(3)-&gt;py(),<sp/>v_copy.at(3)-&gt;pz());</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!useThreeD)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>n_0[n_tests].setZ(0);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>//<sp/>my<sp/>convention<sp/>:<sp/>x<sp/>is<sp/>always<sp/>positive<sp/>(thrust<sp/>axis<sp/>has<sp/>two<sp/>fold<sp/>ambiguity)</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(n_0[n_tests].x()&lt;0)</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n_0[n_tests]<sp/>=<sp/>-<sp/>n_0[n_tests];<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>protect<sp/>against<sp/>small<sp/>number<sp/>of<sp/>input<sp/>particles<sp/>(smaller<sp/>than<sp/>4!)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(n_0[n_tests].mag()&gt;0)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>n_0[n_tests]<sp/>/=<sp/>n_0[n_tests].mag();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>loop=0;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>run=</highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>CLHEP::Hep3Vector<sp/>n_1(0,0,0);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>I4MomIter_t<sp/>itr<sp/>=<sp/>iBeg;<sp/>itr<sp/>!=<sp/>iEnd;<sp/>++itr<sp/>)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>if(((*itr)-&gt;hlv()).vect().dot(n_0[n_tests])&gt;0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((*itr)-&gt;px()<sp/>*<sp/>n_0[n_tests].x()<sp/>+</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*itr)-&gt;py()<sp/>*<sp/>n_0[n_tests].y()<sp/>+</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*itr)-&gt;pz()<sp/>*<sp/>n_0[n_tests].z()<sp/>&gt;<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n_1<sp/>+=<sp/>CLHEP::Hep3Vector((*itr)-&gt;px(),<sp/>(*itr)-&gt;py(),<sp/>(*itr)-&gt;pz()<sp/>);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n_1<sp/>-=<sp/>CLHEP::Hep3Vector((*itr)-&gt;px(),<sp/>(*itr)-&gt;py(),<sp/>(*itr)-&gt;pz()<sp/>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!useThreeD)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n_1.setZ(0);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>protect<sp/>against<sp/>few<sp/>number<sp/>of<sp/>input<sp/>particles<sp/>(smaller<sp/>than<sp/>4!)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(n_1.mag()&gt;0)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n_1<sp/>/=<sp/>n_1.mag();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>has<sp/>axis<sp/>changed<sp/>?<sp/>if<sp/>so,<sp/>try<sp/>at<sp/>most<sp/>ten<sp/>times<sp/>(thrust<sp/>axis<sp/>has<sp/>two<sp/>fold<sp/>ambiguity)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>run<sp/>=<sp/>(<sp/>n_0[n_tests]!=n_1<sp/>)<sp/>&amp;&amp;<sp/>(<sp/>-n_0[n_tests]!=n_1<sp/>)<sp/>&amp;&amp;<sp/>loop++&lt;10;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>n_0[n_tests]<sp/>=<sp/>n_1;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>run<sp/>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>agrees<sp/>or<sp/>disagrees<sp/>with<sp/>first<sp/>result<sp/>?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>thrust<sp/>has<sp/>a<sp/>sign<sp/>ambiguity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>n_tests&gt;0<sp/>&amp;&amp;<sp/>(<sp/>n_0[0]<sp/>==<sp/>n_0[n_tests]<sp/>||<sp/>n_0[0]<sp/>==<sp/>-n_0[n_tests]<sp/>)<sp/>)<sp/>agree++;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>n_tests&gt;0<sp/>&amp;&amp;<sp/><sp/><sp/>n_0[0]<sp/>!=<sp/>n_0[n_tests]<sp/>&amp;&amp;<sp/>n_0[0]<sp/>!=<sp/>-n_0[n_tests]<sp/>)<sp/><sp/><sp/>disagree++;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stop<sp/>if<sp/>four<sp/>first<sp/>tries<sp/>give<sp/>same<sp/>result<sp/>(no<sp/>test<sp/>for<sp/>first<sp/>try!<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>if<sp/>not,<sp/>try<sp/>at<sp/>most<sp/>max_tests<sp/>combinations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>(<sp/>disagree&gt;0<sp/>||<sp/>agree&lt;4<sp/>)<sp/>&amp;&amp;<sp/>++n_tests<sp/>&lt;<sp/>max_tests);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>that<sp/>we<sp/>have<sp/>the<sp/>thrust<sp/>axis,<sp/>we<sp/>determine<sp/>the<sp/>thrust<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>if<sp/>the<sp/>various<sp/>calculations<sp/>of<sp/>the<sp/>thrust<sp/>axes<sp/>disagree,<sp/>try<sp/>all</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>and<sp/>take<sp/>the<sp/>maximum,<sp/>calculate<sp/>minor<sp/>and<sp/>mayor<sp/>axis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>n_tests=0;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>denominator<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>numerator_t<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>numerator_m<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>I4MomIter_t<sp/>itr<sp/>=<sp/>iBeg;<sp/>itr<sp/>!=<sp/>iEnd;<sp/>++itr<sp/>)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CLHEP::Hep3Vector<sp/>c((*itr)-&gt;hlv().vect());</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c.setZ(0);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numerator_t<sp/>+=<sp/>abs(c.dot(n_0[n_tests]));</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numerator_m<sp/>+=<sp/>(c.cross(n_0[n_tests])).mag();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>denominator<sp/>+=<sp/>c.mag();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>inv_denominator<sp/>=<sp/>1.<sp/>/<sp/>denominator;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>numerator_t<sp/>*<sp/>inv_denominator<sp/>&gt;<sp/>thrust_major<sp/>)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thrust_major<sp/>=<sp/>numerator_t<sp/>*<sp/>inv_denominator;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thrust_minor<sp/>=<sp/>numerator_m<sp/>*<sp/>inv_denominator;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thrust=n_0[n_tests];</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(disagree&gt;0<sp/>&amp;&amp;<sp/>++n_tests<sp/>&lt;<sp/>max_tests);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>&quot;Calculation<sp/>of<sp/>Thrust<sp/>gave:<sp/>(<sp/>&quot;</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>thrust.x()<sp/>&lt;&lt;<sp/>&quot;<sp/>|<sp/>&quot;</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>thrust.y()<sp/>&lt;&lt;<sp/>&quot;<sp/>|<sp/>&quot;</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>thrust.z()<sp/>&lt;&lt;<sp/>&quot;<sp/>)\n&quot;;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>StatusCode::SUCCESS;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>thrust;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}<sp/></highlight><highlight class="comment">//&gt;<sp/>end<sp/>namespace<sp/>FourMomUtils</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/FourMomUtils/src/Thrust.cxx"/>
+  </compounddef>
+</doxygen>

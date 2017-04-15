@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d2/da2/LLDriver_8h" kind="file">
+    <compoundname>LLDriver.h</compoundname>
+    <includes refid="d1/daf/EventLoop_2EventLoop_2Global_8h" local="no">EventLoop/Global.h</includes>
+    <includes refid="dd/dc0/BatchDriver_8h" local="no">EventLoop/BatchDriver.h</includes>
+    <includes refid="d3/df9/SampleHandler_2SampleHandler_2Global_8h" local="no">SampleHandler/Global.h</includes>
+    <includedby refid="d4/d60/LLDriver_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/LLDriver.cxx</includedby>
+    <includedby refid="de/d69/ut__driver__ll_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/test/ut_driver_ll.cxx</includedby>
+    <incdepgraph>
+      <node id="127485">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/LLDriver.h</label>
+        <link refid="LLDriver.h"/>
+        <childnode refid="127486" relation="include">
+        </childnode>
+        <childnode refid="127487" relation="include">
+        </childnode>
+        <childnode refid="127491" relation="include">
+        </childnode>
+      </node>
+      <node id="127487">
+        <label>EventLoop/BatchDriver.h</label>
+        <link refid="dd/dc0/BatchDriver_8h_source"/>
+        <childnode refid="127486" relation="include">
+        </childnode>
+        <childnode refid="127488" relation="include">
+        </childnode>
+        <childnode refid="127491" relation="include">
+        </childnode>
+      </node>
+      <node id="127488">
+        <label>EventLoop/Driver.h</label>
+        <link refid="dd/d3c/Driver_8h_source"/>
+        <childnode refid="127486" relation="include">
+        </childnode>
+        <childnode refid="127489" relation="include">
+        </childnode>
+        <childnode refid="127490" relation="include">
+        </childnode>
+      </node>
+      <node id="127494">
+        <label>RootCoreUtils/Deprecated.h</label>
+        <link refid="d1/d0f/RootCoreUtils_2RootCoreUtils_2Deprecated_8h_source"/>
+        <childnode refid="127493" relation="include">
+        </childnode>
+      </node>
+      <node id="127495">
+        <label>string</label>
+      </node>
+      <node id="127490">
+        <label>SampleHandler/MetaObject.h</label>
+        <link refid="d7/d50/MetaObject_8h_source"/>
+        <childnode refid="127491" relation="include">
+        </childnode>
+        <childnode refid="127492" relation="include">
+        </childnode>
+        <childnode refid="127494" relation="include">
+        </childnode>
+        <childnode refid="127495" relation="include">
+        </childnode>
+        <childnode refid="127496" relation="include">
+        </childnode>
+      </node>
+      <node id="127486">
+        <label>EventLoop/Global.h</label>
+        <link refid="d1/daf/EventLoop_2EventLoop_2Global_8h_source"/>
+      </node>
+      <node id="127489">
+        <label>TObject.h</label>
+      </node>
+      <node id="127493">
+        <label>RootCoreUtils/Global.h</label>
+        <link refid="d6/d7f/RootCoreUtils_2RootCoreUtils_2Global_8h_source"/>
+      </node>
+      <node id="127492">
+        <label>RootCoreUtils/Assert.h</label>
+        <link refid="d3/dac/Assert_8h_source"/>
+        <childnode refid="127493" relation="include">
+        </childnode>
+      </node>
+      <node id="127491">
+        <label>SampleHandler/Global.h</label>
+        <link refid="d3/df9/SampleHandler_2SampleHandler_2Global_8h_source"/>
+      </node>
+      <node id="127496">
+        <label>TCollection.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="d4/ddb/classEL_1_1LLDriver" prot="public">EL::LLDriver</innerclass>
+    <innernamespace refid="da/d9f/namespaceEL">EL</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>EVENT_LOOP_LL_DRIVER_HH</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>EVENT_LOOP_LL_DRIVER_HH</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>Nils<sp/>Krumnack<sp/>2012.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>(See<sp/>accompanying<sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Please<sp/>feel<sp/>free<sp/>to<sp/>contact<sp/>me<sp/>(krumnack@iastate.edu)<sp/>for<sp/>bug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>reports,<sp/>feature<sp/>suggestions,<sp/>praise<sp/>and<sp/>complaints.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>LoadLeveler<sp/>Driver<sp/>contributed<sp/>by<sp/>Morten<sp/>Dam<sp/>Joergensen<sp/>&lt;mdj@nbi.dk&gt;<sp/>2012</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;EventLoop/Global.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;EventLoop/BatchDriver.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SampleHandler/Global.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">EL</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="d4/ddb/classEL_1_1LLDriver" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d4/ddb/classEL_1_1LLDriver" kindref="compound">LLDriver</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="dc/d4d/classEL_1_1BatchDriver" kindref="compound">BatchDriver</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>public<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d4/ddb/classEL_1_1LLDriver_1a168450c7c2e380999cf47ee880e33576" kindref="member">testInvariant</ref><sp/>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/ddb/classEL_1_1LLDriver_1adb40ddea69d33147821102781cadab8a" kindref="member">LLDriver</ref><sp/>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48" refid="d4/ddb/classEL_1_1LLDriver_1ada07e0780e4cad7ef846363908c1e7bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="d4/ddb/classEL_1_1LLDriver_1ada07e0780e4cad7ef846363908c1e7bb" kindref="member" tooltip="description: the queue we run on">queue</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>interface<sp/>inherited<sp/>from<sp/>BatchDriver</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/>batchName<sp/>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/>batchInit<sp/>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>batchSubmit<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>location,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="db/d3a/classSH_1_1MetaObject" kindref="compound" tooltip="A class that manages meta-data to be associated with an object.">SH::MetaObject</ref>&amp;<sp/><ref refid="de/d0a/classEL_1_1Driver_1a44cc2bdc9221bb5c0409c2485f8e2798" kindref="member">options</ref>,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/>njob)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>private<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>GCC<sp/>diagnostic<sp/>push</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>GCC<sp/>diagnostic<sp/>ignored<sp/>&quot;-Wpragmas&quot;</highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>GCC<sp/>diagnostic<sp/>ignored<sp/>&quot;-Wunknown-pragmas&quot;</highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>GCC<sp/>diagnostic<sp/>ignored<sp/>&quot;-Winconsistent-missing-override&quot;</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>ClassDef(<ref refid="d4/ddb/classEL_1_1LLDriver" kindref="compound">LLDriver</ref>,<sp/>1);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>GCC<sp/>diagnostic<sp/>pop</highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/LLDriver.h"/>
+  </compounddef>
+</doxygen>

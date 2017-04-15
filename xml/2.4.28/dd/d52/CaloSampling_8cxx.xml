@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dd/d52/CaloSampling_8cxx" kind="file">
+    <compoundname>CaloSampling.cxx</compoundname>
+    <includes refid="d7/d85/CaloSampling_8h" local="yes">CaloGeoHelpers/CaloSampling.h</includes>
+    <includes local="yes">CaloGeoHelpers/CaloSampling.def</includes>
+    <incdepgraph>
+      <node id="97393">
+        <label>CaloGeoHelpers/CaloSampling.h</label>
+        <link refid="d7/d85/CaloSampling_8h_source"/>
+        <childnode refid="97394" relation="include">
+        </childnode>
+        <childnode refid="97395" relation="include">
+        </childnode>
+      </node>
+      <node id="97394">
+        <label>string</label>
+      </node>
+      <node id="97392">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CaloGeoHelpers/Root/CaloSampling.cxx</label>
+        <link refid="CaloSampling.cxx"/>
+        <childnode refid="97393" relation="include">
+        </childnode>
+        <childnode refid="97395" relation="include">
+        </childnode>
+      </node>
+      <node id="97395">
+        <label>CaloGeoHelpers/CaloSampling.def</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="dd/d52/CaloSampling_8cxx_1a6beb9e8cc3ea344d6b01e12217bbc777" prot="public" static="no">
+        <name>CALOSAMPLING</name>
+        <param><defname>name</defname></param>
+        <param><defname>inbarrel</defname></param>
+        <param><defname>inendcap</defname></param>
+        <initializer>#name ,</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CaloGeoHelpers/Root/CaloSampling.cxx" line="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;CaloGeoHelpers/CaloSampling.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sample_names[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CALOSAMPLING(name,<sp/>inbarrel,<sp/>inendcap)<sp/>#name<sp/>,</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;CaloGeoHelpers/CaloSampling.def&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CALOSAMPLING</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>anonymous<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="df/d24/classCaloSampling_1ae9bbc5866ea91768df54204295e1ca90" kindref="member" tooltip="Get number of available samplings.">CaloSampling::getNumberOfSamplings</ref>()</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)Unknown;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">std::string<sp/><ref refid="df/d24/classCaloSampling_1a47fbcb609845a97aa583af27b11a413a" kindref="member" tooltip="Returns a string (name) for each CaloSampling.">CaloSampling::getSamplingName</ref><sp/>(CaloSample<sp/>theSample)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sample_names[theSample];</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">std::string<sp/><ref refid="df/d24/classCaloSampling_1a47fbcb609845a97aa583af27b11a413a" kindref="member" tooltip="Returns a string (name) for each CaloSampling.">CaloSampling::getSamplingName</ref><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>theSample)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(theSample<sp/>&gt;=<sp/><ref refid="df/d24/classCaloSampling_1ae9bbc5866ea91768df54204295e1ca90" kindref="member" tooltip="Get number of available samplings.">getNumberOfSamplings</ref>())</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sample_names[theSample];</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CaloGeoHelpers/Root/CaloSampling.cxx"/>
+  </compounddef>
+</doxygen>

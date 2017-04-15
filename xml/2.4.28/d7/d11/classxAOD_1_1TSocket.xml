@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d7/d11/classxAOD_1_1TSocket" kind="class" prot="public">
+    <compoundname>xAOD::TSocket</compoundname>
+    <includes refid="d3/d40/TSocket_8h" local="no">TSocket.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d7/d11/classxAOD_1_1TSocket_1af8606358457c12b81b7f7a8225064de9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xAOD::TSocket::m_socket</definition>
+        <argsstring></argsstring>
+        <name>m_socket</name>
+        <briefdescription>
+<para>The underlying socket. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TSocket.h" line="51" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TSocket.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d7/d11/classxAOD_1_1TSocket_1a8c38a7e113e6d90a577df6f11c56552f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xAOD::TSocket::TSocket</definition>
+        <argsstring>()</argsstring>
+        <name>TSocket</name>
+        <briefdescription>
+<para>Constructor with an address and a port. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TSocket.h" line="34" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TSocket.cxx" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d11/classxAOD_1_1TSocket_1afdb782ad69a0af7eee391ea2f240e1f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xAOD::TSocket::~TSocket</definition>
+        <argsstring>()</argsstring>
+        <name>~TSocket</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TSocket.h" line="36" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TSocket.cxx" bodystart="28" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d11/classxAOD_1_1TSocket_1a94bc6ee554ef95945c4ec278c3adab2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TSocket::connect</definition>
+        <argsstring>(const TInetAddress &amp;address, int port)</argsstring>
+        <name>connect</name>
+        <param>
+          <type>const TInetAddress &amp;</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+<para>Function connecting to the specified address. </para>        </briefdescription>
+        <detaileddescription>
+<para>It turns out that translating a string address name into an integer address that the connect(...) function understands, is no easy feat. So instead we leave that up to ROOT. This translation just needs to be done &quot;early enough&quot; in the job when ROOT can still do it.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address to send the data to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The port number to connect to returns The usual return codes... </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TSocket.h" line="39" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TSocket.cxx" bodystart="45" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d11/classxAOD_1_1TSocket_1aaa4260fe0082f7278a3511facd271e59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TSocket::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <briefdescription>
+<para>Close the current connection. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TSocket.h" line="41" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TSocket.cxx" bodystart="88" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d11/classxAOD_1_1TSocket_1a4c7aa5e5f48178987f12e8a3b825a90e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xAOD::TSocket::isConnected</definition>
+        <argsstring>() const </argsstring>
+        <name>isConnected</name>
+        <briefdescription>
+<para>Check if the socket is connected to some address at the moment. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TSocket.h" line="44" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TSocket.cxx" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d11/classxAOD_1_1TSocket_1a2f7b437e94951ccbf776e40388221af6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TSocket::send</definition>
+        <argsstring>(const TString &amp;payload)</argsstring>
+        <name>send</name>
+        <param>
+          <type>const TString &amp;</type>
+          <declname>payload</declname>
+        </param>
+        <briefdescription>
+<para>Function sending a message to the connected address. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is custom made for our use case. It sends HTML style information to the connected server.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HTML style payload to send to the server </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The usual return codes... </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TSocket.h" line="47" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TSocket.cxx" bodystart="116" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Very simple wrapper around POSIX sockets</para><para>Since ROOT&apos;s <ref refid="d7/d11/classxAOD_1_1TSocket" kindref="compound">TSocket</ref> is not fit to be used in TFileAccessTracer&apos;s destructor (as some ROOT infrastructure may not be available by the time the destructor is called), we need our own simple implementation instead.</para><para>Most of the implementation is simply a copy of the code from TUnixSystem. Slightly simplified in some cases where we don&apos;t need the flexibility of the ROOT implementation.</para><para><simplesect kind="author"><para>Attila Krasznahorkay &lt;<ulink url="mailto:Attila.Krasznahorkay@cern.ch">Attila.Krasznahorkay@cern.ch</ulink>&gt;</para></simplesect>
+<simplesect kind="rcs"><title>Revision</title><para>781356 </para></simplesect>
+<simplesect kind="rcs"><title>Date</title><para>2016-10-31 15:03:28 +0100 (Mon, 31 Oct 2016) </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TSocket.h" line="30" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TSocket.h" bodystart="30" bodyend="53"/>
+    <listofallmembers>
+      <member refid="d7/d11/classxAOD_1_1TSocket_1aaa4260fe0082f7278a3511facd271e59" prot="public" virt="non-virtual"><scope>xAOD::TSocket</scope><name>close</name></member>
+      <member refid="d7/d11/classxAOD_1_1TSocket_1a94bc6ee554ef95945c4ec278c3adab2c" prot="public" virt="non-virtual"><scope>xAOD::TSocket</scope><name>connect</name></member>
+      <member refid="d7/d11/classxAOD_1_1TSocket_1a4c7aa5e5f48178987f12e8a3b825a90e" prot="public" virt="non-virtual"><scope>xAOD::TSocket</scope><name>isConnected</name></member>
+      <member refid="d7/d11/classxAOD_1_1TSocket_1af8606358457c12b81b7f7a8225064de9" prot="private" virt="non-virtual"><scope>xAOD::TSocket</scope><name>m_socket</name></member>
+      <member refid="d7/d11/classxAOD_1_1TSocket_1a2f7b437e94951ccbf776e40388221af6" prot="public" virt="non-virtual"><scope>xAOD::TSocket</scope><name>send</name></member>
+      <member refid="d7/d11/classxAOD_1_1TSocket_1a8c38a7e113e6d90a577df6f11c56552f" prot="public" virt="non-virtual"><scope>xAOD::TSocket</scope><name>TSocket</name></member>
+      <member refid="d7/d11/classxAOD_1_1TSocket_1afdb782ad69a0af7eee391ea2f240e1f1" prot="public" virt="non-virtual"><scope>xAOD::TSocket</scope><name>~TSocket</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

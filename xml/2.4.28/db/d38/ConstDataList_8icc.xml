@@ -1,0 +1,503 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="db/d38/ConstDataList_8icc" kind="file">
+    <compoundname>ConstDataList.icc</compoundname>
+    <includedby refid="db/ded/ConstDataList_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataList.h</includedby>
+    <invincdepgraph>
+      <node id="32269">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/DVLDataBucket_test.cxx</label>
+        <link refid="d4/de3/DVLDataBucket__test_8cxx"/>
+      </node>
+      <node id="32268">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataList.h</label>
+        <link refid="db/ded/ConstDataList_8h"/>
+        <childnode refid="32269" relation="include">
+        </childnode>
+      </node>
+      <node id="32267">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataList.icc</label>
+        <link refid="ConstDataList.icc"/>
+        <childnode refid="32268" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="dd/d59/namespaceSG">SG</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="db/d38/ConstDataList_8icc_1a67766f262856f1e197e15fec33b60bac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void swap</definition>
+        <argsstring>(ConstDataList&lt; T &gt; &amp;a, ConstDataList&lt; T &gt; &amp;b)</argsstring>
+        <name>swap</name>
+        <param>
+          <type><ref refid="d3/d7c/classConstDataList" kindref="compound">ConstDataList</ref>&lt; <ref refid="d1/def/classT" kindref="compound">T</ref> &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/d7c/classConstDataList" kindref="compound">ConstDataList</ref>&lt; <ref refid="d1/def/classT" kindref="compound">T</ref> &gt; &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Out-of-line functions. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <computeroutput><ref refid="db/ded/ConstDataList_8h_1a67766f262856f1e197e15fec33b60bac" kindref="member">DataList&lt;T, BASE&gt;::swap()</ref></computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataList.icc" line="741" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataList.icc" bodystart="740" bodyend="743"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><computeroutput><ref refid="d9/dfb/classDataList" kindref="compound">DataList</ref></computeroutput> adapter that acts like it holds const pointers. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>scott snyder &lt;<ulink url="mailto:snyder@bnl.gov">snyder@bnl.gov</ulink>&gt; </para></simplesect>
+<simplesect kind="date"><para>Sep, 2011 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>This<sp/>file&apos;s<sp/>extension<sp/>implies<sp/>that<sp/>it&apos;s<sp/>C,<sp/>but<sp/>it&apos;s<sp/>really<sp/>-*-<sp/>C++<sp/>-*-.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>ConstDataList.icc<sp/>610620<sp/>2014-08-06<sp/>21:15:52Z<sp/>ssnyder<sp/>$</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight><highlight class="comment">//===<sp/>Constructors,<sp/>destructors,<sp/>assignment.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="d3/d7c/classConstDataList_1afb1e74a8172dcb25956590ce0eacb962" kindref="member" tooltip="Default constructor.">ConstDataList&lt;DL&gt;::ConstDataList</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>(<ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8" kindref="member" tooltip="describes the possible element ownership policies (see e.g. DataVector)">SG::OwnershipPolicy</ref><sp/>ownPolicy<sp/></highlight><highlight class="comment">/*=<sp/>SG::OWN_ELEMENTS*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>DL<sp/>(ownPolicy)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::ConstDataList</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>(size_type<sp/>n,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8" kindref="member" tooltip="describes the possible element ownership policies (see e.g. DataVector)">SG::OwnershipPolicy</ref><sp/>ownPolicy<sp/></highlight><highlight class="comment">/*=<sp/>SG::OWN_ELEMENTS*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>:<sp/>DL<sp/>(n,<sp/>ownPolicy)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>InputIterator&gt;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::ConstDataList</ref></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>(InputIterator<sp/>first,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/>InputIterator<sp/>last,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8" kindref="member" tooltip="describes the possible element ownership policies (see e.g. DataVector)">SG::OwnershipPolicy</ref><sp/>ownPolicy<sp/></highlight><highlight class="comment">/*=<sp/>SG::VIEW_ELEMENTS*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>:<sp/>DL<sp/>(ownPolicy)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(first<sp/>!=<sp/>last)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>push_back<sp/>(*first++);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;</ref>&amp;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::operator= </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList</ref>&amp;<sp/>rhs)<sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>*</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">DL*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal">)<sp/>=<sp/>rhs;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>InputIterator&gt;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::assign</ref>(InputIterator<sp/>first,<sp/>InputIterator<sp/>last)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>clear();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(first<sp/>!=<sp/>last)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>push_back<sp/>(*first++);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//===<sp/>Element<sp/>access.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="d7/d05/classDataModel__detail_1_1ElementProxy" kindref="compound" tooltip="Proxy for lvalue access to DataVector/DataList elements.">ConstDataList&lt;DL&gt;::ElementProxy</ref></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::front</ref><sp/>()</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>to_element_proxy<sp/>(this-&gt;m_pCont.begin());</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="d7/d05/classDataModel__detail_1_1ElementProxy" kindref="compound" tooltip="Proxy for lvalue access to DataVector/DataList elements.">ConstDataList&lt;DL&gt;::ElementProxy</ref></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::back</ref><sp/>()</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>DL::BaseContainer::iterator<sp/>it<sp/>=<sp/>this-&gt;m_pCont.end();</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>--it;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>to_element_proxy<sp/>(it);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="comment">//===<sp/>Iterator<sp/>creation.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound" tooltip="(Non-const) Iterator class for DataVector/DataList. ">ConstDataList&lt;DL&gt;::iterator</ref></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::begin</ref>()</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>to_my_iterator<sp/>(DL::begin());</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound" tooltip="(Non-const) Iterator class for DataVector/DataList. ">ConstDataList&lt;DL&gt;::iterator</ref></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::end</ref>()</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>to_my_iterator<sp/>(DL::end());</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::reverse_iterator</ref></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::rbegin</ref>()</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>reverse_iterator<sp/>(to_my_iterator<sp/>(DL::end()));</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::reverse_iterator</ref></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::rend</ref>()</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>reverse_iterator<sp/>(to_my_iterator<sp/>(DL::begin()));</highlight></codeline>
+<codeline lineno="228"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="comment">//===<sp/>Insertion<sp/>operations.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::push_front</ref>(value_type<sp/>pElem)</highlight></codeline>
+<codeline lineno="248"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/>DL::push_front<sp/>(const_cast&lt;typename<sp/>DL::value_type&gt;<sp/>(pElem));</highlight></codeline>
+<codeline lineno="250"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::push_back</ref>(value_type<sp/>pElem)</highlight></codeline>
+<codeline lineno="267"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/>DL::push_back<sp/>(const_cast&lt;typename<sp/>DL::value_type&gt;<sp/>(pElem));</highlight></codeline>
+<codeline lineno="269"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound" tooltip="(Non-const) Iterator class for DataVector/DataList. ">ConstDataList&lt;DL&gt;::iterator</ref></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::insert</ref>(iterator<sp/>position,<sp/>value_type<sp/>pElem)</highlight></codeline>
+<codeline lineno="288"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>to_my_iterator</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>(DL::insert<sp/>(to_base_iterator<sp/>(position),<sp/></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const_cast&lt;typename<sp/>DL::value_type&gt;<sp/>(pElem)));</highlight></codeline>
+<codeline lineno="292"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>InputIterator&gt;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::insert</ref>(iterator<sp/>position,<sp/>InputIterator<sp/>first,<sp/>InputIterator<sp/>last)</highlight></codeline>
+<codeline lineno="312"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>DL::iterator<sp/>it<sp/>=<sp/>to_base_iterator<sp/>(position);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(first<sp/>!=<sp/>last)<sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>DL::insert<sp/>(it,<sp/>const_cast&lt;typename<sp/>DL::value_type&gt;<sp/>(*first));</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>++first;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight><highlight class="comment">//===<sp/>Erasure<sp/>operations.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound" tooltip="(Non-const) Iterator class for DataVector/DataList. ">ConstDataList&lt;DL&gt;::iterator</ref></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::erase</ref>(iterator<sp/>position)</highlight></codeline>
+<codeline lineno="336"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>to_my_iterator<sp/>(DL::erase<sp/>(to_base_iterator<sp/>(position)));</highlight></codeline>
+<codeline lineno="338"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound" tooltip="(Non-const) Iterator class for DataVector/DataList. ">ConstDataList&lt;DL&gt;::iterator</ref></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::erase</ref>(iterator<sp/>first,<sp/>iterator<sp/>last)</highlight></codeline>
+<codeline lineno="355"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>to_my_iterator</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/>(DL::erase<sp/>(to_base_iterator<sp/>(first),</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>to_base_iterator<sp/>(last)));</highlight></codeline>
+<codeline lineno="359"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight><highlight class="comment">//===<sp/>Swap<sp/>and<sp/>sort.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::swap</ref>(<ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList</ref>&amp;<sp/>rhs)</highlight></codeline>
+<codeline lineno="378"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><ref refid="db/ded/ConstDataList_8h_1a67766f262856f1e197e15fec33b60bac" kindref="member" tooltip="See DataList&amp;lt;T, BASE&amp;gt;::swap().">DL::swap</ref><sp/>(rhs);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::iter_swap</ref><sp/>(iterator<sp/>a,<sp/>iterator<sp/>b)</highlight></codeline>
+<codeline lineno="391"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/>DL::iter_swap<sp/>(to_base_iterator<sp/>(a),</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>to_base_iterator<sp/>(b));</highlight></codeline>
+<codeline lineno="394"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"></highlight><highlight class="comment">//===<sp/>List<sp/>operations.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="409"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::splice</ref>(<sp/>iterator<sp/>position,<sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList</ref>&amp;<sp/>l<sp/>)</highlight></codeline>
+<codeline lineno="413"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/>DL::splice<sp/>(to_base_iterator<sp/>(position),<sp/>l);</highlight></codeline>
+<codeline lineno="415"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"></highlight></codeline>
+<codeline lineno="417"><highlight class="normal"></highlight></codeline>
+<codeline lineno="425"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::remove</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>value_type&amp;<sp/>value<sp/>)</highlight></codeline>
+<codeline lineno="429"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/>DL::remove<sp/>(const_cast&lt;typename<sp/>DL::value_type&gt;<sp/>(value));</highlight></codeline>
+<codeline lineno="431"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::splice</ref>(<sp/>iterator<sp/>position,<sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList</ref>&amp;<sp/>l,<sp/>iterator<sp/>i<sp/>)</highlight></codeline>
+<codeline lineno="447"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/>DL::splice<sp/>(to_base_iterator(position),<sp/>l,<sp/>to_base_iterator(i));</highlight></codeline>
+<codeline lineno="449"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"></highlight></codeline>
+<codeline lineno="451"><highlight class="normal"></highlight></codeline>
+<codeline lineno="464"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="466"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::splice</ref>(<sp/>iterator<sp/>position,</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList</ref>&amp;<sp/>l,</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iterator<sp/>first,</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iterator<sp/>last<sp/>)</highlight></codeline>
+<codeline lineno="471"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/>DL::splice<sp/>(to_base_iterator(position),</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l,</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>to_base_iterator(first),</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>to_base_iterator(last));</highlight></codeline>
+<codeline lineno="476"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"></highlight></codeline>
+<codeline lineno="478"><highlight class="normal"></highlight></codeline>
+<codeline lineno="488"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="490"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::merge</ref>(<sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList</ref>&amp;<sp/>l<sp/>)</highlight></codeline>
+<codeline lineno="492"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/>DL::merge<sp/>(l);</highlight></codeline>
+<codeline lineno="494"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"></highlight></codeline>
+<codeline lineno="496"><highlight class="normal"></highlight></codeline>
+<codeline lineno="509"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>COMPARE&gt;</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="512"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::merge</ref>(<sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList</ref>&amp;<sp/>l,<sp/>COMPARE<sp/>predicate<sp/>)</highlight></codeline>
+<codeline lineno="514"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/>DL::merge<sp/>(l,<sp/>predicate);</highlight></codeline>
+<codeline lineno="516"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"></highlight></codeline>
+<codeline lineno="518"><highlight class="normal"></highlight></codeline>
+<codeline lineno="519"><highlight class="normal"></highlight><highlight class="comment">//===<sp/>Non-standard<sp/>operations.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="520"><highlight class="normal"></highlight></codeline>
+<codeline lineno="521"><highlight class="normal"></highlight></codeline>
+<codeline lineno="539"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="541"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::swapElement</ref><sp/>(iterator<sp/>pos,</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value_type<sp/>newElem,</highlight></codeline>
+<codeline lineno="544"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reference<sp/>oldElem)</highlight></codeline>
+<codeline lineno="545"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="546"><highlight class="normal"><sp/><sp/>DL::swapElement<sp/>(to_base_iterator(pos),</highlight></codeline>
+<codeline lineno="547"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const_cast&lt;typename<sp/>DL::value_type&gt;(newElem),<sp/></highlight></codeline>
+<codeline lineno="548"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const_cast&lt;typename<sp/>DL::reference&gt;(oldElem));</highlight></codeline>
+<codeline lineno="549"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"></highlight></codeline>
+<codeline lineno="551"><highlight class="normal"></highlight></codeline>
+<codeline lineno="555"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="557"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>DL*</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::asDataList</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="559"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">DL*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="561"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="562"><highlight class="normal"></highlight></codeline>
+<codeline lineno="563"><highlight class="normal"></highlight></codeline>
+<codeline lineno="571"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="573"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::resortAux</ref><sp/>(iterator<sp/></highlight><highlight class="comment">/*beg*/</highlight><highlight class="normal">,<sp/>iterator<sp/></highlight><highlight class="comment">/*end*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="574"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="575"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="576"><highlight class="normal"></highlight></codeline>
+<codeline lineno="577"><highlight class="normal"></highlight></codeline>
+<codeline lineno="578"><highlight class="normal"></highlight><highlight class="comment">//===<sp/>Relational<sp/>operators.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="579"><highlight class="normal"></highlight></codeline>
+<codeline lineno="580"><highlight class="normal"></highlight></codeline>
+<codeline lineno="592"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="594"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d1/d43/DataList_8h_1a331f1405e2b4323d37655e725a8f5b63" kindref="member" tooltip="List ordering relation.">ConstDataList&lt;DL&gt;::operator&lt; </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList</ref>&amp;<sp/>b)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="595"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="596"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">DL&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(*this)<sp/>&lt;<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">DL&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(b);</highlight></codeline>
+<codeline lineno="597"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="598"><highlight class="normal"></highlight></codeline>
+<codeline lineno="599"><highlight class="normal"></highlight></codeline>
+<codeline lineno="601"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="602"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="603"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d1/d43/DataList_8h_1a4292484069a07bf3057169565d175df1" kindref="member" tooltip="Based on operator&amp;lt;.">ConstDataList&lt;DL&gt;::operator&gt; </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList</ref>&amp;<sp/>b)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="604"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="605"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">DL&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(*this)<sp/>&gt;<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">DL&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(b);</highlight></codeline>
+<codeline lineno="606"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="607"><highlight class="normal"></highlight></codeline>
+<codeline lineno="608"><highlight class="normal"></highlight></codeline>
+<codeline lineno="610"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="611"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="612"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d1/d43/DataList_8h_1a8dfe0fab283df99f49e2e84acda68ad6" kindref="member" tooltip="Based on operator&amp;lt;.">ConstDataList&lt;DL&gt;::operator&lt;= </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList</ref>&amp;<sp/>b)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="613"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="614"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">DL&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(*this)<sp/>&lt;=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">DL&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(b);</highlight></codeline>
+<codeline lineno="615"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="616"><highlight class="normal"></highlight></codeline>
+<codeline lineno="617"><highlight class="normal"></highlight></codeline>
+<codeline lineno="619"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="620"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="621"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d1/d43/DataList_8h_1a9cd772f232193f4545efb136406153d5" kindref="member" tooltip="Based on operator&amp;lt;.">ConstDataList&lt;DL&gt;::operator&gt;= </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList</ref>&amp;<sp/>b)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="622"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="623"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">DL&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(*this)<sp/>&gt;=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">DL&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(b);</highlight></codeline>
+<codeline lineno="624"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="625"><highlight class="normal"></highlight></codeline>
+<codeline lineno="626"><highlight class="normal"></highlight></codeline>
+<codeline lineno="637"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="638"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="639"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d1/d43/DataList_8h_1a2f4af3db6bca5dc8d962d673635f0865" kindref="member" tooltip="List equality comparison.">ConstDataList&lt;DL&gt;::operator== </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList</ref>&amp;<sp/>b)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="640"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="641"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">DL&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(*this)<sp/>==<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">DL&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(b);</highlight></codeline>
+<codeline lineno="642"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="643"><highlight class="normal"></highlight></codeline>
+<codeline lineno="644"><highlight class="normal"></highlight></codeline>
+<codeline lineno="646"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="647"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="648"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d1/d43/DataList_8h_1aa7a25d1b36f44af915a534c124985c2b" kindref="member" tooltip="Based on operator==.">ConstDataList&lt;DL&gt;::operator!= </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList</ref>&amp;<sp/>b)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="649"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="650"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">DL&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(*this)<sp/>!=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">DL&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(b);</highlight></codeline>
+<codeline lineno="651"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="652"><highlight class="normal"></highlight></codeline>
+<codeline lineno="653"><highlight class="normal"></highlight></codeline>
+<codeline lineno="654"><highlight class="normal"></highlight><highlight class="comment">//===<sp/>Private<sp/>helpers.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="655"><highlight class="normal"></highlight></codeline>
+<codeline lineno="656"><highlight class="normal"></highlight></codeline>
+<codeline lineno="664"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="665"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="666"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="667"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::assignElement</ref><sp/>(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>BaseContainer::iterator<sp/>pos,</highlight></codeline>
+<codeline lineno="668"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value_type<sp/>newElem)</highlight></codeline>
+<codeline lineno="669"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="670"><highlight class="normal"><sp/><sp/>DL::assignElement<sp/>(pos,<sp/>const_cast&lt;typename<sp/>DL::value_type&gt;<sp/>(newElem));</highlight></codeline>
+<codeline lineno="671"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="672"><highlight class="normal"></highlight></codeline>
+<codeline lineno="673"><highlight class="normal"></highlight></codeline>
+<codeline lineno="682"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="683"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="684"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="685"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::assignBaseElement</ref><sp/>(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>BaseContainer::iterator<sp/>pos,</highlight></codeline>
+<codeline lineno="686"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>BaseContainer::value_type<sp/>newElem)</highlight></codeline>
+<codeline lineno="687"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="688"><highlight class="normal"><sp/><sp/>DL::assignBaseElement<sp/>(pos,<sp/>newElem);</highlight></codeline>
+<codeline lineno="689"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="690"><highlight class="normal"></highlight></codeline>
+<codeline lineno="691"><highlight class="normal"></highlight></codeline>
+<codeline lineno="697"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="698"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="699"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>DL::iterator</highlight></codeline>
+<codeline lineno="700"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::to_base_iterator</ref><sp/>(iterator<sp/>it)</highlight></codeline>
+<codeline lineno="701"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="702"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>DL::iterator<sp/>(it.base(),<sp/>it.container());</highlight></codeline>
+<codeline lineno="703"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="704"><highlight class="normal"></highlight></codeline>
+<codeline lineno="705"><highlight class="normal"></highlight></codeline>
+<codeline lineno="711"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="712"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="713"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound" tooltip="(Non-const) Iterator class for DataVector/DataList. ">ConstDataList&lt;DL&gt;::iterator</ref></highlight></codeline>
+<codeline lineno="714"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::to_my_iterator</ref><sp/>(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>DL::iterator<sp/>it)</highlight></codeline>
+<codeline lineno="715"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="716"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>iterator<sp/>(it.base(),<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="717"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="718"><highlight class="normal"></highlight></codeline>
+<codeline lineno="719"><highlight class="normal"></highlight></codeline>
+<codeline lineno="725"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="726"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="727"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="d7/d05/classDataModel__detail_1_1ElementProxy" kindref="compound" tooltip="Proxy for lvalue access to DataVector/DataList elements.">ConstDataList&lt;DL&gt;::ElementProxy</ref></highlight></codeline>
+<codeline lineno="728"><highlight class="normal"><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;::to_element_proxy</ref><sp/>(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>BaseContainer::iterator<sp/>i)</highlight></codeline>
+<codeline lineno="729"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="730"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ElementProxy<sp/>(i,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="731"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="732"><highlight class="normal"></highlight></codeline>
+<codeline lineno="733"><highlight class="normal"></highlight></codeline>
+<codeline lineno="735"><highlight class="normal"></highlight></codeline>
+<codeline lineno="736"><highlight class="normal"></highlight></codeline>
+<codeline lineno="738"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="739"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="740"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="db/ded/ConstDataList_8h_1a67766f262856f1e197e15fec33b60bac" kindref="member" tooltip="See DataList&amp;lt;T, BASE&amp;gt;::swap().">swap</ref>(<sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;T&gt;</ref>&amp;<sp/>a,<sp/><ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;T&gt;</ref>&amp;<sp/>b<sp/>)</highlight></codeline>
+<codeline lineno="741"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="742"><highlight class="normal"><sp/><sp/>a.<ref refid="d3/d7c/classConstDataList_1a655f54075595ed86221b36b68a19d567" kindref="member" tooltip="Swap this collection with another.">swap</ref>(b);</highlight></codeline>
+<codeline lineno="743"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="744"><highlight class="normal"></highlight></codeline>
+<codeline lineno="745"><highlight class="normal"></highlight></codeline>
+<codeline lineno="746"><highlight class="normal"></highlight><highlight class="comment">//===<sp/>Other<sp/>helper<sp/>classes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="747"><highlight class="normal"></highlight></codeline>
+<codeline lineno="748"><highlight class="normal"></highlight></codeline>
+<codeline lineno="753"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SG<sp/>{</highlight></codeline>
+<codeline lineno="754"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="755"><highlight class="normal">DVLConstDataListBucket&lt;DL&gt;::DVLConstDataListBucket</highlight></codeline>
+<codeline lineno="756"><highlight class="normal"><sp/><sp/>(<ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;</ref>*<sp/>data)</highlight></codeline>
+<codeline lineno="757"><highlight class="normal"><sp/><sp/>:<sp/>DVLDataBucket&lt;DL&gt;<sp/>(const_cast&lt;DL*&gt;<sp/>(data-&gt;asDataList()))</highlight></codeline>
+<codeline lineno="758"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="759"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="760"><highlight class="normal"></highlight></codeline>
+<codeline lineno="761"><highlight class="normal"></highlight></codeline>
+<codeline lineno="762"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__cplusplus<sp/>&gt;<sp/>201100</highlight></codeline>
+<codeline lineno="763"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="767"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DL&gt;</highlight></codeline>
+<codeline lineno="768"><highlight class="normal"><ref refid="de/d27/classSG_1_1DVLConstDataListBucket_1ae4d429531ca009debda525e149322470" kindref="member" tooltip="Constructor from a payload object.">DVLConstDataListBucket&lt;DL&gt;::DVLConstDataListBucket</ref></highlight></codeline>
+<codeline lineno="769"><highlight class="normal"><sp/><sp/>(std::unique_ptr&lt;<ref refid="d3/d7c/classConstDataList" kindref="compound" tooltip="DataList adapter that acts like it holds const pointers.">ConstDataList&lt;DL&gt;</ref><sp/>&gt;<sp/>data)</highlight></codeline>
+<codeline lineno="770"><highlight class="normal"><sp/><sp/>:<sp/>DVLDataBucket&lt;DL&gt;<sp/>(std::unique_ptr&lt;DL&gt;<sp/>(const_cast&lt;DL*&gt;<sp/>(data.release()-&gt;asDataList())))</highlight></codeline>
+<codeline lineno="771"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="772"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="773"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="774"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="775"><highlight class="normal"></highlight></codeline>
+<codeline lineno="776"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>SG</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataList.icc"/>
+  </compounddef>
+</doxygen>

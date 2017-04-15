@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dc/d2a/TDestructorRegistry_8cxx" kind="file">
+    <compoundname>TDestructorRegistry.cxx</compoundname>
+    <includes local="no">TError.h</includes>
+    <includes refid="de/d1a/normalizedTypeinfoName_8h" local="yes">AthContainers/normalizedTypeinfoName.h</includes>
+    <includes refid="d3/d87/TDestructorRegistry_8h" local="yes">xAODRootAccess/tools/TDestructorRegistry.h</includes>
+    <includes refid="d6/d17/xAODRootAccess_2xAODRootAccess_2tools_2Message_8h" local="yes">xAODRootAccess/tools/Message.h</includes>
+    <incdepgraph>
+      <node id="410449">
+        <label>AthContainers/normalizedTypeinfoName.h</label>
+        <link refid="de/d1a/normalizedTypeinfoName_8h"/>
+        <childnode refid="410450" relation="include">
+        </childnode>
+        <childnode refid="410451" relation="include">
+        </childnode>
+      </node>
+      <node id="410454">
+        <label>xAODRootAccess/tools/Message.h</label>
+        <link refid="d6/d17/xAODRootAccess_2xAODRootAccess_2tools_2Message_8h_source"/>
+      </node>
+      <node id="410450">
+        <label>string</label>
+      </node>
+      <node id="410453">
+        <label>map</label>
+      </node>
+      <node id="410448">
+        <label>TError.h</label>
+      </node>
+      <node id="410447">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TDestructorRegistry.cxx</label>
+        <link refid="TDestructorRegistry.cxx"/>
+        <childnode refid="410448" relation="include">
+        </childnode>
+        <childnode refid="410449" relation="include">
+        </childnode>
+        <childnode refid="410452" relation="include">
+        </childnode>
+        <childnode refid="410454" relation="include">
+        </childnode>
+      </node>
+      <node id="410451">
+        <label>typeinfo</label>
+      </node>
+      <node id="410452">
+        <label>xAODRootAccess/tools/TDestructorRegistry.h</label>
+        <link refid="d3/d87/TDestructorRegistry_8h_source"/>
+        <childnode refid="410453" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="dd/d44/namespacexAOD">xAOD</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>$Id:<sp/>TDestructorRegistry.cxx<sp/>649954<sp/>2015-02-26<sp/>13:28:38Z<sp/>krasznaa<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ROOT<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TError.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>EDM<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="de/d1a/normalizedTypeinfoName_8h" kindref="compound" tooltip="Convert a type_info to a normalized string representation (matching the names used...">AthContainers/normalizedTypeinfoName.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Local<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODRootAccess/tools/TDestructorRegistry.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODRootAccess/tools/Message.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">xAOD<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/>TDestructorRegistry&amp;<sp/><ref refid="d9/dc5/classxAOD_1_1TDestructorRegistry_1afde6c73e5949cb1f54f3ed7ddb3ca36b" kindref="member" tooltip="Function accessing the singleton instance of this type.">TDestructorRegistry::instance</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>TDestructorRegistry<sp/>obj;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obj;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TVirtualDestructor*</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><ref refid="d9/dc5/classxAOD_1_1TDestructorRegistry_1a55011252f5ac5052098f320ce59d2ae3" kindref="member" tooltip="Get the destructor for a given type.">TDestructorRegistry::get</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::type_info&amp;<sp/>ti<sp/>)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Look<sp/>for<sp/>this<sp/>type:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Map_t::const_iterator<sp/>itr<sp/>=<sp/>m_types.find(<sp/>&amp;ti<sp/>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>itr<sp/>!=<sp/>m_types.end()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>itr-&gt;second.m_destructor;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>didn&apos;t<sp/>find<sp/>it:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>::Error(<sp/></highlight><highlight class="stringliteral">&quot;xAOD::TDestructorRegistry::get&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>XAOD_MESSAGE(<sp/></highlight><highlight class="stringliteral">&quot;Destructor<sp/>not<sp/>known<sp/>for<sp/>type<sp/>%s&quot;</highlight><highlight class="normal"><sp/>),</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d59/namespaceSG_1a1b43d42a3d7a635ea8b7e89ea4ed207e" kindref="member" tooltip="Convert a type_info to a normalized string representation (matching the names used...">SG::normalizedTypeinfoName</ref>(<sp/>ti<sp/>).c_str()<sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/>TDestructorRegistry::TDestructorHolder::</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/>TDestructorHolder(<sp/>TVirtualDestructor*<sp/>d<sp/>)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>m_destructor(<sp/>d<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/>TDestructorRegistry::TDestructorHolder::</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/>~TDestructorHolder()<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>m_destructor<sp/>)<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_destructor;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>xAOD</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TDestructorRegistry.cxx"/>
+  </compounddef>
+</doxygen>

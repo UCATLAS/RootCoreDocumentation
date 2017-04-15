@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d2/daa/classMVAUtils_1_1BDT" kind="class" prot="public">
+    <compoundname>MVAUtils::BDT</compoundname>
+    <includes refid="dc/dd3/BDT_8h" local="no">BDT.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d2/daa/classMVAUtils_1_1BDT_1a2e42eb7a0c12608857c8e763954cec62" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MVAUtils::BDT::m_offset</definition>
+        <argsstring></argsstring>
+        <name>m_offset</name>
+        <briefdescription>
+<para>the offset to add in the GetResponse functions </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="90" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/daa/classMVAUtils_1_1BDT_1a09a1d68edc88f37edca1e4240226092b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="d7/d51/classMVAUtils_1_1Node_1aa6cdea609f3ee50ef6b1951a9d094f67" kindref="member">Node::index_t</ref> &gt;</type>
+        <definition>std::vector&lt;Node::index_t&gt; MVAUtils::BDT::m_forest</definition>
+        <argsstring></argsstring>
+        <name>m_forest</name>
+        <briefdescription>
+<para>indices of the top-level nodes of each tree </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="91" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/daa/classMVAUtils_1_1BDT_1aa89af93148df1684b263493c3906fb54" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float * &gt;</type>
+        <definition>std::vector&lt;float*&gt; MVAUtils::BDT::m_pointers</definition>
+        <argsstring></argsstring>
+        <name>m_pointers</name>
+        <briefdescription>
+<para>where vars to cut on can be set (but can also be passed) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="92" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/daa/classMVAUtils_1_1BDT_1a1f422275ed1530da6b9a18772ac2ab64" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="d7/d51/classMVAUtils_1_1Node" kindref="compound">Node</ref> &gt;</type>
+        <definition>std::vector&lt;Node&gt; MVAUtils::BDT::m_nodes</definition>
+        <argsstring></argsstring>
+        <name>m_nodes</name>
+        <briefdescription>
+<para>where the nodes of the forest are stored </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="93" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1aee97b69c33a70a38ad321fa6cec4177f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BDT::BDT</definition>
+        <argsstring>(TTree *tree)</argsstring>
+        <name>BDT</name>
+        <param>
+          <type>TTree *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>c-tor from TTree </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="37" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/Root/BDT.cxx" bodystart="15" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1a7c4359888c1f4e385fb315cfaf1d271f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BDT::BDT</definition>
+        <argsstring>(TMVA::MethodBDT *bdt)</argsstring>
+        <name>BDT</name>
+        <param>
+          <type>TMVA::MethodBDT *</type>
+          <declname>bdt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>c-tor from TMVA::MethodBDT </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="38" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/Root/BDT.cxx" bodystart="43" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1a7e180b469e01320ce4101ef35260c8ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BDT::newTree</definition>
+        <argsstring>(const std::vector&lt; int &gt; &amp;vars, const std::vector&lt; float &gt; &amp;values)</argsstring>
+        <name>newTree</name>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>vars</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates the full tree structure from what is stored in root file </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="41" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/Root/BDT.cxx" bodystart="59" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1a3ff2af634a79d608e8330a24a17657be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BDT::newTree</definition>
+        <argsstring>(const TMVA::DecisionTreeNode *node)</argsstring>
+        <name>newTree</name>
+        <param>
+          <type>const TMVA::DecisionTreeNode *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates the full tree structure from TMVA::DecisionTree node. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="44" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/Root/BDT.cxx" bodystart="92" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1a9487bdff92de8bed7507eaf38fa04d45" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MVAUtils::BDT::GetNTrees</definition>
+        <argsstring>() const </argsstring>
+        <name>GetNTrees</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>return the number of trees in the forest </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="47" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1ac2b95a0b5bcf36be80e271c0c4eba7b4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float MVAUtils::BDT::GetOffset</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>return the offset that is added to the response </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="50" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1ac02455a0b31f3d971c75a727127d3511" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float BDT::GetResponse</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;values) const </argsstring>
+        <name>GetResponse</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return offset + the sum of the response of each tree </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="53" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/Root/BDT.cxx" bodystart="160" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1ade99328abf0adc5d5d52646e01a30140" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float BDT::GetResponse</definition>
+        <argsstring>(const std::vector&lt; float * &gt; &amp;pointers) const </argsstring>
+        <name>GetResponse</name>
+        <param>
+          <type>const std::vector&lt; float * &gt; &amp;</type>
+          <declname>pointers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return offset + the sum of the response of each tree </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="54" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/Root/BDT.cxx" bodystart="169" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1a1cdd387c31f94fd6671bd762d1af2c53" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float MVAUtils::BDT::GetResponse</definition>
+        <argsstring>() const </argsstring>
+        <name>GetResponse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return offset + the sum of the response of each tree, using saved pointers </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="57" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" bodystart="57" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1a767e8f6295ef64858c61eadaa8515553" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float BDT::GetGradBoostMVA</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;values) const </argsstring>
+        <name>GetGradBoostMVA</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return 2.0/(1.0+exp(-2.0*sum))-1, with no offset </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="62" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/Root/BDT.cxx" bodystart="178" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1adc557db67eb759887b37fcdbd930086e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float BDT::GetGradBoostMVA</definition>
+        <argsstring>(const std::vector&lt; float * &gt; &amp;pointers) const </argsstring>
+        <name>GetGradBoostMVA</name>
+        <param>
+          <type>const std::vector&lt; float * &gt; &amp;</type>
+          <declname>pointers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return 2.0/(1.0+exp(-2.0*sum))-1, with no offset </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="63" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/Root/BDT.cxx" bodystart="187" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1ace005401eaae4b8536142ecbd9edc4fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt; float &gt; BDT::GetMultiResponse</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;values, unsigned int numClasses) const </argsstring>
+        <name>GetMultiResponse</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numClasses</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>special function when there are mutliple classes (for b-tagging) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="66" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/Root/BDT.cxx" bodystart="196" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1ab1d2ae225025c3b4709428d70dd5e404" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt; float &gt; BDT::GetMultiResponse</definition>
+        <argsstring>(const std::vector&lt; float * &gt; &amp;pointers, unsigned int numClasses) const </argsstring>
+        <name>GetMultiResponse</name>
+        <param>
+          <type>const std::vector&lt; float * &gt; &amp;</type>
+          <declname>pointers</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numClasses</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>special function when there are mutliple classes (for b-tagging) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="67" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/Root/BDT.cxx" bodystart="219" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1a8c18d15aa0d25de57796d9f0ec6e6f45" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt; float &gt; BDT::GetValues</definition>
+        <argsstring>() const </argsstring>
+        <name>GetValues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the values corresponding to m_pointers (or an empty vector) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="70" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/Root/BDT.cxx" bodystart="260" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1a9593cf5db834cadf2a9809bd85c5ca8b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; float * &gt;</type>
+        <definition>std::vector&lt;float*&gt; MVAUtils::BDT::GetPointers</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPointers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return stored pointers (which are used by GetResponse with no args) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="73" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1ad09ba2ff11c5867cfc2556a1716b9721" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MVAUtils::BDT::SetPointers</definition>
+        <argsstring>(std::vector&lt; float * &gt; &amp;pointers)</argsstring>
+        <name>SetPointers</name>
+        <param>
+          <type>std::vector&lt; float * &gt; &amp;</type>
+          <declname>pointers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the stored pointers so that one can use GetResponse with no args </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="76" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1aa04c98d747591ed821b8a9aff5d33381" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TTree *</type>
+        <definition>TTree * BDT::WriteTree</definition>
+        <argsstring>(TString name=&quot;BDT&quot;)</argsstring>
+        <name>WriteTree</name>
+        <param>
+          <type>TString</type>
+          <declname>name</declname>
+          <defval>&quot;BDT&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a TTree representing the <ref refid="d2/daa/classMVAUtils_1_1BDT" kindref="compound">BDT</ref>: each entry is a binary tree, each element of the vectors is a node </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="79" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/Root/BDT.cxx" bodystart="276" bodyend="301"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1acac30152d1b014023ff7dda69d3475c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BDT::PrintForest</definition>
+        <argsstring>() const </argsstring>
+        <name>PrintForest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For debugging only: print the forest </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="82" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/Root/BDT.cxx" bodystart="306" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1a98fd90a66592e060dddb518ec37245f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BDT::PrintTree</definition>
+        <argsstring>(Node::index_t index) const </argsstring>
+        <name>PrintTree</name>
+        <param>
+          <type><ref refid="d7/d51/classMVAUtils_1_1Node_1aa6cdea609f3ee50ef6b1951a9d094f67" kindref="member">Node::index_t</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For debugging only: Print the tree in a way that can compare implementations Using pre-order search for now </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="83" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/Root/BDT.cxx" bodystart="321" bodyend="334"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1af0869be173ee22d0f87a34c2aedef27e" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float BDT::GetTreeResponse</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;values, Node::index_t index) const </argsstring>
+        <name>GetTreeResponse</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d51/classMVAUtils_1_1Node_1aa6cdea609f3ee50ef6b1951a9d094f67" kindref="member">Node::index_t</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the response of the response of each at index &quot;index&quot; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="87" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/Root/BDT.cxx" bodystart="242" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/daa/classMVAUtils_1_1BDT_1afc492411f86b51a8a562d81225b74c87" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float BDT::GetTreeResponse</definition>
+        <argsstring>(const std::vector&lt; float * &gt; &amp;pointers, Node::index_t index) const </argsstring>
+        <name>GetTreeResponse</name>
+        <param>
+          <type>const std::vector&lt; float * &gt; &amp;</type>
+          <declname>pointers</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d51/classMVAUtils_1_1Node_1aa6cdea609f3ee50ef6b1951a9d094f67" kindref="member">Node::index_t</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the response of the response of each at index &quot;index&quot; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="88" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/Root/BDT.cxx" bodystart="251" bodyend="257"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Simplified Boosted Regression Tree, based on TMVA::DecisionTree. Holds a forest (vector of top nodes of each decision tree) and a constant offset (not always used). The response is given by in one of two ways: offset + the sum of the response of each tree, or 2.0/(1.0+exp(-2.0*sum))-1, with no offset. Additionally, there&apos;s a special return when the BDTs are trained with multiple classes.</para><para>Can be constructed from TMVA::MethodBDT or a TTree. Each entry of the TTree represents a binary tree and each element of the vectors stored in the TTree represent a node</para><para>The response can be evaluated from a vector of floats or a vector of pointers (to avoid creating vectors at each call) which can be stored internally (m_pointers) </para>    </detaileddescription>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" line="35" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MVAUtils/MVAUtils/BDT.h" bodystart="34" bodyend="95"/>
+    <listofallmembers>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1aee97b69c33a70a38ad321fa6cec4177f" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>BDT</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1a7c4359888c1f4e385fb315cfaf1d271f" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>BDT</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1a767e8f6295ef64858c61eadaa8515553" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>GetGradBoostMVA</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1adc557db67eb759887b37fcdbd930086e" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>GetGradBoostMVA</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1ace005401eaae4b8536142ecbd9edc4fb" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>GetMultiResponse</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1ab1d2ae225025c3b4709428d70dd5e404" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>GetMultiResponse</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1a9487bdff92de8bed7507eaf38fa04d45" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>GetNTrees</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1ac2b95a0b5bcf36be80e271c0c4eba7b4" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>GetOffset</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1a9593cf5db834cadf2a9809bd85c5ca8b" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>GetPointers</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1ac02455a0b31f3d971c75a727127d3511" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>GetResponse</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1ade99328abf0adc5d5d52646e01a30140" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>GetResponse</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1a1cdd387c31f94fd6671bd762d1af2c53" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>GetResponse</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1af0869be173ee22d0f87a34c2aedef27e" prot="private" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>GetTreeResponse</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1afc492411f86b51a8a562d81225b74c87" prot="private" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>GetTreeResponse</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1a8c18d15aa0d25de57796d9f0ec6e6f45" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>GetValues</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1a09a1d68edc88f37edca1e4240226092b" prot="private" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>m_forest</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1a1f422275ed1530da6b9a18772ac2ab64" prot="private" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>m_nodes</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1a2e42eb7a0c12608857c8e763954cec62" prot="private" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>m_offset</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1aa89af93148df1684b263493c3906fb54" prot="private" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>m_pointers</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1a7e180b469e01320ce4101ef35260c8ea" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>newTree</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1a3ff2af634a79d608e8330a24a17657be" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>newTree</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1acac30152d1b014023ff7dda69d3475c7" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>PrintForest</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1a98fd90a66592e060dddb518ec37245f7" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>PrintTree</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1ad09ba2ff11c5867cfc2556a1716b9721" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>SetPointers</name></member>
+      <member refid="d2/daa/classMVAUtils_1_1BDT_1aa04c98d747591ed821b8a9aff5d33381" prot="public" virt="non-virtual"><scope>MVAUtils::BDT</scope><name>WriteTree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

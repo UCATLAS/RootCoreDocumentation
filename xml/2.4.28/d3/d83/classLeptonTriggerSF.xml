@@ -1,0 +1,3384 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d3/d83/classLeptonTriggerSF" kind="class" prot="public">
+    <compoundname>LeptonTriggerSF</compoundname>
+    <includes refid="d3/d1d/LeptonTriggerSF_8h" local="no">LeptonTriggerSF.h</includes>
+    <innerclass refid="db/dcd/structLeptonTriggerSF_1_1DileptonThresholds" prot="private">LeptonTriggerSF::DileptonThresholds</innerclass>
+    <innerclass refid="d3/d8c/structLeptonTriggerSF_1_1DileptonTrigger" prot="private">LeptonTriggerSF::DileptonTrigger</innerclass>
+    <innerclass refid="d1/d33/structLeptonTriggerSF_1_1Storage" prot="public">LeptonTriggerSF::Storage</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="d3/d83/classLeptonTriggerSF_1af46094fc959c518a9cc3c43ea6f0fee3" prot="private" static="no">
+        <type>std::map&lt; std::string, TH2 * &gt;</type>
+        <definition>typedef std::map&lt;std::string, TH2*&gt; LeptonTriggerSF::EfficiencyMap</definition>
+        <argsstring></argsstring>
+        <name>EfficiencyMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="1014" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="1014" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/d83/classLeptonTriggerSF_1a4b29b95e0980ad225d871e24ed913fae" prot="private" static="no">
+        <type>std::pair&lt; std::string, TH2 * &gt;</type>
+        <definition>typedef std::pair&lt;std::string, TH2*&gt; LeptonTriggerSF::EfficiencyPair</definition>
+        <argsstring></argsstring>
+        <name>EfficiencyPair</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="1015" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="1015" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/d83/classLeptonTriggerSF_1a4ccc508e46bffdbd10e33b45f306cff7" prot="private" static="no">
+        <type>std::map&lt; int, <ref refid="dd/d65/classRoot_1_1TElectronEfficiencyCorrectionTool" kindref="compound">Root::TElectronEfficiencyCorrectionTool</ref> * &gt;</type>
+        <definition>typedef std::map&lt;int, Root::TElectronEfficiencyCorrectionTool*&gt; LeptonTriggerSF::ElectronEfficiencyToolMap</definition>
+        <argsstring></argsstring>
+        <name>ElectronEfficiencyToolMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="1022" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="1022" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/d83/classLeptonTriggerSF_1ac7d4399b4ca02feee62042a8d1e51b92" prot="private" static="no">
+        <type>std::pair&lt; int, <ref refid="dd/d65/classRoot_1_1TElectronEfficiencyCorrectionTool" kindref="compound">Root::TElectronEfficiencyCorrectionTool</ref> * &gt;</type>
+        <definition>typedef std::pair&lt;int, Root::TElectronEfficiencyCorrectionTool*&gt; LeptonTriggerSF::ElectronEfficiencyToolPair</definition>
+        <argsstring></argsstring>
+        <name>ElectronEfficiencyToolPair</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="1023" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="1023" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d3/d83/classLeptonTriggerSF_1ad064d56469cfb4e5e7f98cac24ca5402" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LeptonTriggerSF::m_year</definition>
+        <argsstring></argsstring>
+        <name>m_year</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="1012" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="1012" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d83/classLeptonTriggerSF_1ac2ec201c90e77519fb0631886c725bf3" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; LeptonTriggerSF::m_qualities</definition>
+        <argsstring></argsstring>
+        <name>m_qualities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="1013" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="1013" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d83/classLeptonTriggerSF_1a17a306a5956610c72ff3ba9f242f3ffc" prot="private" static="no" mutable="no">
+        <type>EfficiencyMap</type>
+        <definition>EfficiencyMap LeptonTriggerSF::m_efficiencyMap</definition>
+        <argsstring></argsstring>
+        <name>m_efficiencyMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The main efficiency storage location </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="1016" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="1016" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d83/classLeptonTriggerSF_1a29f2072a963ccd7baca200dedc3b4742" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; EfficiencyMap &gt;</type>
+        <definition>std::vector&lt;EfficiencyMap&gt; LeptonTriggerSF::m_efficiencyMapReplicaArray</definition>
+        <argsstring></argsstring>
+        <name>m_efficiencyMapReplicaArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The replica efficiency storage location </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="1017" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="1017" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d83/classLeptonTriggerSF_1ae74e0fc596438821773c480302802596" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LeptonTriggerSF::m_phiBoundaryBarrel</definition>
+        <argsstring></argsstring>
+        <name>m_phiBoundaryBarrel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Muon phi boundary in the barrel region </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="1019" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="1019" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d83/classLeptonTriggerSF_1a6e0b53b22651e160a564fa105ca5032e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LeptonTriggerSF::m_phiBoundaryEndcap</definition>
+        <argsstring></argsstring>
+        <name>m_phiBoundaryEndcap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Muon phi boundary in the endcap region </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="1020" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="1020" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d83/classLeptonTriggerSF_1a3cc329927b6192bb14eaee515dc7e75f" prot="private" static="no" mutable="yes">
+        <type>ElectronEfficiencyToolMap</type>
+        <definition>ElectronEfficiencyToolMap LeptonTriggerSF::m_electronSF</definition>
+        <argsstring></argsstring>
+        <name>m_electronSF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="1024" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="1024" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d83/classLeptonTriggerSF_1a438acb086a5ecedae7c6cc2c56730d30" prot="private" static="no" mutable="yes">
+        <type>std::map&lt; int, std::string &gt;</type>
+        <definition>std::map&lt;int, std::string&gt; LeptonTriggerSF::m_fileNameMap</definition>
+        <argsstring></argsstring>
+        <name>m_fileNameMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="1025" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="1025" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d83/classLeptonTriggerSF_1a568386b152df743121df7fdf1ab79836" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LeptonTriggerSF::m_IsAFII</definition>
+        <argsstring></argsstring>
+        <name>m_IsAFII</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="1027" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="1027" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d83/classLeptonTriggerSF_1a3c9f0546d2759353d7dbf1e7948f4efb" prot="private" static="no" mutable="no">
+        <type>TrigMuonEff::DataPeriod</type>
+        <definition>TrigMuonEff::DataPeriod LeptonTriggerSF::m_max_period</definition>
+        <argsstring></argsstring>
+        <name>m_max_period</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="1028" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="1028" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d83/classLeptonTriggerSF_1adfa4bf03f3f26453add5e0755f042507" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string LeptonTriggerSF::m_electronFileVersion</definition>
+        <argsstring></argsstring>
+        <name>m_electronFileVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="1029" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="1029" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1af449b49f38fa74d0be7650b47077f1f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LeptonTriggerSF::LeptonTriggerSF</definition>
+        <argsstring>(const std::string &amp;directory=&quot;&quot;, const std::string &amp;directoryElectron=&quot;&quot;, const std::string &amp;electronFileVersion=&quot;rel17p2.v02&quot;)</argsstring>
+        <name>LeptonTriggerSF</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>directory</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>directoryElectron</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>electronFileVersion</declname>
+          <defval>&quot;rel17p2.v02&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>constructor The constructor expects the directory name under which the efficiency file(s) can be found, when running in stand-alone ROOT mode. When running in an <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref> job it can try to guess the correct location, but it may need some help even in that case.</para><para>The directory can be any directory that ROOT understands, so you can point the tool to a DCAP, XRootD or even a web server if you want to.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>directory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] path to the directory that contains efficiency file(s) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>directoryElectron</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] path to the directory that contains efficiency files for ElectronEfficiencyCorrection </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>electronFileVersion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] version string of the efficiency files for ElectronEfficiencyCorrection </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="212" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="52" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1aa76e11731a9fe0b57751eccdac524aa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LeptonTriggerSF::LeptonTriggerSF</definition>
+        <argsstring>(const int year, const std::string &amp;directory=&quot;&quot;, const std::string &amp;fileName=&quot;&quot;, const std::string &amp;directoryElectron=&quot;&quot;, const std::string &amp;electronFileVersion=&quot;rel17p2.v02&quot;)</argsstring>
+        <name>LeptonTriggerSF</name>
+        <param>
+          <type>const int</type>
+          <declname>year</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>directory</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>directoryElectron</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>electronFileVersion</declname>
+          <defval>&quot;rel17p2.v02&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>constructor <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>year</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] year in 4 digits </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>directory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] path to the directory that contains efficiency file(s) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] name of the ROOT file </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>directoryElectron</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] path to the directory that contains efficiency files for ElectronEfficiencyCorrection </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>electronFileVersion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] version string of the efficiency files for ElectronEfficiencyCorrection </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="225" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="67" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a08bc14109a0af218b4fc7004925e816b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LeptonTriggerSF::LeptonTriggerSF</definition>
+        <argsstring>(const int year, const std::vector&lt; std::string &gt; &amp;qualities, const std::string &amp;directory=&quot;&quot;, const std::string &amp;fileName=&quot;&quot;, const std::string &amp;directoryElectron=&quot;&quot;, const std::string &amp;electronFileVersion=&quot;rel17p2.v02&quot;)</argsstring>
+        <name>LeptonTriggerSF</name>
+        <param>
+          <type>const int</type>
+          <declname>year</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>qualities</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>directory</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>directoryElectron</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>electronFileVersion</declname>
+          <defval>&quot;rel17p2.v02&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>constructor <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>year</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] year in 4 digits </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>quality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] year in 4 digits </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>directory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] path to the directory that contains efficiency file(s) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] name of the ROOT file </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>directoryElectron</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] path to the directory that contains efficiency files for ElectronEfficiencyCorrection </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>electronFileVersion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] version string of the efficiency files for ElectronEfficiencyCorrection </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="240" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="84" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1af78c7b03b7300a45e031aeacb638e3bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LeptonTriggerSF::~LeptonTriggerSF</definition>
+        <argsstring>()</argsstring>
+        <name>~LeptonTriggerSF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="243" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="102" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a42df88bb6fe134a528fcf3aa04461611" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::GetTriggerSF</definition>
+        <argsstring>(const int runNumber, const bool useGeV, const std::vector&lt; TLorentzVector &gt; &amp;muons, const MuonQuality muonQuality, const int systematicVariation=0, TrigMuonEff::Configuration *configuration=0) const </argsstring>
+        <name>GetTriggerSF</name>
+        <param>
+          <type>const int</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>useGeV</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>muons</declname>
+        </param>
+        <param>
+          <type>const MuonQuality</type>
+          <declname>muonQuality</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>systematicVariation</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> *</type>
+          <declname>configuration</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the trigger scale factor for muons of uniform quality</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>runNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] run number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>useGeV</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] use GeV if true, otherwise use MeV </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector array of muons </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muonQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] muon quality </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>systematicVariation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] systematic variation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : scale factor, pair-&gt;second : uncertainty on the scale factor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="263" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="123" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a3e21dc215c711a2a30d7c9d48c61ad48" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::GetTriggerSF</definition>
+        <argsstring>(const int runNumber, const bool useGeV, const std::vector&lt; TLorentzVector &gt; &amp;muons, const std::vector&lt; MuonQuality &gt; &amp;muonsQuality, const int systematicVariation=0, TrigMuonEff::Configuration *configuration=0) const </argsstring>
+        <name>GetTriggerSF</name>
+        <param>
+          <type>const int</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>useGeV</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>muons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; MuonQuality &gt; &amp;</type>
+          <declname>muonsQuality</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>systematicVariation</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> *</type>
+          <declname>configuration</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the trigger scale factor for muons with non-uniform quality</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>runNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] run number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>useGeV</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] use GeV if true, otherwise use MeV </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector array of muons </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muonsQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of muon qualities </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>systematicVariation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] systematic variation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : scale factor, pair-&gt;second : uncertainty on the scale factor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="283" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="154" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a68eab68ee609ac8bc926c500e5b60d74" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::GetTriggerSF</definition>
+        <argsstring>(const int runNumber, const bool useGeV, const std::vector&lt; TLorentzVector &gt; &amp;muons, const std::vector&lt; MuonQuality &gt; &amp;muonsQuality, const std::string &amp;trigger, const int systematicVariation=0, TrigMuonEff::Configuration *configuration=0) const </argsstring>
+        <name>GetTriggerSF</name>
+        <param>
+          <type>const int</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>useGeV</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>muons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; MuonQuality &gt; &amp;</type>
+          <declname>muonsQuality</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>trigger</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>systematicVariation</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> *</type>
+          <declname>configuration</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the trigger scale factor for muons with non-uniform quality for given trigger</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>runNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] run number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>useGeV</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] use GeV if true, otherwise use MeV </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector array of muons </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muonsQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of muon qualities </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger chain </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>systematicVariation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] systematic variation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : scale factor, pair-&gt;second : uncertainty on the scale factor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="305" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="184" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a452ee1a62f44d121a840ee56b9fb9ef0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::GetTriggerSF</definition>
+        <argsstring>(const int runNumber, const bool useGeV, const std::vector&lt; TLorentzVector &gt; &amp;electrons, const std::vector&lt; ElectronQuality &gt; &amp;electronsQuality, const std::string &amp;trigger, const int systematicVariation=0, TrigMuonEff::Configuration *configuration=0) const </argsstring>
+        <name>GetTriggerSF</name>
+        <param>
+          <type>const int</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>useGeV</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>electrons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; ElectronQuality &gt; &amp;</type>
+          <declname>electronsQuality</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>trigger</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>systematicVariation</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> *</type>
+          <declname>configuration</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the trigger scale factor for electrons with non-uniform quality for given trigger</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>runNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] run number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>useGeV</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] use GeV if true, otherwise use MeV </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>electrons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector array of electrons </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>electronsQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of electron qualities </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger chain </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>systematicVariation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] systematic variation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : scale factor, pair-&gt;second : uncertainty on the scale factor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="325" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="210" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a7e2fc2ed02051752202e93c4f1eb02fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::GetTriggerSF</definition>
+        <argsstring>(const int runNumber, const bool useGeV, const std::vector&lt; TLorentzVector &gt; &amp;muons, const MuonQuality muonQuality, const std::vector&lt; TLorentzVector &gt; &amp;electrons, const ElectronQuality electronQuality, const int systematicVariation=0, TrigMuonEff::Configuration *configuration=0) const </argsstring>
+        <name>GetTriggerSF</name>
+        <param>
+          <type>const int</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>useGeV</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>muons</declname>
+        </param>
+        <param>
+          <type>const MuonQuality</type>
+          <declname>muonQuality</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>electrons</declname>
+        </param>
+        <param>
+          <type>const ElectronQuality</type>
+          <declname>electronQuality</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>systematicVariation</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> *</type>
+          <declname>configuration</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the trigger scale factor for leptons of uniform quality</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>runNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] run number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>useGeV</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] use GeV if true, otherwise use MeV </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector array of muons </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muonQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] muon quality </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>electrons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector array of electrons </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>electronQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] electron quality </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>systematicVariation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] systematic variation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : scale factor, pair-&gt;second : uncertainty on the scale factor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="347" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="238" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a1673cfeebe38df692fd0624eab1c9a35" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::GetTriggerSF</definition>
+        <argsstring>(const int runNumber, const bool useGeV, const std::vector&lt; TLorentzVector &gt; &amp;muons, const std::vector&lt; MuonQuality &gt; &amp;muonsQuality, const std::vector&lt; TLorentzVector &gt; &amp;electrons, const std::vector&lt; ElectronQuality &gt; &amp;electronsQuality, const int systematicVariation=0, TrigMuonEff::Configuration *configuration=0) const </argsstring>
+        <name>GetTriggerSF</name>
+        <param>
+          <type>const int</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>useGeV</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>muons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; MuonQuality &gt; &amp;</type>
+          <declname>muonsQuality</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>electrons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; ElectronQuality &gt; &amp;</type>
+          <declname>electronsQuality</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>systematicVariation</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> *</type>
+          <declname>configuration</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the trigger scale factor for leptons with non-uniform quality</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>runNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] run number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>useGeV</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] use GeV if true, otherwise use MeV </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector array of muons </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muonsQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of muon qualities </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>electrons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector array of electron </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>electronsQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of electron qualities </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>systematicVariation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] systematic variation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : scale factor, pair-&gt;second : uncertainty on the scale factor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="371" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="270" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a90c20eb9cd884e1a19eec7e95e3dac6d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::GetTriggerSF</definition>
+        <argsstring>(const int runNumber, const bool useGeV, const std::vector&lt; TLorentzVector &gt; &amp;muons, const std::vector&lt; MuonQuality &gt; &amp;muonsQuality, const std::vector&lt; TLorentzVector &gt; &amp;electrons, const std::vector&lt; ElectronQuality &gt; &amp;electronsQuality, const std::string &amp;trigger, const int systematicVariation=0, TrigMuonEff::Configuration *configuration=0) const </argsstring>
+        <name>GetTriggerSF</name>
+        <param>
+          <type>const int</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>useGeV</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>muons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; MuonQuality &gt; &amp;</type>
+          <declname>muonsQuality</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>electrons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; ElectronQuality &gt; &amp;</type>
+          <declname>electronsQuality</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>trigger</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>systematicVariation</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> *</type>
+          <declname>configuration</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the trigger scale factor for leptons with non-uniform quality</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>runNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] run number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>useGeV</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] use GeV if true, otherwise use MeV </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector array of muons </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muonsQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of muon qualities </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>electrons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector array of electron </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>electronsQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of electron qualities </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger chain </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>systematicVariation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] systematic variation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : scale factor, pair-&gt;second : uncertainty on the scale factor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="396" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="298" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a20f71026805031eba3a0b5e71241dcf1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::GetTriggerSF</definition>
+        <argsstring>(const TrigMuonEff::Configuration &amp;configuration, const std::vector&lt; TLorentzVector &gt; &amp;muons, const std::vector&lt; MuonQuality &gt; &amp;muonsQuality, const std::vector&lt; TLorentzVector &gt; &amp;electrons, const std::vector&lt; ElectronQuality &gt; &amp;electronsQuality) const </argsstring>
+        <name>GetTriggerSF</name>
+        <param>
+          <type>const <ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> &amp;</type>
+          <declname>configuration</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>muons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; MuonQuality &gt; &amp;</type>
+          <declname>muonsQuality</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>electrons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; ElectronQuality &gt; &amp;</type>
+          <declname>electronsQuality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the trigger scale factor for leptons with non-uniform quality</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector array of muons </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muonsQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of muon qualities </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>electrons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector array of electron </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>electronsQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of electron qualities </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : scale factor, pair-&gt;second : uncertainty on the scale factor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="412" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="328" bodyend="505"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1afce4f0e70f0f75f2c37656f7853f99dd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::GetTriggerSF</definition>
+        <argsstring>(const TrigMuonEff::Configuration &amp;configuration, const std::vector&lt; TLorentzVector &gt; &amp;muons, const std::vector&lt; MuonQuality &gt; &amp;muonsQuality, const std::string &amp;trigger) const </argsstring>
+        <name>GetTriggerSF</name>
+        <param>
+          <type>const <ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> &amp;</type>
+          <declname>configuration</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>muons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; MuonQuality &gt; &amp;</type>
+          <declname>muonsQuality</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>trigger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the di-muon trigger scale factor for di-muons with non-uniform quality</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector array of muons </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muonsQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of muon qualities </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger chain </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : scale factor, pair-&gt;second : uncertainty on the scale factor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>get efficiency from MC </para>        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="428" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="510" bodyend="595"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a6e63fc9cf25a981b5dac2601c8dfc0f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::GetTriggerSF</definition>
+        <argsstring>(const TrigMuonEff::Configuration &amp;configuration, const std::vector&lt; TLorentzVector &gt; &amp;electrons, const std::vector&lt; ElectronQuality &gt; &amp;electronsQuality, const std::string &amp;trigger) const </argsstring>
+        <name>GetTriggerSF</name>
+        <param>
+          <type>const <ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> &amp;</type>
+          <declname>configuration</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>electrons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; ElectronQuality &gt; &amp;</type>
+          <declname>electronsQuality</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>trigger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the di-electron trigger scale factor for di-electrons with non-uniform quality</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>electrons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector array of electrons </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>electronsQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of electron qualities </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger chain </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : scale factor, pair-&gt;second : uncertainty on the scale factor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>get efficiency from MC </para>        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="442" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="598" bodyend="679"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a4db7c81b2ef7ca3f9c904d2963867a55" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::getMuonEfficiency</definition>
+        <argsstring>(const TrigMuonEff::Configuration &amp;configuration, const TLorentzVector &amp;muon, const MuonQuality muonQuality, const std::string &amp;trigger=&quot;&quot;) const </argsstring>
+        <name>getMuonEfficiency</name>
+        <param>
+          <type>const <ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> &amp;</type>
+          <declname>configuration</declname>
+        </param>
+        <param>
+          <type>const TLorentzVector &amp;</type>
+          <declname>muon</declname>
+        </param>
+        <param>
+          <type>const MuonQuality</type>
+          <declname>muonQuality</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>trigger</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the trigger efficiency for a single muon</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector of muon </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muonQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] muon quality </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : efficiency, pair-&gt;second : uncertainty on the efficiency </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="456" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="684" bodyend="746"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1aaa09392b7632f5c991bd59f03582f298" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt;double, double&gt; LeptonTriggerSF::MuEff</definition>
+        <argsstring>(const TrigMuonEff::Configuration &amp;configuration, const TLorentzVector &amp;muon, const MuonQuality muonQuality, const std::string &amp;trigger=&quot;&quot;) const </argsstring>
+        <name>MuEff</name>
+        <param>
+          <type>const <ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> &amp;</type>
+          <declname>configuration</declname>
+        </param>
+        <param>
+          <type>const TLorentzVector &amp;</type>
+          <declname>muon</declname>
+        </param>
+        <param>
+          <type>const MuonQuality</type>
+          <declname>muonQuality</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>trigger</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="463" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="459" bodyend="463"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1abf89941dca28ebbcced7d2e0685106d7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt;double, double&gt; LeptonTriggerSF::getMuonEfficiency</definition>
+        <argsstring>(const TrigMuonEff::DataPeriod period, const bool isData, const TLorentzVector &amp;muon, const MuonQuality muonQuality) const </argsstring>
+        <name>getMuonEfficiency</name>
+        <param>
+          <type>const TrigMuonEff::DataPeriod</type>
+          <declname>period</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>isData</declname>
+        </param>
+        <param>
+          <type>const TLorentzVector &amp;</type>
+          <declname>muon</declname>
+        </param>
+        <param>
+          <type>const MuonQuality</type>
+          <declname>muonQuality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the trigger efficiency for a single muon</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] data period </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] set it to true if data, false for MC </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muonQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] muon quality </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : efficiency, pair-&gt;second : uncertainty on the efficiency </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="479" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="475" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a1ec3f237acaa1d7d7d76f086f4e6f053" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt;double, double&gt; LeptonTriggerSF::MuEff</definition>
+        <argsstring>(const TrigMuonEff::DataPeriod period, const bool isData, const TLorentzVector &amp;muon, const MuonQuality muonQuality) const </argsstring>
+        <name>MuEff</name>
+        <param>
+          <type>const TrigMuonEff::DataPeriod</type>
+          <declname>period</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>isData</declname>
+        </param>
+        <param>
+          <type>const TLorentzVector &amp;</type>
+          <declname>muon</declname>
+        </param>
+        <param>
+          <type>const MuonQuality</type>
+          <declname>muonQuality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="492" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="488" bodyend="492"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a6f5a4697db89e84ff45766a83e58a5f6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt;double, double&gt; LeptonTriggerSF::getMuonEfficiency</definition>
+        <argsstring>(const int runNumber, const bool isData, const bool useGeV, const TLorentzVector &amp;muon, const MuonQuality muonQuality, const int uncertainty=0, TrigMuonEff::Configuration *configuration=0) const </argsstring>
+        <name>getMuonEfficiency</name>
+        <param>
+          <type>const int</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>isData</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>useGeV</declname>
+        </param>
+        <param>
+          <type>const TLorentzVector &amp;</type>
+          <declname>muon</declname>
+        </param>
+        <param>
+          <type>const MuonQuality</type>
+          <declname>muonQuality</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>uncertainty</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> *</type>
+          <declname>configuration</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the trigger efficiency for a single muon</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>runNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] run number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] true for data, false for MC </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>useGeV</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] use GeV if true, otherwise use MeV </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector of muon </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muonQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] muon quality </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uncertainty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] optional: statisticalOnlyMuon or systematicOnlyMuon </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : muon trigger efficiency, pair-&gt;second : uncertainty on the trigger efficiency </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="515" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="508" bodyend="535"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a53683915755eb3f59608eccc1bbf366e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::getDimuonEfficiency</definition>
+        <argsstring>(const TrigMuonEff::Configuration &amp;config, const std::vector&lt; TLorentzVector &gt; &amp;muons, const std::vector&lt; MuonQuality &gt; &amp;muonsQuality, const std::string &amp;chain) const </argsstring>
+        <name>getDimuonEfficiency</name>
+        <param>
+          <type>const <ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>muons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; MuonQuality &gt; &amp;</type>
+          <declname>muonsQuality</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>chain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the di-muon trigger efficiency</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of TLorentzVector for muons </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muonsQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of muon quality </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger chain name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : dimuon trigger efficiency, pair-&gt;second : uncertainty on the trigger efficiency </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="551" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="751" bodyend="837"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a57ba492d6dd7519cd740b7692c118673" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::getDielectronEfficiency</definition>
+        <argsstring>(const TrigMuonEff::Configuration &amp;config, const std::vector&lt; TLorentzVector &gt; &amp;electrons, const std::vector&lt; ElectronQuality &gt; &amp;electronsQuality, const std::string &amp;chain) const </argsstring>
+        <name>getDielectronEfficiency</name>
+        <param>
+          <type>const <ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>electrons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; ElectronQuality &gt; &amp;</type>
+          <declname>electronsQuality</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>chain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the di-electron trigger efficiency</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of TLorentzVector for electrons </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muonsQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of electron quality </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger chain name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : dielectron trigger efficiency, pair-&gt;second : uncertainty on the trigger efficiency </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="565" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="840" bodyend="953"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a3dfd200d9f2496c777951bd8326d0016" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::getSingleOrDimuonEfficiency</definition>
+        <argsstring>(const TrigMuonEff::Configuration &amp;config, const std::vector&lt; TLorentzVector &gt; &amp;muons, const std::vector&lt; MuonQuality &gt; &amp;muonsQuality, const std::string &amp;chain) const </argsstring>
+        <name>getSingleOrDimuonEfficiency</name>
+        <param>
+          <type>const <ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>muons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; MuonQuality &gt; &amp;</type>
+          <declname>muonsQuality</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>chain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the OR&apos;ed efficiency of single and dimuon triggers</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of TLorentzVector for muons </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muonsQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of muon quality </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger chain name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : single or dimuon trigger efficiency, pair-&gt;second : uncertainty on the trigger efficiency </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="581" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="957" bodyend="1126"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a737364e3725c6ef879b6e24622d0e6aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::getSingleOrDielectronEfficiency</definition>
+        <argsstring>(const TrigMuonEff::Configuration &amp;config, const std::vector&lt; TLorentzVector &gt; &amp;electrons, const std::vector&lt; ElectronQuality &gt; &amp;electronsQuality, const std::string &amp;chain) const </argsstring>
+        <name>getSingleOrDielectronEfficiency</name>
+        <param>
+          <type>const <ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>electrons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; ElectronQuality &gt; &amp;</type>
+          <declname>electronsQuality</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>chain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the OR&apos;ed efficiency of single and dielectron triggers</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>electrons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of TLorentzVector for electrons </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>electronsQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of electron quality </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger chain name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : single or dielectron trigger efficiency, pair-&gt;second : uncertainty on the trigger efficiency </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="595" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="1129" bodyend="1280"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a591474966aaad85f02fe2b8f31cde6f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::getElectronSF</definition>
+        <argsstring>(const TLorentzVector &amp;electron, const int combination, const int year, const TrigMuonEff::Configuration &amp;configuration) const </argsstring>
+        <name>getElectronSF</name>
+        <param>
+          <type>const TLorentzVector &amp;</type>
+          <declname>electron</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>combination</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>year</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> &amp;</type>
+          <declname>configuration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get electron trigger SF or efficiency</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>electron</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector of electron </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>combination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger/offline combination </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>year</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] year </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : efficiency or SF, pair-&gt;second : uncertainty </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="609" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="1284" bodyend="1297"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a4c5063ec24c00b2be443c2db6803adbf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt;double, double&gt; LeptonTriggerSF::ElEff_MC</definition>
+        <argsstring>(const TLorentzVector &amp;electron, const int combination, const int year, const TrigMuonEff::Configuration &amp;configuration) const </argsstring>
+        <name>ElEff_MC</name>
+        <param>
+          <type>const TLorentzVector &amp;</type>
+          <declname>electron</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>combination</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>year</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> &amp;</type>
+          <declname>configuration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get electron efficiency for MC</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>electron</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector of electron </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>combination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger/offline combination </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>year</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] year </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : efficiency or SF, pair-&gt;second : uncertainty </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="626" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="622" bodyend="626"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1ad5f8741d213ea12bca37edcd96e64ddd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt;double, double&gt; LeptonTriggerSF::ElEff_MC</definition>
+        <argsstring>(const TLorentzVector &amp;electron, const int combination, const bool useGeV=false, const int year=2011, const int runNumber=200804) const </argsstring>
+        <name>ElEff_MC</name>
+        <param>
+          <type>const TLorentzVector &amp;</type>
+          <declname>electron</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>combination</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>useGeV</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>year</declname>
+          <defval>2011</defval>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>runNumber</declname>
+          <defval>200804</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get electron trigger efficiency for MC</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>electron</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector of electron </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>combination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger/offline combination </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>useGeV</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] true for GeV, false for MeV </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>year</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] year </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>runNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] Run number </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : efficiency, pair-&gt;second : uncertainty </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="645" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="640" bodyend="652"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a4f14b79116e9e10c812fcf0e6e4b7507" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::ElEff_Data</definition>
+        <argsstring>(const TLorentzVector &amp;electron, const int combinationSF, const int combinationEfficiency, const int year, const TrigMuonEff::Configuration &amp;config) const </argsstring>
+        <name>ElEff_Data</name>
+        <param>
+          <type>const TLorentzVector &amp;</type>
+          <declname>electron</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>combinationSF</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>combinationEfficiency</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>year</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get electron trigger efficiency for data</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>electron</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector of electron </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>combinationSF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger/offline combination </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>combinationEfficiency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger/offline combination </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>year</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] year </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : efficiency, pair-&gt;second : uncertainty </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="670" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="1302" bodyend="1317"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a22a2ffb5881491cda043266934b5cdd2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt;double, double&gt; LeptonTriggerSF::ElEff_Data</definition>
+        <argsstring>(const TLorentzVector &amp;electron, const int combinationSF, const int combinationEfficiency, const bool useGeV=false, const int year=2011, const int runNumber=200804) const </argsstring>
+        <name>ElEff_Data</name>
+        <param>
+          <type>const TLorentzVector &amp;</type>
+          <declname>electron</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>combinationSF</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>combinationEfficiency</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>useGeV</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>year</declname>
+          <defval>2011</defval>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>runNumber</declname>
+          <defval>200804</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get electron trigger efficiency for data</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>electron</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector of electron </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>combinationSF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger/offline combination </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>combinationEfficiency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger/offline combination </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>useGeV</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] true for GeV, false for MeV </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>year</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] year </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>runNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] Run number </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : efficiency, pair-&gt;second : uncertainty </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="691" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="685" bodyend="698"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a4c4d6420abecc9abe4c8a7f90beaabd0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeptonTriggerSF::setAFII</definition>
+        <argsstring>(const bool flag=true)</argsstring>
+        <name>setAFII</name>
+        <param>
+          <type>const bool</type>
+          <declname>flag</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>flag for AtlFast II sample</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] true for AtlFast II sample, false otherwise </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="706" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="706" bodyend="706"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a96fdd715d1101d490010188476c0df03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeptonTriggerSF::setMaxPeriod</definition>
+        <argsstring>(const TrigMuonEff::DataPeriod x)</argsstring>
+        <name>setMaxPeriod</name>
+        <param>
+          <type>const TrigMuonEff::DataPeriod</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="708" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="708" bodyend="708"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a60cad8405994adb1f322ff71889804a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeptonTriggerSF::createMcReplicaMuon</definition>
+        <argsstring>(const int n, const std::string &amp;trigger=std::string())</argsstring>
+        <name>createMcReplicaMuon</name>
+        <param>
+          <type>const int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>trigger</declname>
+          <defval>std::string()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates MC replica of efficiency maps</para><para>n Efficiency maps are created. MC replica has eff_ij[n] where eff_ij[n] is generated with Gaussian using parameters, mu = efficiency at bin [ij] with sigma = statistical error of the bin [ij]</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] number of replica to be created </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger to be replicated </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="722" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="1322" bodyend="1401"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1af041bb05449c128941afb99d8a4aa67b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::getSfReplicaMuon</definition>
+        <argsstring>(const int runNumber, const bool useGeV, const std::vector&lt; TLorentzVector &gt; &amp;muons, const std::vector&lt; MuonQuality &gt; &amp;muonsQuality, const int index=0, TrigMuonEff::Configuration *configuration=0) const </argsstring>
+        <name>getSfReplicaMuon</name>
+        <param>
+          <type>const int</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>useGeV</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; TLorentzVector &gt; &amp;</type>
+          <declname>muons</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; MuonQuality &gt; &amp;</type>
+          <declname>muonsQuality</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> *</type>
+          <declname>configuration</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the trigger scale factor for muons with non-uniform quality</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>runNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] run number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>useGeV</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] use GeV if true, otherwise use MeV </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector array of muons </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>muonsQuality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] array of muon qualities </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] index of replicated histograms to access </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : scale factor, pair-&gt;second : uncertainty on the scale factor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="742" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="1406" bodyend="1431"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a39ba2c399a909883bbc9ae72278ef002" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LeptonTriggerSF::getElectronQuality</definition>
+        <argsstring>(const int runNumber, const ElectronQuality quality, const bool isSF, const bool isditrig, const DileptonTriggerName dilepName=kNoTrig) const </argsstring>
+        <name>getElectronQuality</name>
+        <param>
+          <type>const int</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>const ElectronQuality</type>
+          <declname>quality</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>isSF</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>isditrig</declname>
+        </param>
+        <param>
+          <type>const DileptonTriggerName</type>
+          <declname>dilepName</declname>
+          <defval>kNoTrig</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Translate the electron quality enumeration into a value used internally by the tool</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>runNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] run number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>quality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] electron quality </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isSF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] true for SF, false for efficiency </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isditrig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] true if not just default single electron triggers are used </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>name </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="757" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="1911" bodyend="2186"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a8be05f0cecd3093be9dc821b2d00ed80" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeptonTriggerSF::prepareForElectronSF</definition>
+        <argsstring>(const std::string &amp;directory)</argsstring>
+        <name>prepareForElectronSF</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>directory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="762" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="1439" bodyend="1582"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1ab356ad7f3c2e2113655ee406829eb951" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string LeptonTriggerSF::getPathName</definition>
+        <argsstring>(const std::string &amp;directory, const std::string &amp;fileName) const </argsstring>
+        <name>getPathName</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>directory</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the path name for a root file</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>directory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] directory name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] file name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>file name </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="774" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="1585" bodyend="1629"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1aa99f31831a94fd21c311b3d48f5e3afe" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeptonTriggerSF::setStorage</definition>
+        <argsstring>(Storage &amp;storage) const </argsstring>
+        <name>setStorage</name>
+        <param>
+          <type><ref refid="d1/d33/structLeptonTriggerSF_1_1Storage" kindref="compound">Storage</ref> &amp;</type>
+          <declname>storage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set parameters for reading a root file</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>storage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] storage parameter </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="783" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="1632" bodyend="1740"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a197f6d12fbf85eaec3839fc06a614a75" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TDirectory *</type>
+        <definition>TDirectory * LeptonTriggerSF::getTemporaryDirectory</definition>
+        <argsstring>(void) const </argsstring>
+        <name>getTemporaryDirectory</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get temporary directory </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="791" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="1745" bodyend="1771"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1ad9c7d5d8244076e04c70dc2753d1f89e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeptonTriggerSF::initialise</definition>
+        <argsstring>(const std::string &amp;directory, const std::string &amp;fileName=&quot;muon_trigger_sf.root&quot;, const std::vector&lt; std::string &gt; &amp;qualities=std::vector&lt; std::string &gt;(), const std::string &amp;directoryElectron=&quot;&quot;)</argsstring>
+        <name>initialise</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>directory</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+          <defval>&quot;muon_trigger_sf.root&quot;</defval>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>qualities</declname>
+          <defval>std::vector&lt; std::string &gt;()</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>directoryElectron</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialisation method</para><para>The initialisation takes care of reading in all the efficiency histograms from the ROOT file found in the package. It makes a copy of every histogram in memory, and takes ownership of them. It then needs to delete each one of them in its destructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>directory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] path to the directory that contains efficiency file(s) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] file name of the efficiency file </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qualities</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] an array specifing offline muon quality </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="809" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="1776" bodyend="1885"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1ae88e54078fe7a26339e5e525bd488e31" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LeptonTriggerSF::setConfiguration</definition>
+        <argsstring>(TrigMuonEff::Configuration &amp;config, TrigMuonEff::DataPeriod period=TrigMuonEff::period_undefined) const </argsstring>
+        <name>setConfiguration</name>
+        <param>
+          <type><ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>TrigMuonEff::DataPeriod</type>
+          <declname>period</declname>
+          <defval>TrigMuonEff::period_undefined</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="990" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="2454" bodyend="2558"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1ac25b31b70dcb6be271f648cb1cc5d902" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeptonTriggerSF::setPhiBoundary2011</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; *period)</argsstring>
+        <name>setPhiBoundary2011</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; *</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="993" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="2563" bodyend="2593"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1ae491b8cf52c62e79b2c6badec26735d5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeptonTriggerSF::setPhiBoundary</definition>
+        <argsstring>(TFile *file)</argsstring>
+        <name>setPhiBoundary</name>
+        <param>
+          <type>TFile *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="996" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="2598" bodyend="2630"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1ad1de1c345fb55f8ff0ae754612ea5ba6" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double LeptonTriggerSF::fixPhiRange</definition>
+        <argsstring>(const TLorentzVector &amp;muon) const </argsstring>
+        <name>fixPhiRange</name>
+        <param>
+          <type>const TLorentzVector &amp;</type>
+          <declname>muon</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>fix phi range to match for the detector configuration</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>muon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] TLorentzVector of muon </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>phi </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="1005" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="2635" bodyend="2674"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a96fb638424d4c81f2f09a3e5671dfce9" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeptonTriggerSF::initialiseElectronTool</definition>
+        <argsstring>(const int key) const </argsstring>
+        <name>initialiseElectronTool</name>
+        <param>
+          <type>const int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="1009" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="2679" bodyend="2688"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1aa946cc5ddb78aa3af96b83a59dd288ed" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string LeptonTriggerSF::getMuonQuality</definition>
+        <argsstring>(const MuonQuality quality)</argsstring>
+        <name>getMuonQuality</name>
+        <param>
+          <type>const MuonQuality</type>
+          <declname>quality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Translate the muon quality enumeration into a value used internally by the tool</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>quality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] muon quality </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>name </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="819" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="1888" bodyend="1908"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a346f41030fa56603f42d7377fb3ce76a" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; LeptonTriggerSF::getThresholds</definition>
+        <argsstring>(const TrigMuonEff::Configuration &amp;configuration)</argsstring>
+        <name>getThresholds</name>
+        <param>
+          <type>const <ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> &amp;</type>
+          <declname>configuration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the minimum offline electron and muon pT thresholds for a given run</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : muon, pair-&gt;second : electron </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="829" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="2192" bodyend="2223"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a1133789c051f621adaf1a983df449190" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeptonTriggerSF::getDileptonThresholds</definition>
+        <argsstring>(const TrigMuonEff::Configuration &amp;config, DileptonThresholds &amp;thresholds)</argsstring>
+        <name>getDileptonThresholds</name>
+        <param>
+          <type>const <ref refid="d1/d63/structTrigMuonEff_1_1Configuration" kindref="compound">TrigMuonEff::Configuration</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>DileptonThresholds &amp;</type>
+          <declname>thresholds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the minimum offline muon and electron pT thresholds for dimuon and dielectron chains</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thresholds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[out] DileptonThresholds structure </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="863" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="2228" bodyend="2242"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a3e92f05b2e405aa6ad559b69565cea05" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TrigMuonEff::DataPeriod</type>
+        <definition>TrigMuonEff::DataPeriod LeptonTriggerSF::getDataPeriod</definition>
+        <argsstring>(int runNumber)</argsstring>
+        <name>getDataPeriod</name>
+        <param>
+          <type>int</type>
+          <declname>runNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Translate a run number to a data period</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pair-&gt;first : muon, pair-&gt;second : electron </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="873" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="2247" bodyend="2263"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a03d9ed701718a674a4c7aa5b88e2a199" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double LeptonTriggerSF::getSfError</definition>
+        <argsstring>(const double a, const double b, const double c, const double d)</argsstring>
+        <name>getSfError</name>
+        <param>
+          <type>const double</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to calculate the uncertainty on the SF</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>uncertainty </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="889" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="2268" bodyend="2282"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a0d0aa625751145c5edcc9dd34acdd6e5" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double LeptonTriggerSF::getDiError</definition>
+        <argsstring>(const double a1, const double a2, const double b1, const double b2, const double c1, const double c2, const double d1, const double d2, const double e1, const double e2, const double f1, const double f2)</argsstring>
+        <name>getDiError</name>
+        <param>
+          <type>const double</type>
+          <declname>a1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>a2</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>b1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>b2</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>c1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>c2</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>d1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>d2</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>e1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>e2</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>f1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>f2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to calculate the uncertainty on the dilepton efficiency</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>uncertainty </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="913" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="2286" bodyend="2301"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1aa36a651e1412913164139f2d9be07465" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double LeptonTriggerSF::getSingleOrDiError_asym</definition>
+        <argsstring>(const double a1, const double a2, const double b1, const double b2, const double c1, const double c2, const double d1, const double d2, const double e1, const double e2, const double f1, const double f2, const double g1, const double g2, const double h1, const double h2)</argsstring>
+        <name>getSingleOrDiError_asym</name>
+        <param>
+          <type>const double</type>
+          <declname>a1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>a2</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>b1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>b2</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>c1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>c2</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>d1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>d2</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>e1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>e2</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>f1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>f2</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>g1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>g2</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>h1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>h2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to calculate the uncertainty on the single or dilepton efficiency for asymmetric dilepton triggers</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>g1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>g2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>h1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>h2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>uncertainty </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="943" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="2304" bodyend="2347"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1a283e0ab10c36fb7b25069494577bc9fc" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double LeptonTriggerSF::getSingleOrDiError_sym</definition>
+        <argsstring>(const double a1, const double a2, const double b1, const double b2, const double c1, const double c2, const double d1, const double d2, bool ispT1above, bool ispT2above)</argsstring>
+        <name>getSingleOrDiError_sym</name>
+        <param>
+          <type>const double</type>
+          <declname>a1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>a2</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>b1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>b2</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>c1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>c2</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>d1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>d2</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ispT1above</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ispT2above</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to calculate the uncertainty on the single or dilepton efficiency for symmetric dilepton triggers</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ispT1above</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ispT2above</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] parameter </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>uncertainty </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="965" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="2350" bodyend="2415"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d83/classLeptonTriggerSF_1ae122f43fb368b06fc609b8ad3a7cf87c" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeptonTriggerSF::getDileptonLegs</definition>
+        <argsstring>(const std::string &amp;chain, DileptonTrigger &amp;legs)</argsstring>
+        <name>getDileptonLegs</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>chain</declname>
+        </param>
+        <param>
+          <type>DileptonTrigger &amp;</type>
+          <declname>legs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to calculate the uncertainty on the SF</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] trigger chain name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>legs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[out] DileptonTrigger structure </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="985" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/LeptonTriggerSF.cxx" bodystart="2419" bodyend="2450"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class providing trigger scale factors for analyses using electrons and muons. </para>    </briefdescription>
+    <detaileddescription>
+<para>This tool can be used to get the scale factors and their uncertainties in events with multiple electrons/muons.</para><para><simplesect kind="rcs"><title>Revision</title><para>564936 </para></simplesect>
+<simplesect kind="rcs"><title>Date</title><para>2013-10-10 19:46:00 +0200 (Thu, 10 Oct 2013) </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="13220">
+        <label>string</label>
+      </node>
+      <node id="13219">
+        <label>LeptonTriggerSF</label>
+        <link refid="d3/d83/classLeptonTriggerSF"/>
+        <childnode refid="13220" relation="usage">
+          <edgelabel>m_electronFileVersion</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" line="174" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/TrigMuonEfficiency/LeptonTriggerSF.h" bodystart="174" bodyend="1031"/>
+    <listofallmembers>
+      <member refid="d3/d83/classLeptonTriggerSF_1a60cad8405994adb1f322ff71889804a8" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>createMcReplicaMuon</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1af46094fc959c518a9cc3c43ea6f0fee3" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>EfficiencyMap</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a4b29b95e0980ad225d871e24ed913fae" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>EfficiencyPair</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a4ccc508e46bffdbd10e33b45f306cff7" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>ElectronEfficiencyToolMap</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1ac7d4399b4ca02feee62042a8d1e51b92" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>ElectronEfficiencyToolPair</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a4f14b79116e9e10c812fcf0e6e4b7507" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>ElEff_Data</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a22a2ffb5881491cda043266934b5cdd2" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>ElEff_Data</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a4c5063ec24c00b2be443c2db6803adbf" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>ElEff_MC</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1ad5f8741d213ea12bca37edcd96e64ddd" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>ElEff_MC</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1ad1de1c345fb55f8ff0ae754612ea5ba6" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>fixPhiRange</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a3e92f05b2e405aa6ad559b69565cea05" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getDataPeriod</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a57ba492d6dd7519cd740b7692c118673" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getDielectronEfficiency</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a0d0aa625751145c5edcc9dd34acdd6e5" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getDiError</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1ae122f43fb368b06fc609b8ad3a7cf87c" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getDileptonLegs</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a1133789c051f621adaf1a983df449190" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getDileptonThresholds</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a53683915755eb3f59608eccc1bbf366e" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getDimuonEfficiency</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a39ba2c399a909883bbc9ae72278ef002" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getElectronQuality</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a591474966aaad85f02fe2b8f31cde6f6" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getElectronSF</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a4db7c81b2ef7ca3f9c904d2963867a55" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getMuonEfficiency</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1abf89941dca28ebbcced7d2e0685106d7" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getMuonEfficiency</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a6f5a4697db89e84ff45766a83e58a5f6" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getMuonEfficiency</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1aa946cc5ddb78aa3af96b83a59dd288ed" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getMuonQuality</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1ab356ad7f3c2e2113655ee406829eb951" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getPathName</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a03d9ed701718a674a4c7aa5b88e2a199" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getSfError</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1af041bb05449c128941afb99d8a4aa67b" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getSfReplicaMuon</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a737364e3725c6ef879b6e24622d0e6aa" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getSingleOrDielectronEfficiency</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1aa36a651e1412913164139f2d9be07465" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getSingleOrDiError_asym</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a283e0ab10c36fb7b25069494577bc9fc" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getSingleOrDiError_sym</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a3dfd200d9f2496c777951bd8326d0016" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getSingleOrDimuonEfficiency</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a197f6d12fbf85eaec3839fc06a614a75" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getTemporaryDirectory</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a346f41030fa56603f42d7377fb3ce76a" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>getThresholds</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a42df88bb6fe134a528fcf3aa04461611" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>GetTriggerSF</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a3e21dc215c711a2a30d7c9d48c61ad48" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>GetTriggerSF</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a68eab68ee609ac8bc926c500e5b60d74" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>GetTriggerSF</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a452ee1a62f44d121a840ee56b9fb9ef0" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>GetTriggerSF</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a7e2fc2ed02051752202e93c4f1eb02fc" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>GetTriggerSF</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a1673cfeebe38df692fd0624eab1c9a35" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>GetTriggerSF</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a90c20eb9cd884e1a19eec7e95e3dac6d" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>GetTriggerSF</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a20f71026805031eba3a0b5e71241dcf1" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>GetTriggerSF</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1afce4f0e70f0f75f2c37656f7853f99dd" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>GetTriggerSF</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a6e63fc9cf25a981b5dac2601c8dfc0f8" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>GetTriggerSF</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1ad9c7d5d8244076e04c70dc2753d1f89e" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>initialise</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a96fb638424d4c81f2f09a3e5671dfce9" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>initialiseElectronTool</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1af449b49f38fa74d0be7650b47077f1f0" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>LeptonTriggerSF</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1aa76e11731a9fe0b57751eccdac524aa3" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>LeptonTriggerSF</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a08bc14109a0af218b4fc7004925e816b" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>LeptonTriggerSF</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a17a306a5956610c72ff3ba9f242f3ffc" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>m_efficiencyMap</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a29f2072a963ccd7baca200dedc3b4742" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>m_efficiencyMapReplicaArray</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1adfa4bf03f3f26453add5e0755f042507" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>m_electronFileVersion</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a3cc329927b6192bb14eaee515dc7e75f" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>m_electronSF</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a438acb086a5ecedae7c6cc2c56730d30" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>m_fileNameMap</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a568386b152df743121df7fdf1ab79836" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>m_IsAFII</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a3c9f0546d2759353d7dbf1e7948f4efb" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>m_max_period</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1ae74e0fc596438821773c480302802596" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>m_phiBoundaryBarrel</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a6e0b53b22651e160a564fa105ca5032e" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>m_phiBoundaryEndcap</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1ac2ec201c90e77519fb0631886c725bf3" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>m_qualities</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1ad064d56469cfb4e5e7f98cac24ca5402" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>m_year</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1aaa09392b7632f5c991bd59f03582f298" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>MuEff</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a1ec3f237acaa1d7d7d76f086f4e6f053" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>MuEff</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a8be05f0cecd3093be9dc821b2d00ed80" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>prepareForElectronSF</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a4c4d6420abecc9abe4c8a7f90beaabd0" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>setAFII</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1ae88e54078fe7a26339e5e525bd488e31" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>setConfiguration</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1a96fdd715d1101d490010188476c0df03" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>setMaxPeriod</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1ae491b8cf52c62e79b2c6badec26735d5" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>setPhiBoundary</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1ac25b31b70dcb6be271f648cb1cc5d902" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>setPhiBoundary2011</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1aa99f31831a94fd21c311b3d48f5e3afe" prot="private" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>setStorage</name></member>
+      <member refid="d3/d83/classLeptonTriggerSF_1af78c7b03b7300a45e031aeacb638e3bb" prot="public" virt="non-virtual"><scope>LeptonTriggerSF</scope><name>~LeptonTriggerSF</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

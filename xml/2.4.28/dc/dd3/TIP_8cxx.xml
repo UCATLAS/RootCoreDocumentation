@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dc/dd3/TIP_8cxx" kind="file">
+    <compoundname>TIP.cxx</compoundname>
+    <includes refid="d9/dd3/TIP_8h" local="yes">TrigConfL1Data/TIP.h</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">iomanip</includes>
+    <incdepgraph>
+      <node id="310369">
+        <label>TrigConfL1Data/L1DataBaseclass.h</label>
+        <link refid="d8/db1/L1DataBaseclass_8h_source"/>
+        <childnode refid="310370" relation="include">
+        </childnode>
+      </node>
+      <node id="310374">
+        <label>iomanip</label>
+      </node>
+      <node id="310368">
+        <label>stdint.h</label>
+      </node>
+      <node id="310372">
+        <label>stdexcept</label>
+      </node>
+      <node id="310367">
+        <label>string</label>
+      </node>
+      <node id="310370">
+        <label>TrigConfL1Data/TrigConfData.h</label>
+        <link refid="da/da8/TrigConfData_8h_source"/>
+        <childnode refid="310371" relation="include">
+        </childnode>
+        <childnode refid="310367" relation="include">
+        </childnode>
+      </node>
+      <node id="310365">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfL1Data/Root/TIP.cxx</label>
+        <link refid="TIP.cxx"/>
+        <childnode refid="310366" relation="include">
+        </childnode>
+        <childnode refid="310372" relation="include">
+        </childnode>
+        <childnode refid="310373" relation="include">
+        </childnode>
+        <childnode refid="310374" relation="include">
+        </childnode>
+      </node>
+      <node id="310366">
+        <label>TrigConfL1Data/TIP.h</label>
+        <link refid="d9/dd3/TIP_8h_source"/>
+        <childnode refid="310367" relation="include">
+        </childnode>
+        <childnode refid="310368" relation="include">
+        </childnode>
+        <childnode refid="310369" relation="include">
+        </childnode>
+      </node>
+      <node id="310371">
+        <label>iosfwd</label>
+      </node>
+      <node id="310373">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;TrigConfL1Data/TIP.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">TrigConf::TIP::TIP()<sp/>:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/>L1DataBaseclass(),<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/>m_ThresholdName(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">),<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/>m_Slot(0),</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/>m_Connector(0),</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/>m_TipNumber(0),</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/>m_ThresholdBit(0),</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/>m_CableBit(0),</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/>m_TmToTtId(0),</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/>m_TriggerThresholdId(0),</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/>m_ThresholdActive(0),</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/>m_ThresholdMapping(0),</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/>m_IsDirect(false),</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/>m_Clock(0)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">TrigConf::TIP::~TIP()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">TrigConf::TIP::print(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>indent,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*detail*/</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;TIP<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>setw(3)<sp/>&lt;&lt;<sp/>m_TipNumber;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>(m_IsDirect<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(direct)<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>:<sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>(PIT)<sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>phase<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_Clock;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>slot<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>setw(2)<sp/>&lt;&lt;<sp/>m_Slot;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>cable<sp/>bit<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>setw(2)<sp/>&lt;&lt;<sp/>m_CableBit;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>connector<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_Connector;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>threshold<sp/>bit<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_ThresholdBit;<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>threshold<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_ThresholdName;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfL1Data/Root/TIP.cxx"/>
+  </compounddef>
+</doxygen>

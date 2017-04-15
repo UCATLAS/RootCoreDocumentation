@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d3/d1a/testutils_8h" kind="file">
+    <compoundname>testutils.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">iomanip</includes>
+    <includedby refid="dc/d71/ut__build__trignav__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/test/ut_build_trignav_test.cxx</includedby>
+    <includedby refid="db/d48/ut__features__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/test/ut_features_test.cxx</includedby>
+    <includedby refid="d9/de1/ut__iterators__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/test/ut_iterators_test.cxx</includedby>
+    <includedby refid="da/dc7/ut__serializer__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/test/ut_serializer_test.cxx</includedby>
+    <incdepgraph>
+      <node id="328579">
+        <label>iomanip</label>
+      </node>
+      <node id="328578">
+        <label>iostream</label>
+      </node>
+      <node id="328577">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/test/testutils.h</label>
+        <link refid="testutils.h"/>
+        <childnode refid="328578" relation="include">
+        </childnode>
+        <childnode refid="328579" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="d3/d1a/testutils_8h_1a29330ef44372c1496d36f800881f4cc6" prot="public" static="no">
+        <name>MSG</name>
+        <param><defname>__sev</defname></param>
+        <param><defname>__msg</defname></param>
+        <initializer>{ std::cout &lt;&lt; std::setw(10) &lt;&lt; std::left &lt;&lt; __sev &lt;&lt;&quot; LINE:&quot; &lt;&lt; std::setw(4) &lt;&lt; __LINE__ &lt;&lt; &quot; &quot; &lt;&lt; __msg &lt;&lt; std::endl;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/test/testutils.h" line="3" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/test/testutils.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d1a/testutils_8h_1a0e1c14f9a0a830755726497b35d04e8c" prot="public" static="no">
+        <name>REPORT_AND_STOP</name>
+        <param><defname>__msg</defname></param>
+        <initializer>{ MSG(&quot;ERROR&quot;, __msg) return false; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/test/testutils.h" line="4" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/test/testutils.h" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d1a/testutils_8h_1a398e2c48ad34614fc5bc98a5b71717c2" prot="public" static="no">
+        <name>ABORT</name>
+        <param><defname>__msg</defname></param>
+        <initializer>{ MSG(&quot;ERROR&quot;, __msg) return -1; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/test/testutils.h" line="5" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/test/testutils.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d1a/testutils_8h_1aa016020763d796b94e7c4e9225e2e3e6" prot="public" static="no">
+        <name>BEGIN_TEST</name>
+        <initializer>MSG(&quot;INFO&quot;, &quot;&quot;) MSG(&quot;INFO&quot;, &quot;Test &quot; &lt;&lt; __FUNCTION__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/test/testutils.h" line="6" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/test/testutils.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d1a/testutils_8h_1a5c9c57e1e8bc5ea8821d381a06d3f4d0" prot="public" static="no">
+        <name>PROGRESS</name>
+        <initializer>MSG(&quot;DEBUG&quot;, &quot;Test progressing&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/test/testutils.h" line="7" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/test/testutils.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MSG(__sev,<sp/>__msg)<sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/>std::setw(10)<sp/>&lt;&lt;<sp/>std::left<sp/>&lt;&lt;<sp/>__sev<sp/>&lt;&lt;&quot;<sp/>LINE:&quot;<sp/>&lt;&lt;<sp/>std::setw(4)<sp/>&lt;&lt;<sp/>__LINE__<sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/>&lt;&lt;<sp/>__msg<sp/>&lt;&lt;<sp/>std::endl;}</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>REPORT_AND_STOP(__msg)<sp/>{<sp/>MSG(&quot;ERROR&quot;,<sp/>__msg)<sp/>return<sp/>false;<sp/>}</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ABORT(__msg)<sp/>{<sp/>MSG(&quot;ERROR&quot;,<sp/>__msg)<sp/>return<sp/>-1;<sp/>}</highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BEGIN_TEST<sp/>MSG(&quot;INFO&quot;,<sp/>&quot;&quot;)<sp/>MSG(&quot;INFO&quot;,<sp/>&quot;Test<sp/>&quot;<sp/>&lt;&lt;<sp/>__FUNCTION__)</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PROGRESS<sp/>MSG(&quot;DEBUG&quot;,<sp/>&quot;Test<sp/>progressing&quot;)</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/test/testutils.h"/>
+  </compounddef>
+</doxygen>

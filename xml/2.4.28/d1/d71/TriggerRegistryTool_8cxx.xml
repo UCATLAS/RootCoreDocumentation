@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d1/d71/TriggerRegistryTool_8cxx" kind="file">
+    <compoundname>TriggerRegistryTool.cxx</compoundname>
+    <includes refid="d5/da1/TriggerRegistryTool_8h" local="yes">GoodRunsLists/TriggerRegistryTool.h</includes>
+    <incdepgraph>
+      <node id="135637">
+        <label>list</label>
+      </node>
+      <node id="135634">
+        <label>GoodRunsLists/ITriggerRegistryTool.h</label>
+        <link refid="d6/d6e/ITriggerRegistryTool_8h_source"/>
+        <childnode refid="135635" relation="include">
+        </childnode>
+        <childnode refid="135636" relation="include">
+        </childnode>
+        <childnode refid="135637" relation="include">
+        </childnode>
+        <childnode refid="135638" relation="include">
+        </childnode>
+      </node>
+      <node id="135635">
+        <label>GaudiKernel/IAlgTool.h</label>
+      </node>
+      <node id="135633">
+        <label>GoodRunsLists/TriggerRegistryTool.h</label>
+        <link refid="d5/da1/TriggerRegistryTool_8h"/>
+        <childnode refid="135634" relation="include">
+        </childnode>
+        <childnode refid="135639" relation="include">
+        </childnode>
+      </node>
+      <node id="135638">
+        <label>map</label>
+      </node>
+      <node id="135639">
+        <label>AthenaBaseComps/AthAlgTool.h</label>
+      </node>
+      <node id="135632">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/GoodRunsLists/src/TriggerRegistryTool.cxx</label>
+        <link refid="TriggerRegistryTool.cxx"/>
+        <childnode refid="135633" relation="include">
+        </childnode>
+      </node>
+      <node id="135636">
+        <label>TString.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d5/da1/TriggerRegistryTool_8h" kindref="compound" tooltip="This file contains the class definition for the TriggerRegistryTool class.">GoodRunsLists/TriggerRegistryTool.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">TriggerRegistryTool::TriggerRegistryTool(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IInterface*<sp/>parent<sp/>)<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/>:<sp/>AthAlgTool(<sp/>type,<sp/>name,<sp/>parent<sp/>)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/>declareInterface&lt;ITriggerRegistryTool&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">TriggerRegistryTool::~TriggerRegistryTool()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">StatusCode<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="d6/d7f/classTriggerRegistryTool_1a6e3ec8259bbd4e81bdf947ec4c74d2da" kindref="member" tooltip="To allow access to the ITriggerRegistryTool interface.">TriggerRegistryTool::queryInterface</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>InterfaceID&amp;<sp/>riid,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/>ppvIf<sp/>)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>riid<sp/>==<sp/>ITriggerRegistryTool::interfaceID()<sp/>)<sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>*ppvIf<sp/>=<sp/>(<ref refid="d3/d5c/classITriggerRegistryTool" kindref="compound">ITriggerRegistryTool</ref>*)</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>addRef();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d6/d7f/classTriggerRegistryTool_1a6e3ec8259bbd4e81bdf947ec4c74d2da" kindref="member" tooltip="To allow access to the ITriggerRegistryTool interface.">AthAlgTool::queryInterface</ref>(<sp/>riid,<sp/>ppvIf<sp/>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="d6/d7f/classTriggerRegistryTool_1ac994c475be826b6fd7c6531e77db6818" kindref="member" tooltip="register trigger">TriggerRegistryTool::registerTriggerSelector</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TString&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TString&amp;<sp/>regexpr,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::list&lt;TString&gt;&amp;<sp/>trigpar)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_registry.find(name)!=m_registry.end())<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_WARNING<sp/>(</highlight><highlight class="stringliteral">&quot;registerTriggerSelector()<sp/>::<sp/>trigger<sp/>selector<sp/>with<sp/>name<sp/>&lt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>name<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&gt;<sp/>already<sp/>registered.<sp/>Return<sp/>false.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>ATH_MSG_DEBUG<sp/>(</highlight><highlight class="stringliteral">&quot;registerTriggerSelector()<sp/>::<sp/>trigger<sp/>selector<sp/>with<sp/>name<sp/>&lt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>name<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&gt;<sp/>registered.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>m_registry[name]<sp/>=<sp/>tvtPair(regexpr,trigpar);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/GoodRunsLists/src/TriggerRegistryTool.cxx"/>
+  </compounddef>
+</doxygen>

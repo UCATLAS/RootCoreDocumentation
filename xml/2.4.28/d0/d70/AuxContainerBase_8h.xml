@@ -1,0 +1,2646 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d0/d70/AuxContainerBase_8h" kind="file">
+    <compoundname>AuxContainerBase.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includes refid="d6/d3e/IAuxStore_8h" local="yes">AthContainersInterfaces/IAuxStore.h</includes>
+    <includes refid="d9/db5/IAuxStoreIO_8h" local="yes">AthContainersInterfaces/IAuxStoreIO.h</includes>
+    <includes refid="d7/dab/IAuxStoreHolder_8h" local="yes">AthContainersInterfaces/IAuxStoreHolder.h</includes>
+    <includes refid="d7/d22/threading_8h" local="yes">AthContainers/tools/threading.h</includes>
+    <includes refid="d6/dda/PackedContainer_8h" local="yes">AthContainers/PackedContainer.h</includes>
+    <includes local="yes">AthenaKernel/ILockable.h</includes>
+    <includes refid="d3/dd4/AuxSelection_8h" local="yes">xAODCore/AuxSelection.h</includes>
+    <includes refid="d6/d20/xAODCore_2xAODCore_2CLASS__DEF_8h" local="yes">xAODCore/CLASS_DEF.h</includes>
+    <includes refid="d3/d17/BaseInfo_8h" local="yes">xAODCore/BaseInfo.h</includes>
+    <includes refid="de/de4/AuxContainerBase_8icc" local="yes">AuxContainerBase.icc</includes>
+    <includedby refid="df/d0b/testClusterMVACalib_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/egammaMVACalib/util/testClusterMVACalib.cxx</includedby>
+    <includedby refid="d4/d1d/OutputUtils_8h" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OutputUtils.h</includedby>
+    <includedby refid="d9/d5b/TrackParticleClusterAssociationAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODAssociations/xAODAssociations/versions/TrackParticleClusterAssociationAuxContainer_v1.h</includedby>
+    <includedby refid="da/d8c/BTaggingAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBTagging/xAODBTagging/versions/BTaggingAuxContainer_v1.h</includedby>
+    <includedby refid="d6/dd4/BTaggingTrigAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBTagging/xAODBTagging/versions/BTaggingTrigAuxContainer_v1.h</includedby>
+    <includedby refid="d1/d1e/BTagVertexAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBTagging/xAODBTagging/versions/BTagVertexAuxContainer_v1.h</includedby>
+    <includedby refid="de/d76/CaloClusterAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCaloEvent/xAODCaloEvent/versions/CaloClusterAuxContainer_v1.h</includedby>
+    <includedby refid="d5/d93/CaloClusterAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCaloEvent/xAODCaloEvent/versions/CaloClusterAuxContainer_v2.h</includedby>
+    <includedby refid="dc/d72/CaloTowerAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCaloEvent/xAODCaloEvent/versions/CaloTowerAuxContainer_v1.h</includedby>
+    <includedby refid="d3/dc9/AuxContainerBase_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/Root/AuxContainerBase.cxx</includedby>
+    <includedby refid="d7/d10/inc__AuxContainerBase_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/test/inc_AuxContainerBase.cxx</includedby>
+    <includedby refid="de/d66/ut__xaodcore__clearDecorations__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/test/ut_xaodcore_clearDecorations_test.cxx</includedby>
+    <includedby refid="da/de5/ut__xaodcore__safedeepcopy__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/test/ut_xaodcore_safedeepcopy_test.cxx</includedby>
+    <includedby refid="d5/d87/ut__xaodcore__shallowcopy_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/test/ut_xaodcore_shallowcopy.cxx</includedby>
+    <includedby refid="d2/d26/xAODCoreRflxDict_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/xAODCoreRflxDict.h</includedby>
+    <includedby refid="d0/d1f/CutBookkeeperAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCutFlow/xAODCutFlow/versions/CutBookkeeperAuxContainer_v1.h</includedby>
+    <includedby refid="d5/ddf/EgammaAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/versions/EgammaAuxContainer_v1.h</includedby>
+    <includedby refid="dc/d0b/ElectronAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/versions/ElectronAuxContainer_v2.h</includedby>
+    <includedby refid="d2/d62/ElectronAuxContainer__v3_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/versions/ElectronAuxContainer_v3.h</includedby>
+    <includedby refid="de/df6/PhotonAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/versions/PhotonAuxContainer_v2.h</includedby>
+    <includedby refid="d7/d76/PhotonAuxContainer__v3_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/versions/PhotonAuxContainer_v3.h</includedby>
+    <includedby refid="df/d97/EventInfoAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEventInfo/xAODEventInfo/versions/EventInfoAuxContainer_v1.h</includedby>
+    <includedby refid="d1/dae/AFPDataAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/versions/AFPDataAuxContainer_v1.h</includedby>
+    <includedby refid="d3/df1/AFPSiHitAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/versions/AFPSiHitAuxContainer_v1.h</includedby>
+    <includedby refid="d3/dfe/AFPTrackAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/versions/AFPTrackAuxContainer_v1.h</includedby>
+    <includedby refid="d7/d55/ALFADataAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/versions/ALFADataAuxContainer_v1.h</includedby>
+    <includedby refid="dd/d68/ForwardEventInfoAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/versions/ForwardEventInfoAuxContainer_v1.h</includedby>
+    <includedby refid="d8/de5/MBTSModuleAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/versions/MBTSModuleAuxContainer_v1.h</includedby>
+    <includedby refid="d8/d06/ZdcModuleAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/versions/ZdcModuleAuxContainer_v1.h</includedby>
+    <includedby refid="db/d8d/HIEventShapeAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODHIEvent/xAODHIEvent/versions/HIEventShapeAuxContainer_v1.h</includedby>
+    <includedby refid="db/d46/HIEventShapeAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODHIEvent/xAODHIEvent/versions/HIEventShapeAuxContainer_v2.h</includedby>
+    <includedby refid="db/dc5/JetAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODJet/xAODJet/versions/JetAuxContainer_v1.h</includedby>
+    <includedby refid="d6/ded/BCMRawDataAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODLuminosity/xAODLuminosity/versions/BCMRawDataAuxContainer_v1.h</includedby>
+    <includedby refid="db/de2/LumiBlockRangeAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODLuminosity/xAODLuminosity/versions/LumiBlockRangeAuxContainer_v1.h</includedby>
+    <includedby refid="d3/d2d/MissingETAuxAssociationMap__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETAuxAssociationMap_v1.h</includedby>
+    <includedby refid="d0/d2d/MissingETAuxAssociationMap__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETAuxAssociationMap_v2.h</includedby>
+    <includedby refid="d4/def/MissingETAuxComponentMap__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETAuxComponentMap_v1.h</includedby>
+    <includedby refid="d9/d36/MissingETAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETAuxContainer_v1.h</includedby>
+    <includedby refid="d7/dae/MuonAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMuon/xAODMuon/versions/MuonAuxContainer_v1.h</includedby>
+    <includedby refid="de/db6/MuonAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMuon/xAODMuon/versions/MuonAuxContainer_v2.h</includedby>
+    <includedby refid="da/dd8/MuonAuxContainer__v3_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMuon/xAODMuon/versions/MuonAuxContainer_v3.h</includedby>
+    <includedby refid="d4/d6d/MuonSegmentAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMuon/xAODMuon/versions/MuonSegmentAuxContainer_v1.h</includedby>
+    <includedby refid="d9/d69/SlowMuonAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMuon/xAODMuon/versions/SlowMuonAuxContainer_v1.h</includedby>
+    <includedby refid="de/d67/CompositeParticleAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODParticleEvent/xAODParticleEvent/versions/CompositeParticleAuxContainer_v1.h</includedby>
+    <includedby refid="d4/de4/ParticleAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODParticleEvent/xAODParticleEvent/versions/ParticleAuxContainer_v1.h</includedby>
+    <includedby refid="d8/db4/PFOAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODPFlow/xAODPFlow/versions/PFOAuxContainer_v1.h</includedby>
+    <includedby refid="d5/d09/ut__xaodrootaccess__metadata__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/test/ut_xaodrootaccess_metadata_test.cxx</includedby>
+    <includedby refid="db/db9/ut__xaodrootaccess__stats__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/test/ut_xaodrootaccess_stats_test.cxx</includedby>
+    <includedby refid="de/dd3/ut__xaodrootaccess__tchain__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/test/ut_xaodrootaccess_tchain_test.cxx</includedby>
+    <includedby refid="df/dff/ut__xaodrootaccess__tevent__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/test/ut_xaodrootaccess_tevent_test.cxx</includedby>
+    <includedby refid="d1/dc3/ut__xaodrootaccess__tfilemerger__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/test/ut_xaodrootaccess_tfilemerger_test.cxx</includedby>
+    <includedby refid="dc/d1a/ut__xaodrootaccess__tstore__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/test/ut_xaodrootaccess_tstore_test.cxx</includedby>
+    <includedby refid="d4/d43/DiTauJetAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTau/xAODTau/versions/DiTauJetAuxContainer_v1.h</includedby>
+    <includedby refid="df/d82/TauJetAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTau/xAODTau/versions/TauJetAuxContainer_v1.h</includedby>
+    <includedby refid="d9/d17/TauJetAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTau/xAODTau/versions/TauJetAuxContainer_v2.h</includedby>
+    <includedby refid="d6/dea/NeutralParticleAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/versions/NeutralParticleAuxContainer_v1.h</includedby>
+    <includedby refid="d6/da6/SCTRawHitValidationAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/versions/SCTRawHitValidationAuxContainer_v1.h</includedby>
+    <includedby refid="d8/d9b/TrackMeasurementValidationAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/versions/TrackMeasurementValidationAuxContainer_v1.h</includedby>
+    <includedby refid="d4/dda/TrackParticleAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/versions/TrackParticleAuxContainer_v1.h</includedby>
+    <includedby refid="db/db7/TrackParticleAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/versions/TrackParticleAuxContainer_v2.h</includedby>
+    <includedby refid="d0/d69/TrackParticleAuxContainer__v3_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/versions/TrackParticleAuxContainer_v3.h</includedby>
+    <includedby refid="d7/ddc/TrackStateValidationAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/versions/TrackStateValidationAuxContainer_v1.h</includedby>
+    <includedby refid="df/d98/VertexAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/versions/VertexAuxContainer_v1.h</includedby>
+    <includedby refid="d2/dfb/TrigBphysAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigBphys/xAODTrigBphys/versions/TrigBphysAuxContainer_v1.h</includedby>
+    <includedby refid="d3/d4f/CaloClusterTrigAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigCalo/xAODTrigCalo/versions/CaloClusterTrigAuxContainer_v1.h</includedby>
+    <includedby refid="d8/d31/TrigCaloClusterAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigCalo/xAODTrigCalo/versions/TrigCaloClusterAuxContainer_v1.h</includedby>
+    <includedby refid="dd/d4e/TrigEMClusterAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigCalo/xAODTrigCalo/versions/TrigEMClusterAuxContainer_v2.h</includedby>
+    <includedby refid="d7/d4a/ElectronTrigAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigEgamma/xAODTrigEgamma/versions/ElectronTrigAuxContainer_v1.h</includedby>
+    <includedby refid="d1/dca/PhotonTrigAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigEgamma/xAODTrigEgamma/versions/PhotonTrigAuxContainer_v1.h</includedby>
+    <includedby refid="d4/d40/TrigElectronAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigEgamma/xAODTrigEgamma/versions/TrigElectronAuxContainer_v1.h</includedby>
+    <includedby refid="da/dc7/TrigPhotonAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigEgamma/xAODTrigEgamma/versions/TrigPhotonAuxContainer_v1.h</includedby>
+    <includedby refid="da/d8c/BunchConfAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/versions/BunchConfAuxContainer_v1.h</includedby>
+    <includedby refid="dd/dbd/EmTauRoIAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/versions/EmTauRoIAuxContainer_v1.h</includedby>
+    <includedby refid="d7/d8c/EmTauRoIAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/versions/EmTauRoIAuxContainer_v2.h</includedby>
+    <includedby refid="db/d55/JetRoIAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/versions/JetRoIAuxContainer_v1.h</includedby>
+    <includedby refid="d5/df9/JetRoIAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/versions/JetRoIAuxContainer_v2.h</includedby>
+    <includedby refid="d5/d63/MuonRoIAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/versions/MuonRoIAuxContainer_v1.h</includedby>
+    <includedby refid="d6/d5f/TriggerMenuAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/versions/TriggerMenuAuxContainer_v1.h</includedby>
+    <includedby refid="d2/d33/TrigPassBitsAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/versions/TrigPassBitsAuxContainer_v1.h</includedby>
+    <includedby refid="d3/dc6/CMMCPHitsAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMMCPHitsAuxContainer_v1.h</includedby>
+    <includedby refid="df/dee/CMMEtSumsAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMMEtSumsAuxContainer_v1.h</includedby>
+    <includedby refid="d0/d2f/CMMJetHitsAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMMJetHitsAuxContainer_v1.h</includedby>
+    <includedby refid="df/dc6/CMXCPHitsAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMXCPHitsAuxContainer_v1.h</includedby>
+    <includedby refid="d2/d30/CMXCPTobAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMXCPTobAuxContainer_v1.h</includedby>
+    <includedby refid="de/d0b/CMXEtSumsAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMXEtSumsAuxContainer_v1.h</includedby>
+    <includedby refid="df/d0e/CMXJetHitsAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMXJetHitsAuxContainer_v1.h</includedby>
+    <includedby refid="d8/df7/CMXJetTobAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMXJetTobAuxContainer_v1.h</includedby>
+    <includedby refid="d0/dc3/CMXRoIAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMXRoIAuxContainer_v1.h</includedby>
+    <includedby refid="d6/d36/CPMHitsAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CPMHitsAuxContainer_v1.h</includedby>
+    <includedby refid="d0/d10/CPMRoIAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CPMRoIAuxContainer_v1.h</includedby>
+    <includedby refid="d0/dab/CPMTobRoIAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CPMTobRoIAuxContainer_v1.h</includedby>
+    <includedby refid="de/d66/CPMTowerAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CPMTowerAuxContainer_v1.h</includedby>
+    <includedby refid="d4/dc6/CPMTowerAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CPMTowerAuxContainer_v2.h</includedby>
+    <includedby refid="d5/de9/JEMEtSumsAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/JEMEtSumsAuxContainer_v1.h</includedby>
+    <includedby refid="df/d7b/JEMEtSumsAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/JEMEtSumsAuxContainer_v2.h</includedby>
+    <includedby refid="d5/d4c/JEMHitsAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/JEMHitsAuxContainer_v1.h</includedby>
+    <includedby refid="df/daa/JEMRoIAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/JEMRoIAuxContainer_v1.h</includedby>
+    <includedby refid="da/d06/JEMTobRoIAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/JEMTobRoIAuxContainer_v1.h</includedby>
+    <includedby refid="dc/d35/JetElementAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/JetElementAuxContainer_v1.h</includedby>
+    <includedby refid="d0/de4/JetElementAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/JetElementAuxContainer_v2.h</includedby>
+    <includedby refid="d4/dee/L1TopoRawDataAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/L1TopoRawDataAuxContainer_v1.h</includedby>
+    <includedby refid="d5/dda/RODHeaderAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/RODHeaderAuxContainer_v1.h</includedby>
+    <includedby refid="d6/dfd/RODHeaderAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/RODHeaderAuxContainer_v2.h</includedby>
+    <includedby refid="dc/dee/TriggerTowerAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/TriggerTowerAuxContainer_v1.h</includedby>
+    <includedby refid="d1/d89/TriggerTowerAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/TriggerTowerAuxContainer_v2.h</includedby>
+    <includedby refid="d7/d87/TrigHisto2DAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/versions/TrigHisto2DAuxContainer_v1.h</includedby>
+    <includedby refid="de/dd2/TrigSpacePointCountsAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/versions/TrigSpacePointCountsAuxContainer_v1.h</includedby>
+    <includedby refid="d7/dbb/TrigT2MbtsBitsAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/versions/TrigT2MbtsBitsAuxContainer_v1.h</includedby>
+    <includedby refid="d6/d99/TrigT2ZdcSignalsAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/versions/TrigT2ZdcSignalsAuxContainer_v1.h</includedby>
+    <includedby refid="dd/de8/TrigTrackCountsAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/versions/TrigTrackCountsAuxContainer_v1.h</includedby>
+    <includedby refid="d7/df8/TrigVertexCountsAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/versions/TrigVertexCountsAuxContainer_v1.h</includedby>
+    <includedby refid="d2/dfb/TrigMissingETAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMissingET/xAODTrigMissingET/versions/TrigMissingETAuxContainer_v1.h</includedby>
+    <includedby refid="da/d85/L2CombinedMuonAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMuon/xAODTrigMuon/versions/L2CombinedMuonAuxContainer_v1.h</includedby>
+    <includedby refid="dd/dce/L2IsoMuonAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMuon/xAODTrigMuon/versions/L2IsoMuonAuxContainer_v1.h</includedby>
+    <includedby refid="d8/df6/L2StandAloneMuonAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMuon/xAODTrigMuon/versions/L2StandAloneMuonAuxContainer_v1.h</includedby>
+    <includedby refid="d9/d91/L2StandAloneMuonAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMuon/xAODTrigMuon/versions/L2StandAloneMuonAuxContainer_v2.h</includedby>
+    <includedby refid="d8/df4/TrigRingerRingsAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigRinger/xAODTrigRinger/versions/TrigRingerRingsAuxContainer_v1.h</includedby>
+    <includedby refid="da/df5/TrigRingerRingsAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigRinger/xAODTrigRinger/versions/TrigRingerRingsAuxContainer_v2.h</includedby>
+    <includedby refid="d1/d64/TrigRNNOutputAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigRinger/xAODTrigRinger/versions/TrigRNNOutputAuxContainer_v1.h</includedby>
+    <includedby refid="d2/dd1/TrigRNNOutputAuxContainer__v2_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigRinger/xAODTrigRinger/versions/TrigRNNOutputAuxContainer_v2.h</includedby>
+    <includedby refid="d9/d0e/TruthEventAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTruth/xAODTruth/versions/TruthEventAuxContainer_v1.h</includedby>
+    <includedby refid="d9/d3c/TruthMetaDataAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTruth/xAODTruth/versions/TruthMetaDataAuxContainer_v1.h</includedby>
+    <includedby refid="d7/d56/TruthParticleAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTruth/xAODTruth/versions/TruthParticleAuxContainer_v1.h</includedby>
+    <includedby refid="d8/d47/TruthPileupEventAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTruth/xAODTruth/versions/TruthPileupEventAuxContainer_v1.h</includedby>
+    <includedby refid="db/dc5/TruthVertexAuxContainer__v1_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTruth/xAODTruth/versions/TruthVertexAuxContainer_v1.h</includedby>
+    <incdepgraph>
+      <node id="360101">
+        <label>boost/thread/mutex.hpp</label>
+      </node>
+      <node id="360076">
+        <label>AthContainersInterfaces/IAuxStore.h</label>
+        <link refid="d6/d3e/IAuxStore_8h"/>
+        <childnode refid="360077" relation="include">
+        </childnode>
+        <childnode refid="360079" relation="include">
+        </childnode>
+        <childnode refid="360092" relation="include">
+        </childnode>
+        <childnode refid="360091" relation="include">
+        </childnode>
+      </node>
+      <node id="360088">
+        <label>boost/type_traits/remove_const.hpp</label>
+      </node>
+      <node id="360090">
+        <label>functional</label>
+      </node>
+      <node id="360087">
+        <label>limits</label>
+      </node>
+      <node id="360092">
+        <label>SGTools/BaseInfo.h</label>
+      </node>
+      <node id="360099">
+        <label>boost/thread/tss.hpp</label>
+      </node>
+      <node id="360084">
+        <label>iterator</label>
+      </node>
+      <node id="360073">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/AuxContainerBase.h</label>
+        <link refid="AuxContainerBase.h"/>
+        <childnode refid="360074" relation="include">
+        </childnode>
+        <childnode refid="360075" relation="include">
+        </childnode>
+        <childnode refid="360076" relation="include">
+        </childnode>
+        <childnode refid="360093" relation="include">
+        </childnode>
+        <childnode refid="360096" relation="include">
+        </childnode>
+        <childnode refid="360097" relation="include">
+        </childnode>
+        <childnode refid="360103" relation="include">
+        </childnode>
+        <childnode refid="360112" relation="include">
+        </childnode>
+        <childnode refid="360113" relation="include">
+        </childnode>
+        <childnode refid="360114" relation="include">
+        </childnode>
+        <childnode refid="360115" relation="include">
+        </childnode>
+      </node>
+      <node id="360106">
+        <label>AthContainersInterfaces/AuxDataOption.h</label>
+        <link refid="d1/dc5/AuxDataOption_8h"/>
+        <childnode refid="360075" relation="include">
+        </childnode>
+        <childnode refid="360107" relation="include">
+        </childnode>
+      </node>
+      <node id="360096">
+        <label>AthContainersInterfaces/IAuxStoreHolder.h</label>
+        <link refid="d7/dab/IAuxStoreHolder_8h_source"/>
+      </node>
+      <node id="360108">
+        <label>stdint.h</label>
+      </node>
+      <node id="360093">
+        <label>AthContainersInterfaces/IAuxStoreIO.h</label>
+        <link refid="d9/db5/IAuxStoreIO_8h"/>
+        <childnode refid="360078" relation="include">
+        </childnode>
+        <childnode refid="360094" relation="include">
+        </childnode>
+        <childnode refid="360095" relation="include">
+        </childnode>
+        <childnode refid="360091" relation="include">
+        </childnode>
+      </node>
+      <node id="360080">
+        <label>CxxUtils/unordered_set.h</label>
+        <link refid="df/d26/unordered__set_8h"/>
+        <childnode refid="360081" relation="include">
+        </childnode>
+        <childnode refid="360089" relation="include">
+        </childnode>
+        <childnode refid="360090" relation="include">
+        </childnode>
+      </node>
+      <node id="360086">
+        <label>cmath</label>
+      </node>
+      <node id="360102">
+        <label>boost/thread/thread.hpp</label>
+      </node>
+      <node id="360075">
+        <label>string</label>
+      </node>
+      <node id="360111">
+        <label>AthContainers/PackedContainer.icc</label>
+        <link refid="d1/d0c/PackedContainer_8icc"/>
+      </node>
+      <node id="360100">
+        <label>boost/atomic.hpp</label>
+      </node>
+      <node id="360105">
+        <label>AthContainers/PackedParameters.h</label>
+        <link refid="d4/d43/PackedParameters_8h"/>
+        <childnode refid="360106" relation="include">
+        </childnode>
+        <childnode refid="360087" relation="include">
+        </childnode>
+        <childnode refid="360108" relation="include">
+        </childnode>
+        <childnode refid="360109" relation="include">
+        </childnode>
+      </node>
+      <node id="360078">
+        <label>AthContainersInterfaces/AuxTypes.h</label>
+        <link refid="d1/dea/AuxTypes_8h"/>
+        <childnode refid="360079" relation="include">
+        </childnode>
+        <childnode refid="360080" relation="include">
+        </childnode>
+      </node>
+      <node id="360081">
+        <label>CxxUtils/hashtable.h</label>
+        <link refid="dd/d16/hashtable_8h"/>
+        <childnode refid="360082" relation="include">
+        </childnode>
+        <childnode refid="360083" relation="include">
+        </childnode>
+        <childnode refid="360084" relation="include">
+        </childnode>
+        <childnode refid="360079" relation="include">
+        </childnode>
+        <childnode refid="360085" relation="include">
+        </childnode>
+        <childnode refid="360086" relation="include">
+        </childnode>
+        <childnode refid="360087" relation="include">
+        </childnode>
+        <childnode refid="360075" relation="include">
+        </childnode>
+        <childnode refid="360088" relation="include">
+        </childnode>
+      </node>
+      <node id="360094">
+        <label>typeinfo</label>
+      </node>
+      <node id="360109">
+        <label>AthContainers/PackedParameters.icc</label>
+        <link refid="db/d30/PackedParameters_8icc"/>
+      </node>
+      <node id="360112">
+        <label>AthenaKernel/ILockable.h</label>
+      </node>
+      <node id="360107">
+        <label>AthContainersInterfaces/AuxDataOption.icc</label>
+        <link refid="db/d68/AuxDataOption_8icc"/>
+      </node>
+      <node id="360091">
+        <label>SGTools/CLASS_DEF.h</label>
+      </node>
+      <node id="360074">
+        <label>vector</label>
+      </node>
+      <node id="360083">
+        <label>utility</label>
+      </node>
+      <node id="360110">
+        <label>CxxUtils/override.h</label>
+        <link refid="de/d0e/override_8h"/>
+      </node>
+      <node id="360098">
+        <label>boost/thread/shared_mutex.hpp</label>
+      </node>
+      <node id="360104">
+        <label>AthContainersInterfaces/IAuxSetOption.h</label>
+        <link refid="d7/d7e/IAuxSetOption_8h"/>
+      </node>
+      <node id="360097">
+        <label>AthContainers/tools/threading.h</label>
+        <link refid="d7/d22/threading_8h"/>
+        <childnode refid="360098" relation="include">
+        </childnode>
+        <childnode refid="360099" relation="include">
+        </childnode>
+        <childnode refid="360100" relation="include">
+        </childnode>
+        <childnode refid="360101" relation="include">
+        </childnode>
+        <childnode refid="360102" relation="include">
+        </childnode>
+      </node>
+      <node id="360085">
+        <label>cstdlib</label>
+      </node>
+      <node id="360113">
+        <label>xAODCore/AuxSelection.h</label>
+        <link refid="d3/dd4/AuxSelection_8h_source"/>
+        <childnode refid="360095" relation="include">
+        </childnode>
+        <childnode refid="360075" relation="include">
+        </childnode>
+        <childnode refid="360078" relation="include">
+        </childnode>
+      </node>
+      <node id="360077">
+        <label>AthContainersInterfaces/IConstAuxStore.h</label>
+        <link refid="d7/d3a/IConstAuxStore_8h"/>
+        <childnode refid="360078" relation="include">
+        </childnode>
+        <childnode refid="360079" relation="include">
+        </childnode>
+        <childnode refid="360091" relation="include">
+        </childnode>
+      </node>
+      <node id="360079">
+        <label>cstddef</label>
+      </node>
+      <node id="360115">
+        <label>xAODCore/BaseInfo.h</label>
+        <link refid="d3/d17/BaseInfo_8h_source"/>
+        <childnode refid="360092" relation="include">
+        </childnode>
+      </node>
+      <node id="360095">
+        <label>set</label>
+      </node>
+      <node id="360114">
+        <label>xAODCore/CLASS_DEF.h</label>
+        <link refid="d6/d20/xAODCore_2xAODCore_2CLASS__DEF_8h"/>
+        <childnode refid="360091" relation="include">
+        </childnode>
+      </node>
+      <node id="360103">
+        <label>AthContainers/PackedContainer.h</label>
+        <link refid="d6/dda/PackedContainer_8h"/>
+        <childnode refid="360104" relation="include">
+        </childnode>
+        <childnode refid="360105" relation="include">
+        </childnode>
+        <childnode refid="360110" relation="include">
+        </childnode>
+        <childnode refid="360074" relation="include">
+        </childnode>
+        <childnode refid="360111" relation="include">
+        </childnode>
+      </node>
+      <node id="360082">
+        <label>algorithm</label>
+      </node>
+      <node id="360089">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="360182">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODJet/xAODJet/xAODJetDict.h</label>
+        <link refid="d9/d0c/xAODJetDict_8h_source"/>
+      </node>
+      <node id="360179">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODHIEvent/xAODHIEvent/HIEventShapeAuxContainer.h</label>
+        <link refid="dc/d2c/HIEventShapeAuxContainer_8h_source"/>
+        <childnode refid="360177" relation="include">
+        </childnode>
+      </node>
+      <node id="360307">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/versions/TriggerMenuAuxContainer_v1.h</label>
+        <link refid="d6/d5f/TriggerMenuAuxContainer__v1_8h_source"/>
+        <childnode refid="360308" relation="include">
+        </childnode>
+        <childnode refid="360298" relation="include">
+        </childnode>
+      </node>
+      <node id="360233">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/PhotonConversionPID.h</label>
+        <link refid="d7/dbb/PhotonConversionPID_8h_source"/>
+      </node>
+      <node id="360298">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/xAODTriggerDict.h</label>
+        <link refid="d8/db2/xAODTriggerDict_8h_source"/>
+      </node>
+      <node id="360310">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTriggerCnv/xAODTriggerCnv/xAODTriggerCnvDict.h</label>
+        <link refid="d1/d54/xAODTriggerCnvDict_8h_source"/>
+      </node>
+      <node id="360117">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OutputUtils.h</label>
+        <link refid="d4/d1d/OutputUtils_8h_source"/>
+      </node>
+      <node id="360253">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/tauRecTools/TauCalibrateLC.h</label>
+        <link refid="d4/d25/TauCalibrateLC_8h_source"/>
+        <childnode refid="360249" relation="include">
+        </childnode>
+      </node>
+      <node id="360207">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODParticleEvent/xAODParticleEvent/CompositeParticleAuxContainer.h</label>
+        <link refid="db/d67/CompositeParticleAuxContainer_8h_source"/>
+        <childnode refid="360208" relation="include">
+        </childnode>
+      </node>
+      <node id="360274">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/versions/VertexAuxContainer_v1.h</label>
+        <link refid="df/d98/VertexAuxContainer__v1_8h_source"/>
+        <childnode refid="360275" relation="include">
+        </childnode>
+        <childnode refid="360263" relation="include">
+        </childnode>
+      </node>
+      <node id="360214">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/TauPi0ClusterScaler.h</label>
+        <link refid="d7/da7/TauPi0ClusterScaler_8h_source"/>
+      </node>
+      <node id="360131">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCaloEvent/xAODCaloEvent/CaloClusterAuxContainer.h</label>
+        <link refid="db/dfb/CaloClusterAuxContainer_8h_source"/>
+        <childnode refid="360132" relation="include">
+        </childnode>
+        <childnode refid="360133" relation="include">
+        </childnode>
+      </node>
+      <node id="360251">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/tauRecTools/MvaTESVariableDecorator.h</label>
+        <link refid="d2/d2b/MvaTESVariableDecorator_8h_source"/>
+        <childnode refid="360249" relation="include">
+        </childnode>
+      </node>
+      <node id="360199">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMuon/xAODMuon/versions/MuonAuxContainer_v2.h</label>
+        <link refid="de/db6/MuonAuxContainer__v2_8h_source"/>
+        <childnode refid="360198" relation="include">
+        </childnode>
+      </node>
+      <node id="360194">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETAuxContainer_v1.h</label>
+        <link refid="d9/d36/MissingETAuxContainer__v1_8h_source"/>
+        <childnode refid="360195" relation="include">
+        </childnode>
+      </node>
+      <node id="360345">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/JEMHitsAuxContainer.h</label>
+        <link refid="db/dc0/JEMHitsAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360387">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigRinger/xAODTrigRinger/xAODTrigRingerDict.h</label>
+        <link refid="dd/d78/xAODTrigRingerDict_8h_source"/>
+      </node>
+      <node id="360139">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCutFlow/xAODCutFlow/CutBookkeeperAuxContainer.h</label>
+        <link refid="df/d6b/CutBookkeeperAuxContainer_8h_source"/>
+        <childnode refid="360140" relation="include">
+        </childnode>
+        <childnode refid="360141" relation="include">
+        </childnode>
+      </node>
+      <node id="360263">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/xAODTrackingDict.h</label>
+        <link refid="da/d74/xAODTrackingDict_8h_source"/>
+      </node>
+      <node id="360237">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/TauCellVariables.h</label>
+        <link refid="d2/de6/TauCellVariables_8h_source"/>
+      </node>
+      <node id="360216">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTau/xAODTau/versions/DiTauJetAuxContainer_v1.h</label>
+        <link refid="d4/d43/DiTauJetAuxContainer__v1_8h_source"/>
+        <childnode refid="360217" relation="include">
+        </childnode>
+        <childnode refid="360218" relation="include">
+        </childnode>
+      </node>
+      <node id="360163">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/Root/AFPSiHitAuxContainer_v1.cxx</label>
+        <link refid="d8/d62/AFPSiHitAuxContainer__v1_8cxx"/>
+      </node>
+      <node id="360323">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/CMXCPTobAuxContainer.h</label>
+        <link refid="d0/d1d/CMXCPTobAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360172">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/versions/MBTSModuleAuxContainer_v1.h</label>
+        <link refid="d8/de5/MBTSModuleAuxContainer__v1_8h_source"/>
+        <childnode refid="360173" relation="include">
+        </childnode>
+        <childnode refid="360161" relation="include">
+        </childnode>
+      </node>
+      <node id="360266">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/versions/TrackMeasurementValidationAuxContainer_v1.h</label>
+        <link refid="d8/d9b/TrackMeasurementValidationAuxContainer__v1_8h_source"/>
+        <childnode refid="360267" relation="include">
+        </childnode>
+        <childnode refid="360263" relation="include">
+        </childnode>
+      </node>
+      <node id="360175">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/ZdcModuleAuxContainer.h</label>
+        <link refid="d3/d77/ZdcModuleAuxContainer_8h_source"/>
+        <childnode refid="360161" relation="include">
+        </childnode>
+      </node>
+      <node id="360146">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/versions/PhotonAuxContainer_v1.h</label>
+        <link refid="d6/d03/PhotonAuxContainer__v1_8h_source"/>
+        <childnode refid="360145" relation="include">
+        </childnode>
+      </node>
+      <node id="360383">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMuon/xAODTrigMuon/versions/L2StandAloneMuonAuxContainer_v2.h</label>
+        <link refid="d9/d91/L2StandAloneMuonAuxContainer__v2_8h_source"/>
+        <childnode refid="360384" relation="include">
+        </childnode>
+        <childnode refid="360379" relation="include">
+        </childnode>
+      </node>
+      <node id="360211">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODPFlow/xAODPFlow/versions/PFOAuxContainer_v1.h</label>
+        <link refid="d8/db4/PFOAuxContainer__v1_8h_source"/>
+        <childnode refid="360212" relation="include">
+        </childnode>
+        <childnode refid="360215" relation="include">
+        </childnode>
+      </node>
+      <node id="360244">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/TauTestDump.h</label>
+        <link refid="df/dd6/TauTestDump_8h_source"/>
+      </node>
+      <node id="360217">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTau/xAODTau/DiTauJetAuxContainer.h</label>
+        <link refid="d5/d5d/DiTauJetAuxContainer_8h_source"/>
+        <childnode refid="360218" relation="include">
+        </childnode>
+      </node>
+      <node id="360116">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/AuxContainerBase.h</label>
+        <link refid="AuxContainerBase.h"/>
+        <childnode refid="360117" relation="include">
+        </childnode>
+        <childnode refid="360118" relation="include">
+        </childnode>
+        <childnode refid="360121" relation="include">
+        </childnode>
+        <childnode refid="360124" relation="include">
+        </childnode>
+        <childnode refid="360126" relation="include">
+        </childnode>
+        <childnode refid="360128" relation="include">
+        </childnode>
+        <childnode refid="360130" relation="include">
+        </childnode>
+        <childnode refid="360134" relation="include">
+        </childnode>
+        <childnode refid="360136" relation="include">
+        </childnode>
+        <childnode refid="360138" relation="include">
+        </childnode>
+        <childnode refid="360142" relation="include">
+        </childnode>
+        <childnode refid="360147" relation="include">
+        </childnode>
+        <childnode refid="360148" relation="include">
+        </childnode>
+        <childnode refid="360151" relation="include">
+        </childnode>
+        <childnode refid="360152" relation="include">
+        </childnode>
+        <childnode refid="360154" relation="include">
+        </childnode>
+        <childnode refid="360159" relation="include">
+        </childnode>
+        <childnode refid="360162" relation="include">
+        </childnode>
+        <childnode refid="360165" relation="include">
+        </childnode>
+        <childnode refid="360168" relation="include">
+        </childnode>
+        <childnode refid="360170" relation="include">
+        </childnode>
+        <childnode refid="360172" relation="include">
+        </childnode>
+        <childnode refid="360174" relation="include">
+        </childnode>
+        <childnode refid="360176" relation="include">
+        </childnode>
+        <childnode refid="360178" relation="include">
+        </childnode>
+        <childnode refid="360180" relation="include">
+        </childnode>
+        <childnode refid="360183" relation="include">
+        </childnode>
+        <childnode refid="360186" relation="include">
+        </childnode>
+        <childnode refid="360188" relation="include">
+        </childnode>
+        <childnode refid="360190" relation="include">
+        </childnode>
+        <childnode refid="360192" relation="include">
+        </childnode>
+        <childnode refid="360194" relation="include">
+        </childnode>
+        <childnode refid="360197" relation="include">
+        </childnode>
+        <childnode refid="360199" relation="include">
+        </childnode>
+        <childnode refid="360200" relation="include">
+        </childnode>
+        <childnode refid="360202" relation="include">
+        </childnode>
+        <childnode refid="360204" relation="include">
+        </childnode>
+        <childnode refid="360206" relation="include">
+        </childnode>
+        <childnode refid="360209" relation="include">
+        </childnode>
+        <childnode refid="360211" relation="include">
+        </childnode>
+        <childnode refid="360216" relation="include">
+        </childnode>
+        <childnode refid="360219" relation="include">
+        </childnode>
+        <childnode refid="360220" relation="include">
+        </childnode>
+        <childnode refid="360261" relation="include">
+        </childnode>
+        <childnode refid="360264" relation="include">
+        </childnode>
+        <childnode refid="360266" relation="include">
+        </childnode>
+        <childnode refid="360268" relation="include">
+        </childnode>
+        <childnode refid="360269" relation="include">
+        </childnode>
+        <childnode refid="360270" relation="include">
+        </childnode>
+        <childnode refid="360272" relation="include">
+        </childnode>
+        <childnode refid="360274" relation="include">
+        </childnode>
+        <childnode refid="360276" relation="include">
+        </childnode>
+        <childnode refid="360279" relation="include">
+        </childnode>
+        <childnode refid="360282" relation="include">
+        </childnode>
+        <childnode refid="360285" relation="include">
+        </childnode>
+        <childnode refid="360287" relation="include">
+        </childnode>
+        <childnode refid="360290" relation="include">
+        </childnode>
+        <childnode refid="360292" relation="include">
+        </childnode>
+        <childnode refid="360294" relation="include">
+        </childnode>
+        <childnode refid="360296" relation="include">
+        </childnode>
+        <childnode refid="360299" relation="include">
+        </childnode>
+        <childnode refid="360301" relation="include">
+        </childnode>
+        <childnode refid="360302" relation="include">
+        </childnode>
+        <childnode refid="360304" relation="include">
+        </childnode>
+        <childnode refid="360305" relation="include">
+        </childnode>
+        <childnode refid="360307" relation="include">
+        </childnode>
+        <childnode refid="360311" relation="include">
+        </childnode>
+        <childnode refid="360313" relation="include">
+        </childnode>
+        <childnode refid="360316" relation="include">
+        </childnode>
+        <childnode refid="360318" relation="include">
+        </childnode>
+        <childnode refid="360320" relation="include">
+        </childnode>
+        <childnode refid="360322" relation="include">
+        </childnode>
+        <childnode refid="360324" relation="include">
+        </childnode>
+        <childnode refid="360326" relation="include">
+        </childnode>
+        <childnode refid="360328" relation="include">
+        </childnode>
+        <childnode refid="360330" relation="include">
+        </childnode>
+        <childnode refid="360332" relation="include">
+        </childnode>
+        <childnode refid="360334" relation="include">
+        </childnode>
+        <childnode refid="360336" relation="include">
+        </childnode>
+        <childnode refid="360338" relation="include">
+        </childnode>
+        <childnode refid="360340" relation="include">
+        </childnode>
+        <childnode refid="360341" relation="include">
+        </childnode>
+        <childnode refid="360343" relation="include">
+        </childnode>
+        <childnode refid="360344" relation="include">
+        </childnode>
+        <childnode refid="360346" relation="include">
+        </childnode>
+        <childnode refid="360348" relation="include">
+        </childnode>
+        <childnode refid="360350" relation="include">
+        </childnode>
+        <childnode refid="360352" relation="include">
+        </childnode>
+        <childnode refid="360353" relation="include">
+        </childnode>
+        <childnode refid="360355" relation="include">
+        </childnode>
+        <childnode refid="360356" relation="include">
+        </childnode>
+        <childnode refid="360358" relation="include">
+        </childnode>
+        <childnode refid="360360" relation="include">
+        </childnode>
+        <childnode refid="360361" relation="include">
+        </childnode>
+        <childnode refid="360364" relation="include">
+        </childnode>
+        <childnode refid="360366" relation="include">
+        </childnode>
+        <childnode refid="360368" relation="include">
+        </childnode>
+        <childnode refid="360370" relation="include">
+        </childnode>
+        <childnode refid="360372" relation="include">
+        </childnode>
+        <childnode refid="360374" relation="include">
+        </childnode>
+        <childnode refid="360377" relation="include">
+        </childnode>
+        <childnode refid="360380" relation="include">
+        </childnode>
+        <childnode refid="360382" relation="include">
+        </childnode>
+        <childnode refid="360383" relation="include">
+        </childnode>
+        <childnode refid="360385" relation="include">
+        </childnode>
+        <childnode refid="360388" relation="include">
+        </childnode>
+        <childnode refid="360389" relation="include">
+        </childnode>
+        <childnode refid="360391" relation="include">
+        </childnode>
+        <childnode refid="360392" relation="include">
+        </childnode>
+        <childnode refid="360395" relation="include">
+        </childnode>
+        <childnode refid="360397" relation="include">
+        </childnode>
+        <childnode refid="360401" relation="include">
+        </childnode>
+        <childnode refid="360403" relation="include">
+        </childnode>
+      </node>
+      <node id="360338">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CPMTowerAuxContainer_v1.h</label>
+        <link refid="de/d66/CPMTowerAuxContainer__v1_8h_source"/>
+        <childnode refid="360339" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360193">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/MissingETAuxComponentMap.h</label>
+        <link refid="da/d4f/MissingETAuxComponentMap_8h_source"/>
+        <childnode refid="360189" relation="include">
+        </childnode>
+      </node>
+      <node id="360153">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/PhotonAuxContainer.h</label>
+        <link refid="d9/d40/PhotonAuxContainer_8h_source"/>
+      </node>
+      <node id="360245">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/TauTrackFinder.h</label>
+        <link refid="d9/d3e/TauTrackFinder_8h_source"/>
+      </node>
+      <node id="360155">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEventInfo/xAODEventInfo/EventInfoAuxContainer.h</label>
+        <link refid="d2/db0/EventInfoAuxContainer_8h_source"/>
+        <childnode refid="360156" relation="include">
+        </childnode>
+        <childnode refid="360157" relation="include">
+        </childnode>
+      </node>
+      <node id="360126">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBTagging/xAODBTagging/versions/BTagVertexAuxContainer_v1.h</label>
+        <link refid="d1/d1e/BTagVertexAuxContainer__v1_8h_source"/>
+        <childnode refid="360127" relation="include">
+        </childnode>
+      </node>
+      <node id="360198">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMuon/xAODMuon/xAODMuonDict.h</label>
+        <link refid="d1/d5e/xAODMuonDict_8h_source"/>
+      </node>
+      <node id="360121">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBTagging/xAODBTagging/versions/BTaggingAuxContainer_v1.h</label>
+        <link refid="da/d8c/BTaggingAuxContainer__v1_8h_source"/>
+        <childnode refid="360122" relation="include">
+        </childnode>
+      </node>
+      <node id="360321">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/CMXCPHitsAuxContainer.h</label>
+        <link refid="d3/df6/CMXCPHitsAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360304">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/versions/JetRoIAuxContainer_v2.h</label>
+        <link refid="d5/df9/JetRoIAuxContainer__v2_8h_source"/>
+        <childnode refid="360303" relation="include">
+        </childnode>
+        <childnode refid="360298" relation="include">
+        </childnode>
+      </node>
+      <node id="360301">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/versions/EmTauRoIAuxContainer_v2.h</label>
+        <link refid="d7/d8c/EmTauRoIAuxContainer__v2_8h_source"/>
+        <childnode refid="360300" relation="include">
+        </childnode>
+        <childnode refid="360298" relation="include">
+        </childnode>
+      </node>
+      <node id="360177">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODHIEvent/xAODHIEvent/xAODHIEventDict.h</label>
+        <link refid="d4/d5e/xAODHIEventDict_8h_source"/>
+      </node>
+      <node id="360339">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/CPMTowerAuxContainer.h</label>
+        <link refid="de/de2/CPMTowerAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360344">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/JEMHitsAuxContainer_v1.h</label>
+        <link refid="d5/d4c/JEMHitsAuxContainer__v1_8h_source"/>
+        <childnode refid="360345" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360128">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCaloEvent/xAODCaloEvent/versions/CaloClusterAuxContainer_v1.h</label>
+        <link refid="de/d76/CaloClusterAuxContainer__v1_8h_source"/>
+        <childnode refid="360129" relation="include">
+        </childnode>
+      </node>
+      <node id="360259">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/tauRecTools/TauTrackFilter.h</label>
+        <link refid="d1/dc0/TauTrackFilter_8h_source"/>
+        <childnode refid="360249" relation="include">
+        </childnode>
+      </node>
+      <node id="360234">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/PhotonConversionVertex.h</label>
+        <link refid="df/d64/PhotonConversionVertex_8h_source"/>
+      </node>
+      <node id="360324">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMXEtSumsAuxContainer_v1.h</label>
+        <link refid="de/d0b/CMXEtSumsAuxContainer__v1_8h_source"/>
+        <childnode refid="360325" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360238">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/TauConversionFinder.h</label>
+        <link refid="d8/dfb/TauConversionFinder_8h_source"/>
+      </node>
+      <node id="360157">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PileupReweighting/src/PileupReweightingProvider.h</label>
+        <link refid="d9/da1/PileupReweightingProvider_8h_source"/>
+      </node>
+      <node id="360246">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/TauVertexFinder.h</label>
+        <link refid="d7/dd3/TauVertexFinder_8h_source"/>
+      </node>
+      <node id="360169">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/ALFADataAuxContainer.h</label>
+        <link refid="d7/de5/ALFADataAuxContainer_8h_source"/>
+        <childnode refid="360161" relation="include">
+        </childnode>
+      </node>
+      <node id="360377">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMuon/xAODTrigMuon/versions/L2CombinedMuonAuxContainer_v1.h</label>
+        <link refid="da/d85/L2CombinedMuonAuxContainer__v1_8h_source"/>
+        <childnode refid="360378" relation="include">
+        </childnode>
+        <childnode refid="360379" relation="include">
+        </childnode>
+      </node>
+      <node id="360270">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/versions/TrackParticleAuxContainer_v3.h</label>
+        <link refid="d0/d69/TrackParticleAuxContainer__v3_8h_source"/>
+        <childnode refid="360271" relation="include">
+        </childnode>
+        <childnode refid="360263" relation="include">
+        </childnode>
+      </node>
+      <node id="360224">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/CommonSmearingTool.h</label>
+        <link refid="d0/dcd/CommonSmearingTool_8h_source"/>
+        <childnode refid="360225" relation="include">
+        </childnode>
+        <childnode refid="360226" relation="include">
+        </childnode>
+      </node>
+      <node id="360399">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/ITauTruthMatchingTool.h</label>
+        <link refid="db/dda/ITauTruthMatchingTool_8h_source"/>
+        <childnode refid="360400" relation="include">
+        </childnode>
+      </node>
+      <node id="360265">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/SCTRawHitValidationAuxContainer.h</label>
+        <link refid="d5/d35/SCTRawHitValidationAuxContainer_8h_source"/>
+        <childnode refid="360263" relation="include">
+        </childnode>
+      </node>
+      <node id="360201">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMuon/xAODMuon/MuonAuxContainer.h</label>
+        <link refid="d0/d36/MuonAuxContainer_8h_source"/>
+        <childnode refid="360150" relation="include">
+        </childnode>
+        <childnode refid="360198" relation="include">
+        </childnode>
+      </node>
+      <node id="360160">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/AFPDataAuxContainer.h</label>
+        <link refid="d5/dd9/AFPDataAuxContainer_8h_source"/>
+        <childnode refid="360161" relation="include">
+        </childnode>
+      </node>
+      <node id="360296">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/versions/BunchConfAuxContainer_v1.h</label>
+        <link refid="da/d8c/BunchConfAuxContainer__v1_8h_source"/>
+        <childnode refid="360297" relation="include">
+        </childnode>
+        <childnode refid="360298" relation="include">
+        </childnode>
+      </node>
+      <node id="360320">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMXCPHitsAuxContainer_v1.h</label>
+        <link refid="df/dc6/CMXCPHitsAuxContainer__v1_8h_source"/>
+        <childnode refid="360321" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360331">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/CMXRoIAuxContainer.h</label>
+        <link refid="da/d38/CMXRoIAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360260">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/tauRecTools/TauWPDecorator.h</label>
+        <link refid="db/db6/TauWPDecorator_8h_source"/>
+        <childnode refid="360249" relation="include">
+        </childnode>
+      </node>
+      <node id="360293">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigEgamma/xAODTrigEgamma/TrigElectronAuxContainer.h</label>
+        <link refid="db/d2a/TrigElectronAuxContainer_8h_source"/>
+      </node>
+      <node id="360390">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigRinger/xAODTrigRinger/TrigRNNOutputAuxContainer.h</label>
+        <link refid="d6/dfe/TrigRNNOutputAuxContainer_8h_source"/>
+      </node>
+      <node id="360276">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigBphys/xAODTrigBphys/versions/TrigBphysAuxContainer_v1.h</label>
+        <link refid="d2/dfb/TrigBphysAuxContainer__v1_8h_source"/>
+        <childnode refid="360277" relation="include">
+        </childnode>
+        <childnode refid="360278" relation="include">
+        </childnode>
+      </node>
+      <node id="360161">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/xAODForwardDict.h</label>
+        <link refid="d0/d4b/xAODForwardDict_8h_source"/>
+      </node>
+      <node id="360319">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/CMMJetHitsAuxContainer.h</label>
+        <link refid="d0/d23/CMMJetHitsAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360395">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTruth/xAODTruth/versions/TruthMetaDataAuxContainer_v1.h</label>
+        <link refid="d9/d3c/TruthMetaDataAuxContainer__v1_8h_source"/>
+        <childnode refid="360396" relation="include">
+        </childnode>
+        <childnode refid="360394" relation="include">
+        </childnode>
+      </node>
+      <node id="360350">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/JetElementAuxContainer_v1.h</label>
+        <link refid="dc/d35/JetElementAuxContainer__v1_8h_source"/>
+        <childnode refid="360351" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360241">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/TauPi0CreateROI.h</label>
+        <link refid="dd/d20/TauPi0CreateROI_8h_source"/>
+      </node>
+      <node id="360227">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CPAnalysisExamples/CPAnalysisExamples/MyToolProvider.h</label>
+        <link refid="d0/db6/MyToolProvider_8h_source"/>
+      </node>
+      <node id="360287">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigEgamma/xAODTrigEgamma/versions/ElectronTrigAuxContainer_v1.h</label>
+        <link refid="d7/d4a/ElectronTrigAuxContainer__v1_8h_source"/>
+        <childnode refid="360288" relation="include">
+        </childnode>
+        <childnode refid="360289" relation="include">
+        </childnode>
+      </node>
+      <node id="360141">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCutFlow/xAODCutFlow/xAODCutFlowDict.h</label>
+        <link refid="d0/d51/xAODCutFlowDict_8h_source"/>
+      </node>
+      <node id="360200">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMuon/xAODMuon/versions/MuonAuxContainer_v3.h</label>
+        <link refid="da/dd8/MuonAuxContainer__v3_8h_source"/>
+        <childnode refid="360201" relation="include">
+        </childnode>
+        <childnode refid="360198" relation="include">
+        </childnode>
+      </node>
+      <node id="360148">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/versions/ElectronAuxContainer_v3.h</label>
+        <link refid="d2/d62/ElectronAuxContainer__v3_8h_source"/>
+        <childnode refid="360149" relation="include">
+        </childnode>
+        <childnode refid="360145" relation="include">
+        </childnode>
+      </node>
+      <node id="360173">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/MBTSModuleAuxContainer.h</label>
+        <link refid="df/d26/MBTSModuleAuxContainer_8h_source"/>
+        <childnode refid="360161" relation="include">
+        </childnode>
+      </node>
+      <node id="360369">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/TrigT2ZdcSignalsAuxContainer.h</label>
+        <link refid="dd/de2/TrigT2ZdcSignalsAuxContainer_8h_source"/>
+      </node>
+      <node id="360134">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCaloEvent/xAODCaloEvent/versions/CaloTowerAuxContainer_v1.h</label>
+        <link refid="dc/d72/CaloTowerAuxContainer__v1_8h_source"/>
+        <childnode refid="360135" relation="include">
+        </childnode>
+        <childnode refid="360129" relation="include">
+        </childnode>
+      </node>
+      <node id="360366">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/versions/TrigT2MbtsBitsAuxContainer_v1.h</label>
+        <link refid="d7/dbb/TrigT2MbtsBitsAuxContainer__v1_8h_source"/>
+        <childnode refid="360367" relation="include">
+        </childnode>
+        <childnode refid="360363" relation="include">
+        </childnode>
+      </node>
+      <node id="360170">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/versions/ForwardEventInfoAuxContainer_v1.h</label>
+        <link refid="dd/d68/ForwardEventInfoAuxContainer__v1_8h_source"/>
+        <childnode refid="360171" relation="include">
+        </childnode>
+        <childnode refid="360161" relation="include">
+        </childnode>
+      </node>
+      <node id="360195">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/MissingETAuxContainer.h</label>
+        <link refid="dd/db4/MissingETAuxContainer_8h_source"/>
+        <childnode refid="360150" relation="include">
+        </childnode>
+        <childnode refid="360196" relation="include">
+        </childnode>
+        <childnode refid="360189" relation="include">
+        </childnode>
+      </node>
+      <node id="360124">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBTagging/xAODBTagging/versions/BTaggingTrigAuxContainer_v1.h</label>
+        <link refid="d6/dd4/BTaggingTrigAuxContainer__v1_8h_source"/>
+        <childnode refid="360125" relation="include">
+        </childnode>
+      </node>
+      <node id="360174">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/versions/ZdcModuleAuxContainer_v1.h</label>
+        <link refid="d8/d06/ZdcModuleAuxContainer__v1_8h_source"/>
+        <childnode refid="360161" relation="include">
+        </childnode>
+        <childnode refid="360175" relation="include">
+        </childnode>
+      </node>
+      <node id="360215">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODPFlow/xAODPFlow/xAODPFlowDict.h</label>
+        <link refid="da/d70/xAODPFlowDict_8h_source"/>
+      </node>
+      <node id="360294">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigEgamma/xAODTrigEgamma/versions/TrigPhotonAuxContainer_v1.h</label>
+        <link refid="da/dc7/TrigPhotonAuxContainer__v1_8h_source"/>
+        <childnode refid="360295" relation="include">
+        </childnode>
+        <childnode refid="360289" relation="include">
+        </childnode>
+      </node>
+      <node id="360203">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMuon/xAODMuon/MuonSegmentAuxContainer.h</label>
+        <link refid="d0/d42/MuonSegmentAuxContainer_8h_source"/>
+        <childnode refid="360198" relation="include">
+        </childnode>
+      </node>
+      <node id="360340">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CPMTowerAuxContainer_v2.h</label>
+        <link refid="d4/dc6/CPMTowerAuxContainer__v2_8h_source"/>
+        <childnode refid="360339" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360129">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCaloEvent/xAODCaloEvent/xAODCaloEventDict.h</label>
+        <link refid="d1/d56/xAODCaloEventDict_8h_source"/>
+      </node>
+      <node id="360351">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/JetElementAuxContainer.h</label>
+        <link refid="d6/df7/JetElementAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360273">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/TrackStateValidationAuxContainer.h</label>
+        <link refid="dc/da1/TrackStateValidationAuxContainer_8h_source"/>
+      </node>
+      <node id="360292">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigEgamma/xAODTrigEgamma/versions/TrigElectronAuxContainer_v1.h</label>
+        <link refid="d4/d40/TrigElectronAuxContainer__v1_8h_source"/>
+        <childnode refid="360293" relation="include">
+        </childnode>
+        <childnode refid="360289" relation="include">
+        </childnode>
+      </node>
+      <node id="360257">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/tauRecTools/TauProcessorTool.h</label>
+        <link refid="de/d4c/TauProcessorTool_8h_source"/>
+      </node>
+      <node id="360252">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/tauRecTools/TauBuilderTool.h</label>
+        <link refid="d1/d6b/TauBuilderTool_8h_source"/>
+      </node>
+      <node id="360212">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODPFlow/xAODPFlow/PFOAuxContainer.h</label>
+        <link refid="d7/df1/PFOAuxContainer_8h_source"/>
+        <childnode refid="360213" relation="include">
+        </childnode>
+        <childnode refid="360214" relation="include">
+        </childnode>
+        <childnode refid="360133" relation="include">
+        </childnode>
+        <childnode refid="360215" relation="include">
+        </childnode>
+      </node>
+      <node id="360210">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODParticleEvent/xAODParticleEvent/ParticleAuxContainer.h</label>
+        <link refid="d0/db7/ParticleAuxContainer_8h_source"/>
+        <childnode refid="360208" relation="include">
+        </childnode>
+      </node>
+      <node id="360178">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODHIEvent/xAODHIEvent/versions/HIEventShapeAuxContainer_v2.h</label>
+        <link refid="db/d46/HIEventShapeAuxContainer__v2_8h_source"/>
+        <childnode refid="360179" relation="include">
+        </childnode>
+        <childnode refid="360177" relation="include">
+        </childnode>
+      </node>
+      <node id="360335">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/CPMRoIAuxContainer.h</label>
+        <link refid="da/dae/CPMRoIAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360364">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/versions/TrigSpacePointCountsAuxContainer_v1.h</label>
+        <link refid="de/dd2/TrigSpacePointCountsAuxContainer__v1_8h_source"/>
+        <childnode refid="360365" relation="include">
+        </childnode>
+        <childnode refid="360363" relation="include">
+        </childnode>
+      </node>
+      <node id="360348">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/JEMTobRoIAuxContainer_v1.h</label>
+        <link refid="da/d06/JEMTobRoIAuxContainer__v1_8h_source"/>
+        <childnode refid="360349" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360283">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigCalo/xAODTrigCalo/TrigCaloClusterAuxContainer.h</label>
+        <link refid="d2/d0f/TrigCaloClusterAuxContainer_8h_source"/>
+      </node>
+      <node id="360242">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/TauPi0ScoreCalculator.h</label>
+        <link refid="d3/d33/TauPi0ScoreCalculator_8h_source"/>
+      </node>
+      <node id="360261">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/versions/NeutralParticleAuxContainer_v1.h</label>
+        <link refid="d6/dea/NeutralParticleAuxContainer__v1_8h_source"/>
+        <childnode refid="360262" relation="include">
+        </childnode>
+        <childnode refid="360263" relation="include">
+        </childnode>
+      </node>
+      <node id="360277">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigBphys/xAODTrigBphys/TrigBphysAuxContainer.h</label>
+        <link refid="d0/db7/TrigBphysAuxContainer_8h_source"/>
+      </node>
+      <node id="360167">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/AFPTrackAuxContainer.h</label>
+        <link refid="de/df5/AFPTrackAuxContainer_8h_source"/>
+        <childnode refid="360161" relation="include">
+        </childnode>
+      </node>
+      <node id="360404">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTruth/xAODTruth/TruthVertexAuxContainer.h</label>
+        <link refid="de/df2/TruthVertexAuxContainer_8h_source"/>
+      </node>
+      <node id="360150">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CPAnalysisExamples/CPAnalysisExamples/xExampleEDM.h</label>
+        <link refid="da/d33/xExampleEDM_8h_source"/>
+      </node>
+      <node id="360123">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBTagging/xAODBTagging/xAODBTaggingDict.h</label>
+        <link refid="d4/d46/xAODBTaggingDict_8h_source"/>
+      </node>
+      <node id="360299">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/versions/EmTauRoIAuxContainer_v1.h</label>
+        <link refid="dd/dbd/EmTauRoIAuxContainer__v1_8h_source"/>
+        <childnode refid="360300" relation="include">
+        </childnode>
+        <childnode refid="360298" relation="include">
+        </childnode>
+      </node>
+      <node id="360313">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMMCPHitsAuxContainer_v1.h</label>
+        <link refid="d3/dc6/CMMCPHitsAuxContainer__v1_8h_source"/>
+        <childnode refid="360314" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360166">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/Root/AFPTrackAuxContainer_v1.cxx</label>
+        <link refid="df/d1c/AFPTrackAuxContainer__v1_8cxx"/>
+      </node>
+      <node id="360213">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/TauPi0ClusterCreator.h</label>
+        <link refid="dc/ddc/TauPi0ClusterCreator_8h_source"/>
+      </node>
+      <node id="360317">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/CMMEtSumsAuxContainer.h</label>
+        <link refid="d3/d43/CMMEtSumsAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360229">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/Test__tauRecToolsTest.h</label>
+        <link refid="df/d92/Test____tauRecToolsTest_8h_source"/>
+      </node>
+      <node id="360278">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigBphys/xAODTrigBphys/xAODTrigBphysDict.h</label>
+        <link refid="d0/dda/xAODTrigBphysDict_8h_source"/>
+      </node>
+      <node id="360328">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMXJetTobAuxContainer_v1.h</label>
+        <link refid="d8/df7/CMXJetTobAuxContainer__v1_8h_source"/>
+        <childnode refid="360329" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360311">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/versions/TrigPassBitsAuxContainer_v1.h</label>
+        <link refid="d2/d33/TrigPassBitsAuxContainer__v1_8h_source"/>
+        <childnode refid="360312" relation="include">
+        </childnode>
+        <childnode refid="360298" relation="include">
+        </childnode>
+      </node>
+      <node id="360220">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTau/xAODTau/versions/TauJetAuxContainer_v2.h</label>
+        <link refid="d9/d17/TauJetAuxContainer__v2_8h_source"/>
+        <childnode refid="360221" relation="include">
+        </childnode>
+        <childnode refid="360218" relation="include">
+        </childnode>
+      </node>
+      <node id="360133">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/TauShotFinder.h</label>
+        <link refid="dd/d24/TauShotFinder_8h_source"/>
+      </node>
+      <node id="360396">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTruth/xAODTruth/TruthMetaDataAuxContainer.h</label>
+        <link refid="db/da7/TruthMetaDataAuxContainer_8h_source"/>
+      </node>
+      <node id="360255">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/tauRecTools/TauGenericPi0Cone.h</label>
+        <link refid="d6/de8/TauGenericPi0Cone_8h_source"/>
+        <childnode refid="360249" relation="include">
+        </childnode>
+      </node>
+      <node id="360127">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBTagging/xAODBTagging/BTagVertexAuxContainer.h</label>
+        <link refid="d7/dfd/BTagVertexAuxContainer_8h_source"/>
+        <childnode refid="360123" relation="include">
+        </childnode>
+      </node>
+      <node id="360330">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMXRoIAuxContainer_v1.h</label>
+        <link refid="d0/dc3/CMXRoIAuxContainer__v1_8h_source"/>
+        <childnode refid="360331" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360285">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigCalo/xAODTrigCalo/versions/TrigEMClusterAuxContainer_v2.h</label>
+        <link refid="dd/d4e/TrigEMClusterAuxContainer__v2_8h_source"/>
+        <childnode refid="360286" relation="include">
+        </childnode>
+        <childnode refid="360281" relation="include">
+        </childnode>
+      </node>
+      <node id="360355">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/RODHeaderAuxContainer_v1.h</label>
+        <link refid="d5/dda/RODHeaderAuxContainer__v1_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360120">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODAssociations/xAODAssociations/xAODAssociationsDict.h</label>
+        <link refid="db/dd9/xAODAssociationsDict_8h_source"/>
+      </node>
+      <node id="360329">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/CMXJetTobAuxContainer.h</label>
+        <link refid="d0/d26/CMXJetTobAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360205">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMuon/xAODMuon/SlowMuonAuxContainer.h</label>
+        <link refid="dc/df2/SlowMuonAuxContainer_8h_source"/>
+        <childnode refid="360198" relation="include">
+        </childnode>
+      </node>
+      <node id="360289">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigEgamma/xAODTrigEgamma/xAODTrigEgammaDict.h</label>
+        <link refid="df/d0a/xAODTrigEgammaDict_8h_source"/>
+      </node>
+      <node id="360159">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/versions/AFPDataAuxContainer_v1.h</label>
+        <link refid="d1/dae/AFPDataAuxContainer__v1_8h_source"/>
+        <childnode refid="360160" relation="include">
+        </childnode>
+        <childnode refid="360161" relation="include">
+        </childnode>
+      </node>
+      <node id="360158">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEventInfo/xAODEventInfo/xAODEventInfoDict.h</label>
+        <link refid="df/dc1/xAODEventInfoDict_8h_source"/>
+      </node>
+      <node id="360118">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODAssociations/xAODAssociations/versions/TrackParticleClusterAssociationAuxContainer_v1.h</label>
+        <link refid="d9/d5b/TrackParticleClusterAssociationAuxContainer__v1_8h_source"/>
+        <childnode refid="360119" relation="include">
+        </childnode>
+      </node>
+      <node id="360341">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/JEMEtSumsAuxContainer_v1.h</label>
+        <link refid="d5/de9/JEMEtSumsAuxContainer__v1_8h_source"/>
+        <childnode refid="360342" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360254">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/tauRecTools/TauCommonCalcVars.h</label>
+        <link refid="da/d25/TauCommonCalcVars_8h_source"/>
+        <childnode refid="360249" relation="include">
+        </childnode>
+      </node>
+      <node id="360363">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/xAODTrigMinBiasDict.h</label>
+        <link refid="d4/d4e/xAODTrigMinBiasDict_8h_source"/>
+      </node>
+      <node id="360223">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/tauRecTools/ITauToolBase.h</label>
+        <link refid="da/de1/ITauToolBase_8h_source"/>
+        <childnode refid="360224" relation="include">
+        </childnode>
+        <childnode refid="360229" relation="include">
+        </childnode>
+        <childnode refid="360230" relation="include">
+        </childnode>
+      </node>
+      <node id="360236">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/TauCalibrateEM.h</label>
+        <link refid="d4/dd8/TauCalibrateEM_8h_source"/>
+      </node>
+      <node id="360401">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTruth/xAODTruth/versions/TruthPileupEventAuxContainer_v1.h</label>
+        <link refid="d8/d47/TruthPileupEventAuxContainer__v1_8h_source"/>
+        <childnode refid="360402" relation="include">
+        </childnode>
+        <childnode refid="360394" relation="include">
+        </childnode>
+      </node>
+      <node id="360326">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMXJetHitsAuxContainer_v1.h</label>
+        <link refid="df/d0e/CMXJetHitsAuxContainer__v1_8h_source"/>
+        <childnode refid="360327" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360165">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/versions/AFPTrackAuxContainer_v1.h</label>
+        <link refid="d3/dfe/AFPTrackAuxContainer__v1_8h"/>
+        <childnode refid="360166" relation="include">
+        </childnode>
+        <childnode refid="360167" relation="include">
+        </childnode>
+        <childnode refid="360161" relation="include">
+        </childnode>
+      </node>
+      <node id="360352">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/JetElementAuxContainer_v2.h</label>
+        <link refid="d0/de4/JetElementAuxContainer__v2_8h_source"/>
+        <childnode refid="360351" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360346">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/JEMRoIAuxContainer_v1.h</label>
+        <link refid="df/daa/JEMRoIAuxContainer__v1_8h_source"/>
+        <childnode refid="360347" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360230">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/tauRecTools/TauRecToolBase.h</label>
+        <link refid="d4/d53/TauRecToolBase_8h_source"/>
+        <childnode refid="360231" relation="include">
+        </childnode>
+        <childnode refid="360232" relation="include">
+        </childnode>
+        <childnode refid="360233" relation="include">
+        </childnode>
+        <childnode refid="360234" relation="include">
+        </childnode>
+        <childnode refid="360235" relation="include">
+        </childnode>
+        <childnode refid="360236" relation="include">
+        </childnode>
+        <childnode refid="360237" relation="include">
+        </childnode>
+        <childnode refid="360238" relation="include">
+        </childnode>
+        <childnode refid="360239" relation="include">
+        </childnode>
+        <childnode refid="360240" relation="include">
+        </childnode>
+        <childnode refid="360213" relation="include">
+        </childnode>
+        <childnode refid="360214" relation="include">
+        </childnode>
+        <childnode refid="360241" relation="include">
+        </childnode>
+        <childnode refid="360242" relation="include">
+        </childnode>
+        <childnode refid="360243" relation="include">
+        </childnode>
+        <childnode refid="360133" relation="include">
+        </childnode>
+        <childnode refid="360244" relation="include">
+        </childnode>
+        <childnode refid="360245" relation="include">
+        </childnode>
+        <childnode refid="360246" relation="include">
+        </childnode>
+        <childnode refid="360247" relation="include">
+        </childnode>
+        <childnode refid="360248" relation="include">
+        </childnode>
+        <childnode refid="360250" relation="include">
+        </childnode>
+        <childnode refid="360251" relation="include">
+        </childnode>
+        <childnode refid="360252" relation="include">
+        </childnode>
+        <childnode refid="360253" relation="include">
+        </childnode>
+        <childnode refid="360254" relation="include">
+        </childnode>
+        <childnode refid="360255" relation="include">
+        </childnode>
+        <childnode refid="360256" relation="include">
+        </childnode>
+        <childnode refid="360257" relation="include">
+        </childnode>
+        <childnode refid="360258" relation="include">
+        </childnode>
+        <childnode refid="360259" relation="include">
+        </childnode>
+        <childnode refid="360260" relation="include">
+        </childnode>
+      </node>
+      <node id="360138">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCutFlow/xAODCutFlow/versions/CutBookkeeperAuxContainer_v1.h</label>
+        <link refid="d0/d1f/CutBookkeeperAuxContainer__v1_8h_source"/>
+        <childnode refid="360139" relation="include">
+        </childnode>
+      </node>
+      <node id="360240">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/TauElectronVetoVariables.h</label>
+        <link refid="d6/d2f/TauElectronVetoVariables_8h_source"/>
+      </node>
+      <node id="360362">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/TrigHisto2DAuxContainer.h</label>
+        <link refid="dc/d3d/TrigHisto2DAuxContainer_8h_source"/>
+      </node>
+      <node id="360333">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/CPMHitsAuxContainer.h</label>
+        <link refid="d7/db2/CPMHitsAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360290">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigEgamma/xAODTrigEgamma/versions/PhotonTrigAuxContainer_v1.h</label>
+        <link refid="d1/dca/PhotonTrigAuxContainer__v1_8h_source"/>
+        <childnode refid="360291" relation="include">
+        </childnode>
+        <childnode refid="360289" relation="include">
+        </childnode>
+      </node>
+      <node id="360228">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauAnalysisToolsDict.h</label>
+        <link refid="d8/d1b/TauAnalysisToolsDict_8h_source"/>
+      </node>
+      <node id="360147">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/versions/ElectronAuxContainer_v2.h</label>
+        <link refid="dc/d0b/ElectronAuxContainer__v2_8h_source"/>
+        <childnode refid="360145" relation="include">
+        </childnode>
+      </node>
+      <node id="360184">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODLuminosity/xAODLuminosity/BCMRawDataAuxContainer.h</label>
+        <link refid="d6/dab/BCMRawDataAuxContainer_8h_source"/>
+      </node>
+      <node id="360235">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/TauAxisSetter.h</label>
+        <link refid="d6/d38/TauAxisSetter_8h_source"/>
+      </node>
+      <node id="360384">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMuon/xAODTrigMuon/L2StandAloneMuonAuxContainer.h</label>
+        <link refid="df/da3/L2StandAloneMuonAuxContainer_8h_source"/>
+      </node>
+      <node id="360221">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTau/xAODTau/TauJetAuxContainer.h</label>
+        <link refid="d1/dff/TauJetAuxContainer_8h_source"/>
+        <childnode refid="360150" relation="include">
+        </childnode>
+        <childnode refid="360222" relation="include">
+        </childnode>
+        <childnode refid="360218" relation="include">
+        </childnode>
+      </node>
+      <node id="360374">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMissingET/xAODTrigMissingET/versions/TrigMissingETAuxContainer_v1.h</label>
+        <link refid="d2/dfb/TrigMissingETAuxContainer__v1_8h_source"/>
+        <childnode refid="360375" relation="include">
+        </childnode>
+        <childnode refid="360376" relation="include">
+        </childnode>
+      </node>
+      <node id="360394">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTruth/xAODTruth/xAODTruthDict.h</label>
+        <link refid="de/d85/xAODTruthDict_8h_source"/>
+      </node>
+      <node id="360247">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/TauVertexVariables.h</label>
+        <link refid="dc/d50/TauVertexVariables_8h_source"/>
+      </node>
+      <node id="360381">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMuon/xAODTrigMuon/L2IsoMuonAuxContainer.h</label>
+        <link refid="db/dc0/L2IsoMuonAuxContainer_8h_source"/>
+      </node>
+      <node id="360152">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/versions/PhotonAuxContainer_v3.h</label>
+        <link refid="d7/d76/PhotonAuxContainer__v3_8h_source"/>
+        <childnode refid="360153" relation="include">
+        </childnode>
+        <childnode refid="360145" relation="include">
+        </childnode>
+      </node>
+      <node id="360187">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODLuminosity/xAODLuminosity/LumiBlockRangeAuxContainer.h</label>
+        <link refid="d5/dc4/LumiBlockRangeAuxContainer_8h_source"/>
+      </node>
+      <node id="360225">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauSmearingRun1Tool.h</label>
+        <link refid="de/d49/TauSmearingRun1Tool_8h_source"/>
+      </node>
+      <node id="360334">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CPMRoIAuxContainer_v1.h</label>
+        <link refid="d0/d10/CPMRoIAuxContainer__v1_8h_source"/>
+        <childnode refid="360335" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360373">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/TrigVertexCountsAuxContainer.h</label>
+        <link refid="da/d58/TrigVertexCountsAuxContainer_8h_source"/>
+      </node>
+      <node id="360250">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/tauRecTools/MvaTESEvaluator.h</label>
+        <link refid="d4/df1/MvaTESEvaluator_8h_source"/>
+        <childnode refid="360249" relation="include">
+        </childnode>
+      </node>
+      <node id="360143">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/EgammaAuxContainer.h</label>
+        <link refid="d4/d45/EgammaAuxContainer_8h_source"/>
+      </node>
+      <node id="360154">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEventInfo/xAODEventInfo/versions/EventInfoAuxContainer_v1.h</label>
+        <link refid="df/d97/EventInfoAuxContainer__v1_8h_source"/>
+        <childnode refid="360155" relation="include">
+        </childnode>
+        <childnode refid="360158" relation="include">
+        </childnode>
+      </node>
+      <node id="360206">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODParticleEvent/xAODParticleEvent/versions/CompositeParticleAuxContainer_v1.h</label>
+        <link refid="de/d67/CompositeParticleAuxContainer__v1_8h_source"/>
+        <childnode refid="360207" relation="include">
+        </childnode>
+      </node>
+      <node id="360176">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODHIEvent/xAODHIEvent/versions/HIEventShapeAuxContainer_v1.h</label>
+        <link refid="db/d8d/HIEventShapeAuxContainer__v1_8h_source"/>
+        <childnode refid="360177" relation="include">
+        </childnode>
+      </node>
+      <node id="360191">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/MissingETAuxAssociationMap.h</label>
+        <link refid="d4/df2/MissingETAuxAssociationMap_8h_source"/>
+        <childnode refid="360189" relation="include">
+        </childnode>
+      </node>
+      <node id="360181">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODJet/xAODJet/JetAuxContainer.h</label>
+        <link refid="d6/d1b/JetAuxContainer_8h_source"/>
+        <childnode refid="360150" relation="include">
+        </childnode>
+        <childnode refid="360156" relation="include">
+        </childnode>
+        <childnode refid="360132" relation="include">
+        </childnode>
+      </node>
+      <node id="360391">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigRinger/xAODTrigRinger/versions/TrigRNNOutputAuxContainer_v2.h</label>
+        <link refid="d2/dd1/TrigRNNOutputAuxContainer__v2_8h_source"/>
+        <childnode refid="360390" relation="include">
+        </childnode>
+        <childnode refid="360387" relation="include">
+        </childnode>
+      </node>
+      <node id="360379">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMuon/xAODTrigMuon/xAODTrigMuonDict.h</label>
+        <link refid="db/da6/xAODTrigMuonDict_8h_source"/>
+      </node>
+      <node id="360357">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/RODHeaderAuxContainer.h</label>
+        <link refid="d0/d5e/RODHeaderAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360388">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigRinger/xAODTrigRinger/versions/TrigRingerRingsAuxContainer_v2.h</label>
+        <link refid="da/df5/TrigRingerRingsAuxContainer__v2_8h_source"/>
+        <childnode refid="360386" relation="include">
+        </childnode>
+        <childnode refid="360387" relation="include">
+        </childnode>
+      </node>
+      <node id="360171">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/ForwardEventInfoAuxContainer.h</label>
+        <link refid="d2/d64/ForwardEventInfoAuxContainer_8h_source"/>
+        <childnode refid="360161" relation="include">
+        </childnode>
+      </node>
+      <node id="360309">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTriggerCnv/xAODTriggerCnv/TriggerMenuMetaDataTool.h</label>
+        <link refid="d2/dd2/TriggerMenuMetaDataTool_8h_source"/>
+        <childnode refid="360310" relation="include">
+        </childnode>
+      </node>
+      <node id="360336">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CPMTobRoIAuxContainer_v1.h</label>
+        <link refid="d0/dab/CPMTobRoIAuxContainer__v1_8h_source"/>
+        <childnode refid="360337" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360279">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigCalo/xAODTrigCalo/versions/CaloClusterTrigAuxContainer_v1.h</label>
+        <link refid="d3/d4f/CaloClusterTrigAuxContainer__v1_8h_source"/>
+        <childnode refid="360280" relation="include">
+        </childnode>
+        <childnode refid="360281" relation="include">
+        </childnode>
+      </node>
+      <node id="360190">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETAuxAssociationMap_v2.h</label>
+        <link refid="d0/d2d/MissingETAuxAssociationMap__v2_8h_source"/>
+        <childnode refid="360191" relation="include">
+        </childnode>
+      </node>
+      <node id="360125">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBTagging/xAODBTagging/BTaggingTrigAuxContainer.h</label>
+        <link refid="d5/d38/BTaggingTrigAuxContainer_8h_source"/>
+        <childnode refid="360123" relation="include">
+        </childnode>
+      </node>
+      <node id="360239">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/TauConversionTagger.h</label>
+        <link refid="d2/de8/TauConversionTagger_8h_source"/>
+      </node>
+      <node id="360403">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTruth/xAODTruth/versions/TruthVertexAuxContainer_v1.h</label>
+        <link refid="db/dc5/TruthVertexAuxContainer__v1_8h_source"/>
+        <childnode refid="360404" relation="include">
+        </childnode>
+        <childnode refid="360394" relation="include">
+        </childnode>
+      </node>
+      <node id="360284">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigCalo/xAODTrigCalo/versions/TrigEMClusterAuxContainer_v1.h</label>
+        <link refid="d5/dec/TrigEMClusterAuxContainer__v1_8h_source"/>
+        <childnode refid="360281" relation="include">
+        </childnode>
+      </node>
+      <node id="360202">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMuon/xAODMuon/versions/MuonSegmentAuxContainer_v1.h</label>
+        <link refid="d4/d6d/MuonSegmentAuxContainer__v1_8h_source"/>
+        <childnode refid="360203" relation="include">
+        </childnode>
+      </node>
+      <node id="360119">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODAssociations/xAODAssociations/TrackParticleClusterAssociationAuxContainer.h</label>
+        <link refid="d6/d49/TrackParticleClusterAssociationAuxContainer_8h_source"/>
+        <childnode refid="360120" relation="include">
+        </childnode>
+      </node>
+      <node id="360361">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/versions/TrigHisto2DAuxContainer_v1.h</label>
+        <link refid="d7/d87/TrigHisto2DAuxContainer__v1_8h_source"/>
+        <childnode refid="360362" relation="include">
+        </childnode>
+        <childnode refid="360363" relation="include">
+        </childnode>
+      </node>
+      <node id="360267">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/TrackMeasurementValidationAuxContainer.h</label>
+        <link refid="d1/d8d/TrackMeasurementValidationAuxContainer_8h_source"/>
+      </node>
+      <node id="360268">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/versions/TrackParticleAuxContainer_v1.h</label>
+        <link refid="d4/dda/TrackParticleAuxContainer__v1_8h_source"/>
+        <childnode refid="360263" relation="include">
+        </childnode>
+      </node>
+      <node id="360356">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/RODHeaderAuxContainer_v2.h</label>
+        <link refid="d6/dfd/RODHeaderAuxContainer__v2_8h_source"/>
+        <childnode refid="360357" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360291">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigEgamma/xAODTrigEgamma/PhotonTrigAuxContainer.h</label>
+        <link refid="d4/d9d/PhotonTrigAuxContainer_8h_source"/>
+        <childnode refid="360289" relation="include">
+        </childnode>
+      </node>
+      <node id="360300">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/EmTauRoIAuxContainer.h</label>
+        <link refid="d9/dc8/EmTauRoIAuxContainer_8h_source"/>
+      </node>
+      <node id="360226">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauSmearingTool.h</label>
+        <link refid="d8/d3c/TauSmearingTool_8h_source"/>
+        <childnode refid="360227" relation="include">
+        </childnode>
+        <childnode refid="360228" relation="include">
+        </childnode>
+      </node>
+      <node id="360196">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OutputTool.h</label>
+        <link refid="de/dc7/OutputTool_8h_source"/>
+      </node>
+      <node id="360219">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTau/xAODTau/versions/TauJetAuxContainer_v1.h</label>
+        <link refid="df/d82/TauJetAuxContainer__v1_8h_source"/>
+        <childnode refid="360218" relation="include">
+        </childnode>
+      </node>
+      <node id="360378">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMuon/xAODTrigMuon/L2CombinedMuonAuxContainer.h</label>
+        <link refid="de/daa/L2CombinedMuonAuxContainer_8h_source"/>
+      </node>
+      <node id="360149">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/ElectronAuxContainer.h</label>
+        <link refid="d0/d13/ElectronAuxContainer_8h_source"/>
+        <childnode refid="360150" relation="include">
+        </childnode>
+      </node>
+      <node id="360145">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/xAODEgammaDict.h</label>
+        <link refid="d5/dc2/xAODEgammaDict_8h_source"/>
+      </node>
+      <node id="360122">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBTagging/xAODBTagging/BTaggingAuxContainer.h</label>
+        <link refid="d1/d3a/BTaggingAuxContainer_8h_source"/>
+        <childnode refid="360123" relation="include">
+        </childnode>
+      </node>
+      <node id="360393">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTruth/xAODTruth/TruthEventAuxContainer.h</label>
+        <link refid="d4/d8f/TruthEventAuxContainer_8h_source"/>
+      </node>
+      <node id="360372">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/versions/TrigVertexCountsAuxContainer_v1.h</label>
+        <link refid="d7/df8/TrigVertexCountsAuxContainer__v1_8h_source"/>
+        <childnode refid="360373" relation="include">
+        </childnode>
+        <childnode refid="360363" relation="include">
+        </childnode>
+      </node>
+      <node id="360183">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODLuminosity/xAODLuminosity/versions/BCMRawDataAuxContainer_v1.h</label>
+        <link refid="d6/ded/BCMRawDataAuxContainer__v1_8h_source"/>
+        <childnode refid="360184" relation="include">
+        </childnode>
+        <childnode refid="360185" relation="include">
+        </childnode>
+      </node>
+      <node id="360135">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCaloEvent/xAODCaloEvent/CaloTowerAuxContainer.h</label>
+        <link refid="d0/dd4/CaloTowerAuxContainer_8h_source"/>
+        <childnode refid="360129" relation="include">
+        </childnode>
+      </node>
+      <node id="360343">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/JEMEtSumsAuxContainer_v2.h</label>
+        <link refid="df/d7b/JEMEtSumsAuxContainer__v2_8h_source"/>
+        <childnode refid="360342" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360337">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/CPMTobRoIAuxContainer.h</label>
+        <link refid="de/dba/CPMTobRoIAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360231">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/JetSeedBuilder.h</label>
+        <link refid="d4/d46/JetSeedBuilder_8h_source"/>
+      </node>
+      <node id="360322">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMXCPTobAuxContainer_v1.h</label>
+        <link refid="d2/d30/CMXCPTobAuxContainer__v1_8h_source"/>
+        <childnode refid="360323" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360318">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMMJetHitsAuxContainer_v1.h</label>
+        <link refid="d0/d2f/CMMJetHitsAuxContainer__v1_8h_source"/>
+        <childnode refid="360319" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360358">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/TriggerTowerAuxContainer_v1.h</label>
+        <link refid="dc/dee/TriggerTowerAuxContainer__v1_8h_source"/>
+        <childnode refid="360359" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360380">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMuon/xAODTrigMuon/versions/L2IsoMuonAuxContainer_v1.h</label>
+        <link refid="dd/dce/L2IsoMuonAuxContainer__v1_8h_source"/>
+        <childnode refid="360381" relation="include">
+        </childnode>
+        <childnode refid="360379" relation="include">
+        </childnode>
+      </node>
+      <node id="360144">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/versions/ElectronAuxContainer_v1.h</label>
+        <link refid="d3/d57/ElectronAuxContainer__v1_8h_source"/>
+        <childnode refid="360145" relation="include">
+        </childnode>
+      </node>
+      <node id="360185">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODLuminosity/xAODLuminosity/xAODLuminosityDict.h</label>
+        <link refid="d4/d43/xAODLuminosityDict_8h_source"/>
+      </node>
+      <node id="360197">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMuon/xAODMuon/versions/MuonAuxContainer_v1.h</label>
+        <link refid="d7/dae/MuonAuxContainer__v1_8h_source"/>
+        <childnode refid="360198" relation="include">
+        </childnode>
+      </node>
+      <node id="360271">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/TrackParticleAuxContainer.h</label>
+        <link refid="d7/dba/TrackParticleAuxContainer_8h_source"/>
+      </node>
+      <node id="360192">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETAuxComponentMap_v1.h</label>
+        <link refid="d4/def/MissingETAuxComponentMap__v1_8h_source"/>
+        <childnode refid="360193" relation="include">
+        </childnode>
+      </node>
+      <node id="360359">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/TriggerTowerAuxContainer.h</label>
+        <link refid="df/de7/TriggerTowerAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360218">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTau/xAODTau/xAODTauDict.h</label>
+        <link refid="d6/da3/xAODTauDict_8h_source"/>
+      </node>
+      <node id="360398">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTruth/xAODTruth/TruthParticleAuxContainer.h</label>
+        <link refid="d4/d71/TruthParticleAuxContainer_8h_source"/>
+        <childnode refid="360399" relation="include">
+        </childnode>
+      </node>
+      <node id="360209">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODParticleEvent/xAODParticleEvent/versions/ParticleAuxContainer_v1.h</label>
+        <link refid="d4/de4/ParticleAuxContainer__v1_8h_source"/>
+        <childnode refid="360210" relation="include">
+        </childnode>
+      </node>
+      <node id="360316">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CMMEtSumsAuxContainer_v1.h</label>
+        <link refid="df/dee/CMMEtSumsAuxContainer__v1_8h_source"/>
+        <childnode refid="360317" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360264">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/versions/SCTRawHitValidationAuxContainer_v1.h</label>
+        <link refid="d6/da6/SCTRawHitValidationAuxContainer__v1_8h_source"/>
+        <childnode refid="360265" relation="include">
+        </childnode>
+        <childnode refid="360263" relation="include">
+        </childnode>
+      </node>
+      <node id="360164">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/AFPSiHitAuxContainer.h</label>
+        <link refid="d0/dc5/AFPSiHitAuxContainer_8h_source"/>
+        <childnode refid="360161" relation="include">
+        </childnode>
+      </node>
+      <node id="360315">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/xAODTrigL1CaloDict.h</label>
+        <link refid="d4/de9/xAODTrigL1CaloDict_8h_source"/>
+      </node>
+      <node id="360286">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigCalo/xAODTrigCalo/TrigEMClusterAuxContainer.h</label>
+        <link refid="d6/d16/TrigEMClusterAuxContainer_8h_source"/>
+      </node>
+      <node id="360303">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/JetRoIAuxContainer.h</label>
+        <link refid="db/d56/JetRoIAuxContainer_8h_source"/>
+      </node>
+      <node id="360397">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTruth/xAODTruth/versions/TruthParticleAuxContainer_v1.h</label>
+        <link refid="d7/d56/TruthParticleAuxContainer__v1_8h_source"/>
+        <childnode refid="360398" relation="include">
+        </childnode>
+        <childnode refid="360394" relation="include">
+        </childnode>
+      </node>
+      <node id="360180">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODJet/xAODJet/versions/JetAuxContainer_v1.h</label>
+        <link refid="db/dc5/JetAuxContainer__v1_8h_source"/>
+        <childnode refid="360181" relation="include">
+        </childnode>
+        <childnode refid="360182" relation="include">
+        </childnode>
+      </node>
+      <node id="360371">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/TrigTrackCountsAuxContainer.h</label>
+        <link refid="da/d09/TrigTrackCountsAuxContainer_8h_source"/>
+      </node>
+      <node id="360295">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigEgamma/xAODTrigEgamma/TrigPhotonAuxContainer.h</label>
+        <link refid="d8/da9/TrigPhotonAuxContainer_8h_source"/>
+      </node>
+      <node id="360402">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTruth/xAODTruth/TruthPileupEventAuxContainer.h</label>
+        <link refid="d8/d7b/TruthPileupEventAuxContainer_8h_source"/>
+      </node>
+      <node id="360368">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/versions/TrigT2ZdcSignalsAuxContainer_v1.h</label>
+        <link refid="d6/d99/TrigT2ZdcSignalsAuxContainer__v1_8h_source"/>
+        <childnode refid="360369" relation="include">
+        </childnode>
+        <childnode refid="360363" relation="include">
+        </childnode>
+      </node>
+      <node id="360142">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/versions/EgammaAuxContainer_v1.h</label>
+        <link refid="d5/ddf/EgammaAuxContainer__v1_8h_source"/>
+        <childnode refid="360143" relation="include">
+        </childnode>
+        <childnode refid="360144" relation="include">
+        </childnode>
+        <childnode refid="360146" relation="include">
+        </childnode>
+        <childnode refid="360145" relation="include">
+        </childnode>
+      </node>
+      <node id="360151">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/versions/PhotonAuxContainer_v2.h</label>
+        <link refid="de/df6/PhotonAuxContainer__v2_8h_source"/>
+        <childnode refid="360145" relation="include">
+        </childnode>
+      </node>
+      <node id="360365">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/TrigSpacePointCountsAuxContainer.h</label>
+        <link refid="d7/d85/TrigSpacePointCountsAuxContainer_8h_source"/>
+      </node>
+      <node id="360392">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTruth/xAODTruth/versions/TruthEventAuxContainer_v1.h</label>
+        <link refid="d9/d0e/TruthEventAuxContainer__v1_8h_source"/>
+        <childnode refid="360393" relation="include">
+        </childnode>
+        <childnode refid="360394" relation="include">
+        </childnode>
+      </node>
+      <node id="360282">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigCalo/xAODTrigCalo/versions/TrigCaloClusterAuxContainer_v1.h</label>
+        <link refid="d8/d31/TrigCaloClusterAuxContainer__v1_8h_source"/>
+        <childnode refid="360283" relation="include">
+        </childnode>
+        <childnode refid="360284" relation="include">
+        </childnode>
+        <childnode refid="360281" relation="include">
+        </childnode>
+      </node>
+      <node id="360232">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/LockTauContainers.h</label>
+        <link refid="dc/d4d/LockTauContainers_8h_source"/>
+      </node>
+      <node id="360162">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/versions/AFPSiHitAuxContainer_v1.h</label>
+        <link refid="d3/df1/AFPSiHitAuxContainer__v1_8h"/>
+        <childnode refid="360163" relation="include">
+        </childnode>
+        <childnode refid="360164" relation="include">
+        </childnode>
+        <childnode refid="360161" relation="include">
+        </childnode>
+      </node>
+      <node id="360386">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigRinger/xAODTrigRinger/TrigRingerRingsAuxContainer.h</label>
+        <link refid="db/d12/TrigRingerRingsAuxContainer_8h_source"/>
+      </node>
+      <node id="360312">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/TrigPassBitsAuxContainer.h</label>
+        <link refid="dc/d35/TrigPassBitsAuxContainer_8h_source"/>
+      </node>
+      <node id="360186">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODLuminosity/xAODLuminosity/versions/LumiBlockRangeAuxContainer_v1.h</label>
+        <link refid="db/de2/LumiBlockRangeAuxContainer__v1_8h_source"/>
+        <childnode refid="360187" relation="include">
+        </childnode>
+        <childnode refid="360185" relation="include">
+        </childnode>
+      </node>
+      <node id="360189">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/xAODMissingETDict.h</label>
+        <link refid="d3/d1b/xAODMissingETDict_8h_source"/>
+      </node>
+      <node id="360280">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigCalo/xAODTrigCalo/CaloClusterTrigAuxContainer.h</label>
+        <link refid="da/d2a/CaloClusterTrigAuxContainer_8h_source"/>
+      </node>
+      <node id="360306">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/MuonRoIAuxContainer.h</label>
+        <link refid="d3/d38/MuonRoIAuxContainer_8h_source"/>
+      </node>
+      <node id="360314">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/CMMCPHitsAuxContainer.h</label>
+        <link refid="d9/df5/CMMCPHitsAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360382">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMuon/xAODTrigMuon/versions/L2StandAloneMuonAuxContainer_v1.h</label>
+        <link refid="d8/df6/L2StandAloneMuonAuxContainer__v1_8h_source"/>
+        <childnode refid="360379" relation="include">
+        </childnode>
+      </node>
+      <node id="360249">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/tauRecTools/ToolsDef.h</label>
+        <link refid="d2/d39/ToolsDef_8h_source"/>
+      </node>
+      <node id="360137">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/xAODCoreDict.h</label>
+        <link refid="dd/daa/xAODCoreDict_8h_source"/>
+      </node>
+      <node id="360204">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMuon/xAODMuon/versions/SlowMuonAuxContainer_v1.h</label>
+        <link refid="d9/d69/SlowMuonAuxContainer__v1_8h_source"/>
+        <childnode refid="360205" relation="include">
+        </childnode>
+      </node>
+      <node id="360354">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/L1TopoRawDataAuxContainer.h</label>
+        <link refid="d5/ddf/L1TopoRawDataAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360132">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetUtils/test/ClusterData.h</label>
+        <link refid="dd/df4/ClusterData_8h_source"/>
+      </node>
+      <node id="360302">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/versions/JetRoIAuxContainer_v1.h</label>
+        <link refid="db/d55/JetRoIAuxContainer__v1_8h_source"/>
+        <childnode refid="360303" relation="include">
+        </childnode>
+        <childnode refid="360298" relation="include">
+        </childnode>
+      </node>
+      <node id="360389">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigRinger/xAODTrigRinger/versions/TrigRNNOutputAuxContainer_v1.h</label>
+        <link refid="d1/d64/TrigRNNOutputAuxContainer__v1_8h_source"/>
+        <childnode refid="360390" relation="include">
+        </childnode>
+        <childnode refid="360387" relation="include">
+        </childnode>
+      </node>
+      <node id="360222">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/tauRecTools/TauEventData.h</label>
+        <link refid="d3/d74/TauEventData_8h_source"/>
+        <childnode refid="360223" relation="include">
+        </childnode>
+        <childnode refid="360230" relation="include">
+        </childnode>
+      </node>
+      <node id="360385">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigRinger/xAODTrigRinger/versions/TrigRingerRingsAuxContainer_v1.h</label>
+        <link refid="d8/df4/TrigRingerRingsAuxContainer__v1_8h_source"/>
+        <childnode refid="360386" relation="include">
+        </childnode>
+        <childnode refid="360387" relation="include">
+        </childnode>
+      </node>
+      <node id="360305">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/versions/MuonRoIAuxContainer_v1.h</label>
+        <link refid="d5/d63/MuonRoIAuxContainer__v1_8h_source"/>
+        <childnode refid="360306" relation="include">
+        </childnode>
+        <childnode refid="360298" relation="include">
+        </childnode>
+      </node>
+      <node id="360248">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/tauRecTools/CombinedP4FromRecoTaus.h</label>
+        <link refid="df/d2d/CombinedP4FromRecoTaus_8h_source"/>
+        <childnode refid="360224" relation="include">
+        </childnode>
+        <childnode refid="360249" relation="include">
+        </childnode>
+      </node>
+      <node id="360188">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETAuxAssociationMap_v1.h</label>
+        <link refid="d3/d2d/MissingETAuxAssociationMap__v1_8h_source"/>
+        <childnode refid="360189" relation="include">
+        </childnode>
+      </node>
+      <node id="360400">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauTruthMatchingTool.h</label>
+        <link refid="d3/dce/TauTruthMatchingTool_8h_source"/>
+        <childnode refid="360228" relation="include">
+        </childnode>
+      </node>
+      <node id="360367">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/TrigT2MbtsBitsAuxContainer.h</label>
+        <link refid="d7/d53/TrigT2MbtsBitsAuxContainer_8h_source"/>
+      </node>
+      <node id="360349">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/JEMTobRoIAuxContainer.h</label>
+        <link refid="da/da3/JEMTobRoIAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360332">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/CPMHitsAuxContainer_v1.h</label>
+        <link refid="d6/d36/CPMHitsAuxContainer__v1_8h_source"/>
+        <childnode refid="360333" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360327">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/CMXJetHitsAuxContainer.h</label>
+        <link refid="dc/d77/CMXJetHitsAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360262">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/NeutralParticleAuxContainer.h</label>
+        <link refid="dd/df0/NeutralParticleAuxContainer_8h_source"/>
+      </node>
+      <node id="360308">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/TriggerMenuAuxContainer.h</label>
+        <link refid="df/d8b/TriggerMenuAuxContainer_8h_source"/>
+        <childnode refid="360309" relation="include">
+        </childnode>
+      </node>
+      <node id="360130">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCaloEvent/xAODCaloEvent/versions/CaloClusterAuxContainer_v2.h</label>
+        <link refid="d5/d93/CaloClusterAuxContainer__v2_8h_source"/>
+        <childnode refid="360131" relation="include">
+        </childnode>
+        <childnode refid="360129" relation="include">
+        </childnode>
+      </node>
+      <node id="360258">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/tauRecTools/TauSubstructureVariables.h</label>
+        <link refid="d5/ddf/TauSubstructureVariables_8h_source"/>
+        <childnode refid="360249" relation="include">
+        </childnode>
+      </node>
+      <node id="360297">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigger/xAODTrigger/BunchConfAuxContainer.h</label>
+        <link refid="d4/d98/BunchConfAuxContainer_8h_source"/>
+      </node>
+      <node id="360376">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMissingET/xAODTrigMissingET/xAODTrigMissingETDict.h</label>
+        <link refid="d8/d13/xAODTrigMissingETDict_8h_source"/>
+      </node>
+      <node id="360325">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/CMXEtSumsAuxContainer.h</label>
+        <link refid="d8/da4/CMXEtSumsAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360208">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODParticleEvent/xAODParticleEvent/xAODParticleEventDict.h</label>
+        <link refid="d7/d8d/xAODParticleEventDict_8h_source"/>
+      </node>
+      <node id="360353">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/L1TopoRawDataAuxContainer_v1.h</label>
+        <link refid="d4/dee/L1TopoRawDataAuxContainer__v1_8h_source"/>
+        <childnode refid="360354" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360168">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODForward/xAODForward/versions/ALFADataAuxContainer_v1.h</label>
+        <link refid="d7/d55/ALFADataAuxContainer__v1_8h_source"/>
+        <childnode refid="360169" relation="include">
+        </childnode>
+        <childnode refid="360161" relation="include">
+        </childnode>
+      </node>
+      <node id="360269">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/versions/TrackParticleAuxContainer_v2.h</label>
+        <link refid="db/db7/TrackParticleAuxContainer__v2_8h_source"/>
+        <childnode refid="360263" relation="include">
+        </childnode>
+      </node>
+      <node id="360156">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetUncertainties/JetUncertainties/CorrelationMatrix.h</label>
+        <link refid="de/d0f/CorrelationMatrix_8h_source"/>
+      </node>
+      <node id="360275">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/VertexAuxContainer.h</label>
+        <link refid="d3/d49/VertexAuxContainer_8h_source"/>
+        <childnode refid="360247" relation="include">
+        </childnode>
+      </node>
+      <node id="360136">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/xAODCoreRflxDict.h</label>
+        <link refid="d2/d26/xAODCoreRflxDict_8h_source"/>
+        <childnode refid="360137" relation="include">
+        </childnode>
+      </node>
+      <node id="360256">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/tauRecTools/TauIDPileupCorrection.h</label>
+        <link refid="da/d37/TauIDPileupCorrection_8h_source"/>
+        <childnode refid="360249" relation="include">
+        </childnode>
+      </node>
+      <node id="360243">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/src/TauPi0Selector.h</label>
+        <link refid="d8/dc1/TauPi0Selector_8h_source"/>
+      </node>
+      <node id="360347">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/JEMRoIAuxContainer.h</label>
+        <link refid="dd/da4/JEMRoIAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360140">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/src/SumOfWeightsComputations.h</label>
+        <link refid="d9/df9/SumOfWeightsComputations_8h_source"/>
+      </node>
+      <node id="360272">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTracking/xAODTracking/versions/TrackStateValidationAuxContainer_v1.h</label>
+        <link refid="d7/ddc/TrackStateValidationAuxContainer__v1_8h_source"/>
+        <childnode refid="360273" relation="include">
+        </childnode>
+        <childnode refid="360263" relation="include">
+        </childnode>
+      </node>
+      <node id="360281">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigCalo/xAODTrigCalo/xAODTrigCaloDict.h</label>
+        <link refid="d8/dd2/xAODTrigCaloDict_8h_source"/>
+      </node>
+      <node id="360370">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMinBias/xAODTrigMinBias/versions/TrigTrackCountsAuxContainer_v1.h</label>
+        <link refid="dd/de8/TrigTrackCountsAuxContainer__v1_8h_source"/>
+        <childnode refid="360371" relation="include">
+        </childnode>
+        <childnode refid="360363" relation="include">
+        </childnode>
+      </node>
+      <node id="360360">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/versions/TriggerTowerAuxContainer_v2.h</label>
+        <link refid="d1/d89/TriggerTowerAuxContainer__v2_8h_source"/>
+        <childnode refid="360359" relation="include">
+        </childnode>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360342">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigL1Calo/xAODTrigL1Calo/JEMEtSumsAuxContainer.h</label>
+        <link refid="d2/d15/JEMEtSumsAuxContainer_8h_source"/>
+        <childnode refid="360315" relation="include">
+        </childnode>
+      </node>
+      <node id="360375">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigMissingET/xAODTrigMissingET/TrigMissingETAuxContainer.h</label>
+        <link refid="dc/dc7/TrigMissingETAuxContainer_8h_source"/>
+      </node>
+      <node id="360288">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTrigEgamma/xAODTrigEgamma/ElectronTrigAuxContainer.h</label>
+        <link refid="dc/d5b/ElectronTrigAuxContainer_8h_source"/>
+        <childnode refid="360289" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="de/d65/classxAOD_1_1AuxContainerBase" prot="public">xAOD::AuxContainerBase</innerclass>
+    <innerclass refid="dd/d37/structxAOD_1_1AuxContainerBase_1_1TSAuxidSet" prot="private">xAOD::AuxContainerBase::TSAuxidSet</innerclass>
+    <innernamespace refid="dd/d59/namespaceSG">SG</innernamespace>
+    <innernamespace refid="dd/d44/namespacexAOD">xAOD</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d0/d70/AuxContainerBase_8h_1a533bf51c508dc1986c9b8754c681c7d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SG_BASES3</definition>
+        <argsstring>(xAOD::AuxContainerBase, SG::IAuxStore, SG::IAuxStoreIO, SG::IAuxStoreHolder)</argsstring>
+        <name>SG_BASES3</name>
+        <param>
+          <type><ref refid="de/d65/classxAOD_1_1AuxContainerBase" kindref="compound">xAOD::AuxContainerBase</ref></type>
+        </param>
+        <param>
+          <type><ref refid="dc/d05/classSG_1_1IAuxStore" kindref="compound">SG::IAuxStore</ref></type>
+        </param>
+        <param>
+          <type><ref refid="db/d37/classSG_1_1IAuxStoreIO" kindref="compound">SG::IAuxStoreIO</ref></type>
+        </param>
+        <param>
+          <type><ref refid="dc/d42/classSG_1_1IAuxStoreHolder" kindref="compound">SG::IAuxStoreHolder</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/AuxContainerBase.h" line="221"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Dear<sp/>emacs,<sp/>this<sp/>is<sp/>-*-<sp/>c++<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>AuxContainerBase.h<sp/>633391<sp/>2014-12-03<sp/>15:58:38Z<sp/>ssnyder<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>XAODCORE_AUXCONTAINERBASE_H</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>XAODCORE_AUXCONTAINERBASE_H</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>STL<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>EDM<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d6/d3e/IAuxStore_8h" kindref="compound" tooltip="Interface for non-const operations on an auxiliary store.">AthContainersInterfaces/IAuxStore.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d9/db5/IAuxStoreIO_8h" kindref="compound" tooltip="Interface providing I/O for a generic auxiliary store.">AthContainersInterfaces/IAuxStoreIO.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AthContainersInterfaces/IAuxStoreHolder.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/d22/threading_8h" kindref="compound" tooltip="Threading definitions.">AthContainers/tools/threading.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d6/dda/PackedContainer_8h" kindref="compound" tooltip="Container to hold aux data to be stored in a packed form.">AthContainers/PackedContainer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>XAOD_STANDALONE</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>include<sp/>&quot;AthenaKernel/ILockable.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>not<sp/>XAOD_STANDALONE</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Local<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODCore/AuxSelection.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Forward<sp/>declaration(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SG<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">IAuxTypeVector;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">xAOD<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="de/d65/classxAOD_1_1AuxContainerBase" refkind="compound"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="de/d65/classxAOD_1_1AuxContainerBase" kindref="compound">AuxContainerBase</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>SG::IAuxStore,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>SG::IAuxStoreIO,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>SG::IAuxStoreHolder</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>XAOD_STANDALONE</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>ILockable</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>not<sp/>XAOD_STANDALONE</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53" refid="de/d65/classxAOD_1_1AuxContainerBase_1af1b96ab47e53693b6ac1fbc426f97ec1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member" tooltip="Identifier for a particular aux data item.">SG::auxid_t</ref><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1af1b96ab47e53693b6ac1fbc426f97ec1" kindref="member" tooltip="The aux ID type definition.">auxid_t</ref>;</highlight></codeline>
+<codeline lineno="55" refid="de/d65/classxAOD_1_1AuxContainerBase_1a03785f5dc3c056c2844aa85b400b17da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="dd/dac/classSG_1_1unordered__set" kindref="compound">SG::auxid_set_t</ref><sp/><ref refid="dd/dac/classSG_1_1unordered__set" kindref="compound">auxid_set_t</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a607470123bbcc9ff49e9b6d1d908713c" kindref="member" tooltip="Default constructor.">AuxContainerBase</ref>(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>allowDynamicVars<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a607470123bbcc9ff49e9b6d1d908713c" kindref="member" tooltip="Default constructor.">AuxContainerBase</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase" kindref="compound">AuxContainerBase</ref>&amp;<sp/>parent<sp/>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a607470123bbcc9ff49e9b6d1d908713c" kindref="member" tooltip="Default constructor.">AuxContainerBase</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dc/d05/classSG_1_1IAuxStore" kindref="compound" tooltip="Interface for non-const operations on an auxiliary store.">SG::IAuxStore</ref>*<sp/>store<sp/>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1ab0cbc8fb53d52b6e7b54870f0d3aa7ad" kindref="member" tooltip="Destructor.">~AuxContainerBase</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase" kindref="compound">AuxContainerBase</ref>&amp;<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1af9ad8d05566f429b63711abea410bde9" kindref="member" tooltip="Assignment operator.">operator=</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase" kindref="compound">AuxContainerBase</ref>&amp;<sp/>rhs<sp/>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="dc/d05/classSG_1_1IAuxStore" kindref="compound" tooltip="Interface for non-const operations on an auxiliary store.">SG::IAuxStore</ref>*<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a95c2ba90ffb73ba97cc201f7ee161d97" kindref="member" tooltip="Get the currently used internal store object.">getStore</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a73e7691d63ed2168a6dc034882e0501b" kindref="member" tooltip="Set a different internal store object.">setStore</ref>(<sp/><ref refid="dc/d05/classSG_1_1IAuxStore" kindref="compound" tooltip="Interface for non-const operations on an auxiliary store.">SG::IAuxStore</ref>*<sp/>store<sp/>);</highlight></codeline>
+<codeline lineno="77" refid="de/d65/classxAOD_1_1AuxContainerBase_1a39e74adfd119e834ec218f897d790cfb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="dc/d42/classSG_1_1IAuxStoreHolder_1a52b405d522a75932698443c3f01611f9" kindref="member">AuxStoreType</ref><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a39e74adfd119e834ec218f897d790cfb" kindref="member" tooltip="Return the type of the store object.">getStoreType</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dc/d42/classSG_1_1IAuxStoreHolder_1a52b405d522a75932698443c3f01611f9a94fd1895e790e358290b074ea49edbe2" kindref="member" tooltip="The store describes a container.">AST_ContainerStore</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"></codeline>
+<codeline lineno="83"></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1abd931077f3f670a7b466100fc19d7be6" kindref="member" tooltip="Get a pointer to a given array.">getData</ref>(<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1af1b96ab47e53693b6ac1fbc426f97ec1" kindref="member" tooltip="The aux ID type definition.">auxid_t</ref><sp/>auxid<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a03785f5dc3c056c2844aa85b400b17da" kindref="member" tooltip="The aux ID set type definition.">auxid_set_t</ref>&amp;<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a7e2003cda04239dd53f2692982221a25" kindref="member" tooltip="Get the types(names) of variables handled by this container.">getAuxIDs</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1af911ebaa620ad08df6d75899e27bd21b" kindref="member" tooltip="Get a pointer to a given array, as a decoration.">getDecoration</ref>(<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1af1b96ab47e53693b6ac1fbc426f97ec1" kindref="member" tooltip="The aux ID type definition.">auxid_t</ref><sp/>auxid,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a1a8a180de3ed24bf7161ce0da86fdfb0" kindref="member" tooltip="Get the size of the container.">size</ref>,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>capacity<sp/>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a52541675fc27e485d755e514a22fcf4d" kindref="member" tooltip="Lock the container.">lock</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a27c734e6ded2c198eb31c995e5febf31" kindref="member" tooltip="Clear all decorations.">clearDecorations</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a1a8a180de3ed24bf7161ce0da86fdfb0" kindref="member" tooltip="Get the size of the container.">size</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"></codeline>
+<codeline lineno="107"></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1abd931077f3f670a7b466100fc19d7be6" kindref="member" tooltip="Get a pointer to a given array.">getData</ref>(<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1af1b96ab47e53693b6ac1fbc426f97ec1" kindref="member" tooltip="The aux ID type definition.">auxid_t</ref><sp/>auxid,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a1a8a180de3ed24bf7161ce0da86fdfb0" kindref="member" tooltip="Get the size of the container.">size</ref>,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>capacity<sp/>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a03785f5dc3c056c2844aa85b400b17da" kindref="member" tooltip="The aux ID set type definition.">auxid_set_t</ref>&amp;<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a3aad1dbe545c483a0facf9350a67724d" kindref="member" tooltip="Return a set of writable data identifiers.">getWritableAuxIDs</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a8e885c6f28a73c6e4e0bbd33b244f1c7" kindref="member" tooltip="Resize the arrays to a given size.">resize</ref>(<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a1a8a180de3ed24bf7161ce0da86fdfb0" kindref="member" tooltip="Get the size of the container.">size</ref><sp/>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a459706651829d59a33ace8bbc49bc173" kindref="member" tooltip="Reserve a given size for the arrays.">reserve</ref>(<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a1a8a180de3ed24bf7161ce0da86fdfb0" kindref="member" tooltip="Get the size of the container.">size</ref><sp/>);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a2282b0bd500c18d2c3d3b52c2287999c" kindref="member" tooltip="Shift the contents of the stored arrays.">shift</ref>(<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos,<sp/>ptrdiff_t<sp/>offs<sp/>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a564074605df56f289545e81781b27c94" kindref="member" tooltip="Make an option setting on an aux variable.">setOption</ref>(<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1af1b96ab47e53693b6ac1fbc426f97ec1" kindref="member" tooltip="The aux ID type definition.">auxid_t</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d7/d31/classSG_1_1AuxDataOption" kindref="compound" tooltip="Hold information about an option setting request.">SG::AuxDataOption</ref>&amp;<sp/>option<sp/>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"></codeline>
+<codeline lineno="128"></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a7152d204081065ad79e535d76f41e8db" kindref="member" tooltip="Get a pointer to the data being stored for one aux data item.">getIOData</ref>(<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1af1b96ab47e53693b6ac1fbc426f97ec1" kindref="member" tooltip="The aux ID type definition.">auxid_t</ref><sp/>auxid<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::type_info*<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1ae3851a65287f9115f7f6885e22662bf8" kindref="member" tooltip="Return the type of the data to be stored for one aux data item.">getIOType</ref>(<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1af1b96ab47e53693b6ac1fbc426f97ec1" kindref="member" tooltip="The aux ID type definition.">auxid_t</ref><sp/>auxid<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a03785f5dc3c056c2844aa85b400b17da" kindref="member" tooltip="The aux ID set type definition.">auxid_set_t</ref>&amp;<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a92646d86c4946fb3841dc3f53ab04485" kindref="member" tooltip="Get the types(names) of variables created dynamically.">getDynamicAuxIDs</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1ab69feb0eab5baa91ebb4750fd0a17c44" kindref="member" tooltip="Select dynamic Aux attributes by name (for writing).">selectAux</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::set&lt;<sp/>std::string<sp/>&gt;&amp;<sp/>attributes<sp/>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/dac/classSG_1_1unordered__set" kindref="compound">SG::auxid_set_t</ref>&amp;<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a6442be9f01736a35bc8ee8ebaed5767b" kindref="member" tooltip="Get the IDs of the selected dynamic Aux variables (for writing).">getSelectedAuxIDs</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"></codeline>
+<codeline lineno="148"></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1ae7e82d567c8c499ad429832170f2b4a6" kindref="member" tooltip="Get the name of the container instance.">name</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a17e0da702737d4bdd66aa4c4d5fcee43" kindref="member" tooltip="Set the name of the container instance.">setName</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1ae7e82d567c8c499ad429832170f2b4a6" kindref="member" tooltip="Get the name of the container instance.">name</ref><sp/>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T<sp/>&gt;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1ae1a4cd803cd96309193a7df23d581cab" kindref="member" tooltip="Register one of the persistent variables internally.">regAuxVar</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1ae7e82d567c8c499ad429832170f2b4a6" kindref="member" tooltip="Get the name of the container instance.">name</ref>,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;<sp/>T<sp/>&gt;&amp;<sp/>vec<sp/>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T<sp/>&gt;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1ae1a4cd803cd96309193a7df23d581cab" kindref="member" tooltip="Register one of the persistent variables internally.">regAuxVar</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1ae7e82d567c8c499ad429832170f2b4a6" kindref="member" tooltip="Get the name of the container instance.">name</ref>,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d01/classSG_1_1PackedContainer" kindref="compound" tooltip="Container to hold aux data to be stored in a packed form.">SG::PackedContainer&lt; T &gt;</ref>&amp;<sp/>vec<sp/>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ELT,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>CONT<sp/>&gt;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>regAuxVar1(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1ae7e82d567c8c499ad429832170f2b4a6" kindref="member" tooltip="Get the name of the container instance.">name</ref>,</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CONT&amp;<sp/>vec<sp/>);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d6/dd6/classxAOD_1_1AuxSelection" kindref="compound">AuxSelection</ref><sp/><sp/>m_selection;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a03785f5dc3c056c2844aa85b400b17da" kindref="member" tooltip="The aux ID set type definition.">auxid_set_t</ref><sp/>m_auxids;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;<sp/>SG::IAuxTypeVector*<sp/>&gt;<sp/>m_vecs;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dc/d05/classSG_1_1IAuxStore" kindref="compound" tooltip="Interface for non-const operations on an auxiliary store.">SG::IAuxStore</ref>*<sp/>m_store;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/d37/classSG_1_1IAuxStoreIO" kindref="compound" tooltip="Interface providing I/O for a generic auxiliary store.">SG::IAuxStoreIO</ref>*<sp/>m_storeIO;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_ownsStore;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_locked;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>m_tick;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>AthContainers_detail::mutex<sp/>mutex_t;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>AthContainers_detail::lock_guard&lt;<sp/>mutex_t<sp/>&gt;<sp/>guard_t;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>mutex_t<sp/>m_mutex;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">TSAuxidSet<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>m_tick;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a03785f5dc3c056c2844aa85b400b17da" kindref="member" tooltip="The aux ID set type definition.">auxid_set_t</ref><sp/>m_set;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TSAuxidSet(<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>tick,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase_1a03785f5dc3c056c2844aa85b400b17da" kindref="member" tooltip="The aux ID set type definition.">auxid_set_t</ref>&amp;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>m_tick(<sp/>tick<sp/>),<sp/>m_set(<sp/>set<sp/>)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>};<sp/></highlight><highlight class="comment">//<sp/>struct<sp/>TSAuxidSet</highlight></codeline>
+<codeline lineno="205"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>AthContainers_detail::thread_specific_ptr&lt;<sp/>TSAuxidSet<sp/>&gt;<sp/>m_tsAuxids;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>m_name;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/>};<sp/></highlight><highlight class="comment">//<sp/>class<sp/>AuxContainerBase</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>xAOD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Declare<sp/>a<sp/>class<sp/>ID<sp/>for<sp/>the<sp/>class:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d6/d20/xAODCore_2xAODCore_2CLASS__DEF_8h" kindref="compound" tooltip="File providing the different SG_BASE macros.">xAODCore/CLASS_DEF.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal">CLASS_DEF(<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase" kindref="compound">xAOD::AuxContainerBase</ref>,<sp/>1225080690,<sp/>1<sp/>)</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Describe<sp/>the<sp/>inheritance<sp/>of<sp/>the<sp/>class:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODCore/BaseInfo.h&quot;</highlight></codeline>
+<codeline lineno="220"><highlight class="preprocessor"></highlight><highlight class="normal">SG_BASES3(<sp/><ref refid="de/d65/classxAOD_1_1AuxContainerBase" kindref="compound">xAOD::AuxContainerBase</ref>,<sp/><ref refid="dc/d05/classSG_1_1IAuxStore" kindref="compound" tooltip="Interface for non-const operations on an auxiliary store.">SG::IAuxStore</ref>,<sp/><ref refid="db/d37/classSG_1_1IAuxStoreIO" kindref="compound" tooltip="Interface providing I/O for a generic auxiliary store.">SG::IAuxStoreIO</ref>,</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dc/d42/classSG_1_1IAuxStoreHolder" kindref="compound" tooltip="Interface for objects taking part in direct ROOT I/O.">SG::IAuxStoreHolder</ref><sp/>);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Include<sp/>the<sp/>template<sp/>implementation:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AuxContainerBase.icc&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>XAODCORE_AUXCONTAINERBASE_H</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/AuxContainerBase.h"/>
+  </compounddef>
+</doxygen>

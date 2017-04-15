@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dd/d1c/TIncident_8cxx" kind="file">
+    <compoundname>TIncident.cxx</compoundname>
+    <includes local="no">iostream</includes>
+    <includes refid="d4/d74/TIncident_8h" local="yes">xAODRootAccess/tools/TIncident.h</includes>
+    <incdepgraph>
+      <node id="410871">
+        <label>xAODRootAccess/tools/TIncident.h</label>
+        <link refid="d4/d74/TIncident_8h_source"/>
+        <childnode refid="410872" relation="include">
+        </childnode>
+        <childnode refid="410873" relation="include">
+        </childnode>
+      </node>
+      <node id="410873">
+        <label>Rtypes.h</label>
+      </node>
+      <node id="410872">
+        <label>iosfwd</label>
+      </node>
+      <node id="410870">
+        <label>iostream</label>
+      </node>
+      <node id="410869">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TIncident.cxx</label>
+        <link refid="TIncident.cxx"/>
+        <childnode refid="410870" relation="include">
+        </childnode>
+        <childnode refid="410871" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="dd/d44/namespacexAOD">xAOD</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="dd/d1c/TIncident_8cxx_1a469e362ce59d22deb6661f30bd9c55ed" prot="public" static="no">
+        <name>PRINT_TYPE</name>
+        <param><defname>TYPE</defname></param>
+        <initializer>case TYPE:                                   \
+      out &lt;&lt; #TYPE;                             \
+      break;</initializer>
+        <briefdescription>
+<para>Helper macro for printing the incident types as a string. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TIncident.cxx" line="27" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TIncident.cxx" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dd/d1c/TIncident_8cxx_1a6dfca3d0343b9c9924ecd4d0f6ea13ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, const xAOD::TIncident &amp;inc)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d7a/classxAOD_1_1TIncident" kindref="compound">xAOD::TIncident</ref> &amp;</type>
+          <declname>inc</declname>
+        </param>
+        <briefdescription>
+<para>Convenience print operator for <ref refid="d2/d7a/classxAOD_1_1TIncident" kindref="compound">xAOD::TIncident</ref> objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TIncident.cxx" line="29" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TIncident.cxx" bodystart="29" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>$Id:<sp/>TIncident.cxx<sp/>676314<sp/>2015-06-18<sp/>12:07:05Z<sp/>krasznaa<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>System<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Local<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODRootAccess/tools/TIncident.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">xAOD<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><ref refid="d2/d7a/classxAOD_1_1TIncident_1a4292549d930cb64c467cf9bd23d970ff" kindref="member" tooltip="Constructor with a type.">TIncident::TIncident</ref>(<sp/>::Int_t<sp/>type<sp/>)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>m_type(<sp/>type<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/>::Int_t<sp/><ref refid="d2/d7a/classxAOD_1_1TIncident_1a806d321d4dcaeecab1f530428daf09ba" kindref="member" tooltip="Return the type of the incident.">TIncident::type</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_type;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>xAOD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor">#define<sp/>PRINT_TYPE(<sp/>TYPE<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"><sp/><sp/><sp/>case<sp/>TYPE:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>#TYPE;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">std::ostream&amp;<sp/><ref refid="dd/d44/namespacexAOD_1aca6eae754ef5f4787adc2d58f81afc63" kindref="member" tooltip="Helper output operator for printing vector variables.">operator&lt;&lt; </ref>(<sp/>std::ostream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d2/d7a/classxAOD_1_1TIncident" kindref="compound">xAOD::TIncident</ref>&amp;<sp/>inc<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>a<sp/>prefix:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;xAOD::TIncident(&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>the<sp/>type<sp/>of<sp/>the<sp/>incident:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(<sp/>inc.<ref refid="d2/d7a/classxAOD_1_1TIncident_1a806d321d4dcaeecab1f530428daf09ba" kindref="member" tooltip="Return the type of the incident.">type</ref>()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/>xAOD::IncidentType::BeginInputFile<sp/>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/>xAOD::IncidentType::EndInputFile<sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/>xAOD::IncidentType::BeginEvent<sp/>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/>xAOD::IncidentType::MetaDataStop<sp/>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&lt;unknown&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>a<sp/>postfix:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>the<sp/>same<sp/>output<sp/>stream:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TIncident.cxx"/>
+  </compounddef>
+</doxygen>

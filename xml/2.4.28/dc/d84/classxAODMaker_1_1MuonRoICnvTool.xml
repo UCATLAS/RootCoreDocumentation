@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dc/d84/classxAODMaker_1_1MuonRoICnvTool" kind="class" prot="public">
+    <compoundname>xAODMaker::MuonRoICnvTool</compoundname>
+    <basecompoundref refid="d6/d46/classxAODMaker_1_1IMuonRoICnvTool" prot="public" virt="virtual">xAODMaker::IMuonRoICnvTool</basecompoundref>
+    <includes refid="da/d15/MuonRoICnvTool_8h" local="no">MuonRoICnvTool.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/d84/classxAODMaker_1_1MuonRoICnvTool_1aca22c8f96365c4d60f5e2c64c0f51f9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xAODMaker::MuonRoICnvTool::MuonRoICnvTool</definition>
+        <argsstring>(const std::string &amp;type, const std::string &amp;name, const IInterface *parent)</argsstring>
+        <name>MuonRoICnvTool</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const IInterface *</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+<para>Regular AlgTool constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTriggerCnv/src/MuonRoICnvTool.h" line="31" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTriggerCnv/src/MuonRoICnvTool.cxx" bodystart="14" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d84/classxAODMaker_1_1MuonRoICnvTool_1a131ba4164d538ad903dcce91ece3b174" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode xAODMaker::MuonRoICnvTool::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <briefdescription>
+<para>Function initialising the tool. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTriggerCnv/src/MuonRoICnvTool.h" line="34" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTriggerCnv/src/MuonRoICnvTool.cxx" bodystart="23" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d84/classxAODMaker_1_1MuonRoICnvTool_1aba274c5694ca3fe2623c5966c71e9f8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode xAODMaker::MuonRoICnvTool::convert</definition>
+        <argsstring>(const LVL1_ROI *aod, xAOD::MuonRoIContainer *xaod)</argsstring>
+        <name>convert</name>
+        <reimplements refid="d6/d46/classxAODMaker_1_1IMuonRoICnvTool_1a867e6d98bc5a39cdb3aa94ba5f11194c">convert</reimplements>
+        <param>
+          <type>const LVL1_ROI *</type>
+          <declname>aod</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::MuonRoIContainer</ref> *</type>
+          <declname>xaod</declname>
+        </param>
+        <briefdescription>
+<para>Function that fills an existing xAOD::MuonRoIContainer. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the important function of the tool. It takes the muon RoI objects from a LVL1_ROI container, and fills an xAOD::MuonRoIContainer with them.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aod</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The AOD object to take the muon RoIs from </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xaod</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> container to fill the RoIs into </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>StatusCode::SUCCESS</computeroutput> if all went fine, something else if not </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTriggerCnv/src/MuonRoICnvTool.h" line="38" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTriggerCnv/src/MuonRoICnvTool.cxx" bodystart="41" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation for the <ref refid="d6/d46/classxAODMaker_1_1IMuonRoICnvTool" kindref="compound">IMuonRoICnvTool</ref> interface. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is a simple tool that implements the converter function defined in <ref refid="d6/d46/classxAODMaker_1_1IMuonRoICnvTool" kindref="compound">IMuonRoICnvTool</ref>.</para><para><simplesect kind="author"><para>Attila Krasznahorkay &lt;<ulink url="mailto:Attila.Krasznahorkay@cern.ch">Attila.Krasznahorkay@cern.ch</ulink>&gt;</para></simplesect>
+<simplesect kind="rcs"><title>Revision</title><para>575635 </para></simplesect>
+<simplesect kind="rcs"><title>Date</title><para>2013-12-16 11:58:41 +0100 (Mon, 16 Dec 2013) </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="14726">
+        <label>xAODMaker::IMuonRoICnvTool</label>
+        <link refid="d6/d46/classxAODMaker_1_1IMuonRoICnvTool"/>
+      </node>
+      <node id="14725">
+        <label>xAODMaker::MuonRoICnvTool</label>
+        <link refid="dc/d84/classxAODMaker_1_1MuonRoICnvTool"/>
+        <childnode refid="14726" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="14728">
+        <label>xAODMaker::IMuonRoICnvTool</label>
+        <link refid="d6/d46/classxAODMaker_1_1IMuonRoICnvTool"/>
+      </node>
+      <node id="14727">
+        <label>xAODMaker::MuonRoICnvTool</label>
+        <link refid="dc/d84/classxAODMaker_1_1MuonRoICnvTool"/>
+        <childnode refid="14728" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTriggerCnv/src/MuonRoICnvTool.h" line="26" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODTriggerCnv/src/MuonRoICnvTool.h" bodystart="25" bodyend="40"/>
+    <listofallmembers>
+      <member refid="dc/d84/classxAODMaker_1_1MuonRoICnvTool_1aba274c5694ca3fe2623c5966c71e9f8c" prot="public" virt="virtual"><scope>xAODMaker::MuonRoICnvTool</scope><name>convert</name></member>
+      <member refid="dc/d84/classxAODMaker_1_1MuonRoICnvTool_1a131ba4164d538ad903dcce91ece3b174" prot="public" virt="virtual"><scope>xAODMaker::MuonRoICnvTool</scope><name>initialize</name></member>
+      <member refid="d6/d46/classxAODMaker_1_1IMuonRoICnvTool_1a74550ee9fd04a411926f9bff14ab438a" prot="public" virt="non-virtual"><scope>xAODMaker::MuonRoICnvTool</scope><name>interfaceID</name></member>
+      <member refid="dc/d84/classxAODMaker_1_1MuonRoICnvTool_1aca22c8f96365c4d60f5e2c64c0f51f9f" prot="public" virt="non-virtual"><scope>xAODMaker::MuonRoICnvTool</scope><name>MuonRoICnvTool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

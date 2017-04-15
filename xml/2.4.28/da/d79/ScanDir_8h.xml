@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="da/d79/ScanDir_8h" kind="file">
+    <compoundname>ScanDir.h</compoundname>
+    <includes refid="d3/df9/SampleHandler_2SampleHandler_2Global_8h" local="no">SampleHandler/Global.h</includes>
+    <includes refid="d2/d69/StringUtil_8h" local="no">RootCoreUtils/StringUtil.h</includes>
+    <includes local="no">map</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="dc/d0f/ScanDir_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/Root/ScanDir.cxx</includedby>
+    <includedby refid="d1/daf/ToolsDiscovery_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/Root/ToolsDiscovery.cxx</includedby>
+    <includedby refid="dc/dad/gt__SampleHandler_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/test/gt_SampleHandler.cxx</includedby>
+    <includedby refid="dd/d4f/gt__scan__dir_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/test/gt_scan_dir.cxx</includedby>
+    <includedby refid="dd/d2f/it__GridTools_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/test/it_GridTools.cxx</includedby>
+    <includedby refid="d1/dfe/gt__SUSYTools__xs__loader_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/test/gt_SUSYTools_xs_loader.cxx</includedby>
+    <includedby refid="d9/d6b/ut__SUSYTools__test__xs__files_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/test/ut_SUSYTools_test_xs_files.cxx</includedby>
+    <incdepgraph>
+      <node id="264719">
+        <label>string</label>
+      </node>
+      <node id="264720">
+        <label>map</label>
+      </node>
+      <node id="264721">
+        <label>vector</label>
+      </node>
+      <node id="264716">
+        <label>RootCoreUtils/StringUtil.h</label>
+        <link refid="d2/d69/StringUtil_8h_source"/>
+        <childnode refid="264717" relation="include">
+        </childnode>
+        <childnode refid="264718" relation="include">
+        </childnode>
+        <childnode refid="264719" relation="include">
+        </childnode>
+      </node>
+      <node id="264717">
+        <label>RootCoreUtils/Global.h</label>
+        <link refid="d6/d7f/RootCoreUtils_2RootCoreUtils_2Global_8h_source"/>
+      </node>
+      <node id="264714">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/ScanDir.h</label>
+        <link refid="ScanDir.h"/>
+        <childnode refid="264715" relation="include">
+        </childnode>
+        <childnode refid="264716" relation="include">
+        </childnode>
+        <childnode refid="264720" relation="include">
+        </childnode>
+        <childnode refid="264721" relation="include">
+        </childnode>
+      </node>
+      <node id="264718">
+        <label>boost/regex.hpp</label>
+      </node>
+      <node id="264715">
+        <label>SampleHandler/Global.h</label>
+        <link refid="d3/df9/SampleHandler_2SampleHandler_2Global_8h_source"/>
+      </node>
+    </incdepgraph>
+    <innerclass refid="d2/dc5/structSH_1_1ScanDir" prot="public">SH::ScanDir</innerclass>
+    <innernamespace refid="d0/d9e/namespaceSH">SH</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SAMPLE_HANDLER__SCAN_DIR_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SAMPLE_HANDLER__SCAN_DIR_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>Iowa<sp/>State<sp/>University<sp/>2015.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>Nils<sp/>Krumnack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>(See<sp/>accompanying<sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Please<sp/>feel<sp/>free<sp/>to<sp/>contact<sp/>me<sp/>(nils.erik.krumnack@cern.ch)<sp/>for<sp/>bug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>reports,<sp/>feature<sp/>suggestions,<sp/>praise<sp/>and<sp/>complaints.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SampleHandler/Global.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;RootCoreUtils/StringUtil.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SH</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="d2/dc5/structSH_1_1ScanDir" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d2/dc5/structSH_1_1ScanDir" kindref="compound" tooltip="the class used for scanning local directories and file servers for samples">ScanDir</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>public<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/dc5/structSH_1_1ScanDir_1ab844853123b53ee7396cebfddac00792" kindref="member" tooltip="standard constructor">ScanDir</ref><sp/>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d2/dc5/structSH_1_1ScanDir" kindref="compound" tooltip="the class used for scanning local directories and file servers for samples">ScanDir</ref>&amp;<sp/><ref refid="d2/dc5/structSH_1_1ScanDir_1aa48ef1ac50bd2c9cf738efda6a2db9ce" kindref="member" tooltip="scan the given directory and put the created samples into the sample handler">scan</ref><sp/>(<ref refid="d1/d56/classSH_1_1SampleHandler" kindref="compound" tooltip="A class that manages a list of Sample objects.">SampleHandler</ref>&amp;<sp/>sh,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>dir)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d2/dc5/structSH_1_1ScanDir" kindref="compound" tooltip="the class used for scanning local directories and file servers for samples">ScanDir</ref>&amp;<sp/><ref refid="d2/dc5/structSH_1_1ScanDir_1a3533cd6f2c522352fc8c5de9e359fbe2" kindref="member" tooltip="scan the given directory in EOS and put the created samples into the sample handler...">scanEOS</ref><sp/>(<ref refid="d1/d56/classSH_1_1SampleHandler" kindref="compound" tooltip="A class that manages a list of Sample objects.">SampleHandler</ref>&amp;<sp/>sh,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>eosDir)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d2/dc5/structSH_1_1ScanDir" kindref="compound" tooltip="the class used for scanning local directories and file servers for samples">ScanDir</ref>&amp;<sp/><ref refid="d2/dc5/structSH_1_1ScanDir_1aa48ef1ac50bd2c9cf738efda6a2db9ce" kindref="member" tooltip="scan the given directory and put the created samples into the sample handler">scan</ref><sp/>(<ref refid="d1/d56/classSH_1_1SampleHandler" kindref="compound" tooltip="A class that manages a list of Sample objects.">SampleHandler</ref>&amp;<sp/>sh,<sp/><ref refid="d1/d5b/classSH_1_1DiskList" kindref="compound" tooltip="an interface for listing directory contents, locally or on a file server">DiskList</ref>&amp;<sp/>list)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/dc5/structSH_1_1ScanDir" kindref="compound" tooltip="the class used for scanning local directories and file servers for samples">ScanDir</ref>&amp;<sp/><ref refid="d2/dc5/structSH_1_1ScanDir_1a287c575885cd94a34654a6b6a606c1f2" kindref="member" tooltip="the index of the file hierarchy at which we gather the sample name.">sampleDepth</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val_sampleDepth);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/dc5/structSH_1_1ScanDir" kindref="compound" tooltip="the class used for scanning local directories and file servers for samples">ScanDir</ref>&amp;<sp/><ref refid="d2/dc5/structSH_1_1ScanDir_1a9338e48c522e1e11e1b5b04bfdbde13f" kindref="member" tooltip="the index of the file hierarchy at which we gather the sample name.">absSampleDepth</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val_absSampleDepth);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/dc5/structSH_1_1ScanDir" kindref="compound" tooltip="the class used for scanning local directories and file servers for samples">ScanDir</ref>&amp;<sp/><ref refid="d2/dc5/structSH_1_1ScanDir_1a0d9b73cbdb009c694773c1d581f424d7" kindref="member" tooltip="a single sample name into which all found files should be placed. if set, this overrides...">sampleName</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>val_sampleName);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/dc5/structSH_1_1ScanDir" kindref="compound" tooltip="the class used for scanning local directories and file servers for samples">ScanDir</ref>&amp;<sp/><ref refid="d2/dc5/structSH_1_1ScanDir_1a91e1eb4f6cb526f597fcec20dcb9ec8d" kindref="member" tooltip="the minimum depth for files to make it into the sample">minDepth</ref><sp/>(std::size_t<sp/>val_minDepth);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/dc5/structSH_1_1ScanDir" kindref="compound" tooltip="the class used for scanning local directories and file servers for samples">ScanDir</ref>&amp;<sp/><ref refid="d2/dc5/structSH_1_1ScanDir_1a420bb594b4bd8615e65b0034c50fc970" kindref="member" tooltip="the maximum depth for files to make it into the sample">maxDepth</ref><sp/>(std::size_t<sp/>val_maxDepth);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/dc5/structSH_1_1ScanDir" kindref="compound" tooltip="the class used for scanning local directories and file servers for samples">ScanDir</ref>&amp;<sp/><ref refid="d2/dc5/structSH_1_1ScanDir_1addbaa2bf6024c6b3ee2c62e2109aa5e1" kindref="member" tooltip="the pattern for files to be accepted">filePattern</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>val_filePattern);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/dc5/structSH_1_1ScanDir" kindref="compound" tooltip="the class used for scanning local directories and file servers for samples">ScanDir</ref>&amp;<sp/><ref refid="d2/dc5/structSH_1_1ScanDir_1a5093257c0c80d5be95d449ede79e979a" kindref="member" tooltip="the regular expression for files to be accepted">fileRegex</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>val_fileRegex);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/dc5/structSH_1_1ScanDir" kindref="compound" tooltip="the class used for scanning local directories and file servers for samples">ScanDir</ref>&amp;<sp/><ref refid="d2/dc5/structSH_1_1ScanDir_1a1e5d065e08eff91d65b57f11e5b568ac" kindref="member" tooltip="the pattern for samples to be accepted">samplePattern</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>val_samplePattern);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/dc5/structSH_1_1ScanDir" kindref="compound" tooltip="the class used for scanning local directories and file servers for samples">ScanDir</ref>&amp;<sp/><ref refid="d2/dc5/structSH_1_1ScanDir_1a80a6ddba84f300e3b79a11f5904d4317" kindref="member" tooltip="the pattern for the postfix to be stripped from the sampleName">samplePostfix</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>val_samplePostfix);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/dc5/structSH_1_1ScanDir" kindref="compound" tooltip="the class used for scanning local directories and file servers for samples">ScanDir</ref>&amp;<sp/><ref refid="d2/dc5/structSH_1_1ScanDir_1ac3edc7b7b2f322d6847434aa34ecbc24" kindref="member" tooltip="rename any sample matching pattern to name">sampleRename</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>pattern,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/dc5/structSH_1_1ScanDir" kindref="compound" tooltip="the class used for scanning local directories and file servers for samples">ScanDir</ref>&amp;<sp/><ref refid="d2/dc5/structSH_1_1ScanDir_1ab9721a276171d2fd22c4b6b48240a145" kindref="member" tooltip="attach an extra name component to the sample based on a second component of the path...">extraNameComponent</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val_relSampleDepth);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>private<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_relSampleDepth;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_absSampleDepth;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>m_sampleName;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>std::size_t<sp/>m_minDepth;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>std::size_t<sp/>m_maxDepth;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::regex<sp/>m_filePattern;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::regex<sp/>m_samplePattern;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::regex<sp/>m_samplePostfix;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_samplePostfixEmpty;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;std::pair&lt;boost::regex,std::string&gt;<sp/>&gt;::const_iterator<sp/>SampleRenameIter;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::pair&lt;boost::regex,std::string&gt;<sp/>&gt;<sp/>m_sampleRename;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_extraNameComponent;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>recurse<sp/>(std::map&lt;std::string,SamplePtr&gt;&amp;<sp/>samples,<sp/><ref refid="d1/d5b/classSH_1_1DiskList" kindref="compound" tooltip="an interface for listing directory contents, locally or on a file server">DiskList</ref>&amp;<sp/>list,</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;&amp;<sp/>hierarchy)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>addSampleFile<sp/>(std::map&lt;std::string,SamplePtr&gt;&amp;<sp/>samples,</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;&amp;<sp/>hierarchy,</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>path)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>findPathComponent<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;&amp;<sp/>hierarchy,</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>absSampleDepth,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>relSampleDepth)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="241"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/ScanDir.h"/>
+  </compounddef>
+</doxygen>

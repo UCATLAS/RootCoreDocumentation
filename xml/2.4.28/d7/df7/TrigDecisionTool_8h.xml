@@ -1,0 +1,2813 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d7/df7/TrigDecisionTool_8h" kind="file">
+    <compoundname>TrigDecisionTool.h</compoundname>
+    <includes refid="df/db7/AsgToolsConf_8h" local="yes">AsgTools/AsgToolsConf.h</includes>
+    <includes refid="dc/dde/AsgMetadataTool_8h" local="yes">AsgTools/AsgMetadataTool.h</includes>
+    <includes refid="de/d2d/ToolHandle_8h" local="yes">AsgTools/ToolHandle.h</includes>
+    <includes refid="d1/dac/ITrigConfigTool_8h" local="yes">TrigConfInterfaces/ITrigConfigTool.h</includes>
+    <includes local="yes">TrigNavigation/Navigation.h</includes>
+    <includes refid="de/ddb/ITrigConfigSvc_8h" local="yes">TrigConfInterfaces/ITrigConfigSvc.h</includes>
+    <includes local="yes">GaudiKernel/IIncidentListener.h</includes>
+    <includes local="yes">GaudiKernel/ServiceHandle.h</includes>
+    <includes refid="d4/d40/ITrigDecisionTool_8h" local="yes">TrigDecisionInterface/ITrigDecisionTool.h</includes>
+    <includes refid="de/d03/TrigDecisionToolCore_8h" local="yes">TrigDecisionTool/TrigDecisionToolCore.h</includes>
+    <includes refid="dd/da4/Logger_8h" local="yes">TrigDecisionTool/Logger.h</includes>
+    <includedby refid="d4/d75/ToolExamplesAlg_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CPAnalysisExamples/CPAnalysisExamples/ToolExamplesAlg.h</includedby>
+    <includedby refid="d0/dd1/ut__ath__checkTrigger__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CPAnalysisExamples/test/ut_ath_checkTrigger_test.cxx</includedby>
+    <includedby refid="d6/dfc/checkxAODTrigger_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CPAnalysisExamples/util/checkxAODTrigger.cxx</includedby>
+    <includedby refid="dd/d92/quickana__trigger_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/util/quickana_trigger.cxx</includedby>
+    <includedby refid="df/d2f/SUSYObjDef__xAOD_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/Root/SUSYObjDef_xAOD.cxx</includedby>
+    <includedby refid="d9/d7c/SUSYToolsInit_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/Root/SUSYToolsInit.cxx</includedby>
+    <includedby refid="d7/d96/Trigger_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/Root/Trigger.cxx</includedby>
+    <includedby refid="d4/d33/BasicTriggerFired_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisTest/Root/BasicTriggerFired.cxx</includedby>
+    <includedby refid="de/df6/RootCoreTestHarness_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisTest/Root/RootCoreTestHarness.cxx</includedby>
+    <includedby refid="d1/dd8/Run1BStoxAODTrigger_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisTest/Root/Run1BStoxAODTrigger.cxx</includedby>
+    <includedby refid="d5/d93/AthenaTestHarness_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisTest/TrigAnalysisTest/AthenaTestHarness.h</includedby>
+    <includedby refid="dd/d82/ITest_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisTest/TrigAnalysisTest/ITest.h</includedby>
+    <includedby refid="da/d06/TriggersFiredTest_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisTest/TrigAnalysisTest/TriggersFiredTest.h</includedby>
+    <includedby refid="d3/dc6/TrigDecisionTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigDecisionTool/Root/TrigDecisionTool.cxx</includedby>
+    <includedby refid="d0/d55/TrigDecisionTool__entries_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigDecisionTool/src/components/TrigDecisionTool_entries.cxx</includedby>
+    <includedby refid="dd/d2d/ChainGroup__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigDecisionTool/test/ChainGroup_test.cxx</includedby>
+    <includedby refid="d8/d20/Templates__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigDecisionTool/test/Templates_test.cxx</includedby>
+    <includedby refid="d4/df1/TrigDecisionToolDict_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigDecisionTool/TrigDecisionTool/TrigDecisionToolDict.h</includedby>
+    <includedby refid="df/d10/MatchingTool_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TriggerMatchingTool/TriggerMatchingTool/MatchingTool.h</includedby>
+    <includedby refid="d7/d96/TrigTauMatching__example_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigTauMatching/src/TrigTauMatching_example.h</includedby>
+    <includedby refid="dc/d5a/TrigTauMatching_8h" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigTauMatching/TrigTauMatching/TrigTauMatching.h</includedby>
+    <includedby refid="dd/da3/util_2TrigTauMatching__example_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigTauMatching/util/TrigTauMatching_example.cxx</includedby>
+    <incdepgraph>
+      <node id="322082">
+        <label>list</label>
+      </node>
+      <node id="322251">
+        <label>TrigDecisionTool/Combination.h</label>
+        <link refid="dd/daf/Combination_8h_source"/>
+        <childnode refid="322252" relation="include">
+        </childnode>
+        <childnode refid="322275" relation="include">
+        </childnode>
+        <childnode refid="322247" relation="include">
+        </childnode>
+        <childnode refid="322081" relation="include">
+        </childnode>
+        <childnode refid="322280" relation="include">
+        </childnode>
+        <childnode refid="322083" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322277" relation="include">
+        </childnode>
+        <childnode refid="322284" relation="include">
+        </childnode>
+        <childnode refid="322285" relation="include">
+        </childnode>
+        <childnode refid="322300" relation="include">
+        </childnode>
+      </node>
+      <node id="322097">
+        <label>boost/multi_index/ordered_index.hpp</label>
+      </node>
+      <node id="322265">
+        <label>xAODTrigger/MuonRoI.h</label>
+        <link refid="de/d0d/MuonRoI_8h_source"/>
+        <childnode refid="322266" relation="include">
+        </childnode>
+        <childnode refid="322200" relation="include">
+        </childnode>
+      </node>
+      <node id="322225">
+        <label>AthContainers/tools/DVL_algorithms.icc</label>
+        <link refid="df/daa/DVL__algorithms_8icc"/>
+        <childnode refid="322211" relation="include">
+        </childnode>
+        <childnode refid="322217" relation="include">
+        </childnode>
+        <childnode refid="322138" relation="include">
+        </childnode>
+        <childnode refid="322207" relation="include">
+        </childnode>
+        <childnode refid="322145" relation="include">
+        </childnode>
+      </node>
+      <node id="322111">
+        <label>TrigConfL1Data/TriggerThresholdValue.h</label>
+        <link refid="dd/d1d/TriggerThresholdValue_8h_source"/>
+        <childnode refid="322103" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+      </node>
+      <node id="322211">
+        <label>AthContainers/tools/DVLNoBase.h</label>
+        <link refid="d7/d92/DVLNoBase_8h"/>
+      </node>
+      <node id="322183">
+        <label>boost/thread/mutex.hpp</label>
+      </node>
+      <node id="322280">
+        <label>TrigNavStructure/TrigNavStructure.h</label>
+        <link refid="d2/db8/TrigNavStructure_8h_source"/>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322255" relation="include">
+        </childnode>
+        <childnode refid="322281" relation="include">
+        </childnode>
+        <childnode refid="322282" relation="include">
+        </childnode>
+        <childnode refid="322283" relation="include">
+        </childnode>
+      </node>
+      <node id="322130">
+        <label>TrigConfL1Data/Muctpi.h</label>
+        <link refid="d5/d9f/Muctpi_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322103" relation="include">
+        </childnode>
+      </node>
+      <node id="322231">
+        <label>AthContainers/tools/DVLDataBucket.h</label>
+        <link refid="d4/d16/DVLDataBucket_8h"/>
+        <childnode refid="322232" relation="include">
+        </childnode>
+        <childnode refid="322212" relation="include">
+        </childnode>
+        <childnode refid="322150" relation="include">
+        </childnode>
+        <childnode refid="322233" relation="include">
+        </childnode>
+      </node>
+      <node id="322312">
+        <label>StoreGate/StoreGateSvc.h</label>
+      </node>
+      <node id="322057">
+        <label>TrigConfInterfaces/ITrigConfigSvc.h</label>
+        <link refid="de/ddb/ITrigConfigSvc_8h_source"/>
+        <childnode refid="322058" relation="include">
+        </childnode>
+        <childnode refid="322059" relation="include">
+        </childnode>
+        <childnode refid="322060" relation="include">
+        </childnode>
+        <childnode refid="322062" relation="include">
+        </childnode>
+        <childnode refid="322063" relation="include">
+        </childnode>
+      </node>
+      <node id="322185">
+        <label>CxxUtils/unordered_map.h</label>
+        <link refid="db/daa/unordered__map_8h"/>
+        <childnode refid="322144" relation="include">
+        </childnode>
+        <childnode refid="322089" relation="include">
+        </childnode>
+        <childnode refid="322150" relation="include">
+        </childnode>
+        <childnode refid="322151" relation="include">
+        </childnode>
+      </node>
+      <node id="322043">
+        <label>AsgTools/IAsgTool.h</label>
+        <link refid="df/dd4/IAsgTool_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322040" relation="include">
+        </childnode>
+        <childnode refid="322045" relation="include">
+        </childnode>
+        <childnode refid="322046" relation="include">
+        </childnode>
+      </node>
+      <node id="322186">
+        <label>AthContainers/AuxTypeRegistry.icc</label>
+        <link refid="d8/df3/AuxTypeRegistry_8icc"/>
+      </node>
+      <node id="322153">
+        <label>AthContainersInterfaces/IAuxStore.h</label>
+        <link refid="d6/d3e/IAuxStore_8h"/>
+        <childnode refid="322140" relation="include">
+        </childnode>
+        <childnode refid="322142" relation="include">
+        </childnode>
+        <childnode refid="322154" relation="include">
+        </childnode>
+        <childnode refid="322152" relation="include">
+        </childnode>
+      </node>
+      <node id="322075">
+        <label>boost/algorithm/string.hpp</label>
+      </node>
+      <node id="322091">
+        <label>TrigConfHLTData/HLTLevel.h</label>
+        <link refid="dc/d46/HLTLevel_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+      </node>
+      <node id="322149">
+        <label>boost/type_traits/remove_const.hpp</label>
+      </node>
+      <node id="322103">
+        <label>TrigConfL1Data/L1DataBaseclass.h</label>
+        <link refid="d8/db1/L1DataBaseclass_8h_source"/>
+        <childnode refid="322086" relation="include">
+        </childnode>
+      </node>
+      <node id="322306">
+        <label>TrigRoiConversion/RoiSerialise.h</label>
+        <link refid="d0/d72/RoiSerialise_8h_source"/>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322301" relation="include">
+        </childnode>
+        <childnode refid="322305" relation="include">
+        </childnode>
+      </node>
+      <node id="322249">
+        <label>TrigDecisionTool/FeatureContainer.h</label>
+        <link refid="d5/de8/FeatureContainer_8h_source"/>
+        <childnode refid="322083" relation="include">
+        </childnode>
+        <childnode refid="322250" relation="include">
+        </childnode>
+        <childnode refid="322174" relation="include">
+        </childnode>
+        <childnode refid="322251" relation="include">
+        </childnode>
+        <childnode refid="322247" relation="include">
+        </childnode>
+        <childnode refid="322252" relation="include">
+        </childnode>
+        <childnode refid="322300" relation="include">
+        </childnode>
+        <childnode refid="322275" relation="include">
+        </childnode>
+        <childnode refid="322292" relation="include">
+        </childnode>
+        <childnode refid="322280" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322078" relation="include">
+        </childnode>
+      </node>
+      <node id="322151">
+        <label>functional</label>
+      </node>
+      <node id="322132">
+        <label>iomanip</label>
+      </node>
+      <node id="322253">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="322208">
+        <label>boost/version.hpp</label>
+      </node>
+      <node id="322268">
+        <label>xAODTrigger/versions/MuonRoIContainer_v1.h</label>
+        <link refid="d5/df0/MuonRoIContainer__v1_8h_source"/>
+        <childnode refid="322202" relation="include">
+        </childnode>
+        <childnode refid="322266" relation="include">
+        </childnode>
+      </node>
+      <node id="322148">
+        <label>limits</label>
+      </node>
+      <node id="322154">
+        <label>SGTools/BaseInfo.h</label>
+      </node>
+      <node id="322181">
+        <label>boost/thread/tss.hpp</label>
+      </node>
+      <node id="322046">
+        <label>GaudiKernel/IAlgTool.h</label>
+      </node>
+      <node id="322077">
+        <label>iterator</label>
+      </node>
+      <node id="322169">
+        <label>AthContainersInterfaces/AuxDataOption.h</label>
+        <link refid="d1/dc5/AuxDataOption_8h"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322170" relation="include">
+        </childnode>
+      </node>
+      <node id="322117">
+        <label>TrigConfL1Data/PIT.h</label>
+        <link refid="d7/d7e/PIT_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322054" relation="include">
+        </childnode>
+        <childnode refid="322103" relation="include">
+        </childnode>
+      </node>
+      <node id="322264">
+        <label>xAODTrigger/versions/EmTauRoIContainer_v2.h</label>
+        <link refid="d2/d46/EmTauRoIContainer__v2_8h_source"/>
+        <childnode refid="322202" relation="include">
+        </childnode>
+        <childnode refid="322261" relation="include">
+        </childnode>
+      </node>
+      <node id="322254">
+        <label>boost/lexical_cast.hpp</label>
+      </node>
+      <node id="322059">
+        <label>GaudiKernel/extend_interfaces.h</label>
+      </node>
+      <node id="322068">
+        <label>TrigDecisionTool/TrigDecisionToolCore.h</label>
+        <link refid="de/d03/TrigDecisionToolCore_8h_source"/>
+        <childnode refid="322069" relation="include">
+        </childnode>
+        <childnode refid="322074" relation="include">
+        </childnode>
+        <childnode refid="322247" relation="include">
+        </childnode>
+        <childnode refid="322076" relation="include">
+        </childnode>
+        <childnode refid="322081" relation="include">
+        </childnode>
+        <childnode refid="322313" relation="include">
+        </childnode>
+        <childnode refid="322314" relation="include">
+        </childnode>
+        <childnode refid="322316" relation="include">
+        </childnode>
+      </node>
+      <node id="322230">
+        <label>SGTools/ClassName.h</label>
+      </node>
+      <node id="322303">
+        <label>RoiDescriptor/RoiDescriptor.h</label>
+        <link refid="dc/d01/RoiDescriptor_8h_source"/>
+        <childnode refid="322108" relation="include">
+        </childnode>
+        <childnode refid="322304" relation="include">
+        </childnode>
+      </node>
+      <node id="322236">
+        <label>AthContainers/DataVector.icc</label>
+        <link refid="da/de6/DataVector_8icc"/>
+        <childnode refid="322237" relation="include">
+        </childnode>
+        <childnode refid="322206" relation="include">
+        </childnode>
+        <childnode refid="322148" relation="include">
+        </childnode>
+        <childnode refid="322151" relation="include">
+        </childnode>
+        <childnode refid="322238" relation="include">
+        </childnode>
+      </node>
+      <node id="322193">
+        <label>AthContainers/exceptions.h</label>
+        <link refid="d4/d03/exceptions_8h"/>
+        <childnode refid="322141" relation="include">
+        </childnode>
+        <childnode refid="322194" relation="include">
+        </childnode>
+        <childnode refid="322107" relation="include">
+        </childnode>
+        <childnode refid="322162" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+      </node>
+      <node id="322166">
+        <label>AthContainers/tools/AuxDataTraits.h</label>
+        <link refid="d3/d5a/AuxDataTraits_8h"/>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322146" relation="include">
+        </childnode>
+      </node>
+      <node id="322063">
+        <label>TrigConfInterfaces/IHLTConfigSvc.h</label>
+        <link refid="db/def/IHLTConfigSvc_8h_source"/>
+        <childnode refid="322061" relation="include">
+        </childnode>
+        <childnode refid="322055" relation="include">
+        </childnode>
+      </node>
+      <node id="322282">
+        <label>TrigNavStructure/BaseHolder.h</label>
+        <link refid="df/d37/BaseHolder_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322256" relation="include">
+        </childnode>
+      </node>
+      <node id="322112">
+        <label>TrigConfL1Data/CaloInfo.h</label>
+        <link refid="d2/d93/CaloInfo_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322103" relation="include">
+        </childnode>
+        <childnode refid="322113" relation="include">
+        </childnode>
+        <childnode refid="322114" relation="include">
+        </childnode>
+        <childnode refid="322115" relation="include">
+        </childnode>
+      </node>
+      <node id="322054">
+        <label>stdint.h</label>
+      </node>
+      <node id="322294">
+        <label>AnalysisTriggerEvent/Muon_ROI.h</label>
+      </node>
+      <node id="322285">
+        <label>TrigDecisionTool/FeatureCollectAthena.h</label>
+        <link refid="d4/d1b/FeatureCollectAthena_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322079" relation="include">
+        </childnode>
+        <childnode refid="322083" relation="include">
+        </childnode>
+        <childnode refid="322250" relation="include">
+        </childnode>
+        <childnode refid="322253" relation="include">
+        </childnode>
+        <childnode refid="322254" relation="include">
+        </childnode>
+        <childnode refid="322286" relation="include">
+        </childnode>
+        <childnode refid="322287" relation="include">
+        </childnode>
+        <childnode refid="322247" relation="include">
+        </childnode>
+        <childnode refid="322288" relation="include">
+        </childnode>
+        <childnode refid="322289" relation="include">
+        </childnode>
+        <childnode refid="322290" relation="include">
+        </childnode>
+        <childnode refid="322292" relation="include">
+        </childnode>
+        <childnode refid="322294" relation="include">
+        </childnode>
+        <childnode refid="322295" relation="include">
+        </childnode>
+        <childnode refid="322296" relation="include">
+        </childnode>
+        <childnode refid="322297" relation="include">
+        </childnode>
+        <childnode refid="322298" relation="include">
+        </childnode>
+        <childnode refid="322299" relation="include">
+        </childnode>
+        <childnode refid="322258" relation="include">
+        </childnode>
+        <childnode refid="322262" relation="include">
+        </childnode>
+        <childnode refid="322265" relation="include">
+        </childnode>
+        <childnode refid="322267" relation="include">
+        </childnode>
+        <childnode refid="322269" relation="include">
+        </childnode>
+        <childnode refid="322272" relation="include">
+        </childnode>
+        <childnode refid="322276" relation="include">
+        </childnode>
+        <childnode refid="322252" relation="include">
+        </childnode>
+      </node>
+      <node id="322114">
+        <label>TrigConfL1Data/METSigParam.h</label>
+        <link refid="d3/dab/METSigParam_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+      </node>
+      <node id="322217">
+        <label>AthContainers/tools/DVLCast.h</label>
+        <link refid="df/d5c/DVLCast_8h"/>
+        <childnode refid="322148" relation="include">
+        </childnode>
+        <childnode refid="322218" relation="include">
+        </childnode>
+        <childnode refid="322162" relation="include">
+        </childnode>
+        <childnode refid="322146" relation="include">
+        </childnode>
+        <childnode refid="322142" relation="include">
+        </childnode>
+      </node>
+      <node id="322204">
+        <label>AthContainers/IndexTrackingPolicy.h</label>
+        <link refid="d0/da5/IndexTrackingPolicy_8h"/>
+      </node>
+      <node id="322163">
+        <label>AthContainersInterfaces/IAuxTypeVectorFactory.h</label>
+        <link refid="d4/d2c/IAuxTypeVectorFactory_8h"/>
+        <childnode refid="322142" relation="include">
+        </childnode>
+        <childnode refid="322162" relation="include">
+        </childnode>
+      </node>
+      <node id="322286">
+        <label>TrigNavigation/NavigationCore.h</label>
+      </node>
+      <node id="322248">
+        <label>TrigDecisionInterface/Conditions.h</label>
+        <link refid="db/d3b/TrigDecisionInterface_2TrigDecisionInterface_2Conditions_8h_source"/>
+      </node>
+      <node id="322275">
+        <label>TrigDecisionTool/TypelessFeature.h</label>
+        <link refid="d0/d2d/TypelessFeature_8h_source"/>
+        <childnode refid="322255" relation="include">
+        </childnode>
+        <childnode refid="322092" relation="include">
+        </childnode>
+        <childnode refid="322040" relation="include">
+        </childnode>
+        <childnode refid="322246" relation="include">
+        </childnode>
+      </node>
+      <node id="322083">
+        <label>boost/foreach.hpp</label>
+      </node>
+      <node id="322058">
+        <label>GaudiKernel/IInterface.h</label>
+      </node>
+      <node id="322272">
+        <label>xAODTrigger/JetRoIContainer.h</label>
+        <link refid="d7/d36/JetRoIContainer_8h_source"/>
+        <childnode refid="322269" relation="include">
+        </childnode>
+        <childnode refid="322273" relation="include">
+        </childnode>
+        <childnode refid="322274" relation="include">
+        </childnode>
+        <childnode refid="322200" relation="include">
+        </childnode>
+      </node>
+      <node id="322158">
+        <label>RVersion.h</label>
+      </node>
+      <node id="322143">
+        <label>CxxUtils/unordered_set.h</label>
+        <link refid="df/d26/unordered__set_8h"/>
+        <childnode refid="322144" relation="include">
+        </childnode>
+        <childnode refid="322150" relation="include">
+        </childnode>
+        <childnode refid="322151" relation="include">
+        </childnode>
+      </node>
+      <node id="322072">
+        <label>AthenaBaseComps/AthMsgStreamMacros.h</label>
+      </node>
+      <node id="322039">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigDecisionTool/TrigDecisionTool/TrigDecisionTool.h</label>
+        <link refid="TrigDecisionTool.h"/>
+        <childnode refid="322040" relation="include">
+        </childnode>
+        <childnode refid="322041" relation="include">
+        </childnode>
+        <childnode refid="322050" relation="include">
+        </childnode>
+        <childnode refid="322052" relation="include">
+        </childnode>
+        <childnode refid="322056" relation="include">
+        </childnode>
+        <childnode refid="322057" relation="include">
+        </childnode>
+        <childnode refid="322064" relation="include">
+        </childnode>
+        <childnode refid="322065" relation="include">
+        </childnode>
+        <childnode refid="322066" relation="include">
+        </childnode>
+        <childnode refid="322068" relation="include">
+        </childnode>
+        <childnode refid="322240" relation="include">
+        </childnode>
+      </node>
+      <node id="322271">
+        <label>xAODTrigger/versions/JetRoI_v2.h</label>
+        <link refid="dc/d2f/JetRoI__v2_8h_source"/>
+        <childnode refid="322054" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322138" relation="include">
+        </childnode>
+        <childnode refid="322260" relation="include">
+        </childnode>
+      </node>
+      <node id="322288">
+        <label>TrigDecisionTool/TDTUtilities.h</label>
+        <link refid="de/dfe/TDTUtilities_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+      </node>
+      <node id="322147">
+        <label>cmath</label>
+      </node>
+      <node id="322196">
+        <label>cassert</label>
+      </node>
+      <node id="322209">
+        <label>boost/mpl/if.hpp</label>
+      </node>
+      <node id="322066">
+        <label>TrigDecisionInterface/ITrigDecisionTool.h</label>
+        <link refid="d4/d40/ITrigDecisionTool_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322043" relation="include">
+        </childnode>
+      </node>
+      <node id="322227">
+        <label>boost/static_assert.hpp</label>
+      </node>
+      <node id="322107">
+        <label>stdexcept</label>
+      </node>
+      <node id="322047">
+        <label>AsgTools/MsgLevel.h</label>
+        <link refid="de/d80/MsgLevel_8h"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322040" relation="include">
+        </childnode>
+        <childnode refid="322048" relation="include">
+        </childnode>
+      </node>
+      <node id="322184">
+        <label>boost/thread/thread.hpp</label>
+      </node>
+      <node id="322215">
+        <label>boost/type_traits/is_pointer.hpp</label>
+      </node>
+      <node id="322301">
+        <label>TrigSteeringEvent/TrigRoiDescriptor.h</label>
+        <link refid="d2/d8a/TrigRoiDescriptor_8h_source"/>
+        <childnode refid="322054" relation="include">
+        </childnode>
+        <childnode refid="322078" relation="include">
+        </childnode>
+        <childnode refid="322302" relation="include">
+        </childnode>
+        <childnode refid="322200" relation="include">
+        </childnode>
+        <childnode refid="322303" relation="include">
+        </childnode>
+        <childnode refid="322305" relation="include">
+        </childnode>
+      </node>
+      <node id="322222">
+        <label>boost/iterator/iterator_adaptor.hpp</label>
+      </node>
+      <node id="322278">
+        <label>TLorentzVector.h</label>
+      </node>
+      <node id="322040">
+        <label>AsgTools/AsgToolsConf.h</label>
+        <link refid="df/db7/AsgToolsConf_8h_source"/>
+      </node>
+      <node id="322290">
+        <label>TrigSteeringEvent/TrigPassBits.h</label>
+        <link refid="da/d66/TrigSteeringEvent_2TrigSteeringEvent_2TrigPassBits_8h_source"/>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322145" relation="include">
+        </childnode>
+        <childnode refid="322107" relation="include">
+        </childnode>
+        <childnode refid="322200" relation="include">
+        </childnode>
+        <childnode refid="322291" relation="include">
+        </childnode>
+      </node>
+      <node id="322281">
+        <label>TrigNavStructure/TriggerElementFactory.h</label>
+        <link refid="d1/dc0/TriggerElementFactory_8h_source"/>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322256" relation="include">
+        </childnode>
+        <childnode refid="322255" relation="include">
+        </childnode>
+      </node>
+      <node id="322044">
+        <label>string</label>
+      </node>
+      <node id="322187">
+        <label>AthContainers/AuxVectorData.h</label>
+        <link refid="d9/df2/AuxVectorData_8h"/>
+        <childnode refid="322141" relation="include">
+        </childnode>
+        <childnode refid="322140" relation="include">
+        </childnode>
+        <childnode refid="322169" relation="include">
+        </childnode>
+        <childnode refid="322166" relation="include">
+        </childnode>
+        <childnode refid="322155" relation="include">
+        </childnode>
+        <childnode refid="322188" relation="include">
+        </childnode>
+        <childnode refid="322189" relation="include">
+        </childnode>
+        <childnode refid="322172" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322089" relation="include">
+        </childnode>
+        <childnode refid="322146" relation="include">
+        </childnode>
+        <childnode refid="322190" relation="include">
+        </childnode>
+        <childnode refid="322191" relation="include">
+        </childnode>
+        <childnode refid="322179" relation="include">
+        </childnode>
+        <childnode refid="322192" relation="include">
+        </childnode>
+      </node>
+      <node id="322105">
+        <label>TrigConfL1Data/TriggerItemNode.h</label>
+        <link refid="d7/d8a/TriggerItemNode_8h_source"/>
+        <childnode refid="322106" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322054" relation="include">
+        </childnode>
+      </node>
+      <node id="322161">
+        <label>AthContainersInterfaces/IAuxTypeVector.h</label>
+        <link refid="d8/d0e/IAuxTypeVector_8h"/>
+        <childnode refid="322142" relation="include">
+        </childnode>
+        <childnode refid="322162" relation="include">
+        </childnode>
+      </node>
+      <node id="322190">
+        <label>AthContainers/tools/likely.h</label>
+        <link refid="d6/dd6/likely_8h"/>
+      </node>
+      <node id="322219">
+        <label>AthContainers/tools/DVLIterator.h</label>
+        <link refid="d3/dc7/DVLIterator_8h_source"/>
+        <childnode refid="322203" relation="include">
+        </childnode>
+        <childnode refid="322217" relation="include">
+        </childnode>
+        <childnode refid="322220" relation="include">
+        </childnode>
+        <childnode refid="322222" relation="include">
+        </childnode>
+        <childnode refid="322208" relation="include">
+        </childnode>
+        <childnode refid="322077" relation="include">
+        </childnode>
+        <childnode refid="322146" relation="include">
+        </childnode>
+      </node>
+      <node id="322232">
+        <label>SGTools/DataBucket.h</label>
+      </node>
+      <node id="322078">
+        <label>map</label>
+      </node>
+      <node id="322242">
+        <label>AthenaBaseComps/AthMessaging.h</label>
+      </node>
+      <node id="322233">
+        <label>AthContainers/tools/DVLDataBucket.icc</label>
+        <link refid="d3/d21/DVLDataBucket_8icc"/>
+        <childnode refid="322234" relation="include">
+        </childnode>
+      </node>
+      <node id="322234">
+        <label>SGTools/IRegisterTransient.h</label>
+      </node>
+      <node id="322309">
+        <label>TrigNavStructure/TypedHolder.h</label>
+        <link refid="de/de2/TypedHolder_8h_source"/>
+        <childnode refid="322150" relation="include">
+        </childnode>
+        <childnode refid="322107" relation="include">
+        </childnode>
+        <childnode refid="322310" relation="include">
+        </childnode>
+        <childnode refid="322250" relation="include">
+        </childnode>
+        <childnode refid="322311" relation="include">
+        </childnode>
+        <childnode refid="322255" relation="include">
+        </childnode>
+        <childnode refid="322203" relation="include">
+        </childnode>
+        <childnode refid="322040" relation="include">
+        </childnode>
+        <childnode refid="322312" relation="include">
+        </childnode>
+        <childnode refid="322243" relation="include">
+        </childnode>
+      </node>
+      <node id="322159">
+        <label>RootMetaSelection.h</label>
+      </node>
+      <node id="322176">
+        <label>AthContainers/tools/AuxTypeVector.icc</label>
+        <link refid="d5/d84/AuxTypeVector_8icc"/>
+      </node>
+      <node id="322305">
+        <label>TrigSteeringEvent/TrigRoiDescriptorCollection.h</label>
+        <link refid="d9/da3/TrigRoiDescriptorCollection_8h_source"/>
+        <childnode refid="322202" relation="include">
+        </childnode>
+        <childnode refid="322200" relation="include">
+        </childnode>
+        <childnode refid="322260" relation="include">
+        </childnode>
+        <childnode refid="322301" relation="include">
+        </childnode>
+      </node>
+      <node id="322101">
+        <label>TrigConfL1Data/CTPConfig.h</label>
+        <link refid="db/d97/CTPConfig_8h_source"/>
+        <childnode refid="322087" relation="include">
+        </childnode>
+        <childnode refid="322102" relation="include">
+        </childnode>
+        <childnode refid="322120" relation="include">
+        </childnode>
+        <childnode refid="322121" relation="include">
+        </childnode>
+        <childnode refid="322125" relation="include">
+        </childnode>
+        <childnode refid="322126" relation="include">
+        </childnode>
+        <childnode refid="322127" relation="include">
+        </childnode>
+        <childnode refid="322103" relation="include">
+        </childnode>
+        <childnode refid="322128" relation="include">
+        </childnode>
+        <childnode refid="322129" relation="include">
+        </childnode>
+        <childnode refid="322130" relation="include">
+        </childnode>
+      </node>
+      <node id="322267">
+        <label>xAODTrigger/MuonRoIContainer.h</label>
+        <link refid="db/d4a/MuonRoIContainer_8h_source"/>
+        <childnode refid="322265" relation="include">
+        </childnode>
+        <childnode refid="322268" relation="include">
+        </childnode>
+        <childnode refid="322200" relation="include">
+        </childnode>
+      </node>
+      <node id="322086">
+        <label>TrigConfL1Data/TrigConfData.h</label>
+        <link refid="da/da8/TrigConfData_8h_source"/>
+        <childnode refid="322087" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+      </node>
+      <node id="322224">
+        <label>AthContainers/tools/DVL_algorithms.h</label>
+        <link refid="d0/d7a/DVL__algorithms_8h"/>
+        <childnode refid="322219" relation="include">
+        </childnode>
+        <childnode refid="322077" relation="include">
+        </childnode>
+        <childnode refid="322145" relation="include">
+        </childnode>
+        <childnode refid="322225" relation="include">
+        </childnode>
+      </node>
+      <node id="322291">
+        <label>TrigSteeringEvent/TrigPassBitsCollection.h</label>
+        <link refid="d4/de2/TrigPassBitsCollection_8h_source"/>
+        <childnode refid="322202" relation="include">
+        </childnode>
+        <childnode refid="322260" relation="include">
+        </childnode>
+        <childnode refid="322290" relation="include">
+        </childnode>
+      </node>
+      <node id="322273">
+        <label>xAODTrigger/versions/JetRoIContainer_v1.h</label>
+        <link refid="de/d43/JetRoIContainer__v1_8h_source"/>
+        <childnode refid="322202" relation="include">
+        </childnode>
+        <childnode refid="322270" relation="include">
+        </childnode>
+      </node>
+      <node id="322257">
+        <label>boost/variant.hpp</label>
+      </node>
+      <node id="322092">
+        <label>fstream</label>
+      </node>
+      <node id="322241">
+        <label>AthenaKernel/getMessageSvc.h</label>
+      </node>
+      <node id="322191">
+        <label>AthContainers/tools/assume.h</label>
+        <link refid="d2/d20/assume_8h"/>
+      </node>
+      <node id="322070">
+        <label>AsgTools/Check.h</label>
+        <link refid="da/d02/Check_8h_source"/>
+        <childnode refid="322040" relation="include">
+        </childnode>
+        <childnode refid="322071" relation="include">
+        </childnode>
+      </node>
+      <node id="322302">
+        <label>ostream</label>
+      </node>
+      <node id="322173">
+        <label>AthContainers/PackedContainer.icc</label>
+        <link refid="d1/d0c/PackedContainer_8icc"/>
+      </node>
+      <node id="322065">
+        <label>GaudiKernel/ServiceHandle.h</label>
+      </node>
+      <node id="322220">
+        <label>AthContainers/tools/ElementProxy.h</label>
+        <link refid="db/d26/ElementProxy_8h"/>
+        <childnode refid="322203" relation="include">
+        </childnode>
+        <childnode refid="322157" relation="include">
+        </childnode>
+        <childnode refid="322150" relation="include">
+        </childnode>
+        <childnode refid="322221" relation="include">
+        </childnode>
+      </node>
+      <node id="322104">
+        <label>TrigConfL1Data/TriggerItem.h</label>
+        <link refid="dc/d13/TriggerItem_8h_source"/>
+        <childnode refid="322105" relation="include">
+        </childnode>
+        <childnode refid="322103" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322107" relation="include">
+        </childnode>
+        <childnode refid="322108" relation="include">
+        </childnode>
+      </node>
+      <node id="322240">
+        <label>TrigDecisionTool/Logger.h</label>
+        <link refid="dd/da4/Logger_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322040" relation="include">
+        </childnode>
+        <childnode refid="322241" relation="include">
+        </childnode>
+        <childnode refid="322242" relation="include">
+        </childnode>
+      </node>
+      <node id="322056">
+        <label>TrigNavigation/Navigation.h</label>
+      </node>
+      <node id="322139">
+        <label>AthContainersInterfaces/IAuxElement.h</label>
+        <link refid="dd/d7a/IAuxElement_8h"/>
+      </node>
+      <node id="322048">
+        <label>GaudiKernel/IMessageSvc.h</label>
+      </node>
+      <node id="322157">
+        <label>AthLinks/tools/selection_ns.h</label>
+        <link refid="d3/dec/selection__ns_8h"/>
+        <childnode refid="322158" relation="include">
+        </childnode>
+        <childnode refid="322159" relation="include">
+        </childnode>
+      </node>
+      <node id="322189">
+        <label>AthenaKernel/IThinningSvc.h</label>
+      </node>
+      <node id="322182">
+        <label>boost/atomic.hpp</label>
+      </node>
+      <node id="322315">
+        <label>boost/algorithm/string/predicate.hpp</label>
+      </node>
+      <node id="322121">
+        <label>TrigConfL1Data/BunchGroupSet.h</label>
+        <link refid="d8/de0/BunchGroupSet_8h_source"/>
+        <childnode refid="322122" relation="include">
+        </childnode>
+        <childnode refid="322103" relation="include">
+        </childnode>
+        <childnode refid="322087" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322123" relation="include">
+        </childnode>
+        <childnode refid="322124" relation="include">
+        </childnode>
+      </node>
+      <node id="322218">
+        <label>limits.h</label>
+      </node>
+      <node id="322201">
+        <label>xAODTrigger/versions/TrigCompositeContainer_v1.h</label>
+        <link refid="d4/db2/TrigCompositeContainer__v1_8h_source"/>
+        <childnode refid="322202" relation="include">
+        </childnode>
+        <childnode refid="322137" relation="include">
+        </childnode>
+      </node>
+      <node id="322269">
+        <label>xAODTrigger/JetRoI.h</label>
+        <link refid="df/dd4/JetRoI_8h_source"/>
+        <childnode refid="322270" relation="include">
+        </childnode>
+        <childnode refid="322271" relation="include">
+        </childnode>
+        <childnode refid="322200" relation="include">
+        </childnode>
+      </node>
+      <node id="322074">
+        <label>TrigDecisionTool/ChainGroupFunctions.h</label>
+        <link refid="d3/d14/ChainGroupFunctions_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322075" relation="include">
+        </childnode>
+        <childnode refid="322076" relation="include">
+        </childnode>
+        <childnode refid="322081" relation="include">
+        </childnode>
+      </node>
+      <node id="322126">
+        <label>TrigConfL1Data/DeadTime.h</label>
+        <link refid="df/dcb/DeadTime_8h_source"/>
+        <childnode refid="322087" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322103" relation="include">
+        </childnode>
+      </node>
+      <node id="322256">
+        <label>TrigNavStructure/Types.h</label>
+        <link refid="d5/d81/TrigNavStructure_2Types_8h_source"/>
+        <childnode refid="322054" relation="include">
+        </childnode>
+        <childnode refid="322257" relation="include">
+        </childnode>
+      </node>
+      <node id="322041">
+        <label>AsgTools/AsgMetadataTool.h</label>
+        <link refid="dc/dde/AsgMetadataTool_8h_source"/>
+        <childnode refid="322042" relation="include">
+        </childnode>
+      </node>
+      <node id="322213">
+        <label>AthContainers/tools/ClassID.h</label>
+        <link refid="de/de2/ClassID_8h"/>
+        <childnode refid="322214" relation="include">
+        </childnode>
+      </node>
+      <node id="322307">
+        <label>xAODTrigger/RoiDescriptorStore.h</label>
+        <link refid="de/d31/RoiDescriptorStore_8h_source"/>
+        <childnode refid="322308" relation="include">
+        </childnode>
+        <childnode refid="322200" relation="include">
+        </childnode>
+      </node>
+      <node id="322295">
+        <label>AnalysisTriggerEvent/EmTau_ROI.h</label>
+      </node>
+      <node id="322299">
+        <label>AnalysisTriggerEvent/LVL1_ROI.h</label>
+      </node>
+      <node id="322168">
+        <label>AthContainers/PackedParameters.h</label>
+        <link refid="d4/d43/PackedParameters_8h"/>
+        <childnode refid="322169" relation="include">
+        </childnode>
+        <childnode refid="322148" relation="include">
+        </childnode>
+        <childnode refid="322054" relation="include">
+        </childnode>
+        <childnode refid="322171" relation="include">
+        </childnode>
+      </node>
+      <node id="322051">
+        <label>GaudiKernel/ToolHandle.h</label>
+      </node>
+      <node id="322141">
+        <label>AthContainersInterfaces/AuxTypes.h</label>
+        <link refid="d1/dea/AuxTypes_8h"/>
+        <childnode refid="322142" relation="include">
+        </childnode>
+        <childnode refid="322143" relation="include">
+        </childnode>
+      </node>
+      <node id="322135">
+        <label>xAODTrigger/TrigCompositeContainer.h</label>
+        <link refid="d9/da1/TrigCompositeContainer_8h_source"/>
+        <childnode refid="322136" relation="include">
+        </childnode>
+        <childnode refid="322201" relation="include">
+        </childnode>
+        <childnode refid="322200" relation="include">
+        </childnode>
+      </node>
+      <node id="322198">
+        <label>AthLinks/ElementLinkBase.h</label>
+        <link refid="d0/d16/ElementLinkBase_8h_source"/>
+        <childnode refid="322054" relation="include">
+        </childnode>
+      </node>
+      <node id="322116">
+        <label>TrigConfL1Data/ThresholdMonitor.h</label>
+        <link refid="de/dce/ThresholdMonitor_8h_source"/>
+        <childnode refid="322103" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322054" relation="include">
+        </childnode>
+      </node>
+      <node id="322144">
+        <label>CxxUtils/hashtable.h</label>
+        <link refid="dd/d16/hashtable_8h"/>
+        <childnode refid="322145" relation="include">
+        </childnode>
+        <childnode refid="322089" relation="include">
+        </childnode>
+        <childnode refid="322077" relation="include">
+        </childnode>
+        <childnode refid="322142" relation="include">
+        </childnode>
+        <childnode refid="322146" relation="include">
+        </childnode>
+        <childnode refid="322147" relation="include">
+        </childnode>
+        <childnode refid="322148" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322149" relation="include">
+        </childnode>
+      </node>
+      <node id="322262">
+        <label>xAODTrigger/EmTauRoIContainer.h</label>
+        <link refid="d0/dc6/EmTauRoIContainer_8h_source"/>
+        <childnode refid="322258" relation="include">
+        </childnode>
+        <childnode refid="322263" relation="include">
+        </childnode>
+        <childnode refid="322264" relation="include">
+        </childnode>
+        <childnode refid="322200" relation="include">
+        </childnode>
+      </node>
+      <node id="322206">
+        <label>AthContainers/tools/ATHCONTAINERS_ASSERT.h</label>
+        <link refid="de/d6b/ATHCONTAINERS__ASSERT_8h"/>
+        <childnode refid="322196" relation="include">
+        </childnode>
+      </node>
+      <node id="322277">
+        <label>xAODBase/IParticle.h</label>
+        <link refid="d5/dac/IParticle_8h_source"/>
+        <childnode refid="322278" relation="include">
+        </childnode>
+        <childnode refid="322138" relation="include">
+        </childnode>
+        <childnode refid="322279" relation="include">
+        </childnode>
+        <childnode refid="322154" relation="include">
+        </childnode>
+      </node>
+      <node id="322118">
+        <label>TrigConfL1Data/TIP.h</label>
+        <link refid="d9/dd3/TIP_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322054" relation="include">
+        </childnode>
+        <childnode refid="322103" relation="include">
+        </childnode>
+      </node>
+      <node id="322279">
+        <label>ObjectType.h</label>
+        <link refid="d8/d04/ObjectType_8h_source"/>
+        <childnode refid="322087" relation="include">
+        </childnode>
+      </node>
+      <node id="322124">
+        <label>sys/types.h</label>
+      </node>
+      <node id="322088">
+        <label>TrigConfHLTData/HLTPrescale.h</label>
+        <link refid="df/da4/HLTPrescale_8h_source"/>
+        <childnode refid="322087" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322078" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322089" relation="include">
+        </childnode>
+        <childnode refid="322086" relation="include">
+        </childnode>
+        <childnode refid="322090" relation="include">
+        </childnode>
+      </node>
+      <node id="322289">
+        <label>TrigDecisionTool/ClassTraits.h</label>
+        <link refid="d8/da0/ClassTraits_8h_source"/>
+      </node>
+      <node id="322221">
+        <label>AthContainers/tools/ElementProxy.icc</label>
+        <link refid="d6/d70/ElementProxy_8icc"/>
+        <childnode refid="322217" relation="include">
+        </childnode>
+        <childnode refid="322206" relation="include">
+        </childnode>
+      </node>
+      <node id="322069">
+        <label>AsgTools/StatusCode.h</label>
+        <link refid="d4/d5c/AsgTools_2AsgTools_2StatusCode_8h_source"/>
+        <childnode refid="322040" relation="include">
+        </childnode>
+        <childnode refid="322070" relation="include">
+        </childnode>
+        <childnode refid="322073" relation="include">
+        </childnode>
+      </node>
+      <node id="322162">
+        <label>typeinfo</label>
+      </node>
+      <node id="322113">
+        <label>TrigConfL1Data/CaloSinCos.h</label>
+        <link refid="d0/da4/CaloSinCos_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322103" relation="include">
+        </childnode>
+      </node>
+      <node id="322283">
+        <label>TrigNavStructure/TrigHolderStructure.h</label>
+        <link refid="df/ded/TrigHolderStructure_8h_source"/>
+        <childnode refid="322150" relation="include">
+        </childnode>
+        <childnode refid="322078" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322257" relation="include">
+        </childnode>
+        <childnode refid="322243" relation="include">
+        </childnode>
+        <childnode refid="322256" relation="include">
+        </childnode>
+        <childnode refid="322282" relation="include">
+        </childnode>
+        <childnode refid="322255" relation="include">
+        </childnode>
+      </node>
+      <node id="322195">
+        <label>AthContainers/AuxElement.icc</label>
+        <link refid="d2/d37/AuxElement_8icc"/>
+        <childnode refid="322190" relation="include">
+        </childnode>
+        <childnode refid="322196" relation="include">
+        </childnode>
+      </node>
+      <node id="322061">
+        <label>GaudiKernel/IService.h</label>
+      </node>
+      <node id="322202">
+        <label>AthContainers/DataVector.h</label>
+        <link refid="d7/dd6/DataVector_8h"/>
+        <childnode refid="322193" relation="include">
+        </childnode>
+        <childnode refid="322203" relation="include">
+        </childnode>
+        <childnode refid="322204" relation="include">
+        </childnode>
+        <childnode refid="322205" relation="include">
+        </childnode>
+        <childnode refid="322211" relation="include">
+        </childnode>
+        <childnode refid="322212" relation="include">
+        </childnode>
+        <childnode refid="322217" relation="include">
+        </childnode>
+        <childnode refid="322219" relation="include">
+        </childnode>
+        <childnode refid="322223" relation="include">
+        </childnode>
+        <childnode refid="322224" relation="include">
+        </childnode>
+        <childnode refid="322220" relation="include">
+        </childnode>
+        <childnode refid="322226" relation="include">
+        </childnode>
+        <childnode refid="322157" relation="include">
+        </childnode>
+        <childnode refid="322227" relation="include">
+        </childnode>
+        <childnode refid="322228" relation="include">
+        </childnode>
+        <childnode refid="322222" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322162" relation="include">
+        </childnode>
+        <childnode refid="322151" relation="include">
+        </childnode>
+        <childnode refid="322108" relation="include">
+        </childnode>
+        <childnode refid="322145" relation="include">
+        </childnode>
+        <childnode refid="322107" relation="include">
+        </childnode>
+        <childnode refid="322077" relation="include">
+        </childnode>
+        <childnode refid="322154" relation="include">
+        </childnode>
+        <childnode refid="322229" relation="include">
+        </childnode>
+        <childnode refid="322231" relation="include">
+        </childnode>
+        <childnode refid="322235" relation="include">
+        </childnode>
+        <childnode refid="322236" relation="include">
+        </childnode>
+      </node>
+      <node id="322171">
+        <label>AthContainers/PackedParameters.icc</label>
+        <link refid="db/d30/PackedParameters_8icc"/>
+      </node>
+      <node id="322199">
+        <label>AthLinks/tools/TypeTools.h</label>
+        <link refid="dd/db1/TypeTools_8h_source"/>
+      </node>
+      <node id="322188">
+        <label>AthenaKernel/ILockable.h</label>
+      </node>
+      <node id="322255">
+        <label>TrigNavStructure/TriggerElement.h</label>
+        <link refid="d7/d71/TriggerElement_8h_source"/>
+        <childnode refid="322078" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322054" relation="include">
+        </childnode>
+        <childnode refid="322108" relation="include">
+        </childnode>
+        <childnode refid="322256" relation="include">
+        </childnode>
+      </node>
+      <node id="322304">
+        <label>IRegionSelector/IRoiDescriptor.h</label>
+        <link refid="d3/d80/IRoiDescriptor_8h_source"/>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322108" relation="include">
+        </childnode>
+      </node>
+      <node id="322071">
+        <label>AsgTools/MsgStreamMacros.h</label>
+        <link refid="d3/ded/AsgTools_2AsgTools_2MsgStreamMacros_8h_source"/>
+        <childnode refid="322040" relation="include">
+        </childnode>
+        <childnode refid="322047" relation="include">
+        </childnode>
+        <childnode refid="322072" relation="include">
+        </childnode>
+      </node>
+      <node id="322261">
+        <label>xAODTrigger/versions/EmTauRoI_v2.h</label>
+        <link refid="da/d90/EmTauRoI__v2_8h_source"/>
+        <childnode refid="322054" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322138" relation="include">
+        </childnode>
+        <childnode refid="322260" relation="include">
+        </childnode>
+      </node>
+      <node id="322156">
+        <label>AthLinks/DataLinkBase.h</label>
+        <link refid="db/da8/DataLinkBase_8h_source"/>
+        <childnode refid="322054" relation="include">
+        </childnode>
+      </node>
+      <node id="322093">
+        <label>TrigConfHLTData/HLTChainList.h</label>
+        <link refid="d5/db5/HLTChainList_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322087" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322078" relation="include">
+        </childnode>
+        <childnode refid="322085" relation="include">
+        </childnode>
+        <childnode refid="322090" relation="include">
+        </childnode>
+        <childnode refid="322094" relation="include">
+        </childnode>
+        <childnode refid="322095" relation="include">
+        </childnode>
+        <childnode refid="322096" relation="include">
+        </childnode>
+        <childnode refid="322097" relation="include">
+        </childnode>
+        <childnode refid="322098" relation="include">
+        </childnode>
+        <childnode refid="322099" relation="include">
+        </childnode>
+      </node>
+      <node id="322170">
+        <label>AthContainersInterfaces/AuxDataOption.icc</label>
+        <link refid="db/d68/AuxDataOption_8icc"/>
+      </node>
+      <node id="322175">
+        <label>boost/type_traits/is_arithmetic.hpp</label>
+      </node>
+      <node id="322090">
+        <label>boost/unordered_map.hpp</label>
+      </node>
+      <node id="322297">
+        <label>AnalysisTriggerEvent/JetET_ROI.h</label>
+      </node>
+      <node id="322212">
+        <label>AthContainers/tools/DVLInfo.h</label>
+        <link refid="d3/d2e/DVLInfo_8h"/>
+        <childnode refid="322213" relation="include">
+        </childnode>
+        <childnode refid="322205" relation="include">
+        </childnode>
+        <childnode refid="322162" relation="include">
+        </childnode>
+        <childnode refid="322142" relation="include">
+        </childnode>
+        <childnode refid="322149" relation="include">
+        </childnode>
+        <childnode refid="322215" relation="include">
+        </childnode>
+        <childnode refid="322174" relation="include">
+        </childnode>
+        <childnode refid="322216" relation="include">
+        </childnode>
+      </node>
+      <node id="322152">
+        <label>SGTools/CLASS_DEF.h</label>
+      </node>
+      <node id="322229">
+        <label>AthContainers/ClassName.h</label>
+        <link refid="dd/d6b/AthContainers_2AthContainers_2ClassName_8h_source"/>
+        <childnode refid="322230" relation="include">
+        </childnode>
+      </node>
+      <node id="322160">
+        <label>AthContainers/AuxTypeRegistry.h</label>
+        <link refid="db/d7f/AuxTypeRegistry_8h"/>
+        <childnode refid="322141" relation="include">
+        </childnode>
+        <childnode refid="322161" relation="include">
+        </childnode>
+        <childnode refid="322163" relation="include">
+        </childnode>
+        <childnode refid="322164" relation="include">
+        </childnode>
+        <childnode refid="322177" relation="include">
+        </childnode>
+        <childnode refid="322179" relation="include">
+        </childnode>
+        <childnode refid="322142" relation="include">
+        </childnode>
+        <childnode refid="322162" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322185" relation="include">
+        </childnode>
+        <childnode refid="322186" relation="include">
+        </childnode>
+      </node>
+      <node id="322293">
+        <label>TrigSteeringEvent/TrigPassFlagsCollection.h</label>
+        <link refid="d4/dfd/TrigPassFlagsCollection_8h_source"/>
+        <childnode refid="322202" relation="include">
+        </childnode>
+        <childnode refid="322260" relation="include">
+        </childnode>
+        <childnode refid="322292" relation="include">
+        </childnode>
+      </node>
+      <node id="322080">
+        <label>stack</label>
+      </node>
+      <node id="322067">
+        <label>vector</label>
+      </node>
+      <node id="322284">
+        <label>xAODBase/IParticleContainer.h</label>
+        <link refid="dd/d2d/IParticleContainer_8h_source"/>
+        <childnode refid="322202" relation="include">
+        </childnode>
+        <childnode refid="322277" relation="include">
+        </childnode>
+        <childnode refid="322152" relation="include">
+        </childnode>
+      </node>
+      <node id="322237">
+        <label>AthContainers/tools/CompareAndPrint.h</label>
+        <link refid="d5/da8/CompareAndPrint_8h_source"/>
+        <childnode refid="322145" relation="include">
+        </childnode>
+        <childnode refid="322162" relation="include">
+        </childnode>
+      </node>
+      <node id="322247">
+        <label>TrigDecisionTool/Conditions.h</label>
+        <link refid="d7/ddc/TrigDecisionTool_2TrigDecisionTool_2Conditions_8h_source"/>
+        <childnode refid="322248" relation="include">
+        </childnode>
+      </node>
+      <node id="322246">
+        <label>TrigDecisionTool/EventPtrDef.h</label>
+        <link refid="d4/dfc/TrigDecisionTool_2TrigDecisionTool_2EventPtrDef_8h_source"/>
+      </node>
+      <node id="322136">
+        <label>xAODTrigger/TrigComposite.h</label>
+        <link refid="d9/dd8/TrigComposite_8h_source"/>
+        <childnode refid="322137" relation="include">
+        </childnode>
+        <childnode refid="322200" relation="include">
+        </childnode>
+      </node>
+      <node id="322055">
+        <label>TrigConfInterfaces/IIHLTConfigSvc.h</label>
+        <link refid="dd/db0/IIHLTConfigSvc_8h_source"/>
+        <childnode refid="322054" relation="include">
+        </childnode>
+      </node>
+      <node id="322274">
+        <label>xAODTrigger/versions/JetRoIContainer_v2.h</label>
+        <link refid="d5/d14/JetRoIContainer__v2_8h_source"/>
+        <childnode refid="322202" relation="include">
+        </childnode>
+        <childnode refid="322271" relation="include">
+        </childnode>
+      </node>
+      <node id="322239">
+        <label>TrigDecisionTool/IDecisionUnpacker.h</label>
+        <link refid="d1/de0/IDecisionUnpacker_8h_source"/>
+        <childnode refid="322069" relation="include">
+        </childnode>
+        <childnode refid="322078" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+      </node>
+      <node id="322300">
+        <label>TrigDecisionTool/FeatureCollectStandalone.h</label>
+        <link refid="d9/d17/FeatureCollectStandalone_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322079" relation="include">
+        </childnode>
+        <childnode refid="322083" relation="include">
+        </childnode>
+        <childnode refid="322250" relation="include">
+        </childnode>
+        <childnode refid="322253" relation="include">
+        </childnode>
+        <childnode refid="322254" relation="include">
+        </childnode>
+        <childnode refid="322247" relation="include">
+        </childnode>
+        <childnode refid="322288" relation="include">
+        </childnode>
+        <childnode refid="322252" relation="include">
+        </childnode>
+        <childnode refid="322290" relation="include">
+        </childnode>
+        <childnode refid="322291" relation="include">
+        </childnode>
+        <childnode refid="322301" relation="include">
+        </childnode>
+        <childnode refid="322306" relation="include">
+        </childnode>
+        <childnode refid="322307" relation="include">
+        </childnode>
+        <childnode refid="322275" relation="include">
+        </childnode>
+        <childnode refid="322246" relation="include">
+        </childnode>
+        <childnode refid="322280" relation="include">
+        </childnode>
+        <childnode refid="322040" relation="include">
+        </childnode>
+        <childnode refid="322070" relation="include">
+        </childnode>
+        <childnode refid="322309" relation="include">
+        </childnode>
+      </node>
+      <node id="322238">
+        <label>AthContainers/tools/DVLEltBaseInfo.icc</label>
+        <link refid="dd/d5e/DVLEltBaseInfo_8icc"/>
+      </node>
+      <node id="322316">
+        <label>TrigDecisionTool/ExpertMethods.h</label>
+        <link refid="dd/d57/ExpertMethods_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322315" relation="include">
+        </childnode>
+        <childnode refid="322255" relation="include">
+        </childnode>
+        <childnode refid="322240" relation="include">
+        </childnode>
+        <childnode refid="322247" relation="include">
+        </childnode>
+        <childnode refid="322251" relation="include">
+        </childnode>
+        <childnode refid="322252" relation="include">
+        </childnode>
+        <childnode refid="322249" relation="include">
+        </childnode>
+        <childnode refid="322076" relation="include">
+        </childnode>
+        <childnode refid="322286" relation="include">
+        </childnode>
+      </node>
+      <node id="322076">
+        <label>TrigDecisionTool/ChainGroup.h</label>
+        <link refid="d2/dd8/ChainGroup_8h_source"/>
+        <childnode refid="322077" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322078" relation="include">
+        </childnode>
+        <childnode refid="322079" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322080" relation="include">
+        </childnode>
+        <childnode refid="322075" relation="include">
+        </childnode>
+        <childnode refid="322081" relation="include">
+        </childnode>
+        <childnode refid="322247" relation="include">
+        </childnode>
+        <childnode refid="322249" relation="include">
+        </childnode>
+        <childnode refid="322240" relation="include">
+        </childnode>
+        <childnode refid="322133" relation="include">
+        </childnode>
+      </node>
+      <node id="322089">
+        <label>utility</label>
+      </node>
+      <node id="322235">
+        <label>SGTools/DataBucketTraitFwd.h</label>
+      </node>
+      <node id="322172">
+        <label>CxxUtils/override.h</label>
+        <link refid="de/d0e/override_8h"/>
+      </node>
+      <node id="322245">
+        <label>sstream</label>
+      </node>
+      <node id="322096">
+        <label>boost/multi_index/hashed_index.hpp</label>
+      </node>
+      <node id="322210">
+        <label>AthContainers/AuxVectorBase.icc</label>
+        <link refid="d4/d50/AuxVectorBase_8icc"/>
+      </node>
+      <node id="322180">
+        <label>boost/thread/shared_mutex.hpp</label>
+      </node>
+      <node id="322165">
+        <label>AthContainersInterfaces/IAuxSetOption.h</label>
+        <link refid="d7/d7e/IAuxSetOption_8h"/>
+      </node>
+      <node id="322179">
+        <label>AthContainers/tools/threading.h</label>
+        <link refid="d7/d22/threading_8h"/>
+        <childnode refid="322180" relation="include">
+        </childnode>
+        <childnode refid="322181" relation="include">
+        </childnode>
+        <childnode refid="322182" relation="include">
+        </childnode>
+        <childnode refid="322183" relation="include">
+        </childnode>
+        <childnode refid="322184" relation="include">
+        </childnode>
+      </node>
+      <node id="322120">
+        <label>TrigConfL1Data/PrescaleSet.h</label>
+        <link refid="d9/d6a/PrescaleSet_8h_source"/>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322103" relation="include">
+        </childnode>
+        <childnode refid="322054" relation="include">
+        </childnode>
+      </node>
+      <node id="322099">
+        <label>boost/multi_index/composite_key.hpp</label>
+      </node>
+      <node id="322087">
+        <label>iosfwd</label>
+      </node>
+      <node id="322146">
+        <label>cstdlib</label>
+      </node>
+      <node id="322100">
+        <label>TrigConfHLTData/HLTStreamTag.h</label>
+        <link refid="d4/d5f/HLTStreamTag_8h_source"/>
+        <childnode refid="322086" relation="include">
+        </childnode>
+        <childnode refid="322087" relation="include">
+        </childnode>
+        <childnode refid="322092" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+      </node>
+      <node id="322308">
+        <label>xAODTrigger/versions/RoiDescriptorStore_v1.h</label>
+        <link refid="d6/dac/RoiDescriptorStore__v1_8h_source"/>
+        <childnode refid="322054" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322138" relation="include">
+        </childnode>
+        <childnode refid="322260" relation="include">
+        </childnode>
+      </node>
+      <node id="322194">
+        <label>CxxUtils/noreturn.h</label>
+        <link refid="de/d6f/noreturn_8h"/>
+      </node>
+      <node id="322108">
+        <label>iostream</label>
+      </node>
+      <node id="322050">
+        <label>AsgTools/ToolHandle.h</label>
+        <link refid="de/d2d/ToolHandle_8h_source"/>
+        <childnode refid="322040" relation="include">
+        </childnode>
+        <childnode refid="322051" relation="include">
+        </childnode>
+      </node>
+      <node id="322131">
+        <label>TrigSteeringEvent/Chain.h</label>
+        <link refid="de/da4/Chain_8h_source"/>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322054" relation="include">
+        </childnode>
+        <childnode refid="322108" relation="include">
+        </childnode>
+        <childnode refid="322132" relation="include">
+        </childnode>
+        <childnode refid="322133" relation="include">
+        </childnode>
+        <childnode refid="322085" relation="include">
+        </childnode>
+        <childnode refid="322040" relation="include">
+        </childnode>
+        <childnode refid="322134" relation="include">
+        </childnode>
+        <childnode refid="322072" relation="include">
+        </childnode>
+        <childnode refid="322087" relation="include">
+        </childnode>
+      </node>
+      <node id="322311">
+        <label>TrigNavStructure/TypelessHolder.h</label>
+        <link refid="df/d30/TypelessHolder_8h_source"/>
+        <childnode refid="322282" relation="include">
+        </childnode>
+      </node>
+      <node id="322140">
+        <label>AthContainersInterfaces/IConstAuxStore.h</label>
+        <link refid="d7/d3a/IConstAuxStore_8h"/>
+        <childnode refid="322141" relation="include">
+        </childnode>
+        <childnode refid="322142" relation="include">
+        </childnode>
+        <childnode refid="322152" relation="include">
+        </childnode>
+      </node>
+      <node id="322142">
+        <label>cstddef</label>
+      </node>
+      <node id="322276">
+        <label>TrigStorageDefinitions/EDM_TypeInfo.h</label>
+      </node>
+      <node id="322109">
+        <label>TrigConfL1Data/ThresholdConfig.h</label>
+        <link refid="d5/da1/ThresholdConfig_8h_source"/>
+        <childnode refid="322110" relation="include">
+        </childnode>
+        <childnode refid="322112" relation="include">
+        </childnode>
+        <childnode refid="322103" relation="include">
+        </childnode>
+        <childnode refid="322106" relation="include">
+        </childnode>
+      </node>
+      <node id="322134">
+        <label>GaudiKernel/MsgStream.h</label>
+      </node>
+      <node id="322084">
+        <label>unordered_map</label>
+      </node>
+      <node id="322244">
+        <label>AsgTools/MsgStream.h</label>
+        <link refid="d3/d95/AsgTools_2AsgTools_2MsgStream_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322245" relation="include">
+        </childnode>
+        <childnode refid="322040" relation="include">
+        </childnode>
+        <childnode refid="322047" relation="include">
+        </childnode>
+        <childnode refid="322043" relation="include">
+        </childnode>
+        <childnode refid="322134" relation="include">
+        </childnode>
+      </node>
+      <node id="322052">
+        <label>TrigConfInterfaces/ITrigConfigTool.h</label>
+        <link refid="d1/dac/ITrigConfigTool_8h_source"/>
+        <childnode refid="322043" relation="include">
+        </childnode>
+        <childnode refid="322053" relation="include">
+        </childnode>
+        <childnode refid="322055" relation="include">
+        </childnode>
+      </node>
+      <node id="322094">
+        <label>boost/multi_index_container.hpp</label>
+      </node>
+      <node id="322287">
+        <label>TrigNavigation/NavigationCore.icc</label>
+      </node>
+      <node id="322192">
+        <label>AthContainers/AuxVectorData.icc</label>
+        <link refid="da/de7/AuxVectorData_8icc"/>
+        <childnode refid="322160" relation="include">
+        </childnode>
+        <childnode refid="322153" relation="include">
+        </childnode>
+        <childnode refid="322140" relation="include">
+        </childnode>
+        <childnode refid="322190" relation="include">
+        </childnode>
+        <childnode refid="322191" relation="include">
+        </childnode>
+      </node>
+      <node id="322045">
+        <label>AsgTools/AsgToolMacros.h</label>
+        <link refid="d1/d68/AsgToolMacros_8h_source"/>
+      </node>
+      <node id="322260">
+        <label>xAODCore/BaseInfo.h</label>
+        <link refid="d3/d17/BaseInfo_8h_source"/>
+        <childnode refid="322154" relation="include">
+        </childnode>
+      </node>
+      <node id="322133">
+        <label>TrigSteeringEvent/Enums.h</label>
+        <link refid="d5/d69/TrigSteeringEvent_2TrigSteeringEvent_2Enums_8h_source"/>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322054" relation="include">
+        </childnode>
+      </node>
+      <node id="322298">
+        <label>AnalysisTriggerEvent/EnergySum_ROI.h</label>
+      </node>
+      <node id="322115">
+        <label>TrigConfL1Data/IsolationParam.h</label>
+        <link refid="d3/d5c/IsolationParam_8h_source"/>
+        <childnode refid="322103" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+      </node>
+      <node id="322129">
+        <label>TrigConfL1Data/PrioritySet.h</label>
+        <link refid="d1/df8/PrioritySet_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322103" relation="include">
+        </childnode>
+      </node>
+      <node id="322258">
+        <label>xAODTrigger/EmTauRoI.h</label>
+        <link refid="de/d30/EmTauRoI_8h_source"/>
+        <childnode refid="322259" relation="include">
+        </childnode>
+        <childnode refid="322261" relation="include">
+        </childnode>
+        <childnode refid="322200" relation="include">
+        </childnode>
+      </node>
+      <node id="322296">
+        <label>AnalysisTriggerEvent/Jet_ROI.h</label>
+      </node>
+      <node id="322064">
+        <label>GaudiKernel/IIncidentListener.h</label>
+      </node>
+      <node id="322216">
+        <label>AthContainers/tools/DVLInfo.icc</label>
+        <link refid="da/d83/DVLInfo_8icc"/>
+        <childnode refid="322203" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322082" relation="include">
+        </childnode>
+        <childnode refid="322196" relation="include">
+        </childnode>
+        <childnode refid="322146" relation="include">
+        </childnode>
+        <childnode refid="322154" relation="include">
+        </childnode>
+      </node>
+      <node id="322164">
+        <label>AthContainers/tools/AuxTypeVector.h</label>
+        <link refid="d6/dd2/AuxTypeVector_8h"/>
+        <childnode refid="322161" relation="include">
+        </childnode>
+        <childnode refid="322165" relation="include">
+        </childnode>
+        <childnode refid="322166" relation="include">
+        </childnode>
+        <childnode refid="322167" relation="include">
+        </childnode>
+        <childnode refid="322172" relation="include">
+        </childnode>
+        <childnode refid="322162" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322145" relation="include">
+        </childnode>
+        <childnode refid="322054" relation="include">
+        </childnode>
+        <childnode refid="322174" relation="include">
+        </childnode>
+        <childnode refid="322175" relation="include">
+        </childnode>
+        <childnode refid="322176" relation="include">
+        </childnode>
+      </node>
+      <node id="322053">
+        <label>TrigConfInterfaces/IILVL1ConfigSvc.h</label>
+        <link refid="db/d1f/IILVL1ConfigSvc_8h_source"/>
+        <childnode refid="322054" relation="include">
+        </childnode>
+      </node>
+      <node id="322259">
+        <label>xAODTrigger/versions/EmTauRoI_v1.h</label>
+        <link refid="dc/d06/EmTauRoI__v1_8h_source"/>
+        <childnode refid="322054" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322138" relation="include">
+        </childnode>
+        <childnode refid="322260" relation="include">
+        </childnode>
+      </node>
+      <node id="322137">
+        <label>xAODTrigger/versions/TrigComposite_v1.h</label>
+        <link refid="da/d57/TrigComposite__v1_8h_source"/>
+        <childnode refid="322054" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322138" relation="include">
+        </childnode>
+        <childnode refid="322197" relation="include">
+        </childnode>
+      </node>
+      <node id="322060">
+        <label>TrigConfInterfaces/IL1TopoConfigSvc.h</label>
+        <link refid="d1/d9c/IL1TopoConfigSvc_8h_source"/>
+        <childnode refid="322061" relation="include">
+        </childnode>
+      </node>
+      <node id="322292">
+        <label>TrigSteeringEvent/TrigPassFlags.h</label>
+        <link refid="d5/d12/TrigPassFlags_8h_source"/>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322145" relation="include">
+        </childnode>
+        <childnode refid="322107" relation="include">
+        </childnode>
+        <childnode refid="322200" relation="include">
+        </childnode>
+        <childnode refid="322293" relation="include">
+        </childnode>
+      </node>
+      <node id="322125">
+        <label>TrigConfL1Data/PrescaledClock.h</label>
+        <link refid="d2/d63/PrescaledClock_8h_source"/>
+        <childnode refid="322087" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322103" relation="include">
+        </childnode>
+      </node>
+      <node id="322313">
+        <label>TrigDecisionTool/ConfigurationAccess.h</label>
+        <link refid="df/d4d/ConfigurationAccess_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322093" relation="include">
+        </childnode>
+        <childnode refid="322240" relation="include">
+        </childnode>
+        <childnode refid="322081" relation="include">
+        </childnode>
+        <childnode refid="322076" relation="include">
+        </childnode>
+      </node>
+      <node id="322128">
+        <label>TrigConfL1Data/CTPFiles.h</label>
+        <link refid="db/d43/CTPFiles_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322123" relation="include">
+        </childnode>
+        <childnode refid="322124" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322103" relation="include">
+        </childnode>
+      </node>
+      <node id="322243">
+        <label>AsgTools/AsgMessaging.h</label>
+        <link refid="d3/d61/AsgMessaging_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322040" relation="include">
+        </childnode>
+        <childnode refid="322244" relation="include">
+        </childnode>
+        <childnode refid="322071" relation="include">
+        </childnode>
+      </node>
+      <node id="322073">
+        <label>GaudiKernel/StatusCode.h</label>
+      </node>
+      <node id="322081">
+        <label>TrigDecisionTool/CacheGlobalMemory.h</label>
+        <link refid="df/d4a/CacheGlobalMemory_8h_source"/>
+        <childnode refid="322077" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322082" relation="include">
+        </childnode>
+        <childnode refid="322079" relation="include">
+        </childnode>
+        <childnode refid="322078" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322083" relation="include">
+        </childnode>
+        <childnode refid="322084" relation="include">
+        </childnode>
+        <childnode refid="322085" relation="include">
+        </childnode>
+        <childnode refid="322093" relation="include">
+        </childnode>
+        <childnode refid="322100" relation="include">
+        </childnode>
+        <childnode refid="322101" relation="include">
+        </childnode>
+        <childnode refid="322131" relation="include">
+        </childnode>
+        <childnode refid="322135" relation="include">
+        </childnode>
+        <childnode refid="322239" relation="include">
+        </childnode>
+        <childnode refid="322240" relation="include">
+        </childnode>
+        <childnode refid="322243" relation="include">
+        </childnode>
+        <childnode refid="322246" relation="include">
+        </childnode>
+      </node>
+      <node id="322106">
+        <label>TrigConfL1Data/L1DataDef.h</label>
+        <link refid="da/d67/L1DataDef_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322078" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+      </node>
+      <node id="322174">
+        <label>boost/type_traits/is_base_of.hpp</label>
+      </node>
+      <node id="322205">
+        <label>AthContainers/AuxVectorBase.h</label>
+        <link refid="d7/d18/AuxVectorBase_8h"/>
+        <childnode refid="322187" relation="include">
+        </childnode>
+        <childnode refid="322203" relation="include">
+        </childnode>
+        <childnode refid="322204" relation="include">
+        </childnode>
+        <childnode refid="322138" relation="include">
+        </childnode>
+        <childnode refid="322160" relation="include">
+        </childnode>
+        <childnode refid="322193" relation="include">
+        </childnode>
+        <childnode refid="322206" relation="include">
+        </childnode>
+        <childnode refid="322153" relation="include">
+        </childnode>
+        <childnode refid="322207" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322210" relation="include">
+        </childnode>
+      </node>
+      <node id="322310">
+        <label>type_traits</label>
+      </node>
+      <node id="322263">
+        <label>xAODTrigger/versions/EmTauRoIContainer_v1.h</label>
+        <link refid="db/d0a/EmTauRoIContainer__v1_8h_source"/>
+        <childnode refid="322202" relation="include">
+        </childnode>
+        <childnode refid="322259" relation="include">
+        </childnode>
+      </node>
+      <node id="322079">
+        <label>set</label>
+      </node>
+      <node id="322200">
+        <label>xAODCore/CLASS_DEF.h</label>
+        <link refid="d6/d20/xAODCore_2xAODCore_2CLASS__DEF_8h"/>
+        <childnode refid="322152" relation="include">
+        </childnode>
+      </node>
+      <node id="322122">
+        <label>TrigConfL1Data/BunchGroup.h</label>
+        <link refid="d9/dfe/BunchGroup_8h_source"/>
+        <childnode refid="322087" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322103" relation="include">
+        </childnode>
+      </node>
+      <node id="322178">
+        <label>AthContainers/tools/AuxTypeVectorFactory.icc</label>
+        <link refid="dc/d02/AuxTypeVectorFactory_8icc"/>
+      </node>
+      <node id="322167">
+        <label>AthContainers/PackedContainer.h</label>
+        <link refid="d6/dda/PackedContainer_8h"/>
+        <childnode refid="322165" relation="include">
+        </childnode>
+        <childnode refid="322168" relation="include">
+        </childnode>
+        <childnode refid="322172" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322173" relation="include">
+        </childnode>
+      </node>
+      <node id="322110">
+        <label>TrigConfL1Data/TriggerThreshold.h</label>
+        <link refid="d1/de2/TriggerThreshold_8h_source"/>
+        <childnode refid="322111" relation="include">
+        </childnode>
+        <childnode refid="322106" relation="include">
+        </childnode>
+        <childnode refid="322103" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322108" relation="include">
+        </childnode>
+      </node>
+      <node id="322145">
+        <label>algorithm</label>
+      </node>
+      <node id="322226">
+        <label>AthContainers/tools/IsMostDerivedFlag.h</label>
+        <link refid="d5/dfa/IsMostDerivedFlag_8h"/>
+      </node>
+      <node id="322138">
+        <label>AthContainers/AuxElement.h</label>
+        <link refid="d1/d6f/AuxElement_8h"/>
+        <childnode refid="322139" relation="include">
+        </childnode>
+        <childnode refid="322140" relation="include">
+        </childnode>
+        <childnode refid="322153" relation="include">
+        </childnode>
+        <childnode refid="322155" relation="include">
+        </childnode>
+        <childnode refid="322160" relation="include">
+        </childnode>
+        <childnode refid="322187" relation="include">
+        </childnode>
+        <childnode refid="322166" relation="include">
+        </childnode>
+        <childnode refid="322193" relation="include">
+        </childnode>
+        <childnode refid="322190" relation="include">
+        </childnode>
+        <childnode refid="322142" relation="include">
+        </childnode>
+        <childnode refid="322195" relation="include">
+        </childnode>
+      </node>
+      <node id="322042">
+        <label>AsgTools/AsgTool.h</label>
+        <link refid="d4/d29/AsgTool_8h_source"/>
+        <childnode refid="322040" relation="include">
+        </childnode>
+        <childnode refid="322043" relation="include">
+        </childnode>
+        <childnode refid="322047" relation="include">
+        </childnode>
+        <childnode refid="322049" relation="include">
+        </childnode>
+      </node>
+      <node id="322119">
+        <label>boost/multi_index/sequenced_index.hpp</label>
+      </node>
+      <node id="322252">
+        <label>TrigDecisionTool/Feature.h</label>
+        <link refid="dc/d2f/Feature_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322079" relation="include">
+        </childnode>
+        <childnode refid="322083" relation="include">
+        </childnode>
+        <childnode refid="322250" relation="include">
+        </childnode>
+        <childnode refid="322253" relation="include">
+        </childnode>
+        <childnode refid="322254" relation="include">
+        </childnode>
+        <childnode refid="322244" relation="include">
+        </childnode>
+        <childnode refid="322255" relation="include">
+        </childnode>
+        <childnode refid="322258" relation="include">
+        </childnode>
+        <childnode refid="322262" relation="include">
+        </childnode>
+        <childnode refid="322265" relation="include">
+        </childnode>
+        <childnode refid="322267" relation="include">
+        </childnode>
+        <childnode refid="322269" relation="include">
+        </childnode>
+        <childnode refid="322272" relation="include">
+        </childnode>
+        <childnode refid="322275" relation="include">
+        </childnode>
+        <childnode refid="322276" relation="include">
+        </childnode>
+        <childnode refid="322277" relation="include">
+        </childnode>
+      </node>
+      <node id="322155">
+        <label>AthLinks/DataLink.h</label>
+        <link refid="da/de8/DataLink_8h_source"/>
+        <childnode refid="322054" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322156" relation="include">
+        </childnode>
+        <childnode refid="322157" relation="include">
+        </childnode>
+      </node>
+      <node id="322223">
+        <label>AthContainers/tools/DVL_iter_swap.h</label>
+        <link refid="d6/ddb/DVL__iter__swap_8h"/>
+        <childnode refid="322219" relation="include">
+        </childnode>
+        <childnode refid="322206" relation="include">
+        </childnode>
+        <childnode refid="322077" relation="include">
+        </childnode>
+      </node>
+      <node id="322095">
+        <label>boost/multi_index/mem_fun.hpp</label>
+      </node>
+      <node id="322203">
+        <label>AthContainers/OwnershipPolicy.h</label>
+        <link refid="d3/da4/OwnershipPolicy_8h_source"/>
+      </node>
+      <node id="322197">
+        <label>AthLinks/ElementLink.h</label>
+        <link refid="dc/d24/ElementLink_8h_source"/>
+        <childnode refid="322054" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322198" relation="include">
+        </childnode>
+        <childnode refid="322157" relation="include">
+        </childnode>
+        <childnode refid="322199" relation="include">
+        </childnode>
+      </node>
+      <node id="322127">
+        <label>TrigConfL1Data/Random.h</label>
+        <link refid="dd/d6d/Random_8h_source"/>
+        <childnode refid="322087" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322103" relation="include">
+        </childnode>
+      </node>
+      <node id="322062">
+        <label>TrigConfInterfaces/ILVL1ConfigSvc.h</label>
+        <link refid="de/db5/ILVL1ConfigSvc_8h_source"/>
+        <childnode refid="322061" relation="include">
+        </childnode>
+        <childnode refid="322053" relation="include">
+        </childnode>
+      </node>
+      <node id="322049">
+        <label>AsgTools/SetProperty.h</label>
+        <link refid="df/db0/SetProperty_8h_source"/>
+      </node>
+      <node id="322098">
+        <label>boost/multi_index/random_access_index.hpp</label>
+      </node>
+      <node id="322266">
+        <label>xAODTrigger/versions/MuonRoI_v1.h</label>
+        <link refid="dd/d82/MuonRoI__v1_8h_source"/>
+        <childnode refid="322054" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322138" relation="include">
+        </childnode>
+        <childnode refid="322260" relation="include">
+        </childnode>
+      </node>
+      <node id="322214">
+        <label>GaudiKernel/ClassID.h</label>
+      </node>
+      <node id="322228">
+        <label>boost/type_traits.hpp</label>
+      </node>
+      <node id="322150">
+        <label>memory</label>
+      </node>
+      <node id="322102">
+        <label>TrigConfL1Data/Menu.h</label>
+        <link refid="df/dde/Menu_8h_source"/>
+        <childnode refid="322103" relation="include">
+        </childnode>
+        <childnode refid="322104" relation="include">
+        </childnode>
+        <childnode refid="322109" relation="include">
+        </childnode>
+        <childnode refid="322116" relation="include">
+        </childnode>
+        <childnode refid="322117" relation="include">
+        </childnode>
+        <childnode refid="322118" relation="include">
+        </childnode>
+        <childnode refid="322094" relation="include">
+        </childnode>
+        <childnode refid="322095" relation="include">
+        </childnode>
+        <childnode refid="322096" relation="include">
+        </childnode>
+        <childnode refid="322097" relation="include">
+        </childnode>
+        <childnode refid="322119" relation="include">
+        </childnode>
+        <childnode refid="322098" relation="include">
+        </childnode>
+        <childnode refid="322087" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+      </node>
+      <node id="322123">
+        <label>inttypes.h</label>
+      </node>
+      <node id="322085">
+        <label>TrigConfHLTData/HLTChain.h</label>
+        <link refid="d4/d72/HLTChain_8h_source"/>
+        <childnode refid="322086" relation="include">
+        </childnode>
+        <childnode refid="322088" relation="include">
+        </childnode>
+        <childnode refid="322091" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322087" relation="include">
+        </childnode>
+        <childnode refid="322092" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322078" relation="include">
+        </childnode>
+        <childnode refid="322079" relation="include">
+        </childnode>
+        <childnode refid="322090" relation="include">
+        </childnode>
+      </node>
+      <node id="322177">
+        <label>AthContainers/tools/AuxTypeVectorFactory.h</label>
+        <link refid="dc/d69/AuxTypeVectorFactory_8h"/>
+        <childnode refid="322163" relation="include">
+        </childnode>
+        <childnode refid="322164" relation="include">
+        </childnode>
+        <childnode refid="322178" relation="include">
+        </childnode>
+      </node>
+      <node id="322250">
+        <label>boost/type_traits/is_same.hpp</label>
+      </node>
+      <node id="322314">
+        <label>TrigDecisionTool/DecisionAccess.h</label>
+        <link refid="d7/d07/DecisionAccess_8h_source"/>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322315" relation="include">
+        </childnode>
+        <childnode refid="322255" relation="include">
+        </childnode>
+        <childnode refid="322240" relation="include">
+        </childnode>
+        <childnode refid="322247" relation="include">
+        </childnode>
+        <childnode refid="322251" relation="include">
+        </childnode>
+        <childnode refid="322252" relation="include">
+        </childnode>
+        <childnode refid="322249" relation="include">
+        </childnode>
+        <childnode refid="322076" relation="include">
+        </childnode>
+      </node>
+      <node id="322270">
+        <label>xAODTrigger/versions/JetRoI_v1.h</label>
+        <link refid="d9/d95/JetRoI__v1_8h_source"/>
+        <childnode refid="322054" relation="include">
+        </childnode>
+        <childnode refid="322067" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+        <childnode refid="322138" relation="include">
+        </childnode>
+        <childnode refid="322260" relation="include">
+        </childnode>
+      </node>
+      <node id="322207">
+        <label>AthContainersInterfaces/AuxStore_traits.h</label>
+        <link refid="dd/d70/AuxStore__traits_8h"/>
+        <childnode refid="322139" relation="include">
+        </childnode>
+        <childnode refid="322153" relation="include">
+        </childnode>
+        <childnode refid="322140" relation="include">
+        </childnode>
+        <childnode refid="322174" relation="include">
+        </childnode>
+        <childnode refid="322208" relation="include">
+        </childnode>
+        <childnode refid="322209" relation="include">
+        </childnode>
+        <childnode refid="322044" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="322318">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CPAnalysisExamples/CPAnalysisExamples/ToolExamplesAlg.h</label>
+        <link refid="d4/d75/ToolExamplesAlg_8h_source"/>
+      </node>
+      <node id="322320">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisTest/TrigAnalysisTest/ITest.h</label>
+        <link refid="dd/d82/ITest_8h_source"/>
+        <childnode refid="322319" relation="include">
+        </childnode>
+        <childnode refid="322321" relation="include">
+        </childnode>
+        <childnode refid="322322" relation="include">
+        </childnode>
+        <childnode refid="322323" relation="include">
+        </childnode>
+      </node>
+      <node id="322328">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TriggerMatchingTool/TriggerMatchingTool/TriggerMatchingToolDict.h</label>
+        <link refid="de/db3/TriggerMatchingToolDict_8h_source"/>
+      </node>
+      <node id="322317">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigDecisionTool/TrigDecisionTool/TrigDecisionTool.h</label>
+        <link refid="TrigDecisionTool.h"/>
+        <childnode refid="322318" relation="include">
+        </childnode>
+        <childnode refid="322319" relation="include">
+        </childnode>
+        <childnode refid="322320" relation="include">
+        </childnode>
+        <childnode refid="322324" relation="include">
+        </childnode>
+        <childnode refid="322325" relation="include">
+        </childnode>
+        <childnode refid="322326" relation="include">
+        </childnode>
+        <childnode refid="322329" relation="include">
+        </childnode>
+        <childnode refid="322330" relation="include">
+        </childnode>
+      </node>
+      <node id="322323">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisTest/TrigAnalysisTest/TestFactory.h</label>
+        <link refid="d7/d5f/TestFactory_8h_source"/>
+      </node>
+      <node id="322324">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisTest/TrigAnalysisTest/TriggersFiredTest.h</label>
+        <link refid="da/d06/TriggersFiredTest_8h_source"/>
+      </node>
+      <node id="322331">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigTauMatching/TrigTauMatching/TrigTauMatchingDict.h</label>
+        <link refid="dc/d01/TrigTauMatchingDict_8h_source"/>
+      </node>
+      <node id="322321">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisTest/TrigAnalysisTest/BasicTriggerFired.h</label>
+        <link refid="d5/dd0/BasicTriggerFired_8h_source"/>
+      </node>
+      <node id="322322">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisTest/TrigAnalysisTest/Run1BStoxAODTrigger.h</label>
+        <link refid="dd/d41/Run1BStoxAODTrigger_8h_source"/>
+      </node>
+      <node id="322319">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisTest/TrigAnalysisTest/AthenaTestHarness.h</label>
+        <link refid="d5/d93/AthenaTestHarness_8h_source"/>
+      </node>
+      <node id="322327">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TriggerMatchingTool/TriggerMatchingTool/MatchingImplementation.h</label>
+        <link refid="d1/d9b/MatchingImplementation_8h_source"/>
+      </node>
+      <node id="322330">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigTauMatching/TrigTauMatching/TrigTauMatching.h</label>
+        <link refid="dc/d5a/TrigTauMatching_8h_source"/>
+        <childnode refid="322331" relation="include">
+        </childnode>
+      </node>
+      <node id="322325">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigDecisionTool/TrigDecisionTool/TrigDecisionToolDict.h</label>
+        <link refid="d4/df1/TrigDecisionToolDict_8h_source"/>
+      </node>
+      <node id="322329">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigTauMatching/src/TrigTauMatching_example.h</label>
+        <link refid="d7/d96/TrigTauMatching__example_8h_source"/>
+      </node>
+      <node id="322326">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TriggerMatchingTool/TriggerMatchingTool/MatchingTool.h</label>
+        <link refid="df/d10/MatchingTool_8h_source"/>
+        <childnode refid="322327" relation="include">
+        </childnode>
+        <childnode refid="322328" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d6/dc4/classTrig_1_1TrigDecisionTool" prot="public">Trig::TrigDecisionTool</innerclass>
+    <innernamespace refid="d4/d08/namespaceTrigConf">TrigConf</innernamespace>
+    <innernamespace refid="d2/d87/namespaceTrig">Trig</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Dear<sp/>emacs,<sp/>this<sp/>is<sp/>-*-<sp/>c++<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>TrigDecisionTool.h<sp/>775686<sp/>2016-09-28<sp/>16:26:51Z<sp/>lheinric<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TrigDecision_TrigDecisionTool_h</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TrigDecision_TrigDecisionTool_h</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="comment">/**********************************************************************************</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>@Project:<sp/>TrigDecisionTool</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>@Package:<sp/>TrigDecisionTool</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>@Class<sp/><sp/>:<sp/>TrigDecisionTool</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>@brief<sp/>main<sp/>tool</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>@author<sp/>Michael<sp/>Begel<sp/><sp/>&lt;michael.begel@cern.ch&gt;<sp/><sp/>-<sp/>Brookhaven<sp/>National<sp/>Laboratory</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>@author<sp/>Tomasz<sp/>Bold<sp/><sp/><sp/><sp/>&lt;Tomasz.Bold@cern.ch&gt;<sp/><sp/><sp/><sp/>-<sp/>UC<sp/>Irvine<sp/>-<sp/>AGH<sp/>Krakow</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>@author<sp/>Joerg<sp/>Stelzer<sp/><sp/>&lt;Joerg.Stelzer@cern.ch&gt;<sp/><sp/>-<sp/>DESY</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>***********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AsgTools/AsgToolsConf.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AsgTools/AsgMetadataTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AsgTools/ToolHandle.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TrigConfInterfaces/ITrigConfigTool.h&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ASGTOOL_ATHENA</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>XAOD_ANALYSIS</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;TrigNavigation/Navigation.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TrigConfInterfaces/ITrigConfigSvc.h&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GaudiKernel/IIncidentListener.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GaudiKernel/ServiceHandle.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>interface<sp/>to<sp/>implement<sp/>for<sp/>offline<sp/>access<sp/>(outside<sp/>AtlasTrigger)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TrigDecisionInterface/ITrigDecisionTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>base<sp/>classes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TrigDecisionTool/TrigDecisionToolCore.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TrigDecisionTool/Logger.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">TrigConf<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ITrigConfigSvc;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Trig<sp/>{</highlight></codeline>
+<codeline lineno="48" refid="d6/dc4/classTrig_1_1TrigDecisionTool" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d6/dc4/classTrig_1_1TrigDecisionTool" kindref="compound">TrigDecisionTool</ref><sp/>:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>asg::AsgMetadataTool,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>Trig::<ref refid="d6/dad/classTrig_1_1ITrigDecisionTool" kindref="compound" tooltip="Basic interface for the TrigDecisionTool.">ITrigDecisionTool</ref>,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="d1/d94/classTrig_1_1TrigDecisionToolCore" kindref="compound">TrigDecisionToolCore</ref><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>constructors,<sp/>destructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>ASG_TOOL_INTERFACE(<ref refid="d6/dc4/classTrig_1_1TrigDecisionTool" kindref="compound">Trig::TrigDecisionTool</ref>)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>ASG_TOOL_CLASS2(<ref refid="d6/dc4/classTrig_1_1TrigDecisionTool" kindref="compound">TrigDecisionTool</ref>,<ref refid="d6/dad/classTrig_1_1ITrigDecisionTool" kindref="compound" tooltip="Basic interface for the TrigDecisionTool.">Trig::ITrigDecisionTool</ref>,<ref refid="d6/dc4/classTrig_1_1TrigDecisionTool" kindref="compound">Trig::TrigDecisionTool</ref>)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Logger::msgLvl;</highlight><highlight class="comment">//resolve<sp/>ambiguity<sp/>from<sp/>also<sp/>inheriting<sp/>from<sp/>Logger</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Logger::msg;<sp/><sp/><sp/></highlight><highlight class="comment">//resolve<sp/>ambiguity<sp/>from<sp/>also<sp/>inheriting<sp/>from<sp/>Logger</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>constructors,<sp/>destructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d6/dc4/classTrig_1_1TrigDecisionTool" kindref="compound">TrigDecisionTool</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="d6/dc4/classTrig_1_1TrigDecisionTool" kindref="compound">TrigDecisionTool</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initialize<sp/>routine<sp/>as<sp/>required<sp/>for<sp/>an<sp/>Algorithm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>StatusCode<sp/>initialize();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>StatusCode<sp/><ref refid="d6/dc4/classTrig_1_1TrigDecisionTool_1a43aabc38c9f3b3eb8e2f4f8f21d0e609" kindref="member" tooltip="Function called when a new events is loaded.">beginEvent</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>StatusCode<sp/><ref refid="d6/dc4/classTrig_1_1TrigDecisionTool_1a1b753d7c058ea54d1e3a05a620efe5f8" kindref="member" tooltip="Function called when a new input file is opened.">beginInputFile</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>StatusCode<sp/>finalize();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>ASGTOOL_ATHENA</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>outputlevelupdateHandler(<ref refid="d3/db5/classProperty" kindref="compound">Property</ref>&amp;<sp/>p);<sp/><sp/></highlight><highlight class="comment">//propagates<sp/>outputlevel<sp/>changes<sp/>to<sp/>the<sp/>Logger</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>XAOD_ANALYSIS</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>called<sp/>by<sp/>Incident<sp/>dispatcher</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d6/dc4/classTrig_1_1TrigDecisionTool_1aa67b4bd760746f706c178f9673ff3dd9" kindref="member" tooltip="Function receiving incidents from IncidentSvc/TEvent.">handle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Incident&amp;<sp/>inc);<sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d6/dc4/classTrig_1_1TrigDecisionTool_1a5a6f42b657b3e1cd8e0ed8759e86da2b" kindref="member" tooltip="true if given chain passed">isPassed</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>chain,<sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>condition)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d6/dc4/classTrig_1_1TrigDecisionTool_1a5a6f42b657b3e1cd8e0ed8759e86da2b" kindref="member" tooltip="true if given chain passed">isPassed</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>chain)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d6/dc4/classTrig_1_1TrigDecisionTool_1ae154c9fffd2c434997da4f33c69dbe2c" kindref="member" tooltip="Implementation of the ITrigDecisionTool function.">isPassedBits</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>chain<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="d7/dbb/classTrig_1_1DecisionAccess_1a4bbf92073dcc53d79ee33094e93b6d72" kindref="member" tooltip="true if given group of chains passed">TrigDecisionToolCore::isPassed</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="d7/dbb/classTrig_1_1DecisionAccess_1aa931049b7da8c4d274e19f67acda7916" kindref="member">TrigDecisionToolCore::isPassedBits</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>msgLvl(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MSG::Level<sp/>lvl)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Logger::msgLvl(lvl);<sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>configKeysMatch(uint32_t<sp/>smk,<sp/>uint32_t<sp/>lvl1psk,<sp/>uint32_t<sp/>hltpsk);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;uint32_t&gt;<sp/>m_configKeysCache;<sp/></highlight><highlight class="comment">//cache<sp/>for<sp/>config<sp/>keys.<sp/>only<sp/>update<sp/>CacheGlobalMemory<sp/>when<sp/>these<sp/>change</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_configKeysCached;<sp/></highlight><highlight class="comment">//<sp/>flag<sp/>to<sp/>indicate<sp/>if<sp/>we<sp/>have<sp/>ever<sp/>cached<sp/>config<sp/>keys<sp/>(set<sp/>to<sp/>true<sp/>on<sp/>first<sp/>caching)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>ToolHandle&lt;TrigConf::ITrigConfigTool&gt;<sp/>m_configTool;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//full<sp/>Athena</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>defined(ASGTOOL_ATHENA)<sp/>&amp;&amp;<sp/>!defined(XAOD_ANALYSIS)</highlight></codeline>
+<codeline lineno="113"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>ServiceHandle&lt;TrigConf::ITrigConfigSvc&gt;<sp/>m_configSvc;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>ToolHandle&lt;HLT::Navigation&gt;<sp/>m_fullNavigation;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline lineno="116"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/d08/classHLT_1_1TrigNavStructure" kindref="compound">HLT::TrigNavStructure</ref>*<sp/>m_navigation;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_acceptMultipleInstance;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_useAODDecision;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>m_decisionKey;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d6/dc4/classTrig_1_1TrigDecisionTool" kindref="compound">TrigDecisionTool</ref>&amp;<sp/>operator=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d6/dc4/classTrig_1_1TrigDecisionTool" kindref="compound">TrigDecisionTool</ref>&amp;);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>std::string&gt;<sp/>m_publicChainGroups;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigDecisionTool/TrigDecisionTool/TrigDecisionTool.h"/>
+  </compounddef>
+</doxygen>

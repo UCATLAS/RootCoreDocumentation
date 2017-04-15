@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="da/d38/TagList_8cxx" kind="file">
+    <compoundname>TagList.cxx</compoundname>
+    <includes refid="d2/de6/TagList_8h" local="no">SampleHandler/TagList.h</includes>
+    <includes refid="d3/dac/Assert_8h" local="no">RootCoreUtils/Assert.h</includes>
+    <includes refid="dd/db7/ThrowMsg_8h" local="no">RootCoreUtils/ThrowMsg.h</includes>
+    <incdepgraph>
+      <node id="264295">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/Root/TagList.cxx</label>
+        <link refid="TagList.cxx"/>
+        <childnode refid="264296" relation="include">
+        </childnode>
+        <childnode refid="264300" relation="include">
+        </childnode>
+        <childnode refid="264302" relation="include">
+        </childnode>
+      </node>
+      <node id="264299">
+        <label>string</label>
+      </node>
+      <node id="264301">
+        <label>RootCoreUtils/Global.h</label>
+        <link refid="d6/d7f/RootCoreUtils_2RootCoreUtils_2Global_8h_source"/>
+      </node>
+      <node id="264304">
+        <label>RootCoreUtils/MessageType.h</label>
+        <link refid="dd/d02/MessageType_8h_source"/>
+        <childnode refid="264301" relation="include">
+        </childnode>
+      </node>
+      <node id="264296">
+        <label>SampleHandler/TagList.h</label>
+        <link refid="d2/de6/TagList_8h_source"/>
+        <childnode refid="264297" relation="include">
+        </childnode>
+        <childnode refid="264298" relation="include">
+        </childnode>
+        <childnode refid="264299" relation="include">
+        </childnode>
+      </node>
+      <node id="264303">
+        <label>RootCoreUtils/PrintMsg.h</label>
+        <link refid="d2/d5f/PrintMsg_8h_source"/>
+        <childnode refid="264301" relation="include">
+        </childnode>
+        <childnode refid="264299" relation="include">
+        </childnode>
+        <childnode refid="264304" relation="include">
+        </childnode>
+      </node>
+      <node id="264302">
+        <label>RootCoreUtils/ThrowMsg.h</label>
+        <link refid="dd/db7/ThrowMsg_8h_source"/>
+        <childnode refid="264301" relation="include">
+        </childnode>
+        <childnode refid="264303" relation="include">
+        </childnode>
+      </node>
+      <node id="264298">
+        <label>set</label>
+      </node>
+      <node id="264300">
+        <label>RootCoreUtils/Assert.h</label>
+        <link refid="d3/dac/Assert_8h_source"/>
+        <childnode refid="264301" relation="include">
+        </childnode>
+      </node>
+      <node id="264297">
+        <label>SampleHandler/Global.h</label>
+        <link refid="d3/df9/SampleHandler_2SampleHandler_2Global_8h_source"/>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="d0/d9e/namespaceSH">SH</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>Nils<sp/>Krumnack<sp/>2011.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>(See<sp/>accompanying<sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Please<sp/>feel<sp/>free<sp/>to<sp/>contact<sp/>me<sp/>(krumnack@iastate.edu)<sp/>for<sp/>bug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>reports,<sp/>feature<sp/>suggestions,<sp/>praise<sp/>and<sp/>complaints.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//protect</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SampleHandler/TagList.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;RootCoreUtils/Assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;RootCoreUtils/ThrowMsg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>method<sp/>implementations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SH</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="d4/dff/namespaceMD_1a261b2f8e99c56c1a1b87d581cdeb0bd5" kindref="member">dbg</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TagList&amp;<sp/>obj,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*verbosity*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>result;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d41/classSH_1_1TagList_1aa16c7f8cb84c143e7e30acebb52cdd14" kindref="member" tooltip="the iterator to use">TagList::iterator</ref><sp/>tag<sp/>=<sp/>obj.begin(),<sp/>end<sp/>=<sp/>obj.end();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>tag<sp/>!=<sp/>end;<sp/>++<sp/>tag)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!result.empty())</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>+=<sp/>*tag;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;(&quot;</highlight><highlight class="normal"><sp/>+<sp/>result<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/d41/classSH_1_1TagList_1ac27866c0a94328fa50f9b0aa60052309" kindref="member" tooltip="test the invariant of this object">TagList ::</ref></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><ref refid="dd/d41/classSH_1_1TagList_1ac27866c0a94328fa50f9b0aa60052309" kindref="member" tooltip="test the invariant of this object">  testInvariant</ref><sp/>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="44"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>RCU_INVARIANT<sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(TagsIter<sp/>tag<sp/>=<sp/>m_tags.begin(),</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d41/classSH_1_1TagList_1a8aaa8c0196b9d7ecc7a896ed0683581d" kindref="member" tooltip="the end iterator to use">end</ref><sp/>=<sp/>m_tags.end();<sp/>tag<sp/>!=<sp/><ref refid="dd/d41/classSH_1_1TagList_1a8aaa8c0196b9d7ecc7a896ed0683581d" kindref="member" tooltip="the end iterator to use">end</ref>;<sp/>++<sp/>tag)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>RCU_INVARIANT<sp/>(!tag-&gt;empty());</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//RCU_INVARIANT<sp/>(tag-&gt;find<sp/>(&apos;:&apos;)<sp/>==<sp/>std::string::npos);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><ref refid="dd/d41/classSH_1_1TagList_1a38a1645ff0c690ab294cea5c4398e2c1" kindref="member" tooltip="standard default constructor">TagList ::</ref></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><ref refid="dd/d41/classSH_1_1TagList_1a38a1645ff0c690ab294cea5c4398e2c1" kindref="member" tooltip="standard default constructor">  TagList</ref><sp/>()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>RCU_NEW_INVARIANT<sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><ref refid="dd/d41/classSH_1_1TagList_1a38a1645ff0c690ab294cea5c4398e2c1" kindref="member" tooltip="standard default constructor">TagList ::</ref></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><ref refid="dd/d41/classSH_1_1TagList_1a38a1645ff0c690ab294cea5c4398e2c1" kindref="member" tooltip="standard default constructor">  TagList</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>tags,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>separator)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string::const_iterator<sp/>pos1,<sp/>pos2<sp/>=<sp/>tags.begin(),<sp/><ref refid="dd/d41/classSH_1_1TagList_1a8aaa8c0196b9d7ecc7a896ed0683581d" kindref="member" tooltip="the end iterator to use">end</ref><sp/>=<sp/>tags.end();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(pos2<sp/>!=<sp/><ref refid="dd/d41/classSH_1_1TagList_1a8aaa8c0196b9d7ecc7a896ed0683581d" kindref="member" tooltip="the end iterator to use">end</ref>)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(pos1<sp/>=<sp/>pos2;<sp/>pos2<sp/>!=<sp/><ref refid="dd/d41/classSH_1_1TagList_1a8aaa8c0196b9d7ecc7a896ed0683581d" kindref="member" tooltip="the end iterator to use">end</ref><sp/>&amp;&amp;<sp/>*pos2<sp/>!=<sp/>separator;<sp/>++<sp/>pos2)<sp/>{};</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos2<sp/>!=<sp/>pos1)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>m_tags.insert<sp/>(std::string<sp/>(pos1,<sp/>pos2));</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos2<sp/>!=<sp/><ref refid="dd/d41/classSH_1_1TagList_1a8aaa8c0196b9d7ecc7a896ed0683581d" kindref="member" tooltip="the end iterator to use">end</ref>)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>++<sp/>pos2;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>RCU_NEW_INVARIANT<sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dd/d41/classSH_1_1TagList_1a77a0a14771c9e6ecec01721da072fb41" kindref="member" tooltip="whether we have the given tag">TagList ::</ref></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><ref refid="dd/d41/classSH_1_1TagList_1a77a0a14771c9e6ecec01721da072fb41" kindref="member" tooltip="whether we have the given tag">  has</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>tag)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="86"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>RCU_READ_INVARIANT<sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>RCU_REQUIRE_SOFT<sp/>(!tag.empty());</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_tags.find<sp/>(tag)<sp/>!=<sp/>m_tags.end();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><ref refid="dd/d41/classSH_1_1TagList_1aa16c7f8cb84c143e7e30acebb52cdd14" kindref="member" tooltip="the iterator to use">TagList::iterator</ref><sp/><ref refid="dd/d41/classSH_1_1TagList_1a1d4270253cffcb1a18691fc2c08ffb28" kindref="member" tooltip="the begin iterator to use">TagList ::</ref></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><ref refid="dd/d41/classSH_1_1TagList_1a1d4270253cffcb1a18691fc2c08ffb28" kindref="member" tooltip="the begin iterator to use">  begin</ref><sp/>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="96"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>RCU_READ_INVARIANT<sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_tags.begin();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><ref refid="dd/d41/classSH_1_1TagList_1aa16c7f8cb84c143e7e30acebb52cdd14" kindref="member" tooltip="the iterator to use">TagList::iterator</ref><sp/><ref refid="dd/d41/classSH_1_1TagList_1a8aaa8c0196b9d7ecc7a896ed0683581d" kindref="member" tooltip="the end iterator to use">TagList ::</ref></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><ref refid="dd/d41/classSH_1_1TagList_1a8aaa8c0196b9d7ecc7a896ed0683581d" kindref="member" tooltip="the end iterator to use">  end</ref><sp/>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="105"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>RCU_READ_INVARIANT<sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_tags.end();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="dd/d41/classSH_1_1TagList_1affebece404460b7cda8bb23f75eba43a" kindref="member" tooltip="join all the tags together into a string">TagList ::</ref></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><ref refid="dd/d41/classSH_1_1TagList_1affebece404460b7cda8bb23f75eba43a" kindref="member" tooltip="join all the tags together into a string">  join</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>separator)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="114"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>RCU_READ_INVARIANT<sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>result;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(TagsIter<sp/>tag<sp/>=<sp/>m_tags.begin(),<sp/><ref refid="dd/d41/classSH_1_1TagList_1a8aaa8c0196b9d7ecc7a896ed0683581d" kindref="member" tooltip="the end iterator to use">end</ref><sp/>=<sp/>m_tags.end();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>tag<sp/>!=<sp/><ref refid="dd/d41/classSH_1_1TagList_1a8aaa8c0196b9d7ecc7a896ed0683581d" kindref="member" tooltip="the end iterator to use">end</ref>;<sp/>++<sp/>tag)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tag-&gt;find<sp/>(separator)<sp/>!=<sp/>std::string::npos)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>RCU_THROW_MSG<sp/>(std::string<sp/>(</highlight><highlight class="stringliteral">&quot;can&apos;t<sp/>use<sp/>separator<sp/>&quot;</highlight><highlight class="normal">)<sp/>+<sp/>separator<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>it<sp/>is<sp/>part<sp/>of<sp/>tag<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>*tag);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!result.empty())</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>+=<sp/>separator;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>+=<sp/>*tag;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/d41/classSH_1_1TagList_1a1ab19a382153e1edae2197813e1bdc61" kindref="member" tooltip="add a tag to the list">TagList ::</ref></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><ref refid="dd/d41/classSH_1_1TagList_1a1ab19a382153e1edae2197813e1bdc61" kindref="member" tooltip="add a tag to the list">  add</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>tag)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>RCU_CHANGE_INVARIANT<sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>m_tags.insert<sp/>(tag);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/Root/TagList.cxx"/>
+  </compounddef>
+</doxygen>

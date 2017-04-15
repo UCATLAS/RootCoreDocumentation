@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d0/d49/AsgMessaging_8cxx" kind="file">
+    <compoundname>AsgMessaging.cxx</compoundname>
+    <includes refid="d3/d61/AsgMessaging_8h" local="yes">AsgTools/AsgMessaging.h</includes>
+    <includes local="yes">GaudiKernel/Bootstrap.h</includes>
+    <includes local="yes">GaudiKernel/ISvcLocator.h</includes>
+    <includes local="yes">GaudiKernel/IMessageSvc.h</includes>
+    <incdepgraph>
+      <node id="9957">
+        <label>AsgTools/IAsgTool.h</label>
+        <link refid="df/dd4/IAsgTool_8h_source"/>
+        <childnode refid="9951" relation="include">
+        </childnode>
+        <childnode refid="9952" relation="include">
+        </childnode>
+        <childnode refid="9958" relation="include">
+        </childnode>
+        <childnode refid="9959" relation="include">
+        </childnode>
+      </node>
+      <node id="9964">
+        <label>GaudiKernel/ISvcLocator.h</label>
+      </node>
+      <node id="9959">
+        <label>GaudiKernel/IAlgTool.h</label>
+      </node>
+      <node id="9963">
+        <label>GaudiKernel/Bootstrap.h</label>
+      </node>
+      <node id="9962">
+        <label>AthenaBaseComps/AthMsgStreamMacros.h</label>
+      </node>
+      <node id="9955">
+        <label>AsgTools/MsgLevel.h</label>
+        <link refid="de/d80/MsgLevel_8h"/>
+        <childnode refid="9951" relation="include">
+        </childnode>
+        <childnode refid="9952" relation="include">
+        </childnode>
+        <childnode refid="9956" relation="include">
+        </childnode>
+      </node>
+      <node id="9952">
+        <label>AsgTools/AsgToolsConf.h</label>
+        <link refid="df/db7/AsgToolsConf_8h_source"/>
+      </node>
+      <node id="9951">
+        <label>string</label>
+      </node>
+      <node id="9956">
+        <label>GaudiKernel/IMessageSvc.h</label>
+      </node>
+      <node id="9961">
+        <label>AsgTools/MsgStreamMacros.h</label>
+        <link refid="d3/ded/AsgTools_2AsgTools_2MsgStreamMacros_8h_source"/>
+        <childnode refid="9952" relation="include">
+        </childnode>
+        <childnode refid="9955" relation="include">
+        </childnode>
+        <childnode refid="9962" relation="include">
+        </childnode>
+      </node>
+      <node id="9954">
+        <label>sstream</label>
+      </node>
+      <node id="9960">
+        <label>GaudiKernel/MsgStream.h</label>
+      </node>
+      <node id="9953">
+        <label>AsgTools/MsgStream.h</label>
+        <link refid="d3/d95/AsgTools_2AsgTools_2MsgStream_8h_source"/>
+        <childnode refid="9951" relation="include">
+        </childnode>
+        <childnode refid="9954" relation="include">
+        </childnode>
+        <childnode refid="9952" relation="include">
+        </childnode>
+        <childnode refid="9955" relation="include">
+        </childnode>
+        <childnode refid="9957" relation="include">
+        </childnode>
+        <childnode refid="9960" relation="include">
+        </childnode>
+      </node>
+      <node id="9958">
+        <label>AsgTools/AsgToolMacros.h</label>
+        <link refid="d1/d68/AsgToolMacros_8h_source"/>
+      </node>
+      <node id="9950">
+        <label>AsgTools/AsgMessaging.h</label>
+        <link refid="d3/d61/AsgMessaging_8h_source"/>
+        <childnode refid="9951" relation="include">
+        </childnode>
+        <childnode refid="9952" relation="include">
+        </childnode>
+        <childnode refid="9953" relation="include">
+        </childnode>
+        <childnode refid="9961" relation="include">
+        </childnode>
+      </node>
+      <node id="9949">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AsgTools/Root/AsgMessaging.cxx</label>
+        <link refid="AsgMessaging.cxx"/>
+        <childnode refid="9950" relation="include">
+        </childnode>
+        <childnode refid="9963" relation="include">
+        </childnode>
+        <childnode refid="9964" relation="include">
+        </childnode>
+        <childnode refid="9956" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="d1/d56/namespaceasg">asg</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>$Id:<sp/>AsgMessaging.cxx<sp/>784571<sp/>2016-11-16<sp/>14:27:23Z<sp/>will<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Local<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AsgTools/AsgMessaging.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Gaudi/Athena<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ASGTOOL_ATHENA</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>include<sp/>&quot;GaudiKernel/Bootstrap.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>include<sp/>&quot;GaudiKernel/ISvcLocator.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>include<sp/>&quot;GaudiKernel/IMessageSvc.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ASGTOOL_ATHENA</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">asg<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><ref refid="d1/d97/classasg_1_1AsgMessaging_1aa6e565de0931b6458b932cbb6a8ec55f" kindref="member" tooltip="Constructor with a name.">AsgMessaging::AsgMessaging</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name<sp/>)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">#ifdef<sp/>ASGTOOL_ATHENA</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>AthMessaging(<sp/>Gaudi::svcLocator()-&gt;service&lt;<sp/>IMessageSvc<sp/>&gt;(<sp/></highlight><highlight class="stringliteral">&quot;MessageSvc&quot;</highlight><highlight class="normal">,<sp/>false<sp/>),</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name<sp/>)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">#elif<sp/>defined(ASGTOOL_STANDALONE)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_msg(<sp/>name<sp/>)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">#else</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">#<sp/><sp/><sp/><ref refid="da/d8a/namespaceAmg_1aa8598c3ab8774ed5c55a37e729a04dd7" kindref="member">error</ref><sp/></highlight><highlight class="stringliteral">&quot;What<sp/>environment<sp/>are<sp/>we<sp/>in?!?&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">#endif<sp/></highlight><highlight class="comment">//<sp/>Environment<sp/>selection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><ref refid="d1/d97/classasg_1_1AsgMessaging_1aa6e565de0931b6458b932cbb6a8ec55f" kindref="member" tooltip="Constructor with a name.">AsgMessaging::AsgMessaging</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IAsgTool*<sp/>tool<sp/>)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">#ifdef<sp/>ASGTOOL_ATHENA</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>AthMessaging(<sp/>Gaudi::svcLocator()-&gt;service&lt;<sp/>IMessageSvc<sp/>&gt;(<sp/></highlight><highlight class="stringliteral">&quot;MessageSvc&quot;</highlight><highlight class="normal">,<sp/>false<sp/>),</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tool-&gt;name()<sp/>)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">#elif<sp/>defined(ASGTOOL_STANDALONE)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_msg(<sp/>tool<sp/>)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">#else</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">#<sp/><sp/><sp/><ref refid="da/d8a/namespaceAmg_1aa8598c3ab8774ed5c55a37e729a04dd7" kindref="member">error</ref><sp/></highlight><highlight class="stringliteral">&quot;What<sp/>environment<sp/>are<sp/>we<sp/>in?!?&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">#endif<sp/></highlight><highlight class="comment">//<sp/>Environment<sp/>selection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d1/d97/classasg_1_1AsgMessaging_1af52f582970fc09501ead498c285ebb32" kindref="member">AsgMessaging::msgLvl</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MSG::Level<sp/>lvl<sp/>)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ASGTOOL_ATHENA</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::AthMessaging::msgLvl(<sp/>lvl<sp/>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(ASGTOOL_STANDALONE)</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_msg.msgLevel(<sp/>lvl<sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>error<sp/>&quot;What<sp/>environment<sp/>are<sp/>we<sp/>in?!?&quot;</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>Environment<sp/>selection</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/>MsgStream&amp;<sp/><ref refid="d1/d97/classasg_1_1AsgMessaging_1ade3c4b8227d4dd544df9b5aee53363c3" kindref="member">AsgMessaging::msg</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ASGTOOL_ATHENA</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::AthMessaging::msg();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(ASGTOOL_STANDALONE)</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_msg;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>error<sp/>&quot;What<sp/>environment<sp/>are<sp/>we<sp/>in?!?&quot;</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>Environment<sp/>selection</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/>MsgStream&amp;<sp/><ref refid="d1/d97/classasg_1_1AsgMessaging_1ade3c4b8227d4dd544df9b5aee53363c3" kindref="member">AsgMessaging::msg</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MSG::Level<sp/>lvl<sp/>)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ASGTOOL_ATHENA</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::AthMessaging::msg(<sp/>lvl<sp/>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(ASGTOOL_STANDALONE)</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_msg<sp/>&lt;&lt;<sp/>lvl;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_msg;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>error<sp/>&quot;What<sp/>environment<sp/>are<sp/>we<sp/>in?!?&quot;</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>Environment<sp/>selection</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>asg</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AsgTools/Root/AsgMessaging.cxx"/>
+  </compounddef>
+</doxygen>

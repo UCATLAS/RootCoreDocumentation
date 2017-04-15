@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="db/d35/HLTExtraData_8cxx" kind="file">
+    <compoundname>HLTExtraData.cxx</compoundname>
+    <includes refid="dd/d01/HLTExtraData_8h" local="yes">TrigSteeringEvent/HLTExtraData.h</includes>
+    <incdepgraph>
+      <node id="330346">
+        <label>iterator</label>
+      </node>
+      <node id="330347">
+        <label>stdint.h</label>
+      </node>
+      <node id="330348">
+        <label>string</label>
+      </node>
+      <node id="330340">
+        <label>TrigSteeringEvent/HLTExtraData.h</label>
+        <link refid="dd/d01/HLTExtraData_8h"/>
+        <childnode refid="330341" relation="include">
+        </childnode>
+        <childnode refid="330348" relation="include">
+        </childnode>
+        <childnode refid="330344" relation="include">
+        </childnode>
+      </node>
+      <node id="330341">
+        <label>TrigSteeringEvent/StringSerializer.h</label>
+        <link refid="da/d4a/TrigSteeringEvent_2TrigSteeringEvent_2StringSerializer_8h_source"/>
+        <childnode refid="330342" relation="include">
+        </childnode>
+        <childnode refid="330343" relation="include">
+        </childnode>
+        <childnode refid="330344" relation="include">
+        </childnode>
+        <childnode refid="330345" relation="include">
+        </childnode>
+        <childnode refid="330346" relation="include">
+        </childnode>
+        <childnode refid="330347" relation="include">
+        </childnode>
+      </node>
+      <node id="330344">
+        <label>vector</label>
+      </node>
+      <node id="330343">
+        <label>sstream</label>
+      </node>
+      <node id="330345">
+        <label>cstdlib</label>
+      </node>
+      <node id="330342">
+        <label>iostream</label>
+      </node>
+      <node id="330339">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/src/HLTExtraData.cxx</label>
+        <link refid="HLTExtraData.cxx"/>
+        <childnode refid="330340" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Definition of the <ref refid="dc/d8d/namespaceHLT" kindref="compound">HLT</ref> extra data in the HLTResult payload. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Frank Winklmeier</para></simplesect>
+<simplesect kind="rcs"><title>Id</title></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dd/d01/HLTExtraData_8h" kindref="compound" tooltip="Definition of the HLT extra data in the HLTResult payload.">TrigSteeringEvent/HLTExtraData.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">HLT;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">HLTExtraData::HLTExtraData()<sp/>:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>statusCode(0)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">HLTExtraData::HLTExtraData(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;uint32_t&gt;&amp;<sp/>storage)<sp/>:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>statusCode(0)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>deserialize(storage);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">HLTExtraData::HLTExtraData(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d4/d14/classHLT_1_1HLTExtraData" kindref="compound">HLTExtraData</ref>&amp;<sp/>rhs)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>:<sp/>appName{rhs.<ref refid="d4/d14/classHLT_1_1HLTExtraData_1a91c5135f393e40761ee1a63c66102414" kindref="member" tooltip="application name">appName</ref>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>,<sp/>statusCode{rhs.statusCode}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>,<sp/>anonymous{rhs.anonymous}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>,<sp/>m_stringSerializer{}<sp/></highlight><highlight class="comment">//<sp/>not<sp/>copied<sp/>(default<sp/>always<sp/>good)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">HLTExtraData::HLTExtraData(<ref refid="d4/d14/classHLT_1_1HLTExtraData" kindref="compound">HLTExtraData</ref>&amp;&amp;<sp/>rhs)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>:<sp/><ref refid="d4/d14/classHLT_1_1HLTExtraData" kindref="compound">HLTExtraData</ref>{}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><ref refid="db/ded/ConstDataList_8h_1a67766f262856f1e197e15fec33b60bac" kindref="member" tooltip="See DataList&amp;lt;T, BASE&amp;gt;::swap().">swap</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>rhs);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="d4/d14/classHLT_1_1HLTExtraData" kindref="compound">HLTExtraData</ref>&amp;<sp/>HLTExtraData::operator=(<ref refid="d4/d14/classHLT_1_1HLTExtraData" kindref="compound">HLTExtraData</ref><sp/>rhs)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>swap(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>rhs);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d4/d14/classHLT_1_1HLTExtraData_1ab63c4d6a1a869a8e1ccddc3e6f9168b3" kindref="member">HLTExtraData::serialize</ref>(std::vector&lt;uint32_t&gt;&amp;<sp/>storage)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(empty())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>the<sp/>application<sp/>name<sp/>and<sp/>the<sp/>host<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>m_stringSerializer.<ref refid="d7/dec/classTrigSteeringEvent_1_1StringSerializer_1a401d3809248a4ad4c8c9e53d5b6adef6" kindref="member">serialize</ref>(<sp/><ref refid="d4/d14/classHLT_1_1HLTExtraData_1a91c5135f393e40761ee1a63c66102414" kindref="member" tooltip="application name">appName</ref>,<sp/>storage<sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>one<sp/>word<sp/>for<sp/>update<sp/>status</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>storage.push_back(<sp/><ref refid="d4/d14/classHLT_1_1HLTExtraData_1aedbc745bfba7b5887db0abad2eef865a" kindref="member" tooltip="various status codes (for prescale/COOL updates)">statusCode</ref><sp/>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Anonymous<sp/>words</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>storage.insert(storage.end(),<sp/><ref refid="d4/d14/classHLT_1_1HLTExtraData_1a0f729c05537e5ea29afa248ac46f199a" kindref="member" tooltip="For future use-cases (only use as last resort).">anonymous</ref>.begin(),<sp/><ref refid="d4/d14/classHLT_1_1HLTExtraData_1a0f729c05537e5ea29afa248ac46f199a" kindref="member" tooltip="For future use-cases (only use as last resort).">anonymous</ref>.end());</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d4/d14/classHLT_1_1HLTExtraData_1a69388b22e675b88d3b22c91357888e33" kindref="member">HLTExtraData::deserialize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;uint32_t&gt;&amp;<sp/>storage)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(storage.empty())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>StringSerializer<sp/>knows<sp/>how<sp/>long<sp/>the<sp/>string<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>std::size_t<sp/>offset<sp/>=<sp/>m_stringSerializer.<ref refid="d7/dec/classTrigSteeringEvent_1_1StringSerializer_1acebca33171c561c98baa5bdbdfadd6b7" kindref="member">deserialize</ref>(storage,<sp/><ref refid="d4/d14/classHLT_1_1HLTExtraData_1a91c5135f393e40761ee1a63c66102414" kindref="member" tooltip="application name">appName</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(offset<sp/>&lt;<sp/>storage.size())<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d14/classHLT_1_1HLTExtraData_1aedbc745bfba7b5887db0abad2eef865a" kindref="member" tooltip="various status codes (for prescale/COOL updates)">statusCode</ref><sp/>=<sp/>storage[offset++];</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d14/classHLT_1_1HLTExtraData_1a0f729c05537e5ea29afa248ac46f199a" kindref="member" tooltip="For future use-cases (only use as last resort).">anonymous</ref>.clear();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d14/classHLT_1_1HLTExtraData_1a0f729c05537e5ea29afa248ac46f199a" kindref="member" tooltip="For future use-cases (only use as last resort).">anonymous</ref>.insert(<ref refid="d4/d14/classHLT_1_1HLTExtraData_1a0f729c05537e5ea29afa248ac46f199a" kindref="member" tooltip="For future use-cases (only use as last resort).">anonymous</ref>.begin(),<sp/>storage.begin()+offset,<sp/>storage.end());</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HLT::swap(<ref refid="d4/d14/classHLT_1_1HLTExtraData" kindref="compound">HLTExtraData</ref>&amp;<sp/>lhs,<sp/><ref refid="d4/d14/classHLT_1_1HLTExtraData" kindref="compound">HLTExtraData</ref>&amp;<sp/>rhs)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="db/ded/ConstDataList_8h_1a67766f262856f1e197e15fec33b60bac" kindref="member" tooltip="See DataList&amp;lt;T, BASE&amp;gt;::swap().">std::swap</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><ref refid="db/ded/ConstDataList_8h_1a67766f262856f1e197e15fec33b60bac" kindref="member" tooltip="See DataList&amp;lt;T, BASE&amp;gt;::swap().">swap</ref>(lhs.<ref refid="d4/d14/classHLT_1_1HLTExtraData_1a91c5135f393e40761ee1a63c66102414" kindref="member" tooltip="application name">appName</ref>,<sp/>rhs.<ref refid="d4/d14/classHLT_1_1HLTExtraData_1a91c5135f393e40761ee1a63c66102414" kindref="member" tooltip="application name">appName</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><ref refid="db/ded/ConstDataList_8h_1a67766f262856f1e197e15fec33b60bac" kindref="member" tooltip="See DataList&amp;lt;T, BASE&amp;gt;::swap().">swap</ref>(lhs.<ref refid="d4/d14/classHLT_1_1HLTExtraData_1aedbc745bfba7b5887db0abad2eef865a" kindref="member" tooltip="various status codes (for prescale/COOL updates)">statusCode</ref>,<sp/>rhs.<ref refid="d4/d14/classHLT_1_1HLTExtraData_1aedbc745bfba7b5887db0abad2eef865a" kindref="member" tooltip="various status codes (for prescale/COOL updates)">statusCode</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><ref refid="db/ded/ConstDataList_8h_1a67766f262856f1e197e15fec33b60bac" kindref="member" tooltip="See DataList&amp;lt;T, BASE&amp;gt;::swap().">swap</ref>(lhs.<ref refid="d4/d14/classHLT_1_1HLTExtraData_1a0f729c05537e5ea29afa248ac46f199a" kindref="member" tooltip="For future use-cases (only use as last resort).">anonymous</ref>,<sp/>rhs.<ref refid="d4/d14/classHLT_1_1HLTExtraData_1a0f729c05537e5ea29afa248ac46f199a" kindref="member" tooltip="For future use-cases (only use as last resort).">anonymous</ref>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>default<sp/>m_stringSerializer<sp/>is<sp/>good<sp/>for<sp/>every<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/src/HLTExtraData.cxx"/>
+  </compounddef>
+</doxygen>

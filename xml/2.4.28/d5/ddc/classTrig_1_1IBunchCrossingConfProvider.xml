@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d5/ddc/classTrig_1_1IBunchCrossingConfProvider" kind="class" prot="public">
+    <compoundname>Trig::IBunchCrossingConfProvider</compoundname>
+    <basecompoundref refid="d4/d20/classasg_1_1IAsgTool" prot="public" virt="virtual">asg::IAsgTool</basecompoundref>
+    <derivedcompoundref refid="dd/d09/classTrig_1_1BunchCrossingConfProviderBase" prot="public" virt="virtual">Trig::BunchCrossingConfProviderBase</derivedcompoundref>
+    <includes refid="d7/d6d/IBunchCrossingConfProvider_8h" local="no">IBunchCrossingConfProvider.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1ad30fc9b02c7c88c2beadda0071a0d4a6" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>typedef unsigned int Trig::IBunchCrossingConfProvider::configid_type</definition>
+        <argsstring></argsstring>
+        <name>configid_type</name>
+        <briefdescription>
+<para>Declare the interface that this class provides. </para>        </briefdescription>
+        <detaileddescription>
+<para>Type for the unique identifier </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingConfProvider.h" line="55" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingConfProvider.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1a7e4a4c4f5a4548c02dccac794e4b7b12" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1ad30fc9b02c7c88c2beadda0071a0d4a6" kindref="member">configid_type</ref></type>
+        <definition>virtual configid_type Trig::IBunchCrossingConfProvider::configID</definition>
+        <argsstring>() const =0</argsstring>
+        <name>configID</name>
+        <reimplementedby refid="df/d24/classTrig_1_1TrigConfBunchCrossingTool_1ae308cbfac79210b738d9776a7d1353bb">configID</reimplementedby>
+        <reimplementedby refid="da/dfc/classTrig_1_1MCBunchCrossingTool_1a39d11665c402dd15251de49f17678658">configID</reimplementedby>
+        <reimplementedby refid="d0/d98/classTrig_1_1LHCBunchCrossingTool_1ae12e5a410dfda0f0538e99a9a9a7914a">configID</reimplementedby>
+        <briefdescription>
+<para>Unique identifier for the current configuration. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a tricky part of the interface. In order to be able to save the bunch pattern configuration for many different setups in a meaningful way, we have to uniquely identify each differing configuration.</para><para>For some backends this is easy. When reading the configuration from the trigger database, the unique identifier can be the bunch group key (BGK). But when reading the configuration of a MC file, the situation is a bit more tricky.</para><para>In the end the only requirement with this function is that it should return the same ID for two identical configurations, and that it should return a differiod ID with a &quot;high enough&quot; period for different configurations.</para><para><simplesect kind="return"><para><ref refid="d4/dc4/structA" kindref="compound">A</ref> unique identifier for the currently loaded configuration </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingConfProvider.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1a643cdd16202703f44b338bbf6c320017" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>virtual std::vector&lt; int &gt; Trig::IBunchCrossingConfProvider::configuredBCIDs</definition>
+        <argsstring>() const =0</argsstring>
+        <name>configuredBCIDs</name>
+        <reimplementedby refid="da/dfc/classTrig_1_1MCBunchCrossingTool_1ac3e74e966a491d171f98fc57379202a5">configuredBCIDs</reimplementedby>
+        <reimplementedby refid="dd/d09/classTrig_1_1BunchCrossingConfProviderBase_1a6689dc298a887310e6a00df1fc14f8a2">configuredBCIDs</reimplementedby>
+        <briefdescription>
+<para>Function providing the BCIDs of the configured colliding bunches. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function returns the BCIDs of the colliding bunches in the current configuration.</para><para><simplesect kind="return"><para>The BCIDs of the colliding bunches </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingConfProvider.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1af5b8cc54eb7c5add5ec5526e9a96adf0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>virtual std::vector&lt; float &gt; Trig::IBunchCrossingConfProvider::configuredIntensitiesBeam1</definition>
+        <argsstring>() const =0</argsstring>
+        <name>configuredIntensitiesBeam1</name>
+        <reimplementedby refid="df/d24/classTrig_1_1TrigConfBunchCrossingTool_1a6ff2271d672bf6aecfb0a63e06f16488">configuredIntensitiesBeam1</reimplementedby>
+        <reimplementedby refid="da/dfc/classTrig_1_1MCBunchCrossingTool_1accf5d0162458465ee6cf4cc5843a83b5">configuredIntensitiesBeam1</reimplementedby>
+        <reimplementedby refid="d0/d98/classTrig_1_1LHCBunchCrossingTool_1abb7137a7bcfa747fdce966ad4b841590">configuredIntensitiesBeam1</reimplementedby>
+        <reimplementedby refid="dd/d09/classTrig_1_1BunchCrossingConfProviderBase_1ad54897be82f5d5133553ee08204d1ba5">configuredIntensitiesBeam1</reimplementedby>
+        <briefdescription>
+<para>Function providing the intensities of the configured colliding bunches. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function returns the &quot;intensities&quot; of the colliding bunches. It always gives the &quot;intensities&quot; in the same order as the <ref refid="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1a643cdd16202703f44b338bbf6c320017" kindref="member">configuredBCIDs()</ref> function returns the BCIDs in. The returned values may be context specific.</para><para><simplesect kind="return"><para>The &quot;intensities&quot; of the colliding bunches (from beam 1) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingConfProvider.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1adf06db8d8fe18c4d94bf920e8b420e47" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>virtual std::vector&lt; float &gt; Trig::IBunchCrossingConfProvider::configuredIntensitiesBeam2</definition>
+        <argsstring>() const =0</argsstring>
+        <name>configuredIntensitiesBeam2</name>
+        <reimplementedby refid="df/d24/classTrig_1_1TrigConfBunchCrossingTool_1a9ec884fb061eb236fdbc68f2ee017e6c">configuredIntensitiesBeam2</reimplementedby>
+        <reimplementedby refid="da/dfc/classTrig_1_1MCBunchCrossingTool_1a09b94e2b5e0e0efbdcf059561a80b0f3">configuredIntensitiesBeam2</reimplementedby>
+        <reimplementedby refid="d0/d98/classTrig_1_1LHCBunchCrossingTool_1a069df700551210392c75144aef22e94f">configuredIntensitiesBeam2</reimplementedby>
+        <reimplementedby refid="dd/d09/classTrig_1_1BunchCrossingConfProviderBase_1aadf2c635e6c68f7cdf722b528c51c6e3">configuredIntensitiesBeam2</reimplementedby>
+        <briefdescription>
+<para>Function providing the intensities of the configured colliding bunches. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function returns the &quot;intensities&quot; of the colliding bunches. It always gives the &quot;intensities&quot; in the same order as the <ref refid="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1a643cdd16202703f44b338bbf6c320017" kindref="member">configuredBCIDs()</ref> function returns the BCIDs in. The returned values may be context specific.</para><para><simplesect kind="return"><para>The &quot;intensities&quot; of the colliding bunches (from beam 2) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingConfProvider.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1a6ac5a8276b6746641dda9e134869a254" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>virtual std::vector&lt; int &gt; Trig::IBunchCrossingConfProvider::configuredUnpairedBCIDsBeam1</definition>
+        <argsstring>() const =0</argsstring>
+        <name>configuredUnpairedBCIDsBeam1</name>
+        <reimplementedby refid="dd/d09/classTrig_1_1BunchCrossingConfProviderBase_1a9717638b1e35b15c97fe603b9cd7841e">configuredUnpairedBCIDsBeam1</reimplementedby>
+        <briefdescription>
+<para>Function providing the BCIDs of the configured unpaired bunches. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function returns the BCIDs of the unpaired bunches in the current configuration.</para><para><simplesect kind="return"><para>The BCIDs of the unpaired bunches from beam 1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingConfProvider.h" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1aa01086653bd4be004b5842300c92af5e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>virtual std::vector&lt; int &gt; Trig::IBunchCrossingConfProvider::configuredUnpairedBCIDsBeam2</definition>
+        <argsstring>() const =0</argsstring>
+        <name>configuredUnpairedBCIDsBeam2</name>
+        <reimplementedby refid="dd/d09/classTrig_1_1BunchCrossingConfProviderBase_1a5e78aba398533aad48f19e76012c4e80">configuredUnpairedBCIDsBeam2</reimplementedby>
+        <briefdescription>
+<para>Function providing the BCIDs of the configured unpaired bunches. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function returns the BCIDs of the unpaired bunches in the current configuration.</para><para><simplesect kind="return"><para>The BCIDs of the unpaired bunches from beam 2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingConfProvider.h" line="125"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1a849acf6a5bb2a9777121ce7e8be73ec5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>virtual std::vector&lt; float &gt; Trig::IBunchCrossingConfProvider::configuredUnpairedIntensitiesBeam1</definition>
+        <argsstring>() const =0</argsstring>
+        <name>configuredUnpairedIntensitiesBeam1</name>
+        <reimplementedby refid="df/d24/classTrig_1_1TrigConfBunchCrossingTool_1a6de561843e78231f26cc90bcedb83439">configuredUnpairedIntensitiesBeam1</reimplementedby>
+        <reimplementedby refid="d0/d98/classTrig_1_1LHCBunchCrossingTool_1a85890241629d3d96a3da308efa3b35c5">configuredUnpairedIntensitiesBeam1</reimplementedby>
+        <reimplementedby refid="dd/d09/classTrig_1_1BunchCrossingConfProviderBase_1a8aef723183a84775cd610e8573c438cd">configuredUnpairedIntensitiesBeam1</reimplementedby>
+        <briefdescription>
+<para>Function providing the intensities of the configured unpaired bunches. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function returns the &quot;intensities&quot; of the unpaired bunches. It always gives the &quot;intensities&quot; in the same order as the configuredUnpairedBCIDs() function returns the BCIDs in.</para><para><simplesect kind="return"><para>The &quot;intensities&quot; of the unpaired bunches from beam 1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingConfProvider.h" line="135"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1ad35fe34ce68e2e5dd161b16610ae5a41" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>virtual std::vector&lt; float &gt; Trig::IBunchCrossingConfProvider::configuredUnpairedIntensitiesBeam2</definition>
+        <argsstring>() const =0</argsstring>
+        <name>configuredUnpairedIntensitiesBeam2</name>
+        <reimplementedby refid="df/d24/classTrig_1_1TrigConfBunchCrossingTool_1a1b7f5af137176edf3b53fcd458cfce3d">configuredUnpairedIntensitiesBeam2</reimplementedby>
+        <reimplementedby refid="d0/d98/classTrig_1_1LHCBunchCrossingTool_1adb916121af11c49dc8ad0de335b408e5">configuredUnpairedIntensitiesBeam2</reimplementedby>
+        <reimplementedby refid="dd/d09/classTrig_1_1BunchCrossingConfProviderBase_1a828136eed8341a683555a76e90e54c17">configuredUnpairedIntensitiesBeam2</reimplementedby>
+        <briefdescription>
+<para>Function providing the intensities of the configured unpaired bunches. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function returns the &quot;intensities&quot; of the unpaired bunches. It always gives the &quot;intensities&quot; in the same order as the configuredUnpairedBCIDs() function returns the BCIDs in.</para><para><simplesect kind="return"><para>The &quot;intensities&quot; of the unpaired bunches from beam 2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingConfProvider.h" line="145"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Inteface for providing the bunch structure information. </para>    </briefdescription>
+    <detaileddescription>
+<para>To make it simpler for <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref> components to save the bunch structure information in a uniform way, they should use this interface. The bunch structure configuration can come from many different places. Since the package already provides code for interpreting all these sources, it makes sense that analysts wouldn&apos;t have to re-do all this themselves.</para><para>The idea is that the information that this interface provides has to be enough for fully configuring any version (especially the standalone one(s)) of the tool. The main use case at the moment being, that if someone saves this configuration into a D3PD, it will become possible to use a standalone version of the bunch crossing tool to analyse the D3PD in the same way as the analysis is done in <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref>.</para><para>This interface is not split into an Athena-dependent and Athena-independent class, as I don&apos;t think this functionality would be useful outside <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref>. But who knows...</para><para>All <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref> tools that implement this interface have to fire an incident of type &quot;BunchConfig&quot; when their configuration is updated. Unfortunately I can&apos;t create a static member with this type name, because then the interface would stop being pure virtual... :-( I could define this incident type name as a pre-processor macro, but I don&apos;t like that solution. :-P</para><para><simplesect kind="author"><para>Attila Krasznahorkay &lt;<ulink url="mailto:Attila.Krasznahorkay@cern.ch">Attila.Krasznahorkay@cern.ch</ulink>&gt;</para></simplesect>
+<simplesect kind="rcs"><title>Revision</title><para>618301 </para></simplesect>
+<simplesect kind="rcs"><title>Date</title><para>2014-09-24 10:53:05 +0200 (Wed, 24 Sep 2014) </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="9224">
+        <label>Trig::IBunchCrossingConfProvider</label>
+        <link refid="d5/ddc/classTrig_1_1IBunchCrossingConfProvider"/>
+        <childnode refid="9225" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9225">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="9228">
+        <label>Trig::MCBunchCrossingTool</label>
+        <link refid="da/dfc/classTrig_1_1MCBunchCrossingTool"/>
+        <childnode refid="9226" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9226">
+        <label>Trig::BunchCrossingConfProviderBase</label>
+        <link refid="dd/d09/classTrig_1_1BunchCrossingConfProviderBase"/>
+        <childnode refid="9224" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9227">
+        <label>Trig::LHCBunchCrossingTool</label>
+        <link refid="d0/d98/classTrig_1_1LHCBunchCrossingTool"/>
+        <childnode refid="9226" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9229">
+        <label>Trig::TrigConfBunchCrossingTool</label>
+        <link refid="df/d24/classTrig_1_1TrigConfBunchCrossingTool"/>
+        <childnode refid="9226" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9230">
+        <label>Trig::IBunchCrossingConfProvider</label>
+        <link refid="d5/ddc/classTrig_1_1IBunchCrossingConfProvider"/>
+        <childnode refid="9231" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9231">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingConfProvider.h" line="48" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingConfProvider.h" bodystart="48" bodyend="147"/>
+    <listofallmembers>
+      <member refid="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1a7e4a4c4f5a4548c02dccac794e4b7b12" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingConfProvider</scope><name>configID</name></member>
+      <member refid="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1ad30fc9b02c7c88c2beadda0071a0d4a6" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingConfProvider</scope><name>configid_type</name></member>
+      <member refid="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1a643cdd16202703f44b338bbf6c320017" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingConfProvider</scope><name>configuredBCIDs</name></member>
+      <member refid="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1af5b8cc54eb7c5add5ec5526e9a96adf0" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingConfProvider</scope><name>configuredIntensitiesBeam1</name></member>
+      <member refid="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1adf06db8d8fe18c4d94bf920e8b420e47" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingConfProvider</scope><name>configuredIntensitiesBeam2</name></member>
+      <member refid="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1a6ac5a8276b6746641dda9e134869a254" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingConfProvider</scope><name>configuredUnpairedBCIDsBeam1</name></member>
+      <member refid="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1aa01086653bd4be004b5842300c92af5e" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingConfProvider</scope><name>configuredUnpairedBCIDsBeam2</name></member>
+      <member refid="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1a849acf6a5bb2a9777121ce7e8be73ec5" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingConfProvider</scope><name>configuredUnpairedIntensitiesBeam1</name></member>
+      <member refid="d5/ddc/classTrig_1_1IBunchCrossingConfProvider_1ad35fe34ce68e2e5dd161b16610ae5a41" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingConfProvider</scope><name>configuredUnpairedIntensitiesBeam2</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1af1aac990b958e92bf38123318d926e67" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingConfProvider</scope><name>print</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1a77b49d52f1f8c272cb665b8309d6082d" prot="public" virt="virtual"><scope>Trig::IBunchCrossingConfProvider</scope><name>~IAsgTool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

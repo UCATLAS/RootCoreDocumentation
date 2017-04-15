@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d4/d4d/testNewFFTool_8cxx" kind="file">
+    <compoundname>testNewFFTool.cxx</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>to<sp/>make<sp/>this<sp/>work:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>uncomment<sp/>everything<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>then<sp/>in<sp/>TPhotonMCShifterTool.h<sp/>comment<sp/>the<sp/>namespace<sp/>IDVAR<sp/>part<sp/>and<sp/>add<sp/>#include<sp/>&quot;ElectronPhotonShowerShapeFudgeTool/FudgeMCTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">#include<sp/>&quot;ElectronPhotonShowerShapeFudgeTool/FudgeMCTool.h&quot;</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">#include<sp/>&quot;ElectronPhotonShowerShapeFudgeTool/TPhotonMCShifterTool.h&quot;</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">#include<sp/>&quot;TRandom3.h&quot;</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">#include<sp/>&lt;iostream&gt;</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">bool<sp/>verbose<sp/>=<sp/>false;</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment">int<sp/>main()<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>FudgeMCTool<sp/>oldfftool;</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/>TPhotonMCShifterTool<sp/>newfftool;</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>int<sp/>nchecks<sp/>=<sp/>10000;</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>for<sp/>(int<sp/>i=0;<sp/>i&lt;nchecks;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/>if<sp/>(i%(nchecks/100)==0)<sp/>std::cout<sp/>&lt;&lt;<sp/>(i*100/nchecks)<sp/>&lt;&lt;<sp/>&quot;%&quot;<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/><sp/>int<sp/>preselection<sp/>=<sp/>gRandom-&gt;Integer(18);</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/>if<sp/>(preselection==9)<sp/>continue;</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/>newfftool.LoadFFs(preselection);</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/>oldfftool.LoadFFs(preselection);</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/><sp/>double<sp/>pt<sp/>=<sp/>gRandom-&gt;Uniform(200000.);</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/><sp/>double<sp/>eta2<sp/>=<sp/>gRandom-&gt;Uniform(2.37);</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>ivar=0;<sp/>ivar&lt;12;<sp/>ivar++)</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>conv=0;<sp/>conv&lt;2;<sp/>conv++)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/>double<sp/>newff<sp/>=<sp/>newfftool.GetFF(ivar,<sp/>pt,<sp/>eta2,<sp/>conv);</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/><sp/>double<sp/>oldff<sp/>=<sp/>oldfftool.GetFF(ivar,<sp/>pt,<sp/>eta2,<sp/>conv,<sp/>preselection);</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/>if<sp/>(verbose)</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>Form(&quot;ivar<sp/>=<sp/>%d,<sp/>pt<sp/>=<sp/>%lf,<sp/>eta2<sp/>=<sp/>%lf,<sp/>conv<sp/>=<sp/>%d:<sp/>old<sp/>=<sp/>%lf,<sp/>new<sp/>=<sp/>%lf&quot;,<sp/>ivar,<sp/>pt,<sp/>eta2,<sp/>conv,<sp/>oldff,<sp/>newff)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/><sp/>if<sp/>(newff!=oldff)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>Form(&quot;Different<sp/>results<sp/>for<sp/>ivar<sp/>=<sp/>%d,<sp/>pt<sp/>=<sp/>%lf,<sp/>eta2<sp/>=<sp/>%lf,<sp/>conv<sp/>=<sp/>%d:<sp/>old<sp/>=<sp/>%lf,<sp/>new<sp/>=<sp/>%lf&quot;,<sp/>ivar,<sp/>pt,<sp/>eta2,<sp/>conv,<sp/>oldff,<sp/>newff)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>exit(-1);</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"></highlight></codeline>
+<codeline lineno="42"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonShowerShapeFudgeTool/util/testNewFFTool.cxx"/>
+  </compounddef>
+</doxygen>

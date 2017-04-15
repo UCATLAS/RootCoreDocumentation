@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d6/d76/TrigConfBase_2TrigConfBase_2MsgStream_8h" kind="file">
+    <compoundname>MsgStream.h</compoundname>
+    <includes local="no">sstream</includes>
+    <includedby refid="dd/dbe/TrigConfBase_2Root_2MsgStream_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfBase/Root/MsgStream.cxx</includedby>
+    <includedby refid="dd/dce/TrigConfMessaging_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfBase/TrigConfBase/TrigConfMessaging.h</includedby>
+    <incdepgraph>
+      <node id="8933">
+        <label>sstream</label>
+      </node>
+      <node id="8932">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfBase/TrigConfBase/MsgStream.h</label>
+        <link refid="TrigConfBase/TrigConfBase/MsgStream.h"/>
+        <childnode refid="8933" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8935">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfBase/TrigConfBase/TrigConfMessaging.h</label>
+        <link refid="dd/dce/TrigConfMessaging_8h"/>
+      </node>
+      <node id="8934">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfBase/TrigConfBase/MsgStream.h</label>
+        <link refid="TrigConfBase/TrigConfBase/MsgStream.h"/>
+        <childnode refid="8935" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="de/dab/classTrigConf_1_1MsgStreamTC" prot="public">TrigConf::MsgStreamTC</innerclass>
+    <innernamespace refid="d4/d08/namespaceTrigConf">TrigConf</innernamespace>
+    <innernamespace refid="d0/deb/namespaceTrigConf_1_1MSGTC">TrigConf::MSGTC</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="d6/d76/TrigConfBase_2TrigConfBase_2MsgStream_8h_1af76ffa7ddb218235580223e0aa654edf" prot="public" static="no">
+        <name>TRIGCONFBASE_MSGSTREAM_H</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfBase/TrigConfBase/MsgStream.h" line="3" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfBase/TrigConfBase/MsgStream.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>-*-<sp/>C++<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TRIGCONFBASE_MSGSTREAM_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TRIGCONFBASE_MSGSTREAM_H<sp/>1</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">IMessageSvc;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">TrigConf<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="d0/deb/namespaceTrigConf_1_1MSGTC" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">MSGTC<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>Level<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>NIL<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>VERBOSE,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>INFO,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>WARNING,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ERROR,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>FATAL,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ALWAYS,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>NUM_LEVELS</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="de/dab/classTrigConf_1_1MsgStreamTC" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="de/dab/classTrigConf_1_1MsgStreamTC" kindref="compound">MsgStreamTC</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::ostringstream<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC" kindref="compound">MsgStreamTC</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="d6/db2/structTrigConf_1_1name" kindref="compound">name</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="de/dab/classTrigConf_1_1MsgStreamTC_1a8db41d8760bf4e257c91395a9dead476" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>MSGTC::Level<sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC_1a8db41d8760bf4e257c91395a9dead476" kindref="member" tooltip="Return message level of stream.">level</ref>()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_level;}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC_1a4bf8a35581f4a57387b8f7fded0f6bbe" kindref="member" tooltip="Set message level of stream.">setLevel</ref>(MSGTC::Level<sp/>lvl);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>width<sp/>for<sp/>printing<sp/>the<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setWidth(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_width<sp/>=<sp/>width;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="de/dab/classTrigConf_1_1MsgStreamTC_1a6dfa38aac83bc42873980bb1e6facda8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC" kindref="compound">MsgStreamTC</ref>&amp;<sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC_1a6dfa38aac83bc42873980bb1e6facda8" kindref="member" tooltip="Output operator for message levels.">operator&lt;&lt; </ref>(MSGTC::Level<sp/>lvl)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lvl<sp/>=<sp/>(lvl<sp/>&gt;=<sp/>MSGTC::NUM_LEVELS)<sp/>?<sp/>MSGTC::ALWAYS<sp/>:<sp/>(lvl&lt;MSGTC::NIL)<sp/>?<sp/>MSGTC::NIL<sp/>:<sp/>lvl;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_active<sp/>=<sp/>((m_msgLevel=lvl)<sp/>&gt;=<sp/>m_level);<sp/><sp/></highlight><highlight class="comment">//<sp/>active<sp/>if<sp/>message<sp/>level<sp/>&gt;=<sp/>stream<sp/>level</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="72" refid="de/dab/classTrigConf_1_1MsgStreamTC_1aba39019a4fd43e892ded6f072fc4bdef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC" kindref="compound">MsgStreamTC</ref>&amp;<sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC_1a6dfa38aac83bc42873980bb1e6facda8" kindref="member" tooltip="Output operator for message levels.">operator&lt;&lt; </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d1/def/classT" kindref="compound">T</ref>&amp;<sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_active)<sp/>*</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::ostringstream*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>t;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="de/dab/classTrigConf_1_1MsgStreamTC_1a9779edfc5918423916b08cd9c907721c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC" kindref="compound">MsgStreamTC</ref>&amp;<sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC_1a6dfa38aac83bc42873980bb1e6facda8" kindref="member" tooltip="Output operator for message levels.">operator&lt;&lt; </ref>(std::ios&amp;<sp/>(*_f)(std::ios&amp;))<sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_active)<sp/>_f(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="de/dab/classTrigConf_1_1MsgStreamTC_1acceb6ed1dee5737bd7ab414cadfef345" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC" kindref="compound">MsgStreamTC</ref>&amp;<sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC_1a6dfa38aac83bc42873980bb1e6facda8" kindref="member" tooltip="Output operator for message levels.">operator&lt;&lt; </ref>(<sp/>std::ostream&amp;<sp/>(*_f)(std::ostream&amp;))<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_active)<sp/>_f(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="de/dab/classTrigConf_1_1MsgStreamTC_1a7d56a3ff46728307827d884b743d9252" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC" kindref="compound">MsgStreamTC</ref>&amp;<sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC_1a6dfa38aac83bc42873980bb1e6facda8" kindref="member" tooltip="Output operator for message levels.">operator&lt;&lt; </ref>(<sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC" kindref="compound">MsgStreamTC</ref>&amp;<sp/>(*_f)(<ref refid="de/dab/classTrigConf_1_1MsgStreamTC" kindref="compound">MsgStreamTC</ref>&amp;))<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_active)<sp/>_f(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC_1ad1f05fc8f3feae0613dc3a107d73d3ad" kindref="member" tooltip="Print the current message buffer.">doOutput</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="de/dab/classTrigConf_1_1MsgStreamTC_1a101eb17c7e769ff4572a996d34cb260d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC_1a101eb17c7e769ff4572a996d34cb260d" kindref="member" tooltip="Is the stream active?">isActive</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_active;<sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="de/dab/classTrigConf_1_1MsgStreamTC_1a8c7c4c30231edec87e5e9af5d737b83e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC_1a8c7c4c30231edec87e5e9af5d737b83e" kindref="member" tooltip="set the name if you want to change the message stream name">setName</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>name)<sp/>{<sp/>m_name<sp/>=<sp/>name;<sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_active;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>MSGTC::Level<sp/>m_level;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>MSGTC::Level<sp/>m_msgLevel;<sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><sp/>m_name;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_width<sp/>{<sp/>30<sp/>};<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="d4/d08/namespaceTrigConf_1a7e986888f07920f88ed5366cd2755ed6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="de/dab/classTrigConf_1_1MsgStreamTC" kindref="compound">MsgStreamTC</ref>&amp;<sp/><ref refid="d4/d08/namespaceTrigConf_1a7e986888f07920f88ed5366cd2755ed6" kindref="member" tooltip="End of message.">endmsgtc</ref>(<ref refid="de/dab/classTrigConf_1_1MsgStreamTC" kindref="compound">MsgStreamTC</ref>&amp;<sp/>s)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(s.<ref refid="de/dab/classTrigConf_1_1MsgStreamTC_1a101eb17c7e769ff4572a996d34cb260d" kindref="member" tooltip="Is the stream active?">isActive</ref>())<sp/>s.<ref refid="de/dab/classTrigConf_1_1MsgStreamTC_1ad1f05fc8f3feae0613dc3a107d73d3ad" kindref="member" tooltip="Print the current message buffer.">doOutput</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TrigConf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfBase/TrigConfBase/MsgStream.h"/>
+  </compounddef>
+</doxygen>

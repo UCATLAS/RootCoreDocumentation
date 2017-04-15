@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="da/d88/Enums__test_8cxx" kind="file">
+    <compoundname>Enums_test.cxx</compoundname>
+    <includes local="no">iostream</includes>
+    <includes refid="d5/d69/TrigSteeringEvent_2TrigSteeringEvent_2Enums_8h" local="yes">TrigSteeringEvent/Enums.h</includes>
+    <incdepgraph>
+      <node id="330780">
+        <label>stdint.h</label>
+      </node>
+      <node id="330779">
+        <label>string</label>
+      </node>
+      <node id="330778">
+        <label>vector</label>
+      </node>
+      <node id="330776">
+        <label>iostream</label>
+      </node>
+      <node id="330777">
+        <label>TrigSteeringEvent/Enums.h</label>
+        <link refid="d5/d69/TrigSteeringEvent_2TrigSteeringEvent_2Enums_8h_source"/>
+        <childnode refid="330778" relation="include">
+        </childnode>
+        <childnode refid="330779" relation="include">
+        </childnode>
+        <childnode refid="330780" relation="include">
+        </childnode>
+      </node>
+      <node id="330775">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/test/Enums_test.cxx</label>
+        <link refid="Enums_test.cxx"/>
+        <childnode refid="330776" relation="include">
+        </childnode>
+        <childnode refid="330777" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="da/d88/Enums__test_8cxx_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/test/Enums_test.cxx" line="10" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/test/Enums_test.cxx" bodystart="10" bodyend="87"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifdef<sp/>XAOD_STANDALONE</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;}</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifndef<sp/>XAOD_STANDALONE</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TrigSteeringEvent/Enums.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">HLT;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main<sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Start<sp/>testing<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/><sp/>ErrorCode<sp/>c1<sp/>=<sp/>ErrorCode(1,5);<sp/>//<sp/>this<sp/>should<sp/>fail<sp/>to<sp/>compile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">ErrorCode</ref><sp/>c2(Action::CONTINUE);<sp/></highlight><highlight class="comment">//<sp/>this<sp/>should<sp/>go</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>code&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>hex<sp/>&lt;&lt;<sp/>c2.code<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>HLT::strErrorCode(c2)&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">ErrorCode</ref><sp/>c3(Action::ABORT_CHAIN,<sp/>Reason::MISSING_FEATURE);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>code&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>hex<sp/>&lt;&lt;<sp/>c3.code<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>HLT::strErrorCode(c3)&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>c3<sp/>=<sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">ErrorCode</ref>(Action::ABORT_CHAIN);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>code&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>hex<sp/>&lt;&lt;<sp/>c3.code<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>HLT::strErrorCode(c3)&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>c3<sp/>=<sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">ErrorCode</ref>(Action::ABORT_EVENT);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>code&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>hex<sp/>&lt;&lt;<sp/>c3.code<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>HLT::strErrorCode(c3)&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>c3<sp/>=<sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">ErrorCode</ref>(Action::ABORT_JOB,<sp/>Reason::BAD_JOB_SETUP<sp/>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>code&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>hex<sp/>&lt;&lt;<sp/>c3.code<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>HLT::strErrorCode(c3)&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>c2<sp/>!=<sp/>HLT::OK<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;ERROR<sp/>c2<sp/>is<sp/>found<sp/>to<sp/>be<sp/>not<sp/>OK<sp/>while<sp/>it<sp/>is<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c3<sp/>==<sp/>HLT::OK<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;ERROR<sp/>c3<sp/>should<sp/>not<sp/>be<sp/>seen<sp/>as<sp/>OK&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>c3<sp/>=<sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">ErrorCode</ref>(c3,<sp/>SteeringInternalReason::ALGO_ERROR);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>code&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>hex<sp/>&lt;&lt;<sp/>c3.code<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>HLT::strErrorCode(c3)&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">ErrorCode</ref><sp/>c4<sp/>=<sp/>(c3&gt;c2)<sp/>?<sp/>c3<sp/>:<sp/>c2;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>code&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>hex<sp/>&lt;&lt;<sp/>c4.<ref refid="d0/d9e/classHLT_1_1ErrorCode_1a77ecaf847e6a45eacf4ed9fe0356b9e1" kindref="member" tooltip="storage of error code where 4 least significant bits(0-3) are storing Reason, 2 next...">code</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>HLT::strErrorCode(c4)&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;predefined<sp/>error<sp/>codes&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/>HLT::strErrorCode(OK)<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/>HLT::strErrorCode(MISSING_FEATURE)<sp/>&lt;&lt;<sp/>endl<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>HLT::strErrorCode(ERROR)<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/>HLT::strErrorCode(INVALID_TE)<sp/>&lt;&lt;<sp/>endl</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>HLT::strErrorCode(TOOL_FAILURE)<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/>HLT::strErrorCode(NUM_ERROR)<sp/>&lt;&lt;<sp/>endl<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>HLT::strErrorCode(SG_ERROR)<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;HLT::strErrorCode(NAV_ERROR)<sp/>&lt;&lt;<sp/>endl</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>HLT::strErrorCode(GAUDI_EXCEPTION)<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;HLT::strErrorCode(EFORMAT_EXCEPTION)<sp/>&lt;&lt;<sp/>endl<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>HLT::strErrorCode(STD_EXCEPTION)<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/>HLT::strErrorCode(UNKNOWN_EXCEPTION)<sp/>&lt;&lt;<sp/>endl</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>HLT::strErrorCode(TIMEOUT)<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;HLT::strErrorCode(NO_LVL1_ITEMS)<sp/>&lt;&lt;<sp/>endl<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>HLT::strErrorCode(NO_LVL2_CHAINS)<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/>HLT::strErrorCode(NO_LVL1_RESULT)<sp/>&lt;&lt;<sp/>endl<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>HLT::strErrorCode(WRONG_HLT_RESULT)<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;HLT::strErrorCode(NO_HLT_RESULT)<sp/>&lt;&lt;<sp/>endl<sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>HLT::strErrorCode(BAD_JOB_SETUP)<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/>HLT::strErrorCode(BAD_ALGO_CONFIG)<sp/>&lt;&lt;<sp/>endl<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>HLT::strErrorCode(FATAL)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;way<sp/>back<sp/>---<sp/>from<sp/>ec<sp/>name<sp/>to<sp/>number<sp/>(hex)&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/>HLT::getErrorCodePosFromStr(</highlight><highlight class="stringliteral">&quot;CONTINUE&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>truth:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">ErrorCode</ref>(Action::CONTINUE)<sp/>&lt;&lt;<sp/>endl;<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/>HLT::getErrorCodePosFromStr(</highlight><highlight class="stringliteral">&quot;CONTINUE<sp/>MISSING_FEATURE&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>truth:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">ErrorCode</ref>(Action::CONTINUE,<sp/>Reason::MISSING_FEATURE)<sp/>&lt;&lt;<sp/>endl;<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/>HLT::getErrorCodePosFromStr(</highlight><highlight class="stringliteral">&quot;CONTINUE<sp/>TIMEOUT<sp/>TIMEOUT&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>truth:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">ErrorCode</ref>(Action::CONTINUE,<sp/>Reason::TIMEOUT,<sp/>SteeringInternalReason::TIMEOUT)<sp/>&lt;&lt;<sp/>endl;<sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/>HLT::getErrorCodePosFromStr(</highlight><highlight class="stringliteral">&quot;ABORT_EVENT<sp/>TIMEOUT<sp/>TIMEOUT&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>truth:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">ErrorCode</ref>(Action::ABORT_EVENT,<sp/>Reason::TIMEOUT,<sp/>SteeringInternalReason::TIMEOUT)<sp/>&lt;&lt;<sp/>endl;<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/>HLT::getErrorCodePosFromStr(</highlight><highlight class="stringliteral">&quot;ABORT_EVENT<sp/>TIMEOUT&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>truth:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">ErrorCode</ref>(Action::ABORT_EVENT,<sp/>Reason::TIMEOUT)<sp/>&lt;&lt;<sp/>endl;<sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/>HLT::getErrorCodePosFromStr(</highlight><highlight class="stringliteral">&quot;ABORT_JOB<sp/>BAD_JOB_SETUP&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>truth:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">ErrorCode</ref>(Action::ABORT_JOB,<sp/>Reason::BAD_JOB_SETUP)<sp/>&lt;&lt;<sp/>endl;<sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/>HLT::getErrorCodePosFromStr(</highlight><highlight class="stringliteral">&quot;ABORT_THISJOB<sp/>BAD_JOB_SETUP&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>truth:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><sp/>-1<sp/>&lt;&lt;<sp/>endl;<sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>act<sp/>=<sp/><ref refid="d6/dbd/structHLT_1_1Action_1a3c85669c4757573813fe559385d8be55a668d88bea20a13b1d29d2f1dc257332d" kindref="member" tooltip="if all is OK the processing should be continued">HLT::Action::CONTINUE</ref>;<sp/>act<sp/>&lt;=<sp/><ref refid="d6/dbd/structHLT_1_1Action_1a3c85669c4757573813fe559385d8be55a449eaee522d0a4b646d71e669cd41a8f" kindref="member" tooltip="if things go really wrong, i.e. user suspects that the job is badly configured and...">HLT::Action::ABORT_JOB</ref>;<sp/>act++)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>res<sp/>=<sp/>HLT::Reason::UNKNOWN;<sp/>res<sp/>&lt;<sp/><ref refid="d0/d42/structHLT_1_1Reason_1afbf7a4f3108a8969b8d6910ed241d1fda39a4ba20c11d3589734acd7df9d4dd89" kindref="member" tooltip="and can&amp;#39;t be higher because of serialization in the chain">HLT::Reason::LAST_</ref>;<sp/>++res<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ster<sp/>=<sp/>HLT::SteeringInternalReason::UNKNOWN;<sp/>ster<sp/>&lt;<sp/><ref refid="d8/d34/structHLT_1_1SteeringInternalReason_1a0a2aeec202ceb7701db37948a7eea174ae6279935346bd78b8082a46d83140c94" kindref="member" tooltip="there is basically no restriction on size since these errors are not saved per chain...">HLT::SteeringInternalReason::LAST_</ref>;<sp/>++ster)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>make<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">HLT::ErrorCode</ref><sp/>tmpec<sp/>=<sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">HLT::ErrorCode</ref>(<ref refid="d6/dbd/structHLT_1_1Action_1a3c85669c4757573813fe559385d8be55" kindref="member">HLT::Action::Code</ref>(act),<sp/><ref refid="d0/d42/structHLT_1_1Reason_1afbf7a4f3108a8969b8d6910ed241d1fd" kindref="member">HLT::Reason::Code</ref>(res),<sp/><ref refid="d8/d34/structHLT_1_1SteeringInternalReason_1a0a2aeec202ceb7701db37948a7eea174" kindref="member">HLT::SteeringInternalReason::Code</ref>(ster));</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>str<sp/>=<sp/>HLT::strErrorCode(tmpec);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Trying<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>str<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">HLT::ErrorCode</ref><sp/>newec<sp/>=<sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">HLT::ErrorCode</ref>(getErrorCodePosFromStr(str));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmpec<sp/>!=<sp/>newec<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;ERROR<sp/>failed<sp/>conversion<sp/>for<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>str<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>!=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>HLT::strErrorCode(newec)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;tesint<sp/>member<sp/>function<sp/>for<sp/>printing<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="d0/d9e/classHLT_1_1ErrorCode" kindref="compound" tooltip="The definition of error codes in HLT. This is a class (note; before was simple enum)...">ErrorCode</ref>(Action::CONTINUE,<sp/>Reason::TIMEOUT,<sp/>SteeringInternalReason::TIMEOUT).str()<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/test/Enums_test.cxx"/>
+  </compounddef>
+</doxygen>

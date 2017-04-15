@@ -1,0 +1,878 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dd/df8/AuxStoreInternal__test_8cxx" kind="file">
+    <compoundname>AuxStoreInternal_test.cxx</compoundname>
+    <includes refid="d3/d0f/AuxStoreInternal_8h" local="yes">AthContainers/AuxStoreInternal.h</includes>
+    <includes refid="db/d7f/AuxTypeRegistry_8h" local="yes">AthContainers/AuxTypeRegistry.h</includes>
+    <includes refid="d4/d03/exceptions_8h" local="yes">AthContainers/exceptions.h</includes>
+    <includes refid="d7/d22/threading_8h" local="yes">AthContainers/tools/threading.h</includes>
+    <includes refid="da/d8e/foreach_8h" local="yes">AthContainers/tools/foreach.h</includes>
+    <includes refid="d2/d67/expect__exception_8h" local="yes">TestTools/expect_exception.h</includes>
+    <includes local="yes">boost/thread/shared_mutex.hpp</includes>
+    <includes local="yes">boost/thread/shared_lock_guard.hpp</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">cassert</includes>
+    <includes refid="dd/d46/auxid__set__equal_8icc" local="yes">auxid_set_equal.icc</includes>
+    <incdepgraph>
+      <node id="72045">
+        <label>boost/thread/mutex.hpp</label>
+      </node>
+      <node id="72067">
+        <label>CxxUtils/unordered_map.h</label>
+        <link refid="db/daa/unordered__map_8h"/>
+        <childnode refid="72025" relation="include">
+        </childnode>
+        <childnode refid="72027" relation="include">
+        </childnode>
+        <childnode refid="72034" relation="include">
+        </childnode>
+        <childnode refid="72035" relation="include">
+        </childnode>
+      </node>
+      <node id="72068">
+        <label>AthContainers/AuxTypeRegistry.icc</label>
+        <link refid="d8/df3/AuxTypeRegistry_8icc"/>
+      </node>
+      <node id="72020">
+        <label>AthContainersInterfaces/IAuxStore.h</label>
+        <link refid="d6/d3e/IAuxStore_8h"/>
+        <childnode refid="72021" relation="include">
+        </childnode>
+        <childnode refid="72023" relation="include">
+        </childnode>
+        <childnode refid="72037" relation="include">
+        </childnode>
+        <childnode refid="72036" relation="include">
+        </childnode>
+      </node>
+      <node id="72033">
+        <label>boost/type_traits/remove_const.hpp</label>
+      </node>
+      <node id="72035">
+        <label>functional</label>
+      </node>
+      <node id="72031">
+        <label>limits</label>
+      </node>
+      <node id="72037">
+        <label>SGTools/BaseInfo.h</label>
+      </node>
+      <node id="72043">
+        <label>boost/thread/tss.hpp</label>
+      </node>
+      <node id="72028">
+        <label>iterator</label>
+      </node>
+      <node id="72057">
+        <label>AthContainersInterfaces/AuxDataOption.h</label>
+        <link refid="d1/dc5/AuxDataOption_8h"/>
+        <childnode refid="72032" relation="include">
+        </childnode>
+        <childnode refid="72058" relation="include">
+        </childnode>
+      </node>
+      <node id="72069">
+        <label>AthContainers/exceptions.h</label>
+        <link refid="d4/d03/exceptions_8h"/>
+        <childnode refid="72022" relation="include">
+        </childnode>
+        <childnode refid="72070" relation="include">
+        </childnode>
+        <childnode refid="72071" relation="include">
+        </childnode>
+        <childnode refid="72039" relation="include">
+        </childnode>
+        <childnode refid="72032" relation="include">
+        </childnode>
+      </node>
+      <node id="72054">
+        <label>AthContainers/tools/AuxDataTraits.h</label>
+        <link refid="d3/d5a/AuxDataTraits_8h"/>
+        <childnode refid="72048" relation="include">
+        </childnode>
+        <childnode refid="72029" relation="include">
+        </childnode>
+      </node>
+      <node id="72059">
+        <label>stdint.h</label>
+      </node>
+      <node id="72051">
+        <label>AthContainersInterfaces/IAuxTypeVectorFactory.h</label>
+        <link refid="d4/d2c/IAuxTypeVectorFactory_8h"/>
+        <childnode refid="72023" relation="include">
+        </childnode>
+        <childnode refid="72039" relation="include">
+        </childnode>
+      </node>
+      <node id="72073">
+        <label>boost/foreach.hpp</label>
+      </node>
+      <node id="72038">
+        <label>AthContainersInterfaces/IAuxStoreIO.h</label>
+        <link refid="d9/db5/IAuxStoreIO_8h"/>
+        <childnode refid="72022" relation="include">
+        </childnode>
+        <childnode refid="72039" relation="include">
+        </childnode>
+        <childnode refid="72040" relation="include">
+        </childnode>
+        <childnode refid="72036" relation="include">
+        </childnode>
+      </node>
+      <node id="72024">
+        <label>CxxUtils/unordered_set.h</label>
+        <link refid="df/d26/unordered__set_8h"/>
+        <childnode refid="72025" relation="include">
+        </childnode>
+        <childnode refid="72034" relation="include">
+        </childnode>
+        <childnode refid="72035" relation="include">
+        </childnode>
+      </node>
+      <node id="72030">
+        <label>cmath</label>
+      </node>
+      <node id="72075">
+        <label>cassert</label>
+      </node>
+      <node id="72071">
+        <label>stdexcept</label>
+      </node>
+      <node id="72046">
+        <label>boost/thread/thread.hpp</label>
+      </node>
+      <node id="72032">
+        <label>string</label>
+      </node>
+      <node id="72050">
+        <label>AthContainersInterfaces/IAuxTypeVector.h</label>
+        <link refid="d8/d0e/IAuxTypeVector_8h"/>
+        <childnode refid="72023" relation="include">
+        </childnode>
+        <childnode refid="72039" relation="include">
+        </childnode>
+      </node>
+      <node id="72064">
+        <label>AthContainers/tools/AuxTypeVector.icc</label>
+        <link refid="d5/d84/AuxTypeVector_8icc"/>
+      </node>
+      <node id="72061">
+        <label>AthContainers/PackedContainer.icc</label>
+        <link refid="d1/d0c/PackedContainer_8icc"/>
+      </node>
+      <node id="72072">
+        <label>AthContainers/tools/foreach.h</label>
+        <link refid="da/d8e/foreach_8h"/>
+        <childnode refid="72073" relation="include">
+        </childnode>
+      </node>
+      <node id="72044">
+        <label>boost/atomic.hpp</label>
+      </node>
+      <node id="72056">
+        <label>AthContainers/PackedParameters.h</label>
+        <link refid="d4/d43/PackedParameters_8h"/>
+        <childnode refid="72057" relation="include">
+        </childnode>
+        <childnode refid="72031" relation="include">
+        </childnode>
+        <childnode refid="72059" relation="include">
+        </childnode>
+        <childnode refid="72060" relation="include">
+        </childnode>
+      </node>
+      <node id="72022">
+        <label>AthContainersInterfaces/AuxTypes.h</label>
+        <link refid="d1/dea/AuxTypes_8h"/>
+        <childnode refid="72023" relation="include">
+        </childnode>
+        <childnode refid="72024" relation="include">
+        </childnode>
+      </node>
+      <node id="72025">
+        <label>CxxUtils/hashtable.h</label>
+        <link refid="dd/d16/hashtable_8h"/>
+        <childnode refid="72026" relation="include">
+        </childnode>
+        <childnode refid="72027" relation="include">
+        </childnode>
+        <childnode refid="72028" relation="include">
+        </childnode>
+        <childnode refid="72023" relation="include">
+        </childnode>
+        <childnode refid="72029" relation="include">
+        </childnode>
+        <childnode refid="72030" relation="include">
+        </childnode>
+        <childnode refid="72031" relation="include">
+        </childnode>
+        <childnode refid="72032" relation="include">
+        </childnode>
+        <childnode refid="72033" relation="include">
+        </childnode>
+      </node>
+      <node id="72039">
+        <label>typeinfo</label>
+      </node>
+      <node id="72060">
+        <label>AthContainers/PackedParameters.icc</label>
+        <link refid="db/d30/PackedParameters_8icc"/>
+      </node>
+      <node id="72058">
+        <label>AthContainersInterfaces/AuxDataOption.icc</label>
+        <link refid="db/d68/AuxDataOption_8icc"/>
+      </node>
+      <node id="72063">
+        <label>boost/type_traits/is_arithmetic.hpp</label>
+      </node>
+      <node id="72036">
+        <label>SGTools/CLASS_DEF.h</label>
+      </node>
+      <node id="72049">
+        <label>AthContainers/AuxTypeRegistry.h</label>
+        <link refid="db/d7f/AuxTypeRegistry_8h"/>
+        <childnode refid="72022" relation="include">
+        </childnode>
+        <childnode refid="72050" relation="include">
+        </childnode>
+        <childnode refid="72051" relation="include">
+        </childnode>
+        <childnode refid="72052" relation="include">
+        </childnode>
+        <childnode refid="72065" relation="include">
+        </childnode>
+        <childnode refid="72041" relation="include">
+        </childnode>
+        <childnode refid="72023" relation="include">
+        </childnode>
+        <childnode refid="72039" relation="include">
+        </childnode>
+        <childnode refid="72048" relation="include">
+        </childnode>
+        <childnode refid="72067" relation="include">
+        </childnode>
+        <childnode refid="72068" relation="include">
+        </childnode>
+      </node>
+      <node id="72048">
+        <label>vector</label>
+      </node>
+      <node id="72027">
+        <label>utility</label>
+      </node>
+      <node id="72076">
+        <label>boost/thread/shared_lock_guard.hpp</label>
+      </node>
+      <node id="72047">
+        <label>CxxUtils/override.h</label>
+        <link refid="de/d0e/override_8h"/>
+      </node>
+      <node id="72078">
+        <label>sstream</label>
+      </node>
+      <node id="72042">
+        <label>boost/thread/shared_mutex.hpp</label>
+      </node>
+      <node id="72018">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxStoreInternal_test.cxx</label>
+        <link refid="AuxStoreInternal_test.cxx"/>
+        <childnode refid="72019" relation="include">
+        </childnode>
+        <childnode refid="72049" relation="include">
+        </childnode>
+        <childnode refid="72069" relation="include">
+        </childnode>
+        <childnode refid="72041" relation="include">
+        </childnode>
+        <childnode refid="72072" relation="include">
+        </childnode>
+        <childnode refid="72074" relation="include">
+        </childnode>
+        <childnode refid="72042" relation="include">
+        </childnode>
+        <childnode refid="72076" relation="include">
+        </childnode>
+        <childnode refid="72077" relation="include">
+        </childnode>
+        <childnode refid="72078" relation="include">
+        </childnode>
+        <childnode refid="72075" relation="include">
+        </childnode>
+      </node>
+      <node id="72053">
+        <label>AthContainersInterfaces/IAuxSetOption.h</label>
+        <link refid="d7/d7e/IAuxSetOption_8h"/>
+      </node>
+      <node id="72041">
+        <label>AthContainers/tools/threading.h</label>
+        <link refid="d7/d22/threading_8h"/>
+        <childnode refid="72042" relation="include">
+        </childnode>
+        <childnode refid="72043" relation="include">
+        </childnode>
+        <childnode refid="72044" relation="include">
+        </childnode>
+        <childnode refid="72045" relation="include">
+        </childnode>
+        <childnode refid="72046" relation="include">
+        </childnode>
+      </node>
+      <node id="72029">
+        <label>cstdlib</label>
+      </node>
+      <node id="72077">
+        <label>iostream</label>
+      </node>
+      <node id="72070">
+        <label>CxxUtils/noreturn.h</label>
+        <link refid="de/d6f/noreturn_8h"/>
+      </node>
+      <node id="72021">
+        <label>AthContainersInterfaces/IConstAuxStore.h</label>
+        <link refid="d7/d3a/IConstAuxStore_8h"/>
+        <childnode refid="72022" relation="include">
+        </childnode>
+        <childnode refid="72023" relation="include">
+        </childnode>
+        <childnode refid="72036" relation="include">
+        </childnode>
+      </node>
+      <node id="72023">
+        <label>cstddef</label>
+      </node>
+      <node id="72052">
+        <label>AthContainers/tools/AuxTypeVector.h</label>
+        <link refid="d6/dd2/AuxTypeVector_8h"/>
+        <childnode refid="72050" relation="include">
+        </childnode>
+        <childnode refid="72053" relation="include">
+        </childnode>
+        <childnode refid="72054" relation="include">
+        </childnode>
+        <childnode refid="72055" relation="include">
+        </childnode>
+        <childnode refid="72047" relation="include">
+        </childnode>
+        <childnode refid="72039" relation="include">
+        </childnode>
+        <childnode refid="72048" relation="include">
+        </childnode>
+        <childnode refid="72026" relation="include">
+        </childnode>
+        <childnode refid="72059" relation="include">
+        </childnode>
+        <childnode refid="72062" relation="include">
+        </childnode>
+        <childnode refid="72063" relation="include">
+        </childnode>
+        <childnode refid="72064" relation="include">
+        </childnode>
+      </node>
+      <node id="72062">
+        <label>boost/type_traits/is_base_of.hpp</label>
+      </node>
+      <node id="72040">
+        <label>set</label>
+      </node>
+      <node id="72066">
+        <label>AthContainers/tools/AuxTypeVectorFactory.icc</label>
+        <link refid="dc/d02/AuxTypeVectorFactory_8icc"/>
+      </node>
+      <node id="72055">
+        <label>AthContainers/PackedContainer.h</label>
+        <link refid="d6/dda/PackedContainer_8h"/>
+        <childnode refid="72053" relation="include">
+        </childnode>
+        <childnode refid="72056" relation="include">
+        </childnode>
+        <childnode refid="72047" relation="include">
+        </childnode>
+        <childnode refid="72048" relation="include">
+        </childnode>
+        <childnode refid="72061" relation="include">
+        </childnode>
+      </node>
+      <node id="72026">
+        <label>algorithm</label>
+      </node>
+      <node id="72074">
+        <label>TestTools/expect_exception.h</label>
+        <link refid="d2/d67/expect__exception_8h"/>
+        <childnode refid="72075" relation="include">
+        </childnode>
+      </node>
+      <node id="72019">
+        <label>AthContainers/AuxStoreInternal.h</label>
+        <link refid="d3/d0f/AuxStoreInternal_8h"/>
+        <childnode refid="72020" relation="include">
+        </childnode>
+        <childnode refid="72038" relation="include">
+        </childnode>
+        <childnode refid="72041" relation="include">
+        </childnode>
+        <childnode refid="72047" relation="include">
+        </childnode>
+        <childnode refid="72048" relation="include">
+        </childnode>
+        <childnode refid="72037" relation="include">
+        </childnode>
+        <childnode refid="72036" relation="include">
+        </childnode>
+      </node>
+      <node id="72034">
+        <label>memory</label>
+      </node>
+      <node id="72065">
+        <label>AthContainers/tools/AuxTypeVectorFactory.h</label>
+        <link refid="dc/d69/AuxTypeVectorFactory_8h"/>
+        <childnode refid="72051" relation="include">
+        </childnode>
+        <childnode refid="72052" relation="include">
+        </childnode>
+        <childnode refid="72066" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="dc/d58/classAuxStoreInternalTest" prot="public">AuxStoreInternalTest</innerclass>
+    <innerclass refid="df/de7/classThreadingTest" prot="public">ThreadingTest</innerclass>
+    <innerclass refid="dc/de4/structThreadingTest_1_1testThread" prot="public">ThreadingTest::testThread</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dd/df8/AuxStoreInternal__test_8cxx_1a1440a7779ac56f47a3f355ce4a8c7da0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test1</definition>
+        <argsstring>()</argsstring>
+        <name>test1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxStoreInternal_test.cxx" line="38" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxStoreInternal_test.cxx" bodystart="37" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df8/AuxStoreInternal__test_8cxx_1a0283886819c7c140a023582b7269e2d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test2</definition>
+        <argsstring>()</argsstring>
+        <name>test2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxStoreInternal_test.cxx" line="170" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxStoreInternal_test.cxx" bodystart="169" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df8/AuxStoreInternal__test_8cxx_1a6d0455dd5c30adda100e95f0423c786e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test3</definition>
+        <argsstring>()</argsstring>
+        <name>test3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxStoreInternal_test.cxx" line="225" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxStoreInternal_test.cxx" bodystart="224" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df8/AuxStoreInternal__test_8cxx_1afaabeb97802c1dd67322deebd4ff7f2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_threading</definition>
+        <argsstring>()</argsstring>
+        <name>test_threading</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxStoreInternal_test.cxx" line="352" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxStoreInternal_test.cxx" bodystart="351" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df8/AuxStoreInternal__test_8cxx_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxStoreInternal_test.cxx" line="363" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxStoreInternal_test.cxx" bodystart="362" bodyend="369"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Regression tests for AuxStoreInternal. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>scott snyder &lt;<ulink url="mailto:snyder@bnl.gov">snyder@bnl.gov</ulink>&gt; </para></simplesect>
+<simplesect kind="date"><para>Apr, 2013 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>$Id$</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight><highlight class="preprocessor">#undef<sp/>NDEBUG</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d3/d0f/AuxStoreInternal_8h" kindref="compound" tooltip="An auxiliary data store that holds data internally.">AthContainers/AuxStoreInternal.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="db/d7f/AuxTypeRegistry_8h" kindref="compound" tooltip="Handle mappings between names and auxid_t.">AthContainers/AuxTypeRegistry.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d4/d03/exceptions_8h" kindref="compound" tooltip="Exceptions that can be thrown from AthContainers.">AthContainers/exceptions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/d22/threading_8h" kindref="compound" tooltip="Threading definitions.">AthContainers/tools/threading.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="da/d8e/foreach_8h" kindref="compound" tooltip="foreach helper for standalone build.">AthContainers/tools/foreach.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d2/d67/expect__exception_8h" kindref="compound" tooltip="Helper to check that an exception is thrown.">TestTools/expect_exception.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ATHCONTAINERS_NO_THREADS</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/thread/shared_mutex.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/thread/shared_lock_guard.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;auxid_set_equal.icc&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="dc/d58/classAuxStoreInternalTest" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="dc/d58/classAuxStoreInternalTest" kindref="compound">AuxStoreInternalTest</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>SG::<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1adaae95b4226c1514d5327ae16c9a15cd" kindref="member" tooltip="Constructor.">AuxStoreInternal</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1ae216aba6bd1f3798955b19b0ecc16555" kindref="member" tooltip="Add a new auxid to the set of those being managed by this store.">SG::AuxStoreInternal::addAuxID</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test1()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;test1\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="d1/d1c/classSG_1_1AuxStoreInternal" kindref="compound" tooltip="An auxiliary data store that holds data internally.">SG::AuxStoreInternal</ref><sp/>s;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>assert<sp/>(!s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1aea3863b3a7e4cf2909150703358cfde3" kindref="member" tooltip="Return the standalone flag.">standalone</ref>());</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member" tooltip="Identifier for a particular aux data item.">SG::auxid_t</ref><sp/>ityp1<sp/>=<sp/><ref refid="db/d33/classSG_1_1AuxTypeRegistry_1ab22c247525e0883b46012f14b6f5a048" kindref="member" tooltip="Return the singleton registry instance.">SG::AuxTypeRegistry::instance</ref>().getAuxID&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;<sp/>(</highlight><highlight class="stringliteral">&quot;anInt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref><sp/>(ityp1)<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a7ac1985447a8d2b73561a434f06822ab" kindref="member" tooltip="Return the number of elements in the store.">size</ref>()<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>i1<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ityp1,<sp/>10,<sp/>20));</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a7ac1985447a8d2b73561a434f06822ab" kindref="member" tooltip="Return the number of elements in the store.">size</ref>()<sp/>==<sp/>10);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>i1[0]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>i1[1]<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>i1c<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ityp1));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>assert<sp/>(i1c<sp/>==<sp/>i1);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>assert<sp/>(i1c[1]<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member" tooltip="Identifier for a particular aux data item.">SG::auxid_t</ref><sp/>ityp2<sp/>=<sp/><ref refid="db/d33/classSG_1_1AuxTypeRegistry_1ab22c247525e0883b46012f14b6f5a048" kindref="member" tooltip="Return the singleton registry instance.">SG::AuxTypeRegistry::instance</ref>().getAuxID&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;<sp/>(</highlight><highlight class="stringliteral">&quot;anotherInt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref><sp/>(ityp2)<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>i2<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ityp2,<sp/>10,<sp/>20));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>assert<sp/>(i2<sp/>!=<sp/>i1);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>assert<sp/>(i2[0]<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>i2[0]<sp/>=<sp/>11;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>i2[1]<sp/>=<sp/>12;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>i2c<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ityp2));</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>assert<sp/>(i2c<sp/>==<sp/>i2);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>assert<sp/>(i2c[1]<sp/>==<sp/>12);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member" tooltip="Identifier for a particular aux data item.">SG::auxid_t</ref><sp/>ftyp1<sp/>=<sp/><ref refid="db/d33/classSG_1_1AuxTypeRegistry_1ab22c247525e0883b46012f14b6f5a048" kindref="member" tooltip="Return the singleton registry instance.">SG::AuxTypeRegistry::instance</ref>().getAuxID&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&gt;<sp/>(</highlight><highlight class="stringliteral">&quot;aFloat&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref><sp/>(ftyp1)<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>f1<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ftyp1,<sp/>10,<sp/>20));</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>f1[0]<sp/>=<sp/>1.1;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>f1[1]<sp/>=<sp/>2.5;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>f1c<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ftyp1));</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>assert<sp/>(f1c<sp/>==<sp/>f1);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>assert<sp/>(f1c[1]<sp/>==<sp/>2.5);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a7ac1985447a8d2b73561a434f06822ab" kindref="member" tooltip="Return the number of elements in the store.">size</ref>()<sp/>==<sp/>10);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1ae92332871a87ade0bd1e48dafa994d97" kindref="member" tooltip="Change the capacity of all aux data vectors.">reserve</ref>(50);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a7ac1985447a8d2b73561a434f06822ab" kindref="member" tooltip="Return the number of elements in the store.">size</ref>()<sp/>==<sp/>10);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>i2c<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ityp2));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>f1c<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ftyp1));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1adcba0811d598f897ae6c482373428629" kindref="member" tooltip="Change the size of all aux data vectors.">resize</ref>(40);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a7ac1985447a8d2b73561a434f06822ab" kindref="member" tooltip="Return the number of elements in the store.">size</ref>()<sp/>==<sp/>40);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>assert<sp/>(i2c<sp/>==<sp/>reinterpret_cast&lt;const<sp/>int*&gt;<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ityp2)));</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>assert<sp/>(f1c<sp/>==<sp/>reinterpret_cast&lt;const<sp/>float*&gt;<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ftyp1)));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>f1<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ftyp1,<sp/>40,<sp/>50));</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>f1[39]<sp/>=<sp/>5.5;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a2adc1853052fd2b9fd101fb382471f9b" kindref="member" tooltip="Shift the elements of the container.">shift</ref><sp/>(39,<sp/>-37);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a7ac1985447a8d2b73561a434f06822ab" kindref="member" tooltip="Return the number of elements in the store.">size</ref>()<sp/>==<sp/>3);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>f1c<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ftyp1));</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>assert<sp/>(f1c[2]<sp/>==<sp/>5.5);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a2adc1853052fd2b9fd101fb382471f9b" kindref="member" tooltip="Shift the elements of the container.">shift</ref><sp/>(1,<sp/>1);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a7ac1985447a8d2b73561a434f06822ab" kindref="member" tooltip="Return the number of elements in the store.">size</ref>()<sp/>==<sp/>4);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>i2c<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ityp2));</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>assert<sp/>(i2c[0]<sp/>==<sp/>11);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>assert<sp/>(i2c[1]<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>assert<sp/>(i2c[2]<sp/>==<sp/>12);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>i1c<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ityp1));</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>assert<sp/>(i1c[0]<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>assert<sp/>(i1c[1]<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>assert<sp/>(i1c[2]<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;*<sp/>v1<sp/>=</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">std::vector&lt;int&gt;*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1ac71290fd48a08ff4131de1e645b6b4dc" kindref="member" tooltip="Return a pointer to the data to be stored for one aux data item.">getIOData</ref>(ityp1));</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>assert<sp/>(&amp;*v1-&gt;begin()<sp/>==<sp/>i1c);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/dac/classSG_1_1unordered__set" kindref="compound">SG::auxid_set_t</ref>&amp;<sp/>ids<sp/>=<sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a40f6e8146486daebb9cc12c2b5a626a6" kindref="member" tooltip="Return a set of identifiers for existing data items in this store.">getAuxIDs</ref>();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>assert<sp/>(ids.size()<sp/>==<sp/>3);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>assert<sp/>(ids.find<sp/>(ityp1)<sp/>!=<sp/>ids.end());</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>assert<sp/>(ids.find<sp/>(ityp2)<sp/>!=<sp/>ids.end());</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>assert<sp/>(ids.find<sp/>(ftyp1)<sp/>!=<sp/>ids.end());</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a40f6e8146486daebb9cc12c2b5a626a6" kindref="member" tooltip="Return a set of identifiers for existing data items in this store.">getAuxIDs</ref>()<sp/>==<sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a23e266b01b787a058136bc93af631f65" kindref="member" tooltip="Return a set of identifiers for writable data items in this store.">getWritableAuxIDs</ref>());</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/dac/classSG_1_1unordered__set" kindref="compound">SG::auxid_set_t</ref>&amp;<sp/>dids<sp/>=<sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a34ca465f3964b730da47ff59389f8545" kindref="member" tooltip="Get the list of all variables that need to be handled.">getDynamicAuxIDs</ref>();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>std::vector&lt;SG::auxid_t&gt;<sp/>vi1<sp/>(ids.begin(),<sp/>ids.end());</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>std::vector&lt;SG::auxid_t&gt;<sp/>vi2<sp/>(dids.begin(),<sp/>dids.end());</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>std::sort<sp/>(vi1.begin(),<sp/>vi1.end());</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>std::sort<sp/>(vi2.begin(),<sp/>vi2.end());</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>assert<sp/>(vi1<sp/>==<sp/>vi2);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a6a2b47cb515c1adc83220af6169ea9c0" kindref="member" tooltip="Return the type of the data to be stored for one aux data item.">getIOType</ref>(ityp1)<sp/>==<sp/>&amp;</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(std::vector&lt;int&gt;));</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member" tooltip="Identifier for a particular aux data item.">SG::auxid_t</ref><sp/>btyp1<sp/>=<sp/><ref refid="db/d33/classSG_1_1AuxTypeRegistry_1ab22c247525e0883b46012f14b6f5a048" kindref="member" tooltip="Return the singleton registry instance.">SG::AuxTypeRegistry::instance</ref>().getAuxID&lt;</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&gt;<sp/>(</highlight><highlight class="stringliteral">&quot;aBool&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(btyp1,<sp/>4,<sp/>50);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a6a2b47cb515c1adc83220af6169ea9c0" kindref="member" tooltip="Return the type of the data to be stored for one aux data item.">getIOType</ref>(btyp1)<sp/>==<sp/>&amp;</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(std::vector&lt;char&gt;));</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a40f6e8146486daebb9cc12c2b5a626a6" kindref="member" tooltip="Return a set of identifiers for existing data items in this store.">getAuxIDs</ref>().size()<sp/>==<sp/>4);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="dc/d58/classAuxStoreInternalTest" kindref="compound">AuxStoreInternalTest</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(&amp;s)-&gt;addAuxID<sp/>(999);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/dac/classSG_1_1unordered__set" kindref="compound">SG::auxid_set_t</ref>&amp;<sp/>ids2<sp/>=<sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a40f6e8146486daebb9cc12c2b5a626a6" kindref="member" tooltip="Return a set of identifiers for existing data items in this store.">getAuxIDs</ref>();</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>assert<sp/>(ids2.size()<sp/>==<sp/>5);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>assert<sp/>(ids2.find<sp/>(ityp1)<sp/>!=<sp/>ids2.end());</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>assert<sp/>(ids2.find<sp/>(ityp2)<sp/>!=<sp/>ids2.end());</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>assert<sp/>(ids2.find<sp/>(ftyp1)<sp/>!=<sp/>ids2.end());</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>assert<sp/>(ids2.find<sp/>(btyp1)<sp/>!=<sp/>ids2.end());</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>assert<sp/>(ids2.find<sp/>(999)<sp/>!=<sp/>ids2.end());</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a7ac1985447a8d2b73561a434f06822ab" kindref="member" tooltip="Return the number of elements in the store.">size</ref>()<sp/>==<sp/>4);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><ref refid="d1/d1c/classSG_1_1AuxStoreInternal" kindref="compound" tooltip="An auxiliary data store that holds data internally.">SG::AuxStoreInternal</ref><sp/>s2<sp/>(s);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>assert<sp/>(s2.size()<sp/>==<sp/>4);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/dac/classSG_1_1unordered__set" kindref="compound">SG::auxid_set_t</ref>&amp;<sp/>ids3<sp/>=<sp/>s2.getAuxIDs();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>assert<sp/>(ids3.size()<sp/>==<sp/>5);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>assert<sp/>(ids3.find<sp/>(ityp1)<sp/>!=<sp/>ids2.end());</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>assert<sp/>(ids3.find<sp/>(ityp2)<sp/>!=<sp/>ids2.end());</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>assert<sp/>(ids3.find<sp/>(ftyp1)<sp/>!=<sp/>ids2.end());</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>assert<sp/>(ids3.find<sp/>(btyp1)<sp/>!=<sp/>ids2.end());</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>assert<sp/>(ids3.find<sp/>(999)<sp/>!=<sp/>ids2.end());</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>i2c<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s2.getData(ityp2));</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>assert<sp/>(i2c[0]<sp/>==<sp/>11);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>assert<sp/>(i2c[1]<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>assert<sp/>(i2c[2]<sp/>==<sp/>12);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>i1c<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s2.getData(ityp1));</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>assert<sp/>(i1c[0]<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>assert<sp/>(i1c[1]<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>assert<sp/>(i1c[2]<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Test<sp/>decorations<sp/>/<sp/>locking</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test2()</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;test2\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><ref refid="d1/d1c/classSG_1_1AuxStoreInternal" kindref="compound" tooltip="An auxiliary data store that holds data internally.">SG::AuxStoreInternal</ref><sp/>s;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member" tooltip="Identifier for a particular aux data item.">SG::auxid_t</ref><sp/>ityp1<sp/>=<sp/><ref refid="db/d33/classSG_1_1AuxTypeRegistry_1ab22c247525e0883b46012f14b6f5a048" kindref="member" tooltip="Return the singleton registry instance.">SG::AuxTypeRegistry::instance</ref>().getAuxID&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;<sp/>(</highlight><highlight class="stringliteral">&quot;anInt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member" tooltip="Identifier for a particular aux data item.">SG::auxid_t</ref><sp/>ityp2<sp/>=<sp/><ref refid="db/d33/classSG_1_1AuxTypeRegistry_1ab22c247525e0883b46012f14b6f5a048" kindref="member" tooltip="Return the singleton registry instance.">SG::AuxTypeRegistry::instance</ref>().getAuxID&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;<sp/>(</highlight><highlight class="stringliteral">&quot;anInt2&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member" tooltip="Identifier for a particular aux data item.">SG::auxid_t</ref><sp/>ityp9<sp/>=<sp/><ref refid="db/d33/classSG_1_1AuxTypeRegistry_1ab22c247525e0883b46012f14b6f5a048" kindref="member" tooltip="Return the singleton registry instance.">SG::AuxTypeRegistry::instance</ref>().getAuxID&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;<sp/>(</highlight><highlight class="stringliteral">&quot;anInt9&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>i1<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ityp1,<sp/>10,<sp/>20));</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>i2<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1aff9be84c9b5f841639e7bc471d07c983" kindref="member" tooltip="Return the data vector for one aux data decoration item.">getDecoration</ref>(ityp2,<sp/>10,<sp/>20));</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>assert<sp/>(i1<sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>assert<sp/>(i2<sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/>assert<sp/>(i1<sp/>!=<sp/>i2);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1acd230c41baaae91d3dc2cc1ae9a3b59b" kindref="member" tooltip="Lock the container.">lock</ref>();</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><ref refid="dd/dac/classSG_1_1unordered__set" kindref="compound">SG::auxid_set_t</ref><sp/>idset;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>idset.insert<sp/>(ityp1);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>idset.insert<sp/>(ityp2);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a40f6e8146486daebb9cc12c2b5a626a6" kindref="member" tooltip="Return a set of identifiers for existing data items in this store.">getAuxIDs</ref>()<sp/>==<sp/>idset);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/>assert<sp/>(i1<sp/>==<sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ityp1));</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//EXPECT_EXCEPTION<sp/>(SG::ExcStoreLocked,<sp/>s.getData(ityp1,<sp/>10,<sp/>20));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/>assert<sp/>(i1<sp/>==<sp/>reinterpret_cast&lt;int*&gt;<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ityp1,<sp/>10,<sp/>20)));</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><ref refid="d2/d67/expect__exception_8h_1a15ab402fd517d4bddede832507ed6439" kindref="member" tooltip="Helper to check that an exception is thrown.">EXPECT_EXCEPTION</ref><sp/>(<ref refid="d5/d41/classSG_1_1ExcStoreLocked" kindref="compound" tooltip="Exception --- Attempted to modify auxiliary data in a locked store.">SG::ExcStoreLocked</ref>,<sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ityp9,<sp/>10,<sp/>20));</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><ref refid="d2/d67/expect__exception_8h_1a15ab402fd517d4bddede832507ed6439" kindref="member" tooltip="Helper to check that an exception is thrown.">EXPECT_EXCEPTION</ref><sp/>(<ref refid="d5/d41/classSG_1_1ExcStoreLocked" kindref="compound" tooltip="Exception --- Attempted to modify auxiliary data in a locked store.">SG::ExcStoreLocked</ref>,<sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1aff9be84c9b5f841639e7bc471d07c983" kindref="member" tooltip="Return the data vector for one aux data decoration item.">getDecoration</ref>(ityp1,<sp/>10,<sp/>20));</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member" tooltip="Identifier for a particular aux data item.">SG::auxid_t</ref><sp/>ityp3<sp/>=<sp/><ref refid="db/d33/classSG_1_1AuxTypeRegistry_1ab22c247525e0883b46012f14b6f5a048" kindref="member" tooltip="Return the singleton registry instance.">SG::AuxTypeRegistry::instance</ref>().getAuxID&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;<sp/>(</highlight><highlight class="stringliteral">&quot;anInt3&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>i3<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1aff9be84c9b5f841639e7bc471d07c983" kindref="member" tooltip="Return the data vector for one aux data decoration item.">getDecoration</ref>(ityp3,<sp/>10,<sp/>20));</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/>assert<sp/>(i3<sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/>assert<sp/>(i3<sp/>!=<sp/>i1);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>assert<sp/>(i3<sp/>!=<sp/>i2);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/>assert<sp/>(i3<sp/>==<sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1aff9be84c9b5f841639e7bc471d07c983" kindref="member" tooltip="Return the data vector for one aux data decoration item.">getDecoration</ref><sp/>(ityp3,<sp/>10,<sp/>20));</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/>idset.insert<sp/>(ityp3);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/>assert<sp/>(idset.size()<sp/>==<sp/>3);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a40f6e8146486daebb9cc12c2b5a626a6" kindref="member" tooltip="Return a set of identifiers for existing data items in this store.">getAuxIDs</ref>()<sp/>==<sp/>idset);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a2e98e97b3ca01a085f39e33027d63834" kindref="member" tooltip="Clear all decorations.">clearDecorations</ref>();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/>idset.erase<sp/>(ityp3);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/>assert<sp/>(idset.size()<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a40f6e8146486daebb9cc12c2b5a626a6" kindref="member" tooltip="Return a set of identifiers for existing data items in this store.">getAuxIDs</ref>()<sp/>==<sp/>idset);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ityp3)<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ityp1)<sp/>==<sp/>i1);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ityp2)<sp/>==<sp/>i2);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><ref refid="d2/d67/expect__exception_8h_1a15ab402fd517d4bddede832507ed6439" kindref="member" tooltip="Helper to check that an exception is thrown.">EXPECT_EXCEPTION</ref><sp/>(<ref refid="d5/d41/classSG_1_1ExcStoreLocked" kindref="compound" tooltip="Exception --- Attempted to modify auxiliary data in a locked store.">SG::ExcStoreLocked</ref>,<sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1adcba0811d598f897ae6c482373428629" kindref="member" tooltip="Change the size of all aux data vectors.">resize</ref>(100));</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><ref refid="d2/d67/expect__exception_8h_1a15ab402fd517d4bddede832507ed6439" kindref="member" tooltip="Helper to check that an exception is thrown.">EXPECT_EXCEPTION</ref><sp/>(<ref refid="d5/d41/classSG_1_1ExcStoreLocked" kindref="compound" tooltip="Exception --- Attempted to modify auxiliary data in a locked store.">SG::ExcStoreLocked</ref>,<sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1ae92332871a87ade0bd1e48dafa994d97" kindref="member" tooltip="Change the capacity of all aux data vectors.">reserve</ref>(100));</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><ref refid="d2/d67/expect__exception_8h_1a15ab402fd517d4bddede832507ed6439" kindref="member" tooltip="Helper to check that an exception is thrown.">EXPECT_EXCEPTION</ref><sp/>(<ref refid="d5/d41/classSG_1_1ExcStoreLocked" kindref="compound" tooltip="Exception --- Attempted to modify auxiliary data in a locked store.">SG::ExcStoreLocked</ref>,<sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a2adc1853052fd2b9fd101fb382471f9b" kindref="member" tooltip="Shift the elements of the container.">shift</ref>(1,<sp/>2));</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Test<sp/>setOption<sp/>/<sp/>getIOType</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test3()</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;test3\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><ref refid="d1/d1c/classSG_1_1AuxStoreInternal" kindref="compound" tooltip="An auxiliary data store that holds data internally.">SG::AuxStoreInternal</ref><sp/>s;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member" tooltip="Identifier for a particular aux data item.">SG::auxid_t</ref><sp/>ityp1<sp/>=<sp/><ref refid="db/d33/classSG_1_1AuxTypeRegistry_1ab22c247525e0883b46012f14b6f5a048" kindref="member" tooltip="Return the singleton registry instance.">SG::AuxTypeRegistry::instance</ref>().getAuxID&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;<sp/>(</highlight><highlight class="stringliteral">&quot;anInt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member" tooltip="Identifier for a particular aux data item.">SG::auxid_t</ref><sp/>ityp2<sp/>=<sp/><ref refid="db/d33/classSG_1_1AuxTypeRegistry_1ab22c247525e0883b46012f14b6f5a048" kindref="member" tooltip="Return the singleton registry instance.">SG::AuxTypeRegistry::instance</ref>().getAuxID&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;<sp/>(</highlight><highlight class="stringliteral">&quot;anInt2&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>i1<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(ityp1,<sp/>10,<sp/>20));</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/>i1[0]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/>i1[1]<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/>assert<sp/>(!s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1abacba50e0977995f28182caefc75d9ad" kindref="member" tooltip="Set an option for an auxiliary data variable.">setOption</ref><sp/>(ityp2,<sp/><ref refid="d7/d31/classSG_1_1AuxDataOption" kindref="compound" tooltip="Hold information about an option setting request.">SG::AuxDataOption</ref><sp/>(</highlight><highlight class="stringliteral">&quot;opt&quot;</highlight><highlight class="normal">,<sp/>1)));</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/>assert<sp/>(!s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1abacba50e0977995f28182caefc75d9ad" kindref="member" tooltip="Set an option for an auxiliary data variable.">setOption</ref><sp/>(ityp1,<sp/><ref refid="d7/d31/classSG_1_1AuxDataOption" kindref="compound" tooltip="Hold information about an option setting request.">SG::AuxDataOption</ref><sp/>(</highlight><highlight class="stringliteral">&quot;opt&quot;</highlight><highlight class="normal">,<sp/>1)));</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a6a2b47cb515c1adc83220af6169ea9c0" kindref="member" tooltip="Return the type of the data to be stored for one aux data item.">getIOType</ref><sp/>(ityp1)<sp/>==<sp/>&amp;</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(std::vector&lt;int&gt;));</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1abacba50e0977995f28182caefc75d9ad" kindref="member" tooltip="Set an option for an auxiliary data variable.">setOption</ref><sp/>(ityp1,<sp/><ref refid="d7/d31/classSG_1_1AuxDataOption" kindref="compound" tooltip="Hold information about an option setting request.">SG::AuxDataOption</ref><sp/>(</highlight><highlight class="stringliteral">&quot;nbits&quot;</highlight><highlight class="normal">,<sp/>29)));</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a6a2b47cb515c1adc83220af6169ea9c0" kindref="member" tooltip="Return the type of the data to be stored for one aux data item.">getIOType</ref><sp/>(ityp1)<sp/>==<sp/>&amp;</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(<ref refid="dd/d01/classSG_1_1PackedContainer" kindref="compound" tooltip="Container to hold aux data to be stored in a packed form.">SG::PackedContainer&lt;int&gt;</ref>));</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/d01/classSG_1_1PackedContainer" kindref="compound" tooltip="Container to hold aux data to be stored in a packed form.">SG::PackedContainer&lt;int&gt;</ref>*<sp/>pvec<sp/>=</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="dd/d01/classSG_1_1PackedContainer" kindref="compound" tooltip="Container to hold aux data to be stored in a packed form.">SG::PackedContainer&lt;int&gt;</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1ac71290fd48a08ff4131de1e645b6b4dc" kindref="member" tooltip="Return a pointer to the data to be stored for one aux data item.">getIOData</ref><sp/>(ityp1));</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/>assert<sp/>(</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(*pvec)<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(<ref refid="dd/d01/classSG_1_1PackedContainer" kindref="compound" tooltip="Container to hold aux data to be stored in a packed form.">SG::PackedContainer&lt;int&gt;</ref>));</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/>assert<sp/>(pvec-&gt;<ref refid="dd/d01/classSG_1_1PackedContainer_1a8c19d41995ddda20f991053d21ac8afe" kindref="member" tooltip="Return the packing parameters for this container.">parms</ref>().nbits()<sp/>==<sp/>29);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1abacba50e0977995f28182caefc75d9ad" kindref="member" tooltip="Set an option for an auxiliary data variable.">setOption</ref><sp/>(ityp1,<sp/><ref refid="d7/d31/classSG_1_1AuxDataOption" kindref="compound" tooltip="Hold information about an option setting request.">SG::AuxDataOption</ref><sp/>(</highlight><highlight class="stringliteral">&quot;nbits&quot;</highlight><highlight class="normal">,<sp/>23)));</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/>assert<sp/>(pvec-&gt;<ref refid="dd/d01/classSG_1_1PackedContainer_1a8c19d41995ddda20f991053d21ac8afe" kindref="member" tooltip="Return the packing parameters for this container.">parms</ref>().nbits()<sp/>==<sp/>23);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a6a2b47cb515c1adc83220af6169ea9c0" kindref="member" tooltip="Return the type of the data to be stored for one aux data item.">getIOType</ref><sp/>(ityp2)<sp/>==<sp/>&amp;</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(std::vector&lt;int&gt;));</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1abacba50e0977995f28182caefc75d9ad" kindref="member" tooltip="Set an option for an auxiliary data variable.">setOption</ref><sp/>(ityp2,<sp/><ref refid="d7/d31/classSG_1_1AuxDataOption" kindref="compound" tooltip="Hold information about an option setting request.">SG::AuxDataOption</ref><sp/>(</highlight><highlight class="stringliteral">&quot;nbits&quot;</highlight><highlight class="normal">,<sp/>28)));</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a6a2b47cb515c1adc83220af6169ea9c0" kindref="member" tooltip="Return the type of the data to be stored for one aux data item.">getIOType</ref><sp/>(ityp2)<sp/>==<sp/>&amp;</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(<ref refid="dd/d01/classSG_1_1PackedContainer" kindref="compound" tooltip="Container to hold aux data to be stored in a packed form.">SG::PackedContainer&lt;int&gt;</ref>));</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/>pvec<sp/>=</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="dd/d01/classSG_1_1PackedContainer" kindref="compound" tooltip="Container to hold aux data to be stored in a packed form.">SG::PackedContainer&lt;int&gt;</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1ac71290fd48a08ff4131de1e645b6b4dc" kindref="member" tooltip="Return a pointer to the data to be stored for one aux data item.">getIOData</ref><sp/>(ityp2));</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/>assert<sp/>(</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(*pvec)<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(<ref refid="dd/d01/classSG_1_1PackedContainer" kindref="compound" tooltip="Container to hold aux data to be stored in a packed form.">SG::PackedContainer&lt;int&gt;</ref>));</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/>assert<sp/>(pvec-&gt;<ref refid="dd/d01/classSG_1_1PackedContainer_1a8c19d41995ddda20f991053d21ac8afe" kindref="member" tooltip="Return the packing parameters for this container.">parms</ref>().nbits()<sp/>==<sp/>28);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/>assert<sp/>(s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1abacba50e0977995f28182caefc75d9ad" kindref="member" tooltip="Set an option for an auxiliary data variable.">setOption</ref><sp/>(ityp2,<sp/><ref refid="d7/d31/classSG_1_1AuxDataOption" kindref="compound" tooltip="Hold information about an option setting request.">SG::AuxDataOption</ref><sp/>(</highlight><highlight class="stringliteral">&quot;nbits&quot;</highlight><highlight class="normal">,<sp/>27)));</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/>assert<sp/>(pvec-&gt;<ref refid="dd/d01/classSG_1_1PackedContainer_1a8c19d41995ddda20f991053d21ac8afe" kindref="member" tooltip="Return the packing parameters for this container.">parms</ref>().nbits()<sp/>==<sp/>27);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member" tooltip="Identifier for a particular aux data item.">SG::auxid_t</ref><sp/>styp1<sp/>=<sp/><ref refid="db/d33/classSG_1_1AuxTypeRegistry_1ab22c247525e0883b46012f14b6f5a048" kindref="member" tooltip="Return the singleton registry instance.">SG::AuxTypeRegistry::instance</ref>().getAuxID&lt;std::string&gt;<sp/>(</highlight><highlight class="stringliteral">&quot;aString&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/>s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" kindref="member" tooltip="Return the data vector for one aux data item.">getData</ref>(styp1,<sp/>10,<sp/>20);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/>assert<sp/>(!s.<ref refid="d1/d1c/classSG_1_1AuxStoreInternal_1abacba50e0977995f28182caefc75d9ad" kindref="member" tooltip="Set an option for an auxiliary data variable.">setOption</ref><sp/>(styp1,<sp/><ref refid="d7/d31/classSG_1_1AuxDataOption" kindref="compound" tooltip="Hold information about an option setting request.">SG::AuxDataOption</ref><sp/>(</highlight><highlight class="stringliteral">&quot;nbits&quot;</highlight><highlight class="normal">,<sp/>26)));</highlight></codeline>
+<codeline lineno="259"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262" refid="df/de7/classThreadingTest" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="df/de7/classThreadingTest" kindref="compound">ThreadingTest</ref></highlight></codeline>
+<codeline lineno="263"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><ref refid="df/de7/classThreadingTest" kindref="compound">ThreadingTest</ref>();</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>worker();</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>nonThreadedTest();</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>threadedTest();</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271" refid="dc/de4/structThreadingTest_1_1testThread" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="dc/de4/structThreadingTest_1_1testThread" kindref="compound">testThread</ref></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/de4/structThreadingTest_1_1testThread" kindref="compound">testThread</ref><sp/>(<ref refid="df/de7/classThreadingTest" kindref="compound">ThreadingTest</ref>&amp;<sp/>test)</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>m_test(test)<sp/>{}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator()()</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ATHCONTAINERS_NO_THREADS</highlight></codeline>
+<codeline lineno="278"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>boost::shared_lock_guard&lt;boost::shared_mutex&gt;<sp/>guard<sp/>(m_test.m_sm);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>not<sp/>ATHCONTAINERS_NO_THREADS</highlight></codeline>
+<codeline lineno="280"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_test.worker();</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/de7/classThreadingTest" kindref="compound">ThreadingTest</ref>&amp;<sp/>m_test;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ATHCONTAINERS_NO_THREADS</highlight></codeline>
+<codeline lineno="287"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/>boost::shared_mutex<sp/>m_sm;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>not<sp/>ATHCONTAINERS_NO_THREADS</highlight></codeline>
+<codeline lineno="289"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/>std::vector&lt;SG::auxid_t&gt;<sp/>m_ids;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><ref refid="d1/d1c/classSG_1_1AuxStoreInternal" kindref="compound" tooltip="An auxiliary data store that holds data internally.">SG::AuxStoreInternal</ref><sp/>m_store;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>m_nids;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>m_nelt;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal">ThreadingTest::ThreadingTest()</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/>:<sp/>m_nids<sp/>(10000),</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/>m_nelt<sp/>(1000)</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><ref refid="db/d33/classSG_1_1AuxTypeRegistry" kindref="compound" tooltip="Handle mappings between names and auxid_t.">SG::AuxTypeRegistry</ref>&amp;<sp/>r<sp/>=<sp/><ref refid="db/d33/classSG_1_1AuxTypeRegistry_1ab22c247525e0883b46012f14b6f5a048" kindref="member" tooltip="Return the singleton registry instance.">SG::AuxTypeRegistry::instance</ref>();</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i<sp/>&lt;<sp/>10000;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostringstream<sp/>ss;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;xint&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>i;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member" tooltip="Identifier for a particular aux data item.">SG::auxid_t</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>r.<ref refid="db/d33/classSG_1_1AuxTypeRegistry_1a5b1f2839e2695b9f56494d2b9dbc5057" kindref="member" tooltip="Look up a name -&amp;gt; auxid_t mapping.">getAuxID</ref>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;<sp/>(ss.str());</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>m_ids.push_back<sp/>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ThreadingTest::worker()</highlight></codeline>
+<codeline lineno="311"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/>ATHCONTAINERS_FOREACH<sp/>(<ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member" tooltip="Identifier for a particular aux data item.">SG::auxid_t</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>m_ids)<sp/>{</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>data<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(m_store.getData<sp/>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>m_nelt,<sp/>m_nelt));</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(m_store.getData<sp/>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>==<sp/>data);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>data[0]<sp/>=<sp/>id;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(m_store.getAuxIDs().count<sp/>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/dac/classSG_1_1unordered__set" kindref="compound">SG::auxid_set_t</ref>&amp;<sp/>ids<sp/>=<sp/>m_store.getAuxIDs();</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/>assert<sp/>(ids.size()<sp/>==<sp/>m_ids.size());</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/>ATHCONTAINERS_FOREACH<sp/>(<ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member" tooltip="Identifier for a particular aux data item.">SG::auxid_t</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>m_ids)<sp/>{</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>data<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(m_store.getData<sp/>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(data[0]<sp/>==<sp/>static_cast&lt;int&gt;(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(ids.count<sp/>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="326"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ThreadingTest::nonThreadedTest()</highlight></codeline>
+<codeline lineno="330"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/>worker();</highlight></codeline>
+<codeline lineno="332"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ThreadingTest::threadedTest()</highlight></codeline>
+<codeline lineno="336"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ATHCONTAINERS_NO_THREADS</highlight></codeline>
+<codeline lineno="338"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nthread<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/>AthContainers_detail::thread<sp/>threads[10];</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/>m_sm.lock();</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i<sp/>&lt;<sp/>nthread;<sp/>i++)</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>threads[i]<sp/>=<sp/>AthContainers_detail::thread<sp/>(testThread<sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Try<sp/>to<sp/>get<sp/>the<sp/>threads<sp/>starting<sp/>as<sp/>much<sp/>at<sp/>the<sp/>same<sp/>time<sp/>as<sp/>possible.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/>m_sm.unlock();</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i<sp/>&lt;<sp/>nthread;<sp/>i++)</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/>threads[i].join();</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="348"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_threading()</highlight></codeline>
+<codeline lineno="352"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;test_threading\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><ref refid="df/de7/classThreadingTest" kindref="compound">ThreadingTest</ref><sp/>test;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/>test.nonThreadedTest();</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i<sp/>&lt;<sp/>100;<sp/>i++)</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/>test.threadedTest();</highlight></codeline>
+<codeline lineno="359"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()</highlight></codeline>
+<codeline lineno="363"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/>test1();</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/>test2();</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/>test3();</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/>test_threading();</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="369"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxStoreInternal_test.cxx"/>
+  </compounddef>
+</doxygen>

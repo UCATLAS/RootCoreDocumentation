@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d1/dda/PageAccessControl_8h" kind="file">
+    <compoundname>PageAccessControl.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">sys/mman.h</includes>
+    <includes refid="de/d45/procmaps_8h" local="yes">CxxUtils/procmaps.h</includes>
+    <includedby refid="dc/d60/PageAccessControl_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/PageAccessControl.cxx</includedby>
+    <includedby refid="d6/d07/PtrAccessSEGVHandler_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/PtrAccessSEGVHandler.cxx</includedby>
+    <includedby refid="d5/d72/PageAccessControl__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/test/PageAccessControl_test.cxx</includedby>
+    <includedby refid="dc/d70/SEGVHandler__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/test/SEGVHandler_test.cxx</includedby>
+    <incdepgraph>
+      <node id="110727">
+        <label>sys/mman.h</label>
+      </node>
+      <node id="110725">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/PageAccessControl.h</label>
+        <link refid="PageAccessControl.h"/>
+        <childnode refid="110726" relation="include">
+        </childnode>
+        <childnode refid="110727" relation="include">
+        </childnode>
+        <childnode refid="110728" relation="include">
+        </childnode>
+      </node>
+      <node id="110729">
+        <label>boost/pool/pool_alloc.hpp</label>
+      </node>
+      <node id="110726">
+        <label>vector</label>
+      </node>
+      <node id="110728">
+        <label>CxxUtils/procmaps.h</label>
+        <link refid="de/d45/procmaps_8h_source"/>
+        <childnode refid="110729" relation="include">
+        </childnode>
+        <childnode refid="110726" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="dc/dc5/classPageAccessControl" prot="public">PageAccessControl</innerclass>
+    <innerclass refid="d4/d6a/structPageAccessControl_1_1Entry" prot="public">PageAccessControl::Entry</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="d1/dda/PageAccessControl_8h_1a3486f6c30f51a38c8172b026e717398e" prot="public" static="no">
+        <name>CXXUTILS_PAGEACCESSCONTROL_H</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/PageAccessControl.h" line="3" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/PageAccessControl.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d1/dda/PageAccessControl_8h_1a6eed14f434be86a41790bfc85673ee81" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator&lt;</definition>
+        <argsstring>(const PageAccessControl::Entry &amp;lhs, const PageAccessControl::Entry &amp;rhs)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="d4/d6a/structPageAccessControl_1_1Entry" kindref="compound">PageAccessControl::Entry</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/d6a/structPageAccessControl_1_1Entry" kindref="compound">PageAccessControl::Entry</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/PageAccessControl.h" line="108" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/PageAccessControl.h" bodystart="108" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>This<sp/>file&apos;s<sp/>extension<sp/>implies<sp/>that<sp/>it&apos;s<sp/>C,<sp/>but<sp/>it&apos;s<sp/>really<sp/>-*-<sp/>C++<sp/>-*-.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CXXUTILS_PAGEACCESSCONTROL_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CXXUTILS_PAGEACCESSCONTROL_H<sp/>1</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/mman.h&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*PROT_NONE*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;CxxUtils/procmaps.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="dc/dc5/classPageAccessControl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="dc/dc5/classPageAccessControl" kindref="compound">PageAccessControl</ref><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><ref refid="dc/dc5/classPageAccessControl" kindref="compound">PageAccessControl</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>reservedSize=65535)<sp/>:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>m_pmaps(),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>m_protectedIsSorted(</highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//we<sp/>must<sp/>reserve<sp/>enough<sp/>elements,<sp/>or<sp/>we<sp/>risk<sp/>vector<sp/>allocating<sp/>in<sp/>a<sp/>protected<sp/>page<sp/>during<sp/>handle()...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>m_protected.reserve(reservedSize);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><ref refid="dc/dc5/classPageAccessControl" kindref="compound">PageAccessControl</ref>(<ref refid="da/da2/classprocmaps" kindref="compound" tooltip="A simple API to access /proc/self/maps info.">procmaps</ref>&amp;<sp/>pmaps,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>reservedSize=65535)<sp/>:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>m_pmaps(pmaps),</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>m_protectedIsSorted(</highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//we<sp/>must<sp/>reserve<sp/>enough<sp/>elements,<sp/>or<sp/>we<sp/>risk<sp/>vector<sp/>allocating<sp/>in<sp/>a<sp/>protected<sp/>page<sp/>during<sp/>handle()...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>m_protected.reserve(reservedSize);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="44" refid="dc/dc5/classPageAccessControl_1a48f1ecee274656e8fe11393e94cafe11" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dc/dc5/classPageAccessControl_1a48f1ecee274656e8fe11393e94cafe11" kindref="member">protectPage</ref>(<ref refid="d1/def/classT" kindref="compound">T</ref>*<sp/>addr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prot)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dc/dc5/classPageAccessControl_1a48f1ecee274656e8fe11393e94cafe11" kindref="member">protectPage</ref>(addr,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="d1/def/classT" kindref="compound">T</ref>),<sp/>prot);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="50" refid="dc/dc5/classPageAccessControl_1a783d43a4f1a128fdedd9176a45a4dcb7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dc/dc5/classPageAccessControl_1a783d43a4f1a128fdedd9176a45a4dcb7" kindref="member" tooltip="forbid access to the page containing addr, setting its prot to PROT_NONE">forbidPage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d1/def/classT" kindref="compound">T</ref>*<sp/>addr)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dc/dc5/classPageAccessControl_1a783d43a4f1a128fdedd9176a45a4dcb7" kindref="member" tooltip="forbid access to the page containing addr, setting its prot to PROT_NONE">forbidPage</ref>(addr,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="d1/def/classT" kindref="compound">T</ref>));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="dc/dc5/classPageAccessControl_1aa14de0fd14e4407a2bec8eeb0da725fc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dc/dc5/classPageAccessControl_1aa14de0fd14e4407a2bec8eeb0da725fc" kindref="member" tooltip="forbid access to the page containing addr, setting its prot to PROT_NONE">forbidPage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>addr,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>objSize)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dc/dc5/classPageAccessControl_1a48f1ecee274656e8fe11393e94cafe11" kindref="member">protectPage</ref>(addr,<sp/>objSize,<sp/>PROT_NONE);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60" refid="dc/dc5/classPageAccessControl_1a17168089adb928f02f21ff36105e87d1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dc/dc5/classPageAccessControl_1a17168089adb928f02f21ff36105e87d1" kindref="member" tooltip="FIXME this will not work well for objects spanning across pages.">forbidPage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>addr)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dc/dc5/classPageAccessControl_1a48f1ecee274656e8fe11393e94cafe11" kindref="member">protectPage</ref>(addr,<sp/>4,<sp/>PROT_NONE);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dc/dc5/classPageAccessControl_1a48f1ecee274656e8fe11393e94cafe11" kindref="member">protectPage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>addr,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>objSize,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prot);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>restorePageProt(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>addr);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sort();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="d4/d6a/structPageAccessControl_1_1Entry" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d4/d6a/structPageAccessControl_1_1Entry" kindref="compound" tooltip="protection of a memory region (see mprotect(2))">Entry</ref><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d6a/structPageAccessControl_1_1Entry" kindref="compound" tooltip="protection of a memory region (see mprotect(2))">Entry</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>a,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>p,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pl);</highlight></codeline>
+<codeline lineno="74" refid="d4/d6a/structPageAccessControl_1_1Entry_1a665b044c2de7f9a5a3e35d7be6c019c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="d4/d6a/structPageAccessControl_1_1Entry_1a665b044c2de7f9a5a3e35d7be6c019c1" kindref="member" tooltip="address of page for which protection was requested. Used as key">addr</ref>;</highlight></codeline>
+<codeline lineno="76" refid="d4/d6a/structPageAccessControl_1_1Entry_1a27b733b3e36b57206f71edef538a7a04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d4/d6a/structPageAccessControl_1_1Entry_1a27b733b3e36b57206f71edef538a7a04" kindref="member" tooltip="lenght of the protected region, from page addr to end of protected obj">lenProt</ref>;<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prot;</highlight></codeline>
+<codeline lineno="79" refid="d4/d6a/structPageAccessControl_1_1Entry_1a0279cacada483d0bb6f7a71afbe200d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="d4/d6a/structPageAccessControl_1_1Entry_1a0279cacada483d0bb6f7a71afbe200d8" kindref="member" tooltip="pointer to the heap fragment we leaked before protecting the page">leak</ref>;</highlight></codeline>
+<codeline lineno="82" refid="d4/d6a/structPageAccessControl_1_1Entry_1a53de9116939332adbc3b9985cd9b87c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d4/d6a/structPageAccessControl_1_1Entry_1a53de9116939332adbc3b9985cd9b87c9" kindref="member">restored</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="dc/dc5/classPageAccessControl_1a8e307d9aeeed72efb69df0c879fd7278" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;Entry&gt;<sp/><ref refid="dc/dc5/classPageAccessControl_1a8e307d9aeeed72efb69df0c879fd7278" kindref="member" tooltip="the list of protected pages">protected_t</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>protected_t::const_iterator<sp/>const_iterator;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dc/dc5/classPageAccessControl_1a8e307d9aeeed72efb69df0c879fd7278" kindref="member" tooltip="the list of protected pages">protected_t</ref>&amp;<sp/>protectedPtrs()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_protected;<sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>const_iterator<sp/>beginProtectedPtrs()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_protected.begin();<sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>const_iterator<sp/>endProtectedPtrs()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_protected.end();<sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reset()<sp/>{<sp/>m_protected.clear();<sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dc/dc5/classPageAccessControl_1a523b11b3d1ae7b0cfe2551daa7fcdbac" kindref="member" tooltip="was the page containing address accessed?">accessed</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>address)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><ref refid="da/da2/classprocmaps" kindref="compound" tooltip="A simple API to access /proc/self/maps info.">procmaps</ref><sp/>m_pmaps;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>can<sp/>not<sp/>preallocate<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>typedef<sp/>std::map&lt;void*,<sp/>size_t,<sp/>std::less&lt;void*&gt;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::pool_allocator&lt;std::map&lt;void*,<sp/>size_t&gt;::value_type<sp/>&gt;<sp/>&gt;<sp/>protected_t;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><ref refid="dc/dc5/classPageAccessControl_1a8e307d9aeeed72efb69df0c879fd7278" kindref="member" tooltip="the list of protected pages">protected_t</ref><sp/>m_protected;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_protectedIsSorted;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d1/d43/DataList_8h_1a331f1405e2b4323d37655e725a8f5b63" kindref="member" tooltip="List ordering relation.">operator &lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d4/d6a/structPageAccessControl_1_1Entry" kindref="compound" tooltip="protection of a memory region (see mprotect(2))">PageAccessControl::Entry</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d4/d6a/structPageAccessControl_1_1Entry" kindref="compound" tooltip="protection of a memory region (see mprotect(2))">PageAccessControl::Entry</ref>&amp;<sp/>rhs)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>lhs.<ref refid="d4/d6a/structPageAccessControl_1_1Entry_1a665b044c2de7f9a5a3e35d7be6c019c1" kindref="member" tooltip="address of page for which protection was requested. Used as key">addr</ref><sp/>&lt;<sp/>rhs.<ref refid="d4/d6a/structPageAccessControl_1_1Entry_1a665b044c2de7f9a5a3e35d7be6c019c1" kindref="member" tooltip="address of page for which protection was requested. Used as key">addr</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/PageAccessControl.h"/>
+  </compounddef>
+</doxygen>

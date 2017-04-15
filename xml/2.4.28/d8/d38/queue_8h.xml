@@ -1,0 +1,372 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d8/d38/queue_8h" kind="file">
+    <compoundname>queue.h</compoundname>
+    <includedby refid="d7/d3a/libcalg_8h" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/libcalg.h</includedby>
+    <invincdepgraph>
+      <node id="108183">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/queue.h</label>
+        <link refid="queue.h"/>
+        <childnode refid="108184" relation="include">
+        </childnode>
+      </node>
+      <node id="108184">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/libcalg.h</label>
+        <link refid="d7/d3a/libcalg_8h_source"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="d8/d38/queue_8h_1af29d693964d82bac8e9df2416ac71f2f" prot="public" static="no">
+        <name>QUEUE_NULL</name>
+        <initializer>((void *) 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="d4/dc4/structA" kindref="compound">A</ref> null <ref refid="d8/d38/queue_8h_1aaa11c2556614d37a83769324dc392dce" kindref="member">QueueValue</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/queue.h" line="64" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/queue.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" prot="public" static="no">
+        <type>struct _Queue</type>
+        <definition>typedef struct _Queue Queue</definition>
+        <argsstring></argsstring>
+        <name>Queue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="d4/dc4/structA" kindref="compound">A</ref> double-ended queue. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/queue.h" line="52" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/queue.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d8/d38/queue_8h_1aaa11c2556614d37a83769324dc392dce" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* QueueValue</definition>
+        <argsstring></argsstring>
+        <name>QueueValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="d4/dc4/structA" kindref="compound">A</ref> value stored in a <ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/queue.h" line="58" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/queue.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d8/d38/queue_8h_1a6822f963b6a23e3890b51dc7b690f09f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref> *</type>
+        <definition>Queue* queue_new</definition>
+        <argsstring>(void)</argsstring>
+        <name>queue_new</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new double-ended queue.</para><para><simplesect kind="return"><para><ref refid="d4/dc4/structA" kindref="compound">A</ref> new queue, or NULL if it was not possible to allocate the memory. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/queue.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d38/queue_8h_1a42c7cc8caeb6778234887511db8fba40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void queue_free</definition>
+        <argsstring>(Queue *queue)</argsstring>
+        <name>queue_free</name>
+        <param>
+          <type><ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroy a queue.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue to destroy. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/queue.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d38/queue_8h_1a60ec4a7181b97a89cdac71ba1169bf5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int queue_push_head</definition>
+        <argsstring>(Queue *queue, QueueValue data)</argsstring>
+        <name>queue_push_head</name>
+        <param>
+          <type><ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type><ref refid="d8/d38/queue_8h_1aaa11c2556614d37a83769324dc392dce" kindref="member">QueueValue</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a value to the head of a queue.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to add. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero if the value was added successfully, or zero if it was not possible to allocate the memory for the new entry. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/queue.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d38/queue_8h_1ad6bcabffd5a8947dfba39698aa003a8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/d38/queue_8h_1aaa11c2556614d37a83769324dc392dce" kindref="member">QueueValue</ref></type>
+        <definition>QueueValue queue_pop_head</definition>
+        <argsstring>(Queue *queue)</argsstring>
+        <name>queue_pop_head</name>
+        <param>
+          <type><ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove a value from the head of a queue.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value that was at the head of the queue, or <ref refid="d8/d38/queue_8h_1af29d693964d82bac8e9df2416ac71f2f" kindref="member">QUEUE_NULL</ref> if the queue is empty. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/queue.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d38/queue_8h_1a8924c24ee3250e23fa4009f46ba4b9d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/d38/queue_8h_1aaa11c2556614d37a83769324dc392dce" kindref="member">QueueValue</ref></type>
+        <definition>QueueValue queue_peek_head</definition>
+        <argsstring>(Queue *queue)</argsstring>
+        <name>queue_peek_head</name>
+        <param>
+          <type><ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read value from the head of a queue, without removing it from the queue.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value at the head of the queue, or <ref refid="d8/d38/queue_8h_1af29d693964d82bac8e9df2416ac71f2f" kindref="member">QUEUE_NULL</ref> if the queue is empty. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/queue.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d38/queue_8h_1a6656d203c3bdfb13284a6007ba1dbbc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int queue_push_tail</definition>
+        <argsstring>(Queue *queue, QueueValue data)</argsstring>
+        <name>queue_push_tail</name>
+        <param>
+          <type><ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type><ref refid="d8/d38/queue_8h_1aaa11c2556614d37a83769324dc392dce" kindref="member">QueueValue</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a value to the tail of a queue.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to add. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero if the value was added successfully, or zero if it was not possible to allocate the memory for the new entry. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/queue.h" line="126"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d38/queue_8h_1ae5084bfe95c3cf582dff20f05abaf06a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/d38/queue_8h_1aaa11c2556614d37a83769324dc392dce" kindref="member">QueueValue</ref></type>
+        <definition>QueueValue queue_pop_tail</definition>
+        <argsstring>(Queue *queue)</argsstring>
+        <name>queue_pop_tail</name>
+        <param>
+          <type><ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove a value from the tail of a queue.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value that was at the head of the queue, or <ref refid="d8/d38/queue_8h_1af29d693964d82bac8e9df2416ac71f2f" kindref="member">QUEUE_NULL</ref> if the queue is empty. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/queue.h" line="136"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d38/queue_8h_1a13eed7922e2baaa839b3fca630a04e99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/d38/queue_8h_1aaa11c2556614d37a83769324dc392dce" kindref="member">QueueValue</ref></type>
+        <definition>QueueValue queue_peek_tail</definition>
+        <argsstring>(Queue *queue)</argsstring>
+        <name>queue_peek_tail</name>
+        <param>
+          <type><ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read a value from the tail of a queue, without removing it from the queue.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value at the tail of the queue, or QUEUE_NULL if the queue is empty. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/queue.h" line="147"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d38/queue_8h_1a9ac9b90b97da28b8c1a98a5c4d784110" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int queue_is_empty</definition>
+        <argsstring>(Queue *queue)</argsstring>
+        <name>queue_is_empty</name>
+        <param>
+          <type><ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Query if any values are currently in a queue.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The queue. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if the queue is not empty, non-zero if the queue is empty. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/queue.h" line="157"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Double-ended queue. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="d4/dc4/structA" kindref="compound">A</ref> double ended queue stores a list of values in order. New values can be added and removed from either end of the queue.</para><para>To create a new queue, use <ref refid="d8/d38/queue_8h_1a6822f963b6a23e3890b51dc7b690f09f" kindref="member">queue_new</ref>. To destroy a queue, use <ref refid="d8/d38/queue_8h_1a42c7cc8caeb6778234887511db8fba40" kindref="member">queue_free</ref>.</para><para>To add values to a queue, use <ref refid="d8/d38/queue_8h_1a60ec4a7181b97a89cdac71ba1169bf5c" kindref="member">queue_push_head</ref> and <ref refid="d8/d38/queue_8h_1a6656d203c3bdfb13284a6007ba1dbbc1" kindref="member">queue_push_tail</ref>.</para><para>To read values from the ends of a queue, use <ref refid="d8/d38/queue_8h_1ad6bcabffd5a8947dfba39698aa003a8b" kindref="member">queue_pop_head</ref> and <ref refid="d8/d38/queue_8h_1ae5084bfe95c3cf582dff20f05abaf06a" kindref="member">queue_pop_tail</ref>. To examine the ends without removing values from the queue, use <ref refid="d8/d38/queue_8h_1a8924c24ee3250e23fa4009f46ba4b9d8" kindref="member">queue_peek_head</ref> and <ref refid="d8/d38/queue_8h_1a13eed7922e2baaa839b3fca630a04e99" kindref="member">queue_peek_tail</ref>. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">Copyright<sp/>(c)<sp/>2005-2008,<sp/>Simon<sp/>Howard</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">Permission<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>and/or<sp/>distribute<sp/>this<sp/>software<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">for<sp/>any<sp/>purpose<sp/>with<sp/>or<sp/>without<sp/>fee<sp/>is<sp/>hereby<sp/>granted,<sp/>provided<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">that<sp/>the<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>appear<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">in<sp/>all<sp/>copies.<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>THE<sp/>AUTHOR<sp/>DISCLAIMS<sp/>ALL<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">WARRANTIES<sp/>WITH<sp/>REGARD<sp/>TO<sp/>THIS<sp/>SOFTWARE<sp/>INCLUDING<sp/>ALL<sp/>IMPLIED<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="comment">AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>SPECIAL,<sp/>DIRECT,<sp/>INDIRECT,<sp/>OR<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">CONSEQUENTIAL<sp/>DAMAGES<sp/>OR<sp/>ANY<sp/>DAMAGES<sp/>WHATSOEVER<sp/>RESULTING<sp/>FROM<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">LOSS<sp/>OF<sp/>USE,<sp/>DATA<sp/>OR<sp/>PROFITS,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">NEGLIGENCE<sp/>OR<sp/>OTHER<sp/>TORTIOUS<sp/>ACTION,<sp/>ARISING<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="comment">CONNECTION<sp/>WITH<sp/>THE<sp/>USE<sp/>OR<sp/>PERFORMANCE<sp/>OF<sp/>THIS<sp/>SOFTWARE.<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="comment"></highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor">#ifndef<sp/>ALGORITHM_QUEUE_H</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ALGORITHM_QUEUE_H</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="52" refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_Queue<sp/><ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="d8/d38/queue_8h_1aaa11c2556614d37a83769324dc392dce" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="d8/d38/queue_8h_1aaa11c2556614d37a83769324dc392dce" kindref="member">QueueValue</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="d8/d38/queue_8h_1af29d693964d82bac8e9df2416ac71f2f" refkind="member"><highlight class="preprocessor">#define<sp/>QUEUE_NULL<sp/>((void<sp/>*)<sp/>0)</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref><sp/>*<ref refid="d8/d38/queue_8h_1a6822f963b6a23e3890b51dc7b690f09f" kindref="member">queue_new</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d8/d38/queue_8h_1a42c7cc8caeb6778234887511db8fba40" kindref="member">queue_free</ref>(<ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref><sp/>*queue);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d8/d38/queue_8h_1a60ec4a7181b97a89cdac71ba1169bf5c" kindref="member">queue_push_head</ref>(<ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref><sp/>*queue,<sp/>QueueValue<sp/>data);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">QueueValue<sp/><ref refid="d8/d38/queue_8h_1ad6bcabffd5a8947dfba39698aa003a8b" kindref="member">queue_pop_head</ref>(<ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref><sp/>*queue);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">QueueValue<sp/><ref refid="d8/d38/queue_8h_1a8924c24ee3250e23fa4009f46ba4b9d8" kindref="member">queue_peek_head</ref>(<ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref><sp/>*queue);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d8/d38/queue_8h_1a6656d203c3bdfb13284a6007ba1dbbc1" kindref="member">queue_push_tail</ref>(<ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref><sp/>*queue,<sp/>QueueValue<sp/>data);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">QueueValue<sp/><ref refid="d8/d38/queue_8h_1ae5084bfe95c3cf582dff20f05abaf06a" kindref="member">queue_pop_tail</ref>(<ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref><sp/>*queue);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">QueueValue<sp/><ref refid="d8/d38/queue_8h_1a13eed7922e2baaa839b3fca630a04e99" kindref="member">queue_peek_tail</ref>(<ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref><sp/>*queue);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d8/d38/queue_8h_1a9ac9b90b97da28b8c1a98a5c4d784110" kindref="member">queue_is_empty</ref>(<ref refid="d8/d38/queue_8h_1aaa31d02f2b2876d12bb8f83900eacce6" kindref="member">Queue</ref><sp/>*queue);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="160"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="162"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>#ifndef<sp/>ALGORITHM_QUEUE_H<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/libcalg/queue.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d8/df7/GoodRunsListSelectorTool_8h" kind="file">
+    <compoundname>GoodRunsListSelectorTool.h</compoundname>
+    <includes refid="d5/d98/IGoodRunsListSelectorTool_8h" local="yes">GoodRunsLists/IGoodRunsListSelectorTool.h</includes>
+    <includes local="yes">AthenaBaseComps/AthAlgTool.h</includes>
+    <includes local="yes">AthenaKernel/IAthenaEvtLoopPreSelectTool.h</includes>
+    <includes refid="dc/d4a/RegularFormula_8h" local="yes">GoodRunsLists/RegularFormula.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includes local="no">map</includes>
+    <includedby refid="dd/d46/GoodRunsLists__entries_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/GoodRunsLists/src/components/GoodRunsLists_entries.cxx</includedby>
+    <includedby refid="da/d5c/GoodRunsListSelectorTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/GoodRunsLists/src/GoodRunsListSelectorTool.cxx</includedby>
+    <incdepgraph>
+      <node id="134657">
+        <label>list</label>
+      </node>
+      <node id="134648">
+        <label>GaudiKernel/IAlgTool.h</label>
+      </node>
+      <node id="134653">
+        <label>AthenaKernel/IAthenaEvtLoopPreSelectTool.h</label>
+      </node>
+      <node id="134646">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/GoodRunsLists/GoodRunsLists/GoodRunsListSelectorTool.h</label>
+        <link refid="GoodRunsListSelectorTool.h"/>
+        <childnode refid="134647" relation="include">
+        </childnode>
+        <childnode refid="134652" relation="include">
+        </childnode>
+        <childnode refid="134653" relation="include">
+        </childnode>
+        <childnode refid="134654" relation="include">
+        </childnode>
+        <childnode refid="134649" relation="include">
+        </childnode>
+        <childnode refid="134650" relation="include">
+        </childnode>
+        <childnode refid="134651" relation="include">
+        </childnode>
+      </node>
+      <node id="134654">
+        <label>GoodRunsLists/RegularFormula.h</label>
+        <link refid="dc/d4a/RegularFormula_8h_source"/>
+        <childnode refid="134655" relation="include">
+        </childnode>
+        <childnode refid="134656" relation="include">
+        </childnode>
+        <childnode refid="134657" relation="include">
+        </childnode>
+      </node>
+      <node id="134650">
+        <label>string</label>
+      </node>
+      <node id="134651">
+        <label>map</label>
+      </node>
+      <node id="134647">
+        <label>GoodRunsLists/IGoodRunsListSelectorTool.h</label>
+        <link refid="d5/d98/IGoodRunsListSelectorTool_8h_source"/>
+        <childnode refid="134648" relation="include">
+        </childnode>
+        <childnode refid="134649" relation="include">
+        </childnode>
+        <childnode refid="134650" relation="include">
+        </childnode>
+        <childnode refid="134651" relation="include">
+        </childnode>
+      </node>
+      <node id="134652">
+        <label>AthenaBaseComps/AthAlgTool.h</label>
+      </node>
+      <node id="134649">
+        <label>vector</label>
+      </node>
+      <node id="134655">
+        <label>TFormula.h</label>
+      </node>
+      <node id="134656">
+        <label>TString.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="db/d72/classGoodRunsListSelectorTool" prot="public">GoodRunsListSelectorTool</innerclass>
+    <innernamespace refid="d2/d60/namespaceRoot">Root</innernamespace>
+    <briefdescription>
+<para>This file contains the class definition for the <ref refid="db/d72/classGoodRunsListSelectorTool" kindref="compound">GoodRunsListSelectorTool</ref> class. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Max Baak &lt;<ulink url="mailto:mbaak@cern.ch">mbaak@cern.ch</ulink>&gt; </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>GoodRunsLists_GoodRunsListSelectorTool_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>GoodRunsLists_GoodRunsListSelectorTool_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#include<sp/>&quot;GoodRunsLists/IGoodRunsListSelectorTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AthenaBaseComps/AthAlgTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AthenaKernel/IAthenaEvtLoopPreSelectTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GoodRunsLists/RegularFormula.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//typedef<sp/>std::pair&lt;<sp/>std::vector&lt;std::string&gt;,<sp/>std::vector&lt;std::string&gt;<sp/>&gt;<sp/>vvPair;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="keyword">class<sp/></highlight><highlight class="normal">TFormula;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="dd/d44/namespacexAOD_1a36b2acd55b1ff4b04f435a71fd213042" kindref="member" tooltip="Definition of the latest event info version.">EventInfo</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Root<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">TGRLCollection;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">TGoodRunsListReader;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">IDetStatusSvc;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="dd/d95/classStoreGateSvc" kindref="compound" tooltip="Dummy implementation useful for simple testing.">StoreGateSvc</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="db/d72/classGoodRunsListSelectorTool" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="db/d72/classGoodRunsListSelectorTool" kindref="compound" tooltip="This file contains the class definition for the GoodRunsListSelectorTool class.">GoodRunsListSelectorTool</ref><sp/>:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>AthAlgTool,<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="d1/df3/classIGoodRunsListSelectorTool" kindref="compound">IGoodRunsListSelectorTool</ref>,<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>IAthenaEvtLoopPreSelectTool</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="db/d72/classGoodRunsListSelectorTool" kindref="compound" tooltip="This file contains the class definition for the GoodRunsListSelectorTool class.">GoodRunsListSelectorTool</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IInterface*<sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="db/d72/classGoodRunsListSelectorTool" kindref="compound" tooltip="This file contains the class definition for the GoodRunsListSelectorTool class.">GoodRunsListSelectorTool</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>StatusCode<sp/><ref refid="db/d72/classGoodRunsListSelectorTool_1a289e7ab4e33f03592970c2d815ee456a" kindref="member" tooltip="To allow access to the IGoodRunsListSelectorTool interface.">queryInterface</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>InterfaceID&amp;<sp/>riid,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/>ppvIf<sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>StatusCode<sp/><ref refid="db/d72/classGoodRunsListSelectorTool_1ae327fc2172a19ce056949f80973b6b68" kindref="member" tooltip="Initialize AlgTool.">initialize</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="db/d72/classGoodRunsListSelectorTool_1a4de037986fa66f7152680a919d0b1798" kindref="member" tooltip="called for each event by EventSelector to decide if the event should be passed">passEvent</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EventInfo*<sp/>pEvent)<sp/>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>StatusCode<sp/><ref refid="db/d72/classGoodRunsListSelectorTool_1a8a7de9f22619db6e85194580ae6995c6" kindref="member" tooltip="Finalize AlgTool.">finalize</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//static<sp/>const<sp/>InterfaceID&amp;<sp/>interfaceID()<sp/>{<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>return<sp/>IAthenaEvtLoopPreSelectTool::interfaceID();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//return<sp/>IGoodRunsListSelectorTool::interfaceID();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="db/d72/classGoodRunsListSelectorTool_1a2859c10101238823640a80b4fb59ac1d" kindref="member" tooltip="called for each event by GoodRunsListSelectorAlg to decide if the event should be...">passRunLB</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>runNumber,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lumiBlockNr,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;&amp;<sp/>grlnameVec=std::vector&lt;std::string&gt;(),</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;&amp;<sp/>brlnameVec=std::vector&lt;std::string&gt;()<sp/>)<sp/>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="db/d72/classGoodRunsListSelectorTool_1a8a59b27ef8318c9c6ac7fd281ae7e46c" kindref="member" tooltip="called for each event by GoodRunsListSelectorAlg to decide if the event should be...">passThisRunLB</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;&amp;<sp/>grlnameVec=std::vector&lt;std::string&gt;(),<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;&amp;<sp/>brlnameVec=std::vector&lt;std::string&gt;()<sp/>)<sp/>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="db/d72/classGoodRunsListSelectorTool_1a063ed7fabd8a06abfd394659860afc7f" kindref="member" tooltip="register grl/brl combination">registerGRLSelector</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;&amp;<sp/>grlnameVec,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;&amp;<sp/>brlnameVec);</highlight></codeline>
+<codeline lineno="67" refid="db/d72/classGoodRunsListSelectorTool_1abd4ac3a687d89388257c0afb1543d652" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;<sp/>std::string,<sp/>vvPair<sp/>&gt;&amp;<sp/><ref refid="db/d72/classGoodRunsListSelectorTool_1abd4ac3a687d89388257c0afb1543d652" kindref="member" tooltip="get GRL selector registry">getGRLSelectorRegistry</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_registry;<sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="db/d72/classGoodRunsListSelectorTool_1aac7b0113bc3f39784b24d4d5f0d541e8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d9/d9b/classRoot_1_1TGRLCollection" kindref="compound">Root::TGRLCollection</ref>*<sp/><ref refid="db/d72/classGoodRunsListSelectorTool_1aac7b0113bc3f39784b24d4d5f0d541e8" kindref="member" tooltip="get grl/brl collection">getGRLCollection</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_grlcollection;<sp/>}<sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d9/d9b/classRoot_1_1TGRLCollection" kindref="compound">Root::TGRLCollection</ref>*<sp/>getBRLCollection()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_brlcollection;<sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="db/d72/classGoodRunsListSelectorTool_1a7c554a59dff344a011119b569f1a62ee" kindref="member">fileExists</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fileName);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>std::vector&lt;std::string&gt;<sp/>m_goodrunslistVec;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>std::vector&lt;std::string&gt;<sp/>m_blackrunslistVec;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>std::vector&lt;std::string&gt;<sp/>m_dqflagsqueryVec;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><ref refid="d9/d9b/classRoot_1_1TGRLCollection" kindref="compound">Root::TGRLCollection</ref>*<sp/>m_grlcollection;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="d9/d9b/classRoot_1_1TGRLCollection" kindref="compound">Root::TGRLCollection</ref>*<sp/>m_brlcollection;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><ref refid="d5/d0f/classRoot_1_1TGoodRunsListReader" kindref="compound">Root::TGoodRunsListReader</ref>*<sp/>m_reader;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>std::map&lt;<sp/>std::string,TFormula*<sp/>&gt;<sp/>m_dqformula;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/>m_boolop;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_passthrough;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_usecool;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_verbose;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_rejectanybrl;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_eventselectormode;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IDetStatusSvc*<sp/>m_detstatussvc;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><ref refid="dd/d95/classStoreGateSvc" kindref="compound" tooltip="Dummy implementation useful for simple testing.">StoreGateSvc</ref>*<sp/>m_storeGate;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>std::map&lt;<sp/>std::string,<sp/>vvPair<sp/>&gt;<sp/>m_registry;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>std::string<sp/><sp/>m_runrangeexpr;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><ref refid="d0/dcc/classRoot_1_1RegularFormula" kindref="compound">Root::RegularFormula</ref><sp/>m_inrunrange;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/GoodRunsLists/GoodRunsLists/GoodRunsListSelectorTool.h"/>
+  </compounddef>
+</doxygen>

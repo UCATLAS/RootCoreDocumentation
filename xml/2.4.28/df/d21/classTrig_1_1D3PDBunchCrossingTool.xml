@@ -1,0 +1,699 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="df/d21/classTrig_1_1D3PDBunchCrossingTool" kind="class" prot="public">
+    <compoundname>Trig::D3PDBunchCrossingTool</compoundname>
+    <basecompoundref refid="db/df3/classTrig_1_1BunchCrossingToolBase" prot="public" virt="non-virtual">Trig::BunchCrossingToolBase</basecompoundref>
+    <includes refid="d8/df2/D3PDBunchCrossingTool_8h" local="no">D3PDBunchCrossingTool.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Function managing the configuration loaded by the tool</header>
+      <description><para><anchor id="_1amgrpde45e907127ab8bfa6b22a1039a8455d"/> </para></description>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1af0c7163e689608891e78f60eda38c129" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode Trig::D3PDBunchCrossingTool::cacheConfig</definition>
+        <argsstring>(::TTree *metaTree, bool clearCache=true)</argsstring>
+        <name>cacheConfig</name>
+        <param>
+          <type>::TTree *</type>
+          <declname>metaTree</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>clearCache</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Function caching the information out of the metadata tree. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function should be called whenever a new file is opened by the analysis code. It reads in all the information from the metadata TTree into memory in one go, so the users can access the metadata tree however they want after the function is finished.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>metaTree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the metadata tree holding the bunch configuration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clearCache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If set to <computeroutput>true</computeroutput> (default value) then the already known configurations are forgotten by the tool. This is good practice in general to keep the memory consumption of the tool low in a big job. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>StatusCode::SUCCESS</computeroutput> if the caching was successful, or <computeroutput>StatusCode::FAILURE</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="58" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="35" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ab8ba59a3134854f6dee988103f6506d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode Trig::D3PDBunchCrossingTool::loadConfig</definition>
+        <argsstring>(UInt_t configID)</argsstring>
+        <name>loadConfig</name>
+        <param>
+          <type>UInt_t</type>
+          <declname>configID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function loading a the configuration corresponding to a given configuration ID</para><para>This function should be called whenever processing a new D3PD event. It tries to be as smart as possible, to do as little as possible. So it should be safe to call it in every event.</para><para>You should yourself read the configuration ID from the event information in the D3PD, and pass that to this function.</para><para>Of course you should also not forget about caching the configurations of the current file using <computeroutput>cacheConfig(...)</computeroutput>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>configID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The configuration ID of the current event </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>StatusCode::SUCCESS</computeroutput> if the loading of the configuration was successful, or <computeroutput>StatusCode::FAILURE</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="62" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="86" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a93246887f55d1cb58d86c66f975494ea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Trig::D3PDBunchCrossingTool::isAvailable</definition>
+        <argsstring>(UInt_t configID) const </argsstring>
+        <name>isAvailable</name>
+        <param>
+          <type>UInt_t</type>
+          <declname>configID</declname>
+        </param>
+        <briefdescription>
+<para>Function checking if a given configuration key is known. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function can be used to figure out if a given configuration is available to the tool currently. It is mostly used by the <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref> version of the tool to decide when to read in new metadata.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>configID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The configuration ID that is to be checked </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the configuration is available, <computeroutput>false</computeroutput> if it&apos;s not </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="64" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="167" bodyend="170"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Functions re-implemented from the IBunchCrossingTool interface</header>
+      <description><para><anchor id="_1amgrpa7b3d253ec32caf18ee39b612dd33d00"/> </para></description>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ac60e00c69517d711b7bd22672e58e86c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Trig::D3PDBunchCrossingTool::isFilled</definition>
+        <argsstring>(bcid_type bcid) const </argsstring>
+        <name>isFilled</name>
+        <reimplements refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a9db99df0515f2acd26a50da37f168d95">isFilled</reimplements>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+        </param>
+        <briefdescription>
+<para>The simplest query: Is the bunch crossing filled or not? </para>        </briefdescription>
+        <detaileddescription>
+<para>Function re-implemented to give meaningful answers for non-pileup MC files as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="72" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="176" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a2b2c6892c395f6a537932fc2cb4c447a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Trig::D3PDBunchCrossingTool::isInTrain</definition>
+        <argsstring>(bcid_type bcid) const </argsstring>
+        <name>isInTrain</name>
+        <reimplements refid="db/df3/classTrig_1_1BunchCrossingToolBase_1ac0290e90cf90bd34d70b99cc3efab88d">isInTrain</reimplements>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+        </param>
+        <briefdescription>
+<para>Function deciding if a given bunch crossing is in a filled train. </para>        </briefdescription>
+        <detaileddescription>
+<para>Function re-implemented to give meaningful answers for non-pileup MC files as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="74" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="186" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a6fa978933b9ec279b6bd2372dd2e6dc0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Trig::D3PDBunchCrossingTool::isUnpaired</definition>
+        <argsstring>(bcid_type bcid) const </argsstring>
+        <name>isUnpaired</name>
+        <reimplements refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a5f7ea73dc415f2e16a6de8be234e03d5">isUnpaired</reimplements>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+        </param>
+        <briefdescription>
+<para>Function deciding if a given bunch crossing has an unpaired bunch. </para>        </briefdescription>
+        <detaileddescription>
+<para>Function re-implemented to give meaningful answers for non-pileup MC files as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="76" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="196" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a0d9cbf05eaf230f1007dc65bdc5915f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Trig::D3PDBunchCrossingTool::isBeam1</definition>
+        <argsstring>(bcid_type bcid) const </argsstring>
+        <name>isBeam1</name>
+        <reimplements refid="db/df3/classTrig_1_1BunchCrossingToolBase_1ae20e96672675556eddbad87a3bd40df7">isBeam1</reimplements>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+        </param>
+        <briefdescription>
+<para>Function deciding if there was a bunch from &quot;beam 1&quot; in this bunch crossing. </para>        </briefdescription>
+        <detaileddescription>
+<para>Function re-implemented to give meaningful answers for non-pileup MC files as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="78" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="206" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a7196112304bacbaf155385ad8ce2e195" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Trig::D3PDBunchCrossingTool::isBeam2</definition>
+        <argsstring>(bcid_type bcid) const </argsstring>
+        <name>isBeam2</name>
+        <reimplements refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a774292ba2828a939fb69402d5401718d">isBeam2</reimplements>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+        </param>
+        <briefdescription>
+<para>Function deciding if there was a bunch from &quot;beam 2&quot; in this bunch crossing. </para>        </briefdescription>
+        <detaileddescription>
+<para>Function re-implemented to give meaningful answers for non-pileup MC files as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="80" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="216" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a2abbcb9b662f3fba39a8326d88f46efb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>float</type>
+        <definition>float Trig::D3PDBunchCrossingTool::bcIntensity</definition>
+        <argsstring>(bcid_type bcid, BeamType type=Crossing) const </argsstring>
+        <name>bcIntensity</name>
+        <reimplements refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a01e68f99e0c68f4badf7d9c2e087de84">bcIntensity</reimplements>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47" kindref="member">BeamType</ref></type>
+          <declname>type</declname>
+          <defval>Crossing</defval>
+        </param>
+        <briefdescription>
+<para>Function returning the &quot;intensity&quot; of a given bunch crossing. </para>        </briefdescription>
+        <detaileddescription>
+<para>Function re-implemented to give meaningful answers for non-pileup MC files as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="83" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="226" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ac2a4e69dd2e8c229d856e5103108d350" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cf" kindref="member">BunchCrossingType</ref></type>
+        <definition>IBunchCrossingTool::BunchCrossingType Trig::D3PDBunchCrossingTool::bcType</definition>
+        <argsstring>(bcid_type bcid) const </argsstring>
+        <name>bcType</name>
+        <reimplements refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a15997803b368bc9a3fc27f6ebd3486f2">bcType</reimplements>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+        </param>
+        <briefdescription>
+<para>Get the type of the specific bunch crossing. </para>        </briefdescription>
+        <detaileddescription>
+<para>Function re-implemented to give meaningful answers for non-pileup MC files as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="85" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="238" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ad2fd35b09c76ac2f5dad451480121477" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>std::vector&lt; bool &gt; Trig::D3PDBunchCrossingTool::bunchesInFront</definition>
+        <argsstring>(bcid_type bcid, int bunches=10) const </argsstring>
+        <name>bunchesInFront</name>
+        <reimplements refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a7791e0d9ee813c1679bac22c859de01e">bunchesInFront</reimplements>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bunches</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>Function returning whether the previous bunches were filled, and how. </para>        </briefdescription>
+        <detaileddescription>
+<para>Function re-implemented to give meaningful answers for non-pileup MC files as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="88" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="249" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1af37671ba0dd338c80d91b37a9fe498bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>std::vector&lt; bool &gt; Trig::D3PDBunchCrossingTool::bunchesAfter</definition>
+        <argsstring>(bcid_type bcid, int bunches=10) const </argsstring>
+        <name>bunchesAfter</name>
+        <reimplements refid="db/df3/classTrig_1_1BunchCrossingToolBase_1ab4dafc695308b9f4e5795bf2e3f9566c">bunchesAfter</reimplements>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bunches</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>Function returning whether the following bunches were filled, and how. </para>        </briefdescription>
+        <detaileddescription>
+<para>Function re-implemented to give meaningful answers for non-pileup MC files as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="91" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="269" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ad6c384e34b86d2406cc44737c2e0c307" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt; float &gt; Trig::D3PDBunchCrossingTool::bunchIntInFront</definition>
+        <argsstring>(bcid_type bcid, int bunches=10, BeamType type=Crossing) const </argsstring>
+        <name>bunchIntInFront</name>
+        <reimplements refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a53c0b29db0a8d7393822a57015d56bcc">bunchIntInFront</reimplements>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bunches</declname>
+          <defval>10</defval>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47" kindref="member">BeamType</ref></type>
+          <declname>type</declname>
+          <defval>Crossing</defval>
+        </param>
+        <briefdescription>
+<para>Function returning the intensities of the bunch crossings before the reference. </para>        </briefdescription>
+        <detaileddescription>
+<para>Function re-implemented to give meaningful answers for non-pileup MC files as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="95" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="289" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ae754a9b1dcc4381474b84e265a284feb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt; float &gt; Trig::D3PDBunchCrossingTool::bunchIntAfter</definition>
+        <argsstring>(bcid_type bcid, int bunches=10, BeamType type=Crossing) const </argsstring>
+        <name>bunchIntAfter</name>
+        <reimplements refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a053165be519af8e4be49ce77c5c0c7bf">bunchIntAfter</reimplements>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bunches</declname>
+          <defval>10</defval>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47" kindref="member">BeamType</ref></type>
+          <declname>type</declname>
+          <defval>Crossing</defval>
+        </param>
+        <briefdescription>
+<para>Function returning the intensities of the bunch crossings after the reference. </para>        </briefdescription>
+        <detaileddescription>
+<para>Function re-implemented to give meaningful answers for non-pileup MC files as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="99" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="310" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a364eacf6c9bcdd5d9b1f9b1272721d92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int Trig::D3PDBunchCrossingTool::gapBeforeBunch</definition>
+        <argsstring>(bcid_type bcid, BunchDistanceType dtype=NanoSec, BunchFillType ftype=CollidingBunch) const </argsstring>
+        <name>gapBeforeBunch</name>
+        <reimplements refid="db/df3/classTrig_1_1BunchCrossingToolBase_1ab8ac1297dd93899e04e68622530dab18">gapBeforeBunch</reimplements>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681e" kindref="member">BunchDistanceType</ref></type>
+          <declname>dtype</declname>
+          <defval>NanoSec</defval>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8" kindref="member">BunchFillType</ref></type>
+          <declname>ftype</declname>
+          <defval>CollidingBunch</defval>
+        </param>
+        <briefdescription>
+<para>Gap before a particular bunch. </para>        </briefdescription>
+        <detaileddescription>
+<para>Function re-implemented to give meaningful answers for non-pileup MC files as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="103" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="330" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a323ad5d29b3aaa7983e86371ba736dc7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int Trig::D3PDBunchCrossingTool::gapAfterBunch</definition>
+        <argsstring>(bcid_type bcid, BunchDistanceType dtype=NanoSec, BunchFillType ftype=CollidingBunch) const </argsstring>
+        <name>gapAfterBunch</name>
+        <reimplements refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a5684c852a799a421c09b4bb1d6f5c70d">gapAfterBunch</reimplements>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681e" kindref="member">BunchDistanceType</ref></type>
+          <declname>dtype</declname>
+          <defval>NanoSec</defval>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8" kindref="member">BunchFillType</ref></type>
+          <declname>ftype</declname>
+          <defval>CollidingBunch</defval>
+        </param>
+        <briefdescription>
+<para>Gap after a particular bunch. </para>        </briefdescription>
+        <detaileddescription>
+<para>Function re-implemented to give meaningful answers for non-pileup MC files as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="107" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="342" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a4a7df6cf70beb8dbb1fa48c104ca0636" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Trig::D3PDBunchCrossingTool::numberOfFilledBunches</definition>
+        <argsstring>() const </argsstring>
+        <name>numberOfFilledBunches</name>
+        <reimplements refid="db/df3/classTrig_1_1BunchCrossingToolBase_1ad27cf24864c23bd5e90fa6342e71b6bf">numberOfFilledBunches</reimplements>
+        <briefdescription>
+<para>Get the number of filled bunches in the current configuration. </para>        </briefdescription>
+        <detaileddescription>
+<para>In case the tool is not configured correctly (we&apos;re processing a non-pileup MC file) it should not report 0 filled bunches, but 1. The override of this function makes sure that this is what happens... </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="110" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="355" bodyend="359"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a2f39fecd63cb77661cc13bf90f60d983" prot="private" static="no" mutable="no">
+        <type>std::map&lt; UInt_t, <ref refid="dd/d70/structTrig_1_1BunchConfig" kindref="compound">Trig::BunchConfig</ref> &gt;</type>
+        <definition>std::map&lt; UInt_t, Trig::BunchConfig &gt; Trig::D3PDBunchCrossingTool::m_cache</definition>
+        <argsstring></argsstring>
+        <name>m_cache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cached configurations We need to be explicit about the namespace of <ref refid="dd/d70/structTrig_1_1BunchConfig" kindref="compound">Trig::BunchConfig</ref>, otherwise the dictionary generator fails in ROOT 5. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="123" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ad4c369834a88feebb9fe29153d1858e4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Trig::D3PDBunchCrossingTool::m_configLoaded</definition>
+        <argsstring></argsstring>
+        <name>m_configLoaded</name>
+        <briefdescription>
+<para>Flag specifying if any configuration is loaded already. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="126" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ab7c05aa8b608301f0d39605bc58b18ed" prot="private" static="no" mutable="no">
+        <type>UInt_t</type>
+        <definition>UInt_t Trig::D3PDBunchCrossingTool::m_currentID</definition>
+        <argsstring></argsstring>
+        <name>m_currentID</name>
+        <briefdescription>
+<para>The currently loaded configuration ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="128" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1acf4d9bcac2ed72dd34f628257ce28faa" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Trig::D3PDBunchCrossingTool::m_validConfig</definition>
+        <argsstring></argsstring>
+        <name>m_validConfig</name>
+        <briefdescription>
+<para>Flag specifying whether we use a &quot;valid&quot; configuration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="130" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ac4d4e4b7f521025778b74694e967e79b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Trig::D3PDBunchCrossingTool::D3PDBunchCrossingTool</definition>
+        <argsstring>(const std::string &amp;name=&quot;D3PDBunchCrossingTool&quot;)</argsstring>
+        <name>D3PDBunchCrossingTool</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+          <defval>&quot;D3PDBunchCrossingTool&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Create a proper constructor for <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Default constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="52" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="13" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a896acdfb8429dc12673dc9d2e4294a30" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode Trig::D3PDBunchCrossingTool::cacheConfigV1</definition>
+        <argsstring>(::TTree *metaTree, bool clearCache)</argsstring>
+        <name>cacheConfigV1</name>
+        <param>
+          <type>::TTree *</type>
+          <declname>metaTree</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>clearCache</declname>
+        </param>
+        <briefdescription>
+<para>Function reading the V1 metadata format. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="116" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="361" bodyend="495"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a22b3ce92c50d84ee13b28c22dafd51a7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode Trig::D3PDBunchCrossingTool::cacheConfigV2</definition>
+        <argsstring>(::TTree *metaTree, bool clearCache)</argsstring>
+        <name>cacheConfigV2</name>
+        <param>
+          <type>::TTree *</type>
+          <declname>metaTree</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>clearCache</declname>
+        </param>
+        <briefdescription>
+<para>Function reading the V2 metadata format. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="118" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/Root/D3PDBunchCrossingTool.cxx" bodystart="497" bodyend="628"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Stand-alone bunch crossing tool for processing D3PD files. </para>    </briefdescription>
+    <detaileddescription>
+<para>This implementation was designed to be used for processing D3PD files which have the bunch configuration stored in them as metadata.</para><para>Each time you open a new D3PD file you need to call the <computeroutput>cacheConfig(...)</computeroutput> function, and for each event you need to call the <computeroutput>loadConfig(...)</computeroutput> function. This way the tool is always configured correctly in your analysis. Unfortunately unlike in <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref>, there&apos;s no way of doing this automatically behing the scenes in this tool...</para><para>This tool has no <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref> front-end, as it would make no sense.</para><para><simplesect kind="author"><para>Attila Krasznahorkay &lt;<ulink url="mailto:Attila.Krasznahorkay@cern.ch">Attila.Krasznahorkay@cern.ch</ulink>&gt;</para></simplesect>
+<simplesect kind="rcs"><title>Revision</title><para>639543 </para></simplesect>
+<simplesect kind="rcs"><title>Date</title><para>2015-01-14 18:51:02 +0100 (Wed, 14 Jan 2015) </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="4747">
+        <label>asg::AsgMetadataTool</label>
+        <link refid="da/dfd/classasg_1_1AsgMetadataTool"/>
+        <childnode refid="4748" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4744">
+        <label>Trig::BunchCrossingToolBase</label>
+        <link refid="db/df3/classTrig_1_1BunchCrossingToolBase"/>
+        <childnode refid="4745" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4747" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4748">
+        <label>asg::AsgTool</label>
+        <link refid="d5/dbb/classasg_1_1AsgTool"/>
+        <childnode refid="4746" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4746">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="4743">
+        <label>Trig::D3PDBunchCrossingTool</label>
+        <link refid="df/d21/classTrig_1_1D3PDBunchCrossingTool"/>
+        <childnode refid="4744" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4745">
+        <label>Trig::IBunchCrossingTool</label>
+        <link refid="d0/d67/classTrig_1_1IBunchCrossingTool"/>
+        <childnode refid="4746" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4753">
+        <label>asg::AsgMetadataTool</label>
+        <link refid="da/dfd/classasg_1_1AsgMetadataTool"/>
+        <childnode refid="4754" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4750">
+        <label>Trig::BunchCrossingToolBase</label>
+        <link refid="db/df3/classTrig_1_1BunchCrossingToolBase"/>
+        <childnode refid="4751" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4753" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4754">
+        <label>asg::AsgTool</label>
+        <link refid="d5/dbb/classasg_1_1AsgTool"/>
+        <childnode refid="4752" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4752">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="4749">
+        <label>Trig::D3PDBunchCrossingTool</label>
+        <link refid="df/d21/classTrig_1_1D3PDBunchCrossingTool"/>
+        <childnode refid="4750" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4751">
+        <label>Trig::IBunchCrossingTool</label>
+        <link refid="d0/d67/classTrig_1_1IBunchCrossingTool"/>
+        <childnode refid="4752" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" line="44" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigBunchCrossingTool/TrigBunchCrossingTool/D3PDBunchCrossingTool.h" bodystart="44" bodyend="132"/>
+    <listofallmembers>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1a59a741dd8ea7efecf776cc39470c87de" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>AsgMetadataTool</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a47f02c756c6d6026d03e0d4d68d82a94" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>AsgTool</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>bcid_type</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a2abbcb9b662f3fba39a8326d88f46efb" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>bcIntensity</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ac2a4e69dd2e8c229d856e5103108d350" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>bcType</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47a0a2435c329f92970602ae6a6c2f8165a" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>Beam1</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47a84657ab866c535aaaa27f007dd81b703" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>Beam2</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>BeamType</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1a197cfa14f94c758c53a770544b7dad88" prot="protected" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>beginEvent</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1a0f88194c53ae0af538819858bdff07da" prot="protected" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>beginInputFile</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681ea0a64ff40e0cd130bf46a4dc695842780" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>BunchCrossings</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a9e4363277c1d17205c7b10b714b07e3d" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>BunchCrossingToolBase</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cf" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>BunchCrossingType</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681e" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>BunchDistanceType</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1af37671ba0dd338c80d91b37a9fe498bd" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>bunchesAfter</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ad2fd35b09c76ac2f5dad451480121477" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>bunchesInFront</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>BunchFillType</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ae754a9b1dcc4381474b84e265a284feb" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>bunchIntAfter</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ad6c384e34b86d2406cc44737c2e0c307" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>bunchIntInFront</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a59de0d5fe70c893874b0418ce294d5a5" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>bunchTrainSpacing</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1af0c7163e689608891e78f60eda38c129" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>cacheConfig</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a896acdfb8429dc12673dc9d2e4294a30" prot="private" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>cacheConfigV1</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a22b3ce92c50d84ee13b28c22dafd51a7" prot="private" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>cacheConfigV2</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8a521766e927f41055758f34ee58b5d012" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>CollidingBunch</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47a9d05da22e67bd5be8ea2807a72563690" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>Crossing</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ac4d4e4b7f521025778b74694e967e79b" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>D3PDBunchCrossingTool</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1af3f021e1433c5d1c820fc8d28aade214" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>distanceFromFront</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a55ded04a49420061e42910f6d4a72863" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>distanceFromTail</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa4b0c804ae3e2125b4c260b6fefd79ea8" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>Empty</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8a8ddf98c396a923c2e48174e4ddfcf0a5" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>EmptyBunch</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1a96c1e806bc026046faec3c695ca1fa2b" prot="protected" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>endInputFile</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681ea8110a0e05955daca343f82a4ae037873" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>FilledBunches</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa259bae7213f9b2ee63d726133b5ccd54" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>FirstEmpty</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa5581dfb9e92aa4e7c3bb185de93bc21c" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>Front</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a323ad5d29b3aaa7983e86371ba736dc7" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>gapAfterBunch</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a25f17b451a8b4d86553d10956d92c269" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>gapAfterTrain</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a364eacf6c9bcdd5d9b1f9b1272721d92" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>gapBeforeBunch</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a4c8ce18adcca57ed5391d77aab064d1d" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>gapBeforeTrain</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a5d9d9eae0988784fb6c257e0a2440ca6" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>getProperty</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1a530a60a4a450f07baec2e3895f567656" prot="protected" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>handle</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a55b3c013a3e54ae4c1d0d76de8e1e726" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>initialize</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1ae352e92bf7637cdd3fec63ca2df4bb79" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>inputMetaStore</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a93246887f55d1cb58d86c66f975494ea" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>isAvailable</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a0d9cbf05eaf230f1007dc65bdc5915f0" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>isBeam1</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a7196112304bacbaf155385ad8ce2e195" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>isBeam2</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ac60e00c69517d711b7bd22672e58e86c" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>isFilled</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a2b2c6892c395f6a537932fc2cb4c447a" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>isInTrain</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a6fa978933b9ec279b6bd2372dd2e6dc0" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>isUnpaired</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a289406fc3f36e544aa02e16673dd3a04" prot="protected" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>loadBunchTrains</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ab8ba59a3134854f6dee988103f6506d0" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>loadConfig</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1ac983cbae796e341d7371902b41a4587c" prot="protected" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>loadSingleBunches</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1ad84da5ff8344107234e53aeff5e18bee" prot="protected" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>loadUnpairedBunches</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1aeacbab34ba7a65f9672a6822d01249b9" prot="protected" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>m_bunchTrains</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a2f39fecd63cb77661cc13bf90f60d983" prot="private" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>m_cache</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ad4c369834a88feebb9fe29153d1858e4" prot="private" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>m_configLoaded</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ab7c05aa8b608301f0d39605bc58b18ed" prot="private" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>m_currentID</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1ad78f428d02ca4832fd663378e552fa65" prot="protected" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>m_filledBunches</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1ad7b926a368d2961e6ce655c9d81dd89d" prot="protected" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>m_frontLength</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1acc703223701968694a4f2d576b84c1d7" prot="protected" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>m_maxBunchSpacing</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a129a33228220d9f1124b656e142d8470" prot="protected" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>m_singleBunches</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1afca1209ab406f0572af565103c65ca62" prot="protected" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>m_tailLength</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1aac29b06ab503bf643bdaa72d8768f674" prot="protected" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>m_unpairedBunches</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1acf4d9bcac2ed72dd34f628257ce28faa" prot="private" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>m_validConfig</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1abb00c6ab139868a879d647adabbddc2c" prot="protected" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>metaDataStop</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa8b13f6fcb97a797aba6ce81089e63f18" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>Middle</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfae196bca5223029fbfbd4543646fcf793" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>MiddleEmpty</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a3aeba8f7ad5ade0197f5848fe9e4480e" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>msg_level_name</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681ea5e0331cbdd292eb12a1834b835bd79c7" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>NanoSec</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a8da99b872d015c8275a79b4334c40e63" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>numberOfBunchTrains</name></member>
+      <member refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a4a7df6cf70beb8dbb1fa48c104ca0636" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>numberOfFilledBunches</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a48c96620cc51f7682c51cbed180e77aa" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>numberOfUnpairedBunches</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1aecc5130b7f5a7e9342e974891b562e1c" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>outputMetaStore</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1af1aac990b958e92bf38123318d926e67" prot="public" virt="pure-virtual" ambiguityscope="Trig::"><scope>Trig::D3PDBunchCrossingTool</scope><name>print</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1af4cc6ba53b6505045c2866d4e30e821d" prot="public" virt="virtual" ambiguityscope="asg::AsgMetadataTool::"><scope>Trig::D3PDBunchCrossingTool</scope><name>print</name></member>
+      <member refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a29b990621fc9b619cf2b7bd653a36c1d" prot="protected" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>printConfig</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1abe82065a516344e4f0f0abb2f23d9f8a" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>retrieveMetadata</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfad69950ed575625ca7e0c9905bb99f14d" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>Single</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1af0c49a5d93cf0f25cbb0a2f12e5394d9" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>sysInitialize</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa334a589a59f6cd4362f4b5afaedc356f" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>Tail</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa17f24a20f1378fd1e9542d078133778b" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>Unpaired</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8a955e2b8f3446de622b29908f7843b2f5" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>UnpairedBeam1</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8ac260bfad34a78e1b5076eb998c6aa417" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>UnpairedBeam2</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8a5ad3382c869d5996cd7cc6e69d7affd8" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>UnpairedBunch</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1a5e5666d87754b5f3b8d572512c41d5af" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>~AsgMetadataTool</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1abf22f7aa60258c67b79cf67bf70a3a5b" prot="public" virt="non-virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>~AsgTool</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1a77b49d52f1f8c272cb665b8309d6082d" prot="public" virt="virtual"><scope>Trig::D3PDBunchCrossingTool</scope><name>~IAsgTool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d8/d10/classana_1_1IToolScheduler" kind="class" prot="public">
+    <compoundname>ana::IToolScheduler</compoundname>
+    <basecompoundref refid="d4/d20/classasg_1_1IAsgTool" prot="public" virt="virtual">asg::IAsgTool</basecompoundref>
+    <derivedcompoundref refid="d9/d9d/classana_1_1OptimizedScheduler" prot="public" virt="virtual">ana::OptimizedScheduler</derivedcompoundref>
+    <derivedcompoundref refid="d3/d69/classana_1_1ToolScheduler" prot="public" virt="virtual">ana::ToolScheduler</derivedcompoundref>
+    <includes refid="dc/d30/IToolScheduler_8h" local="no">IToolScheduler.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/d10/classana_1_1IToolScheduler_1afd6cb82b774e5b2dcf4323247c0a3542" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode ana::IToolScheduler::addTools</definition>
+        <argsstring>(const Configuration &amp;conf, InternalConfiguration &amp;internal, const std::string &amp;prefix)</argsstring>
+        <name>addTools</name>
+        <param>
+          <type>const <ref refid="d3/da8/structana_1_1Configuration" kindref="compound">Configuration</ref> &amp;</type>
+          <declname>conf</declname>
+        </param>
+        <param>
+          <type><ref refid="db/daa/classana_1_1InternalConfiguration" kindref="compound">InternalConfiguration</ref> &amp;</type>
+          <declname>internal</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>prefix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: add all the tools from the configuration guarantee: basic failures: tool creation errors failures: out of memory III </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IToolScheduler.h" line="48" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/IToolScheduler.cxx" bodystart="30" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d10/classana_1_1IToolScheduler_1ac919278000c93345815d43611f8f54bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>StatusCode</type>
+        <definition>virtual StatusCode ana::IToolScheduler::addTool</definition>
+        <argsstring>(IAnaTool *tool)=0</argsstring>
+        <name>addTool</name>
+        <reimplementedby refid="d3/d69/classana_1_1ToolScheduler_1ad013259f6cb07cf9f4296760da635360">addTool</reimplementedby>
+        <reimplementedby refid="d9/d9d/classana_1_1OptimizedScheduler_1ae8a38b448fe94fa03753fbca8a6a1686">addTool</reimplementedby>
+        <param>
+          <type><ref refid="dd/d79/classana_1_1IAnaTool" kindref="compound">IAnaTool</ref> *</type>
+          <declname>tool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: add another tool to the scheduler guarantee: strong failures: out of memory I </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IToolScheduler.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d10/classana_1_1IToolScheduler_1ae89effa781846ba84ba38b5f264407d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">CP::SystematicSet</ref></type>
+        <definition>virtual CP::SystematicSet ana::IToolScheduler::affectingSystematics</definition>
+        <argsstring>() const =0</argsstring>
+        <name>affectingSystematics</name>
+        <reimplementedby refid="d3/d69/classana_1_1ToolScheduler_1a6ae4e4ef2826d322d17399025a5fa4ea">affectingSystematics</reimplementedby>
+        <reimplementedby refid="d9/d9d/classana_1_1OptimizedScheduler_1a477cc50cec9f596105819bd26f862bad">affectingSystematics</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>returns: the list of all systematics the tools can be affected by guarantee: strong failures: out of memory II </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IToolScheduler.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d10/classana_1_1IToolScheduler_1a55a1ba97b684cdd9019e352985d1da68" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">CP::SystematicSet</ref></type>
+        <definition>virtual CP::SystematicSet ana::IToolScheduler::recommendedSystematics</definition>
+        <argsstring>() const =0</argsstring>
+        <name>recommendedSystematics</name>
+        <reimplementedby refid="d3/d69/classana_1_1ToolScheduler_1a2c608bff02d3352cbafe293baf3a0637">recommendedSystematics</reimplementedby>
+        <reimplementedby refid="d9/d9d/classana_1_1OptimizedScheduler_1a4ffc1ca1fffdfd83e59a9588c060f9f0">recommendedSystematics</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>returns: the list of all systematics the tools recommend to use guarantee: strong failures: out of memory II </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IToolScheduler.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d10/classana_1_1IToolScheduler_1a3eae2e170228e6b81b69cabdc5131605" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>StatusCode</type>
+        <definition>virtual StatusCode ana::IToolScheduler::applySystematicVariation</definition>
+        <argsstring>(const CP::SystematicSet &amp;systConfig)=0</argsstring>
+        <name>applySystematicVariation</name>
+        <reimplementedby refid="d3/d69/classana_1_1ToolScheduler_1a35c998056d1f6dc3ea6225e5587a1e80">applySystematicVariation</reimplementedby>
+        <reimplementedby refid="d9/d9d/classana_1_1OptimizedScheduler_1a1aa655854ac2c0cb75665fbebca1a6e1">applySystematicVariation</reimplementedby>
+        <param>
+          <type>const <ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">CP::SystematicSet</ref> &amp;</type>
+          <declname>systConfig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: configure this tool for the given list of systematic variations. any requested systematics that are not affecting this tool will be silently ignored (unless they cause other errors). guarantee: basic failures: tool specific </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IToolScheduler.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d10/classana_1_1IToolScheduler_1a6267e6fb7b5a007e46d2b594337fc51e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>StatusCode</type>
+        <definition>virtual StatusCode ana::IToolScheduler::fillEventObjects</definition>
+        <argsstring>(IEventObjects *&amp;object)=0</argsstring>
+        <name>fillEventObjects</name>
+        <reimplementedby refid="d3/d69/classana_1_1ToolScheduler_1acf82eb859ba46212c9cd072dc528515c">fillEventObjects</reimplementedby>
+        <reimplementedby refid="d9/d9d/classana_1_1OptimizedScheduler_1a29627368834251a00b1b00b5e160a8cb">fillEventObjects</reimplementedby>
+        <param>
+          <type><ref refid="d4/d77/classana_1_1IEventObjects" kindref="compound">IEventObjects</ref> *&amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: fill the event objects structure with the fully corrected objects for the current systematics guarantee: basic failures: tool specific warning: this should only be called once per event </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IToolScheduler.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d10/classana_1_1IToolScheduler_1ac91db6912e1b8ce8852994407003d8b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const std::vector&lt; <ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">CP::SystematicSet</ref> &gt; &amp;</type>
+        <definition>virtual const std::vector&lt;CP::SystematicSet&gt;&amp; ana::IToolScheduler::systematics</definition>
+        <argsstring>() const =0</argsstring>
+        <name>systematics</name>
+        <reimplementedby refid="d3/d69/classana_1_1ToolScheduler_1a96b3219e4f3c0f1bf4936c40b392d093">systematics</reimplementedby>
+        <reimplementedby refid="d9/d9d/classana_1_1OptimizedScheduler_1a3a2e191baff8b84f1f5314f0648a6839">systematics</reimplementedby>
+        <briefdescription>
+<para>the list of systematics configured </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+<simplesect kind="pre"><para>initialize() has been called </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IToolScheduler.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d10/classana_1_1IToolScheduler_1a943a63e1f0b0545f9cdcded1892b8933" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>StatusCode</type>
+        <definition>virtual StatusCode ana::IToolScheduler::setSystematics</definition>
+        <argsstring>(const std::vector&lt; CP::SystematicSet &gt; &amp;val_systematics)=0</argsstring>
+        <name>setSystematics</name>
+        <reimplementedby refid="d3/d69/classana_1_1ToolScheduler_1a69b6432a31324ff2bc18437325c5d88e">setSystematics</reimplementedby>
+        <reimplementedby refid="d9/d9d/classana_1_1OptimizedScheduler_1a82bd46dcee7c1df1bd1924697a7a792b">setSystematics</reimplementedby>
+        <param>
+          <type>const std::vector&lt; <ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">CP::SystematicSet</ref> &gt; &amp;</type>
+          <declname>val_systematics</declname>
+        </param>
+        <briefdescription>
+<para>set the value of <ref refid="d8/d10/classana_1_1IToolScheduler_1ac91db6912e1b8ce8852994407003d8b2" kindref="member">systematics</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>basic </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>systematics configuration error </para></simplesect>
+<simplesect kind="pre"><para>initialize() has been called </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IToolScheduler.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d10/classana_1_1IToolScheduler_1ad862f517492f358eb78445259190269e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="df/d7c/classana_1_1EventData" kindref="compound">EventData</ref></type>
+        <definition>virtual EventData ana::IToolScheduler::getEventData</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getEventData</name>
+        <reimplementedby refid="d3/d69/classana_1_1ToolScheduler_1a097601f95764454202bfc0701a7dbe79">getEventData</reimplementedby>
+        <reimplementedby refid="d9/d9d/classana_1_1OptimizedScheduler_1a0dde1aee3a1f32d2a8327f539dc11ddb">getEventData</reimplementedby>
+        <briefdescription>
+<para>make an <ref refid="df/d7c/classana_1_1EventData" kindref="compound">EventData</ref> object describing the objects created </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>out of memory II </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IToolScheduler.h" line="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>TODO: needs documentation. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10941">
+        <label>ana::OptimizedScheduler</label>
+        <link refid="d9/d9d/classana_1_1OptimizedScheduler"/>
+        <childnode refid="10939" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10940">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="10939">
+        <label>ana::IToolScheduler</label>
+        <link refid="d8/d10/classana_1_1IToolScheduler"/>
+        <childnode refid="10940" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10942">
+        <label>ana::ToolScheduler</label>
+        <link refid="d3/d69/classana_1_1ToolScheduler"/>
+        <childnode refid="10939" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10944">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="10943">
+        <label>ana::IToolScheduler</label>
+        <link refid="d8/d10/classana_1_1IToolScheduler"/>
+        <childnode refid="10944" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IToolScheduler.h" line="34" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IToolScheduler.h" bodystart="33" bodyend="112"/>
+    <listofallmembers>
+      <member refid="d8/d10/classana_1_1IToolScheduler_1ac919278000c93345815d43611f8f54bf" prot="public" virt="pure-virtual"><scope>ana::IToolScheduler</scope><name>addTool</name></member>
+      <member refid="d8/d10/classana_1_1IToolScheduler_1afd6cb82b774e5b2dcf4323247c0a3542" prot="public" virt="non-virtual"><scope>ana::IToolScheduler</scope><name>addTools</name></member>
+      <member refid="d8/d10/classana_1_1IToolScheduler_1ae89effa781846ba84ba38b5f264407d8" prot="public" virt="pure-virtual"><scope>ana::IToolScheduler</scope><name>affectingSystematics</name></member>
+      <member refid="d8/d10/classana_1_1IToolScheduler_1a3eae2e170228e6b81b69cabdc5131605" prot="public" virt="pure-virtual"><scope>ana::IToolScheduler</scope><name>applySystematicVariation</name></member>
+      <member refid="d8/d10/classana_1_1IToolScheduler_1a6267e6fb7b5a007e46d2b594337fc51e" prot="public" virt="pure-virtual"><scope>ana::IToolScheduler</scope><name>fillEventObjects</name></member>
+      <member refid="d8/d10/classana_1_1IToolScheduler_1ad862f517492f358eb78445259190269e" prot="public" virt="pure-virtual"><scope>ana::IToolScheduler</scope><name>getEventData</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1af1aac990b958e92bf38123318d926e67" prot="public" virt="pure-virtual"><scope>ana::IToolScheduler</scope><name>print</name></member>
+      <member refid="d8/d10/classana_1_1IToolScheduler_1a55a1ba97b684cdd9019e352985d1da68" prot="public" virt="pure-virtual"><scope>ana::IToolScheduler</scope><name>recommendedSystematics</name></member>
+      <member refid="d8/d10/classana_1_1IToolScheduler_1a943a63e1f0b0545f9cdcded1892b8933" prot="public" virt="pure-virtual"><scope>ana::IToolScheduler</scope><name>setSystematics</name></member>
+      <member refid="d8/d10/classana_1_1IToolScheduler_1ac91db6912e1b8ce8852994407003d8b2" prot="public" virt="pure-virtual"><scope>ana::IToolScheduler</scope><name>systematics</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1a77b49d52f1f8c272cb665b8309d6082d" prot="public" virt="virtual"><scope>ana::IToolScheduler</scope><name>~IAsgTool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

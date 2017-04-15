@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d0/d57/classCP_1_1PhotonPointingTool" kind="class" prot="public">
+    <compoundname>CP::PhotonPointingTool</compoundname>
+    <basecompoundref refid="de/d06/classCP_1_1IPhotonPointingTool" prot="public" virt="virtual">CP::IPhotonPointingTool</basecompoundref>
+    <basecompoundref refid="d5/dbb/classasg_1_1AsgTool" prot="public" virt="non-virtual">asg::AsgTool</basecompoundref>
+    <includes refid="df/d22/PhotonPointingTool_8h" local="no">PhotonPointingTool.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Function(s) implementing the asg::IAsgTool interface</header>
+      <description><para><anchor id="_1amgrp10701b8a3fd2d74bb818dc23a9d2755e"/> </para></description>
+      <memberdef kind="function" id="d0/d57/classCP_1_1PhotonPointingTool_1acfa71e91c26616425d3d1fdb226c4782" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode CP::PhotonPointingTool::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <reimplements refid="d5/dbb/classasg_1_1AsgTool_1a55b3c013a3e54ae4c1d0d76de8e1e726">initialize</reimplements>
+        <briefdescription>
+<para>Function initialising the tool. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="56" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/Root/PhotonPointingTool.cxx" bodystart="49" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Function(s) implementing the IPhotonPointingTool interface</header>
+      <description><para><anchor id="_1amgrp369566a3f98d72e016b80389a6e55aac"/> </para></description>
+      <memberdef kind="function" id="d0/d57/classCP_1_1PhotonPointingTool_1aa880f1488ee15643d66f6d24f810a505" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode CP::PhotonPointingTool::updatePointingAuxdata</definition>
+        <argsstring>(const xAOD::EgammaContainer &amp;egammas) const </argsstring>
+        <name>updatePointingAuxdata</name>
+        <reimplements refid="de/d06/classCP_1_1IPhotonPointingTool_1adcd54fa85cb95fb0a6fb648c11239b57">updatePointingAuxdata</reimplements>
+        <param>
+          <type>const <ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::EgammaContainer</ref> &amp;</type>
+          <declname>egammas</declname>
+        </param>
+        <briefdescription>
+<para>Add calo and conversion (HPV) pointing variables. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="64" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/Root/PhotonPointingTool.cxx" bodystart="104" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d57/classCP_1_1PhotonPointingTool_1a5b586004f14942557458fdf77ed05f05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::pair&lt; float, float &gt;</type>
+        <definition>std::pair&lt; float, float &gt; CP::PhotonPointingTool::getCaloPointing</definition>
+        <argsstring>(const xAOD::Egamma *egamma) const </argsstring>
+        <name>getCaloPointing</name>
+        <reimplements refid="de/d06/classCP_1_1IPhotonPointingTool_1a29842b96ba87117a9b9179dd2ee43036">getCaloPointing</reimplements>
+        <param>
+          <type>const <ref refid="d4/d2b/classxAOD_1_1Egamma" kindref="compound">xAOD::Egamma</ref> *</type>
+          <declname>egamma</declname>
+        </param>
+        <briefdescription>
+<para>Return calo pointing variables. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="67" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/Root/PhotonPointingTool.cxx" bodystart="142" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d57/classCP_1_1PhotonPointingTool_1ac75ef0c7d4f472bf3b5c422252646274" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::pair&lt; float, float &gt;</type>
+        <definition>std::pair&lt; float, float &gt; CP::PhotonPointingTool::getConvPointing</definition>
+        <argsstring>(const xAOD::Photon *photon) const </argsstring>
+        <name>getConvPointing</name>
+        <reimplements refid="de/d06/classCP_1_1IPhotonPointingTool_1acc934d2ab507e7f1d4d2fcf211275df0">getConvPointing</reimplements>
+        <param>
+          <type>const <ref refid="dc/d42/classxAOD_1_1Photon" kindref="compound">xAOD::Photon</ref> *</type>
+          <declname>photon</declname>
+        </param>
+        <briefdescription>
+<para>Return conversion (HPV) pointing variables. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="70" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/Root/PhotonPointingTool.cxx" bodystart="192" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d57/classCP_1_1PhotonPointingTool_1a1e9a93ab41fcf8b323110fdd4552ae0f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>float</type>
+        <definition>float CP::PhotonPointingTool::getCorrectedEta</definition>
+        <argsstring>(const xAOD::CaloCluster &amp;cluster, float PVz) const </argsstring>
+        <name>getCorrectedEta</name>
+        <reimplements refid="de/d06/classCP_1_1IPhotonPointingTool_1a6fe8c0efaf5a646fbc2597934cd78214">getCorrectedEta</reimplements>
+        <param>
+          <type>const <ref refid="dd/d91/classxAOD_1_1CaloCluster__v1" kindref="compound">xAOD::CaloCluster</ref> &amp;</type>
+          <declname>cluster</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>PVz</declname>
+        </param>
+        <briefdescription>
+<para>Return the corrected eta for primary vertex z-position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="73" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/Root/PhotonPointingTool.cxx" bodystart="263" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d57/classCP_1_1PhotonPointingTool_1a4d4c560e0e5013137f09eb882fe4b803" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode CP::PhotonPointingTool::correctPrimaryVertex</definition>
+        <argsstring>(xAOD::Egamma &amp;egamma, float PVz) const </argsstring>
+        <name>correctPrimaryVertex</name>
+        <reimplements refid="de/d06/classCP_1_1IPhotonPointingTool_1ae91d264110c1d23d9d34ec1e927295c1">correctPrimaryVertex</reimplements>
+        <param>
+          <type><ref refid="d4/d2b/classxAOD_1_1Egamma" kindref="compound">xAOD::Egamma</ref> &amp;</type>
+          <declname>egamma</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>PVz</declname>
+        </param>
+        <briefdescription>
+<para>Correct Egamma vector for primary vertex z-position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="76" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/Root/PhotonPointingTool.cxx" bodystart="273" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d57/classCP_1_1PhotonPointingTool_1a3a781a666696aa7d116f7ba02347467a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>TLorentzVector</type>
+        <definition>TLorentzVector CP::PhotonPointingTool::getCorrectedLV</definition>
+        <argsstring>(const xAOD::Egamma &amp;egamma, float PVz) const </argsstring>
+        <name>getCorrectedLV</name>
+        <reimplements refid="de/d06/classCP_1_1IPhotonPointingTool_1ab41ef9970deebe14beecd30601109c46">getCorrectedLV</reimplements>
+        <param>
+          <type>const <ref refid="d4/d2b/classxAOD_1_1Egamma" kindref="compound">xAOD::Egamma</ref> &amp;</type>
+          <declname>egamma</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>PVz</declname>
+        </param>
+        <briefdescription>
+<para>Get Egamma TLorentzVector corrected for primary vertex z-position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="79" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/Root/PhotonPointingTool.cxx" bodystart="293" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d57/classCP_1_1PhotonPointingTool_1ad0b8a273d50a103768c2493da579ad55" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>float</type>
+        <definition>float CP::PhotonPointingTool::getCorrectedMass</definition>
+        <argsstring>(const xAOD::EgammaContainer &amp;egammas, float PVz) const </argsstring>
+        <name>getCorrectedMass</name>
+        <reimplements refid="de/d06/classCP_1_1IPhotonPointingTool_1a44b15da61079d03af0c0081a4b23fc40">getCorrectedMass</reimplements>
+        <param>
+          <type>const <ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::EgammaContainer</ref> &amp;</type>
+          <declname>egammas</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>PVz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the invariant mass, using corrected Pt/Eta of each object for the given vertex z-position </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="83" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/Root/PhotonPointingTool.cxx" bodystart="315" bodyend="326"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d0/d57/classCP_1_1PhotonPointingTool_1a7df8ed5e67192978ab043136f1800f62" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/d6c/classCP_1_1ShowerDepthTool" kindref="compound">CP::ShowerDepthTool</ref> *</type>
+        <definition>CP::ShowerDepthTool* CP::PhotonPointingTool::m_showerTool</definition>
+        <argsstring></argsstring>
+        <name>m_showerTool</name>
+        <briefdescription>
+<para>Create a proper constructor for <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Tools </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="31" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d57/classCP_1_1PhotonPointingTool_1aa15ff8c7d0c316eda5d19e74fe0405b1" prot="private" static="no" mutable="no">
+        <type>TH1F *</type>
+        <definition>TH1F* CP::PhotonPointingTool::m_zCorrection</definition>
+        <argsstring></argsstring>
+        <name>m_zCorrection</name>
+        <briefdescription>
+<para>Correction histogram. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="34" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d57/classCP_1_1PhotonPointingTool_1a410569a0bb3c6f6cdaa62e6b60adf727" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CP::PhotonPointingTool::m_isMC</definition>
+        <argsstring></argsstring>
+        <name>m_isMC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="45" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d57/classCP_1_1PhotonPointingTool_1a0e734e459eb06229527f25cf1dc75a0b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CP::PhotonPointingTool::m_zOscFileMC</definition>
+        <argsstring></argsstring>
+        <name>m_zOscFileMC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="46" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d57/classCP_1_1PhotonPointingTool_1a386457be3cf1758145bd86619bcc1bd8" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CP::PhotonPointingTool::m_zOscFileData</definition>
+        <argsstring></argsstring>
+        <name>m_zOscFileData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="46" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d0/d57/classCP_1_1PhotonPointingTool_1a3c9a831fff39ee0a6cdcfd6f533ef017" prot="private" static="yes" mutable="no">
+        <type><ref refid="d3/d59/classSG_1_1AuxElement_1_1Decorator" kindref="compound">SG::AuxElement::Decorator</ref>&lt; float &gt;</type>
+        <definition>SG::AuxElement::Decorator&lt; float &gt; CP::PhotonPointingTool::zvertex</definition>
+        <argsstring></argsstring>
+        <name>zvertex</name>
+        <briefdescription>
+<para>Static Decorators. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="37" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d57/classCP_1_1PhotonPointingTool_1a36436fe5c55cfd863639c8ecc07703da" prot="private" static="yes" mutable="no">
+        <type><ref refid="d3/d59/classSG_1_1AuxElement_1_1Decorator" kindref="compound">SG::AuxElement::Decorator</ref>&lt; float &gt;</type>
+        <definition>SG::AuxElement::Decorator&lt; float &gt; CP::PhotonPointingTool::errz</definition>
+        <argsstring></argsstring>
+        <name>errz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="38" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d57/classCP_1_1PhotonPointingTool_1ab33a9625e0b42b5a91f2610cdd996ccb" prot="private" static="yes" mutable="no">
+        <type><ref refid="d3/d59/classSG_1_1AuxElement_1_1Decorator" kindref="compound">SG::AuxElement::Decorator</ref>&lt; float &gt;</type>
+        <definition>SG::AuxElement::Decorator&lt; float &gt; CP::PhotonPointingTool::HPV_zvertex</definition>
+        <argsstring></argsstring>
+        <name>HPV_zvertex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="39" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d57/classCP_1_1PhotonPointingTool_1a6a3e65d704f98b108776f8a4e4c97eeb" prot="private" static="yes" mutable="no">
+        <type><ref refid="d3/d59/classSG_1_1AuxElement_1_1Decorator" kindref="compound">SG::AuxElement::Decorator</ref>&lt; float &gt;</type>
+        <definition>SG::AuxElement::Decorator&lt; float &gt; CP::PhotonPointingTool::HPV_errz</definition>
+        <argsstring></argsstring>
+        <name>HPV_errz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="40" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d0/d57/classCP_1_1PhotonPointingTool_1accf61358863650f692f6ed7d1a13dc74" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CP::PhotonPointingTool::getCorrectedZ</definition>
+        <argsstring>(float zPointing, float etas2) const </argsstring>
+        <name>getCorrectedZ</name>
+        <param>
+          <type>float</type>
+          <declname>zPointing</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>etas2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="44" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/Root/PhotonPointingTool.cxx" bodystart="135" bodyend="139"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d0/d57/classCP_1_1PhotonPointingTool_1a57ced58e09b9e3d2bdc8b427292345f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CP::PhotonPointingTool::PhotonPointingTool</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>PhotonPointingTool</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="49" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/Root/PhotonPointingTool.cxx" bodystart="31" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d57/classCP_1_1PhotonPointingTool_1a8091b9791d2b6d577d89d0223485ef1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>CP::PhotonPointingTool::~PhotonPointingTool</definition>
+        <argsstring>()</argsstring>
+        <name>~PhotonPointingTool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="50" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/Root/PhotonPointingTool.cxx" bodystart="42" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Implementation for the photon pointing tool</para><para>Takes photon shower shape and/or conversion vertex and extrapolates back to beamline</para><para><simplesect kind="author"><para>Christopher Meyer &lt;<ulink url="mailto:chris.meyer@cern.ch">chris.meyer@cern.ch</ulink>&gt; </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="16052">
+        <label>asg::AsgTool</label>
+        <link refid="d5/dbb/classasg_1_1AsgTool"/>
+        <childnode refid="16051" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16051">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="16050">
+        <label>CP::IPhotonPointingTool</label>
+        <link refid="de/d06/classCP_1_1IPhotonPointingTool"/>
+        <childnode refid="16051" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16049">
+        <label>CP::PhotonPointingTool</label>
+        <link refid="d0/d57/classCP_1_1PhotonPointingTool"/>
+        <childnode refid="16050" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16052" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="16057">
+        <label>string</label>
+      </node>
+      <node id="16056">
+        <label>asg::AsgTool</label>
+        <link refid="d5/dbb/classasg_1_1AsgTool"/>
+        <childnode refid="16055" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16055">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="16059">
+        <label>CP::ShowerDepthTool</label>
+        <link refid="d7/d6c/classCP_1_1ShowerDepthTool"/>
+        <childnode refid="16057" relation="usage">
+          <edgelabel>m_configFileName</edgelabel>
+        </childnode>
+      </node>
+      <node id="16058">
+        <label>SG::AuxElement::Decorator&lt; float &gt;</label>
+        <link refid="d3/d59/classSG_1_1AuxElement_1_1Decorator"/>
+      </node>
+      <node id="16054">
+        <label>CP::IPhotonPointingTool</label>
+        <link refid="de/d06/classCP_1_1IPhotonPointingTool"/>
+        <childnode refid="16055" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16053">
+        <label>CP::PhotonPointingTool</label>
+        <link refid="d0/d57/classCP_1_1PhotonPointingTool"/>
+        <childnode refid="16054" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16056" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16057" relation="usage">
+          <edgelabel>m_zOscFileMC</edgelabel>
+          <edgelabel>m_zOscFileData</edgelabel>
+        </childnode>
+        <childnode refid="16058" relation="usage">
+          <edgelabel>HPV_zvertex</edgelabel>
+          <edgelabel>errz</edgelabel>
+          <edgelabel>HPV_errz</edgelabel>
+          <edgelabel>zvertex</edgelabel>
+        </childnode>
+        <childnode refid="16059" relation="usage">
+          <edgelabel>m_showerTool</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" line="24" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonPointingTool.h" bodystart="23" bodyend="87"/>
+    <listofallmembers>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a47f02c756c6d6026d03e0d4d68d82a94" prot="public" virt="non-virtual"><scope>CP::PhotonPointingTool</scope><name>AsgTool</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1a4d4c560e0e5013137f09eb882fe4b803" prot="public" virt="virtual"><scope>CP::PhotonPointingTool</scope><name>correctPrimaryVertex</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1a36436fe5c55cfd863639c8ecc07703da" prot="private" virt="non-virtual"><scope>CP::PhotonPointingTool</scope><name>errz</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1a5b586004f14942557458fdf77ed05f05" prot="public" virt="virtual"><scope>CP::PhotonPointingTool</scope><name>getCaloPointing</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1ac75ef0c7d4f472bf3b5c422252646274" prot="public" virt="virtual"><scope>CP::PhotonPointingTool</scope><name>getConvPointing</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1a1e9a93ab41fcf8b323110fdd4552ae0f" prot="public" virt="virtual"><scope>CP::PhotonPointingTool</scope><name>getCorrectedEta</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1a3a781a666696aa7d116f7ba02347467a" prot="public" virt="virtual"><scope>CP::PhotonPointingTool</scope><name>getCorrectedLV</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1ad0b8a273d50a103768c2493da579ad55" prot="public" virt="virtual"><scope>CP::PhotonPointingTool</scope><name>getCorrectedMass</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1accf61358863650f692f6ed7d1a13dc74" prot="private" virt="non-virtual"><scope>CP::PhotonPointingTool</scope><name>getCorrectedZ</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a5d9d9eae0988784fb6c257e0a2440ca6" prot="public" virt="non-virtual"><scope>CP::PhotonPointingTool</scope><name>getProperty</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1a6a3e65d704f98b108776f8a4e4c97eeb" prot="private" virt="non-virtual"><scope>CP::PhotonPointingTool</scope><name>HPV_errz</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1ab33a9625e0b42b5a91f2610cdd996ccb" prot="private" virt="non-virtual"><scope>CP::PhotonPointingTool</scope><name>HPV_zvertex</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1acfa71e91c26616425d3d1fdb226c4782" prot="public" virt="virtual"><scope>CP::PhotonPointingTool</scope><name>initialize</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1a410569a0bb3c6f6cdaa62e6b60adf727" prot="private" virt="non-virtual"><scope>CP::PhotonPointingTool</scope><name>m_isMC</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1a7df8ed5e67192978ab043136f1800f62" prot="private" virt="non-virtual"><scope>CP::PhotonPointingTool</scope><name>m_showerTool</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1aa15ff8c7d0c316eda5d19e74fe0405b1" prot="private" virt="non-virtual"><scope>CP::PhotonPointingTool</scope><name>m_zCorrection</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1a386457be3cf1758145bd86619bcc1bd8" prot="private" virt="non-virtual"><scope>CP::PhotonPointingTool</scope><name>m_zOscFileData</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1a0e734e459eb06229527f25cf1dc75a0b" prot="private" virt="non-virtual"><scope>CP::PhotonPointingTool</scope><name>m_zOscFileMC</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a3aeba8f7ad5ade0197f5848fe9e4480e" prot="public" virt="non-virtual"><scope>CP::PhotonPointingTool</scope><name>msg_level_name</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1a57ced58e09b9e3d2bdc8b427292345f8" prot="public" virt="non-virtual"><scope>CP::PhotonPointingTool</scope><name>PhotonPointingTool</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1af1aac990b958e92bf38123318d926e67" prot="public" virt="pure-virtual" ambiguityscope="CP::"><scope>CP::PhotonPointingTool</scope><name>print</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1af4cc6ba53b6505045c2866d4e30e821d" prot="public" virt="virtual" ambiguityscope="asg::AsgTool::"><scope>CP::PhotonPointingTool</scope><name>print</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1aa880f1488ee15643d66f6d24f810a505" prot="public" virt="virtual"><scope>CP::PhotonPointingTool</scope><name>updatePointingAuxdata</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1a3c9a831fff39ee0a6cdcfd6f533ef017" prot="private" virt="non-virtual"><scope>CP::PhotonPointingTool</scope><name>zvertex</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1abf22f7aa60258c67b79cf67bf70a3a5b" prot="public" virt="non-virtual"><scope>CP::PhotonPointingTool</scope><name>~AsgTool</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1a77b49d52f1f8c272cb665b8309d6082d" prot="public" virt="virtual"><scope>CP::PhotonPointingTool</scope><name>~IAsgTool</name></member>
+      <member refid="d0/d57/classCP_1_1PhotonPointingTool_1a8091b9791d2b6d577d89d0223485ef1f" prot="public" virt="virtual"><scope>CP::PhotonPointingTool</scope><name>~PhotonPointingTool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

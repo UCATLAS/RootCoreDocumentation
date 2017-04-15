@@ -1,0 +1,372 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d3/d32/PathResolver_8h" kind="file">
+    <compoundname>PathResolver.h</compoundname>
+    <includes refid="d3/d61/AsgMessaging_8h" local="yes">AsgTools/AsgMessaging.h</includes>
+    <includes local="no">string</includes>
+    <includedby refid="d4/df3/corr__HV__EMBPS_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/egammaLayerRecalibTool/Root/corr_HV_EMBPS.cxx</includedby>
+    <includedby refid="df/de0/egammaLayerRecalibTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/egammaLayerRecalibTool/Root/egammaLayerRecalibTool.cxx</includedby>
+    <includedby refid="d5/dbd/egammaMVACalib_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/egammaMVACalib/Root/egammaMVACalib.cxx</includedby>
+    <includedby refid="d1/deb/egammaMVATool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/egammaMVACalib/Root/egammaMVATool.cxx</includedby>
+    <includedby refid="d3/d81/AsgElectronEfficiencyCorrectionTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronEfficiencyCorrection/Root/AsgElectronEfficiencyCorrectionTool.cxx</includedby>
+    <includedby refid="d9/da1/ElectronChargeEfficiencyCorrectionTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronEfficiencyCorrection/Root/ElectronChargeEfficiencyCorrectionTool.cxx</includedby>
+    <includedby refid="d8/dac/e1hg__systematics_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonFourMomentumCorrection/Root/e1hg_systematics.cxx</includedby>
+    <includedby refid="d3/d48/eg__resolution_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonFourMomentumCorrection/Root/eg_resolution.cxx</includedby>
+    <includedby refid="dd/de2/EgammaCalibrationAndSmearingTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonFourMomentumCorrection/Root/EgammaCalibrationAndSmearingTool.cxx</includedby>
+    <includedby refid="d9/dcf/egammaEnergyCorrectionTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonFourMomentumCorrection/Root/egammaEnergyCorrectionTool.cxx</includedby>
+    <includedby refid="df/db1/GainUncertainty_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonFourMomentumCorrection/Root/GainUncertainty.cxx</includedby>
+    <includedby refid="d1/d85/get__MaterialResolutionEffect_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonFourMomentumCorrection/Root/get_MaterialResolutionEffect.cxx</includedby>
+    <includedby refid="d6/d70/AsgElectronChargeIDSelectorTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonSelectorTools/Root/AsgElectronChargeIDSelectorTool.cxx</includedby>
+    <includedby refid="dd/d9e/AsgElectronIsEMSelector_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonSelectorTools/Root/AsgElectronIsEMSelector.cxx</includedby>
+    <includedby refid="d4/de0/AsgElectronLikelihoodTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonSelectorTools/Root/AsgElectronLikelihoodTool.cxx</includedby>
+    <includedby refid="dd/d64/AsgForwardElectronIsEMSelector_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonSelectorTools/Root/AsgForwardElectronIsEMSelector.cxx</includedby>
+    <includedby refid="d0/d04/AsgPhotonIsEMSelector_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonSelectorTools/Root/AsgPhotonIsEMSelector.cxx</includedby>
+    <includedby refid="db/d07/ElectronPhotonShowerShapeFudgeTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonShowerShapeFudgeTool/Root/ElectronPhotonShowerShapeFudgeTool.cxx</includedby>
+    <includedby refid="d1/d6b/TPhotonMCShifterTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonShowerShapeFudgeTool/Root/TPhotonMCShifterTool.cxx</includedby>
+    <includedby refid="d5/d99/GoodRunsListSelectionTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/GoodRunsLists/Root/GoodRunsListSelectionTool.cxx</includedby>
+    <includedby refid="da/d5c/GoodRunsListSelectorTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/GoodRunsLists/src/GoodRunsListSelectorTool.cxx</includedby>
+    <includedby refid="d6/d29/InDetTrackSystematicsTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSystematicsTools/Root/InDetTrackSystematicsTool.cxx</includedby>
+    <includedby refid="de/d4d/IsolationCorrection_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/IsolationCorrections/Root/IsolationCorrection.cxx</includedby>
+    <includedby refid="da/d86/IsolationCorrectionTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/IsolationCorrections/Root/IsolationCorrectionTool.cxx</includedby>
+    <includedby refid="dd/dda/ShowerDepthTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/IsolationCorrections/Root/ShowerDepthTool.cxx</includedby>
+    <includedby refid="d7/d43/TestIsolationCorrections_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/IsolationCorrections/util/TestIsolationCorrections.cxx</includedby>
+    <includedby refid="d0/dbd/IsolationSelectionTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/IsolationSelection/Root/IsolationSelectionTool.cxx</includedby>
+    <includedby refid="d4/dea/EtaJESCorrection_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetCalibTools/Root/EtaJESCorrection.cxx</includedby>
+    <includedby refid="d0/d49/GlobalSequentialCorrection_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetCalibTools/Root/GlobalSequentialCorrection.cxx</includedby>
+    <includedby refid="da/d53/InsituDataCorrection_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetCalibTools/Root/InsituDataCorrection.cxx</includedby>
+    <includedby refid="dd/d4f/JetCalibrationTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetCalibTools/Root/JetCalibrationTool.cxx</includedby>
+    <includedby refid="d1/d4e/JMSCorrection_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetCalibTools/Root/JMSCorrection.cxx</includedby>
+    <includedby refid="d3/dbf/ResidualOffsetCorrection_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetCalibTools/Root/ResidualOffsetCorrection.cxx</includedby>
+    <includedby refid="d5/d2f/JetJvtEfficiency_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetJvtEfficiency/Root/JetJvtEfficiency.cxx</includedby>
+    <includedby refid="df/d37/JetVertexTaggerTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/Root/JetVertexTaggerTool.cxx</includedby>
+    <includedby refid="d5/d81/JetBadChanCorrTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/src/JetBadChanCorrTool.cxx</includedby>
+    <includedby refid="d7/d7d/JERTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/Root/JERTool.cxx</includedby>
+    <includedby refid="d7/de1/BoostedXbbTag_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetSubStructureUtils/Root/BoostedXbbTag.cxx</includedby>
+    <includedby refid="d9/d5c/BosonTag_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetSubStructureUtils/Root/BosonTag.cxx</includedby>
+    <includedby refid="d4/dcc/JetTileCorrectionTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetTileCorrection/Root/JetTileCorrectionTool.cxx</includedby>
+    <includedby refid="d2/def/JetTileCorrectionAlg_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetTileCorrection/src/JetTileCorrectionAlg.cxx</includedby>
+    <includedby refid="de/d91/JetUncertainties_2Root_2Helpers_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetUncertainties/Root/Helpers.cxx</includedby>
+    <includedby refid="de/d61/METSystematicsTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METSystematicsTool.cxx</includedby>
+    <includedby refid="d0/df1/MuonEfficiencyScaleFactors_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonEfficiencyCorrections/Root/MuonEfficiencyScaleFactors.cxx</includedby>
+    <includedby refid="d1/d95/MuonTriggerScaleFactors_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonEfficiencyCorrections/Root/MuonTriggerScaleFactors.cxx</includedby>
+    <includedby refid="d4/d89/MuonCalibrationAndSmearingTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/Root/MuonCalibrationAndSmearingTool.cxx</includedby>
+    <includedby refid="d3/d90/MuonSelectionTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonSelectorTools/Root/MuonSelectionTool.cxx</includedby>
+    <includedby refid="d0/d25/PathResolverDict_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/PathResolver/PathResolverDict.h</includedby>
+    <includedby refid="df/d50/PathResolver_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/Root/PathResolver.cxx</includedby>
+    <includedby refid="dc/d01/PathResolver__test_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/test/PathResolver_test.cxx</includedby>
+    <includedby refid="d7/db4/TPathResolver_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/test/TPathResolver.cxx</includedby>
+    <includedby refid="dd/db9/AsgPhotonEfficiencyCorrectionTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonEfficiencyCorrection/Root/AsgPhotonEfficiencyCorrectionTool.cxx</includedby>
+    <includedby refid="d3/d18/TestxAODPhotonAlg_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonEfficiencyCorrection/util/TestxAODPhotonAlg.cxx</includedby>
+    <includedby refid="d0/dd6/ElectronRemovalTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/Root/ElectronRemovalTool.cxx</includedby>
+    <includedby refid="d6/d7b/PhotonPointingTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/Root/PhotonPointingTool.cxx</includedby>
+    <includedby refid="d8/daf/PhotonVertexSelectionTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/Root/PhotonVertexSelectionTool.cxx</includedby>
+    <includedby refid="d8/d82/PileupReweightingTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PileupReweighting/Root/PileupReweightingTool.cxx</includedby>
+    <includedby refid="da/dd6/PhotonTool_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/PhotonTool.cxx</includedby>
+    <includedby refid="d2/d7b/ParticleScaleFactorTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/ParticleScaleFactorTool.cxx</includedby>
+    <includedby refid="d8/dbf/SUSYCrossSection_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/Root/SUSYCrossSection.cxx</includedby>
+    <includedby refid="df/d2f/SUSYObjDef__xAOD_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/Root/SUSYObjDef_xAOD.cxx</includedby>
+    <includedby refid="d9/d7c/SUSYToolsInit_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/Root/SUSYToolsInit.cxx</includedby>
+    <includedby refid="dd/d4b/ApplySUSYTools_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/src/ApplySUSYTools.cxx</includedby>
+    <includedby refid="de/db8/SUSYToolsTester_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/util/SUSYToolsTester.cxx</includedby>
+    <includedby refid="de/de4/CommonEfficiencyTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/CommonEfficiencyTool.cxx</includedby>
+    <includedby refid="db/d1e/CommonSmearingTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/CommonSmearingTool.cxx</includedby>
+    <includedby refid="d4/d9b/TauEfficiencyTriggerTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauEfficiencyTriggerTool.cxx</includedby>
+    <includedby refid="df/d60/TauOverlappingElectronLLHDecorator_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauOverlappingElectronLLHDecorator.cxx</includedby>
+    <includedby refid="d2/ddd/TauSelectionTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauSelectionTool.cxx</includedby>
+    <includedby refid="d6/df4/TauSmearingRun1Tool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/Root/TauSmearingRun1Tool.cxx</includedby>
+    <includedby refid="d3/dc1/CombinedP4FromRecoTaus_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/Root/CombinedP4FromRecoTaus.cxx</includedby>
+    <includedby refid="da/d3a/TauProcessorTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/Root/TauProcessorTool.cxx</includedby>
+    <includedby refid="d2/df5/TauRecToolBase_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/tauRecTools/Root/TauRecToolBase.cxx</includedby>
+    <includedby refid="df/db1/BTaggingEfficiencyTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBTaggingEfficiency/Root/BTaggingEfficiencyTool.cxx</includedby>
+    <includedby refid="d4/d25/BTaggingSelectionTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBTaggingEfficiency/Root/BTaggingSelectionTool.cxx</includedby>
+    <incdepgraph>
+      <node id="224916">
+        <label>AsgTools/IAsgTool.h</label>
+        <link refid="df/dd4/IAsgTool_8h_source"/>
+        <childnode refid="224910" relation="include">
+        </childnode>
+        <childnode refid="224911" relation="include">
+        </childnode>
+        <childnode refid="224917" relation="include">
+        </childnode>
+        <childnode refid="224918" relation="include">
+        </childnode>
+      </node>
+      <node id="224918">
+        <label>GaudiKernel/IAlgTool.h</label>
+      </node>
+      <node id="224921">
+        <label>AthenaBaseComps/AthMsgStreamMacros.h</label>
+      </node>
+      <node id="224914">
+        <label>AsgTools/MsgLevel.h</label>
+        <link refid="de/d80/MsgLevel_8h"/>
+        <childnode refid="224910" relation="include">
+        </childnode>
+        <childnode refid="224911" relation="include">
+        </childnode>
+        <childnode refid="224915" relation="include">
+        </childnode>
+      </node>
+      <node id="224911">
+        <label>AsgTools/AsgToolsConf.h</label>
+        <link refid="df/db7/AsgToolsConf_8h_source"/>
+      </node>
+      <node id="224910">
+        <label>string</label>
+      </node>
+      <node id="224915">
+        <label>GaudiKernel/IMessageSvc.h</label>
+      </node>
+      <node id="224920">
+        <label>AsgTools/MsgStreamMacros.h</label>
+        <link refid="d3/ded/AsgTools_2AsgTools_2MsgStreamMacros_8h_source"/>
+        <childnode refid="224911" relation="include">
+        </childnode>
+        <childnode refid="224914" relation="include">
+        </childnode>
+        <childnode refid="224921" relation="include">
+        </childnode>
+      </node>
+      <node id="224913">
+        <label>sstream</label>
+      </node>
+      <node id="224919">
+        <label>GaudiKernel/MsgStream.h</label>
+      </node>
+      <node id="224912">
+        <label>AsgTools/MsgStream.h</label>
+        <link refid="d3/d95/AsgTools_2AsgTools_2MsgStream_8h_source"/>
+        <childnode refid="224910" relation="include">
+        </childnode>
+        <childnode refid="224913" relation="include">
+        </childnode>
+        <childnode refid="224911" relation="include">
+        </childnode>
+        <childnode refid="224914" relation="include">
+        </childnode>
+        <childnode refid="224916" relation="include">
+        </childnode>
+        <childnode refid="224919" relation="include">
+        </childnode>
+      </node>
+      <node id="224917">
+        <label>AsgTools/AsgToolMacros.h</label>
+        <link refid="d1/d68/AsgToolMacros_8h_source"/>
+      </node>
+      <node id="224908">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/PathResolver/PathResolver.h</label>
+        <link refid="PathResolver.h"/>
+        <childnode refid="224909" relation="include">
+        </childnode>
+        <childnode refid="224910" relation="include">
+        </childnode>
+      </node>
+      <node id="224909">
+        <label>AsgTools/AsgMessaging.h</label>
+        <link refid="d3/d61/AsgMessaging_8h_source"/>
+        <childnode refid="224910" relation="include">
+        </childnode>
+        <childnode refid="224911" relation="include">
+        </childnode>
+        <childnode refid="224912" relation="include">
+        </childnode>
+        <childnode refid="224920" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="224923">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/PathResolver/PathResolverDict.h</label>
+        <link refid="d0/d25/PathResolverDict_8h_source"/>
+      </node>
+      <node id="224922">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/PathResolver/PathResolver.h</label>
+        <link refid="PathResolver.h"/>
+        <childnode refid="224923" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d1/d31/classPathResolver" prot="public">PathResolver</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d3/d32/PathResolver_8h_1a39f9251e4a7071fae28d13c6b7e072e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string PathResolverFindXMLFile</definition>
+        <argsstring>(const std::string &amp;logical_file_name)</argsstring>
+        <name>PathResolverFindXMLFile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>logical_file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/PathResolver/PathResolver.h" line="124" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/Root/PathResolver.cxx" bodystart="296" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d32/PathResolver_8h_1a690b4149f3ab044afec526820c3b2de5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string PathResolverFindDataFile</definition>
+        <argsstring>(const std::string &amp;logical_file_name)</argsstring>
+        <name>PathResolverFindDataFile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>logical_file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/PathResolver/PathResolver.h" line="125" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/Root/PathResolver.cxx" bodystart="301" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d32/PathResolver_8h_1a68a30a63942c53a2f01dcd5e002dbbaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string PathResolverFindCalibFile</definition>
+        <argsstring>(const std::string &amp;logical_file_name)</argsstring>
+        <name>PathResolverFindCalibFile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>logical_file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/PathResolver/PathResolver.h" line="126" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/Root/PathResolver.cxx" bodystart="355" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d32/PathResolver_8h_1a4300fb9dbfcb61db0f5363a7dc9be35a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string PathResolverFindCalibDirectory</definition>
+        <argsstring>(const std::string &amp;logical_file_name)</argsstring>
+        <name>PathResolverFindCalibDirectory</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>logical_file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/PathResolver/PathResolver.h" line="127" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/Root/PathResolver.cxx" bodystart="356" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d32/PathResolver_8h_1a985e5effebd8fe0d1270c36d4d678d7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PathResolverSetOutputLevel</definition>
+        <argsstring>(int lvl)</argsstring>
+        <name>PathResolverSetOutputLevel</name>
+        <param>
+          <type>int</type>
+          <declname>lvl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/PathResolver/PathResolver.h" line="128" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/Root/PathResolver.cxx" bodystart="357" bodyend="357"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>PATHRESOLVER_PATHRESOLVER_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PATHRESOLVER_PATHRESOLVER_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AsgTools/AsgMessaging.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="d1/d31/classPathResolver" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d1/d31/classPathResolver" kindref="compound">PathResolver</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Ok,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>EnvironmentVariableUndefined,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>UnknownDirectory</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>SearchPathStatus;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LocalSearch,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>RecursiveSearch</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>SearchType;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PR_regular_file,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PR_directory</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/>}<sp/>PR_file_type;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><ref refid="d1/d31/classPathResolver" kindref="compound">PathResolver</ref>();<sp/></highlight><highlight class="comment">//need<sp/>a<sp/>constructor<sp/>to<sp/>link<sp/>the<sp/>dictionary<sp/>library<sp/>with<sp/>the<sp/>implementation<sp/>library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="d1/d31/classPathResolver_1a8c14195667dec1081a3955bbc0d0a87b" kindref="member">find_file</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>logical_file_name,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>search_path,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SearchType<sp/>search_type<sp/>=<sp/>LocalSearch);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="d1/d31/classPathResolver_1a4cae29de199b3df55539307a0ce129e0" kindref="member">find_file_from_list</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>logical_file_name,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>search_list,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SearchType<sp/>search_type<sp/>=<sp/>LocalSearch);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="d1/d31/classPathResolver_1a56011f58f651155aebe71c020ae3e3df" kindref="member">find_directory</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>logical_file_name,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>search_path,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SearchType<sp/>search_type<sp/>=<sp/>LocalSearch);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="d1/d31/classPathResolver_1a69d69df0f89c10619f9fa37352811b04" kindref="member">find_directory_from_list</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>logical_file_name,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>search_list,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SearchType<sp/>search_type<sp/>=<sp/>LocalSearch);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SearchPathStatus<sp/><ref refid="d1/d31/classPathResolver_1ae28c4774cb65f12147decd3969755a65" kindref="member">check_search_path</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>search_path);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/>find_calib_file(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>logical_file_name);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/>find_calib_directory(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>logical_file_name);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setOutputLevel(MSG::Level<sp/>level);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/>FindCalibFile(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>logical_file_name)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>find_calib_file(logical_file_name);<sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/>FindCalibDirectory(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>logical_file_name)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>find_calib_directory(logical_file_name);<sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetOutputLevel(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lvl)<sp/>{<sp/>setOutputLevel(MSG::Level(lvl));<sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>PR_find(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>logical_file_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>search_list,<sp/>PR_file_type<sp/>file_type,<sp/>SearchType<sp/>search_type,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string&amp;<sp/>result<sp/>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_setLevel;<sp/></highlight><highlight class="comment">//flag<sp/>to<sp/>say<sp/>if<sp/>the<sp/>msg<sp/>level<sp/>has<sp/>been<sp/>set.<sp/>This<sp/>is<sp/>so<sp/>we<sp/>can<sp/>default<sp/>to<sp/>info</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>msgLvl(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MSG::Level<sp/>lvl<sp/>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>asgMsg().<ref refid="d1/d97/classasg_1_1AsgMessaging_1af52f582970fc09501ead498c285ebb32" kindref="member">msgLvl</ref>(lvl);<sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>MsgStream&amp;<sp/>msg()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>asgMsg().<ref refid="d1/d97/classasg_1_1AsgMessaging_1ade3c4b8227d4dd544df9b5aee53363c3" kindref="member">msg</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>MsgStream&amp;<sp/>msg(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MSG::Level<sp/>lvl<sp/>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>asgMsg().<ref refid="d1/d97/classasg_1_1AsgMessaging_1ade3c4b8227d4dd544df9b5aee53363c3" kindref="member">msg</ref>(lvl);<sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="d1/d97/classasg_1_1AsgMessaging" kindref="compound">asg::AsgMessaging</ref>&amp;<sp/>asgMsg();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">std::string<sp/>PathResolverFindXMLFile<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>logical_file_name);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">std::string<sp/>PathResolverFindDataFile<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>logical_file_name);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">std::string<sp/>PathResolverFindCalibFile<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>logical_file_name);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">std::string<sp/>PathResolverFindCalibDirectory<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>logical_file_name);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PathResolverSetOutputLevel(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lvl);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PathResolver/PathResolver/PathResolver.h"/>
+  </compounddef>
+</doxygen>

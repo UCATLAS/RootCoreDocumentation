@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dc/d79/APWeightHist_8cxx" kind="file">
+    <compoundname>APWeightHist.cxx</compoundname>
+    <includes refid="dc/dba/APWeightHist_8h" local="yes">ReweightUtils/APWeightHist.h</includes>
+    <includes refid="d5/d5c/APWeightEntry_8h" local="yes">ReweightUtils/APWeightEntry.h</includes>
+    <includes refid="de/df3/MathTools_8h" local="yes">ReweightUtils/MathTools.h</includes>
+    <includes local="no">cmath</includes>
+    <includes local="yes">TF1.h</includes>
+    <includes local="yes">TGraphErrors.h</includes>
+    <includes local="yes">TGraphAsymmErrors.h</includes>
+    <incdepgraph>
+      <node id="261653">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightHist.cxx</label>
+        <link refid="APWeightHist.cxx"/>
+        <childnode refid="261654" relation="include">
+        </childnode>
+        <childnode refid="261657" relation="include">
+        </childnode>
+        <childnode refid="261659" relation="include">
+        </childnode>
+        <childnode refid="261660" relation="include">
+        </childnode>
+        <childnode refid="261661" relation="include">
+        </childnode>
+        <childnode refid="261662" relation="include">
+        </childnode>
+        <childnode refid="261663" relation="include">
+        </childnode>
+      </node>
+      <node id="261660">
+        <label>cmath</label>
+      </node>
+      <node id="261655">
+        <label>TH1D.h</label>
+      </node>
+      <node id="261657">
+        <label>ReweightUtils/APWeightEntry.h</label>
+        <link refid="d5/d5c/APWeightEntry_8h_source"/>
+        <childnode refid="261658" relation="include">
+        </childnode>
+      </node>
+      <node id="261656">
+        <label>string</label>
+      </node>
+      <node id="261661">
+        <label>TF1.h</label>
+      </node>
+      <node id="261663">
+        <label>TGraphAsymmErrors.h</label>
+      </node>
+      <node id="261658">
+        <label>Rtypes.h</label>
+      </node>
+      <node id="261662">
+        <label>TGraphErrors.h</label>
+      </node>
+      <node id="261654">
+        <label>ReweightUtils/APWeightHist.h</label>
+        <link refid="dc/dba/APWeightHist_8h_source"/>
+        <childnode refid="261655" relation="include">
+        </childnode>
+        <childnode refid="261656" relation="include">
+        </childnode>
+      </node>
+      <node id="261659">
+        <label>ReweightUtils/MathTools.h</label>
+        <link refid="de/df3/MathTools_8h_source"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="dc/d79/APWeightHist_8cxx_1af5fda6d6a8af855b8175c415a48e0909" prot="public" static="no">
+        <name>APReweight_cxx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightHist.cxx" line="1" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightHist.cxx" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#define<sp/>APReweight_cxx</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;ReweightUtils/APWeightHist.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ReweightUtils/APWeightEntry.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ReweightUtils/MathTools.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TF1.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TGraphErrors.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TGraphAsymmErrors.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//ClassImp(APWeightHist)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="de/d5f/classAPWeightHist_1a6a9602d3f1347aec8ef6a5e80766b479" kindref="member">APWeightHist::APWeightHist</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*title,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_bins,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x_min,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x_max)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>:<sp/>TH1D(name,<sp/>title,<sp/>n_bins,<sp/>x_min,<sp/>x_max),</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>_prec(0)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>_graph_stat<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TGraphAsymmErrors();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>_graph_stat-&gt;GetXaxis()-&gt;SetTitle(GetXaxis()-&gt;GetTitle());</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>_graph_stat-&gt;GetYaxis()-&gt;SetTitle(GetYaxis()-&gt;GetTitle());</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>_graph_syst<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TGraphErrors();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>_graph_syst-&gt;GetXaxis()-&gt;SetTitle(GetXaxis()-&gt;GetTitle());</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>_graph_syst-&gt;GetYaxis()-&gt;SetTitle(GetYaxis()-&gt;GetTitle());</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>_binned_weights<sp/>=<sp/>vector&lt;<sp/>vector&lt;<sp/>APWeightEntry*<sp/>&gt;<sp/>&gt;(n_bins);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>Sumw2();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>fSumSys2<sp/>=<sp/>vector&lt;<sp/>double<sp/>&gt;(n_bins,<sp/>0.);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>_computed_entries<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="de/d5f/classAPWeightHist_1a6a9602d3f1347aec8ef6a5e80766b479" kindref="member">APWeightHist::APWeightHist</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>:<sp/>_graph_stat(0),</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>_graph_syst(0),</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>_prec(0)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>_computed_entries<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="de/d5f/classAPWeightHist_1aa41db4eb7ca1f403c84fe3fe2ddcf11c" kindref="member">APWeightHist::~APWeightHist</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="de/d5f/classAPWeightHist_1a52ca90798eba0f1eb173bf8b2f86488a" kindref="member">APWeightHist::Fill</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>*<sp/>weight)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>if<sp/>(fBuffer)<sp/>return<sp/>BufferFill(value,w);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>w<sp/>=<sp/>weight-&gt;<ref refid="d1/d16/classAPWeightEntry_1aecea157989c5ac69807ad746d06d81ba" kindref="member">GetExpectancy</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bin<sp/>=<sp/>fXaxis.FindBin(value);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>fEntries++;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>AddBinContent(bin,<sp/>w);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fSumw2.fN)<sp/>fSumw2.fArray[bin]<sp/>+=<sp/>w<sp/>*<sp/>w;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bin<sp/>==<sp/>0<sp/>||<sp/>bin<sp/>&gt;<sp/>fXaxis.GetNbins())<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!fgStatOverflows)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>Double_t<sp/>z<sp/>=<sp/>(w<sp/>&gt;<sp/>0<sp/>?<sp/>w<sp/>:<sp/>-w);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>fTsumw<sp/>+=<sp/>z;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>fTsumw2<sp/>+=<sp/>z*z;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>fTsumwx<sp/>+=<sp/>z*value;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>fTsumwx2<sp/>+=<sp/>z<sp/>*<sp/>value*value;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>(_binned_weights[bin<sp/>-<sp/>1]).push_back(weight);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>fSumw2.fArray[bin]<sp/>+=<sp/>weight-&gt;<ref refid="d1/d16/classAPWeightEntry_1a7873d2fb9e335c9db26044f794824fea" kindref="member">GetVariance</ref>()<sp/>+<sp/>z*z;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>fSumSys2[bin<sp/>-<sp/>1]<sp/>+=<sp/>weight-&gt;<ref refid="d1/d16/classAPWeightEntry_1afed5fd4f9ffad70fa3623c0677dbf770" kindref="member">GetSysUncert2</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bin;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5f/classAPWeightHist_1a50cf9cff7789e9fe96ea50426fbe6d1f" kindref="member">APWeightHist::ComputeGraph</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prec)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0,<sp/>I<sp/>=<sp/>_graph_stat-&gt;GetN();<sp/>i<sp/>&lt;<sp/>I;<sp/>++i)<sp/>_graph_stat-&gt;RemovePoint(i);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0,<sp/>I<sp/>=<sp/>_graph_syst-&gt;GetN();<sp/>i<sp/>&lt;<sp/>I;<sp/>++i)<sp/>_graph_syst-&gt;RemovePoint(i);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>vector&lt;<sp/>TH1D*<sp/>&gt;<sp/>original_dists<sp/>=<sp/>vector&lt;<sp/>TH1D*<sp/>&gt;(fXaxis.GetNbins());</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>_bin_dists<sp/>=<sp/>vector&lt;<sp/>TH1D*<sp/>&gt;(fXaxis.GetNbins());</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>point_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>fXaxis.GetNbins();<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Create<sp/>Poisson<sp/>distributions<sp/>for<sp/>original<sp/>histogram.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>unweighted_content<sp/>=<sp/>(double)<sp/>(_binned_weights[j]).size();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sig_low_o<sp/>=<sp/>(max((</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)<sp/>0.0,<sp/>(unweighted_content<sp/>-<sp/>5<sp/>*<sp/>sqrt(unweighted_content))));</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sig_high_o<sp/>=<sp/>(unweighted_content<sp/>+<sp/>5<sp/>*<sp/>sqrt(unweighted_content));</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>step<sp/>=<sp/>(sig_high_o<sp/>-<sp/>sig_low_o)<sp/>/<sp/>1000.;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>original_dists[j]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH1D(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>1000,<sp/>sig_low_o,<sp/>sig_high_o);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bin_no<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>curr_fact<sp/>=<sp/>ln_factorialApp((_binned_weights[j]).size());</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lambda<sp/>=<sp/>sig_low_o;<sp/>lambda<sp/>&lt;<sp/>sig_high_o;<sp/>lambda<sp/>+=<sp/>step)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>exp(-lambda<sp/>+<sp/>unweighted_content<sp/>*<sp/>log(lambda)<sp/>-<sp/>curr_fact);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>!=<sp/>value)<sp/>value<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(original_dists[j])-&gt;SetBinContent(bin_no,<sp/>value);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>++bin_no;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>(original_dists[j])-&gt;Scale(1.<sp/>/<sp/>(original_dists[j])-&gt;GetSum());</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>old_mode<sp/>=<sp/>(original_dists[j])-&gt;GetBinCenter((original_dists[j])-&gt;GetMaximumBin());</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Create<sp/>different<sp/>final<sp/>sum<sp/>of<sp/>weights<sp/>for<sp/>this<sp/>bin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>bin_sumw(prec,<sp/>0.);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>max_value<sp/>=<sp/>1.e-100;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>min_value<sp/>=<sp/>1.e100;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(vector&lt;double&gt;::iterator<sp/>it_hist<sp/>=<sp/>bin_sumw.begin(),<sp/>it_histE<sp/>=<sp/>bin_sumw.end();<sp/>it_hist<sp/>!=<sp/>it_histE;<sp/>++it_hist)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(vector&lt;APWeightEntry*&gt;::iterator<sp/>it_func<sp/>=<sp/>(_binned_weights[j]).begin(),<sp/>it_funcE<sp/>=<sp/>(_binned_weights[j]).end();<sp/>it_func<sp/>!=<sp/>it_funcE;<sp/>++it_func)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*it_hist<sp/>+=<sp/>(*it_func)-&gt;GetRandom();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cur_val<sp/>=<sp/>*it_hist;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cur_val<sp/>&lt;<sp/>min_value)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>min_value<sp/>=<sp/>cur_val;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cur_val<sp/>&gt;<sp/>max_value)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>max_value<sp/>=<sp/>cur_val;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Create<sp/>final<sp/>distribution<sp/>for<sp/>this<sp/>bin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>TH1D*<sp/>scaled_hist_l<sp/>=<sp/>(TH1D*)<sp/>(original_dists[j])-&gt;Clone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>TH1D*<sp/>scaled_hist_h<sp/>=<sp/>(TH1D*)<sp/>(original_dists[j])-&gt;Clone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale<sp/>=<sp/>min_value<sp/>/<sp/>old_mode;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>scaled_hist_l-&gt;GetXaxis()-&gt;SetLimits(scale<sp/>*<sp/>sig_low_o,<sp/>scale<sp/>*<sp/>sig_high_o);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>scale<sp/>=<sp/>max_value<sp/>/<sp/>old_mode;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>scaled_hist_h-&gt;GetXaxis()-&gt;SetLimits(scale<sp/>*<sp/>sig_low_o,<sp/>scale<sp/>*<sp/>sig_high_o);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>quant[1];</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>prob[1]<sp/>=<sp/>{0.001};</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>scaled_hist_l-&gt;GetQuantiles(1,<sp/>quant,<sp/>prob);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sig_low<sp/>=<sp/>quant[0];</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>prob[0]<sp/>=<sp/>0.999;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>scaled_hist_h-&gt;GetQuantiles(1,<sp/>quant,<sp/>prob);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sig_high<sp/>=<sp/>quant[0];</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>_bin_dists[j]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH1D(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>1000,<sp/>sig_low,<sp/>sig_high);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//fill<sp/>final<sp/>distribution<sp/>for<sp/>this<sp/>bin<sp/>with<sp/>scaled/weighted<sp/>Poisson<sp/>distributions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(unweighted_content<sp/>&gt;<sp/>0.)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>prec;<sp/>++k)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>new_val<sp/>=<sp/>bin_sumw[k];</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TH1D*<sp/>scaled_hist<sp/>=<sp/>(TH1D*)<sp/>(original_dists[j])-&gt;Clone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>temp_scale<sp/>=<sp/>new_val<sp/>/<sp/>old_mode;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scaled_hist-&gt;GetXaxis()-&gt;SetLimits(temp_scale<sp/>*<sp/>sig_low_o,<sp/>temp_scale<sp/>*<sp/>sig_high_o);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l<sp/>=<sp/>1;<sp/>l<sp/>&lt;<sp/>1001;<sp/>++l)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(_bin_dists[j])-&gt;AddBinContent(l,<sp/>scaled_hist-&gt;GetBinContent(scaled_hist-&gt;FindBin((_bin_dists[j])-&gt;GetBinCenter(l))));</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>scaled_hist;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>local_value<sp/>=<sp/>sig_low<sp/>+<sp/>(_bin_dists[j])-&gt;GetMaximumBin()<sp/>*<sp/>((sig_high<sp/>-<sp/>sig_low)<sp/>/<sp/>1000.);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_graph_stat-&gt;SetPoint(point_count,<sp/>(GetXaxis()-&gt;GetXmin()<sp/>+<sp/>j<sp/>*<sp/>GetBinWidth(j<sp/>+<sp/>1)<sp/>+<sp/>GetBinWidth(j<sp/>+<sp/>1)<sp/>/<sp/>2),<sp/>local_value);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_graph_syst-&gt;SetPoint(point_count,<sp/>(GetXaxis()-&gt;GetXmin()<sp/>+<sp/>j<sp/>*<sp/>GetBinWidth(j<sp/>+<sp/>1)<sp/>+<sp/>GetBinWidth(j<sp/>+<sp/>1)<sp/>/<sp/>2),<sp/>local_value);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>quantile[<sp/>2<sp/>];</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>conf[<sp/>2<sp/>]<sp/>=<sp/>{0.1585,<sp/>0.8415};</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(_bin_dists[j])-&gt;GetQuantiles(2,<sp/>quantile,<sp/>conf);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_graph_stat-&gt;SetPointError(point_count,<sp/>GetBinWidth(j<sp/>+<sp/>1)<sp/>/<sp/>2,<sp/>GetBinWidth(j<sp/>+<sp/>1)<sp/>/<sp/>2,<sp/>local_value<sp/>-<sp/>quantile[0],<sp/>quantile[1]<sp/>-<sp/>local_value);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_graph_syst-&gt;SetPointError(point_count,<sp/>GetBinWidth(j<sp/>+<sp/>1)<sp/>/<sp/>2,<sp/>local_value<sp/>*<sp/>(sqrt(fSumSys2[j])<sp/>/<sp/>GetBinContent(j<sp/>+<sp/>1)));</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>++point_count;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>_computed_entries<sp/>=<sp/>fEntries;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">TGraphAsymmErrors*<sp/><ref refid="de/d5f/classAPWeightHist_1ae4fe6d735def417539ae213ab1115c71" kindref="member">APWeightHist::GetGraphStatUncert</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>autocompute)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(autocompute<sp/>&amp;&amp;<sp/>fEntries<sp/>&gt;<sp/>_computed_entries)<sp/><ref refid="de/d5f/classAPWeightHist_1a50cf9cff7789e9fe96ea50426fbe6d1f" kindref="member">ComputeGraph</ref>();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_graph_stat;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">TGraphErrors*<sp/><ref refid="de/d5f/classAPWeightHist_1aeab20b4847d23fa1735007b073d281a9" kindref="member">APWeightHist::GetGraphSystUncert</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>simple,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>autocompute)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(simple)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0,<sp/>I<sp/>=<sp/>_graph_syst-&gt;GetN();<sp/>i<sp/>&lt;<sp/>I;<sp/>++i)<sp/>_graph_syst-&gt;RemovePoint(i);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>point_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>fXaxis.GetNbins();<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((_binned_weights[j]).size()<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_graph_syst-&gt;SetPoint(point_count,<sp/>(GetXaxis()-&gt;GetXmin()<sp/>+<sp/>j<sp/>*<sp/>GetBinWidth(j<sp/>+<sp/>1)<sp/>+<sp/>GetBinWidth(j<sp/>+<sp/>1)<sp/>/<sp/>2),<sp/>GetBinContent(j<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_graph_syst-&gt;SetPointError(point_count,<sp/>GetBinWidth(j<sp/>+<sp/>1)<sp/>/<sp/>2,<sp/>sqrt(fSumSys2[j]));</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++point_count;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_graph_syst;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(autocompute<sp/>&amp;&amp;<sp/>fEntries<sp/>&gt;<sp/>_computed_entries)<sp/><ref refid="de/d5f/classAPWeightHist_1a50cf9cff7789e9fe96ea50426fbe6d1f" kindref="member">ComputeGraph</ref>();</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_graph_syst;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal">TH1D*<sp/>APWeightHist::GetBinPDF(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bin,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>autocompute)<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(autocompute<sp/>&amp;&amp;<sp/>fEntries<sp/>&gt;<sp/>_computed_entries)<sp/><ref refid="de/d5f/classAPWeightHist_1a50cf9cff7789e9fe96ea50426fbe6d1f" kindref="member">ComputeGraph</ref>();</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_bin_dists[bin<sp/>-<sp/>1];</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightHist.cxx"/>
+  </compounddef>
+</doxygen>

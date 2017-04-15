@@ -1,0 +1,906 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dc/d42/classSG_1_1IAuxStoreHolder" kind="class" prot="public">
+    <compoundname>SG::IAuxStoreHolder</compoundname>
+    <derivedcompoundref refid="de/d65/classxAOD_1_1AuxContainerBase" prot="public" virt="non-virtual">xAOD::AuxContainerBase</derivedcompoundref>
+    <derivedcompoundref refid="d7/d18/classxAOD_1_1AuxInfoBase" prot="public" virt="non-virtual">xAOD::AuxInfoBase</derivedcompoundref>
+    <derivedcompoundref refid="d5/df0/classxAOD_1_1ShallowAuxContainer" prot="public" virt="non-virtual">xAOD::ShallowAuxContainer</derivedcompoundref>
+    <includes refid="d7/dab/IAuxStoreHolder_8h" local="no">IAuxStoreHolder.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="dc/d42/classSG_1_1IAuxStoreHolder_1a52b405d522a75932698443c3f01611f9" prot="public" static="no">
+        <name>AuxStoreType</name>
+        <enumvalue id="dc/d42/classSG_1_1IAuxStoreHolder_1a52b405d522a75932698443c3f01611f9afb6416cb757f8628e0383b707c99b19a" prot="public">
+          <name>AST_ObjectStore</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>The store describes a single object. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d42/classSG_1_1IAuxStoreHolder_1a52b405d522a75932698443c3f01611f9a94fd1895e790e358290b074ea49edbe2" prot="public">
+          <name>AST_ContainerStore</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>The store describes a container. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type of the auxiliary store</para><para>In the <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> EDM we use auxiliary store objects in some cases to describe a single object, and in most cases to describe a container of objects. This enumeration declares which type the object implementing this interface is. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainersInterfaces/AthContainersInterfaces/IAuxStoreHolder.h" line="60" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainersInterfaces/AthContainersInterfaces/IAuxStoreHolder.h" bodystart="60" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/d42/classSG_1_1IAuxStoreHolder_1a51489d2a5109fe92f83a8f34ff89c57b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual SG::IAuxStoreHolder::~IAuxStoreHolder</definition>
+        <argsstring>()</argsstring>
+        <name>~IAuxStoreHolder</name>
+        <briefdescription>
+<para>Virtual destructor to make vtable happy... </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainersInterfaces/AthContainersInterfaces/IAuxStoreHolder.h" line="35" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainersInterfaces/AthContainersInterfaces/IAuxStoreHolder.h" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d42/classSG_1_1IAuxStoreHolder_1aea3c4b6aa04dc1581af2c77562adb90d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SG::IAuxStoreHolder::setStore</definition>
+        <argsstring>(IAuxStore *store)=0</argsstring>
+        <name>setStore</name>
+        <reimplementedby refid="d5/df0/classxAOD_1_1ShallowAuxContainer_1a0242687730783fb2e07001f5a1a2c6fa">setStore</reimplementedby>
+        <reimplementedby refid="d7/d18/classxAOD_1_1AuxInfoBase_1a921da25b6e8e05a6c0cea0d87c95fef7">setStore</reimplementedby>
+        <reimplementedby refid="de/d65/classxAOD_1_1AuxContainerBase_1a73e7691d63ed2168a6dc034882e0501b">setStore</reimplementedby>
+        <param>
+          <type><ref refid="dc/d05/classSG_1_1IAuxStore" kindref="compound">IAuxStore</ref> *</type>
+          <declname>store</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Give an auxiliary store object to the holder object</para><para>The purpose of this function is to give an alternate store object to this object instead of the one it uses normally.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>store</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an object implementing direct ROOT I/O </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainersInterfaces/AthContainersInterfaces/IAuxStoreHolder.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d42/classSG_1_1IAuxStoreHolder_1ae8a47c0d7ed7325508cb94ca3570a5cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="dc/d05/classSG_1_1IAuxStore" kindref="compound">IAuxStore</ref> *</type>
+        <definition>virtual IAuxStore* SG::IAuxStoreHolder::getStore</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getStore</name>
+        <reimplementedby refid="d5/df0/classxAOD_1_1ShallowAuxContainer_1a81da11338e21afe30fcb3692a23484ef">getStore</reimplementedby>
+        <reimplementedby refid="d7/d18/classxAOD_1_1AuxInfoBase_1a0cb2310ab1bb2637da6a64346a28800c">getStore</reimplementedby>
+        <reimplementedby refid="de/d65/classxAOD_1_1AuxContainerBase_1a95c2ba90ffb73ba97cc201f7ee161d97">getStore</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the pointer to the store object currently in use</para><para>There&apos;s not much use case for this function yet, but it makes the interface complete at least. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainersInterfaces/AthContainersInterfaces/IAuxStoreHolder.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d42/classSG_1_1IAuxStoreHolder_1a5cbc4fb29e1ed8c561da079455790a24" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="dc/d42/classSG_1_1IAuxStoreHolder_1a52b405d522a75932698443c3f01611f9" kindref="member">AuxStoreType</ref></type>
+        <definition>virtual AuxStoreType SG::IAuxStoreHolder::getStoreType</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getStoreType</name>
+        <reimplementedby refid="de/def/classxAOD_1_1ShallowAuxInfo_1ace9da9d92c329a4533ec4fcdae814210">getStoreType</reimplementedby>
+        <reimplementedby refid="d5/df0/classxAOD_1_1ShallowAuxContainer_1a097701d81165b0b6b33bcde1bd249a47">getStoreType</reimplementedby>
+        <reimplementedby refid="d7/d18/classxAOD_1_1AuxInfoBase_1a6f7f2aab9d0a45cb40bd5e829f97167c">getStoreType</reimplementedby>
+        <reimplementedby refid="de/d65/classxAOD_1_1AuxContainerBase_1a39e74adfd119e834ec218f897d790cfb">getStoreType</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the type of the store object</para><para><simplesect kind="see"><para><ref refid="dc/d42/classSG_1_1IAuxStoreHolder_1a52b405d522a75932698443c3f01611f9" kindref="member">AuxStoreType</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainersInterfaces/AthContainersInterfaces/IAuxStoreHolder.h" line="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface for objects taking part in direct ROOT I/O. </para>    </briefdescription>
+    <detaileddescription>
+<para>This interface needs to be implemented by classes that serve as auxiliary containers that we want to use in our EDM directly. It allows the I/O infrastructure to give a store object to the object implementing this interface. At that point the object given to this interface will be the one doing the ROOT I/O for the &quot;dynamic&quot; auxiliary variables.</para><para>Currently there&apos;s a single implementation of this, &quot;xAODCore/AuxContainerBase.h&quot;, but we may want to have other implementations later on as well.</para><para><simplesect kind="author"><para>Attila Krasznahorkay &lt;<ulink url="mailto:Attila.Krasznahorkay@cern.ch">Attila.Krasznahorkay@cern.ch</ulink>&gt; </para><simplesectsep/><para>Marcin Nowak &lt;<ulink url="mailto:Marcin.Nowak@cern.ch">Marcin.Nowak@cern.ch</ulink>&gt;</para></simplesect>
+<simplesect kind="rcs"><title>Revision</title><para>570883 </para></simplesect>
+<simplesect kind="rcs"><title>Date</title><para>2013-11-16 19:47:55 +0100 (Sat, 16 Nov 2013) </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="9016">
+        <label>xAOD::TauJetAuxContainer_v1</label>
+        <link refid="d0/d6a/classxAOD_1_1TauJetAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9017">
+        <label>xAOD::TauJetAuxContainer_v2</label>
+        <link refid="d3/d84/classxAOD_1_1TauJetAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9063">
+        <label>xAOD::ShallowAuxInfo</label>
+        <link refid="de/def/classxAOD_1_1ShallowAuxInfo"/>
+        <childnode refid="9062" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9052">
+        <label>xAOD::AuxInfoBase</label>
+        <link refid="d7/d18/classxAOD_1_1AuxInfoBase"/>
+        <childnode refid="8935" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9049">
+        <label>xAOD::TruthVertexAuxContainer_v1</label>
+        <link refid="db/d75/classxAOD_1_1TruthVertexAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9050">
+        <label>xAOD::VertexAuxContainer_v1</label>
+        <link refid="df/d95/classxAOD_1_1VertexAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9030">
+        <label>xAOD::TriggerTowerAuxContainer_v1</label>
+        <link refid="d0/d37/classxAOD_1_1TriggerTowerAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9031">
+        <label>xAOD::TriggerTowerAuxContainer_v2</label>
+        <link refid="d2/daf/classxAOD_1_1TriggerTowerAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8935">
+        <label>SG::IAuxStoreHolder</label>
+        <link refid="dc/d42/classSG_1_1IAuxStoreHolder"/>
+      </node>
+      <node id="8949">
+        <label>xAOD::CaloClusterTrigAuxContainer_v1</label>
+        <link refid="d1/dd4/classxAOD_1_1CaloClusterTrigAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8959">
+        <label>xAOD::CMXRoIAuxContainer_v1</label>
+        <link refid="d5/d22/classxAOD_1_1CMXRoIAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8955">
+        <label>xAOD::CMXCPTobAuxContainer_v1</label>
+        <link refid="d7/d8f/classxAOD_1_1CMXCPTobAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9041">
+        <label>xAOD::TrigT2MbtsBitsAuxContainer_v1</label>
+        <link refid="d8/dad/classxAOD_1_1TrigT2MbtsBitsAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8950">
+        <label>xAOD::CaloTowerAuxContainer_v1</label>
+        <link refid="dd/dff/classxAOD_1_1CaloTowerAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9008">
+        <label>xAOD::PFOAuxContainer_v1</label>
+        <link refid="d2/d07/classxAOD_1_1PFOAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9027">
+        <label>xAOD::TrigElectronAuxContainer_v1</label>
+        <link refid="d0/d41/classxAOD_1_1TrigElectronAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8945">
+        <label>xAOD::BTagVertexAuxContainer_v1</label>
+        <link refid="dd/da7/classxAOD_1_1BTagVertexAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8997">
+        <label>xAOD::MissingETAuxAssociationMap_v1</label>
+        <link refid="db/d72/classxAOD_1_1MissingETAuxAssociationMap__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8998">
+        <label>xAOD::MissingETAuxAssociationMap_v2</label>
+        <link refid="d4/db2/classxAOD_1_1MissingETAuxAssociationMap__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9054">
+        <label>xAOD::EnergySumRoIAuxInfo_v1</label>
+        <link refid="d1/de6/classxAOD_1_1EnergySumRoIAuxInfo__v1"/>
+        <childnode refid="9052" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8960">
+        <label>xAOD::CompositeParticleAuxContainer_v1</label>
+        <link refid="d0/d4d/classxAOD_1_1CompositeParticleAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8982">
+        <label>xAOD::JEMHitsAuxContainer_v1</label>
+        <link refid="d7/d49/classxAOD_1_1JEMHitsAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9011">
+        <label>xAOD::PhotonTrigAuxContainer_v1</label>
+        <link refid="db/d66/classxAOD_1_1PhotonTrigAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8951">
+        <label>xAOD::CMMCPHitsAuxContainer_v1</label>
+        <link refid="d2/de1/classxAOD_1_1CMMCPHitsAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8964">
+        <label>xAOD::CPMTowerAuxContainer_v1</label>
+        <link refid="d1/d23/classxAOD_1_1CPMTowerAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8965">
+        <label>xAOD::CPMTowerAuxContainer_v2</label>
+        <link refid="de/d8f/classxAOD_1_1CPMTowerAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9029">
+        <label>xAOD::TriggerMenuAuxContainer_v1</label>
+        <link refid="dc/d5a/classxAOD_1_1TriggerMenuAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9019">
+        <label>xAOD::TrackParticleAuxContainer_v1</label>
+        <link refid="d7/d63/classxAOD_1_1TrackParticleAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9020">
+        <label>xAOD::TrackParticleAuxContainer_v2</label>
+        <link refid="db/d68/classxAOD_1_1TrackParticleAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8992">
+        <label>xAOD::L2IsoMuonAuxContainer_v1</label>
+        <link refid="dc/d9c/classxAOD_1_1L2IsoMuonAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9021">
+        <label>xAOD::TrackParticleAuxContainer_v3</label>
+        <link refid="da/d17/classxAOD_1_1TrackParticleAuxContainer__v3"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8938">
+        <label>xAOD::AFPDataAuxContainer_v1</label>
+        <link refid="d2/dcb/classxAOD_1_1AFPDataAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8937">
+        <label>BreakableAuxContainer</label>
+        <link refid="de/d34/classBreakableAuxContainer"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9056">
+        <label>xAOD::EventShapeAuxInfo_v1</label>
+        <link refid="dc/d9a/classxAOD_1_1EventShapeAuxInfo__v1"/>
+        <childnode refid="9052" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8963">
+        <label>xAOD::CPMTobRoIAuxContainer_v1</label>
+        <link refid="d8/dd3/classxAOD_1_1CPMTobRoIAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8953">
+        <label>xAOD::CMMJetHitsAuxContainer_v1</label>
+        <link refid="d8/dda/classxAOD_1_1CMMJetHitsAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9061">
+        <label>xAOD::TrigNavigationAuxInfo_v1</label>
+        <link refid="dc/dc2/classxAOD_1_1TrigNavigationAuxInfo__v1"/>
+        <childnode refid="9052" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8999">
+        <label>xAOD::MissingETAuxComponentMap_v1</label>
+        <link refid="da/ddb/classxAOD_1_1MissingETAuxComponentMap__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8958">
+        <label>xAOD::CMXJetTobAuxContainer_v1</label>
+        <link refid="dc/d8a/classxAOD_1_1CMXJetTobAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9022">
+        <label>xAOD::TrackParticleClusterAssociationAuxContainer_v1</label>
+        <link refid="dc/d51/classxAOD_1_1TrackParticleClusterAssociationAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8985">
+        <label>xAOD::JetAuxContainer_v1</label>
+        <link refid="d6/dc1/classxAOD_1_1JetAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8980">
+        <label>xAOD::JEMEtSumsAuxContainer_v1</label>
+        <link refid="dc/d27/classxAOD_1_1JEMEtSumsAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8981">
+        <label>xAOD::JEMEtSumsAuxContainer_v2</label>
+        <link refid="d5/d49/classxAOD_1_1JEMEtSumsAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8978">
+        <label>xAOD::HIEventShapeAuxContainer_v1</label>
+        <link refid="df/d4e/classxAOD_1_1HIEventShapeAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9057">
+        <label>xAOD::FileMetaDataAuxInfo_v1</label>
+        <link refid="d9/dfb/classxAOD_1_1FileMetaDataAuxInfo__v1"/>
+        <childnode refid="9052" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8979">
+        <label>xAOD::HIEventShapeAuxContainer_v2</label>
+        <link refid="dd/d98/classxAOD_1_1HIEventShapeAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8967">
+        <label>xAOD::DiTauJetAuxContainer_v1</label>
+        <link refid="d0/d4a/classxAOD_1_1DiTauJetAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9040">
+        <label>xAOD::TrigSpacePointCountsAuxContainer_v1</label>
+        <link refid="d1/dd2/classxAOD_1_1TrigSpacePointCountsAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8986">
+        <label>xAOD::JetElementAuxContainer_v1</label>
+        <link refid="d4/dd6/classxAOD_1_1JetElementAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8987">
+        <label>xAOD::JetElementAuxContainer_v2</label>
+        <link refid="df/df9/classxAOD_1_1JetElementAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9000">
+        <label>xAOD::MissingETAuxContainer_v1</label>
+        <link refid="d9/dbe/classxAOD_1_1MissingETAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8984">
+        <label>xAOD::JEMTobRoIAuxContainer_v1</label>
+        <link refid="de/dde/classxAOD_1_1JEMTobRoIAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9053">
+        <label>xAOD::CMMRoIAuxInfo_v1</label>
+        <link refid="d5/de7/classxAOD_1_1CMMRoIAuxInfo__v1"/>
+        <childnode refid="9052" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8977">
+        <label>xAOD::ForwardEventInfoAuxContainer_v1</label>
+        <link refid="df/dab/classxAOD_1_1ForwardEventInfoAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9032">
+        <label>xAOD::TrigHisto2DAuxContainer_v1</label>
+        <link refid="dd/d0e/classxAOD_1_1TrigHisto2DAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9059">
+        <label>xAOD::RoiDescriptorStoreAuxInfo_v1</label>
+        <link refid="d1/d13/classxAOD_1_1RoiDescriptorStoreAuxInfo__v1"/>
+        <childnode refid="9052" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9026">
+        <label>xAOD::TrigEMClusterAuxContainer_v1</label>
+        <link refid="d5/d46/classxAOD_1_1TrigEMClusterAuxContainer__v1"/>
+        <childnode refid="9025" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9028">
+        <label>xAOD::TrigEMClusterAuxContainer_v2</label>
+        <link refid="d4/d60/classxAOD_1_1TrigEMClusterAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8990">
+        <label>xAOD::L1TopoRawDataAuxContainer_v1</label>
+        <link refid="d3/d70/classxAOD_1_1L1TopoRawDataAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8983">
+        <label>xAOD::JEMRoIAuxContainer_v1</label>
+        <link refid="df/df8/classxAOD_1_1JEMRoIAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8976">
+        <label>xAOD::EventInfoAuxContainer_v1</label>
+        <link refid="d5/d41/classxAOD_1_1EventInfoAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8996">
+        <label>xAOD::MBTSModuleAuxContainer_v1</label>
+        <link refid="d8/d0e/classxAOD_1_1MBTSModuleAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9005">
+        <label>xAOD::MuonSegmentAuxContainer_v1</label>
+        <link refid="df/da2/classxAOD_1_1MuonSegmentAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8954">
+        <label>xAOD::CMXCPHitsAuxContainer_v1</label>
+        <link refid="d9/d21/classxAOD_1_1CMXCPHitsAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8944">
+        <label>xAOD::BTaggingTrigAuxContainer_v1</label>
+        <link refid="d9/d96/classxAOD_1_1BTaggingTrigAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9012">
+        <label>xAOD::RODHeaderAuxContainer_v1</label>
+        <link refid="d2/d8e/classxAOD_1_1RODHeaderAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9013">
+        <label>xAOD::RODHeaderAuxContainer_v2</label>
+        <link refid="d3/d5e/classxAOD_1_1RODHeaderAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9046">
+        <label>xAOD::TruthMetaDataAuxContainer_v1</label>
+        <link refid="d7/dc3/classxAOD_1_1TruthMetaDataAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9014">
+        <label>xAOD::SCTRawHitValidationAuxContainer_v1</label>
+        <link refid="df/d41/classxAOD_1_1SCTRawHitValidationAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9045">
+        <label>xAOD::TruthEventAuxContainer_v1</label>
+        <link refid="d8/d7f/classxAOD_1_1TruthEventAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8961">
+        <label>xAOD::CPMHitsAuxContainer_v1</label>
+        <link refid="d3/d5c/classxAOD_1_1CPMHitsAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9033">
+        <label>xAOD::TrigMissingETAuxContainer_v1</label>
+        <link refid="d3/dea/classxAOD_1_1TrigMissingETAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8936">
+        <label>xAOD::AuxContainerBase</label>
+        <link refid="de/d65/classxAOD_1_1AuxContainerBase"/>
+        <childnode refid="8935" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9044">
+        <label>xAOD::TrigVertexCountsAuxContainer_v1</label>
+        <link refid="d0/d7e/classxAOD_1_1TrigVertexCountsAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9015">
+        <label>xAOD::SlowMuonAuxContainer_v1</label>
+        <link refid="d9/d19/classxAOD_1_1SlowMuonAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9062">
+        <label>xAOD::ShallowAuxContainer</label>
+        <link refid="d5/df0/classxAOD_1_1ShallowAuxContainer"/>
+        <childnode refid="8935" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9001">
+        <label>xAOD::MuonAuxContainer_v1</label>
+        <link refid="d2/d02/classxAOD_1_1MuonAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9036">
+        <label>xAOD::TrigRingerRingsAuxContainer_v1</label>
+        <link refid="dc/d2d/classxAOD_1_1TrigRingerRingsAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9002">
+        <label>xAOD::MuonAuxContainer_v2</label>
+        <link refid="dc/d51/classxAOD_1_1MuonAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9037">
+        <label>xAOD::TrigRingerRingsAuxContainer_v2</label>
+        <link refid="da/d42/classxAOD_1_1TrigRingerRingsAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9003">
+        <label>xAOD::MuonAuxContainer_v3</label>
+        <link refid="d9/d01/classxAOD_1_1MuonAuxContainer__v3"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8941">
+        <label>xAOD::ALFADataAuxContainer_v1</label>
+        <link refid="df/d19/classxAOD_1_1ALFADataAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8962">
+        <label>xAOD::CPMRoIAuxContainer_v1</label>
+        <link refid="de/d6c/classxAOD_1_1CPMRoIAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8974">
+        <label>xAOD::EmTauRoIAuxContainer_v1</label>
+        <link refid="db/db7/classxAOD_1_1EmTauRoIAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8975">
+        <label>xAOD::EmTauRoIAuxContainer_v2</label>
+        <link refid="d2/d5d/classxAOD_1_1EmTauRoIAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8991">
+        <label>xAOD::L2CombinedMuonAuxContainer_v1</label>
+        <link refid="d2/dd9/classxAOD_1_1L2CombinedMuonAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8939">
+        <label>xAOD::AFPSiHitAuxContainer_v1</label>
+        <link refid="df/d12/classxAOD_1_1AFPSiHitAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9042">
+        <label>xAOD::TrigT2ZdcSignalsAuxContainer_v1</label>
+        <link refid="d7/dac/classxAOD_1_1TrigT2ZdcSignalsAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8993">
+        <label>xAOD::L2StandAloneMuonAuxContainer_v1</label>
+        <link refid="de/d6f/classxAOD_1_1L2StandAloneMuonAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8994">
+        <label>xAOD::L2StandAloneMuonAuxContainer_v2</label>
+        <link refid="de/d00/classxAOD_1_1L2StandAloneMuonAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8988">
+        <label>xAOD::JetRoIAuxContainer_v1</label>
+        <link refid="d5/da1/classxAOD_1_1JetRoIAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8989">
+        <label>xAOD::JetRoIAuxContainer_v2</label>
+        <link refid="dc/de3/classxAOD_1_1JetRoIAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9048">
+        <label>xAOD::TruthPileupEventAuxContainer_v1</label>
+        <link refid="d8/ddf/classxAOD_1_1TruthPileupEventAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9047">
+        <label>xAOD::TruthParticleAuxContainer_v1</label>
+        <link refid="da/de8/classxAOD_1_1TruthParticleAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8969">
+        <label>xAOD::ElectronAuxContainer_v1</label>
+        <link refid="d9/de6/classxAOD_1_1ElectronAuxContainer__v1"/>
+        <childnode refid="8968" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8971">
+        <label>xAOD::ElectronAuxContainer_v2</label>
+        <link refid="d8/dcf/classxAOD_1_1ElectronAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8972">
+        <label>xAOD::ElectronAuxContainer_v3</label>
+        <link refid="d8/dde/classxAOD_1_1ElectronAuxContainer__v3"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9051">
+        <label>xAOD::ZdcModuleAuxContainer_v1</label>
+        <link refid="de/d88/classxAOD_1_1ZdcModuleAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8968">
+        <label>xAOD::EgammaAuxContainer_v1</label>
+        <link refid="d9/d23/classxAOD_1_1EgammaAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8946">
+        <label>xAOD::BunchConfAuxContainer_v1</label>
+        <link refid="d8/dcc/classxAOD_1_1BunchConfAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9024">
+        <label>xAOD::TrigBphysAuxContainer_v1</label>
+        <link refid="d1/dc6/classxAOD_1_1TrigBphysAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9023">
+        <label>xAOD::TrackStateValidationAuxContainer_v1</label>
+        <link refid="dc/d2d/classxAOD_1_1TrackStateValidationAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9025">
+        <label>xAOD::TrigCaloClusterAuxContainer_v1</label>
+        <link refid="d8/d1a/classxAOD_1_1TrigCaloClusterAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9006">
+        <label>xAOD::NeutralParticleAuxContainer_v1</label>
+        <link refid="da/dcf/classxAOD_1_1NeutralParticleAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8973">
+        <label>xAOD::ElectronTrigAuxContainer_v1</label>
+        <link refid="d2/d55/classxAOD_1_1ElectronTrigAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8970">
+        <label>xAOD::PhotonAuxContainer_v1</label>
+        <link refid="d6/d16/classxAOD_1_1PhotonAuxContainer__v1"/>
+        <childnode refid="8968" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9034">
+        <label>xAOD::TrigPassBitsAuxContainer_v1</label>
+        <link refid="d6/d51/classxAOD_1_1TrigPassBitsAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9009">
+        <label>xAOD::PhotonAuxContainer_v2</label>
+        <link refid="da/d08/classxAOD_1_1PhotonAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9010">
+        <label>xAOD::PhotonAuxContainer_v3</label>
+        <link refid="df/d1b/classxAOD_1_1PhotonAuxContainer__v3"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8943">
+        <label>xAOD::BTaggingAuxContainer_v1</label>
+        <link refid="d3/db5/classxAOD_1_1BTaggingAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8966">
+        <label>xAOD::CutBookkeeperAuxContainer_v1</label>
+        <link refid="d4/de9/classxAOD_1_1CutBookkeeperAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8995">
+        <label>xAOD::LumiBlockRangeAuxContainer_v1</label>
+        <link refid="d2/dbf/classxAOD_1_1LumiBlockRangeAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8947">
+        <label>xAOD::CaloClusterAuxContainer_v1</label>
+        <link refid="d9/d78/classxAOD_1_1CaloClusterAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8948">
+        <label>xAOD::CaloClusterAuxContainer_v2</label>
+        <link refid="dd/d85/classxAOD_1_1CaloClusterAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9004">
+        <label>xAOD::MuonRoIAuxContainer_v1</label>
+        <link refid="d7/d59/classxAOD_1_1MuonRoIAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8942">
+        <label>xAOD::BCMRawDataAuxContainer_v1</label>
+        <link refid="dd/d9e/classxAOD_1_1BCMRawDataAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8957">
+        <label>xAOD::CMXJetHitsAuxContainer_v1</label>
+        <link refid="d4/d33/classxAOD_1_1CMXJetHitsAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9060">
+        <label>xAOD::TrigDecisionAuxInfo_v1</label>
+        <link refid="d6/d61/classxAOD_1_1TrigDecisionAuxInfo__v1"/>
+        <childnode refid="9052" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9035">
+        <label>xAOD::TrigPhotonAuxContainer_v1</label>
+        <link refid="de/dac/classxAOD_1_1TrigPhotonAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9038">
+        <label>xAOD::TrigRNNOutputAuxContainer_v1</label>
+        <link refid="d8/d81/classxAOD_1_1TrigRNNOutputAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9039">
+        <label>xAOD::TrigRNNOutputAuxContainer_v2</label>
+        <link refid="d0/d06/classxAOD_1_1TrigRNNOutputAuxContainer__v2"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8940">
+        <label>xAOD::AFPTrackAuxContainer_v1</label>
+        <link refid="d7/da4/classxAOD_1_1AFPTrackAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9055">
+        <label>xAOD::EventAuxInfo_v1</label>
+        <link refid="d1/d52/classxAOD_1_1EventAuxInfo__v1"/>
+        <childnode refid="9052" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9007">
+        <label>xAOD::ParticleAuxContainer_v1</label>
+        <link refid="d1/d9d/classxAOD_1_1ParticleAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8956">
+        <label>xAOD::CMXEtSumsAuxContainer_v1</label>
+        <link refid="d2/d7b/classxAOD_1_1CMXEtSumsAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9043">
+        <label>xAOD::TrigTrackCountsAuxContainer_v1</label>
+        <link refid="d9/d78/classxAOD_1_1TrigTrackCountsAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9018">
+        <label>xAOD::TrackMeasurementValidationAuxContainer_v1</label>
+        <link refid="d4/da2/classxAOD_1_1TrackMeasurementValidationAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8952">
+        <label>xAOD::CMMEtSumsAuxContainer_v1</label>
+        <link refid="d8/d52/classxAOD_1_1CMMEtSumsAuxContainer__v1"/>
+        <childnode refid="8936" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9058">
+        <label>xAOD::JetEtRoIAuxInfo_v1</label>
+        <link refid="d8/d4c/classxAOD_1_1JetEtRoIAuxInfo__v1"/>
+        <childnode refid="9052" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainersInterfaces/AthContainersInterfaces/IAuxStoreHolder.h" line="31" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainersInterfaces/AthContainersInterfaces/IAuxStoreHolder.h" bodystart="31" bodyend="71"/>
+    <listofallmembers>
+      <member refid="dc/d42/classSG_1_1IAuxStoreHolder_1a52b405d522a75932698443c3f01611f9a94fd1895e790e358290b074ea49edbe2" prot="public" virt="non-virtual"><scope>SG::IAuxStoreHolder</scope><name>AST_ContainerStore</name></member>
+      <member refid="dc/d42/classSG_1_1IAuxStoreHolder_1a52b405d522a75932698443c3f01611f9afb6416cb757f8628e0383b707c99b19a" prot="public" virt="non-virtual"><scope>SG::IAuxStoreHolder</scope><name>AST_ObjectStore</name></member>
+      <member refid="dc/d42/classSG_1_1IAuxStoreHolder_1a52b405d522a75932698443c3f01611f9" prot="public" virt="non-virtual"><scope>SG::IAuxStoreHolder</scope><name>AuxStoreType</name></member>
+      <member refid="dc/d42/classSG_1_1IAuxStoreHolder_1ae8a47c0d7ed7325508cb94ca3570a5cd" prot="public" virt="pure-virtual"><scope>SG::IAuxStoreHolder</scope><name>getStore</name></member>
+      <member refid="dc/d42/classSG_1_1IAuxStoreHolder_1a5cbc4fb29e1ed8c561da079455790a24" prot="public" virt="pure-virtual"><scope>SG::IAuxStoreHolder</scope><name>getStoreType</name></member>
+      <member refid="dc/d42/classSG_1_1IAuxStoreHolder_1aea3c4b6aa04dc1581af2c77562adb90d" prot="public" virt="pure-virtual"><scope>SG::IAuxStoreHolder</scope><name>setStore</name></member>
+      <member refid="dc/d42/classSG_1_1IAuxStoreHolder_1a51489d2a5109fe92f83a8f34ff89c57b" prot="public" virt="virtual"><scope>SG::IAuxStoreHolder</scope><name>~IAuxStoreHolder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

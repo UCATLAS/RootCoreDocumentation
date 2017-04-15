@@ -1,0 +1,1729 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT" kind="class" prot="public">
+    <compoundname>Analysis::CalibrationDataInterfaceROOT</compoundname>
+    <basecompoundref refid="d7/d79/classAnalysis_1_1CalibrationDataInterfaceBase" prot="public" virt="non-virtual">Analysis::CalibrationDataInterfaceBase</basecompoundref>
+    <includes refid="d8/d17/CalibrationDataInterfaceROOT_8h" local="no">CalibrationDataInterfaceROOT.h</includes>
+    <innerclass refid="da/daf/classAnalysis_1_1CalibrationDataInterfaceROOT_1_1HadronisationReferenceHelper" prot="public">Analysis::CalibrationDataInterfaceROOT::HadronisationReferenceHelper</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a3e919c5e6a42085defedc7dcb94a3b8e" prot="private" static="no" mutable="no">
+        <type>TFile *</type>
+        <definition>TFile* Analysis::CalibrationDataInterfaceROOT::m_fileEff</definition>
+        <argsstring></argsstring>
+        <name>m_fileEff</name>
+        <briefdescription>
+<para>pointer to the TFile object providing access to the calibrations </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="365" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a2a356f140afbaec5f7ba18c463f62013" prot="private" static="no" mutable="no">
+        <type>TFile *</type>
+        <definition>TFile* Analysis::CalibrationDataInterfaceROOT::m_fileSF</definition>
+        <argsstring></argsstring>
+        <name>m_fileSF</name>
+        <briefdescription>
+<para>Do not attempt to persistify (PROOF). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="366" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a13e066fca338ff8f12d3df357c92fb40" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; Analysis::CalibrationDataInterfaceROOT::m_aliases</definition>
+        <argsstring></argsstring>
+        <name>m_aliases</name>
+        <briefdescription>
+<para>Do not attempt to persistify (PROOF). </para>        </briefdescription>
+        <detaileddescription>
+<para>jet author aliases (there is no single CalibrationBroker object here to take care of this, so we do it in this class) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="370" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="370" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ad1c6e2b4d1fd0e0daa6bc80c3b27db2f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer" kindref="compound">CalibrationDataContainer</ref> * &gt;</type>
+        <definition>std::vector&lt;CalibrationDataContainer*&gt; Analysis::CalibrationDataInterfaceROOT::m_objects</definition>
+        <argsstring></argsstring>
+        <name>m_objects</name>
+        <briefdescription>
+<para>cache the objects themselves (so that the user will not have to delete them after each call etc.). The caching is done so that objects can be retrieved by number as well as by (OP, flavour, calibration name) combination. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="375" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="375" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a11f8f81d8429f77d97c16f0b0adc8118" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, unsigned int &gt;</type>
+        <definition>std::map&lt;std::string, unsigned int&gt; Analysis::CalibrationDataInterfaceROOT::m_objectIndices</definition>
+        <argsstring></argsstring>
+        <name>m_objectIndices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="376" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1af91826b6c8ce1a572ccc4e8fcf73e852" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Analysis::CalibrationDataInterfaceROOT::m_filenameSF</definition>
+        <argsstring></argsstring>
+        <name>m_filenameSF</name>
+        <briefdescription>
+<para>in addition, store also the filenames themselves (needed for the copy constructor) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="389" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1af535db42b4838c6eddb7b73854056e5f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Analysis::CalibrationDataInterfaceROOT::m_filenameEff</definition>
+        <argsstring></argsstring>
+        <name>m_filenameEff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="390" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a24fcb8872f3d4c873167af4339fc9bde" prot="private" static="no" mutable="yes">
+        <type>std::map&lt; const <ref refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer" kindref="compound">CalibrationDataContainer</ref> *, const <ref refid="d0/d41/classAnalysis_1_1CalibrationDataEigenVariations" kindref="compound">CalibrationDataEigenVariations</ref> * &gt;</type>
+        <definition>std::map&lt;const CalibrationDataContainer*,const CalibrationDataEigenVariations*&gt; Analysis::CalibrationDataInterfaceROOT::m_eigenVariationsMap</definition>
+        <argsstring></argsstring>
+        <name>m_eigenVariationsMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>store the eigenvector class and associate to its <ref refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer" kindref="compound">CalibrationDataContainer</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="397" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a5c931164cac88b2cdb3b5cfe4340bb90" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Analysis::CalibrationDataInterfaceROOT::m_runEigenVectorMethod</definition>
+        <argsstring></argsstring>
+        <name>m_runEigenVectorMethod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>decide whether to run the eigenvector method or not </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="400" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="400" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a82c980d14b15dd5a8af615ec5706370e" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, Analysis::EVReductionStrategy &gt;</type>
+        <definition>std::map&lt;std::string, Analysis::EVReductionStrategy&gt; Analysis::CalibrationDataInterfaceROOT::m_EVReductions</definition>
+        <argsstring></argsstring>
+        <name>m_EVReductions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Eigenvector reduction strategy (per flavour) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="403" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a6bfc0cda0ad9cae68e9112aa4d31d714" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; Analysis::CalibrationDataInterfaceROOT::m_excludeFromCovMatrix</definition>
+        <argsstring></argsstring>
+        <name>m_excludeFromCovMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>store the uncertainties which should be excluded from building the full covariance matrix </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="406" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1aa0d987249859c862d917d8a74cf8a37c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Analysis::CalibrationDataInterfaceROOT::m_useMCMCSF</definition>
+        <argsstring></argsstring>
+        <name>m_useMCMCSF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>specify whether or not to use MC/MC (hadronisation) scale factors (the fact that this is steerable is intended to be temporary only) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="414" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a0afca6ab90f347a7b92c9fd1b68e637c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Analysis::CalibrationDataInterfaceROOT::m_useTopologyRescaling</definition>
+        <argsstring></argsstring>
+        <name>m_useTopologyRescaling</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>specify whether or not to use MC/MC (topology) scale factors (also this steering option may be removed) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="417" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a3d9af2a7e047984119480fd7a2a317f2" prot="private" static="no" mutable="yes">
+        <type>std::map&lt; std::string, <ref refid="da/daf/classAnalysis_1_1CalibrationDataInterfaceROOT_1_1HadronisationReferenceHelper" kindref="compound">HadronisationReferenceHelper</ref> * &gt;</type>
+        <definition>std::map&lt;std::string, HadronisationReferenceHelper*&gt; Analysis::CalibrationDataInterfaceROOT::m_refMap</definition>
+        <argsstring></argsstring>
+        <name>m_refMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the following maps (one for each directory) specify the name of the container serving as the &apos;hadronisation&apos; reference for each object </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="421" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="421" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ab7904888da31d84163a7d3b24edaf9d9" prot="private" static="no" mutable="yes">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; Analysis::CalibrationDataInterfaceROOT::m_hadronisationReference</definition>
+        <argsstring></argsstring>
+        <name>m_hadronisationReference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>store the &apos;hadronisation&apos; reference for each object (-1 means no reference found) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="423" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ad21dae80d49eaac0fb68d039a99042a4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Analysis::CalibrationDataInterfaceROOT::m_maxAbsEta</definition>
+        <argsstring></argsstring>
+        <name>m_maxAbsEta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>|eta| bounds and strategy for dealing with out-of-bounds conditions </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="430" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a6d880258f7d6dbd788e4f53c5712da32" prot="private" static="no" mutable="no">
+        <type>OutOfBoundsStrategy</type>
+        <definition>OutOfBoundsStrategy Analysis::CalibrationDataInterfaceROOT::m_absEtaStrategy</definition>
+        <argsstring></argsstring>
+        <name>m_absEtaStrategy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="431" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="431" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a4a92db9175918232b574c8bf3e92e548" prot="private" static="no" mutable="no">
+        <type>OutOfBoundsStrategy</type>
+        <definition>OutOfBoundsStrategy Analysis::CalibrationDataInterfaceROOT::m_otherStrategy</definition>
+        <argsstring></argsstring>
+        <name>m_otherStrategy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="432" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="432" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ae027a8051c02179bbd98e2275d901d3f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; unsigned int &gt;</type>
+        <definition>std::vector&lt;unsigned int&gt; Analysis::CalibrationDataInterfaceROOT::m_etaCounters</definition>
+        <argsstring></argsstring>
+        <name>m_etaCounters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>counters for flagging out-of-bound cases </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="435" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ad5eaff5c0f6cdbc566bfc882bace6163" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; unsigned int &gt;</type>
+        <definition>std::vector&lt;unsigned int&gt; Analysis::CalibrationDataInterfaceROOT::m_mainCounters</definition>
+        <argsstring></argsstring>
+        <name>m_mainCounters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="436" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a7b1d66c90277b67146e4bcb4f72c61b6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; unsigned int &gt;</type>
+        <definition>std::vector&lt;unsigned int&gt; Analysis::CalibrationDataInterfaceROOT::m_extrapolatedCounters</definition>
+        <argsstring></argsstring>
+        <name>m_extrapolatedCounters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="437" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="437" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a0a2b72878cd05580b110569363332fef" prot="private" static="no" mutable="yes">
+        <type>std::vector&lt; std::pair&lt; unsigned int, unsigned int &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; Analysis::CalibrationDataInterfaceROOT::m_checkedWeightScaleFactors</definition>
+        <argsstring></argsstring>
+        <name>m_checkedWeightScaleFactors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="443" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a2f439edad6a9dfd17291113d1a4d5f27" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Analysis::CalibrationDataInterfaceROOT::m_maxTagWeight</definition>
+        <argsstring></argsstring>
+        <name>m_maxTagWeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="444" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="444" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1aab85642a950ebd15775e1aaed865f69e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Analysis::CalibrationDataInterfaceROOT::CalibrationDataInterfaceROOT</definition>
+        <argsstring>(const std::string &amp;taggerName, std::string configname=&quot;BTagCalibration.env&quot;, std::string pathname=&quot;&quot;)</argsstring>
+        <name>CalibrationDataInterfaceROOT</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>taggerName</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>configname</declname>
+          <defval>&quot;BTagCalibration.env&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>pathname</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>main constructor for &quot;stand-alone&quot; use (with information fed in from a .env configuration file read by TEnv) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a1a36f16e8f0380444f37dd1cf5f3ef2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Analysis::CalibrationDataInterfaceROOT::CalibrationDataInterfaceROOT</definition>
+        <argsstring>(const std::string &amp;taggerName, const char *fileSF, const char *fileEff, const std::vector&lt; std::string &gt; &amp;jetAliases, const std::map&lt; std::string, std::string &gt; &amp;SFNames, const std::map&lt; std::string, std::vector&lt; std::string &gt; &gt; &amp;EffNames, const std::vector&lt; std::string &gt; &amp;excludeFromEV, const std::map&lt; std::string, Analysis::EVReductionStrategy &gt; EVReductions, bool useEV=true, bool useMCMCSF=true, bool useTopologyRescaling=false)</argsstring>
+        <name>CalibrationDataInterfaceROOT</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>taggerName</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fileSF</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fileEff</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jetAliases</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>SFNames</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; std::string, std::vector&lt; std::string &gt; &gt; &amp;</type>
+          <declname>EffNames</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>excludeFromEV</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; std::string, Analysis::EVReductionStrategy &gt;</type>
+          <declname>EVReductions</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>useEV</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>useMCMCSF</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>useTopologyRescaling</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>alternative constructor passing configuration information explicitly (so that no .env file is needed) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a735e3cfef1f9b5284ca6237078c26228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Analysis::CalibrationDataInterfaceROOT::CalibrationDataInterfaceROOT</definition>
+        <argsstring>()</argsstring>
+        <name>CalibrationDataInterfaceROOT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>default constructor for PROOF object retrieval </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="100" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="596" bodyend="602"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ad63185f6a29e28e7e9299eddf03ff6a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Analysis::CalibrationDataInterfaceROOT::CalibrationDataInterfaceROOT</definition>
+        <argsstring>(const CalibrationDataInterfaceROOT &amp;other)</argsstring>
+        <name>CalibrationDataInterfaceROOT</name>
+        <param>
+          <type>const <ref refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT" kindref="compound">CalibrationDataInterfaceROOT</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>copy constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="103" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="605" bodyend="623"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a6c45be083d8763e20b820cf65c2bd493" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Analysis::CalibrationDataInterfaceROOT::~CalibrationDataInterfaceROOT</definition>
+        <argsstring>()</argsstring>
+        <name>~CalibrationDataInterfaceROOT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>default destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="106" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="626" bodyend="675"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ad33fccde418c8c16d7d07cdededed21c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibResult</type>
+        <definition>CalibResult Analysis::CalibrationDataInterfaceROOT::getScaleFactor</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, const std::string &amp;label, const std::string &amp;OP, Uncertainty unc, unsigned int numVariation=0, unsigned int mapIndex=0) const </argsstring>
+        <name>getScaleFactor</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>OP</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numVariation</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>mapIndex</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>efficiency scale factor retrieval by name. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="118"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ad55af75d4d11312fb700862bc42224dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibResult</type>
+        <definition>CalibResult Analysis::CalibrationDataInterfaceROOT::getEfficiency</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, const std::string &amp;label, const std::string &amp;OP, Uncertainty unc, unsigned int numVariation=0, unsigned int mapIndex=0) const </argsstring>
+        <name>getEfficiency</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>OP</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numVariation</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>mapIndex</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>efficiency retrieval by name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="124"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ab1901622a30f06ddc4d04652f7f592ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibResult</type>
+        <definition>CalibResult Analysis::CalibrationDataInterfaceROOT::getInefficiencyScaleFactor</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, const std::string &amp;label, const std::string &amp;OP, Uncertainty unc, unsigned int numVariation=0, unsigned int mapIndex=0) const </argsstring>
+        <name>getInefficiencyScaleFactor</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>OP</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numVariation</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>mapIndex</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;MC&quot; inefficiency scale factor retrieval by name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a60930b42a98d37beb849718f6eaf589f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibResult</type>
+        <definition>CalibResult Analysis::CalibrationDataInterfaceROOT::getInefficiency</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, const std::string &amp;label, const std::string &amp;OP, Uncertainty unc, unsigned int numVariation=0, unsigned int mapIndex=0) const </argsstring>
+        <name>getInefficiency</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>OP</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numVariation</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>mapIndex</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>inefficiency retrieval by name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="136"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a79d54d6e6345d190b880ddc0b3f4139f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibResult</type>
+        <definition>CalibResult Analysis::CalibrationDataInterfaceROOT::getMCEfficiency</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, const std::string &amp;label, const std::string &amp;OP, Uncertainty unc=None, unsigned int mapIndex=0) const </argsstring>
+        <name>getMCEfficiency</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>OP</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>mapIndex</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;MC&quot; efficiency retrieval by name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="140"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a7c5a377b6c9c949a2587b859dbfff19d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibResult</type>
+        <definition>CalibResult Analysis::CalibrationDataInterfaceROOT::getMCInefficiency</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, const std::string &amp;label, const std::string &amp;OP, Uncertainty unc=None, unsigned int mapIndex=0) const </argsstring>
+        <name>getMCInefficiency</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>OP</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>mapIndex</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;MC&quot; inefficiency retrieval by name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="144"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ac2531bb8ce3d7df7e648da677635563d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; Analysis::CalibrationDataInterfaceROOT::listScaleFactorUncertainties</definition>
+        <argsstring>(const std::string &amp;author, const std::string &amp;label, const std::string &amp;OP, bool named=false) const </argsstring>
+        <name>listScaleFactorUncertainties</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>author</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>OP</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>named</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>retrieve the list of &quot;uncertainties&quot; relevant to the calibration object. <ref refid="d4/dc4/structA" kindref="compound">A</ref> few uncertainty names are predetermined: &quot;result&quot;, &quot;comment&quot;, &quot;statistics&quot;, &quot;systematics&quot;. Other sources of systematic uncertainty may be added. Note that the &quot;systematics&quot; source does not give access to correlations between bins. If the &apos;named&apos; argument is true, the list does not include all uncertainties but only those excluded from the eigenvector construction (this option is only relevant if eigenvector use has been switched on to begin with). In this case the order of the uncertainties listed is important since it indicates the index by which the given named uncertainty is identified. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="159"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a85f69f76c73608b407b7c879bbb397e1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Analysis::CalibrationDataInterfaceROOT::getNumVariations</definition>
+        <argsstring>(const std::string &amp;author, const std::string &amp;label, const std::string &amp;OP, Uncertainty unc) const </argsstring>
+        <name>getNumVariations</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>author</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>OP</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <briefdescription>
+<para>retrieve the number of variations relevant to the calibration object. The Uncertainty enum is used to specify the category. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="165" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="2011" bodyend="2029"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ac270a987041f673054ff5c1bb4b60b69" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Analysis::CalibrationDataInterfaceROOT::retrieveCalibrationIndex</definition>
+        <argsstring>(const std::string &amp;label, const std::string &amp;OP, const std::string &amp;author, bool isSF, unsigned int &amp;index, unsigned int mapIndex=0) const </argsstring>
+        <name>retrieveCalibrationIndex</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>OP</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>author</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isSF</declname>
+        </param>
+        <param>
+          <type>unsigned int &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>mapIndex</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the index of the calibration object (container) starting from the label and operating point. The return value will be false if the requested object cannot be found. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="179" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="679" bodyend="722"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a983981840a3cc6fd35b1030bd1de3e0a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Analysis::CalibrationDataInterfaceROOT::nameFromIndex</definition>
+        <argsstring>(unsigned int index) const </argsstring>
+        <name>nameFromIndex</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the name of the calibration object (container) given its index </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="182" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="1907" bodyend="1917"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ae44b3ac3f2a8d6d61d31babb5011e2a2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibResult</type>
+        <definition>Analysis::CalibResult Analysis::CalibrationDataInterfaceROOT::getScaleFactor</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, unsigned int indexSF, unsigned int indexEff, Uncertainty unc, unsigned int numVariation=0) const </argsstring>
+        <name>getScaleFactor</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexSF</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexEff</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numVariation</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>efficiency scale factor retrieval by index </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="187" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="762" bodyend="780"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ab2c1b4f133a127d41a72786cb8779c41" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibResult</type>
+        <definition>Analysis::CalibResult Analysis::CalibrationDataInterfaceROOT::getEfficiency</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, unsigned int indexSF, unsigned int indexEff, Uncertainty unc, unsigned int numVariation=0) const </argsstring>
+        <name>getEfficiency</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexSF</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexEff</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numVariation</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>efficiency retrieval by index </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="192" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="1068" bodyend="1087"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a78dca6a6ccde807b0d57a0a4436739b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibResult</type>
+        <definition>Analysis::CalibResult Analysis::CalibrationDataInterfaceROOT::getInefficiencyScaleFactor</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, unsigned int indexSF, unsigned int indexEff, Uncertainty unc, unsigned int numVariation=0) const </argsstring>
+        <name>getInefficiencyScaleFactor</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexSF</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexEff</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numVariation</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;MC&quot; inefficiency scale factor retrieval by index </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="197" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="1191" bodyend="1211"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ad3d0ccea246eac7447896cfb4e9d90b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibResult</type>
+        <definition>Analysis::CalibResult Analysis::CalibrationDataInterfaceROOT::getInefficiency</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, unsigned int indexSF, unsigned int indexEff, Uncertainty unc, unsigned int numVariation=0) const </argsstring>
+        <name>getInefficiency</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexSF</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexEff</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numVariation</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>inefficiency retrieval by index </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="202" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="1309" bodyend="1329"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1aa331415738f2420d3809ec2995892182" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibResult</type>
+        <definition>Analysis::CalibResult Analysis::CalibrationDataInterfaceROOT::getMCEfficiency</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, unsigned int index, Uncertainty unc=None) const </argsstring>
+        <name>getMCEfficiency</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;MC&quot; efficiency retrieval by index </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="206" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="956" bodyend="970"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a37545ce790e5770ff7a0b904283b29a5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibResult</type>
+        <definition>Analysis::CalibResult Analysis::CalibrationDataInterfaceROOT::getMCInefficiency</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, unsigned int index, Uncertainty unc=None) const </argsstring>
+        <name>getMCInefficiency</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;MC&quot; inefficiency retrieval by index </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="210" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="1410" bodyend="1426"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1aa14152d891cb580cfe769e9c1bab78f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Analysis::CalibrationDataInterfaceROOT::getMCMCScaleFactor</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, unsigned indexSF, unsigned int indexEff) const </argsstring>
+        <name>getMCMCScaleFactor</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>indexSF</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexEff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MC/MC scale factor retrieval. Normally this is to be used only internally; however, since this information may be of interest it is made public anyway. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="215" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="1430" bodyend="1446"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a78077048adf445627deabe4ace74919a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; string &gt; Analysis::CalibrationDataInterfaceROOT::listScaleFactorUncertainties</definition>
+        <argsstring>(unsigned int index, bool named=false) const </argsstring>
+        <name>listScaleFactorUncertainties</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>named</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>retrieve the list of &quot;uncertainties&quot; relevant to the calibration object. <ref refid="d4/dc4/structA" kindref="compound">A</ref> few uncertainty names are predetermined: &quot;result&quot;, &quot;comment&quot;, &quot;statistics&quot;, &quot;systematics&quot;. Other sources of systematic uncertainty may be added. Note that the &quot;systematics&quot; source does not give access to correlations between bins. If the &apos;named&apos; argument is true, the list does not include all uncertainties but only those excluded from the eigenvector construction (this option is only relevant if eigenvector use has been switched on to begin with). In this case the order of the uncertainties listed is important since it indicates the index by which the given named uncertainty is identified. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="227" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="1978" bodyend="2007"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ae038e76e7955ff3904d42fb4f977f028" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Analysis::CalibrationDataInterfaceROOT::getNumVariations</definition>
+        <argsstring>(unsigned int index, Uncertainty unc) const </argsstring>
+        <name>getNumVariations</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <briefdescription>
+<para>retrieve the number of variations relevant to the calibration object. The Uncertainty enum is used to specify the category. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="232" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="2033" bodyend="2050"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a0d72f80e9b4d417f81c31cea328bb06f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Analysis::CalibrationDataInterfaceROOT::fullName</definition>
+        <argsstring>(const std::string &amp;author, const std::string &amp;OP, const std::string &amp;label, bool isSF, unsigned mapIndex=0) const </argsstring>
+        <name>fullName</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>author</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>OP</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isSF</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>mapIndex</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@ brief construct the full object pathname from its individual components </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="236"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a257f218c978fd940cca1cf975f22913e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibrationStatus</type>
+        <definition>Analysis::CalibrationStatus Analysis::CalibrationDataInterfaceROOT::getScaleFactor</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, unsigned int indexSF, unsigned int indexEff, Uncertainty unc, unsigned int numVariation, CalibResult &amp;result) const </argsstring>
+        <name>getScaleFactor</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexSF</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexEff</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numVariation</declname>
+        </param>
+        <param>
+          <type>CalibResult &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>efficiency scale factor retrieval by index </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="250" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="784" bodyend="923"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a644ec83d7e5ec88da5d5e2cfab03b83b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibrationStatus</type>
+        <definition>Analysis::CalibrationStatus Analysis::CalibrationDataInterfaceROOT::getEfficiency</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, unsigned int indexSF, unsigned int indexEff, Uncertainty unc, unsigned int numVariation, CalibResult &amp;result) const </argsstring>
+        <name>getEfficiency</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexSF</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexEff</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numVariation</declname>
+        </param>
+        <param>
+          <type>CalibResult &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>efficiency retrieval by index </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="256" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="1091" bodyend="1149"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1aa6bd6d1a197daba7918a70ce21afac7e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibrationStatus</type>
+        <definition>Analysis::CalibrationStatus Analysis::CalibrationDataInterfaceROOT::getInefficiencyScaleFactor</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, unsigned int indexSF, unsigned int indexEff, Uncertainty unc, unsigned int numVariation, CalibResult &amp;result) const </argsstring>
+        <name>getInefficiencyScaleFactor</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexSF</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexEff</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numVariation</declname>
+        </param>
+        <param>
+          <type>CalibResult &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;MC&quot; inefficiency scale factor retrieval by index </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="262" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="1215" bodyend="1268"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ae4d1c9260eb9e32db88776bb7430daa1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibrationStatus</type>
+        <definition>Analysis::CalibrationStatus Analysis::CalibrationDataInterfaceROOT::getInefficiency</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, unsigned int indexSF, unsigned int indexEff, Uncertainty unc, unsigned int numVariation, CalibResult &amp;result) const </argsstring>
+        <name>getInefficiency</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexSF</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexEff</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numVariation</declname>
+        </param>
+        <param>
+          <type>CalibResult &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>inefficiency retrieval by index </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="268" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="1333" bodyend="1383"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a9675e56b61f4f871b64342a648b68c30" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibrationStatus</type>
+        <definition>Analysis::CalibrationStatus Analysis::CalibrationDataInterfaceROOT::getMCEfficiency</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, unsigned int index, Uncertainty unc, CalibResult &amp;result) const </argsstring>
+        <name>getMCEfficiency</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>CalibResult &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;MC&quot; efficiency retrieval by index </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="273" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="974" bodyend="1026"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a8db4852e7ea35ef43c1464c4f269d611" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibResult</type>
+        <definition>CalibResult Analysis::CalibrationDataInterfaceROOT::getWeightScaleFactor</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, const std::string &amp;label, Uncertainty unc, unsigned int numVariation=0, unsigned int mapIndex=0) const </argsstring>
+        <name>getWeightScaleFactor</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numVariation</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>mapIndex</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>efficiency scale factor retrieval by name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="285"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1aba079e5e27c7c96bf063982a6302fdc3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibResult</type>
+        <definition>Analysis::CalibResult Analysis::CalibrationDataInterfaceROOT::getWeightScaleFactor</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, unsigned int indexSF, unsigned int indexEff, Uncertainty unc, unsigned int numVariation=0) const </argsstring>
+        <name>getWeightScaleFactor</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexSF</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexEff</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numVariation</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>efficiency scale factor retrieval by index </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="290" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="1488" bodyend="1510"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a7c08cb1477c04206fb38e986968ed576" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CalibrationStatus</type>
+        <definition>Analysis::CalibrationStatus Analysis::CalibrationDataInterfaceROOT::getWeightScaleFactor</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, unsigned int indexSF, unsigned int indexEff, Uncertainty unc, unsigned int numVariation, CalibResult &amp;result) const </argsstring>
+        <name>getWeightScaleFactor</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexSF</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexEff</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numVariation</declname>
+        </param>
+        <param>
+          <type>CalibResult &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>efficiency scale factor retrieval by index, with different signature </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="296" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="1514" bodyend="1713"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1af53a0f82e2dca47f6eddf160343f2900" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const TObject *</type>
+        <definition>const TObject * Analysis::CalibrationDataInterfaceROOT::getMCEfficiencyObject</definition>
+        <argsstring>(const std::string &amp;author, const std::string &amp;label, const std::string &amp;OP, unsigned int mapIndex=0) const </argsstring>
+        <name>getMCEfficiencyObject</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>author</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>OP</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>mapIndex</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>retrieve the MC efficiency (central values) object for the given flavour label and operating point. <ref refid="d4/dc4/structA" kindref="compound">A</ref> null result will be returned in case of error (e.g. if the calibration object isn&apos;t binned to begin with). It is the user&apos;s responsibility to verify whether the object derives from a TH1 or a TF1. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="308" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="2077" bodyend="2099"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a57b8f48651644a2627f2683c45fe5465" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const TH1 *</type>
+        <definition>const TH1 * Analysis::CalibrationDataInterfaceROOT::getBinnedScaleFactors</definition>
+        <argsstring>(const std::string &amp;author, const std::string &amp;label, const std::string &amp;OP) const </argsstring>
+        <name>getBinnedScaleFactors</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>author</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>OP</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>retrieve the binned calibration object for the given flavour label and operating point. <ref refid="d4/dc4/structA" kindref="compound">A</ref> null result will be returned in case of error (e.g. if the calibration object isn&apos;t binned to begin with). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="315" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="2054" bodyend="2073"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1af74672b8e5ea2aadbe0b211161978cec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const TH1 *</type>
+        <definition>const TH1 * Analysis::CalibrationDataInterfaceROOT::getShiftedScaleFactors</definition>
+        <argsstring>(const std::string &amp;author, const std::string &amp;label, const std::string &amp;OP, const std::string &amp;unc, double sigmas) const </argsstring>
+        <name>getShiftedScaleFactors</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>author</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>OP</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sigmas</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>retrieve the binned calibration object for the given flavour label and operating point, with the result shifted by the given number of standard deviations for the given systematic uncertainty. <ref refid="d4/dc4/structA" kindref="compound">A</ref> null result will be returned in case of error (e.g. if the calibration object isn&apos;t binned to begin with, or if the uncertainty asked for isn&apos;t fully correlated from bin to bin). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="326" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="2105" bodyend="2151"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a0d84c38698522ead60a95d4e43d86d0b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TMatrixDSym</type>
+        <definition>TMatrixDSym Analysis::CalibrationDataInterfaceROOT::getScaleFactorCovarianceMatrix</definition>
+        <argsstring>(const std::string &amp;author, const std::string &amp;label, const std::string &amp;OP, const std::string &amp;unc=&quot;all&quot;) const </argsstring>
+        <name>getScaleFactorCovarianceMatrix</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>author</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>OP</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>unc</declname>
+          <defval>&quot;all&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>retrieve the named covariance matrix element corresponding to the binned calibration object. The unc argument should correspond to a given source of statistical or systematic uncertainty, or &quot;all&quot; (in case the full covariance matrix is required) For 2D and 3D histograms, the bin numbering follows the &quot;global&quot; bin number as defined by class TH1. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="334" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="2225" bodyend="2288"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ad3928d877f3c25a99add738ea8ff65d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Analysis::CalibrationDataInterfaceROOT::initialize</definition>
+        <argsstring>(const std::string &amp;jetauthor, const std::string &amp;OP, Uncertainty unc)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>jetauthor</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>OP</declname>
+        </param>
+        <param>
+          <type>Uncertainty</type>
+          <declname>unc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>initialization for PROOF usage </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="360"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a0b7cb18de8778bc7037f68897c3fc424" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer" kindref="compound">CalibrationDataContainer</ref> *</type>
+        <definition>CalibrationDataContainer* Analysis::CalibrationDataInterfaceROOT::retrieveContainer</definition>
+        <argsstring>(const std::string &amp;dir, const std::string &amp;cntname, bool isSF)</argsstring>
+        <name>retrieveContainer</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>cntname</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isSF</declname>
+        </param>
+        <briefdescription>
+<para>utility function taking care of object retrieval </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="380"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1abe23a9d39acda50db7dcbd1ee790d15c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Analysis::CalibrationDataInterfaceROOT::getAlias</definition>
+        <argsstring>(const std::string &amp;author) const </argsstring>
+        <name>getAlias</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>author</declname>
+        </param>
+        <briefdescription>
+<para>utility function taking care of eigenvector objects retrieval </para>        </briefdescription>
+        <detaileddescription>
+<para>associated alias retrieval method </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="386"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ae2fbcc2b6870be2aa449350a347df4a9" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Analysis::CalibrationDataInterfaceROOT::checkAbsEta</definition>
+        <argsstring>(const CalibrationDataVariables &amp;variables, unsigned int index) const </argsstring>
+        <name>checkAbsEta</name>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="433" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="1888" bodyend="1903"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a2e5babb7efd329061faa1b859774eb8b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Analysis::CalibrationDataInterfaceROOT::increaseCounter</definition>
+        <argsstring>(unsigned int index, OutOfBoundsType oob=Main)</argsstring>
+        <name>increaseCounter</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>OutOfBoundsType</type>
+          <declname>oob</declname>
+          <defval>Main</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="439" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="1921" bodyend="1945"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a8c49c53618d4a1f02d6039bac70083bc" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Analysis::CalibrationDataInterfaceROOT::checkWeightScaleFactors</definition>
+        <argsstring>(unsigned int indexSF, unsigned int indexEff) const </argsstring>
+        <name>checkWeightScaleFactors</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexSF</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>indexEff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="442" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataInterfaceROOT.cxx" bodystart="1717" bodyend="1884"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This tool provides an interface to flavour tagging performance estimates.</para><para><ref refid="d4/dc4/structA" kindref="compound">A</ref> separate instance should be used for each different tagging algorithm. For each instance, all appropriate jet collections and tagger operating points need to be specified.</para><para>The model:<itemizedlist>
+<listitem><para>b-jets: data-MC scale factor (factorised 2D function of eta, pt) MC reference the product is the data efficiency; alternatively, the scale factor may be used</para></listitem><listitem><para>c-jets: as for b-jets, but with a different MC reference</para></listitem><listitem><para>light-flavour jets: data-MC scale factor (factorised 2D function of eta, pt) MC reference Besides the results, it is also possible to retrieve associated uncertainties. This need not be configured, and a choice as to the uncertainty component can be made on a case-by-case basis.</para></listitem></itemizedlist>
+</para><para>The idea is to use the same physical ROOT file that is also accessed through COOL, but to do so in a stand-alone fashion, so that there is no COOL or <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref> dependence. Apart from this, the same infrastructure and limitations as with COOL access ( </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2929">
+        <label>Analysis::CalibrationDataInterfaceBase</label>
+        <link refid="d7/d79/classAnalysis_1_1CalibrationDataInterfaceBase"/>
+      </node>
+      <node id="2928">
+        <label>Analysis::CalibrationDataInterfaceROOT</label>
+        <link refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT"/>
+        <childnode refid="2929" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2932">
+        <label>string</label>
+      </node>
+      <node id="2931">
+        <label>Analysis::CalibrationDataInterfaceBase</label>
+        <link refid="d7/d79/classAnalysis_1_1CalibrationDataInterfaceBase"/>
+        <childnode refid="2932" relation="usage">
+          <edgelabel>m_taggerName</edgelabel>
+        </childnode>
+      </node>
+      <node id="2930">
+        <label>Analysis::CalibrationDataInterfaceROOT</label>
+        <link refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT"/>
+        <childnode refid="2931" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2932" relation="usage">
+          <edgelabel>m_filenameEff</edgelabel>
+          <edgelabel>m_filenameSF</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" line="84" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataInterfaceROOT.h" bodystart="83" bodyend="448"/>
+    <listofallmembers>
+      <member refid="d7/d79/classAnalysis_1_1CalibrationDataInterfaceBase_1a33272c3494e5adc11721f102874ba8a7" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>CalibrationDataInterfaceBase</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1aab85642a950ebd15775e1aaed865f69e" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>CalibrationDataInterfaceROOT</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a1a36f16e8f0380444f37dd1cf5f3ef2d" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>CalibrationDataInterfaceROOT</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a735e3cfef1f9b5284ca6237078c26228" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>CalibrationDataInterfaceROOT</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ad63185f6a29e28e7e9299eddf03ff6a2" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>CalibrationDataInterfaceROOT</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ae2fbcc2b6870be2aa449350a347df4a9" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>checkAbsEta</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a8c49c53618d4a1f02d6039bac70083bc" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>checkWeightScaleFactors</name></member>
+      <member refid="d7/d79/classAnalysis_1_1CalibrationDataInterfaceBase_1a1de0612917be0100595b95023747aff4" prot="protected" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>combinedUncertainty</name></member>
+      <member refid="d7/d79/classAnalysis_1_1CalibrationDataInterfaceBase_1a2f2161524ad7e30fcff74229ffa04eb9" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>EffCalibrationName</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a0d72f80e9b4d417f81c31cea328bb06f" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>fullName</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1abe23a9d39acda50db7dcbd1ee790d15c" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getAlias</name></member>
+      <member refid="d7/d79/classAnalysis_1_1CalibrationDataInterfaceBase_1a176c1cc5a166749bdd34070a2312ec45" prot="protected" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getBasename</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a57b8f48651644a2627f2683c45fe5465" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getBinnedScaleFactors</name></member>
+      <member refid="d7/d79/classAnalysis_1_1CalibrationDataInterfaceBase_1af746489cfc49e99bffe6841dfa44795d" prot="protected" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getContainername</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ad55af75d4d11312fb700862bc42224dc" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getEfficiency</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ab2c1b4f133a127d41a72786cb8779c41" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getEfficiency</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a644ec83d7e5ec88da5d5e2cfab03b83b" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getEfficiency</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a60930b42a98d37beb849718f6eaf589f" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getInefficiency</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ad3d0ccea246eac7447896cfb4e9d90b4" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getInefficiency</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ae4d1c9260eb9e32db88776bb7430daa1" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getInefficiency</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ab1901622a30f06ddc4d04652f7f592ac" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getInefficiencyScaleFactor</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a78dca6a6ccde807b0d57a0a4436739b1" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getInefficiencyScaleFactor</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1aa6bd6d1a197daba7918a70ce21afac7e" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getInefficiencyScaleFactor</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a79d54d6e6345d190b880ddc0b3f4139f" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getMCEfficiency</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1aa331415738f2420d3809ec2995892182" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getMCEfficiency</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a9675e56b61f4f871b64342a648b68c30" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getMCEfficiency</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1af53a0f82e2dca47f6eddf160343f2900" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getMCEfficiencyObject</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a7c5a377b6c9c949a2587b859dbfff19d" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getMCInefficiency</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a37545ce790e5770ff7a0b904283b29a5" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getMCInefficiency</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1aa14152d891cb580cfe769e9c1bab78f2" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getMCMCScaleFactor</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a85f69f76c73608b407b7c879bbb397e1" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getNumVariations</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ae038e76e7955ff3904d42fb4f977f028" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getNumVariations</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ad33fccde418c8c16d7d07cdededed21c" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getScaleFactor</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ae44b3ac3f2a8d6d61d31babb5011e2a2" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getScaleFactor</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a257f218c978fd940cca1cf975f22913e" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getScaleFactor</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a0d84c38698522ead60a95d4e43d86d0b" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getScaleFactorCovarianceMatrix</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1af74672b8e5ea2aadbe0b211161978cec" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getShiftedScaleFactors</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a8db4852e7ea35ef43c1464c4f269d611" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getWeightScaleFactor</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1aba079e5e27c7c96bf063982a6302fdc3" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getWeightScaleFactor</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a7c08cb1477c04206fb38e986968ed576" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>getWeightScaleFactor</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a2e5babb7efd329061faa1b859774eb8b" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>increaseCounter</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ad3928d877f3c25a99add738ea8ff65d0" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>initialize</name></member>
+      <member refid="d7/d79/classAnalysis_1_1CalibrationDataInterfaceBase_1aa50dccfee6a2d14d929f693642540964a07dd427b027dc6b695916706dbf5d54d" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>kAbsEta</name></member>
+      <member refid="d7/d79/classAnalysis_1_1CalibrationDataInterfaceBase_1aa50dccfee6a2d14d929f693642540964acef1d0b513512fa006035041054871a6" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>kEta</name></member>
+      <member refid="d7/d79/classAnalysis_1_1CalibrationDataInterfaceBase_1aa50dccfee6a2d14d929f693642540964ab86e922891732b2421e7edbf6c220309" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>kPt</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ac2531bb8ce3d7df7e648da677635563d" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>listScaleFactorUncertainties</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a78077048adf445627deabe4ace74919a" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>listScaleFactorUncertainties</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a6d880258f7d6dbd788e4f53c5712da32" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_absEtaStrategy</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a13e066fca338ff8f12d3df357c92fb40" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_aliases</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a0a2b72878cd05580b110569363332fef" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_checkedWeightScaleFactors</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a24fcb8872f3d4c873167af4339fc9bde" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_eigenVariationsMap</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ae027a8051c02179bbd98e2275d901d3f" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_etaCounters</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a82c980d14b15dd5a8af615ec5706370e" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_EVReductions</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a6bfc0cda0ad9cae68e9112aa4d31d714" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_excludeFromCovMatrix</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a7b1d66c90277b67146e4bcb4f72c61b6" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_extrapolatedCounters</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a3e919c5e6a42085defedc7dcb94a3b8e" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_fileEff</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1af535db42b4838c6eddb7b73854056e5f" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_filenameEff</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1af91826b6c8ce1a572ccc4e8fcf73e852" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_filenameSF</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a2a356f140afbaec5f7ba18c463f62013" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_fileSF</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ab7904888da31d84163a7d3b24edaf9d9" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_hadronisationReference</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ad5eaff5c0f6cdbc566bfc882bace6163" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_mainCounters</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ad21dae80d49eaac0fb68d039a99042a4" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_maxAbsEta</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a2f439edad6a9dfd17291113d1a4d5f27" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_maxTagWeight</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a11f8f81d8429f77d97c16f0b0adc8118" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_objectIndices</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ad1c6e2b4d1fd0e0daa6bc80c3b27db2f" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_objects</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a4a92db9175918232b574c8bf3e92e548" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_otherStrategy</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a3d9af2a7e047984119480fd7a2a317f2" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_refMap</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a5c931164cac88b2cdb3b5cfe4340bb90" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_runEigenVectorMethod</name></member>
+      <member refid="d7/d79/classAnalysis_1_1CalibrationDataInterfaceBase_1a18a603e78a1044c40db2ed183a7bd868" prot="protected" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_taggerName</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1aa0d987249859c862d917d8a74cf8a37c" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_useMCMCSF</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a0afca6ab90f347a7b92c9fd1b68e637c" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>m_useTopologyRescaling</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a983981840a3cc6fd35b1030bd1de3e0a" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>nameFromIndex</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1ac270a987041f673054ff5c1bb4b60b69" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>retrieveCalibrationIndex</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a0b7cb18de8778bc7037f68897c3fc424" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>retrieveContainer</name></member>
+      <member refid="d7/d79/classAnalysis_1_1CalibrationDataInterfaceBase_1a5a1d2fe79737698442b37445d06a5d7c" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>setEffCalibrationNames</name></member>
+      <member refid="d7/d79/classAnalysis_1_1CalibrationDataInterfaceBase_1a7791fe6577f7f1f03f72aaf2da573f38" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>setSFCalibrationNames</name></member>
+      <member refid="d7/d79/classAnalysis_1_1CalibrationDataInterfaceBase_1a6175313f3e363300ae28338a02a1dee0" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>SFCalibrationName</name></member>
+      <member refid="d7/d79/classAnalysis_1_1CalibrationDataInterfaceBase_1aa50dccfee6a2d14d929f693642540964" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>variableType</name></member>
+      <member refid="d7/d79/classAnalysis_1_1CalibrationDataInterfaceBase_1a9c18fe9b169bb9a3f48c6e1d4f848dfe" prot="public" virt="pure-virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>~CalibrationDataInterfaceBase</name></member>
+      <member refid="dd/da8/classAnalysis_1_1CalibrationDataInterfaceROOT_1a6c45be083d8763e20b820cf65c2bd493" prot="public" virt="virtual"><scope>Analysis::CalibrationDataInterfaceROOT</scope><name>~CalibrationDataInterfaceROOT</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dd/d9d/classDataLinkBase" kind="class" prot="public">
+    <compoundname>DataLinkBase</compoundname>
+    <derivedcompoundref refid="da/da2/classDataLink" prot="public" virt="non-virtual">DataLink&lt; STORABLE &gt;</derivedcompoundref>
+    <derivedcompoundref refid="da/da2/classDataLink" prot="public" virt="non-virtual">DataLink&lt; SG::IConstAuxStore &gt;</derivedcompoundref>
+    <derivedcompoundref refid="da/da2/classDataLink" prot="public" virt="non-virtual">DataLink&lt; xAOD::AFPDataContainer_v1 &gt;</derivedcompoundref>
+    <derivedcompoundref refid="da/da2/classDataLink" prot="public" virt="non-virtual">DataLink&lt; xAOD::AFPSiHitContainer_v1 &gt;</derivedcompoundref>
+    <derivedcompoundref refid="da/da2/classDataLink" prot="public" virt="non-virtual">DataLink&lt; xAOD::AFPTrackContainer_v1 &gt;</derivedcompoundref>
+    <derivedcompoundref refid="da/da2/classDataLink" prot="public" virt="non-virtual">DataLink&lt; xAOD::ALFADataContainer_v1 &gt;</derivedcompoundref>
+    <derivedcompoundref refid="da/da2/classDataLink" prot="public" virt="non-virtual">DataLink&lt; xAOD::ForwardEventInfoContainer_v1 &gt;</derivedcompoundref>
+    <derivedcompoundref refid="da/da2/classDataLink" prot="public" virt="non-virtual">DataLink&lt; xAOD::MBTSModuleContainer_v1 &gt;</derivedcompoundref>
+    <derivedcompoundref refid="da/da2/classDataLink" prot="public" virt="non-virtual">DataLink&lt; xAOD::ZdcModuleContainer_v1 &gt;</derivedcompoundref>
+    <includes refid="db/da8/DataLinkBase_8h" local="no">DataLinkBase.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="dd/d9d/classDataLinkBase_1aa72a86ffd740d5b8bde149c71f4eb932" prot="protected" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t DataLinkBase::m_persKey</definition>
+        <argsstring></argsstring>
+        <name>m_persKey</name>
+        <briefdescription>
+<para>Key/identifier of the referenced object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/AthLinks/DataLinkBase.h" line="47" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/AthLinks/DataLinkBase.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d9d/classDataLinkBase_1aba6cc5a414d045bdd05252e8243a1383" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DataLinkBase::m_isDirectIO</definition>
+        <argsstring></argsstring>
+        <name>m_isDirectIO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="d4/dc4/structA" kindref="compound">A</ref> transient variable signalling when direct I/O is happening</para><para>This flag is used exclusively by the DataLink&lt;&gt;::toTransient() function to know when it should take the persistent data stored in this object into account. That function may be called in normal P-&gt;<ref refid="d1/def/classT" kindref="compound">T</ref> conversions as well, in which case using the data from this class would just reset the object to its default state. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/AthLinks/DataLinkBase.h" line="57" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/AthLinks/DataLinkBase.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/d9d/classDataLinkBase_1ac598f84b320f37f2297de6b3cbc608b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DataLinkBase::DataLinkBase</definition>
+        <argsstring>(uint32_t key=0)</argsstring>
+        <name>DataLinkBase</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>key</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/AthLinks/DataLinkBase.h" line="27" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/Root/DataLinkBase.cxx" bodystart="6" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d9d/classDataLinkBase_1a96037aa570ac940cdeedcffdf122c83d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual DataLinkBase::~DataLinkBase</definition>
+        <argsstring>()</argsstring>
+        <name>~DataLinkBase</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/AthLinks/DataLinkBase.h" line="29" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/AthLinks/DataLinkBase.h" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d9d/classDataLinkBase_1a83dfbe38815814f196ff9bebb6445732" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t DataLinkBase::persKey</definition>
+        <argsstring>() const </argsstring>
+        <name>persKey</name>
+        <briefdescription>
+<para>Get the key/identifier of the referenced container. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/AthLinks/DataLinkBase.h" line="32" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/Root/DataLinkBase.cxx" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d9d/classDataLinkBase_1aeab9424694675c8cf59f2b863117eb71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DataLinkBase::setPersKey</definition>
+        <argsstring>(uint32_t key)</argsstring>
+        <name>setPersKey</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Set the key/identifier of the referenced container. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/AthLinks/DataLinkBase.h" line="34" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/Root/DataLinkBase.cxx" bodystart="16" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d9d/classDataLinkBase_1a963405ae674171002d3ae26afa642f08" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DataLinkBase::isDefault</definition>
+        <argsstring>() const </argsstring>
+        <name>isDefault</name>
+        <briefdescription>
+<para>Test if the link is in the default state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/AthLinks/DataLinkBase.h" line="37" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/Root/DataLinkBase.cxx" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d9d/classDataLinkBase_1a6c40bbdf1515f6373ae0564c4ddf6b37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DataLinkBase::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+<para>Clear the link (make it null). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/AthLinks/DataLinkBase.h" line="40" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/Root/DataLinkBase.cxx" bodystart="34" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d9d/classDataLinkBase_1a6d5619ffb7684aece36ba9e821e7b711" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool DataLinkBase::toTransient</definition>
+        <argsstring>()=0</argsstring>
+        <name>toTransient</name>
+        <reimplementedby refid="da/da2/classDataLink_1a02d7389167070ff411998ac8d428a574">toTransient</reimplementedby>
+        <reimplementedby refid="da/da2/classDataLink_1a02d7389167070ff411998ac8d428a574">toTransient</reimplementedby>
+        <reimplementedby refid="da/da2/classDataLink_1a02d7389167070ff411998ac8d428a574">toTransient</reimplementedby>
+        <reimplementedby refid="da/da2/classDataLink_1a02d7389167070ff411998ac8d428a574">toTransient</reimplementedby>
+        <reimplementedby refid="da/da2/classDataLink_1a02d7389167070ff411998ac8d428a574">toTransient</reimplementedby>
+        <reimplementedby refid="da/da2/classDataLink_1a02d7389167070ff411998ac8d428a574">toTransient</reimplementedby>
+        <reimplementedby refid="da/da2/classDataLink_1a02d7389167070ff411998ac8d428a574">toTransient</reimplementedby>
+        <reimplementedby refid="da/da2/classDataLink_1a02d7389167070ff411998ac8d428a574">toTransient</reimplementedby>
+        <reimplementedby refid="da/da2/classDataLink_1a02d7389167070ff411998ac8d428a574">toTransient</reimplementedby>
+        <briefdescription>
+<para>Reset the object&apos;s internal cache. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/AthLinks/DataLinkBase.h" line="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="d4/dc4/structA" kindref="compound">A</ref> base class holding the object independent part of <ref refid="da/da2/classDataLink" kindref="compound">DataLink</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>To implement efficient ROOT I/O for DataLink&lt;T&gt; classes, they all store their persistent information in this common base class, and DataLink&lt;T&gt; just holds transient variables.</para><para><simplesect kind="author"><para>Attila Krasznahorkay &lt;<ulink url="mailto:Attila.Krasznahorkay@cern.ch">Attila.Krasznahorkay@cern.ch</ulink>&gt;</para></simplesect>
+<simplesect kind="rcs"><title>Revision</title><para>602641 </para></simplesect>
+<simplesect kind="rcs"><title>Date</title><para>2014-06-19 15:05:08 +0200 (Thu, 19 Jun 2014) </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="4783">
+        <label>DataLink&lt; STORABLE &gt;</label>
+        <link refid="da/da2/classDataLink"/>
+        <childnode refid="4782" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4790">
+        <label>DataLink&lt; xAOD::MBTSModuleContainer_v1 &gt;</label>
+        <link refid="da/da2/classDataLink"/>
+        <childnode refid="4782" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4785">
+        <label>DataLink&lt; xAOD::AFPDataContainer_v1 &gt;</label>
+        <link refid="da/da2/classDataLink"/>
+        <childnode refid="4782" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4786">
+        <label>DataLink&lt; xAOD::AFPSiHitContainer_v1 &gt;</label>
+        <link refid="da/da2/classDataLink"/>
+        <childnode refid="4782" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4782">
+        <label>DataLinkBase</label>
+        <link refid="dd/d9d/classDataLinkBase"/>
+      </node>
+      <node id="4784">
+        <label>DataLink&lt; SG::IConstAuxStore &gt;</label>
+        <link refid="da/da2/classDataLink"/>
+        <childnode refid="4782" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4787">
+        <label>DataLink&lt; xAOD::AFPTrackContainer_v1 &gt;</label>
+        <link refid="da/da2/classDataLink"/>
+        <childnode refid="4782" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4791">
+        <label>DataLink&lt; xAOD::ZdcModuleContainer_v1 &gt;</label>
+        <link refid="da/da2/classDataLink"/>
+        <childnode refid="4782" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4789">
+        <label>DataLink&lt; xAOD::ForwardEventInfoContainer_v1 &gt;</label>
+        <link refid="da/da2/classDataLink"/>
+        <childnode refid="4782" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4788">
+        <label>DataLink&lt; xAOD::ALFADataContainer_v1 &gt;</label>
+        <link refid="da/da2/classDataLink"/>
+        <childnode refid="4782" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/AthLinks/DataLinkBase.h" line="23" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthLinks/AthLinks/DataLinkBase.h" bodystart="23" bodyend="59"/>
+    <listofallmembers>
+      <member refid="dd/d9d/classDataLinkBase_1a6c40bbdf1515f6373ae0564c4ddf6b37" prot="public" virt="non-virtual"><scope>DataLinkBase</scope><name>clear</name></member>
+      <member refid="dd/d9d/classDataLinkBase_1ac598f84b320f37f2297de6b3cbc608b0" prot="public" virt="non-virtual"><scope>DataLinkBase</scope><name>DataLinkBase</name></member>
+      <member refid="dd/d9d/classDataLinkBase_1a963405ae674171002d3ae26afa642f08" prot="public" virt="non-virtual"><scope>DataLinkBase</scope><name>isDefault</name></member>
+      <member refid="dd/d9d/classDataLinkBase_1aba6cc5a414d045bdd05252e8243a1383" prot="protected" virt="non-virtual"><scope>DataLinkBase</scope><name>m_isDirectIO</name></member>
+      <member refid="dd/d9d/classDataLinkBase_1aa72a86ffd740d5b8bde149c71f4eb932" prot="protected" virt="non-virtual"><scope>DataLinkBase</scope><name>m_persKey</name></member>
+      <member refid="dd/d9d/classDataLinkBase_1a83dfbe38815814f196ff9bebb6445732" prot="public" virt="non-virtual"><scope>DataLinkBase</scope><name>persKey</name></member>
+      <member refid="dd/d9d/classDataLinkBase_1aeab9424694675c8cf59f2b863117eb71" prot="public" virt="non-virtual"><scope>DataLinkBase</scope><name>setPersKey</name></member>
+      <member refid="dd/d9d/classDataLinkBase_1a6d5619ffb7684aece36ba9e821e7b711" prot="public" virt="pure-virtual"><scope>DataLinkBase</scope><name>toTransient</name></member>
+      <member refid="dd/d9d/classDataLinkBase_1a96037aa570ac940cdeedcffdf122c83d" prot="public" virt="virtual"><scope>DataLinkBase</scope><name>~DataLinkBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

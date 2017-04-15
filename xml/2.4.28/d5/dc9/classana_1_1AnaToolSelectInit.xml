@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d5/dc9/classana_1_1AnaToolSelectInit" kind="class" prot="public">
+    <compoundname>ana::AnaToolSelectInit</compoundname>
+    <basecompoundref refid="dd/d79/classana_1_1IAnaTool" prot="public" virt="virtual">ana::IAnaTool</basecompoundref>
+    <basecompoundref refid="d3/da1/classana_1_1AnaTool" prot="public" virt="non-virtual">ana::AnaTool</basecompoundref>
+    <includes refid="d9/d24/AnaToolSelectInit_8h" local="no">AnaToolSelectInit.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d5/dc9/classana_1_1AnaToolSelectInit_1ac7a847da82aa1f5e5db0aa77cb19ad06" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/d63/namespaceana_1ae3f743901acd68af2cd8583a1f982eee" kindref="member">ObjectType</ref></type>
+        <definition>ObjectType ana::AnaToolSelectInit::m_type</definition>
+        <argsstring></argsstring>
+        <name>m_type</name>
+        <briefdescription>
+<para>the type of object we work on </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/AnaToolSelectInit.h" line="83" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/AnaToolSelectInit.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/dc9/classana_1_1AnaToolSelectInit_1ab3232571b6c9f9062595d612ae19c233" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="d8/d31/classSG_1_1AuxElement_1_1Accessor" kindref="compound">SG::AuxElement::Accessor</ref>&lt; <ref refid="d7/d63/namespaceana_1abba4ccb31bcf7a550a3e8bd5b4053041" kindref="member">SelectType</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;SG::AuxElement::Accessor&lt;SelectType&gt; &gt; ana::AnaToolSelectInit::m_select</definition>
+        <argsstring></argsstring>
+        <name>m_select</name>
+        <briefdescription>
+<para>the selection fields </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/AnaToolSelectInit.h" line="87" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/AnaToolSelectInit.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d5/dc9/classana_1_1AnaToolSelectInit_1a79a6b83fd4574354c44d2bd320a87062" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ana::AnaToolSelectInit::AnaToolSelectInit</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>AnaToolSelectInit</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>standard constructor </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>out of memory II </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/AnaToolSelectInit.h" line="40" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/AnaToolSelectInit.cxx" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc9/classana_1_1AnaToolSelectInit_1adc95f1310954d483289f6572783a8f05" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode ana::AnaToolSelectInit::setObjectType</definition>
+        <argsstring>(ObjectType type, const std::string &amp;workingPoint) override</argsstring>
+        <name>setObjectType</name>
+        <reimplements refid="dd/d79/classana_1_1IAnaTool_1aacdcd8e1615fc4cbea86585735247bd3">setObjectType</reimplements>
+        <param>
+          <type><ref refid="d7/d63/namespaceana_1ae3f743901acd68af2cd8583a1f982eee" kindref="member">ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>workingPoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="IAnaTool::setObjectType"><para>set the object type to work on </para><para>this is called straight after the tool is created and before it is initialized. the primary reason for this function is to allow jet definitions to be used for either jets or fat jets. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object type we work on </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>workingPoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the working point we are working on or the empty string if this is a sole working point or working points do not apply </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>unsupported object type  this interface may change when I introduce multiple simultaneous working points </para></simplesect>
+</para></copydoc>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/AnaToolSelectInit.h" line="46" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/AnaToolSelectInit.cxx" bodystart="47" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc9/classana_1_1AnaToolSelectInit_1a9ecd598e948c6c888cff8955a8c4b32e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d7/d63/namespaceana_1ab23609972a1f1feb4c5d4a5c1aae436c" kindref="member">AnalysisStep</ref></type>
+        <definition>AnalysisStep ana::AnaToolSelectInit::step</definition>
+        <argsstring>() const override</argsstring>
+        <name>step</name>
+        <reimplements refid="dd/d79/classana_1_1IAnaTool_1a2c23390bb014fe70a4219e650eb3581c">step</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="IAnaTool::step"><para>the processing step we are working on </para><para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para></copydoc>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/AnaToolSelectInit.h" line="51" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/AnaToolSelectInit.cxx" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc9/classana_1_1AnaToolSelectInit_1a68a24bfff1b90abdaa0f1f72df214b3f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned</type>
+        <definition>unsigned ana::AnaToolSelectInit::inputTypes</definition>
+        <argsstring>() const override</argsstring>
+        <name>inputTypes</name>
+        <reimplements refid="dd/d79/classana_1_1IAnaTool_1ae0b46a2c5898cc094efa9e2a7c4404db">inputTypes</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="IAnaTool::inputTypes"><para>a bit-map indicating which object types we use </para><para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para></copydoc>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/AnaToolSelectInit.h" line="56" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/AnaToolSelectInit.cxx" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc9/classana_1_1AnaToolSelectInit_1aa5d03a1e86c8c141067f9ff4ceecfdf5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned</type>
+        <definition>unsigned ana::AnaToolSelectInit::outputTypes</definition>
+        <argsstring>() const override</argsstring>
+        <name>outputTypes</name>
+        <reimplements refid="dd/d79/classana_1_1IAnaTool_1ae6113fafb5c4f616b6598fcba8ae4a63">outputTypes</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="IAnaTool::outputTypes"><para>a bit-map indicating which output types we will create </para><para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para></copydoc>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/AnaToolSelectInit.h" line="61" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/AnaToolSelectInit.cxx" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc9/classana_1_1AnaToolSelectInit_1a7eff63ebc5ab57c8bea608a75664b02f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode ana::AnaToolSelectInit::useConfiguration</definition>
+        <argsstring>(const InternalConfiguration &amp;configuration) override</argsstring>
+        <name>useConfiguration</name>
+        <reimplements refid="d3/da1/classana_1_1AnaTool_1ada928bab68bb875e0d69fc41f42849cc">useConfiguration</reimplements>
+        <param>
+          <type>const <ref refid="db/daa/classana_1_1InternalConfiguration" kindref="compound">InternalConfiguration</ref> &amp;</type>
+          <declname>configuration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="IAnaTool::useConfiguration"><para>extract whatever we need from the given configuration object </para><para><simplesect kind="par"><title>Guarantee</title><para>basic </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>tool failures </para></simplesect>
+</para></copydoc>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/AnaToolSelectInit.h" line="68" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/AnaToolSelectInit.cxx" bodystart="36" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dc9/classana_1_1AnaToolSelectInit_1ac3df9c110b36979bc51d36cfc6b80e3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode ana::AnaToolSelectInit::execute</definition>
+        <argsstring>(IEventObjects &amp;objects) override</argsstring>
+        <name>execute</name>
+        <reimplements refid="dd/d79/classana_1_1IAnaTool_1aa2ba8f9503ddecac7dcc1f939607b1bd">execute</reimplements>
+        <param>
+          <type><ref refid="d4/d77/classana_1_1IEventObjects" kindref="compound">IEventObjects</ref> &amp;</type>
+          <declname>objects</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="IAnaTool::execute"><para>apply this analysis tool to the objects </para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>objects</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the objects to apply this too </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="par"><title>Guarantee</title><para>basic </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>tool dependent </para></simplesect>
+</para></copydoc>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/AnaToolSelectInit.h" line="73" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/AnaToolSelectInit.cxx" bodystart="85" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The tool class that takes care of setting the selection flags to true at the beginning. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="659">
+        <label>ana::AnaTool</label>
+        <link refid="d3/da1/classana_1_1AnaTool"/>
+        <childnode refid="656" relation="public-inheritance">
+        </childnode>
+        <childnode refid="660" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="660">
+        <label>asg::AsgTool</label>
+        <link refid="d5/dbb/classasg_1_1AsgTool"/>
+        <childnode refid="658" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="658">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="656">
+        <label>ana::IAnaTool</label>
+        <link refid="dd/d79/classana_1_1IAnaTool"/>
+        <childnode refid="657" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="655">
+        <label>ana::AnaToolSelectInit</label>
+        <link refid="d5/dc9/classana_1_1AnaToolSelectInit"/>
+        <childnode refid="656" relation="public-inheritance">
+        </childnode>
+        <childnode refid="659" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="657">
+        <label>CP::ISystematicsTool</label>
+        <link refid="d4/d5c/classCP_1_1ISystematicsTool"/>
+        <childnode refid="658" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="665">
+        <label>ana::AnaTool</label>
+        <link refid="d3/da1/classana_1_1AnaTool"/>
+        <childnode refid="662" relation="public-inheritance">
+        </childnode>
+        <childnode refid="666" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="666">
+        <label>asg::AsgTool</label>
+        <link refid="d5/dbb/classasg_1_1AsgTool"/>
+        <childnode refid="664" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="664">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="662">
+        <label>ana::IAnaTool</label>
+        <link refid="dd/d79/classana_1_1IAnaTool"/>
+        <childnode refid="663" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="661">
+        <label>ana::AnaToolSelectInit</label>
+        <link refid="d5/dc9/classana_1_1AnaToolSelectInit"/>
+        <childnode refid="662" relation="public-inheritance">
+        </childnode>
+        <childnode refid="665" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="663">
+        <label>CP::ISystematicsTool</label>
+        <link refid="d4/d5c/classCP_1_1ISystematicsTool"/>
+        <childnode refid="664" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/AnaToolSelectInit.h" line="26" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/AnaToolSelectInit.h" bodystart="25" bodyend="88"/>
+    <listofallmembers>
+      <member refid="d4/d5c/classCP_1_1ISystematicsTool_1abc7cfc4bece0b5aaf372e75c33ba2122" prot="public" virt="pure-virtual" ambiguityscope="ana::"><scope>ana::AnaToolSelectInit</scope><name>affectingSystematics</name></member>
+      <member refid="d3/da1/classana_1_1AnaTool_1a41a42e6110329f403db0313ef86f9e85" prot="public" virt="virtual" ambiguityscope="ana::AnaTool::"><scope>ana::AnaToolSelectInit</scope><name>affectingSystematics</name></member>
+      <member refid="d3/da1/classana_1_1AnaTool_1a931867debbc6e47001089269fcbc5fc6" prot="public" virt="non-virtual"><scope>ana::AnaToolSelectInit</scope><name>AnaTool</name></member>
+      <member refid="d5/dc9/classana_1_1AnaToolSelectInit_1a79a6b83fd4574354c44d2bd320a87062" prot="public" virt="non-virtual"><scope>ana::AnaToolSelectInit</scope><name>AnaToolSelectInit</name></member>
+      <member refid="d4/d5c/classCP_1_1ISystematicsTool_1a73f35f85955411a7e14cb208721a242d" prot="public" virt="pure-virtual" ambiguityscope="ana::"><scope>ana::AnaToolSelectInit</scope><name>applySystematicVariation</name></member>
+      <member refid="d3/da1/classana_1_1AnaTool_1a4386803dcaed91be483a2271bc018f73" prot="public" virt="virtual" ambiguityscope="ana::AnaTool::"><scope>ana::AnaToolSelectInit</scope><name>applySystematicVariation</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a47f02c756c6d6026d03e0d4d68d82a94" prot="public" virt="non-virtual"><scope>ana::AnaToolSelectInit</scope><name>AsgTool</name></member>
+      <member refid="d5/dc9/classana_1_1AnaToolSelectInit_1ac3df9c110b36979bc51d36cfc6b80e3e" prot="public" virt="virtual"><scope>ana::AnaToolSelectInit</scope><name>execute</name></member>
+      <member refid="dd/d79/classana_1_1IAnaTool_1a430d26824c36b1cfff9ab9a1d832da89" prot="public" virt="pure-virtual" ambiguityscope="ana::"><scope>ana::AnaToolSelectInit</scope><name>fillEventDataSource</name></member>
+      <member refid="d3/da1/classana_1_1AnaTool_1a6d5f8782113086cead794c9b2b4b79fe" prot="public" virt="virtual" ambiguityscope="ana::AnaTool::"><scope>ana::AnaToolSelectInit</scope><name>fillEventDataSource</name></member>
+      <member refid="dd/d79/classana_1_1IAnaTool_1a4266bcb261e0e86b3d4e0f3d6bb39608" prot="public" virt="pure-virtual" ambiguityscope="ana::"><scope>ana::AnaToolSelectInit</scope><name>getInitialConfiguration</name></member>
+      <member refid="d3/da1/classana_1_1AnaTool_1aacf442c2607147204e3315100c6eb669" prot="public" virt="virtual" ambiguityscope="ana::AnaTool::"><scope>ana::AnaToolSelectInit</scope><name>getInitialConfiguration</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a5d9d9eae0988784fb6c257e0a2440ca6" prot="public" virt="non-virtual"><scope>ana::AnaToolSelectInit</scope><name>getProperty</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a55b3c013a3e54ae4c1d0d76de8e1e726" prot="public" virt="virtual"><scope>ana::AnaToolSelectInit</scope><name>initialize</name></member>
+      <member refid="d5/dc9/classana_1_1AnaToolSelectInit_1a68a24bfff1b90abdaa0f1f72df214b3f" prot="public" virt="virtual"><scope>ana::AnaToolSelectInit</scope><name>inputTypes</name></member>
+      <member refid="d4/d5c/classCP_1_1ISystematicsTool_1a04aa5fb3e693dc6536b27354c7b2c71e" prot="public" virt="pure-virtual" ambiguityscope="ana::"><scope>ana::AnaToolSelectInit</scope><name>isAffectedBySystematic</name></member>
+      <member refid="d3/da1/classana_1_1AnaTool_1a432f1d91056169dd78e0a4d375700311" prot="public" virt="virtual" ambiguityscope="ana::AnaTool::"><scope>ana::AnaToolSelectInit</scope><name>isAffectedBySystematic</name></member>
+      <member refid="d5/dc9/classana_1_1AnaToolSelectInit_1ab3232571b6c9f9062595d612ae19c233" prot="private" virt="non-virtual"><scope>ana::AnaToolSelectInit</scope><name>m_select</name></member>
+      <member refid="d5/dc9/classana_1_1AnaToolSelectInit_1ac7a847da82aa1f5e5db0aa77cb19ad06" prot="private" virt="non-virtual"><scope>ana::AnaToolSelectInit</scope><name>m_type</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a3aeba8f7ad5ade0197f5848fe9e4480e" prot="public" virt="non-virtual"><scope>ana::AnaToolSelectInit</scope><name>msg_level_name</name></member>
+      <member refid="d5/dc9/classana_1_1AnaToolSelectInit_1aa5d03a1e86c8c141067f9ff4ceecfdf5" prot="public" virt="virtual"><scope>ana::AnaToolSelectInit</scope><name>outputTypes</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1af1aac990b958e92bf38123318d926e67" prot="public" virt="pure-virtual" ambiguityscope="ana::"><scope>ana::AnaToolSelectInit</scope><name>print</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1af4cc6ba53b6505045c2866d4e30e821d" prot="public" virt="virtual" ambiguityscope="ana::AnaTool::asg::AsgTool::"><scope>ana::AnaToolSelectInit</scope><name>print</name></member>
+      <member refid="d4/d5c/classCP_1_1ISystematicsTool_1a6d2b283af1c21f9d40588ef87eb6c4b3" prot="public" virt="pure-virtual" ambiguityscope="ana::"><scope>ana::AnaToolSelectInit</scope><name>recommendedSystematics</name></member>
+      <member refid="d3/da1/classana_1_1AnaTool_1a7a7efe8cb2f0112da1c5ba6fb45d3449" prot="public" virt="virtual" ambiguityscope="ana::AnaTool::"><scope>ana::AnaToolSelectInit</scope><name>recommendedSystematics</name></member>
+      <member refid="d3/da1/classana_1_1AnaTool_1ad480d0bcbae3878b44667854871d5e84" prot="protected" virt="non-virtual"><scope>ana::AnaToolSelectInit</scope><name>registerTool</name></member>
+      <member refid="d3/da1/classana_1_1AnaTool_1a8b7c7ac5881b85a20d50d0d00ab9c5cc" prot="protected" virt="non-virtual"><scope>ana::AnaToolSelectInit</scope><name>registerTool</name></member>
+      <member refid="d5/dc9/classana_1_1AnaToolSelectInit_1adc95f1310954d483289f6572783a8f05" prot="public" virt="virtual"><scope>ana::AnaToolSelectInit</scope><name>setObjectType</name></member>
+      <member refid="d5/dc9/classana_1_1AnaToolSelectInit_1a9ecd598e948c6c888cff8955a8c4b32e" prot="public" virt="virtual"><scope>ana::AnaToolSelectInit</scope><name>step</name></member>
+      <member refid="d3/da1/classana_1_1AnaTool_1af11f3f6f00d0a7c0817c08cd9995ccc1" prot="public" virt="non-virtual"><scope>ana::AnaToolSelectInit</scope><name>testInvariant</name></member>
+      <member refid="d5/dc9/classana_1_1AnaToolSelectInit_1a7eff63ebc5ab57c8bea608a75664b02f" prot="public" virt="virtual"><scope>ana::AnaToolSelectInit</scope><name>useConfiguration</name></member>
+      <member refid="dd/d79/classana_1_1IAnaTool_1af3164d27ee7ee007ba6b3f90dbcdd2da" prot="public" virt="pure-virtual" ambiguityscope="ana::"><scope>ana::AnaToolSelectInit</scope><name>useInitialConfiguration</name></member>
+      <member refid="d3/da1/classana_1_1AnaTool_1a5d7ff5416211e3cc756e450b92b9e1bc" prot="public" virt="virtual" ambiguityscope="ana::AnaTool::"><scope>ana::AnaToolSelectInit</scope><name>useInitialConfiguration</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1abf22f7aa60258c67b79cf67bf70a3a5b" prot="public" virt="non-virtual"><scope>ana::AnaToolSelectInit</scope><name>~AsgTool</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1a77b49d52f1f8c272cb665b8309d6082d" prot="public" virt="virtual"><scope>ana::AnaToolSelectInit</scope><name>~IAsgTool</name></member>
+      <member refid="d4/d5c/classCP_1_1ISystematicsTool_1a18391a9c9b1789aa9045082bcd65c6ee" prot="public" virt="virtual"><scope>ana::AnaToolSelectInit</scope><name>~ISystematicsTool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

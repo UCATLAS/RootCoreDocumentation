@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="df/d6a/ut__PRWDataWeightExample__test_8cxx" kind="file">
+    <compoundname>ut_PRWDataWeightExample_test.cxx</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="df/d6a/ut__PRWDataWeightExample__test_8cxx_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PileupReweighting/test/ut_PRWDataWeightExample_test.cxx" line="109" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PileupReweighting/test/ut_PRWDataWeightExample_test.cxx" bodystart="109" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//example<sp/>program<sp/>for<sp/>how<sp/>to<sp/>use<sp/>Data<sp/>weight<sp/>for<sp/>unprescaling<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>XAOD_ANALYSIS</highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifndef<sp/>XAOD_STANDALONE</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AsgTools/AnaToolHandle.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AsgAnalysisInterfaces/IPileupReweightingTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TrigDecisionInterface/ITrigDecisionTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;PileupReweighting/TPileupReweighting.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TROOT.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;POOLRootAccess/TEvent.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">asg::msgUserCode;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>ANA_CHECK_SET_TYPE<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//makes<sp/>ANA_CHECK<sp/>return<sp/>ints<sp/>if<sp/>exiting<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>POOL::TEvent<sp/>evt;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>evt.readFrom(</highlight><highlight class="stringliteral">&quot;/r04/atlas/will/xAOD/data16_13TeV/DAOD_HIGG3D1.08297165._000001.pool.root.1&quot;</highlight><highlight class="normal">);</highlight><highlight class="comment">//&quot;$ASG_TEST_FILE_DATA&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>asg::AnaToolHandle&lt;CP::IPileupReweightingTool&gt;<sp/>prwTool(</highlight><highlight class="stringliteral">&quot;CP::PileupReweightingTool/prw&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>std::vector&lt;std::string&gt;<sp/>lcFiles<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;GoodRunsLists/data16_13TeV/20160803/physics_25ns_20.7.lumicalc.OflLumi-13TeV-005.root&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="comment">//the<sp/>unprescaled<sp/>lc<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;dev/PileupReweighting/ilumicalc_histograms_HLT_e12_lhvloose_nod0_L1EM10VH_297730-304494_OflLumi-13TeV-005.root:HLT_e12_lhvloose_nod0_L1EM10VH&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;dev/PileupReweighting/ilumicalc_histograms_HLT_e24_lhvloose_nod0_L1EM20VH_297730-304494_OflLumi-13TeV-005.root:HLT_e24_lhvloose_nod0_L1EM20VH&quot;</highlight><highlight class="normal">};<sp/></highlight><highlight class="comment">//feed<sp/>with<sp/>lc<sp/>files<sp/>for<sp/>each<sp/>trigger</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>prwTool.setProperty(<sp/></highlight><highlight class="stringliteral">&quot;LumiCalcFiles&quot;</highlight><highlight class="normal"><sp/>,<sp/>lcFiles<sp/>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//prwTool.setProperty(<sp/>&quot;OutputLevel&quot;,<sp/>1<sp/>);<sp/>//VERBOSE<sp/>OUTPUT<sp/>LEVEL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>prwTool.initialize();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>prwTool-&gt;expert()-&gt;GetDataWeight(<sp/>297730<sp/>,<sp/></highlight><highlight class="stringliteral">&quot;HLT_e12_lhvloose_nod0_L1EM10VH&quot;</highlight><highlight class="normal">,<sp/>4)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<sp/>(<sp/>fabs(prwTool-&gt;expert()-&gt;GetDataWeight(<sp/>297730<sp/>,<sp/></highlight><highlight class="stringliteral">&quot;HLT_e12_lhvloose_nod0_L1EM10VH&quot;</highlight><highlight class="normal">,<sp/>4)<sp/><sp/>-<sp/>8797.7)<sp/>&lt;<sp/>1e-3<sp/>)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;data<sp/>weight<sp/>not<sp/>expected<sp/>value<sp/>8797.7&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>prwTool-&gt;expert()-&gt;GetDataWeight(<sp/>297730<sp/>,<sp/></highlight><highlight class="stringliteral">&quot;HLT_e24_lhvloose_nod0_L1EM20VH&quot;</highlight><highlight class="normal">,<sp/>4)<sp/>&lt;&lt;<sp/>std::endl;<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<sp/>(<sp/>fabs(prwTool-&gt;expert()-&gt;GetDataWeight(<sp/>297730<sp/>,<sp/></highlight><highlight class="stringliteral">&quot;HLT_e24_lhvloose_nod0_L1EM20VH&quot;</highlight><highlight class="normal">,<sp/>4)<sp/><sp/>-<sp/>109.155)<sp/>&lt;<sp/>1e-3<sp/>)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;data<sp/>weight<sp/>not<sp/>expected<sp/>value<sp/>109.155&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>prwTool-&gt;expert()-&gt;GetDataWeight(<sp/>297730<sp/>,<sp/></highlight><highlight class="stringliteral">&quot;HLT_e24_lhvloose_nod0_L1EM20VH||HLT_e12_lhvloose_nod0_L1EM10VH&quot;</highlight><highlight class="normal">,<sp/>4)<sp/>&lt;&lt;<sp/>std::endl;<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<sp/>(<sp/>fabs(prwTool-&gt;expert()-&gt;GetDataWeight(<sp/>297730<sp/>,<sp/></highlight><highlight class="stringliteral">&quot;HLT_e24_lhvloose_nod0_L1EM20VH||HLT_e12_lhvloose_nod0_L1EM10VH&quot;</highlight><highlight class="normal">,<sp/>4)<sp/><sp/>-<sp/>107.829)<sp/>&lt;<sp/>1e-3<sp/>)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;data<sp/>weight<sp/>not<sp/>expected<sp/>value<sp/><sp/>107.829&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>prwTool-&gt;expert()-&gt;GetDataWeight(<sp/>297730<sp/>,<sp/></highlight><highlight class="stringliteral">&quot;HLT_e24_lhvloose_nod0_L1EM20VH&amp;&amp;HLT_e12_lhvloose_nod0_L1EM10VH&quot;</highlight><highlight class="normal">,<sp/>4)<sp/>&lt;&lt;<sp/>std::endl;<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<sp/>(<sp/>fabs(prwTool-&gt;expert()-&gt;GetDataWeight(<sp/>297730<sp/>,<sp/></highlight><highlight class="stringliteral">&quot;HLT_e24_lhvloose_nod0_L1EM20VH&amp;&amp;HLT_e12_lhvloose_nod0_L1EM10VH&quot;</highlight><highlight class="normal">,<sp/>4)<sp/><sp/>-<sp/>960312)<sp/>&lt;<sp/>1.0)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;data<sp/>weight<sp/>not<sp/>expected<sp/>value<sp/>960312&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//in<sp/>this<sp/>version<sp/>4.0<sp/>onwards,<sp/>trigger<sp/>bits<sp/>default<sp/>to<sp/>assuming<sp/>the<sp/>trigger<sp/>passed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>prwTool-&gt;expert()-&gt;SetTriggerBit(</highlight><highlight class="stringliteral">&quot;HLT_e12_lhvloose_nod0_L1EM10VH&quot;</highlight><highlight class="normal"><sp/>,<sp/>1);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>prwTool-&gt;expert()-&gt;SetTriggerBit(</highlight><highlight class="stringliteral">&quot;HLT_e24_lhvloose_nod0_L1EM20VH&quot;</highlight><highlight class="normal"><sp/>,<sp/>0);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>prwTool-&gt;expert()-&gt;GetDataWeight(<sp/>297730<sp/>,<sp/></highlight><highlight class="stringliteral">&quot;HLT_e24_lhvloose_nod0_L1EM20VH||HLT_e12_lhvloose_nod0_L1EM10VH&quot;</highlight><highlight class="normal">,<sp/>4)<sp/>&lt;&lt;<sp/>std::endl;<sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<sp/>(<sp/>fabs(prwTool-&gt;expert()-&gt;GetDataWeight(<sp/>297730<sp/>,<sp/></highlight><highlight class="stringliteral">&quot;HLT_e24_lhvloose_nod0_L1EM20VH||HLT_e12_lhvloose_nod0_L1EM10VH&quot;</highlight><highlight class="normal">,<sp/>4)<sp/><sp/>-<sp/>8797.7)<sp/>&lt;<sp/>1e-3<sp/>)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;data<sp/>weight<sp/>not<sp/>expected<sp/>value<sp/>8797.7&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>prwTool-&gt;expert()-&gt;SetTriggerBit(</highlight><highlight class="stringliteral">&quot;HLT_e24_lhvloose_nod0_L1EM20VH&quot;</highlight><highlight class="normal"><sp/>,<sp/>1);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>prwTool-&gt;expert()-&gt;GetDataWeight(<sp/>297730<sp/>,<sp/></highlight><highlight class="stringliteral">&quot;HLT_e24_lhvloose_nod0_L1EM20VH||HLT_e12_lhvloose_nod0_L1EM10VH&quot;</highlight><highlight class="normal">,<sp/>4)<sp/>&lt;&lt;<sp/>std::endl;<sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<sp/>(<sp/>fabs(prwTool-&gt;expert()-&gt;GetDataWeight(<sp/>297730<sp/>,<sp/></highlight><highlight class="stringliteral">&quot;HLT_e24_lhvloose_nod0_L1EM20VH||HLT_e12_lhvloose_nod0_L1EM10VH&quot;</highlight><highlight class="normal">,<sp/>4)<sp/><sp/>-<sp/>107.829)<sp/>&lt;<sp/>1e-3<sp/>)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;data<sp/>weight<sp/>not<sp/>expected<sp/>value<sp/>107.829&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>prwTool-&gt;expert()-&gt;SetTriggerBit(</highlight><highlight class="stringliteral">&quot;HLT_e12_lhvloose_nod0_L1EM10VH&quot;</highlight><highlight class="normal"><sp/>,<sp/>0);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>prwTool-&gt;expert()-&gt;GetDataWeight(<sp/>297730<sp/>,<sp/><sp/></highlight><highlight class="stringliteral">&quot;HLT_e24_lhvloose_nod0_L1EM20VH||HLT_e12_lhvloose_nod0_L1EM10VH&quot;</highlight><highlight class="normal">,<sp/>4)<sp/>&lt;&lt;<sp/>std::endl;<sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<sp/>(<sp/>fabs(prwTool-&gt;expert()-&gt;GetDataWeight(<sp/>297730<sp/>,<sp/></highlight><highlight class="stringliteral">&quot;HLT_e24_lhvloose_nod0_L1EM20VH||HLT_e12_lhvloose_nod0_L1EM10VH&quot;</highlight><highlight class="normal">,<sp/>4)<sp/><sp/>-<sp/>109.155)<sp/>&lt;<sp/>1e-3<sp/>)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;data<sp/>weight<sp/>not<sp/>expected<sp/>value<sp/>109.155&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/><sp/>asg::AnaToolHandle&lt;CP::IPileupReweightingTool&gt;<sp/>prwTool2(&quot;CP::PileupReweightingTool/prw2&quot;);</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/>prwTool2.setProperty(<sp/>&quot;LumiCalcFiles&quot;<sp/>,<sp/>lcFiles<sp/>);</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/>prwTool2.setProperty(<sp/>&quot;TrigDecisionTool&quot;<sp/>,<sp/>&quot;Trig::TrigDecisionTool/TrigDecisionTool&quot;<sp/>);<sp/>//only<sp/>works<sp/>for<sp/>athena,<sp/>not<sp/>for<sp/>eventloop</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/><sp/>prwTool2.initialize();</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/>evt.getEntry(0);</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/>ToolHandle&lt;Trig::ITrigDecisionTool&gt;<sp/>tdt(&quot;Trig::TrigDecisionTool/TrigDecisionTool&quot;);</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/>tdt.retrieve();</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/>evt.getEntry(0);</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>prwTool2-&gt;expert()-&gt;GetDataWeight(<sp/>297730<sp/>,<sp/><sp/>&quot;HLT_e24_lhvloose_nod0_L1EM20VH||HLT_e12_lhvloose_nod0_L1EM10VH&quot;,<sp/>4)<sp/>&lt;&lt;<sp/>std::endl;<sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/>//don&apos;t<sp/>run<sp/>this<sp/>test<sp/>in<sp/>EventLoop<sp/>release</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else<sp/>//AnaToolHandle<sp/>not<sp/>yet<sp/>in<sp/>AtlasDerivation</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PileupReweighting/test/ut_PRWDataWeightExample_test.cxx"/>
+  </compounddef>
+</doxygen>

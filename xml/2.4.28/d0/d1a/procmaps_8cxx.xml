@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d0/d1a/procmaps_8cxx" kind="file">
+    <compoundname>procmaps.cxx</compoundname>
+    <includes local="no">algorithm</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">fstream</includes>
+    <includes refid="de/d45/procmaps_8h" local="yes">CxxUtils/procmaps.h</includes>
+    <incdepgraph>
+      <node id="113484">
+        <label>fstream</label>
+      </node>
+      <node id="113486">
+        <label>boost/pool/pool_alloc.hpp</label>
+      </node>
+      <node id="113487">
+        <label>vector</label>
+      </node>
+      <node id="113485">
+        <label>CxxUtils/procmaps.h</label>
+        <link refid="de/d45/procmaps_8h_source"/>
+        <childnode refid="113486" relation="include">
+        </childnode>
+        <childnode refid="113487" relation="include">
+        </childnode>
+      </node>
+      <node id="113482">
+        <label>cstdlib</label>
+      </node>
+      <node id="113481">
+        <label>algorithm</label>
+      </node>
+      <node id="113483">
+        <label>cstring</label>
+      </node>
+      <node id="113480">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/procmaps.cxx</label>
+        <link refid="procmaps.cxx"/>
+        <childnode refid="113481" relation="include">
+        </childnode>
+        <childnode refid="113482" relation="include">
+        </childnode>
+        <childnode refid="113483" relation="include">
+        </childnode>
+        <childnode refid="113484" relation="include">
+        </childnode>
+        <childnode refid="113485" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;CxxUtils/procmaps.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>procmaps::s_pmapsLoaded(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">procmaps::procmaps_t<sp/>procmaps::s_pmaps;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">procmaps::Entry::Entry(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>procMapsLine)<sp/>:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>begAddress(0),endAddress(0),</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/>readable(false),<sp/>writable(false),<sp/>executable(false),<sp/>isPrivate(false),</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>offset(0),<sp/>inode(0)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>dev[0]=0;<sp/>dev[1]=0;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>memset(pathname,</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">,31);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>pageProts[5];</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>memset(pageProts,</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">,<sp/>4);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>sscanf(procMapsLine,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;%lx-%lx<sp/>%4s<sp/>%x<sp/>%2x:%2x<sp/>%x<sp/>%31s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&amp;this-&gt;begAddress,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&amp;this-&gt;endAddress,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>pageProts,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&amp;this-&gt;offset,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&amp;this-&gt;dev[0],</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&amp;this-&gt;dev[1],</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&amp;this-&gt;inode,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>this-&gt;pathname</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//printf(&quot;pageProts<sp/>%s<sp/>pathname<sp/>&lt;%s&gt;<sp/>\n&quot;,<sp/>pageProts,<sp/>pathname);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>this-&gt;readable<sp/>=<sp/>(pageProts[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;r&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>this-&gt;writable<sp/>=<sp/>(pageProts[1]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;w&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>this-&gt;executable<sp/>=<sp/>(pageProts[2]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;x&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>this-&gt;isPrivate<sp/><sp/>=<sp/>(pageProts[3]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;p&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">procmaps::procmaps(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>entries)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!s_pmapsLoaded)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>procmaps::s_pmaps.reserve(entries);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>loadMaps(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>s_pmapsLoaded=</highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="da/da2/classprocmaps_1a065802bcaf06ec0a73a53bf20d0c3c19" kindref="member" tooltip="load/refresh info from /proc/self/map">procmaps::loadMaps</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dump)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>procmaps::s_pmaps.clear();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>std::ifstream<sp/>f(</highlight><highlight class="stringliteral">&quot;/proc/self/maps&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LMAX=256;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>line[LMAX];</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>f.getline(line,LMAX)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dump)<sp/>printf(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,line);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>procmaps::s_pmaps.push_back(Entry(line));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d0/d8e/structprocmaps_1_1Entry" kindref="compound">procmaps::Entry</ref>*</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><ref refid="da/da2/classprocmaps_1a1eb3f8806aa0261cbbe8c8cb48f1cebf" kindref="member">procmaps::getEntry</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>address,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>refreshMaps)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d0/d8e/structprocmaps_1_1Entry" kindref="compound">procmaps::Entry</ref>*<sp/>ret(0);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//FIXME<sp/>slow<sp/>linear<sp/>search.<sp/>We&apos;ll<sp/>make<sp/>it<sp/>faster...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>const_iterator<sp/>i(this-&gt;begin()),<sp/>e(this-&gt;end());</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>found(</highlight><highlight class="keyword">false</highlight><highlight class="normal">),<sp/>done(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>toMatch((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)address);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!done<sp/>&amp;&amp;<sp/>!found<sp/>&amp;&amp;<sp/>i!=e)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>printf(&quot;<sp/>begAddress<sp/>%x<sp/>toMatch<sp/>%x<sp/>endAddress<sp/>%x\n&quot;,<sp/>i-&gt;begAddress,<sp/>toMatch,<sp/>i-&gt;endAddress);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>found<sp/>=<sp/>i-&gt;begAddress<sp/>&lt;=<sp/>toMatch<sp/>&amp;&amp;<sp/>toMatch<sp/>&lt;=<sp/>i-&gt;endAddress;<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>done<sp/>=<sp/>!found<sp/>&amp;&amp;<sp/>toMatch<sp/>&lt;<sp/>i-&gt;begAddress;<sp/></highlight><highlight class="comment">//entries<sp/>sorted<sp/>by<sp/>begAddress</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!found<sp/>&amp;&amp;<sp/>!done)<sp/>++i;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(found)<sp/>ret=&amp;*i;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(refreshMaps)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if<sp/>!<sp/>found<sp/>recurse<sp/>once<sp/>by<sp/>calling<sp/>getEntry<sp/>with<sp/>refreshMaps<sp/>false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>loadMaps();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>getEntry(address,</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/procmaps.cxx"/>
+  </compounddef>
+</doxygen>

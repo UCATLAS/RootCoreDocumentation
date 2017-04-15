@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d0/dab/TestThinningSvc_8icc" kind="file">
+    <compoundname>TestThinningSvc.icc</compoundname>
+    <includes local="yes">SGTools/DataProxy.h</includes>
+    <includes local="yes">AthenaKernel/IThinningSvc.h</includes>
+    <includes local="no">map</includes>
+    <includedby refid="d6/d75/copyAuxStoreThinned__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/copyAuxStoreThinned_test.cxx</includedby>
+    <includedby refid="d3/d98/copyThinned__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/copyThinned_test.cxx</includedby>
+    <includedby refid="d1/dc2/getThinnedFlags__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/getThinnedFlags_test.cxx</includedby>
+    <incdepgraph>
+      <node id="74344">
+        <label>map</label>
+      </node>
+      <node id="74343">
+        <label>AthenaKernel/IThinningSvc.h</label>
+      </node>
+      <node id="74341">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/TestThinningSvc.icc</label>
+        <link refid="TestThinningSvc.icc"/>
+        <childnode refid="74342" relation="include">
+        </childnode>
+        <childnode refid="74343" relation="include">
+        </childnode>
+        <childnode refid="74344" relation="include">
+        </childnode>
+      </node>
+      <node id="74342">
+        <label>SGTools/DataProxy.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="74347">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/copyThinned_test.cxx</label>
+        <link refid="d3/d98/copyThinned__test_8cxx"/>
+      </node>
+      <node id="74348">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/getThinnedFlags_test.cxx</label>
+        <link refid="d1/dc2/getThinnedFlags__test_8cxx"/>
+      </node>
+      <node id="74346">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/copyAuxStoreThinned_test.cxx</label>
+        <link refid="d6/d75/copyAuxStoreThinned__test_8cxx"/>
+      </node>
+      <node id="74345">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/TestThinningSvc.icc</label>
+        <link refid="TestThinningSvc.icc"/>
+        <childnode refid="74346" relation="include">
+        </childnode>
+        <childnode refid="74347" relation="include">
+        </childnode>
+        <childnode refid="74348" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="db/dc7/classTestThinningSvc" prot="public">TestThinningSvc</innerclass>
+    <briefdescription>
+<para>Dummy thinning service, for regression tests. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>scott snyder &lt;<ulink url="mailto:snyder@bnl.gov">snyder@bnl.gov</ulink>&gt; </para></simplesect>
+<simplesect kind="date"><para>Jul, 2014 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>$Id$</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight><highlight class="preprocessor">#include<sp/>&quot;SGTools/DataProxy.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AthenaKernel/IThinningSvc.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="db/dc7/classTestThinningSvc" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="db/dc7/classTestThinningSvc" kindref="compound">TestThinningSvc</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>IThinningSvc</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>addRef()</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;addRef\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>release()</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;release\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>StatusCode<sp/>queryInterface(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>InterfaceID<sp/>&amp;</highlight><highlight class="comment">/*ti*/</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/></highlight><highlight class="comment">/*pp*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;queryInterface\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="26"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;name\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>SG::DataProxy*<sp/>proxy(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d0/d66/ClassID__traits_8h_1a2d7068444af754bf943f1dcbc5893801" kindref="member" tooltip="The Class ID type.">CLID</ref>&amp;<sp/></highlight><highlight class="comment">/*id*/</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="28"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;proxy2\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>SG::DataProxy*<sp/>proxy(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d0/d66/ClassID__traits_8h_1a2d7068444af754bf943f1dcbc5893801" kindref="member" tooltip="The Class ID type.">CLID</ref>&amp;<sp/></highlight><highlight class="comment">/*id*/</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/></highlight><highlight class="comment">/*key*/</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="30"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;proxy3\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>SG::DataProxy*<sp/>proxy_exact<sp/>(SG::sgkey_t<sp/></highlight><highlight class="comment">/*sgkey*/</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;proxy_exact\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>StatusCode<sp/>addToStore<sp/>(<ref refid="d0/d66/ClassID__traits_8h_1a2d7068444af754bf943f1dcbc5893801" kindref="member" tooltip="The Class ID type.">CLID</ref><sp/></highlight><highlight class="comment">/*id*/</highlight><highlight class="normal">,<sp/>SG::DataProxy*<sp/></highlight><highlight class="comment">/*proxy*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;addToStore\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>std::vector&lt;const<sp/>SG::DataProxy*&gt;<sp/>proxies()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="36"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;proxies\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>StatusCode<sp/>sysInitialize()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;sysInitialize\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>StatusCode<sp/>sysStart()</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;sysStart\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>StatusCode<sp/>sysStop()</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;sysStop\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>StatusCode<sp/>sysFinalize()</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;sysFinalize\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>StatusCode<sp/>sysReinitialize()</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;sysReinitialize\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>StatusCode<sp/>sysRestart()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;sysRestart\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>StatusCode<sp/>configure()</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;configure\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>StatusCode<sp/>initialize()</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;initialize\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>StatusCode<sp/>start()</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;start\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>StatusCode<sp/>stop()</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;stop\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>StatusCode<sp/>finalize()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;finalize\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>StatusCode<sp/>terminate()</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;terminate\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>StatusCode<sp/>reinitialize()</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;reinitialize\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>StatusCode<sp/>restart()</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;restart\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>Gaudi::StateMachine::State<sp/>FSMState()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="66"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;FSMState\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>Gaudi::StateMachine::State<sp/>targetFSMState()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="68"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;targetFSMState\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setServiceManager<sp/>(ISvcManager*)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;setServiceManager\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>StatusCode<sp/>register_slimmer<sp/>(Athena::ISlimmingHdlr<sp/>*</highlight><highlight class="comment">/*handler*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;register_slimmer\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>Athena::IThinningHdlr*<sp/>handler(<sp/>SG::DataProxy*<sp/></highlight><highlight class="comment">/*proxy*/</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;handler\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>StatusCode</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>filter_impl(<sp/>Athena::IThinningHdlr*<sp/></highlight><highlight class="comment">/*handler*/</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SG::DataProxy*<sp/></highlight><highlight class="comment">/*proxy*/</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Filter_t&amp;<sp/></highlight><highlight class="comment">/*filter*/</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IThinningSvc::Operator::Type<sp/></highlight><highlight class="comment">/*op*/</highlight><highlight class="normal"><sp/>=<sp/>Operator::And<sp/>)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;filter_impl\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>StatusCode<sp/>commit()</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;commit\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>StatusCode<sp/>rollback()</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;rollback\n&quot;</highlight><highlight class="normal">;<sp/>std::abort();<sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>thinningOccurred()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="87"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_map.size()<sp/>&gt;<sp/>0;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_thinned_impl(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SG::DataProxy*<sp/>p)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="92"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>proxymap_t::const_iterator<sp/>i<sp/>=<sp/>m_map.find<sp/>(p);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>!=<sp/>m_map.end())</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>SG::DataProxy*<sp/>proxy(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pTransient)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="100"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>objmap_t::const_iterator<sp/>i<sp/>=<sp/>m_objmap.find<sp/>(pTransient);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>!=<sp/>m_objmap.end())</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i-&gt;second;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>SG::DataProxy*<sp/>deep_proxy(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pTransient)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="108"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>proxy<sp/>(pTransient);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>std::size_t<sp/>index_impl(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SG::DataProxy*<sp/>objProxy,<sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/>idx<sp/>)</highlight><highlight class="keyword"><sp/>const<sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>proxymap_t::const_iterator<sp/>i<sp/>=<sp/>m_map.find<sp/>(objProxy);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>!=<sp/>m_map.end())<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>map_t::const_iterator<sp/>ii<sp/>=<sp/>i-&gt;second.find<sp/>(idx);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ii<sp/>!=<sp/>i-&gt;second.end())</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ii-&gt;second;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>idx;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>remap<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>obj,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>from,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>to)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>SG::DataProxy*<sp/>proxy<sp/>=<sp/>m_objmap[obj];</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!proxy)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>proxy<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SG::DataProxy();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_objmap[obj]<sp/>=<sp/>proxy;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>m_map[proxy][from]<sp/>=<sp/>to;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;const<sp/>void*,<sp/>SG::DataProxy*&gt;<sp/>objmap_t;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>objmap_t<sp/>m_objmap;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;size_t,<sp/>size_t&gt;<sp/>map_t;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;const<sp/>SG::DataProxy*,<sp/>map_t&gt;<sp/>proxymap_t;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>proxymap_t<sp/>m_map;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/TestThinningSvc.icc"/>
+  </compounddef>
+</doxygen>

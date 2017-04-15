@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="da/dac/PFOAttributesAccessor__v1_8h" kind="file">
+    <compoundname>PFOAttributesAccessor_v1.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes refid="de/d76/xAODPFlow_2xAODPFlow_2PFODefs_8h" local="yes">xAODPFlow/PFODefs.h</includes>
+    <includedby refid="d8/d8d/PFO__v1_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODPFlow/Root/PFO_v1.cxx</includedby>
+    <includedby refid="d3/dfc/PFO__v1_8icc" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODPFlow/xAODPFlow/versions/PFO_v1.icc</includedby>
+    <incdepgraph>
+      <node id="408822">
+        <label>Math/Vector4D.h</label>
+      </node>
+      <node id="408820">
+        <label>iostream</label>
+      </node>
+      <node id="408821">
+        <label>xAODPFlow/PFODefs.h</label>
+        <link refid="de/d76/xAODPFlow_2xAODPFlow_2PFODefs_8h_source"/>
+        <childnode refid="408822" relation="include">
+        </childnode>
+      </node>
+      <node id="408819">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODPFlow/xAODPFlow/versions/PFOAttributesAccessor_v1.h</label>
+        <link refid="PFOAttributesAccessor_v1.h"/>
+        <childnode refid="408820" relation="include">
+        </childnode>
+        <childnode refid="408821" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="d4/d85/structxAOD_1_1PFOAttributesAccessor__v1" prot="public">xAOD::PFOAttributesAccessor_v1</innerclass>
+    <innerclass refid="d2/d25/structxAOD_1_1PFOParticleTypeMapper__v1" prot="public">xAOD::PFOParticleTypeMapper_v1</innerclass>
+    <innernamespace refid="dd/d44/namespacexAOD">xAOD</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="da/dac/PFOAttributesAccessor__v1_8h_1a3f90a9a3914ec2ed7d8ae39819fbecb6" prot="public" static="no">
+        <name>DEFINE_PFO_ACCESSOR</name>
+        <param><defname>NAME</defname></param>
+        <initializer>case xAOD::PFODetails::NAME:				\
+  {									\
+    static <ref refid="d8/d31/classSG_1_1AuxElement_1_1Accessor" kindref="compound">SG::AuxElement::Accessor</ref>&lt; <ref refid="d1/def/classT" kindref="compound">T</ref> &gt; a( #NAME );			\
+    return &amp;a;								\
+  }									\
+  break</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODPFlow/xAODPFlow/versions/PFOAttributesAccessor_v1.h" line="22" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODPFlow/xAODPFlow/versions/PFOAttributesAccessor_v1.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Dear<sp/>emacs,<sp/>this<sp/>is<sp/>-*-<sp/>c++<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>PFOAttributesAccessor_v1.h<sp/>745308<sp/>2016-05-06<sp/>14:39:05Z<sp/>mhodgkin<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PFOATTRIBUTESACCESSOR_H</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PFOATTRIBUTESACCESSOR_H</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Author<sp/>Mark<sp/>Hodgkinson</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">This<sp/>is<sp/>pretty<sp/>much<sp/>based<sp/>on<sp/>the<sp/>class<sp/>xAODJets/JetMomentsAccessor.h<sp/>-<sp/>i.e<sp/>I<sp/>copied<sp/>the<sp/>code<sp/>from<sp/>there</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>System<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Local<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODPFlow/PFODefs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFINE_PFO_ACCESSOR(<sp/>NAME<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"><sp/><sp/>case<sp/>xAOD::PFODetails::NAME:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>SG::AuxElement::Accessor&lt;<sp/>T<sp/>&gt;<sp/>a(<sp/>#NAME<sp/>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>return<sp/>&amp;a;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"><sp/><sp/>break</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">xAOD{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="d4/d85/structxAOD_1_1PFOAttributesAccessor__v1" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d4/d85/structxAOD_1_1PFOAttributesAccessor__v1" kindref="compound">PFOAttributesAccessor_v1</ref><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="d8/d31/classSG_1_1AuxElement_1_1Accessor" kindref="compound" tooltip="Helper class to provide type-safe access to aux data.">SG::AuxElement::Accessor&lt;T&gt;</ref>*<sp/>accessor<sp/>(xAOD::PFODetails::PFOAttributes<sp/>variable){</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(variable){</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(nPi0);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(nPi0Proto);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_EM_FRAC_ENHANCED);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_ENG_FRAC_CORE);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_FIRST_ENG_DENS);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_CENTER_LAMBDA);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_SECOND_R);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_DELTA_ALPHA);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_HOT_STRIP_FRAC);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_THREE_CELL_STRIP_FRAC);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LATERAL);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LONGITUDINAL);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_SECOND_LAMBDA);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_ISOLATION);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_ENG_FRAC_MAX);<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_ENG_BAD_CELLS);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_N_BAD_CELLS);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_BADLARQ_FRAC);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_ENG_POS);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_SIGNIFICANCE);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_CELL_SIGNIFICANCE);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_CELL_SIG_SAMPLING);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_AVG_LAR_Q);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_AVG_TILE_Q);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_EM3);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_HEC0);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_Tile0);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_HEC);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_TIMING);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_tracksExpectedEnergyDeposit);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_isInDenseEnvironment);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_EM);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_PreSamplerB);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_EMB1);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_EMB2);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_EMB3);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_PreSamplerE);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_EME1);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_EME2);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_EME3);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_HEC1);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_HEC2);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_HEC3);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_TileBar0);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_TileBar1);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_TileBar2);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_TileGap1);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_TileGap2);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_TileGap3);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_TileExt0);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_TileExt1);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_TileExt2);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_FCAL0);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_FCAL1);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_FCAL2);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_MINIFCAL0);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_MINIFCAL1);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_MINIFCAL2);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(eflowRec_LAYERENERGY_MINIFCAL3);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_FIRST_ETA);<sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_SECOND_R);<sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_SECOND_LAMBDA);<sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_DELTA_PHI);<sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_DELTA_THETA);<sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_CENTER_LAMBDA);<sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_LATERAL);<sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_LONGITUDINAL);<sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_ENG_FRAC_EM);<sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_ENG_FRAC_MAX);<sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_ENG_FRAC_CORE);<sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_SECOND_ENG_DENS);<sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_EM1CoreFrac);<sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_asymmetryInEM1WRTTrk);<sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_NHitsInEM1);<sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_NPosECells_PS);<sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_NPosECells_EM1);<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_NPosECells_EM2);<sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_firstEtaWRTClusterPosition_EM1);<sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_firstEtaWRTClusterPosition_EM2);<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_secondEtaWRTClusterPosition_EM1);<sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_secondEtaWRTClusterPosition_EM2);<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_energy_EM1);<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(cellBased_energy_EM2);<sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_nCellsInEta);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_pt1);<sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_pt3);<sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_pt5);<sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_ws5);<sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_sdevEta5_WRTmean);<sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_sdevEta5_WRTmode);<sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_sdevPt5);<sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_deltaPt12_min);<sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_Fside_3not1);<sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_Fside_5not1);<sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_Fside_5not3);<sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_fracSide_3not1);<sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_fracSide_5not1);<sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_fracSide_5not3);<sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_pt1OverPt3);<sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_pt3OverPt5);<sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_mergedScore);<sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_signalScore);<sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_nPhotons);<sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFINE_PFO_ACCESSOR(tauShots_seedHash);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;xAOD::PFO_v1<sp/>ERROR<sp/>Unknown<sp/>float/double<sp/>variable<sp/>(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(variable)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)<sp/>requested&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//switch<sp/>on<sp/>variable<sp/>names</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//accessor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>}</highlight><highlight class="comment">//struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="141" refid="d2/d25/structxAOD_1_1PFOParticleTypeMapper__v1" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d2/d25/structxAOD_1_1PFOParticleTypeMapper__v1" kindref="compound">PFOParticleTypeMapper_v1</ref><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>getValue(PFODetails::PFOParticleType<sp/>type,<sp/>std::string&amp;<sp/>stringName){</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(type){</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>PFODetails::CaloCluster:</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>stringName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;pfo_ClusterLinks&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>PFODetails::Track:</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>stringName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;pfo_TrackLinks&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note<sp/>-<sp/>clients<sp/>should<sp/>NEVER<sp/>set<sp/>both<sp/>links<sp/>to<sp/>TauShot<sp/>and<sp/>HadroniCaloCluster<sp/>-<sp/>Tau<sp/>WG<sp/>agreed<sp/>they<sp/>NEVER<sp/>will<sp/>do<sp/>such<sp/>a<sp/>thing<sp/>(and<sp/>they<sp/>are<sp/>only<sp/>client)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>PFODetails::TauShot:</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>stringName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;pfo_TauShotLinks&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>PFODetails::HadronicCalo:</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stringName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;pfo_TauShotLinks&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//switch</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//getValue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight><highlight class="comment">//xAOD<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODPFlow/xAODPFlow/versions/PFOAttributesAccessor_v1.h"/>
+  </compounddef>
+</doxygen>

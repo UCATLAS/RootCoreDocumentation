@@ -1,0 +1,690 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d9/d4e/classSG_1_1PackedConverter" kind="class" prot="public">
+    <compoundname>SG::PackedConverter</compoundname>
+    <includes refid="d2/df1/PackedConverter_8h" local="no">PackedConverter.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d9/d4e/classSG_1_1PackedConverter_1afbd958466aaa5494b9a76b9c77336d7a" prot="private" static="no" mutable="no">
+        <type><ref refid="d5/dc1/classSG_1_1PackedParameters" kindref="compound">PackedParameters</ref></type>
+        <definition>PackedParameters SG::PackedConverter::m_parms</definition>
+        <argsstring></argsstring>
+        <name>m_parms</name>
+        <briefdescription>
+<para>The parameters to use for the packing. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.h" line="173" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d4e/classSG_1_1PackedConverter_1a79d41ef9a9420b58d198c9c8f1b3fbe2" prot="private" static="no" mutable="no">
+        <type><ref refid="da/df0/classCxxUtils_1_1FloatPacker" kindref="compound">CxxUtils::FloatPacker</ref></type>
+        <definition>CxxUtils::FloatPacker SG::PackedConverter::m_packer</definition>
+        <argsstring></argsstring>
+        <name>m_packer</name>
+        <briefdescription>
+<para>Object to pack/unpack floating-point values. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.h" line="176" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d9/d4e/classSG_1_1PackedConverter_1a6144550e52fa5879402ee8c2ee7624f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SG::PackedConverter::PackedConverter</definition>
+        <argsstring>(const PackedParameters &amp;parms)</argsstring>
+        <name>PackedConverter</name>
+        <param>
+          <type>const <ref refid="d5/dc1/classSG_1_1PackedParameters" kindref="compound">PackedParameters</ref> &amp;</type>
+          <declname>parms</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameters describing the packed data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.h" line="48" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/PackedConverter.cxx" bodystart="20" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d4e/classSG_1_1PackedConverter_1a5622cc0c7479b2c2b3530a3c36f9140c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class U</type>
+          </param>
+          <param>
+            <type>class STREAM</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void SG::PackedConverter::write</definition>
+        <argsstring>(size_t nelt, const std::vector&lt; U &gt; &amp;vec, STREAM &amp;stream)</argsstring>
+        <name>write</name>
+        <param>
+          <type>size_t</type>
+          <declname>nelt</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; U &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>STREAM &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Pack a vector to the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nelt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements to pack. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of elements to pack. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination stream. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.h" line="60" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.icc" bodystart="21" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d4e/classSG_1_1PackedConverter_1a6c3a05ef5628256b3a76d65d1816bedd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class U</type>
+          </param>
+          <param>
+            <type>class STREAM</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void SG::PackedConverter::write</definition>
+        <argsstring>(size_t nelt, const std::vector&lt; std::vector&lt; U &gt; &gt; &amp;vec, STREAM &amp;stream)</argsstring>
+        <name>write</name>
+        <param>
+          <type>size_t</type>
+          <declname>nelt</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; U &gt; &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>STREAM &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Pack a nested vector to the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nelt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements to pack. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of elements to pack. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination stream. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.h" line="72" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.icc" bodystart="65" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d4e/classSG_1_1PackedConverter_1a6cdfe6db2b17cf1500f3d49b11c15af5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class U</type>
+          </param>
+          <param>
+            <type>class STREAM</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void SG::PackedConverter::read</definition>
+        <argsstring>(size_t nelt, std::vector&lt; U &gt; &amp;vec, STREAM &amp;stream)</argsstring>
+        <name>read</name>
+        <param>
+          <type>size_t</type>
+          <declname>nelt</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; U &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>STREAM &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Unpack a vector from the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nelt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements to unpack. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to receive the unpacked elements. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source stream. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.h" line="84" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.icc" bodystart="85" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d4e/classSG_1_1PackedConverter_1a67401e99d3332380c732936b86b753e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class U</type>
+          </param>
+          <param>
+            <type>class STREAM</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void SG::PackedConverter::read</definition>
+        <argsstring>(size_t nelt, std::vector&lt; std::vector&lt; U &gt; &gt; &amp;vec, STREAM &amp;stream)</argsstring>
+        <name>read</name>
+        <param>
+          <type>size_t</type>
+          <declname>nelt</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::vector&lt; U &gt; &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>STREAM &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Unpack a nested vector from the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nelt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements to unpack. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to receive the unpacked elements. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source stream. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.h" line="96" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.icc" bodystart="132" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d9/d4e/classSG_1_1PackedConverter_1af48f85974a1b2649d3a9220077b09123" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>template&lt; class &gt; class</type>
+            <declname>PACKER</declname>
+            <defname>PACKER</defname>
+          </param>
+          <param>
+            <type>class U</type>
+          </param>
+          <param>
+            <type>class STREAM</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void SG::PackedConverter::writeUnsigned</definition>
+        <argsstring>(size_t nelt, const std::vector&lt; U &gt; &amp;vec, STREAM &amp;stream)</argsstring>
+        <name>writeUnsigned</name>
+        <param>
+          <type>size_t</type>
+          <declname>nelt</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; U &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>STREAM &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Pack a vector of unsigned values to the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nelt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements to pack. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of elements to pack. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination stream. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.h" line="109" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.icc" bodystart="153" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d4e/classSG_1_1PackedConverter_1ae97c2d938b6e0ad93fe4984101861092" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>template&lt; class &gt; class</type>
+            <declname>PACKER</declname>
+            <defname>PACKER</defname>
+          </param>
+          <param>
+            <type>class U</type>
+          </param>
+          <param>
+            <type>class STREAM</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void SG::PackedConverter::writeSigned</definition>
+        <argsstring>(size_t nelt, const std::vector&lt; U &gt; &amp;vec, STREAM &amp;stream)</argsstring>
+        <name>writeSigned</name>
+        <param>
+          <type>size_t</type>
+          <declname>nelt</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; U &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>STREAM &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Pack a vector of signed values to the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nelt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements to pack. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of elements to pack. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination stream. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.h" line="121" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.icc" bodystart="173" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d4e/classSG_1_1PackedConverter_1a5ba0cecc205b229d1942a01e9b2bf5d8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>template&lt; class &gt; class</type>
+            <declname>PACKER</declname>
+            <defname>PACKER</defname>
+          </param>
+          <param>
+            <type>class U</type>
+          </param>
+          <param>
+            <type>class STREAM</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void SG::PackedConverter::writeFloat</definition>
+        <argsstring>(size_t nelt, const std::vector&lt; U &gt; &amp;vec, STREAM &amp;stream)</argsstring>
+        <name>writeFloat</name>
+        <param>
+          <type>size_t</type>
+          <declname>nelt</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; U &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>STREAM &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Pack a vector of float values to the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nelt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements to pack. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of elements to pack. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination stream. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.h" line="133" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.icc" bodystart="203" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d4e/classSG_1_1PackedConverter_1a12dc0018cc8db1bc66054c9810dc89e3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>template&lt; class &gt; class</type>
+            <declname>UNPACKER</declname>
+            <defname>UNPACKER</defname>
+          </param>
+          <param>
+            <type>class U</type>
+          </param>
+          <param>
+            <type>class STREAM</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void SG::PackedConverter::readUnsigned</definition>
+        <argsstring>(size_t nelt, std::vector&lt; U &gt; &amp;vec, STREAM &amp;stream)</argsstring>
+        <name>readUnsigned</name>
+        <param>
+          <type>size_t</type>
+          <declname>nelt</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; U &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>STREAM &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Unpack a vector of unsigned values from the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nelt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements to unpack. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to receive the unpacked elements. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source stream. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.h" line="145" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.icc" bodystart="222" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d4e/classSG_1_1PackedConverter_1ad9d9e2c1e80d3da987818c7145de3efe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>template&lt; class &gt; class</type>
+            <declname>UNPACKER</declname>
+            <defname>UNPACKER</defname>
+          </param>
+          <param>
+            <type>class U</type>
+          </param>
+          <param>
+            <type>class STREAM</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void SG::PackedConverter::readSigned</definition>
+        <argsstring>(size_t nelt, std::vector&lt; U &gt; &amp;vec, STREAM &amp;stream)</argsstring>
+        <name>readSigned</name>
+        <param>
+          <type>size_t</type>
+          <declname>nelt</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; U &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>STREAM &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Unpack a vector of signed values from the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nelt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements to unpack. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to receive the unpacked elements. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source stream. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.h" line="157" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.icc" bodystart="240" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d4e/classSG_1_1PackedConverter_1a64cb7c80c766268de27e75e3a69eeab2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>template&lt; class &gt; class</type>
+            <declname>UNPACKER</declname>
+            <defname>UNPACKER</defname>
+          </param>
+          <param>
+            <type>class U</type>
+          </param>
+          <param>
+            <type>class STREAM</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void SG::PackedConverter::readFloat</definition>
+        <argsstring>(size_t nelt, std::vector&lt; U &gt; &amp;vec, STREAM &amp;stream)</argsstring>
+        <name>readFloat</name>
+        <param>
+          <type>size_t</type>
+          <declname>nelt</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; U &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>STREAM &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Unpack a vector of floating-point values from the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nelt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements to unpack. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to receive the unpacked elements. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source stream. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.h" line="170" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.icc" bodystart="263" bodyend="271"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper for packing/unpacking a <computeroutput><ref refid="dd/d01/classSG_1_1PackedContainer" kindref="compound">PackedContainer</ref></computeroutput> to/from a stream. </para>    </briefdescription>
+    <detaileddescription>
+<para>This object should be created with the packing parameters to use. After that, call the read or write methods. These are all templated methods taking a <computeroutput>vector&lt;U&gt;</computeroutput> as input; this should be the vector contained within the <computeroutput><ref refid="dd/d01/classSG_1_1PackedContainer" kindref="compound">PackedContainer</ref></computeroutput>. Additional overloads are supplied taking <computeroutput>vector&lt;vector&lt;U&gt;</computeroutput> &gt;. These read/write the element count, then call read/write for each element of the vector. This should allow for arbitrary vector nesting.</para><para>The methods are also templated on the input/output stream. This should support operator&lt;&lt; and operator&gt;&gt; for a uint32_t; a ROOT <computeroutput>TBuffer</computeroutput> will satisfy this. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="15624">
+        <label>string</label>
+      </node>
+      <node id="15625">
+        <label>SG::PackedParameters</label>
+        <link refid="d5/dc1/classSG_1_1PackedParameters"/>
+      </node>
+      <node id="15622">
+        <label>SG::PackedConverter</label>
+        <link refid="d9/d4e/classSG_1_1PackedConverter"/>
+        <childnode refid="15623" relation="usage">
+          <edgelabel>m_packer</edgelabel>
+        </childnode>
+        <childnode refid="15625" relation="usage">
+          <edgelabel>m_parms</edgelabel>
+        </childnode>
+      </node>
+      <node id="15623">
+        <label>CxxUtils::FloatPacker</label>
+        <link refid="da/df0/classCxxUtils_1_1FloatPacker"/>
+        <childnode refid="15624" relation="usage">
+          <edgelabel>m_lasterr</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.h" line="42" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/PackedConverter.h" bodystart="41" bodyend="177"/>
+    <listofallmembers>
+      <member refid="d9/d4e/classSG_1_1PackedConverter_1a79d41ef9a9420b58d198c9c8f1b3fbe2" prot="private" virt="non-virtual"><scope>SG::PackedConverter</scope><name>m_packer</name></member>
+      <member refid="d9/d4e/classSG_1_1PackedConverter_1afbd958466aaa5494b9a76b9c77336d7a" prot="private" virt="non-virtual"><scope>SG::PackedConverter</scope><name>m_parms</name></member>
+      <member refid="d9/d4e/classSG_1_1PackedConverter_1a6144550e52fa5879402ee8c2ee7624f6" prot="public" virt="non-virtual"><scope>SG::PackedConverter</scope><name>PackedConverter</name></member>
+      <member refid="d9/d4e/classSG_1_1PackedConverter_1a6cdfe6db2b17cf1500f3d49b11c15af5" prot="public" virt="non-virtual"><scope>SG::PackedConverter</scope><name>read</name></member>
+      <member refid="d9/d4e/classSG_1_1PackedConverter_1a67401e99d3332380c732936b86b753e0" prot="public" virt="non-virtual"><scope>SG::PackedConverter</scope><name>read</name></member>
+      <member refid="d9/d4e/classSG_1_1PackedConverter_1a64cb7c80c766268de27e75e3a69eeab2" prot="private" virt="non-virtual"><scope>SG::PackedConverter</scope><name>readFloat</name></member>
+      <member refid="d9/d4e/classSG_1_1PackedConverter_1ad9d9e2c1e80d3da987818c7145de3efe" prot="private" virt="non-virtual"><scope>SG::PackedConverter</scope><name>readSigned</name></member>
+      <member refid="d9/d4e/classSG_1_1PackedConverter_1a12dc0018cc8db1bc66054c9810dc89e3" prot="private" virt="non-virtual"><scope>SG::PackedConverter</scope><name>readUnsigned</name></member>
+      <member refid="d9/d4e/classSG_1_1PackedConverter_1a5622cc0c7479b2c2b3530a3c36f9140c" prot="public" virt="non-virtual"><scope>SG::PackedConverter</scope><name>write</name></member>
+      <member refid="d9/d4e/classSG_1_1PackedConverter_1a6c3a05ef5628256b3a76d65d1816bedd" prot="public" virt="non-virtual"><scope>SG::PackedConverter</scope><name>write</name></member>
+      <member refid="d9/d4e/classSG_1_1PackedConverter_1a5ba0cecc205b229d1942a01e9b2bf5d8" prot="private" virt="non-virtual"><scope>SG::PackedConverter</scope><name>writeFloat</name></member>
+      <member refid="d9/d4e/classSG_1_1PackedConverter_1ae97c2d938b6e0ad93fe4984101861092" prot="private" virt="non-virtual"><scope>SG::PackedConverter</scope><name>writeSigned</name></member>
+      <member refid="d9/d4e/classSG_1_1PackedConverter_1af48f85974a1b2649d3a9220077b09123" prot="private" virt="non-virtual"><scope>SG::PackedConverter</scope><name>writeUnsigned</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

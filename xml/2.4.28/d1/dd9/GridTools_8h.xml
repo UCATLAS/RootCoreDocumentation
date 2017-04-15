@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d1/dd9/GridTools_8h" kind="file">
+    <compoundname>GridTools.h</compoundname>
+    <includes refid="d3/df9/SampleHandler_2SampleHandler_2Global_8h" local="no">SampleHandler/Global.h</includes>
+    <includes refid="d6/dab/AsgTools_2AsgTools_2MessageCheck_8h" local="no">AsgTools/MessageCheck.h</includes>
+    <includes local="no">map</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">set</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="d8/d0d/VomsProxySvc_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/VomsProxySvc.cxx</includedby>
+    <includedby refid="d0/da2/PrunDriver_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopGrid/Root/PrunDriver.cxx</includedby>
+    <includedby refid="de/d2d/GridTools_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/Root/GridTools.cxx</includedby>
+    <includedby refid="d8/dde/SampleGrid_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/Root/SampleGrid.cxx</includedby>
+    <includedby refid="d1/daf/ToolsDiscovery_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/Root/ToolsDiscovery.cxx</includedby>
+    <includedby refid="dd/d2f/it__GridTools_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/test/it_GridTools.cxx</includedby>
+    <incdepgraph>
+      <node id="264545">
+        <label>xAODRootAccess/tools/TReturnCode.h</label>
+        <link refid="df/d0a/TReturnCode_8h_source"/>
+      </node>
+      <node id="264541">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/GridTools.h</label>
+        <link refid="GridTools.h"/>
+        <childnode refid="264542" relation="include">
+        </childnode>
+        <childnode refid="264543" relation="include">
+        </childnode>
+        <childnode refid="264547" relation="include">
+        </childnode>
+        <childnode refid="264548" relation="include">
+        </childnode>
+        <childnode refid="264549" relation="include">
+        </childnode>
+        <childnode refid="264550" relation="include">
+        </childnode>
+      </node>
+      <node id="264547">
+        <label>map</label>
+      </node>
+      <node id="264546">
+        <label>AthenaBaseComps/AthMessaging.h</label>
+      </node>
+      <node id="264543">
+        <label>AsgTools/MessageCheck.h</label>
+        <link refid="d6/dab/AsgTools_2AsgTools_2MessageCheck_8h_source"/>
+        <childnode refid="264544" relation="include">
+        </childnode>
+        <childnode refid="264545" relation="include">
+        </childnode>
+        <childnode refid="264546" relation="include">
+        </childnode>
+      </node>
+      <node id="264550">
+        <label>vector</label>
+      </node>
+      <node id="264544">
+        <label>type_traits</label>
+      </node>
+      <node id="264549">
+        <label>set</label>
+      </node>
+      <node id="264542">
+        <label>SampleHandler/Global.h</label>
+        <link refid="d3/df9/SampleHandler_2SampleHandler_2Global_8h_source"/>
+      </node>
+      <node id="264548">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="d3/def/structSH_1_1RucioListDidsEntry" prot="public">SH::RucioListDidsEntry</innerclass>
+    <innerclass refid="d4/d39/structSH_1_1RucioListFileReplicasEntry" prot="public">SH::RucioListFileReplicasEntry</innerclass>
+    <innerclass refid="d0/d98/structSH_1_1RucioDownloadResult" prot="public">SH::RucioDownloadResult</innerclass>
+    <innernamespace refid="d0/d9e/namespaceSH">SH</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SAMPLE_HANDLER__GRID_TOOLS_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SAMPLE_HANDLER__GRID_TOOLS_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>Nils<sp/>Krumnack<sp/>2016.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>(See<sp/>accompanying<sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Please<sp/>feel<sp/>free<sp/>to<sp/>contact<sp/>me<sp/>(nils.erik.krumnack@iastate.edu)<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>bug<sp/>reports,<sp/>feature<sp/>suggestions,<sp/>praise<sp/>and<sp/>complaints.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SampleHandler/Global.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;AsgTools/MessageCheck.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;set&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SH</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>ANA_MSG_HEADER<sp/>(msgGridTools)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"></codeline>
+<codeline lineno="29"></codeline>
+<codeline lineno="30"></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>bool<sp/><ref refid="d0/d9e/namespaceSH_1ace5d9d071743e96f94e6f186ee455bd7" kindref="member" tooltip="return whether we have a valid VOMS proxy available">checkVomsProxy</ref><sp/>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/d9e/namespaceSH_1a38ab5027d7b5de75a857682b0ea7f766" kindref="member" tooltip="ensure that we have a valid VOMS proxy available">ensureVomsProxy</ref><sp/>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>std::vector&lt;std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><ref refid="d0/d9e/namespaceSH_1a3541573890dcbf9738d9e0cc28e9c8bb" kindref="member" tooltip="list the FAX URLs for all the files in the dataset or dataset container matching...">faxListFilesGlob</ref><sp/>(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>name,<sp/>const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>filter);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>std::vector&lt;std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><ref refid="d0/d9e/namespaceSH_1ad561ddee8a20d1fb0cf2ce96ccf3232f" kindref="member" tooltip="list the FAX URLs for all the files in the dataset or dataset container matching...">faxListFilesRegex</ref><sp/>(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>name,<sp/>const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>filter);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="d3/def/structSH_1_1RucioListDidsEntry" refkind="compound"><highlight class="normal"><sp/><sp/>struct<sp/><ref refid="d3/def/structSH_1_1RucioListDidsEntry" kindref="compound" tooltip="one entry from the rucio-list-dids command">RucioListDidsEntry</ref></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78" refid="d3/def/structSH_1_1RucioListDidsEntry_1a098c2c0ead4c905d802171fb9f33418c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>scope;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="d3/def/structSH_1_1RucioListDidsEntry_1a405157c6cd24b538cb7750dc050f4968" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>name;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="d3/def/structSH_1_1RucioListDidsEntry_1acdc41f1b64e07e3f71b5cab69d0a5947" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>type;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>std::vector&lt;RucioListDidsEntry&gt;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><ref refid="d0/d9e/namespaceSH_1a371bc3580e0a7420385db611cb60d8fa" kindref="member" tooltip="run rucio-list-dids for the given dataset">rucioListDids</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>dataset);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="d4/d39/structSH_1_1RucioListFileReplicasEntry" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d4/d39/structSH_1_1RucioListFileReplicasEntry" kindref="compound" tooltip="one entry from the rucio-list-file-replicas command">RucioListFileReplicasEntry</ref></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102" refid="d4/d39/structSH_1_1RucioListFileReplicasEntry_1ad1d30b2037a69a2c3b1a3a27077ee838" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="d4/d39/structSH_1_1RucioListFileReplicasEntry_1ad1d30b2037a69a2c3b1a3a27077ee838" kindref="member" tooltip="the scope">scope</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="d4/d39/structSH_1_1RucioListFileReplicasEntry_1a7d2e0d2da043e2e79f16a37999b5c6f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="d4/d39/structSH_1_1RucioListFileReplicasEntry_1a7d2e0d2da043e2e79f16a37999b5c6f5" kindref="member" tooltip="the name">name</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="d4/d39/structSH_1_1RucioListFileReplicasEntry_1a33f35fcfee0d0dd0dc3578d49387ef12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="d4/d39/structSH_1_1RucioListFileReplicasEntry_1a33f35fcfee0d0dd0dc3578d49387ef12" kindref="member" tooltip="the file size">filesize</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="d4/d39/structSH_1_1RucioListFileReplicasEntry_1a51d5ac616763d3496d7c8b8d74d54c43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="d4/d39/structSH_1_1RucioListFileReplicasEntry_1a51d5ac616763d3496d7c8b8d74d54c43" kindref="member" tooltip="the checksum">adler32</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="d4/d39/structSH_1_1RucioListFileReplicasEntry_1a3b21c8723cbadaea6ae05a4374e62a4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="d4/d39/structSH_1_1RucioListFileReplicasEntry_1a3b21c8723cbadaea6ae05a4374e62a4d" kindref="member" tooltip="the disk the replica is on">disk</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="d4/d39/structSH_1_1RucioListFileReplicasEntry_1ae62f19c26c2c5aa822dd6036f2c8ce4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="d4/d39/structSH_1_1RucioListFileReplicasEntry_1ae62f19c26c2c5aa822dd6036f2c8ce4e" kindref="member" tooltip="the replica">replica</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>std::vector&lt;RucioListFileReplicasEntry&gt;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><ref refid="d0/d9e/namespaceSH_1a3655fe15ee26f7dd352cd76300f6651b" kindref="member" tooltip="run rucio-list-file-replicas for the given dataset">rucioListFileReplicas</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>dataset);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,std::unique_ptr&lt;MetaObject&gt;<sp/>&gt;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><ref refid="d0/d9e/namespaceSH_1a3d55767dfa402d097eb36cad6af3e244" kindref="member" tooltip="run rucio-get-metadata for the given list of datasets">rucioGetMetadata</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::set&lt;std::string&gt;&amp;<sp/>datasets);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="d0/d98/structSH_1_1RucioDownloadResult" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d0/d98/structSH_1_1RucioDownloadResult" kindref="compound" tooltip="the result from rucio_download">RucioDownloadResult</ref></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>did;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>totalFiles<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>downloadedFiles<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>alreadyLocal<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>notDownloaded<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><ref refid="d0/d98/structSH_1_1RucioDownloadResult" kindref="compound" tooltip="the result from rucio_download">RucioDownloadResult</ref></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><ref refid="d0/d9e/namespaceSH_1a09f12a6815d65245d5c01bff15fec7cc" kindref="member" tooltip="run rucio-download">rucioDownload</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>location,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>dataset);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>std::vector&lt;RucioDownloadResult&gt;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><ref refid="d0/d9e/namespaceSH_1a08a97d09eb6664882be300a3d86acf9f" kindref="member" tooltip="run rucio-download with multiple datasets">rucioDownloadList</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>location,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;&amp;<sp/>datasets);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SampleHandler/SampleHandler/GridTools.h"/>
+  </compounddef>
+</doxygen>

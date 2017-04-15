@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d5/ddb/QjetsPlugin_8h" kind="file">
+    <compoundname>QjetsPlugin.h</compoundname>
+    <includes local="yes">fastjet/JetDefinition.hh</includes>
+    <includes local="yes">fastjet/PseudoJet.hh</includes>
+    <includes local="yes">fastjet/ClusterSequence.hh</includes>
+    <includedby refid="d0/d34/QjetsPlugin_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetSubStructureUtils/Root/QjetsPlugin.cxx</includedby>
+    <includedby refid="dc/df3/Volatility_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetSubStructureUtils/Root/Volatility.cxx</includedby>
+    <incdepgraph>
+      <node id="188397">
+        <label>fastjet/ClusterSequence.hh</label>
+      </node>
+      <node id="188396">
+        <label>fastjet/PseudoJet.hh</label>
+      </node>
+      <node id="188395">
+        <label>fastjet/JetDefinition.hh</label>
+      </node>
+      <node id="188394">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetSubStructureUtils/JetSubStructureUtils/QjetsPlugin.h</label>
+        <link refid="QjetsPlugin.h"/>
+        <childnode refid="188395" relation="include">
+        </childnode>
+        <childnode refid="188396" relation="include">
+        </childnode>
+        <childnode refid="188397" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="d2/df4/classJetSubStructureUtils_1_1QjetsPlugin" prot="public">JetSubStructureUtils::QjetsPlugin</innerclass>
+    <innernamespace refid="df/d22/namespaceJetSubStructureUtils">JetSubStructureUtils</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>jetsubstructureutils_qjetsplugin_header</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>jetsubstructureutils_qjetsplugin_header</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;fastjet/JetDefinition.hh&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;fastjet/PseudoJet.hh&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;fastjet/ClusterSequence.hh&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">JetSubStructureUtils<sp/>{</highlight></codeline>
+<codeline lineno="9" refid="d2/df4/classJetSubStructureUtils_1_1QjetsPlugin" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d2/df4/classJetSubStructureUtils_1_1QjetsPlugin" kindref="compound">QjetsPlugin</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>fastjet::JetDefinition::Plugin<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_rand_seed_set;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_seed;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//int<sp/>_truncated_length;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m_zcut,<sp/>m_dcut_fctr,<sp/>m_exp_min,<sp/>m_exp_max,<sp/>m_rigidity,<sp/>m_truncation_fctr;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d2/df4/classJetSubStructureUtils_1_1QjetsPlugin" kindref="compound">QjetsPlugin</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zcut,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dcut_fctr,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>exp_min,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>exp_max,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rigidity,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>truncation_fctr<sp/>=<sp/>0.);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetRandSeed(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seed);<sp/></highlight><highlight class="comment">/*<sp/>In<sp/>case<sp/>you<sp/>want<sp/>reproducible<sp/>behavior<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="d8/df7/structR" kindref="compound">R</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>description()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>run_clustering(fastjet::ClusterSequence<sp/>&amp;<sp/>cs)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetSubStructureUtils/JetSubStructureUtils/QjetsPlugin.h"/>
+  </compounddef>
+</doxygen>

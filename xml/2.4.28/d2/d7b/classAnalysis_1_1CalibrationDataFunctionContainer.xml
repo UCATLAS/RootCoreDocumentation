@@ -1,0 +1,369 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer" kind="class" prot="public">
+    <compoundname>Analysis::CalibrationDataFunctionContainer</compoundname>
+    <basecompoundref refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer" prot="public" virt="non-virtual">Analysis::CalibrationDataContainer</basecompoundref>
+    <includes refid="d2/d74/CalibrationDataContainer_8h" local="no">CalibrationDataContainer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a5eebcd32c92641287f8bc18bb35f7cfa" prot="private" static="no" mutable="yes">
+        <type>TObject *</type>
+        <definition>TObject* Analysis::CalibrationDataFunctionContainer::m_objStatistics</definition>
+        <argsstring></argsstring>
+        <name>m_objStatistics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataContainer.h" line="432" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataContainer.h" bodystart="432" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a2f4f39dc0e8a8e7b8f978f5f5756e824" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Analysis::CalibrationDataFunctionContainer::CalibrationDataFunctionContainer</definition>
+        <argsstring>(const char *name=&quot;default&quot;)</argsstring>
+        <name>CalibrationDataFunctionContainer</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;default&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataContainer.h" line="416"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a82d5fc14808168b066adea933a24404c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>CalibrationDataFunctionContainer::~CalibrationDataFunctionContainer</definition>
+        <argsstring>()</argsstring>
+        <name>~CalibrationDataFunctionContainer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataContainer.h" line="417" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataContainer.cxx" bodystart="1516" bodyend="1518"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a6f057dc39206cb028a3c41536c281a36" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>CalibrationStatus</type>
+        <definition>CalibrationStatus CalibrationDataFunctionContainer::getResult</definition>
+        <argsstring>(const CalibrationDataVariables &amp;x, double &amp;result, TObject *obj=0, bool=false) const </argsstring>
+        <name>getResult</name>
+        <reimplements refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a9811c538b19d0ad30fc01131024fdbfd">getResult</reimplements>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>TObject *</type>
+          <declname>obj</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>extrapolate</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>retrieve the calibration result. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>user-supplied (kinematic or other) variables </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>requested result </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object holding the requested result (it will be computed if not provided) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>extrapolate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flag that extrapolation applies (should only be relevant when using eigenvector variations) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status code (see above) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataContainer.h" line="419" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataContainer.cxx" bodystart="1555" bodyend="1577"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a753975bdcb35c055ee9a60e2e0a2b30c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>CalibrationStatus</type>
+        <definition>CalibrationStatus CalibrationDataFunctionContainer::getStatUncertainty</definition>
+        <argsstring>(const CalibrationDataVariables &amp;x, double &amp;result) const </argsstring>
+        <name>getStatUncertainty</name>
+        <reimplements refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a58561deb16e6591212f0ccae8b91eff6">getStatUncertainty</reimplements>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>retrieve the calibration statistical uncertainty. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>user-supplied (kinematic or other) variables </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>requested statistical uncertainty </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status code (see above) Note the changed signature compared to <ref refid="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a830700dc8e3483dde05c27a75821e895" kindref="member">getUncertainty()</ref>, <ref refid="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a6f057dc39206cb028a3c41536c281a36" kindref="member">getResult()</ref> etc.: this is because the statistical uncertainty computation always needs the result object, and only in case of the function interface also the covariance matrix </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataContainer.h" line="420" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataContainer.cxx" bodystart="1625" bodyend="1693"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a830700dc8e3483dde05c27a75821e895" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>CalibrationStatus</type>
+        <definition>CalibrationStatus CalibrationDataFunctionContainer::getUncertainty</definition>
+        <argsstring>(const std::string &amp;unc, const CalibrationDataVariables &amp;x, UncertaintyResult &amp;result, TObject *obj=0) const </argsstring>
+        <name>getUncertainty</name>
+        <reimplements refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1aace1a337901e1db9a7e4a022c69625c2">getUncertainty</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>unc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/db4/structAnalysis_1_1CalibrationDataVariables" kindref="compound">CalibrationDataVariables</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>UncertaintyResult &amp;</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>TObject *</type>
+          <declname>obj</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>retrieve the calibration uncertainty due to the given source. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>user-supplied (kinematic or other) variables </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>unc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>uncertainty specification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>requested uncertainty (for both positive and negative variation, if available) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object holding the requested uncertainty information (it will be computed if not provided) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status code (see above) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataContainer.h" line="422" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataContainer.cxx" bodystart="1583" bodyend="1621"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a8315d6d599357345c48e4b8977de8672" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Analysis::CalibrationDataFunctionContainer::setLowerBound</definition>
+        <argsstring>(int vartype, double bound)</argsstring>
+        <name>setLowerBound</name>
+        <param>
+          <type>int</type>
+          <declname>vartype</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>bound</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the lower bound of validity for the given variable </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataContainer.h" line="425" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataContainer.h" bodystart="425" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a4fe7a0478757fa7df04861b4806d6a5f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Analysis::CalibrationDataFunctionContainer::setUpperBound</definition>
+        <argsstring>(int vartype, double bound)</argsstring>
+        <name>setUpperBound</name>
+        <param>
+          <type>int</type>
+          <declname>vartype</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>bound</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the lower bound of validity for the given variable </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataContainer.h" line="428" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataContainer.h" bodystart="428" bodyend="428"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1ab7f3e4925c6d866e7b8d05fbc81f9ba7" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CalibrationDataFunctionContainer::computeVariableTypes</definition>
+        <argsstring>() const </argsstring>
+        <name>computeVariableTypes</name>
+        <reimplements refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a2758169b06ace6f132bf2ef0e6237dac">computeVariableTypes</reimplements>
+        <briefdescription>
+<para>cached </para>        </briefdescription>
+        <detaileddescription>
+<para>decode the &apos;uncertainty&apos; objects&apos; names to determine the relevant variable types </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataContainer.h" line="435" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/Root/CalibrationDataContainer.cxx" bodystart="1522" bodyend="1549"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1ac2431eaa46e45aa3be61fce2ddd6c144" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Analysis::CalibrationDataFunctionContainer::ClassDef</definition>
+        <argsstring>(CalibrationDataFunctionContainer, 1)</argsstring>
+        <name>ClassDef</name>
+        <reimplements refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a18dfc962fdddabf2f2df983a5f6caeb5">ClassDef</reimplements>
+        <param>
+          <type><ref refid="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer" kindref="compound">CalibrationDataFunctionContainer</ref></type>
+        </param>
+        <param>
+          <type>1</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataContainer.h" line="437"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is the class holding information for function-based calibration results. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2915">
+        <label>Analysis::CalibrationDataContainer</label>
+        <link refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer"/>
+      </node>
+      <node id="2914">
+        <label>Analysis::CalibrationDataFunctionContainer</label>
+        <link refid="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer"/>
+        <childnode refid="2915" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2917">
+        <label>Analysis::CalibrationDataContainer</label>
+        <link refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer"/>
+      </node>
+      <node id="2916">
+        <label>Analysis::CalibrationDataFunctionContainer</label>
+        <link refid="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer"/>
+        <childnode refid="2917" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataContainer.h" line="414" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/CalibrationDataInterface/CalibrationDataContainer.h" bodystart="414" bodyend="438"/>
+    <listofallmembers>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a47d7af6a742617c1506d43af378623ab" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>CalibrationDataContainer</name></member>
+      <member refid="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a2f4f39dc0e8a8e7b8f978f5f5756e824" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>CalibrationDataFunctionContainer</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a6f374937df2bd2647b4c0b9f30f566a1" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>CalibrationParametrization</name></member>
+      <member refid="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1ac2431eaa46e45aa3be61fce2ddd6c144" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>ClassDef</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a414996bd5623bb749b7a0fc8cfa04a37" prot="protected" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>computeVariables</name></member>
+      <member refid="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1ab7f3e4925c6d866e7b8d05fbc81f9ba7" prot="private" virt="virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>computeVariableTypes</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a4959b7f8b61f37d7c66cab4d40ea9d0e" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>getBounds</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a37ad38f667a6dfe665992c36f9bac3d6" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>getComment</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a78f8934ff9297011fb8bcb193cad4322" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>getHadronisation</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1aa56b871c03e58c06dd62ebf24c700c29" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>getLowerBound</name></member>
+      <member refid="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a6f057dc39206cb028a3c41536c281a36" prot="public" virt="virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>getResult</name></member>
+      <member refid="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a753975bdcb35c055ee9a60e2e0a2b30c" prot="public" virt="virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>getStatUncertainty</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a02307fc0fb0d1341e02c66d0d9d0b985" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>getSystUncertainty</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a21290fdfb4cb6602b864f59edf2e58f5" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>getUncertainties</name></member>
+      <member refid="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a830700dc8e3483dde05c27a75821e895" prot="public" virt="virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>getUncertainty</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a88f1212e23f533d6a43168f748e62b3c" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>getUpperBound</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a92adaa4ed0e9ede4d0d360a8f88ca644" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>getVariableTypes</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1abaff5bd7e1abbc59645fe8eb27813f93" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>isNearlyEqual</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a52f3008b10ef9492a72dfc0561b29cf7" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>isRangeRestricted</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a6f374937df2bd2647b4c0b9f30f566a1a6692756d72938733763b332d4f2ea1bc" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>kAbsEta</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a6f374937df2bd2647b4c0b9f30f566a1a727a6dbf44b189ed73773d3e692020f8" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>kEta</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a6f374937df2bd2647b4c0b9f30f566a1aed960f926233b847692fb49a78262ce8" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>kPt</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a6f374937df2bd2647b4c0b9f30f566a1a2014afaa5916df1cff6ff67d152b770c" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>kTagWeight</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a3d2d52c41de06f2f91702655ced873b6" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>listUncertainties</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1ab50cbcbe1af6430107cfaa5fd4dad440" prot="protected" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>m_lowerBounds</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a55be48882b6ae5331906159e27f40148" prot="protected" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>m_lowerBoundsExtrapolated</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1aed6192590190fb87f0b51295bd8ac201" prot="protected" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>m_objResult</name></member>
+      <member refid="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a5eebcd32c92641287f8bc18bb35f7cfa" prot="private" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>m_objStatistics</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a98d1720be9ead967e0e0166989f98b5b" prot="protected" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>m_objSystematics</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1ac653ff185b74bc5be5576770bd0a3da0" prot="protected" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>m_upperBounds</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a13169dd8209ab4cd5a92c3c24a28aa6d" prot="protected" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>m_upperBoundsExtrapolated</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1af729948af693157fcfad42d9602b814a" prot="protected" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>m_variables</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1acc0650d8f7d63985d6c0f38745329da6" prot="protected" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>m_vars</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a5557c916b13fe0ccec9a3a6fedf7bcfe" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>restrictToRange</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1abd0830b7c9111a0987747c395e6938e4" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>setComment</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a966fb27de925a6af5df0b17e63e03026" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>setHadronisation</name></member>
+      <member refid="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a8315d6d599357345c48e4b8977de8672" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>setLowerBound</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a02419acd65b92507438f38a8c80ccfc1" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>setResult</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a64450b7e83b2705a447b653ec695cebb" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>setUncertainty</name></member>
+      <member refid="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a4fe7a0478757fa7df04861b4806d6a5f" prot="public" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>setUpperBound</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1a3358b4b7f40e2c838a0e69d97fcdbb46" prot="protected" virt="non-virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>typeFromString</name></member>
+      <member refid="d5/d7b/classAnalysis_1_1CalibrationDataContainer_1af1127c28e97354324bbef28b27ad3f1a" prot="public" virt="virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>~CalibrationDataContainer</name></member>
+      <member refid="d2/d7b/classAnalysis_1_1CalibrationDataFunctionContainer_1a82d5fc14808168b066adea933a24404c" prot="public" virt="virtual"><scope>Analysis::CalibrationDataFunctionContainer</scope><name>~CalibrationDataFunctionContainer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dd/d6e/classxAOD_1_1TActiveStore" kind="class" prot="public">
+    <compoundname>xAOD::TActiveStore</compoundname>
+    <includes refid="d4/d92/TActiveStore_8h" local="no">TActiveStore.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="dd/d6e/classxAOD_1_1TActiveStore_1a2677e2c3ec7d5d0cbd1c262f55a883dd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class TStore</definition>
+        <argsstring></argsstring>
+        <name>TStore</name>
+        <briefdescription>
+<para>Allow the <ref refid="dd/dae/classxAOD_1_1TStore" kindref="compound">TStore</ref> class to register itself at the right time. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TActiveStore.h" line="28" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TActiveStore.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="dd/d6e/classxAOD_1_1TActiveStore_1a56c53f1d93480a8ca259582fb72ffb7f" prot="private" static="yes" mutable="no">
+        <type><ref refid="dd/dae/classxAOD_1_1TStore" kindref="compound">TStore</ref> *</type>
+        <definition>TStore * xAOD::TActiveStore::s_store</definition>
+        <argsstring></argsstring>
+        <name>s_store</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+<para>Pointer to the currently active <ref refid="de/daf/classxAOD_1_1TVirtualEvent" kindref="compound">TVirtualEvent</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TActiveStore.h" line="36" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TActiveStore.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="dd/d6e/classxAOD_1_1TActiveStore_1a64bb99c225059626b015e0da21c86c12" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/dae/classxAOD_1_1TStore" kindref="compound">TStore</ref> *</type>
+        <definition>TStore * xAOD::TActiveStore::store</definition>
+        <argsstring>()</argsstring>
+        <name>store</name>
+        <briefdescription>
+<para>Access the currently active <ref refid="de/daf/classxAOD_1_1TVirtualEvent" kindref="compound">TVirtualEvent</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TActiveStore.h" line="32" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TActiveStore.cxx" bodystart="11" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper class for finding the active <ref refid="dd/dae/classxAOD_1_1TStore" kindref="compound">TStore</ref> object. </para>    </briefdescription>
+    <detaileddescription>
+<para>The idea here is very similar to the one in <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref>. Some code needs to access the currently &quot;active&quot; store, without receiving a pointer/reference to the store directly. This code always makes sure that the currently active <ref refid="dd/dae/classxAOD_1_1TStore" kindref="compound">TStore</ref> object is returned to the user. (In case multiple <ref refid="dd/dae/classxAOD_1_1TStore" kindref="compound">TStore</ref> objects are being used to read multiple input files at the same time.)</para><para><simplesect kind="author"><para>Attila Krasznahorkay &lt;<ulink url="mailto:Attila.Krasznahorkay@cern.ch">Attila.Krasznahorkay@cern.ch</ulink>&gt;</para></simplesect>
+<simplesect kind="rcs"><title>Revision</title><para>599784 </para></simplesect>
+<simplesect kind="rcs"><title>Date</title><para>2014-06-01 19:58:48 +0200 (Sun, 01 Jun 2014) </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="17951">
+        <label>xAOD::TStore</label>
+        <link refid="dd/dae/classxAOD_1_1TStore"/>
+      </node>
+      <node id="17950">
+        <label>xAOD::TActiveStore</label>
+        <link refid="dd/d6e/classxAOD_1_1TActiveStore"/>
+        <childnode refid="17951" relation="usage">
+          <edgelabel>s_store</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TActiveStore.h" line="25" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TActiveStore.h" bodystart="25" bodyend="38"/>
+    <listofallmembers>
+      <member refid="dd/d6e/classxAOD_1_1TActiveStore_1a56c53f1d93480a8ca259582fb72ffb7f" prot="private" virt="non-virtual"><scope>xAOD::TActiveStore</scope><name>s_store</name></member>
+      <member refid="dd/d6e/classxAOD_1_1TActiveStore_1a64bb99c225059626b015e0da21c86c12" prot="public" virt="non-virtual"><scope>xAOD::TActiveStore</scope><name>store</name></member>
+      <member refid="dd/d6e/classxAOD_1_1TActiveStore_1a2677e2c3ec7d5d0cbd1c262f55a883dd" prot="private" virt="non-virtual"><scope>xAOD::TActiveStore</scope><name>TStore</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

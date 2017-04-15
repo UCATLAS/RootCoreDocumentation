@@ -1,0 +1,413 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dc/d32/classJERTool" kind="class" prot="public">
+    <compoundname>JERTool</compoundname>
+    <basecompoundref refid="d2/d8c/classIJERTool" prot="public" virt="virtual">IJERTool</basecompoundref>
+    <basecompoundref refid="da/dfd/classasg_1_1AsgMetadataTool" prot="public" virt="non-virtual">asg::AsgMetadataTool</basecompoundref>
+    <includes refid="dd/dec/JERTool_8h" local="no">JERTool.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Methods implementing the asg::IAsgTool interface</header>
+      <description><para><anchor id="_1amgrp2354184d4b3943f0e5cc22d3137ab61c"/>----------------------------------------------------------------------- </para></description>
+      <memberdef kind="function" id="dc/d32/classJERTool_1a0945d0cb1889ae2a3d1f2d35c55a972a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode JERTool::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <reimplements refid="d5/dbb/classasg_1_1AsgTool_1a55b3c013a3e54ae4c1d0d76de8e1e726">initialize</reimplements>
+        <briefdescription>
+<para>Initialize the tool. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="56" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/Root/JERTool.cxx" bodystart="121" bodyend="172"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Methods implementing the IJERTool interface.</header>
+      <description><para><anchor id="_1amgrpfab8eaf1b97c366615484526144b8640"/>----------------------------------------------------------------------- </para></description>
+      <memberdef kind="function" id="dc/d32/classJERTool_1a3df42c5e7101cac8c0494007ad5fbc86" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double JERTool::getRelResolutionMC</definition>
+        <argsstring>(const xAOD::Jet *jet)</argsstring>
+        <name>getRelResolutionMC</name>
+        <reimplements refid="d2/d8c/classIJERTool_1ae3fdeab5c1c5c039ca89071768f6498e">getRelResolutionMC</reimplements>
+        <param>
+          <type>const <ref refid="db/d9c/classxAOD_1_1Jet__v1" kindref="compound">xAOD::Jet</ref> *</type>
+          <declname>jet</declname>
+        </param>
+        <briefdescription>
+<para>Read the resolution from the MC parameterization. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="65" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/Root/JERTool.cxx" bodystart="248" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d32/classJERTool_1aa03f6fb3b305ad53294febcd579a7043" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double JERTool::getRelResolutionData</definition>
+        <argsstring>(const xAOD::Jet *jet)</argsstring>
+        <name>getRelResolutionData</name>
+        <reimplements refid="d2/d8c/classIJERTool_1aa058bc2bec498235824dc7f14affb092">getRelResolutionData</reimplements>
+        <param>
+          <type>const <ref refid="db/d9c/classxAOD_1_1Jet__v1" kindref="compound">xAOD::Jet</ref> *</type>
+          <declname>jet</declname>
+        </param>
+        <briefdescription>
+<para>Obtain the resolution for data (sigma_MC + offset). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="68" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/Root/JERTool.cxx" bodystart="322" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d32/classJERTool_1abaf2632efd3c3a916d9285addc9d1919" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double JERTool::getUncertainty</definition>
+        <argsstring>(const xAOD::Jet *jet, JER::Uncert errType=JER::JER_NP_ALL)</argsstring>
+        <name>getUncertainty</name>
+        <reimplements refid="d2/d8c/classIJERTool_1a91bd5eed32bd6695e2912b35474019be">getUncertainty</reimplements>
+        <param>
+          <type>const <ref refid="db/d9c/classxAOD_1_1Jet__v1" kindref="compound">xAOD::Jet</ref> *</type>
+          <declname>jet</declname>
+        </param>
+        <param>
+          <type>JER::Uncert</type>
+          <declname>errType</declname>
+          <defval>JER::JER_NP_ALL</defval>
+        </param>
+        <briefdescription>
+<para>Calculate resolution uncertainty. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="72" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/Root/JERTool.cxx" bodystart="382" bodyend="427"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="dc/d32/classJERTool_1a47c883e762f12cd9d7f214e0a7c3b1f8" prot="private" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int JERTool::m_nEtaBins</definition>
+        <argsstring></argsstring>
+        <name>m_nEtaBins</name>
+        <initializer> 7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Binning TODO: Think of a better way to do this. For example, can&apos;t we take these from the input file?? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="98" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dc/d32/classJERTool_1af3b0fcff109bc17a7932821b538d4a04" prot="private" static="no" mutable="no">
+        <type>TAxis *</type>
+        <definition>TAxis* JERTool::m_etaAxis</definition>
+        <argsstring></argsstring>
+        <name>m_etaAxis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="101" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d32/classJERTool_1a6ae3d9273f302d9a5dd0b31a4ea23383" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string JERTool::m_fileName</definition>
+        <argsstring></argsstring>
+        <name>m_fileName</name>
+        <briefdescription>
+<para>Configuration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="104" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d32/classJERTool_1aa0fd34bd58d0a61bc831d8ec33842f74" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int JERTool::m_jetAlgo</definition>
+        <argsstring></argsstring>
+        <name>m_jetAlgo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="105" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d32/classJERTool_1a8c6dc74c2a7a43512d35de2ab18cb995" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string JERTool::m_collectionName</definition>
+        <argsstring></argsstring>
+        <name>m_collectionName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="106" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d32/classJERTool_1a492394408b499c81df27c0c86edf9dac" prot="private" static="no" mutable="no">
+        <type>TGraph *</type>
+        <definition>TGraph* JERTool::m_jerNP[JER::JETALG_N][m_nEtaBins][JER::JER_NP_ALL]</definition>
+        <argsstring>[JER::JETALG_N][m_nEtaBins][JER::JER_NP_ALL]</argsstring>
+        <name>m_jerNP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Nuisance parameter graphs. TODO: think about a better structure for these. Previously, these maps were keyed by eta. Maybe we could use TGraph2D and instead key them by NP. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="114" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/d32/classJERTool_1af7207fa9ec9b7bb72435ee73a5f18d68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JERTool::JERTool</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>JERTool</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Create a proper constructor for <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Create a constructor for standalone usage </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="39" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/Root/JERTool.cxx" bodystart="64" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d32/classJERTool_1a3dbfbb02f55c6487642cf58cd1f231eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JERTool::JERTool</definition>
+        <argsstring>(const JERTool &amp;)</argsstring>
+        <name>JERTool</name>
+        <param>
+          <type>const <ref refid="dc/d32/classJERTool" kindref="compound">JERTool</ref> &amp;</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+<para>Copy constructor needed for reflex dictionary generation in <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="42" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/Root/JERTool.cxx" bodystart="91" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d32/classJERTool_1ad9dbc91f01b5fe79d4f39dd1c1612e88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dc/d32/classJERTool" kindref="compound">JERTool</ref> &amp;</type>
+        <definition>JERTool&amp; JERTool::operator=</definition>
+        <argsstring>(const JERTool &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="dc/d32/classJERTool" kindref="compound">JERTool</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>We shouldn&apos;t need assignment, but regardless it isn&apos;t implemented. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d32/classJERTool_1aadeb766dfb4e9d78d79f34220c5997cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JERTool::~JERTool</definition>
+        <argsstring>()</argsstring>
+        <name>~JERTool</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="48" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/Root/JERTool.cxx" bodystart="106" bodyend="116"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="dc/d32/classJERTool_1a8144ffa6b27fc1cf2d002039ba24d267" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode JERTool::autoConfigure</definition>
+        <argsstring>()</argsstring>
+        <name>autoConfigure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Attempt auto-configuration of tool using Metadata. This currently only works in <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="80" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/Root/JERTool.cxx" bodystart="178" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d32/classJERTool_1a05baaeeacd0cea007cbdeb02c3370f21" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode JERTool::parseConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>parseConfiguration</name>
+        <briefdescription>
+<para>Helper method for parsing the configuration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d32/classJERTool_1ab80ef9010294ab401f4babe379f42ab6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode JERTool::loadJERInputs</definition>
+        <argsstring>()</argsstring>
+        <name>loadJERInputs</name>
+        <briefdescription>
+<para>Helper method for loading the JER inputs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="85" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/Root/JERTool.cxx" bodystart="214" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d32/classJERTool_1acb42f879edfab0f286e21c199c6a13e0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int JERTool::getEtaBin</definition>
+        <argsstring>(const xAOD::Jet *jet)</argsstring>
+        <name>getEtaBin</name>
+        <param>
+          <type>const <ref refid="db/d9c/classxAOD_1_1Jet__v1" kindref="compound">xAOD::Jet</ref> *</type>
+          <declname>jet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get eta bin corresponding for this jet. Indexing convention of eta regions is off-by-one with respect to the TAxis (etaBin = TAxisBin - 1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="90" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/Root/JERTool.cxx" bodystart="434" bodyend="439"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="d4/dc4/structA" kindref="compound">A</ref> dual-use tool which provides the jet energy resolution and associated uncertainties. For more information, see: <ulink url="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/JetEnergyResolutionXAODTools">https://twiki.cern.ch/twiki/bin/view/AtlasProtected/JetEnergyResolutionXAODTools</ulink></para><para>Resolution and uncertainty are retrieved using the getRelResolutionMC, getRelResolutionData, and getUncertainty methods.</para><para><simplesect kind="author"><para>Steve Farrell &lt;<ulink url="mailto:steven.farrell@cern.ch">steven.farrell@cern.ch</ulink>&gt; </para></simplesect>
+<simplesect kind="date"><para>July 2014 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11277">
+        <label>asg::AsgMetadataTool</label>
+        <link refid="da/dfd/classasg_1_1AsgMetadataTool"/>
+        <childnode refid="11278" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11274">
+        <label>JERTool</label>
+        <link refid="dc/d32/classJERTool"/>
+        <childnode refid="11275" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11277" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11275">
+        <label>IJERTool</label>
+        <link refid="d2/d8c/classIJERTool"/>
+        <childnode refid="11276" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11278">
+        <label>asg::AsgTool</label>
+        <link refid="d5/dbb/classasg_1_1AsgTool"/>
+        <childnode refid="11276" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11276">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11282">
+        <label>asg::AsgMetadataTool</label>
+        <link refid="da/dfd/classasg_1_1AsgMetadataTool"/>
+        <childnode refid="11283" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11279">
+        <label>JERTool</label>
+        <link refid="dc/d32/classJERTool"/>
+        <childnode refid="11280" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11282" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11284" relation="usage">
+          <edgelabel>m_fileName</edgelabel>
+          <edgelabel>m_collectionName</edgelabel>
+        </childnode>
+      </node>
+      <node id="11280">
+        <label>IJERTool</label>
+        <link refid="d2/d8c/classIJERTool"/>
+        <childnode refid="11281" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11284">
+        <label>string</label>
+      </node>
+      <node id="11283">
+        <label>asg::AsgTool</label>
+        <link refid="d5/dbb/classasg_1_1AsgTool"/>
+        <childnode refid="11281" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11281">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" line="31" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetResolution/JetResolution/JERTool.h" bodystart="29" bodyend="116"/>
+    <listofallmembers>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1a59a741dd8ea7efecf776cc39470c87de" prot="public" virt="non-virtual"><scope>JERTool</scope><name>AsgMetadataTool</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a47f02c756c6d6026d03e0d4d68d82a94" prot="public" virt="non-virtual"><scope>JERTool</scope><name>AsgTool</name></member>
+      <member refid="dc/d32/classJERTool_1a8144ffa6b27fc1cf2d002039ba24d267" prot="protected" virt="non-virtual"><scope>JERTool</scope><name>autoConfigure</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1a197cfa14f94c758c53a770544b7dad88" prot="protected" virt="virtual"><scope>JERTool</scope><name>beginEvent</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1a0f88194c53ae0af538819858bdff07da" prot="protected" virt="virtual"><scope>JERTool</scope><name>beginInputFile</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1a96c1e806bc026046faec3c695ca1fa2b" prot="protected" virt="virtual"><scope>JERTool</scope><name>endInputFile</name></member>
+      <member refid="dc/d32/classJERTool_1acb42f879edfab0f286e21c199c6a13e0" prot="protected" virt="non-virtual"><scope>JERTool</scope><name>getEtaBin</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a5d9d9eae0988784fb6c257e0a2440ca6" prot="public" virt="non-virtual"><scope>JERTool</scope><name>getProperty</name></member>
+      <member refid="dc/d32/classJERTool_1aa03f6fb3b305ad53294febcd579a7043" prot="public" virt="virtual"><scope>JERTool</scope><name>getRelResolutionData</name></member>
+      <member refid="dc/d32/classJERTool_1a3df42c5e7101cac8c0494007ad5fbc86" prot="public" virt="virtual"><scope>JERTool</scope><name>getRelResolutionMC</name></member>
+      <member refid="dc/d32/classJERTool_1abaf2632efd3c3a916d9285addc9d1919" prot="public" virt="virtual"><scope>JERTool</scope><name>getUncertainty</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1a530a60a4a450f07baec2e3895f567656" prot="protected" virt="virtual"><scope>JERTool</scope><name>handle</name></member>
+      <member refid="dc/d32/classJERTool_1a0945d0cb1889ae2a3d1f2d35c55a972a" prot="public" virt="virtual"><scope>JERTool</scope><name>initialize</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1ae352e92bf7637cdd3fec63ca2df4bb79" prot="public" virt="non-virtual"><scope>JERTool</scope><name>inputMetaStore</name></member>
+      <member refid="dc/d32/classJERTool_1af7207fa9ec9b7bb72435ee73a5f18d68" prot="public" virt="non-virtual"><scope>JERTool</scope><name>JERTool</name></member>
+      <member refid="dc/d32/classJERTool_1a3dbfbb02f55c6487642cf58cd1f231eb" prot="public" virt="non-virtual"><scope>JERTool</scope><name>JERTool</name></member>
+      <member refid="dc/d32/classJERTool_1ab80ef9010294ab401f4babe379f42ab6" prot="protected" virt="non-virtual"><scope>JERTool</scope><name>loadJERInputs</name></member>
+      <member refid="dc/d32/classJERTool_1a8c6dc74c2a7a43512d35de2ab18cb995" prot="private" virt="non-virtual"><scope>JERTool</scope><name>m_collectionName</name></member>
+      <member refid="dc/d32/classJERTool_1af3b0fcff109bc17a7932821b538d4a04" prot="private" virt="non-virtual"><scope>JERTool</scope><name>m_etaAxis</name></member>
+      <member refid="dc/d32/classJERTool_1a6ae3d9273f302d9a5dd0b31a4ea23383" prot="private" virt="non-virtual"><scope>JERTool</scope><name>m_fileName</name></member>
+      <member refid="dc/d32/classJERTool_1a492394408b499c81df27c0c86edf9dac" prot="private" virt="non-virtual"><scope>JERTool</scope><name>m_jerNP</name></member>
+      <member refid="dc/d32/classJERTool_1aa0fd34bd58d0a61bc831d8ec33842f74" prot="private" virt="non-virtual"><scope>JERTool</scope><name>m_jetAlgo</name></member>
+      <member refid="dc/d32/classJERTool_1a47c883e762f12cd9d7f214e0a7c3b1f8" prot="private" virt="non-virtual"><scope>JERTool</scope><name>m_nEtaBins</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1abb00c6ab139868a879d647adabbddc2c" prot="protected" virt="virtual"><scope>JERTool</scope><name>metaDataStop</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a3aeba8f7ad5ade0197f5848fe9e4480e" prot="public" virt="non-virtual"><scope>JERTool</scope><name>msg_level_name</name></member>
+      <member refid="dc/d32/classJERTool_1ad9dbc91f01b5fe79d4f39dd1c1612e88" prot="public" virt="non-virtual"><scope>JERTool</scope><name>operator=</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1aecc5130b7f5a7e9342e974891b562e1c" prot="public" virt="non-virtual"><scope>JERTool</scope><name>outputMetaStore</name></member>
+      <member refid="dc/d32/classJERTool_1a05baaeeacd0cea007cbdeb02c3370f21" prot="protected" virt="non-virtual"><scope>JERTool</scope><name>parseConfiguration</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1af1aac990b958e92bf38123318d926e67" prot="public" virt="pure-virtual" ambiguityscope="IJERTool::"><scope>JERTool</scope><name>print</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1af4cc6ba53b6505045c2866d4e30e821d" prot="public" virt="virtual" ambiguityscope="asg::AsgMetadataTool::"><scope>JERTool</scope><name>print</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1abe82065a516344e4f0f0abb2f23d9f8a" prot="public" virt="non-virtual"><scope>JERTool</scope><name>retrieveMetadata</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1af0c49a5d93cf0f25cbb0a2f12e5394d9" prot="public" virt="virtual"><scope>JERTool</scope><name>sysInitialize</name></member>
+      <member refid="da/dfd/classasg_1_1AsgMetadataTool_1a5e5666d87754b5f3b8d572512c41d5af" prot="public" virt="non-virtual"><scope>JERTool</scope><name>~AsgMetadataTool</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1abf22f7aa60258c67b79cf67bf70a3a5b" prot="public" virt="non-virtual"><scope>JERTool</scope><name>~AsgTool</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1a77b49d52f1f8c272cb665b8309d6082d" prot="public" virt="virtual"><scope>JERTool</scope><name>~IAsgTool</name></member>
+      <member refid="d2/d8c/classIJERTool_1a6c7d450df417cbd0b55ec37c22b9dede" prot="public" virt="virtual"><scope>JERTool</scope><name>~IJERTool</name></member>
+      <member refid="dc/d32/classJERTool_1aadeb766dfb4e9d78d79f34220c5997cb" prot="public" virt="non-virtual"><scope>JERTool</scope><name>~JERTool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

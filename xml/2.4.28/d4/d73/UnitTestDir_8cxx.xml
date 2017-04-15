@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d4/d73/UnitTestDir_8cxx" kind="file">
+    <compoundname>UnitTestDir.cxx</compoundname>
+    <includes refid="db/dff/UnitTestDir_8h" local="no">RootCoreUtils/UnitTestDir.h</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">TSystem.h</includes>
+    <includes local="no">TString.h</includes>
+    <includes refid="d3/dac/Assert_8h" local="no">RootCoreUtils/Assert.h</includes>
+    <includes refid="dd/db7/ThrowMsg_8h" local="no">RootCoreUtils/ThrowMsg.h</includes>
+    <incdepgraph>
+      <node id="263715">
+        <label>string</label>
+      </node>
+      <node id="263712">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/RootCoreUtils/Root/UnitTestDir.cxx</label>
+        <link refid="UnitTestDir.cxx"/>
+        <childnode refid="263713" relation="include">
+        </childnode>
+        <childnode refid="263716" relation="include">
+        </childnode>
+        <childnode refid="263717" relation="include">
+        </childnode>
+        <childnode refid="263718" relation="include">
+        </childnode>
+        <childnode refid="263719" relation="include">
+        </childnode>
+        <childnode refid="263720" relation="include">
+        </childnode>
+      </node>
+      <node id="263717">
+        <label>TSystem.h</label>
+      </node>
+      <node id="263714">
+        <label>RootCoreUtils/Global.h</label>
+        <link refid="d6/d7f/RootCoreUtils_2RootCoreUtils_2Global_8h_source"/>
+      </node>
+      <node id="263722">
+        <label>RootCoreUtils/MessageType.h</label>
+        <link refid="dd/d02/MessageType_8h_source"/>
+        <childnode refid="263714" relation="include">
+        </childnode>
+      </node>
+      <node id="263713">
+        <label>RootCoreUtils/UnitTestDir.h</label>
+        <link refid="db/dff/UnitTestDir_8h_source"/>
+        <childnode refid="263714" relation="include">
+        </childnode>
+        <childnode refid="263715" relation="include">
+        </childnode>
+      </node>
+      <node id="263716">
+        <label>cstdlib</label>
+      </node>
+      <node id="263718">
+        <label>TString.h</label>
+      </node>
+      <node id="263721">
+        <label>RootCoreUtils/PrintMsg.h</label>
+        <link refid="d2/d5f/PrintMsg_8h_source"/>
+        <childnode refid="263714" relation="include">
+        </childnode>
+        <childnode refid="263715" relation="include">
+        </childnode>
+        <childnode refid="263722" relation="include">
+        </childnode>
+      </node>
+      <node id="263720">
+        <label>RootCoreUtils/ThrowMsg.h</label>
+        <link refid="dd/db7/ThrowMsg_8h_source"/>
+        <childnode refid="263714" relation="include">
+        </childnode>
+        <childnode refid="263721" relation="include">
+        </childnode>
+      </node>
+      <node id="263719">
+        <label>RootCoreUtils/Assert.h</label>
+        <link refid="d3/dac/Assert_8h_source"/>
+        <childnode refid="263714" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="d9/d83/namespaceRCU">RCU</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>Nils<sp/>Krumnack<sp/>2011<sp/>-<sp/>2012.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>(See<sp/>accompanying<sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Please<sp/>feel<sp/>free<sp/>to<sp/>contact<sp/>me<sp/>(krumnack@iastate.edu)<sp/>for<sp/>bug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>reports,<sp/>feature<sp/>suggestions,<sp/>praise<sp/>and<sp/>complaints.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;RootCoreUtils/UnitTestDir.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TSystem.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TString.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;RootCoreUtils/Assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;RootCoreUtils/ThrowMsg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>method<sp/>implementations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">RCU</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d9/da0/classRCU_1_1UnitTestDir_1a3fdfbccf3e409b0d2b9d91a5804f7c25" kindref="member">UnitTestDir ::</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><ref refid="d9/da0/classRCU_1_1UnitTestDir_1a3fdfbccf3e409b0d2b9d91a5804f7c25" kindref="member">  testInvariant</ref><sp/>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="30"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>RCU_INVARIANT<sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><ref refid="d9/da0/classRCU_1_1UnitTestDir_1a5f9ea45f302c3302506a16dd78a67dbe" kindref="member">UnitTestDir ::</ref></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="d9/da0/classRCU_1_1UnitTestDir_1a5f9ea45f302c3302506a16dd78a67dbe" kindref="member">  UnitTestDir</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>package,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>m_cleanup<sp/>(getenv<sp/>(</highlight><highlight class="stringliteral">&quot;ROOTCORE_AUTO_UT&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>TString<sp/>output<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/tmp&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tmpdir<sp/>=<sp/>getenv<sp/>(</highlight><highlight class="stringliteral">&quot;TMPDIR&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmpdir)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>output<sp/>=<sp/>tmpdir;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>output<sp/>+=<sp/>(</highlight><highlight class="stringliteral">&quot;/ut-&quot;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">+<sp/>&quot;-&quot;<sp/>+<sp/>name<sp/>+<sp/>&quot;.$$&quot;).c_str();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>gSystem-&gt;ExpandPathName<sp/>(output);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>m_path<sp/>=<sp/>output.Data<sp/>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gSystem-&gt;MakeDirectory<sp/>(output.Data())<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>RCU_THROW_MSG<sp/>((</highlight><highlight class="stringliteral">&quot;could<sp/>not<sp/>create<sp/>output<sp/>directory<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>output).Data());</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><ref refid="d9/da0/classRCU_1_1UnitTestDir_1a7c26e1f7b3fac1caa5fb5faa3931b6f4" kindref="member">UnitTestDir ::</ref></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><ref refid="d9/da0/classRCU_1_1UnitTestDir_1a7c26e1f7b3fac1caa5fb5faa3931b6f4" kindref="member">  ~UnitTestDir</ref><sp/>()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>RCU_DESTROY_INVARIANT<sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_cleanup)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>gSystem-&gt;Exec<sp/>((</highlight><highlight class="stringliteral">&quot;rm<sp/>-rf<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>m_path).c_str());</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>RCU_PRINT_MSG<sp/>(</highlight><highlight class="stringliteral">&quot;unit<sp/>test<sp/>data<sp/>located<sp/>at<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>m_path);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="d9/da0/classRCU_1_1UnitTestDir_1abc5c6eb9295dce5019fae6abba10174e" kindref="member">UnitTestDir ::</ref></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="d9/da0/classRCU_1_1UnitTestDir_1abc5c6eb9295dce5019fae6abba10174e" kindref="member">  path</ref><sp/>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="71"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>RCU_READ_INVARIANT<sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_path;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d9/da0/classRCU_1_1UnitTestDir_1ae98ee772d9b74bdbc0c5afa0cb73d682" kindref="member">UnitTestDir ::</ref></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><ref refid="d9/da0/classRCU_1_1UnitTestDir_1ae98ee772d9b74bdbc0c5afa0cb73d682" kindref="member">  cleanup</ref><sp/>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="80"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>RCU_READ_INVARIANT<sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_cleanup;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d9/da0/classRCU_1_1UnitTestDir_1ae98ee772d9b74bdbc0c5afa0cb73d682" kindref="member">UnitTestDir ::</ref></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><ref refid="d9/da0/classRCU_1_1UnitTestDir_1ae98ee772d9b74bdbc0c5afa0cb73d682" kindref="member">  cleanup</ref><sp/>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>val_cleanup)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>RCU_CHANGE_INVARIANT<sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>m_cleanup<sp/>=<sp/>val_cleanup;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/RootCoreUtils/Root/UnitTestDir.cxx"/>
+  </compounddef>
+</doxygen>

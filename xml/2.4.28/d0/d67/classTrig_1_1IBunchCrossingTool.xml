@@ -1,0 +1,1105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d0/d67/classTrig_1_1IBunchCrossingTool" kind="class" prot="public">
+    <compoundname>Trig::IBunchCrossingTool</compoundname>
+    <basecompoundref refid="d4/d20/classasg_1_1IAsgTool" prot="public" virt="virtual">asg::IAsgTool</basecompoundref>
+    <derivedcompoundref refid="dd/d09/classTrig_1_1BunchCrossingConfProviderBase" prot="public" virt="virtual">Trig::BunchCrossingConfProviderBase</derivedcompoundref>
+    <derivedcompoundref refid="db/df3/classTrig_1_1BunchCrossingToolBase" prot="public" virt="virtual">Trig::BunchCrossingToolBase</derivedcompoundref>
+    <includes refid="db/d9f/IBunchCrossingTool_8h" local="no">IBunchCrossingTool.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47" prot="public" static="no">
+        <name>BeamType</name>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47a0a2435c329f92970602ae6a6c2f8165a" prot="public">
+          <name>Beam1</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>The returned intensity should be for &quot;beam 1&quot;. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47a84657ab866c535aaaa27f007dd81b703" prot="public">
+          <name>Beam2</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>The returned intensity should be for &quot;beam 2&quot;. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47a9d05da22e67bd5be8ea2807a72563690" prot="public">
+          <name>Crossing</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+<para>The returned intensity should describe the BC. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Types of the return values of the bcIntensity function. </para>        </briefdescription>
+        <detaileddescription>
+<para>The different information sources provide the &quot;bunch intensity&quot; information in quite different ways, and the information can mean different things actually. This enumeration is used to specify what exact type of information the user is looking for. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="113" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" bodystart="113" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="enum" id="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cf" prot="public" static="no">
+        <name>BunchCrossingType</name>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa4b0c804ae3e2125b4c260b6fefd79ea8" prot="public">
+          <name>Empty</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>An empty bunch far away from filled bunches. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa259bae7213f9b2ee63d726133b5ccd54" prot="public">
+          <name>FirstEmpty</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>The first empty bunch after a train. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfae196bca5223029fbfbd4543646fcf793" prot="public">
+          <name>MiddleEmpty</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+<para>An empty BCID in the middle of a train. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfad69950ed575625ca7e0c9905bb99f14d" prot="public">
+          <name>Single</name>
+          <initializer> 100</initializer>
+          <briefdescription>
+<para>This is a filled, single bunch (not in a train). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa5581dfb9e92aa4e7c3bb185de93bc21c" prot="public">
+          <name>Front</name>
+          <initializer> 200</initializer>
+          <briefdescription>
+<para>The BCID belongs to the first few bunches in a train. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa8b13f6fcb97a797aba6ce81089e63f18" prot="public">
+          <name>Middle</name>
+          <initializer> 201</initializer>
+          <briefdescription>
+<para>The BCID belongs to the middle bunches in a train. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa334a589a59f6cd4362f4b5afaedc356f" prot="public">
+          <name>Tail</name>
+          <initializer> 202</initializer>
+          <briefdescription>
+<para>The BCID belongs to the last few bunces in a train. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa17f24a20f1378fd1e9542d078133778b" prot="public">
+          <name>Unpaired</name>
+          <initializer> 300</initializer>
+          <briefdescription>
+<para>This is an unpaired bunch (either beam1 or beam2). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Simplified type for a given bunch crossing. </para>        </briefdescription>
+        <detaileddescription>
+<para>This enumeration can specify what kind of bunch crossing one BCID belongs to. The types could easily be extended later on. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="140" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" bodystart="140" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="enum" id="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681e" prot="public" static="no">
+        <name>BunchDistanceType</name>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681ea5e0331cbdd292eb12a1834b835bd79c7" prot="public">
+          <name>NanoSec</name>
+          <briefdescription>
+<para>Distance in nanoseconds. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681ea0a64ff40e0cd130bf46a4dc695842780" prot="public">
+          <name>BunchCrossings</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Distance in units of 25 nanoseconds </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681ea8110a0e05955daca343f82a4ae037873" prot="public">
+          <name>FilledBunches</name>
+          <briefdescription>
+<para>Distance in units of filled bunches (depends on filling scheme). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration specifying the units in which to expect the bunch distance type. </para>        </briefdescription>
+        <detaileddescription>
+<para>To make it clear for the following functions what units to interpret their return values in, it is possible to request their return values in different units. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="169" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" bodystart="169" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="enum" id="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8" prot="public" static="no">
+        <name>BunchFillType</name>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8a521766e927f41055758f34ee58b5d012" prot="public">
+          <name>CollidingBunch</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>The gap should be calculated wrt. the closest colling bunch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8a5ad3382c869d5996cd7cc6e69d7affd8" prot="public">
+          <name>UnpairedBunch</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>The gap should be calculated wrt. the closest unpaired bunch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8a8ddf98c396a923c2e48174e4ddfcf0a5" prot="public">
+          <name>EmptyBunch</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+<para>The gap should be calculated wrt. the closest empty bunch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8a955e2b8f3446de622b29908f7843b2f5" prot="public">
+          <name>UnpairedBeam1</name>
+          <initializer> 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The gap should be calculated wrt. the closest unpaired bunch from beam 1 </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8ac260bfad34a78e1b5076eb998c6aa417" prot="public">
+          <name>UnpairedBeam2</name>
+          <initializer> 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The gap should be calculated wrt. the closest unpaired bunch from beam 2 </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration specifying what kind of bunch to use in the gap functions. </para>        </briefdescription>
+        <detaileddescription>
+<para>The following functions can be used to calculate the gap before and after a specific BCID to some other bunch type. The gap can actually be wrt. two different types of bunches. The user may be interested between the space of two filled bunches, the space between an unpaired bunch and the previous filled bunch, the space between two unpaired bunches, or the space between a filled bunch and the previous unpaired bunch.</para><para>The empty type is just put here for completeness. Maybe once we&apos;ll be using 25 ns spacing in the bunch trains, this will be a useful parameter as well.</para><para>This enumeration helps in answeing all of these questions. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="269" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" bodystart="269" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>typedef unsigned int Trig::IBunchCrossingTool::bcid_type</definition>
+        <argsstring></argsstring>
+        <name>bcid_type</name>
+        <briefdescription>
+<para>Declare the interface that this class provides. </para>        </briefdescription>
+        <detaileddescription>
+<para>Convenience type definition </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="42" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1a7c2179ab680ba9b012c0dbd4b751b1e5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool Trig::IBunchCrossingTool::isFilled</definition>
+        <argsstring>(bcid_type bcid=0) const =0</argsstring>
+        <name>isFilled</name>
+        <reimplementedby refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ac60e00c69517d711b7bd22672e58e86c">isFilled</reimplementedby>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a9db99df0515f2acd26a50da37f168d95">isFilled</reimplementedby>
+        <reimplementedby refid="da/dfc/classTrig_1_1MCBunchCrossingTool_1ac8fde5be2aa2f7589131ccf6589662ed">isFilled</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>The simplest query: Is the bunch crossing filled or not? </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the simplest question that one can ask the configuration: Was the current BCID coming from a collision or not? If people properly use the triggers to select their events, then this function is not too useful, but for some special analyses it might be a good idea to have it.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bcid that should be checked </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the bcid was a collision bunch crossing, <computeroutput>false</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1a5753926d25f7a318875739938b227b0a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool Trig::IBunchCrossingTool::isInTrain</definition>
+        <argsstring>(bcid_type bcid=0) const =0</argsstring>
+        <name>isInTrain</name>
+        <reimplementedby refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a2b2c6892c395f6a537932fc2cb4c447a">isInTrain</reimplementedby>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1ac0290e90cf90bd34d70b99cc3efab88d">isInTrain</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Function deciding if a given bunch crossing is in a filled train. </para>        </briefdescription>
+        <detaileddescription>
+<para>Most of the functionality of the interface only makes sense for bunches which were in trains. So this function can be checked at the beginning of the analysis code, to make sure that the BC in question is interesting.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bcid that should be checked </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the bcid is part of a bunch train, <computeroutput>false</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1aa7d0f434e5466858f541e72c58586bb6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool Trig::IBunchCrossingTool::isUnpaired</definition>
+        <argsstring>(bcid_type bcid=0) const =0</argsstring>
+        <name>isUnpaired</name>
+        <reimplementedby refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a6fa978933b9ec279b6bd2372dd2e6dc0">isUnpaired</reimplementedby>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a5f7ea73dc415f2e16a6de8be234e03d5">isUnpaired</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Function deciding if a given bunch crossing has an unpaired bunch. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function can be used to quickly decide whether the current event came from an unpaired bunch. Note that the function doesn&apos;t make a difference between &quot;isolated&quot; and &quot;non isolated&quot; unpaired bunches. You have to use the <computeroutput>gapBeforeBunch</computeroutput> function to decide how isolated an unpaired bunch is.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bcid that should be checked </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the bcid belongs to an unpaired bunch, <computeroutput>false</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1ab435dc47478e51c53c9ed4e769bc50d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool Trig::IBunchCrossingTool::isBeam1</definition>
+        <argsstring>(bcid_type bcid=0) const =0</argsstring>
+        <name>isBeam1</name>
+        <reimplementedby refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a0d9cbf05eaf230f1007dc65bdc5915f0">isBeam1</reimplementedby>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1ae20e96672675556eddbad87a3bd40df7">isBeam1</reimplementedby>
+        <reimplementedby refid="da/dfc/classTrig_1_1MCBunchCrossingTool_1a3ab0a18ef9d9bdc06b4c18acddfc36f3">isBeam1</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Function deciding if there was a bunch from &quot;beam 1&quot; in this bunch crossing. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is useful for differentiating the unpaired bunch crossings based on which beam provided the unpaired bunch.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bcid that should be checked </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the bcid contained a bunch from beam 1, <computeroutput>false</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1a77511f9866c93a734b9baf59cebba816" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool Trig::IBunchCrossingTool::isBeam2</definition>
+        <argsstring>(bcid_type bcid=0) const =0</argsstring>
+        <name>isBeam2</name>
+        <reimplementedby refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a7196112304bacbaf155385ad8ce2e195">isBeam2</reimplementedby>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a774292ba2828a939fb69402d5401718d">isBeam2</reimplementedby>
+        <reimplementedby refid="da/dfc/classTrig_1_1MCBunchCrossingTool_1ac9ae6d6ba637900092c1d26b1d82c217">isBeam2</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Function deciding if there was a bunch from &quot;beam 2&quot; in this bunch crossing. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is useful for differentiating the unpaired bunch crossings based on which beam provided the unpaired bunch.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bcid that should be checked </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the bcid contained a bunch from beam 2, <computeroutput>false</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="104"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1a760e3fa9d24099b4dc947a6275cdd510" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>float</type>
+        <definition>virtual float Trig::IBunchCrossingTool::bcIntensity</definition>
+        <argsstring>(bcid_type bcid=0, BeamType type=Crossing) const =0</argsstring>
+        <name>bcIntensity</name>
+        <reimplementedby refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a2abbcb9b662f3fba39a8326d88f46efb">bcIntensity</reimplementedby>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a01e68f99e0c68f4badf7d9c2e087de84">bcIntensity</reimplementedby>
+        <reimplementedby refid="da/dfc/classTrig_1_1MCBunchCrossingTool_1a461c2b1eb11d7c3333b0229923d034f2">bcIntensity</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47" kindref="member">BeamType</ref></type>
+          <declname>type</declname>
+          <defval>Crossing</defval>
+        </param>
+        <briefdescription>
+<para>Function returning the &quot;intensity&quot; of a given bunch(-crossing). </para>        </briefdescription>
+        <detaileddescription>
+<para>Some imeplementations are able to return an &quot;intensity&quot; per BCID. The exact meaning of this intensity is actually context sensitive, as it could mean quite different things for pile-up MC and data samples.</para><para>The tool implementations that don&apos;t know about the bunch intensities will return 1.0 for filled bunch crossings and 0.0 for empty ones.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bcid that should be checked </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The &quot;intensity&quot; of the bcid in question </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="133"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1ab7712c5f48072fcdfd415d3cee7e0f77" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cf" kindref="member">BunchCrossingType</ref></type>
+        <definition>virtual BunchCrossingType Trig::IBunchCrossingTool::bcType</definition>
+        <argsstring>(bcid_type bcid=0) const =0</argsstring>
+        <name>bcType</name>
+        <reimplementedby refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ac2a4e69dd2e8c229d856e5103108d350">bcType</reimplementedby>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a15997803b368bc9a3fc27f6ebd3486f2">bcType</reimplementedby>
+        <reimplementedby refid="da/dfc/classTrig_1_1MCBunchCrossingTool_1ae73075ec935b72664f7a585414372693">bcType</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Get the type of the specific bunch crossing. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function could be used as a single entry point to this tool in principle. It gives a summary about a specific BCID. Remember however that the exact meaning of many of the return values of this function are configuration dependent.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bcid that should be checked </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The type of the bcid in question </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="161"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1a3960b800e724afb817abd3963249bc88" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int Trig::IBunchCrossingTool::distanceFromFront</definition>
+        <argsstring>(bcid_type bcid=0, BunchDistanceType type=NanoSec) const =0</argsstring>
+        <name>distanceFromFront</name>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1af3f021e1433c5d1c820fc8d28aade214">distanceFromFront</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681e" kindref="member">BunchDistanceType</ref></type>
+          <declname>type</declname>
+          <defval>NanoSec</defval>
+        </param>
+        <briefdescription>
+<para>The distance of the specific bunch crossing from the front of the train. </para>        </briefdescription>
+        <detaileddescription>
+<para>Get the distance of the specified bunch crossing from the front of the bunch train. If the specified bunch crossing is not part of a bunch train, then the function returns -1.</para><para>The distance can be returned in multiple units. By default it is returned in nanoseconds. If one specifies BunchCrossings, then the distance is returned in nanosec_distance / 25. Finally, if one specifies FilledBunches, then the distance is returned in the units of the bunch spacing within the train.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bcid that should be checked </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the requested return value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The distance of the bcid in question from the front of its bunch train </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="195"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1a533b45046a65adfc428082ccabb77906" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int Trig::IBunchCrossingTool::distanceFromTail</definition>
+        <argsstring>(bcid_type bcid=0, BunchDistanceType type=NanoSec) const =0</argsstring>
+        <name>distanceFromTail</name>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a55ded04a49420061e42910f6d4a72863">distanceFromTail</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681e" kindref="member">BunchDistanceType</ref></type>
+          <declname>type</declname>
+          <defval>NanoSec</defval>
+        </param>
+        <briefdescription>
+<para>The distance of the specific bunch crossing from the tail of the train. </para>        </briefdescription>
+        <detaileddescription>
+<para>Get the distance of the specified bunch crossing from the tail of the bunch train. If the specified bunch crossing is not part of a bunch train, then the function returns -1.</para><para>The distance can be returned in multiple units. By default it is returned in nanoseconds. If one specifies BunchCrossings, then the distance is returned in nanosec_distance / 25. Finally, if one specifies FilledBunches, then the distance is returned in the units of the bunch spacing within the train.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bcid that should be checked </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the requested return value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The distance of the bcid in question from the tail of its bunch train </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="215"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1a6d39ace87896f9396921ad2209fc9232" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int Trig::IBunchCrossingTool::gapBeforeTrain</definition>
+        <argsstring>(bcid_type bcid=0, BunchDistanceType type=NanoSec) const =0</argsstring>
+        <name>gapBeforeTrain</name>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a4c8ce18adcca57ed5391d77aab064d1d">gapBeforeTrain</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681e" kindref="member">BunchDistanceType</ref></type>
+          <declname>type</declname>
+          <defval>NanoSec</defval>
+        </param>
+        <briefdescription>
+<para>Gap before the train this BCID is in. </para>        </briefdescription>
+        <detaileddescription>
+<para>Get the gap that&apos;s between the train that the specified BCID is in, and the previous train. This is a useful number for some jet/MET studies.</para><para>Note that the function doesn&apos;t work with the FilledBunches type, as the size of the gaps doesn&apos;t have to be a multiple of the bunch distance within the trains.</para><para>Returns &quot;-1&quot; when there&apos;s no right answer to the question. (BCID not part of a train.)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bcid whose train should be investigated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the requested return value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The gap before the train of the specified bcid </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="234"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1ad301df3a422a287ab80cd8dc2d4da82f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int Trig::IBunchCrossingTool::gapAfterTrain</definition>
+        <argsstring>(bcid_type bcid=0, BunchDistanceType type=NanoSec) const =0</argsstring>
+        <name>gapAfterTrain</name>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a25f17b451a8b4d86553d10956d92c269">gapAfterTrain</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681e" kindref="member">BunchDistanceType</ref></type>
+          <declname>type</declname>
+          <defval>NanoSec</defval>
+        </param>
+        <briefdescription>
+<para>Gap after the train this BCID is in. </para>        </briefdescription>
+        <detaileddescription>
+<para>Get the gap that&apos;s between the train that the specified BCID is in, and the next train. This is a useful number for some jet/MET studies.</para><para>Note that the function doesn&apos;t work with the FilledBunches type, as the size of the gaps doesn&apos;t have to be a multiple of the bunch distance within the trains.</para><para>Returns &quot;-1&quot; when there&apos;s no right answer to the question. (BCID not part of a train.)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bcid whose train should be investigated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the requested return value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The gap after the train of the specified bcid </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="252"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1a69819252a847d2d5aaec204a153b25b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int Trig::IBunchCrossingTool::gapBeforeBunch</definition>
+        <argsstring>(bcid_type bcid=0, BunchDistanceType dtype=NanoSec, BunchFillType ftype=CollidingBunch) const =0</argsstring>
+        <name>gapBeforeBunch</name>
+        <reimplementedby refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a364eacf6c9bcdd5d9b1f9b1272721d92">gapBeforeBunch</reimplementedby>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1ab8ac1297dd93899e04e68622530dab18">gapBeforeBunch</reimplementedby>
+        <reimplementedby refid="da/dfc/classTrig_1_1MCBunchCrossingTool_1acc68b272d6f04a98fd8cc147833b6a64">gapBeforeBunch</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681e" kindref="member">BunchDistanceType</ref></type>
+          <declname>dtype</declname>
+          <defval>NanoSec</defval>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8" kindref="member">BunchFillType</ref></type>
+          <declname>ftype</declname>
+          <defval>CollidingBunch</defval>
+        </param>
+        <briefdescription>
+<para>Gap before a particular bunch. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function tells you how far the BCID in question is from the previous colliding bunch crossing.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bcid that should be investigated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dtype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the requested return value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ftype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the previous bunch to consider </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The gap before the specified bcid </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="297"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1a723c1d3dfaac4768515d5b527e6b8f7e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int Trig::IBunchCrossingTool::gapAfterBunch</definition>
+        <argsstring>(bcid_type bcid=0, BunchDistanceType dtype=NanoSec, BunchFillType ftype=CollidingBunch) const =0</argsstring>
+        <name>gapAfterBunch</name>
+        <reimplementedby refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a323ad5d29b3aaa7983e86371ba736dc7">gapAfterBunch</reimplementedby>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a5684c852a799a421c09b4bb1d6f5c70d">gapAfterBunch</reimplementedby>
+        <reimplementedby refid="da/dfc/classTrig_1_1MCBunchCrossingTool_1a8f78cac1b71b78cf767767524ed199d7">gapAfterBunch</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681e" kindref="member">BunchDistanceType</ref></type>
+          <declname>dtype</declname>
+          <defval>NanoSec</defval>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8" kindref="member">BunchFillType</ref></type>
+          <declname>ftype</declname>
+          <defval>CollidingBunch</defval>
+        </param>
+        <briefdescription>
+<para>Gap after a particular bunch. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function tells you how far the BCID in question is from the next colliding bunch crossing.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bcid that should be investigated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dtype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the requested return value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ftype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the previous bunch to consider </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The gap after the specified bcid </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="312"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1a103fecb7204fa81dc8b2c398ef0f3183" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>virtual std::vector&lt; bool &gt; Trig::IBunchCrossingTool::bunchesInFront</definition>
+        <argsstring>(bcid_type bcid=0, int bunches=10) const =0</argsstring>
+        <name>bunchesInFront</name>
+        <reimplementedby refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ad2fd35b09c76ac2f5dad451480121477">bunchesInFront</reimplementedby>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a7791e0d9ee813c1679bac22c859de01e">bunchesInFront</reimplementedby>
+        <reimplementedby refid="da/dfc/classTrig_1_1MCBunchCrossingTool_1acd8316f25da4cce67f4bb9f2d9c0201b">bunchesInFront</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bunches</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>Function returning whether the previous bunches were filled, and how. </para>        </briefdescription>
+        <detaileddescription>
+<para>To get a concrete idea of how the bunch structure looks like in front of the bcid under investigation, this function returns a vector representing the previous bunches.</para><para>The indexing is such that <computeroutput>return[0]</computeroutput> means the reference bunch, <computeroutput>return[1]</computeroutput> means the first bunch before that one, etc. The boolean value <computeroutput>true</computeroutput> means that the bunch was filled, <computeroutput>false</computeroutput> means that is was empty.</para><para>It&apos;s really just another way of getting the same information as what isFilled(...) is providing...</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bcid that should be checked </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bunches</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bunches about which the return value should have info </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The bunch pattern before the reference bunch </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="334"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1afc8451f6e92ed0a676598621438ec2dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>virtual std::vector&lt; bool &gt; Trig::IBunchCrossingTool::bunchesAfter</definition>
+        <argsstring>(bcid_type bcid=0, int bunches=10) const =0</argsstring>
+        <name>bunchesAfter</name>
+        <reimplementedby refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1af37671ba0dd338c80d91b37a9fe498bd">bunchesAfter</reimplementedby>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1ab4dafc695308b9f4e5795bf2e3f9566c">bunchesAfter</reimplementedby>
+        <reimplementedby refid="da/dfc/classTrig_1_1MCBunchCrossingTool_1a259a9ab1e51ad92af759b09309fb4845">bunchesAfter</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bunches</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>Function returning whether the following bunches were filled, and how. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is here to provide uniformity between the python and C++ implementations. It works pretty much like the bunchesInFron(...) function.</para><para>The indexing is such that <computeroutput>return[0]</computeroutput> means the reference bunch, <computeroutput>return[1]</computeroutput> means the first bunch after that one, etc. The boolean value <computeroutput>true</computeroutput> means that the bunch was filled, <computeroutput>false</computeroutput> means that is was empty.</para><para>It&apos;s really just another way of getting the same information as what isFilled(...) is providing...</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bcid that should be checked </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bunches</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bunches about which the return value should have info </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The bunch pattern after the reference bunch </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="356"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1ac185c0256246a03769092c5237a6cad8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>virtual std::vector&lt; float &gt; Trig::IBunchCrossingTool::bunchIntInFront</definition>
+        <argsstring>(bcid_type bcid=0, int bunches=10, BeamType type=Crossing) const =0</argsstring>
+        <name>bunchIntInFront</name>
+        <reimplementedby refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ad6c384e34b86d2406cc44737c2e0c307">bunchIntInFront</reimplementedby>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a53c0b29db0a8d7393822a57015d56bcc">bunchIntInFront</reimplementedby>
+        <reimplementedby refid="da/dfc/classTrig_1_1MCBunchCrossingTool_1a2371cd65b547f431e0781fda40f991c9">bunchIntInFront</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bunches</declname>
+          <defval>10</defval>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47" kindref="member">BeamType</ref></type>
+          <declname>type</declname>
+          <defval>Crossing</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function returning the intensities of the bunch crossings before the reference In some cases one does not only want to know if the previous bunches were filled, but also their intensities. This intensity has a context sensitive meaning, as the MC and data bunch intensities can&apos;t be directly compared in general, but in both cases the intensities are described by floating point numbers.</para><para>The indexing is the same as with the bunchesInFront(...) function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bcid that should be checked </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bunches</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bunches about which the return value should have info </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The intensity &quot;type&quot; the user is interested in </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The intensities of the bunch crossings in front of the reference BC </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="379"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1a312370389d80790d1137a923b2cb4a88" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>virtual std::vector&lt; float &gt; Trig::IBunchCrossingTool::bunchIntAfter</definition>
+        <argsstring>(bcid_type bcid=0, int bunches=10, BeamType type=Crossing) const =0</argsstring>
+        <name>bunchIntAfter</name>
+        <reimplementedby refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1ae754a9b1dcc4381474b84e265a284feb">bunchIntAfter</reimplementedby>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a053165be519af8e4be49ce77c5c0c7bf">bunchIntAfter</reimplementedby>
+        <reimplementedby refid="da/dfc/classTrig_1_1MCBunchCrossingTool_1a5cc5fa16b7c9746c169e0d3bf48e63f9">bunchIntAfter</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" kindref="member">bcid_type</ref></type>
+          <declname>bcid</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bunches</declname>
+          <defval>10</defval>
+        </param>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47" kindref="member">BeamType</ref></type>
+          <declname>type</declname>
+          <defval>Crossing</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function returning the intensities of the bunch crossings after the reference In some cases one does not only want to know if the following bunches were filled, but also their intensities. This intensity has a context sensitive meaning, as the MC and data bunch intensities can&apos;t be directly compared in general, but in both cases the intensities are described by floating point numbers.</para><para>The indexing is the same as with the bunchesAfter(...) function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bcid that should be checked </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bunches</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bunches about which the return value should have info </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The intensity &quot;type&quot; the user is interested in </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The intensities of the bunch crossings after of the reference BC </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="402"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1a339f4fd855c9d8e1b391731a4defb887" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>unsigned int</type>
+        <definition>virtual unsigned int Trig::IBunchCrossingTool::numberOfFilledBunches</definition>
+        <argsstring>() const =0</argsstring>
+        <name>numberOfFilledBunches</name>
+        <reimplementedby refid="df/d21/classTrig_1_1D3PDBunchCrossingTool_1a4a7df6cf70beb8dbb1fa48c104ca0636">numberOfFilledBunches</reimplementedby>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1ad27cf24864c23bd5e90fa6342e71b6bf">numberOfFilledBunches</reimplementedby>
+        <reimplementedby refid="da/dfc/classTrig_1_1MCBunchCrossingTool_1adcd6b90147d8f2f57488fe486288e1cb">numberOfFilledBunches</reimplementedby>
+        <briefdescription>
+<para>Get the number of filled bunches in the current configuration. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function gives the total number of filled (colliding) bunches in the current configuration. This could come in handy in some circumstances.</para><para><simplesect kind="return"><para>The total number of filled (colliding) bunches in the machine </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="412"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1ae67d39ce5d3984b1698b1b07d5fd120e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>unsigned int</type>
+        <definition>virtual unsigned int Trig::IBunchCrossingTool::numberOfUnpairedBunches</definition>
+        <argsstring>() const =0</argsstring>
+        <name>numberOfUnpairedBunches</name>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a48c96620cc51f7682c51cbed180e77aa">numberOfUnpairedBunches</reimplementedby>
+        <briefdescription>
+<para>Get the number of unpaired bunches in the current configuration. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function gives the total number of unpaired bunches in the current configuration. This could come in handy in some circumstances.</para><para><simplesect kind="return"><para>The total number of unpaired bunches in the machine </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="421"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1a8b7bcafa2c0ea0ba0a5b01cf3934f677" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>unsigned int</type>
+        <definition>virtual unsigned int Trig::IBunchCrossingTool::numberOfBunchTrains</definition>
+        <argsstring>() const =0</argsstring>
+        <name>numberOfBunchTrains</name>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a8da99b872d015c8275a79b4334c40e63">numberOfBunchTrains</reimplementedby>
+        <briefdescription>
+<para>Get the number of the bunch trains in the current configuration. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function gives the total number of bunch trains that were identified in the current configuration. This could come in handy in some circumstances.</para><para><simplesect kind="return"><para>The total number of bunch trains in the machine </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="431"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d67/classTrig_1_1IBunchCrossingTool_1a4d37090ab8e03977c565c46c0d6343d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int Trig::IBunchCrossingTool::bunchTrainSpacing</definition>
+        <argsstring>(BunchDistanceType type=NanoSec) const =0</argsstring>
+        <name>bunchTrainSpacing</name>
+        <reimplementedby refid="db/df3/classTrig_1_1BunchCrossingToolBase_1a59de0d5fe70c893874b0418ce294d5a5">bunchTrainSpacing</reimplementedby>
+        <param>
+          <type><ref refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681e" kindref="member">BunchDistanceType</ref></type>
+          <declname>type</declname>
+          <defval>NanoSec</defval>
+        </param>
+        <briefdescription>
+<para>Get the bunch spacing in the trains. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function can be used to easily find out what was the bunch spacing in the bunch trains. This could come in handy in some circumstances.</para><para>Note that a return value type of <computeroutput>FilledBunches</computeroutput> makes no sense, so the code will complain if you request the value with that parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the requested return value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The bunch spacing in the requested units </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="446"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface for all the bunch crossing tools. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is the dual-use inteface of all the bunch crossing tools. It no longer uses the framework independent IIBunchCrossingTool class...</para><para><simplesect kind="author"><para>Attila Krasznahorkay &lt;<ulink url="mailto:Attila.Krasznahorkay@cern.ch">Attila.Krasznahorkay@cern.ch</ulink>&gt;</para></simplesect>
+<simplesect kind="rcs"><title>Revision</title><para>618301 </para></simplesect>
+<simplesect kind="rcs"><title>Date</title><para>2014-09-24 10:53:05 +0200 (Wed, 24 Sep 2014) </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="9238">
+        <label>Trig::BunchCrossingToolBase</label>
+        <link refid="db/df3/classTrig_1_1BunchCrossingToolBase"/>
+        <childnode refid="9232" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9242">
+        <label>Trig::xAODBunchCrossingTool</label>
+        <link refid="db/d39/classTrig_1_1xAODBunchCrossingTool"/>
+        <childnode refid="9238" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9241">
+        <label>Trig::WebBunchCrossingTool</label>
+        <link refid="d6/d13/classTrig_1_1WebBunchCrossingTool"/>
+        <childnode refid="9238" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9233">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="9236">
+        <label>Trig::MCBunchCrossingTool</label>
+        <link refid="da/dfc/classTrig_1_1MCBunchCrossingTool"/>
+        <childnode refid="9234" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9238" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9239">
+        <label>Trig::D3PDBunchCrossingTool</label>
+        <link refid="df/d21/classTrig_1_1D3PDBunchCrossingTool"/>
+        <childnode refid="9238" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9232">
+        <label>Trig::IBunchCrossingTool</label>
+        <link refid="d0/d67/classTrig_1_1IBunchCrossingTool"/>
+        <childnode refid="9233" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9234">
+        <label>Trig::BunchCrossingConfProviderBase</label>
+        <link refid="dd/d09/classTrig_1_1BunchCrossingConfProviderBase"/>
+        <childnode refid="9232" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9235">
+        <label>Trig::LHCBunchCrossingTool</label>
+        <link refid="d0/d98/classTrig_1_1LHCBunchCrossingTool"/>
+        <childnode refid="9234" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9238" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9237">
+        <label>Trig::TrigConfBunchCrossingTool</label>
+        <link refid="df/d24/classTrig_1_1TrigConfBunchCrossingTool"/>
+        <childnode refid="9234" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9238" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9240">
+        <label>Trig::StaticBunchCrossingTool</label>
+        <link refid="d9/dd8/classTrig_1_1StaticBunchCrossingTool"/>
+        <childnode refid="9238" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9244">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="9243">
+        <label>Trig::IBunchCrossingTool</label>
+        <link refid="d0/d67/classTrig_1_1IBunchCrossingTool"/>
+        <childnode refid="9244" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" line="35" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigAnalysisInterfaces/TrigAnalysisInterfaces/IBunchCrossingTool.h" bodystart="35" bodyend="448"/>
+    <listofallmembers>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a520e1491272b49538b18d6ac438bf823" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>bcid_type</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a760e3fa9d24099b4dc947a6275cdd510" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>bcIntensity</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ab7712c5f48072fcdfd415d3cee7e0f77" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>bcType</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47a0a2435c329f92970602ae6a6c2f8165a" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>Beam1</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47a84657ab866c535aaaa27f007dd81b703" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>Beam2</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>BeamType</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681ea0a64ff40e0cd130bf46a4dc695842780" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>BunchCrossings</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cf" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>BunchCrossingType</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681e" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>BunchDistanceType</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1afc8451f6e92ed0a676598621438ec2dc" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>bunchesAfter</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a103fecb7204fa81dc8b2c398ef0f3183" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>bunchesInFront</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>BunchFillType</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a312370389d80790d1137a923b2cb4a88" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>bunchIntAfter</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac185c0256246a03769092c5237a6cad8" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>bunchIntInFront</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a4d37090ab8e03977c565c46c0d6343d8" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>bunchTrainSpacing</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8a521766e927f41055758f34ee58b5d012" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>CollidingBunch</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac2ae9328f9f9a14223875634c85e2b47a9d05da22e67bd5be8ea2807a72563690" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>Crossing</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a3960b800e724afb817abd3963249bc88" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>distanceFromFront</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a533b45046a65adfc428082ccabb77906" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>distanceFromTail</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa4b0c804ae3e2125b4c260b6fefd79ea8" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>Empty</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8a8ddf98c396a923c2e48174e4ddfcf0a5" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>EmptyBunch</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681ea8110a0e05955daca343f82a4ae037873" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>FilledBunches</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa259bae7213f9b2ee63d726133b5ccd54" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>FirstEmpty</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa5581dfb9e92aa4e7c3bb185de93bc21c" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>Front</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a723c1d3dfaac4768515d5b527e6b8f7e" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>gapAfterBunch</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ad301df3a422a287ab80cd8dc2d4da82f" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>gapAfterTrain</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a69819252a847d2d5aaec204a153b25b3" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>gapBeforeBunch</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a6d39ace87896f9396921ad2209fc9232" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>gapBeforeTrain</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ab435dc47478e51c53c9ed4e769bc50d6" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>isBeam1</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a77511f9866c93a734b9baf59cebba816" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>isBeam2</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a7c2179ab680ba9b012c0dbd4b751b1e5" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>isFilled</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a5753926d25f7a318875739938b227b0a" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>isInTrain</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1aa7d0f434e5466858f541e72c58586bb6" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>isUnpaired</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa8b13f6fcb97a797aba6ce81089e63f18" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>Middle</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfae196bca5223029fbfbd4543646fcf793" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>MiddleEmpty</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a776274ff91ad686fbf9426c28015681ea5e0331cbdd292eb12a1834b835bd79c7" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>NanoSec</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a8b7bcafa2c0ea0ba0a5b01cf3934f677" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>numberOfBunchTrains</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a339f4fd855c9d8e1b391731a4defb887" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>numberOfFilledBunches</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ae67d39ce5d3984b1698b1b07d5fd120e" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>numberOfUnpairedBunches</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1af1aac990b958e92bf38123318d926e67" prot="public" virt="pure-virtual"><scope>Trig::IBunchCrossingTool</scope><name>print</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfad69950ed575625ca7e0c9905bb99f14d" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>Single</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa334a589a59f6cd4362f4b5afaedc356f" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>Tail</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1ac158b7a54043149841d07c38e8bc59cfa17f24a20f1378fd1e9542d078133778b" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>Unpaired</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8a955e2b8f3446de622b29908f7843b2f5" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>UnpairedBeam1</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8ac260bfad34a78e1b5076eb998c6aa417" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>UnpairedBeam2</name></member>
+      <member refid="d0/d67/classTrig_1_1IBunchCrossingTool_1a4ea87398ee0b252eb31853c7fc8a3ff8a5ad3382c869d5996cd7cc6e69d7affd8" prot="public" virt="non-virtual"><scope>Trig::IBunchCrossingTool</scope><name>UnpairedBunch</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1a77b49d52f1f8c272cb665b8309d6082d" prot="public" virt="virtual"><scope>Trig::IBunchCrossingTool</scope><name>~IAsgTool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

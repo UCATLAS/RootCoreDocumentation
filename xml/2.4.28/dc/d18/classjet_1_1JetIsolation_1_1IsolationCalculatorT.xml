@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dc/d18/classjet_1_1JetIsolation_1_1IsolationCalculatorT" kind="class" prot="public">
+    <compoundname>jet::JetIsolation::IsolationCalculatorT</compoundname>
+    <basecompoundref refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator" prot="public" virt="non-virtual">jet::JetIsolation::IsolationCalculator</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename ISOCRITERIA</type>
+      </param>
+      <param>
+        <type>typename KINEMATICGETTER</type>
+        <defval><ref refid="de/d8f/structjet_1_1JetIsolation_1_1PseudoJetKinematicGetter" kindref="compound">PseudoJetKinematicGetter</ref></defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="dc/d18/classjet_1_1JetIsolation_1_1IsolationCalculatorT_1aa62b0df98c7c73c6bb83154c75992f49" prot="public" static="no" mutable="no">
+        <type>ISOCRITERIA</type>
+        <definition>ISOCRITERIA jet::JetIsolation::IsolationCalculatorT&lt; ISOCRITERIA, KINEMATICGETTER &gt;::m_iso</definition>
+        <argsstring></argsstring>
+        <name>m_iso</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/src/JetIsolationTool.cxx" line="142" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/src/JetIsolationTool.cxx" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d18/classjet_1_1JetIsolation_1_1IsolationCalculatorT_1a717cd721e47d2d6679f602f1eb37b028" prot="public" static="no" mutable="no">
+        <type>KINEMATICGETTER</type>
+        <definition>KINEMATICGETTER jet::JetIsolation::IsolationCalculatorT&lt; ISOCRITERIA, KINEMATICGETTER &gt;::m_kine</definition>
+        <argsstring></argsstring>
+        <name>m_kine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/src/JetIsolationTool.cxx" line="143" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/src/JetIsolationTool.cxx" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/d18/classjet_1_1JetIsolation_1_1IsolationCalculatorT_1a9339a66af22390596dbee19612e8a8d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>jet::JetIsolation::IsolationCalculatorT&lt; ISOCRITERIA, KINEMATICGETTER &gt;::IsolationCalculatorT</definition>
+        <argsstring>(double param=0.)</argsstring>
+        <name>IsolationCalculatorT</name>
+        <param>
+          <type>double</type>
+          <declname>param</declname>
+          <defval>0.</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/src/JetIsolationTool.cxx" line="112" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/src/JetIsolationTool.cxx" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d18/classjet_1_1JetIsolation_1_1IsolationCalculatorT_1a9178d4bf9aaa6aa1cd53eae624cb342d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="da/dce/structjet_1_1JetIsolation_1_1IsolationCalculator_1_1IsolationResult" kindref="compound">IsolationResult</ref></type>
+        <definition>virtual IsolationResult jet::JetIsolation::IsolationCalculatorT&lt; ISOCRITERIA, KINEMATICGETTER &gt;::jetIsolation</definition>
+        <argsstring>(const xAOD::Jet *jet, std::vector&lt; jet::ParticlePosition &gt; &amp;nearbyConstit) const </argsstring>
+        <name>jetIsolation</name>
+        <reimplements refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator_1aacfdf4cfba52208bc1e8f275ff923d0d">jetIsolation</reimplements>
+        <param>
+          <type>const <ref refid="db/d9c/classxAOD_1_1Jet__v1" kindref="compound">xAOD::Jet</ref> *</type>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="d8/d7d/structjet_1_1ParticlePosition" kindref="compound">jet::ParticlePosition</ref> &gt; &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the isolation momentum from jet and jet inputs. It is assumed the caller has already removed jet constituents from the input list. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/src/JetIsolationTool.cxx" line="115" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/src/JetIsolationTool.cxx" bodystart="115" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d18/classjet_1_1JetIsolation_1_1IsolationCalculatorT_1aa3205a1798bbcd11a699af39aadeb7e4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>string</type>
+        <definition>virtual string jet::JetIsolation::IsolationCalculatorT&lt; ISOCRITERIA, KINEMATICGETTER &gt;::baseName</definition>
+        <argsstring>() const </argsstring>
+        <name>baseName</name>
+        <reimplements refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator_1a12b0c64d59e6a452f700b6d095405ab9">baseName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/src/JetIsolationTool.cxx" line="129" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/src/JetIsolationTool.cxx" bodystart="129" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d18/classjet_1_1JetIsolation_1_1IsolationCalculatorT_1a5ad02831d96715588655978a8d210ab5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator" kindref="compound">IsolationCalculator</ref> *</type>
+        <definition>virtual IsolationCalculator* jet::JetIsolation::IsolationCalculatorT&lt; ISOCRITERIA, KINEMATICGETTER &gt;::clone</definition>
+        <argsstring>(const xAOD::Jet *j) const </argsstring>
+        <name>clone</name>
+        <reimplements refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator_1aaa006f86ab40507e73980b961c0c760e">clone</reimplements>
+        <param>
+          <type>const <ref refid="db/d9c/classxAOD_1_1Jet__v1" kindref="compound">xAOD::Jet</ref> *</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/src/JetIsolationTool.cxx" line="131" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/src/JetIsolationTool.cxx" bodystart="131" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10586">
+        <label>jet::JetIsolation::IsolationCalculatorT&lt; ISOCRITERIA, KINEMATICGETTER &gt;</label>
+        <link refid="dc/d18/classjet_1_1JetIsolation_1_1IsolationCalculatorT"/>
+        <childnode refid="10587" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10587">
+        <label>jet::JetIsolation::IsolationCalculator</label>
+        <link refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10590">
+        <label>string</label>
+      </node>
+      <node id="10588">
+        <label>jet::JetIsolation::IsolationCalculatorT&lt; ISOCRITERIA, KINEMATICGETTER &gt;</label>
+        <link refid="dc/d18/classjet_1_1JetIsolation_1_1IsolationCalculatorT"/>
+        <childnode refid="10589" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10589">
+        <label>jet::JetIsolation::IsolationCalculator</label>
+        <link refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator"/>
+        <childnode refid="10590" relation="usage">
+          <edgelabel>s_kname</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/src/JetIsolationTool.cxx" line="109" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/src/JetIsolationTool.cxx" bodystart="109" bodyend="144"/>
+    <listofallmembers>
+      <member refid="dc/d18/classjet_1_1JetIsolation_1_1IsolationCalculatorT_1aa3205a1798bbcd11a699af39aadeb7e4" prot="public" virt="virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>baseName</name></member>
+      <member refid="dc/d18/classjet_1_1JetIsolation_1_1IsolationCalculatorT_1a5ad02831d96715588655978a8d210ab5" prot="public" virt="virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>clone</name></member>
+      <member refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator_1a38b7a310470f9b88eb004fbec2ee8f24" prot="public" virt="virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>copyFrom</name></member>
+      <member refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator_1ac7408ae8c17acf89fa91b715fbe8f3d0" prot="public" virt="non-virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>dump</name></member>
+      <member refid="dc/d18/classjet_1_1JetIsolation_1_1IsolationCalculatorT_1a9339a66af22390596dbee19612e8a8d7" prot="public" virt="non-virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>IsolationCalculatorT</name></member>
+      <member refid="dc/d18/classjet_1_1JetIsolation_1_1IsolationCalculatorT_1a9178d4bf9aaa6aa1cd53eae624cb342d" prot="public" virt="virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>jetIsolation</name></member>
+      <member refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator_1adc93d1d4402ba99c7d825e80553c6471" prot="public" virt="non-virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>Kinematics</name></member>
+      <member refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator_1aa2ff3c0ccbd22994d98f5333dfb5142e" prot="protected" virt="non-virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>m_attNames</name></member>
+      <member refid="dc/d18/classjet_1_1JetIsolation_1_1IsolationCalculatorT_1aa62b0df98c7c73c6bb83154c75992f49" prot="public" virt="non-virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>m_iso</name></member>
+      <member refid="dc/d18/classjet_1_1JetIsolation_1_1IsolationCalculatorT_1a717cd721e47d2d6679f602f1eb37b028" prot="public" virt="non-virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>m_kine</name></member>
+      <member refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator_1a6111fc723e24b4f44c7dea992c361ac1" prot="protected" virt="non-virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>m_kinematics</name></member>
+      <member refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator_1adc93d1d4402ba99c7d825e80553c6471abefdfc17b3c096e689213e5d0ebaeef7" prot="public" virt="non-virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>P</name></member>
+      <member refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator_1adc93d1d4402ba99c7d825e80553c6471a9235e8cf11e41da696563ac14985b5b9" prot="public" virt="non-virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>Par</name></member>
+      <member refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator_1adc93d1d4402ba99c7d825e80553c6471a4c6587e3bc5ccf72a328e19a0106aa41" prot="public" virt="non-virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>Perp</name></member>
+      <member refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator_1a2d5022707b18118c0a4befa699801074" prot="public" virt="non-virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>s_kname</name></member>
+      <member refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator_1a3cf59975eb335ea664701de192932242" prot="public" virt="non-virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>scheduleKinematicCalculation</name></member>
+      <member refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator_1a3d3e46c99894643a2098b8cae59ba47c" prot="public" virt="virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>setIsolationAttributes</name></member>
+      <member refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator_1adc93d1d4402ba99c7d825e80553c6471a81fb6bfbaec106269e9209442e37464a" prot="public" virt="non-virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>SumPt</name></member>
+      <member refid="d0/d74/classjet_1_1JetIsolation_1_1IsolationCalculator_1a0f37573df4230b7315c1fd3043fe5122" prot="public" virt="virtual"><scope>jet::JetIsolation::IsolationCalculatorT</scope><name>~IsolationCalculator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

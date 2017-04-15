@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d3/d35/AthUnlikelyMacros_8h" kind="file">
+    <compoundname>AthUnlikelyMacros.h</compoundname>
+    <includedby refid="df/dbc/proxim_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CaloGeoHelpers/CaloGeoHelpers/proxim.h</includedby>
+    <invincdepgraph>
+      <node id="106557">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/AthUnlikelyMacros.h</label>
+        <link refid="AthUnlikelyMacros.h"/>
+        <childnode refid="106558" relation="include">
+        </childnode>
+      </node>
+      <node id="106558">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CaloGeoHelpers/CaloGeoHelpers/proxim.h</label>
+        <link refid="df/dbc/proxim_8h_source"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="d3/d35/AthUnlikelyMacros_8h_1a1d11495f438aab1033f959ede8414df6" prot="public" static="no">
+        <name>CXXUTILS_ATHUNLIKELYMACROS_H</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/AthUnlikelyMacros.h" line="2" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/AthUnlikelyMacros.h" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d35/AthUnlikelyMacros_8h_1a09c2c3333d16a05811222f397803adb7" prot="public" static="no">
+        <name>ATH_LIKELY</name>
+        <param><defname>x</defname></param>
+        <initializer>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/AthUnlikelyMacros.h" line="12" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/AthUnlikelyMacros.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d35/AthUnlikelyMacros_8h_1aa7f318b2b4f0b12ed46a1a1c94b5a908" prot="public" static="no">
+        <name>ATH_UNLIKELY</name>
+        <param><defname>x</defname></param>
+        <initializer>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/AthUnlikelyMacros.h" line="13" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/AthUnlikelyMacros.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CXXUTILS_ATHUNLIKELYMACROS_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CXXUTILS_ATHUNLIKELYMACROS_H<sp/>1</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>macros<sp/>modeled<sp/>after<sp/>http://kernelnewbies.org/FAQ/LikelyUnlikely</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>to<sp/>help<sp/>the<sp/>compiler<sp/>into<sp/>generating<sp/>instructions<sp/>to<sp/>optimize<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>branch<sp/>prediction.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__GNUC__<sp/>&gt;=<sp/>4</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/>define<sp/>ATH_LIKELY(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>__builtin_expect(!!(x),<sp/>1)</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/>define<sp/>ATH_UNLIKELY(x)<sp/><sp/><sp/><sp/><sp/>__builtin_expect(!!(x),<sp/>0)</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/>define<sp/>ATH_LIKELY(x)<sp/><sp/><sp/>(x)</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/>define<sp/>ATH_UNLIKELY(x)<sp/>(x)</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!CXXUTILS_ATHUNLIKELYMACROS_H<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/AthUnlikelyMacros.h"/>
+  </compounddef>
+</doxygen>

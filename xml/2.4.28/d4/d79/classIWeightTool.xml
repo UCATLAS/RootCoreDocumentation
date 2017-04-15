@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d4/d79/classIWeightTool" kind="class" prot="public">
+    <compoundname>IWeightTool</compoundname>
+    <basecompoundref refid="d4/d20/classasg_1_1IAsgTool" prot="public" virt="virtual">asg::IAsgTool</basecompoundref>
+    <derivedcompoundref refid="d0/dcc/classPMGTools_1_1PMGSherpa22VJetsWeightTool" prot="public" virt="virtual">PMGTools::PMGSherpa22VJetsWeightTool</derivedcompoundref>
+    <derivedcompoundref refid="d4/db1/classWeightToolBase" prot="public" virt="virtual">WeightToolBase</derivedcompoundref>
+    <includes refid="d0/d8a/IWeightTool_8h" local="no">IWeightTool.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d4/d79/classIWeightTool_1a97d50d5537cf727b481c379e43397640" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual IWeightTool::~IWeightTool</definition>
+        <argsstring>()</argsstring>
+        <name>~IWeightTool</name>
+        <briefdescription>
+<para>Declare the interface that this class provides. </para>        </briefdescription>
+        <detaileddescription>
+<para>Virtual destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PATInterfaces/PATInterfaces/IWeightTool.h" line="29" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PATInterfaces/PATInterfaces/IWeightTool.h" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d79/classIWeightTool_1a6fb2508b9770944fe992377af5295ad1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double IWeightTool::getWeight</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getWeight</name>
+        <reimplementedby refid="d4/db1/classWeightToolBase_1ade402c42d81a086ef968715c89b85b6b">getWeight</reimplementedby>
+        <reimplementedby refid="db/d83/classWeightsAgregator_1a77ec36464611fe06e6fb6836a2a9374c">getWeight</reimplementedby>
+        <reimplementedby refid="dc/d34/classPDFWeight_1a1f42a2f7bae512ffbf3f5ade47b137f0">getWeight</reimplementedby>
+        <reimplementedby refid="d6/d92/classMcEventWeight_1a8984d6d047cafbdf5509a292764499ea">getWeight</reimplementedby>
+        <reimplementedby refid="d0/dcc/classPMGTools_1_1PMGSherpa22VJetsWeightTool_1acd0687c50d1723a007deb48ea1931312">getWeight</reimplementedby>
+        <briefdescription>
+<para>returns: the value that was calculated from the usual <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref> storegate </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PATInterfaces/PATInterfaces/IWeightTool.h" line="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Interface for tools that want to calculate a weight from different event information <simplesect kind="author"><para>Olivier Arnaez &lt;<ulink url="mailto:olivier.arnaez@cern.ch">olivier.arnaez@cern.ch</ulink>&gt; </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11016">
+        <label>PMGTools::PMGSherpa22VJetsWeightTool</label>
+        <link refid="d0/dcc/classPMGTools_1_1PMGSherpa22VJetsWeightTool"/>
+        <childnode refid="11014" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11018">
+        <label>McEventWeight</label>
+        <link refid="d6/d92/classMcEventWeight"/>
+        <childnode refid="11017" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11015">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="11020">
+        <label>WeightsAgregator</label>
+        <link refid="db/d83/classWeightsAgregator"/>
+        <childnode refid="11017" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11019">
+        <label>PDFWeight</label>
+        <link refid="dc/d34/classPDFWeight"/>
+        <childnode refid="11017" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11017">
+        <label>WeightToolBase</label>
+        <link refid="d4/db1/classWeightToolBase"/>
+        <childnode refid="11014" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11014">
+        <label>IWeightTool</label>
+        <link refid="d4/d79/classIWeightTool"/>
+        <childnode refid="11015" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11022">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="11021">
+        <label>IWeightTool</label>
+        <link refid="d4/d79/classIWeightTool"/>
+        <childnode refid="11022" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PATInterfaces/PATInterfaces/IWeightTool.h" line="21" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PATInterfaces/PATInterfaces/IWeightTool.h" bodystart="21" bodyend="35"/>
+    <listofallmembers>
+      <member refid="d4/d79/classIWeightTool_1a6fb2508b9770944fe992377af5295ad1" prot="public" virt="pure-virtual"><scope>IWeightTool</scope><name>getWeight</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1af1aac990b958e92bf38123318d926e67" prot="public" virt="pure-virtual"><scope>IWeightTool</scope><name>print</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1a77b49d52f1f8c272cb665b8309d6082d" prot="public" virt="virtual"><scope>IWeightTool</scope><name>~IAsgTool</name></member>
+      <member refid="d4/d79/classIWeightTool_1a97d50d5537cf727b481c379e43397640" prot="public" virt="virtual"><scope>IWeightTool</scope><name>~IWeightTool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

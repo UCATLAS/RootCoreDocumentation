@@ -1,0 +1,1519 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="db/d64/InDetTrackTruthFilterTool_8cxx" kind="file">
+    <compoundname>InDetTrackTruthFilterTool.cxx</compoundname>
+    <includes refid="d2/d76/InDetTrackTruthFilterTool_8h" local="yes">InDetTrackSystematicsTools/InDetTrackTruthFilterTool.h</includes>
+    <includes refid="dd/d21/InDetTrackTruthOriginTool_8h" local="yes">InDetTrackSystematicsTools/InDetTrackTruthOriginTool.h</includes>
+    <includes refid="da/de9/InDetTrackTruthOriginDefs_8h" local="yes">InDetTrackSystematicsTools/InDetTrackTruthOriginDefs.h</includes>
+    <includes refid="d3/d77/make__unique_8h" local="yes">CxxUtils/make_unique.h</includes>
+    <includes local="no">TH2.h</includes>
+    <includes local="no">TRandom3.h</includes>
+    <includes local="no">TFile.h</includes>
+    <incdepgraph>
+      <node id="139607">
+        <label>list</label>
+      </node>
+      <node id="139616">
+        <label>AthContainers/tools/DVL_algorithms.icc</label>
+        <link refid="df/daa/DVL__algorithms_8icc"/>
+        <childnode refid="139601" relation="include">
+        </childnode>
+        <childnode refid="139608" relation="include">
+        </childnode>
+        <childnode refid="139592" relation="include">
+        </childnode>
+        <childnode refid="139597" relation="include">
+        </childnode>
+        <childnode refid="139540" relation="include">
+        </childnode>
+      </node>
+      <node id="139601">
+        <label>AthContainers/tools/DVLNoBase.h</label>
+        <link refid="d7/d92/DVLNoBase_8h"/>
+      </node>
+      <node id="139571">
+        <label>boost/thread/mutex.hpp</label>
+      </node>
+      <node id="139623">
+        <label>AthContainers/tools/DVLDataBucket.h</label>
+        <link refid="d4/d16/DVLDataBucket_8h"/>
+        <childnode refid="139624" relation="include">
+        </childnode>
+        <childnode refid="139602" relation="include">
+        </childnode>
+        <childnode refid="139547" relation="include">
+        </childnode>
+        <childnode refid="139625" relation="include">
+        </childnode>
+      </node>
+      <node id="139588">
+        <label>CxxUtils/unordered_map.h</label>
+        <link refid="db/daa/unordered__map_8h"/>
+        <childnode refid="139539" relation="include">
+        </childnode>
+        <childnode refid="139541" relation="include">
+        </childnode>
+        <childnode refid="139547" relation="include">
+        </childnode>
+        <childnode refid="139523" relation="include">
+        </childnode>
+      </node>
+      <node id="139510">
+        <label>AsgTools/IAsgTool.h</label>
+        <link refid="df/dd4/IAsgTool_8h_source"/>
+        <childnode refid="139511" relation="include">
+        </childnode>
+        <childnode refid="139512" relation="include">
+        </childnode>
+        <childnode refid="139513" relation="include">
+        </childnode>
+        <childnode refid="139514" relation="include">
+        </childnode>
+      </node>
+      <node id="139590">
+        <label>AthContainersInterfaces/IAuxStore.h</label>
+        <link refid="d6/d3e/IAuxStore_8h"/>
+        <childnode refid="139555" relation="include">
+        </childnode>
+        <childnode refid="139537" relation="include">
+        </childnode>
+        <childnode refid="139591" relation="include">
+        </childnode>
+        <childnode refid="139556" relation="include">
+        </childnode>
+      </node>
+      <node id="139589">
+        <label>AthContainers/AuxTypeRegistry.icc</label>
+        <link refid="d8/df3/AuxTypeRegistry_8icc"/>
+      </node>
+      <node id="139635">
+        <label>EventPrimitives/EventPrimitives.h</label>
+        <link refid="d1/d54/EventPrimitives_8h_source"/>
+        <childnode refid="139636" relation="include">
+        </childnode>
+        <childnode refid="139637" relation="include">
+        </childnode>
+        <childnode refid="139638" relation="include">
+        </childnode>
+      </node>
+      <node id="139546">
+        <label>boost/type_traits/remove_const.hpp</label>
+      </node>
+      <node id="139523">
+        <label>functional</label>
+      </node>
+      <node id="139515">
+        <label>PATInterfaces/ISystematicsTool.h</label>
+        <link refid="d6/db3/ISystematicsTool_8h_source"/>
+        <childnode refid="139510" relation="include">
+        </childnode>
+        <childnode refid="139516" relation="include">
+        </childnode>
+        <childnode refid="139517" relation="include">
+        </childnode>
+        <childnode refid="139521" relation="include">
+        </childnode>
+      </node>
+      <node id="139598">
+        <label>boost/version.hpp</label>
+      </node>
+      <node id="139545">
+        <label>limits</label>
+      </node>
+      <node id="139591">
+        <label>SGTools/BaseInfo.h</label>
+      </node>
+      <node id="139660">
+        <label>xAODTruth/TruthVertexFwd.h</label>
+        <link refid="d5/d1a/TruthVertexFwd_8h_source"/>
+      </node>
+      <node id="139569">
+        <label>boost/thread/tss.hpp</label>
+      </node>
+      <node id="139514">
+        <label>GaudiKernel/IAlgTool.h</label>
+      </node>
+      <node id="139542">
+        <label>iterator</label>
+      </node>
+      <node id="139557">
+        <label>AthContainersInterfaces/AuxDataOption.h</label>
+        <link refid="d1/dc5/AuxDataOption_8h"/>
+        <childnode refid="139511" relation="include">
+        </childnode>
+        <childnode refid="139558" relation="include">
+        </childnode>
+      </node>
+      <node id="139508">
+        <label>InDetTrackSystematicsTools/InDetTrackTruthFilterTool.h</label>
+        <link refid="d2/d76/InDetTrackTruthFilterTool_8h_source"/>
+        <childnode refid="139509" relation="include">
+        </childnode>
+        <childnode refid="139644" relation="include">
+        </childnode>
+        <childnode refid="139648" relation="include">
+        </childnode>
+        <childnode refid="139517" relation="include">
+        </childnode>
+        <childnode refid="139521" relation="include">
+        </childnode>
+        <childnode refid="139650" relation="include">
+        </childnode>
+        <childnode refid="139524" relation="include">
+        </childnode>
+        <childnode refid="139511" relation="include">
+        </childnode>
+      </node>
+      <node id="139622">
+        <label>SGTools/ClassName.h</label>
+      </node>
+      <node id="139628">
+        <label>AthContainers/DataVector.icc</label>
+        <link refid="da/de6/DataVector_8icc"/>
+        <childnode refid="139629" relation="include">
+        </childnode>
+        <childnode refid="139596" relation="include">
+        </childnode>
+        <childnode refid="139545" relation="include">
+        </childnode>
+        <childnode refid="139523" relation="include">
+        </childnode>
+        <childnode refid="139630" relation="include">
+        </childnode>
+      </node>
+      <node id="139535">
+        <label>AthContainers/exceptions.h</label>
+        <link refid="d4/d03/exceptions_8h"/>
+        <childnode refid="139536" relation="include">
+        </childnode>
+        <childnode refid="139548" relation="include">
+        </childnode>
+        <childnode refid="139549" relation="include">
+        </childnode>
+        <childnode refid="139550" relation="include">
+        </childnode>
+        <childnode refid="139511" relation="include">
+        </childnode>
+      </node>
+      <node id="139559">
+        <label>AthContainers/tools/AuxDataTraits.h</label>
+        <link refid="d3/d5a/AuxDataTraits_8h"/>
+        <childnode refid="139522" relation="include">
+        </childnode>
+        <childnode refid="139543" relation="include">
+        </childnode>
+      </node>
+      <node id="139527">
+        <label>stdint.h</label>
+      </node>
+      <node id="139608">
+        <label>AthContainers/tools/DVLCast.h</label>
+        <link refid="df/d5c/DVLCast_8h"/>
+        <childnode refid="139545" relation="include">
+        </childnode>
+        <childnode refid="139609" relation="include">
+        </childnode>
+        <childnode refid="139550" relation="include">
+        </childnode>
+        <childnode refid="139543" relation="include">
+        </childnode>
+        <childnode refid="139537" relation="include">
+        </childnode>
+      </node>
+      <node id="139576">
+        <label>AthContainersInterfaces/IAuxTypeVectorFactory.h</label>
+        <link refid="d4/d2c/IAuxTypeVectorFactory_8h"/>
+        <childnode refid="139537" relation="include">
+        </childnode>
+        <childnode refid="139550" relation="include">
+        </childnode>
+      </node>
+      <node id="139552">
+        <label>AthContainers/IndexTrackingPolicy.h</label>
+        <link refid="d0/da5/IndexTrackingPolicy_8h"/>
+      </node>
+      <node id="139531">
+        <label>RVersion.h</label>
+      </node>
+      <node id="139538">
+        <label>CxxUtils/unordered_set.h</label>
+        <link refid="df/d26/unordered__set_8h"/>
+        <childnode refid="139539" relation="include">
+        </childnode>
+        <childnode refid="139547" relation="include">
+        </childnode>
+        <childnode refid="139523" relation="include">
+        </childnode>
+      </node>
+      <node id="139544">
+        <label>cmath</label>
+      </node>
+      <node id="139595">
+        <label>cassert</label>
+      </node>
+      <node id="139599">
+        <label>boost/mpl/if.hpp</label>
+      </node>
+      <node id="139618">
+        <label>boost/static_assert.hpp</label>
+      </node>
+      <node id="139549">
+        <label>stdexcept</label>
+      </node>
+      <node id="139645">
+        <label>AsgTools/MsgLevel.h</label>
+        <link refid="de/d80/MsgLevel_8h"/>
+        <childnode refid="139511" relation="include">
+        </childnode>
+        <childnode refid="139512" relation="include">
+        </childnode>
+        <childnode refid="139646" relation="include">
+        </childnode>
+      </node>
+      <node id="139572">
+        <label>boost/thread/thread.hpp</label>
+      </node>
+      <node id="139637">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="139605">
+        <label>boost/type_traits/is_pointer.hpp</label>
+      </node>
+      <node id="139639">
+        <label>xAODTracking/VertexContainerFwd.h</label>
+        <link refid="d0/dc4/VertexContainerFwd_8h_source"/>
+        <childnode refid="139534" relation="include">
+        </childnode>
+        <childnode refid="139640" relation="include">
+        </childnode>
+      </node>
+      <node id="139613">
+        <label>boost/iterator/iterator_adaptor.hpp</label>
+      </node>
+      <node id="139655">
+        <label>InDetTrackSystematicsTools/InDetTrackTruthOriginTool.h</label>
+        <link refid="dd/d21/InDetTrackTruthOriginTool_8h_source"/>
+        <childnode refid="139656" relation="include">
+        </childnode>
+        <childnode refid="139644" relation="include">
+        </childnode>
+        <childnode refid="139524" relation="include">
+        </childnode>
+        <childnode refid="139657" relation="include">
+        </childnode>
+        <childnode refid="139511" relation="include">
+        </childnode>
+      </node>
+      <node id="139632">
+        <label>TLorentzVector.h</label>
+      </node>
+      <node id="139658">
+        <label>xAODTruth/versions/TruthParticle_v1.h</label>
+        <link refid="d3/d3b/TruthParticle__v1_8h_source"/>
+        <childnode refid="139528" relation="include">
+        </childnode>
+        <childnode refid="139631" relation="include">
+        </childnode>
+        <childnode refid="139633" relation="include">
+        </childnode>
+        <childnode refid="139659" relation="include">
+        </childnode>
+      </node>
+      <node id="139512">
+        <label>AsgTools/AsgToolsConf.h</label>
+        <link refid="df/db7/AsgToolsConf_8h_source"/>
+      </node>
+      <node id="139511">
+        <label>string</label>
+      </node>
+      <node id="139554">
+        <label>AthContainers/AuxVectorData.h</label>
+        <link refid="d9/df2/AuxVectorData_8h"/>
+        <childnode refid="139536" relation="include">
+        </childnode>
+        <childnode refid="139555" relation="include">
+        </childnode>
+        <childnode refid="139557" relation="include">
+        </childnode>
+        <childnode refid="139559" relation="include">
+        </childnode>
+        <childnode refid="139560" relation="include">
+        </childnode>
+        <childnode refid="139562" relation="include">
+        </childnode>
+        <childnode refid="139563" relation="include">
+        </childnode>
+        <childnode refid="139564" relation="include">
+        </childnode>
+        <childnode refid="139522" relation="include">
+        </childnode>
+        <childnode refid="139541" relation="include">
+        </childnode>
+        <childnode refid="139543" relation="include">
+        </childnode>
+        <childnode refid="139565" relation="include">
+        </childnode>
+        <childnode refid="139566" relation="include">
+        </childnode>
+        <childnode refid="139567" relation="include">
+        </childnode>
+        <childnode refid="139573" relation="include">
+        </childnode>
+      </node>
+      <node id="139575">
+        <label>AthContainersInterfaces/IAuxTypeVector.h</label>
+        <link refid="d8/d0e/IAuxTypeVector_8h"/>
+        <childnode refid="139537" relation="include">
+        </childnode>
+        <childnode refid="139550" relation="include">
+        </childnode>
+      </node>
+      <node id="139662">
+        <label>CxxUtils/make_unique.h</label>
+        <link refid="d3/d77/make__unique_8h"/>
+      </node>
+      <node id="139525">
+        <label>versions/TrackParticle_v1.h</label>
+        <link refid="d2/d7f/TrackParticle__v1_8h_source"/>
+        <childnode refid="139526" relation="include">
+        </childnode>
+        <childnode refid="139527" relation="include">
+        </childnode>
+        <childnode refid="139528" relation="include">
+        </childnode>
+        <childnode refid="139534" relation="include">
+        </childnode>
+        <childnode refid="139631" relation="include">
+        </childnode>
+        <childnode refid="139634" relation="include">
+        </childnode>
+        <childnode refid="139639" relation="include">
+        </childnode>
+        <childnode refid="139641" relation="include">
+        </childnode>
+        <childnode refid="139642" relation="include">
+        </childnode>
+      </node>
+      <node id="139565">
+        <label>AthContainers/tools/likely.h</label>
+        <link refid="d6/dd6/likely_8h"/>
+      </node>
+      <node id="139610">
+        <label>AthContainers/tools/DVLIterator.h</label>
+        <link refid="d3/dc7/DVLIterator_8h_source"/>
+        <childnode refid="139551" relation="include">
+        </childnode>
+        <childnode refid="139608" relation="include">
+        </childnode>
+        <childnode refid="139611" relation="include">
+        </childnode>
+        <childnode refid="139613" relation="include">
+        </childnode>
+        <childnode refid="139598" relation="include">
+        </childnode>
+        <childnode refid="139542" relation="include">
+        </childnode>
+        <childnode refid="139543" relation="include">
+        </childnode>
+      </node>
+      <node id="139624">
+        <label>SGTools/DataBucket.h</label>
+      </node>
+      <node id="139651">
+        <label>map</label>
+      </node>
+      <node id="139625">
+        <label>AthContainers/tools/DVLDataBucket.icc</label>
+        <link refid="d3/d21/DVLDataBucket_8icc"/>
+        <childnode refid="139626" relation="include">
+        </childnode>
+      </node>
+      <node id="139626">
+        <label>SGTools/IRegisterTransient.h</label>
+      </node>
+      <node id="139532">
+        <label>RootMetaSelection.h</label>
+      </node>
+      <node id="139585">
+        <label>AthContainers/tools/AuxTypeVector.icc</label>
+        <link refid="d5/d84/AuxTypeVector_8icc"/>
+      </node>
+      <node id="139652">
+        <label>InDetTrackSystematicsTools/InDetTrackSystematics.h</label>
+        <link refid="de/d93/InDetTrackSystematics_8h_source"/>
+        <childnode refid="139517" relation="include">
+        </childnode>
+        <childnode refid="139653" relation="include">
+        </childnode>
+      </node>
+      <node id="139615">
+        <label>AthContainers/tools/DVL_algorithms.h</label>
+        <link refid="d0/d7a/DVL__algorithms_8h"/>
+        <childnode refid="139610" relation="include">
+        </childnode>
+        <childnode refid="139542" relation="include">
+        </childnode>
+        <childnode refid="139540" relation="include">
+        </childnode>
+        <childnode refid="139616" relation="include">
+        </childnode>
+      </node>
+      <node id="139566">
+        <label>AthContainers/tools/assume.h</label>
+        <link refid="d2/d20/assume_8h"/>
+      </node>
+      <node id="139582">
+        <label>AthContainers/PackedContainer.icc</label>
+        <link refid="d1/d0c/PackedContainer_8icc"/>
+      </node>
+      <node id="139611">
+        <label>AthContainers/tools/ElementProxy.h</label>
+        <link refid="db/d26/ElementProxy_8h"/>
+        <childnode refid="139551" relation="include">
+        </childnode>
+        <childnode refid="139530" relation="include">
+        </childnode>
+        <childnode refid="139547" relation="include">
+        </childnode>
+        <childnode refid="139612" relation="include">
+        </childnode>
+      </node>
+      <node id="139646">
+        <label>GaudiKernel/IMessageSvc.h</label>
+      </node>
+      <node id="139593">
+        <label>AthContainersInterfaces/IAuxElement.h</label>
+        <link refid="dd/d7a/IAuxElement_8h"/>
+      </node>
+      <node id="139530">
+        <label>AthLinks/tools/selection_ns.h</label>
+        <link refid="d3/dec/selection__ns_8h"/>
+        <childnode refid="139531" relation="include">
+        </childnode>
+        <childnode refid="139532" relation="include">
+        </childnode>
+      </node>
+      <node id="139563">
+        <label>AthenaKernel/IThinningSvc.h</label>
+      </node>
+      <node id="139570">
+        <label>boost/atomic.hpp</label>
+      </node>
+      <node id="139609">
+        <label>limits.h</label>
+      </node>
+      <node id="139661">
+        <label>InDetTrackSystematicsTools/InDetTrackTruthOriginDefs.h</label>
+        <link refid="da/de9/InDetTrackTruthOriginDefs_8h_source"/>
+      </node>
+      <node id="139603">
+        <label>AthContainers/tools/ClassID.h</label>
+        <link refid="de/de2/ClassID_8h"/>
+        <childnode refid="139604" relation="include">
+        </childnode>
+      </node>
+      <node id="139580">
+        <label>AthContainers/PackedParameters.h</label>
+        <link refid="d4/d43/PackedParameters_8h"/>
+        <childnode refid="139557" relation="include">
+        </childnode>
+        <childnode refid="139545" relation="include">
+        </childnode>
+        <childnode refid="139527" relation="include">
+        </childnode>
+        <childnode refid="139581" relation="include">
+        </childnode>
+      </node>
+      <node id="139521">
+        <label>PATInterfaces/SystematicSet.h</label>
+        <link refid="d4/db8/SystematicSet_8h_source"/>
+        <childnode refid="139518" relation="include">
+        </childnode>
+        <childnode refid="139520" relation="include">
+        </childnode>
+        <childnode refid="139522" relation="include">
+        </childnode>
+        <childnode refid="139511" relation="include">
+        </childnode>
+        <childnode refid="139523" relation="include">
+        </childnode>
+        <childnode refid="139516" relation="include">
+        </childnode>
+        <childnode refid="139517" relation="include">
+        </childnode>
+      </node>
+      <node id="139649">
+        <label>GaudiKernel/ToolHandle.h</label>
+      </node>
+      <node id="139536">
+        <label>AthContainersInterfaces/AuxTypes.h</label>
+        <link refid="d1/dea/AuxTypes_8h"/>
+        <childnode refid="139537" relation="include">
+        </childnode>
+        <childnode refid="139538" relation="include">
+        </childnode>
+      </node>
+      <node id="139529">
+        <label>AthLinks/ElementLinkBase.h</label>
+        <link refid="d0/d16/ElementLinkBase_8h_source"/>
+        <childnode refid="139527" relation="include">
+        </childnode>
+      </node>
+      <node id="139638">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="139517">
+        <label>PATInterfaces/SystematicVariation.h</label>
+        <link refid="d1/def/SystematicVariation_8h_source"/>
+        <childnode refid="139518" relation="include">
+        </childnode>
+        <childnode refid="139519" relation="include">
+        </childnode>
+        <childnode refid="139520" relation="include">
+        </childnode>
+        <childnode refid="139511" relation="include">
+        </childnode>
+      </node>
+      <node id="139539">
+        <label>CxxUtils/hashtable.h</label>
+        <link refid="dd/d16/hashtable_8h"/>
+        <childnode refid="139540" relation="include">
+        </childnode>
+        <childnode refid="139541" relation="include">
+        </childnode>
+        <childnode refid="139542" relation="include">
+        </childnode>
+        <childnode refid="139537" relation="include">
+        </childnode>
+        <childnode refid="139543" relation="include">
+        </childnode>
+        <childnode refid="139544" relation="include">
+        </childnode>
+        <childnode refid="139545" relation="include">
+        </childnode>
+        <childnode refid="139511" relation="include">
+        </childnode>
+        <childnode refid="139546" relation="include">
+        </childnode>
+      </node>
+      <node id="139596">
+        <label>AthContainers/tools/ATHCONTAINERS_ASSERT.h</label>
+        <link refid="de/d6b/ATHCONTAINERS__ASSERT_8h"/>
+        <childnode refid="139595" relation="include">
+        </childnode>
+      </node>
+      <node id="139631">
+        <label>xAODBase/IParticle.h</label>
+        <link refid="d5/dac/IParticle_8h_source"/>
+        <childnode refid="139632" relation="include">
+        </childnode>
+        <childnode refid="139592" relation="include">
+        </childnode>
+        <childnode refid="139633" relation="include">
+        </childnode>
+        <childnode refid="139591" relation="include">
+        </childnode>
+      </node>
+      <node id="139633">
+        <label>ObjectType.h</label>
+        <link refid="d8/d04/ObjectType_8h_source"/>
+        <childnode refid="139519" relation="include">
+        </childnode>
+      </node>
+      <node id="139612">
+        <label>AthContainers/tools/ElementProxy.icc</label>
+        <link refid="d6/d70/ElementProxy_8icc"/>
+        <childnode refid="139608" relation="include">
+        </childnode>
+        <childnode refid="139596" relation="include">
+        </childnode>
+      </node>
+      <node id="139550">
+        <label>typeinfo</label>
+      </node>
+      <node id="139634">
+        <label>xAODTracking/TrackingPrimitives.h</label>
+        <link refid="d2/d4c/TrackingPrimitives_8h_source"/>
+        <childnode refid="139635" relation="include">
+        </childnode>
+      </node>
+      <node id="139594">
+        <label>AthContainers/AuxElement.icc</label>
+        <link refid="d2/d37/AuxElement_8icc"/>
+        <childnode refid="139565" relation="include">
+        </childnode>
+        <childnode refid="139595" relation="include">
+        </childnode>
+      </node>
+      <node id="139534">
+        <label>AthContainers/DataVector.h</label>
+        <link refid="d7/dd6/DataVector_8h"/>
+        <childnode refid="139535" relation="include">
+        </childnode>
+        <childnode refid="139551" relation="include">
+        </childnode>
+        <childnode refid="139552" relation="include">
+        </childnode>
+        <childnode refid="139553" relation="include">
+        </childnode>
+        <childnode refid="139601" relation="include">
+        </childnode>
+        <childnode refid="139602" relation="include">
+        </childnode>
+        <childnode refid="139608" relation="include">
+        </childnode>
+        <childnode refid="139610" relation="include">
+        </childnode>
+        <childnode refid="139614" relation="include">
+        </childnode>
+        <childnode refid="139615" relation="include">
+        </childnode>
+        <childnode refid="139611" relation="include">
+        </childnode>
+        <childnode refid="139617" relation="include">
+        </childnode>
+        <childnode refid="139530" relation="include">
+        </childnode>
+        <childnode refid="139618" relation="include">
+        </childnode>
+        <childnode refid="139619" relation="include">
+        </childnode>
+        <childnode refid="139613" relation="include">
+        </childnode>
+        <childnode refid="139522" relation="include">
+        </childnode>
+        <childnode refid="139550" relation="include">
+        </childnode>
+        <childnode refid="139523" relation="include">
+        </childnode>
+        <childnode refid="139620" relation="include">
+        </childnode>
+        <childnode refid="139540" relation="include">
+        </childnode>
+        <childnode refid="139549" relation="include">
+        </childnode>
+        <childnode refid="139542" relation="include">
+        </childnode>
+        <childnode refid="139591" relation="include">
+        </childnode>
+        <childnode refid="139621" relation="include">
+        </childnode>
+        <childnode refid="139623" relation="include">
+        </childnode>
+        <childnode refid="139627" relation="include">
+        </childnode>
+        <childnode refid="139628" relation="include">
+        </childnode>
+      </node>
+      <node id="139518">
+        <label>PATInterfaces/Global.h</label>
+        <link refid="dd/d0c/PATInterfaces_2PATInterfaces_2Global_8h_source"/>
+      </node>
+      <node id="139526">
+        <label>bitset</label>
+      </node>
+      <node id="139581">
+        <label>AthContainers/PackedParameters.icc</label>
+        <link refid="db/d30/PackedParameters_8icc"/>
+      </node>
+      <node id="139533">
+        <label>AthLinks/tools/TypeTools.h</label>
+        <link refid="dd/db1/TypeTools_8h_source"/>
+      </node>
+      <node id="139562">
+        <label>AthenaKernel/ILockable.h</label>
+      </node>
+      <node id="139561">
+        <label>AthLinks/DataLinkBase.h</label>
+        <link refid="db/da8/DataLinkBase_8h_source"/>
+        <childnode refid="139527" relation="include">
+        </childnode>
+      </node>
+      <node id="139558">
+        <label>AthContainersInterfaces/AuxDataOption.icc</label>
+        <link refid="db/d68/AuxDataOption_8icc"/>
+      </node>
+      <node id="139584">
+        <label>boost/type_traits/is_arithmetic.hpp</label>
+      </node>
+      <node id="139602">
+        <label>AthContainers/tools/DVLInfo.h</label>
+        <link refid="d3/d2e/DVLInfo_8h"/>
+        <childnode refid="139603" relation="include">
+        </childnode>
+        <childnode refid="139553" relation="include">
+        </childnode>
+        <childnode refid="139550" relation="include">
+        </childnode>
+        <childnode refid="139537" relation="include">
+        </childnode>
+        <childnode refid="139546" relation="include">
+        </childnode>
+        <childnode refid="139605" relation="include">
+        </childnode>
+        <childnode refid="139583" relation="include">
+        </childnode>
+        <childnode refid="139606" relation="include">
+        </childnode>
+      </node>
+      <node id="139556">
+        <label>SGTools/CLASS_DEF.h</label>
+      </node>
+      <node id="139636">
+        <label>unistd.h</label>
+      </node>
+      <node id="139621">
+        <label>AthContainers/ClassName.h</label>
+        <link refid="dd/d6b/AthContainers_2AthContainers_2ClassName_8h_source"/>
+        <childnode refid="139622" relation="include">
+        </childnode>
+      </node>
+      <node id="139574">
+        <label>AthContainers/AuxTypeRegistry.h</label>
+        <link refid="db/d7f/AuxTypeRegistry_8h"/>
+        <childnode refid="139536" relation="include">
+        </childnode>
+        <childnode refid="139575" relation="include">
+        </childnode>
+        <childnode refid="139576" relation="include">
+        </childnode>
+        <childnode refid="139577" relation="include">
+        </childnode>
+        <childnode refid="139586" relation="include">
+        </childnode>
+        <childnode refid="139567" relation="include">
+        </childnode>
+        <childnode refid="139537" relation="include">
+        </childnode>
+        <childnode refid="139550" relation="include">
+        </childnode>
+        <childnode refid="139522" relation="include">
+        </childnode>
+        <childnode refid="139588" relation="include">
+        </childnode>
+        <childnode refid="139589" relation="include">
+        </childnode>
+      </node>
+      <node id="139522">
+        <label>vector</label>
+      </node>
+      <node id="139629">
+        <label>AthContainers/tools/CompareAndPrint.h</label>
+        <link refid="d5/da8/CompareAndPrint_8h_source"/>
+        <childnode refid="139540" relation="include">
+        </childnode>
+        <childnode refid="139550" relation="include">
+        </childnode>
+      </node>
+      <node id="139654">
+        <label>TFile.h</label>
+      </node>
+      <node id="139630">
+        <label>AthContainers/tools/DVLEltBaseInfo.icc</label>
+        <link refid="dd/d5e/DVLEltBaseInfo_8icc"/>
+      </node>
+      <node id="139541">
+        <label>utility</label>
+      </node>
+      <node id="139627">
+        <label>SGTools/DataBucketTraitFwd.h</label>
+      </node>
+      <node id="139564">
+        <label>CxxUtils/override.h</label>
+        <link refid="de/d0e/override_8h"/>
+      </node>
+      <node id="139659">
+        <label>xAODTruth/TruthVertexContainerFwd.h</label>
+        <link refid="da/ddf/TruthVertexContainerFwd_8h_source"/>
+        <childnode refid="139534" relation="include">
+        </childnode>
+        <childnode refid="139660" relation="include">
+        </childnode>
+      </node>
+      <node id="139640">
+        <label>xAODTracking/VertexFwd.h</label>
+        <link refid="d9/ddd/VertexFwd_8h_source"/>
+      </node>
+      <node id="139600">
+        <label>AthContainers/AuxVectorBase.icc</label>
+        <link refid="d4/d50/AuxVectorBase_8icc"/>
+      </node>
+      <node id="139568">
+        <label>boost/thread/shared_mutex.hpp</label>
+      </node>
+      <node id="139578">
+        <label>AthContainersInterfaces/IAuxSetOption.h</label>
+        <link refid="d7/d7e/IAuxSetOption_8h"/>
+      </node>
+      <node id="139567">
+        <label>AthContainers/tools/threading.h</label>
+        <link refid="d7/d22/threading_8h"/>
+        <childnode refid="139568" relation="include">
+        </childnode>
+        <childnode refid="139569" relation="include">
+        </childnode>
+        <childnode refid="139570" relation="include">
+        </childnode>
+        <childnode refid="139571" relation="include">
+        </childnode>
+        <childnode refid="139572" relation="include">
+        </childnode>
+      </node>
+      <node id="139507">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSystematicsTools/Root/InDetTrackTruthFilterTool.cxx</label>
+        <link refid="InDetTrackTruthFilterTool.cxx"/>
+        <childnode refid="139508" relation="include">
+        </childnode>
+        <childnode refid="139655" relation="include">
+        </childnode>
+        <childnode refid="139661" relation="include">
+        </childnode>
+        <childnode refid="139662" relation="include">
+        </childnode>
+        <childnode refid="139663" relation="include">
+        </childnode>
+        <childnode refid="139664" relation="include">
+        </childnode>
+        <childnode refid="139654" relation="include">
+        </childnode>
+      </node>
+      <node id="139663">
+        <label>TH2.h</label>
+      </node>
+      <node id="139519">
+        <label>iosfwd</label>
+      </node>
+      <node id="139543">
+        <label>cstdlib</label>
+      </node>
+      <node id="139524">
+        <label>xAODTracking/TrackParticle.h</label>
+        <link refid="d2/d15/TrackParticle_8h_source"/>
+        <childnode refid="139525" relation="include">
+        </childnode>
+        <childnode refid="139643" relation="include">
+        </childnode>
+      </node>
+      <node id="139620">
+        <label>iostream</label>
+      </node>
+      <node id="139548">
+        <label>CxxUtils/noreturn.h</label>
+        <link refid="de/d6f/noreturn_8h"/>
+      </node>
+      <node id="139648">
+        <label>AsgTools/ToolHandle.h</label>
+        <link refid="de/d2d/ToolHandle_8h_source"/>
+        <childnode refid="139512" relation="include">
+        </childnode>
+        <childnode refid="139649" relation="include">
+        </childnode>
+      </node>
+      <node id="139555">
+        <label>AthContainersInterfaces/IConstAuxStore.h</label>
+        <link refid="d7/d3a/IConstAuxStore_8h"/>
+        <childnode refid="139536" relation="include">
+        </childnode>
+        <childnode refid="139537" relation="include">
+        </childnode>
+        <childnode refid="139556" relation="include">
+        </childnode>
+      </node>
+      <node id="139537">
+        <label>cstddef</label>
+      </node>
+      <node id="139653">
+        <label>unordered_map</label>
+      </node>
+      <node id="139573">
+        <label>AthContainers/AuxVectorData.icc</label>
+        <link refid="da/de7/AuxVectorData_8icc"/>
+        <childnode refid="139574" relation="include">
+        </childnode>
+        <childnode refid="139590" relation="include">
+        </childnode>
+        <childnode refid="139555" relation="include">
+        </childnode>
+        <childnode refid="139565" relation="include">
+        </childnode>
+        <childnode refid="139566" relation="include">
+        </childnode>
+      </node>
+      <node id="139513">
+        <label>AsgTools/AsgToolMacros.h</label>
+        <link refid="d1/d68/AsgToolMacros_8h_source"/>
+      </node>
+      <node id="139606">
+        <label>AthContainers/tools/DVLInfo.icc</label>
+        <link refid="da/d83/DVLInfo_8icc"/>
+        <childnode refid="139551" relation="include">
+        </childnode>
+        <childnode refid="139522" relation="include">
+        </childnode>
+        <childnode refid="139607" relation="include">
+        </childnode>
+        <childnode refid="139595" relation="include">
+        </childnode>
+        <childnode refid="139543" relation="include">
+        </childnode>
+        <childnode refid="139591" relation="include">
+        </childnode>
+      </node>
+      <node id="139577">
+        <label>AthContainers/tools/AuxTypeVector.h</label>
+        <link refid="d6/dd2/AuxTypeVector_8h"/>
+        <childnode refid="139575" relation="include">
+        </childnode>
+        <childnode refid="139578" relation="include">
+        </childnode>
+        <childnode refid="139559" relation="include">
+        </childnode>
+        <childnode refid="139579" relation="include">
+        </childnode>
+        <childnode refid="139564" relation="include">
+        </childnode>
+        <childnode refid="139550" relation="include">
+        </childnode>
+        <childnode refid="139522" relation="include">
+        </childnode>
+        <childnode refid="139540" relation="include">
+        </childnode>
+        <childnode refid="139527" relation="include">
+        </childnode>
+        <childnode refid="139583" relation="include">
+        </childnode>
+        <childnode refid="139584" relation="include">
+        </childnode>
+        <childnode refid="139585" relation="include">
+        </childnode>
+      </node>
+      <node id="139641">
+        <label>TrkParameters/TrackParameters.h</label>
+      </node>
+      <node id="139657">
+        <label>xAODTruth/TruthParticle.h</label>
+        <link refid="dd/d44/TruthParticle_8h_source"/>
+        <childnode refid="139658" relation="include">
+        </childnode>
+      </node>
+      <node id="139656">
+        <label>IInDetTrackTruthOriginTool.h</label>
+        <link refid="d0/d05/IInDetTrackTruthOriginTool_8h_source"/>
+        <childnode refid="139510" relation="include">
+        </childnode>
+        <childnode refid="139524" relation="include">
+        </childnode>
+      </node>
+      <node id="139583">
+        <label>boost/type_traits/is_base_of.hpp</label>
+      </node>
+      <node id="139553">
+        <label>AthContainers/AuxVectorBase.h</label>
+        <link refid="d7/d18/AuxVectorBase_8h"/>
+        <childnode refid="139554" relation="include">
+        </childnode>
+        <childnode refid="139551" relation="include">
+        </childnode>
+        <childnode refid="139552" relation="include">
+        </childnode>
+        <childnode refid="139592" relation="include">
+        </childnode>
+        <childnode refid="139574" relation="include">
+        </childnode>
+        <childnode refid="139535" relation="include">
+        </childnode>
+        <childnode refid="139596" relation="include">
+        </childnode>
+        <childnode refid="139590" relation="include">
+        </childnode>
+        <childnode refid="139597" relation="include">
+        </childnode>
+        <childnode refid="139522" relation="include">
+        </childnode>
+        <childnode refid="139600" relation="include">
+        </childnode>
+      </node>
+      <node id="139520">
+        <label>set</label>
+      </node>
+      <node id="139643">
+        <label>xAODCore/CLASS_DEF.h</label>
+        <link refid="d6/d20/xAODCore_2xAODCore_2CLASS__DEF_8h"/>
+        <childnode refid="139556" relation="include">
+        </childnode>
+      </node>
+      <node id="139587">
+        <label>AthContainers/tools/AuxTypeVectorFactory.icc</label>
+        <link refid="dc/d02/AuxTypeVectorFactory_8icc"/>
+      </node>
+      <node id="139579">
+        <label>AthContainers/PackedContainer.h</label>
+        <link refid="d6/dda/PackedContainer_8h"/>
+        <childnode refid="139578" relation="include">
+        </childnode>
+        <childnode refid="139580" relation="include">
+        </childnode>
+        <childnode refid="139564" relation="include">
+        </childnode>
+        <childnode refid="139522" relation="include">
+        </childnode>
+        <childnode refid="139582" relation="include">
+        </childnode>
+      </node>
+      <node id="139540">
+        <label>algorithm</label>
+      </node>
+      <node id="139617">
+        <label>AthContainers/tools/IsMostDerivedFlag.h</label>
+        <link refid="d5/dfa/IsMostDerivedFlag_8h"/>
+      </node>
+      <node id="139642">
+        <label>TrkTrack/TrackCollection.h</label>
+      </node>
+      <node id="139592">
+        <label>AthContainers/AuxElement.h</label>
+        <link refid="d1/d6f/AuxElement_8h"/>
+        <childnode refid="139593" relation="include">
+        </childnode>
+        <childnode refid="139555" relation="include">
+        </childnode>
+        <childnode refid="139590" relation="include">
+        </childnode>
+        <childnode refid="139560" relation="include">
+        </childnode>
+        <childnode refid="139574" relation="include">
+        </childnode>
+        <childnode refid="139554" relation="include">
+        </childnode>
+        <childnode refid="139559" relation="include">
+        </childnode>
+        <childnode refid="139535" relation="include">
+        </childnode>
+        <childnode refid="139565" relation="include">
+        </childnode>
+        <childnode refid="139537" relation="include">
+        </childnode>
+        <childnode refid="139594" relation="include">
+        </childnode>
+      </node>
+      <node id="139644">
+        <label>AsgTools/AsgTool.h</label>
+        <link refid="d4/d29/AsgTool_8h_source"/>
+        <childnode refid="139512" relation="include">
+        </childnode>
+        <childnode refid="139510" relation="include">
+        </childnode>
+        <childnode refid="139645" relation="include">
+        </childnode>
+        <childnode refid="139647" relation="include">
+        </childnode>
+      </node>
+      <node id="139560">
+        <label>AthLinks/DataLink.h</label>
+        <link refid="da/de8/DataLink_8h_source"/>
+        <childnode refid="139527" relation="include">
+        </childnode>
+        <childnode refid="139511" relation="include">
+        </childnode>
+        <childnode refid="139561" relation="include">
+        </childnode>
+        <childnode refid="139530" relation="include">
+        </childnode>
+      </node>
+      <node id="139509">
+        <label>InDetTrackSystematicsTools/IInDetTrackTruthFilterTool.h</label>
+        <link refid="d1/d9e/IInDetTrackTruthFilterTool_8h_source"/>
+        <childnode refid="139510" relation="include">
+        </childnode>
+        <childnode refid="139515" relation="include">
+        </childnode>
+        <childnode refid="139524" relation="include">
+        </childnode>
+        <childnode refid="139511" relation="include">
+        </childnode>
+      </node>
+      <node id="139614">
+        <label>AthContainers/tools/DVL_iter_swap.h</label>
+        <link refid="d6/ddb/DVL__iter__swap_8h"/>
+        <childnode refid="139610" relation="include">
+        </childnode>
+        <childnode refid="139596" relation="include">
+        </childnode>
+        <childnode refid="139542" relation="include">
+        </childnode>
+      </node>
+      <node id="139551">
+        <label>AthContainers/OwnershipPolicy.h</label>
+        <link refid="d3/da4/OwnershipPolicy_8h_source"/>
+      </node>
+      <node id="139528">
+        <label>AthLinks/ElementLink.h</label>
+        <link refid="dc/d24/ElementLink_8h_source"/>
+        <childnode refid="139527" relation="include">
+        </childnode>
+        <childnode refid="139511" relation="include">
+        </childnode>
+        <childnode refid="139529" relation="include">
+        </childnode>
+        <childnode refid="139530" relation="include">
+        </childnode>
+        <childnode refid="139533" relation="include">
+        </childnode>
+      </node>
+      <node id="139647">
+        <label>AsgTools/SetProperty.h</label>
+        <link refid="df/db0/SetProperty_8h_source"/>
+      </node>
+      <node id="139664">
+        <label>TRandom3.h</label>
+      </node>
+      <node id="139516">
+        <label>PATInterfaces/SystematicCode.h</label>
+        <link refid="df/df5/SystematicCode_8h_source"/>
+      </node>
+      <node id="139604">
+        <label>GaudiKernel/ClassID.h</label>
+      </node>
+      <node id="139619">
+        <label>boost/type_traits.hpp</label>
+      </node>
+      <node id="139547">
+        <label>memory</label>
+      </node>
+      <node id="139586">
+        <label>AthContainers/tools/AuxTypeVectorFactory.h</label>
+        <link refid="dc/d69/AuxTypeVectorFactory_8h"/>
+        <childnode refid="139576" relation="include">
+        </childnode>
+        <childnode refid="139577" relation="include">
+        </childnode>
+        <childnode refid="139587" relation="include">
+        </childnode>
+      </node>
+      <node id="139650">
+        <label>InDetTrackSystematicsTools/InDetTrackSystematicsTool.h</label>
+        <link refid="dd/d95/InDetTrackSystematicsTool_8h_source"/>
+        <childnode refid="139511" relation="include">
+        </childnode>
+        <childnode refid="139651" relation="include">
+        </childnode>
+        <childnode refid="139547" relation="include">
+        </childnode>
+        <childnode refid="139652" relation="include">
+        </childnode>
+        <childnode refid="139644" relation="include">
+        </childnode>
+        <childnode refid="139515" relation="include">
+        </childnode>
+        <childnode refid="139521" relation="include">
+        </childnode>
+        <childnode refid="139654" relation="include">
+        </childnode>
+      </node>
+      <node id="139597">
+        <label>AthContainersInterfaces/AuxStore_traits.h</label>
+        <link refid="dd/d70/AuxStore__traits_8h"/>
+        <childnode refid="139593" relation="include">
+        </childnode>
+        <childnode refid="139590" relation="include">
+        </childnode>
+        <childnode refid="139555" relation="include">
+        </childnode>
+        <childnode refid="139583" relation="include">
+        </childnode>
+        <childnode refid="139598" relation="include">
+        </childnode>
+        <childnode refid="139599" relation="include">
+        </childnode>
+        <childnode refid="139511" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="dd/dff/namespaceInDet">InDet</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;InDetTrackSystematicsTools/InDetTrackTruthFilterTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;InDetTrackSystematicsTools/InDetTrackTruthOriginTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;InDetTrackSystematicsTools/InDetTrackTruthOriginDefs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d3/d77/make__unique_8h" kindref="compound" tooltip="Provide a version of the C++14 make_unique.">CxxUtils/make_unique.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TH2.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TRandom3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TFile.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::string;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>CxxUtils::make_unique;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">InDet<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound" tooltip="Class to wrap a set of SystematicVariations.">CP::SystematicSet</ref><sp/>FilterSystematics<sp/>=<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>InDet::TrackSystematicMap[TRK_FAKE_RATE_LOOSE],</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>InDet::TrackSystematicMap[TRK_FAKE_RATE_TIGHT],</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>InDet::TrackSystematicMap[TRK_EFF_LOOSE_GLOBAL],</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>InDet::TrackSystematicMap[TRK_EFF_LOOSE_IBL],</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>InDet::TrackSystematicMap[TRK_EFF_LOOSE_PP0],</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>InDet::TrackSystematicMap[TRK_EFF_LOOSE_PHYSMODEL],</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>InDet::TrackSystematicMap[TRK_EFF_TIGHT_GLOBAL],</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>InDet::TrackSystematicMap[TRK_EFF_TIGHT_IBL],</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>InDet::TrackSystematicMap[TRK_EFF_TIGHT_PP0],</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>InDet::TrackSystematicMap[TRK_EFF_TIGHT_PHYSMODEL]</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>InDetTrackTruthFilterTool::InDetTrackTruthFilterTool(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>name)<sp/>:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>InDetTrackSystematicsTool(name),</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>m_trackOriginTool(</highlight><highlight class="stringliteral">&quot;InDet::InDetTrackTruthOriginTool&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>XAOD_STANDALONE</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>declareInterface&lt;IInDetTrackTruthFilterTool&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(</highlight><highlight class="stringliteral">&quot;trackOriginTool&quot;</highlight><highlight class="normal">,<sp/>m_trackOriginTool);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(</highlight><highlight class="stringliteral">&quot;Seed&quot;</highlight><highlight class="normal">,<sp/>m_seed);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(</highlight><highlight class="stringliteral">&quot;fPrim&quot;</highlight><highlight class="normal">,<sp/>m_fPrim);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(</highlight><highlight class="stringliteral">&quot;fSec&quot;</highlight><highlight class="normal">,<sp/>m_fSec);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(</highlight><highlight class="stringliteral">&quot;fFakeLoose&quot;</highlight><highlight class="normal">,<sp/>m_fFakeLoose);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(</highlight><highlight class="stringliteral">&quot;fFakeTight&quot;</highlight><highlight class="normal">,<sp/>m_fFakeTight);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(</highlight><highlight class="stringliteral">&quot;fPU&quot;</highlight><highlight class="normal">,<sp/>m_fPU);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(</highlight><highlight class="stringliteral">&quot;fFrag&quot;</highlight><highlight class="normal">,<sp/>m_fFrag);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(</highlight><highlight class="stringliteral">&quot;fFromC&quot;</highlight><highlight class="normal">,<sp/>m_fFromC);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(</highlight><highlight class="stringliteral">&quot;fFromB&quot;</highlight><highlight class="normal">,<sp/>m_fFromB);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(</highlight><highlight class="stringliteral">&quot;trkEffSystScale&quot;</highlight><highlight class="normal">,<sp/>m_trkEffSystScale);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>StatusCode<sp/>InDetTrackTruthFilterTool::initialize()<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>m_rnd<sp/>=<sp/>make_unique&lt;TRandom3&gt;(m_seed);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>trkEffFilename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;TrackingEfficiencyRecommendations_20.7rel.root&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_CHECK<sp/>(<sp/>initTrkEffSystHistogram(<sp/>m_trkEffSystScale,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_trkEffHistLooseGlobal,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trkEffFilename,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;OneMinusRatioEfficiencyVSEtaPt_AfterRebinning_Old_Nominal_MCVSOld_5%Extra_MC_Loose&quot;</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_CHECK<sp/>(<sp/>initTrkEffSystHistogram(<sp/>m_trkEffSystScale,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_trkEffHistLooseIBL,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trkEffFilename,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;OneMinusRatioEfficiencyVSEtaPt_AfterRebinning_Old_Nominal_MCVSNew_Nominal_MC_Loose&quot;</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_CHECK<sp/>(<sp/>initTrkEffSystHistogram(<sp/>m_trkEffSystScale,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_trkEffHistLoosePP0,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trkEffFilename,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;OneMinusRatioEfficiencyVSEtaPt_AfterRebinning_Old_Nominal_MCVSOld_50%ExtraPP0_MC_Loose&quot;</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_CHECK<sp/>(<sp/>initTrkEffSystHistogram(<sp/>m_trkEffSystScale,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_trkEffHistLoosePhysModel,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trkEffFilename,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;OneMinusRatioEfficiencyVSEtaPt_AfterRebinning_Old_Nominal_MCVSOld_FTF_BIC_MC_Loose&quot;</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_CHECK<sp/>(<sp/>initTrkEffSystHistogram(<sp/>m_trkEffSystScale,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_trkEffHistTightGlobal,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trkEffFilename,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;OneMinusRatioEfficiencyVSEtaPt_AfterRebinning_Old_Nominal_MCVSOld_5%Extra_MC_TightPrimary&quot;</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_CHECK<sp/>(<sp/>initTrkEffSystHistogram(<sp/>m_trkEffSystScale,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_trkEffHistTightIBL,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trkEffFilename,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;OneMinusRatioEfficiencyVSEtaPt_AfterRebinning_Old_Nominal_MCVSNew_Nominal_MC_TightPrimary&quot;</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_CHECK<sp/>(<sp/>initTrkEffSystHistogram(<sp/>m_trkEffSystScale,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_trkEffHistTightPP0,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trkEffFilename,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;OneMinusRatioEfficiencyVSEtaPt_AfterRebinning_Old_Nominal_MCVSOld_50%ExtraPP0_MC_TightPrimary&quot;</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_CHECK<sp/>(<sp/>initTrkEffSystHistogram(<sp/>m_trkEffSystScale,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_trkEffHistTightPhysModel,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trkEffFilename,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;OneMinusRatioEfficiencyVSEtaPt_AfterRebinning_Old_Nominal_MCVSOld_FTF_BIC_MC_TightPrimary&quot;</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_CHECK<sp/>(<sp/>m_trackOriginTool.retrieve()<sp/>);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_CHECK<sp/>(<sp/>InDetTrackSystematicsTool::initialize()<sp/>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>StatusCode<sp/>InDetTrackTruthFilterTool::finalize()<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_fPrimHistogram;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_fSecHistogram;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//delete<sp/>m_fFakeHistogram;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_fPUHistogram;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_fFragHistogram;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_fFromCHistogram;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_fFromBHistogram;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_trkEffHistLooseGlobal;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_trkEffHistLooseIBL;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_trkEffHistLoosePP0;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_trkEffHistLoosePhysModel;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_trkEffHistTightGlobal;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_trkEffHistTightIBL;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_trkEffHistTightPP0;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_trkEffHistTightPhysModel;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>m_fPrimHistogram<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>m_fSecHistogram<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>m_fFakeHistogram<sp/>=<sp/>nullptr;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>m_fPUHistogram<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>m_fFragHistogram<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>m_fFromCHistogram<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>m_fFromBHistogram<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>m_trkEffHistLooseGlobal<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>m_trkEffHistLooseIBL<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>m_trkEffHistLoosePP0<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>m_trkEffHistLoosePhysModel<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>m_trkEffHistTightGlobal<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>m_trkEffHistTightIBL<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>m_trkEffHistTightPP0<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>m_trkEffHistTightPhysModel<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>InDetTrackTruthFilterTool::accept(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d9/d1d/classxAOD_1_1TrackParticle__v1" kindref="compound">xAOD::TrackParticle</ref>*<sp/>track)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>origin<sp/>=<sp/>m_trackOriginTool-&gt;getTrackOrigin(track);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pt<sp/>=<sp/>track-&gt;<ref refid="d9/d1d/classxAOD_1_1TrackParticle__v1_1a4354004bc5b79bf39d3ea87ed4347387" kindref="member" tooltip="The transverse momentum () of the particle.">pt</ref>();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>eta<sp/>=<sp/>track-&gt;<ref refid="d9/d1d/classxAOD_1_1TrackParticle__v1_1a116a10463c5865f3b6b2bf7449930991" kindref="member" tooltip="The pseudorapidity () of the particle.">eta</ref>();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>unimplemented<sp/>histograms<sp/>for<sp/>these,<sp/>so<sp/>only<sp/>flat<sp/>defaults<sp/>will<sp/>be<sp/>used.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fPrim<sp/>=<sp/>getFractionDropped(m_fPrim,<sp/>m_fPrimHistogram,<sp/>pt,<sp/>eta);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(InDet::TrkOrigin::isPrimary(origin)<sp/>&amp;&amp;<sp/>m_rnd-&gt;Uniform(0,<sp/>1)<sp/>&gt;<sp/>fPrim)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fSec<sp/>=<sp/>getFractionDropped(m_fSec,<sp/>m_fSecHistogram,<sp/>pt,<sp/>eta);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(InDet::TrkOrigin::isSecondary(origin)<sp/>&amp;&amp;<sp/>m_rnd-&gt;Uniform(0,<sp/>1)<sp/>&gt;<sp/>fSec)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fPU<sp/>=<sp/>getFractionDropped(m_fPU,<sp/>m_fPUHistogram,<sp/>pt,<sp/>eta);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(InDet::TrkOrigin::isPileup(origin)<sp/>&amp;&amp;<sp/>m_rnd-&gt;Uniform(0,<sp/>1)<sp/>&gt;<sp/>fPU)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fFrag<sp/>=<sp/>getFractionDropped(m_fFrag,<sp/>m_fFragHistogram,<sp/>pt,<sp/>eta);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(InDet::TrkOrigin::isFragmentation(origin)<sp/>&amp;&amp;<sp/>m_rnd-&gt;Uniform(0,<sp/>1)<sp/>&gt;<sp/>fFrag)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fFromC<sp/>=<sp/>getFractionDropped(m_fFromC,<sp/>m_fFromCHistogram,<sp/>pt,<sp/>eta);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(InDet::TrkOrigin::isFromD(origin)<sp/>&amp;&amp;<sp/>m_rnd-&gt;Uniform(0,<sp/>1)<sp/>&gt;<sp/>fFromC)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fFromB<sp/>=<sp/>getFractionDropped(m_fFromB,<sp/>m_fFromBHistogram,<sp/>pt,<sp/>eta);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(InDet::TrkOrigin::isFromB(origin)<sp/>&amp;&amp;<sp/>m_rnd-&gt;Uniform(0,<sp/>1)<sp/>&gt;<sp/>fFromB)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>InDet::TrkOrigin::isFake(origin)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isActiveLoose<sp/>=<sp/>isActive(<sp/>TRK_FAKE_RATE_LOOSE<sp/>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isActiveTight<sp/>=<sp/>isActive(<sp/>TRK_FAKE_RATE_TIGHT<sp/>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isActiveLoose<sp/>&amp;&amp;<sp/>isActiveTight)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(<sp/></highlight><highlight class="stringliteral">&quot;Both<sp/>Loose<sp/>and<sp/>TightPrimary<sp/>versions<sp/>of<sp/>fake<sp/>rate<sp/>systematic<sp/>are<sp/>set.&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>isActiveLoose<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//float<sp/>fFake<sp/>=<sp/>getFractionDropped(m_fFake,<sp/>m_fFakeHistogram,<sp/>pt,<sp/>eta);<sp/>//<sp/>there<sp/>is<sp/>no<sp/>fake-rate<sp/>histogram<sp/>-<sp/>just<sp/>a<sp/>flat<sp/>uncertainty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_rnd-&gt;Uniform(0,<sp/>1)<sp/>&lt;<sp/>m_fFakeLoose)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>isActiveTight<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_rnd-&gt;Uniform(0,<sp/>1)<sp/>&lt;<sp/>m_fFakeTight)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>InDet::TrkOrigin::isPrimary(origin)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>isActive(<sp/>TRK_EFF_LOOSE_GLOBAL<sp/>)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fTrkEffSyst<sp/>=<sp/>getFractionDropped(1,<sp/>m_trkEffHistLooseGlobal,<sp/>pt,<sp/>eta);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_rnd-&gt;Uniform(0,<sp/>1)<sp/>&lt;<sp/>fTrkEffSyst)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>isActive(<sp/>TRK_EFF_LOOSE_IBL<sp/>)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fTrkEffSyst<sp/>=<sp/>getFractionDropped(1,<sp/>m_trkEffHistLooseIBL,<sp/>pt,<sp/>eta);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_rnd-&gt;Uniform(0,<sp/>1)<sp/>&lt;<sp/>fTrkEffSyst)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>isActive(<sp/>TRK_EFF_LOOSE_PP0<sp/>)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fTrkEffSyst<sp/>=<sp/>getFractionDropped(1,<sp/>m_trkEffHistLoosePP0,<sp/>pt,<sp/>eta);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_rnd-&gt;Uniform(0,<sp/>1)<sp/>&lt;<sp/>fTrkEffSyst)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>isActive(<sp/>TRK_EFF_LOOSE_PHYSMODEL<sp/>)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fTrkEffSyst<sp/>=<sp/>getFractionDropped(1,<sp/>m_trkEffHistLoosePhysModel,<sp/>pt,<sp/>eta);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_rnd-&gt;Uniform(0,<sp/>1)<sp/>&lt;<sp/>fTrkEffSyst)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>isActive(<sp/>TRK_EFF_TIGHT_GLOBAL<sp/>)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fTrkEffSyst<sp/>=<sp/>getFractionDropped(1,<sp/>m_trkEffHistTightGlobal,<sp/>pt,<sp/>eta);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_rnd-&gt;Uniform(0,<sp/>1)<sp/>&lt;<sp/>fTrkEffSyst)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>isActive(<sp/>TRK_EFF_TIGHT_IBL<sp/>)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fTrkEffSyst<sp/>=<sp/>getFractionDropped(1,<sp/>m_trkEffHistTightIBL,<sp/>pt,<sp/>eta);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_rnd-&gt;Uniform(0,<sp/>1)<sp/>&lt;<sp/>fTrkEffSyst)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>isActive(<sp/>TRK_EFF_TIGHT_PP0<sp/>)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fTrkEffSyst<sp/>=<sp/>getFractionDropped(1,<sp/>m_trkEffHistTightPP0,<sp/>pt,<sp/>eta);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_rnd-&gt;Uniform(0,<sp/>1)<sp/>&lt;<sp/>fTrkEffSyst)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>isActive(<sp/>TRK_EFF_TIGHT_PHYSMODEL<sp/>)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fTrkEffSyst<sp/>=<sp/>getFractionDropped(1,<sp/>m_trkEffHistTightPhysModel,<sp/>pt,<sp/>eta);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_rnd-&gt;Uniform(0,<sp/>1)<sp/>&lt;<sp/>fTrkEffSyst)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>InDetTrackTruthFilterTool::selectTrack(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d9/d1d/classxAOD_1_1TrackParticle__v1" kindref="compound">xAOD::TrackParticle</ref>*<sp/>track)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>accept(track);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/>StatusCode<sp/>InDetTrackTruthFilterTool::initTrkEffSystHistogram(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scale,<sp/>TH2<sp/>*&amp;histogram,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>rootFileName,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>histogramName)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_CHECK(<sp/>initObject&lt;TH2&gt;(histogram,<sp/>rootFileName,<sp/>histogramName)<sp/>);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>binx=1;<sp/>binx&lt;=histogram-&gt;GetNbinsX();<sp/>binx++)<sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>biny=1;<sp/>biny&lt;=histogram-&gt;GetNbinsY();<sp/>biny++)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>using<sp/>a<sp/>histogram<sp/>which<sp/>is<sp/>1<sp/>-<sp/>eff1/eff2,<sp/>so<sp/>we<sp/>don&apos;t<sp/>apply<sp/>the<sp/>&quot;1<sp/>-<sp/>content&quot;<sp/>correction<sp/>ourselves</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>content<sp/>=<sp/>histogram-&gt;GetBinContent(binx,<sp/>biny);<sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>bin<sp/>content</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>content<sp/>=<sp/>fabs(content);<sp/></highlight><highlight class="comment">//<sp/>retrieve<sp/>uncertainty<sp/>and<sp/>symmetrize<sp/>(should<sp/>be<sp/>positive<sp/>in<sp/>histogram<sp/>anyway)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>content<sp/>*=<sp/>scale;<sp/></highlight><highlight class="comment">//<sp/>scale<sp/>systematic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(content<sp/>&gt;<sp/>1)<sp/>content<sp/>=<sp/>1;<sp/></highlight><highlight class="comment">//<sp/>protection:<sp/>no<sp/>larger<sp/>than<sp/>100%<sp/>uncertainty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>histogram-&gt;SetBinContent(binx,<sp/>biny,<sp/>content);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>InDetTrackTruthFilterTool::getFractionDropped(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fDefault,<sp/>TH2<sp/>*histogram,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pt,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>eta)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(histogram==</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fDefault;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>pt<sp/>*=<sp/>1.e-3;<sp/></highlight><highlight class="comment">//<sp/>unit<sp/>conversion<sp/>to<sp/>GeV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>pt<sp/>&gt;=<sp/>histogram-&gt;GetXaxis()-&gt;GetXmax()<sp/>)<sp/>pt<sp/>=<sp/>histogram-&gt;GetXaxis()-&gt;GetXmax()<sp/>-<sp/>0.001;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>frac<sp/>=<sp/>histogram-&gt;GetBinContent(histogram-&gt;FindBin(pt,<sp/>eta));</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>frac<sp/>&gt;<sp/>1.<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(<sp/></highlight><highlight class="stringliteral">&quot;Fraction<sp/>from<sp/>histogram<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>histogram-&gt;GetName()</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>is<sp/>greater<sp/>than<sp/>1.<sp/>Setting<sp/>fraction<sp/>to<sp/>1.&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>frac<sp/>=<sp/>1.;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>frac<sp/>&lt;<sp/>0.<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(<sp/></highlight><highlight class="stringliteral">&quot;Fraction<sp/>from<sp/>histogram<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>histogram-&gt;GetName()</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>is<sp/>less<sp/>than<sp/>0.<sp/>Setting<sp/>fraction<sp/>to<sp/>0.&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>frac<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>frac;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>InDetTrackTruthFilterTool::isAffectedBySystematic(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>&amp;<sp/>syst<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="258"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>InDetTrackSystematicsTool::isAffectedBySystematic(<sp/>syst<sp/>);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound" tooltip="Class to wrap a set of SystematicVariations.">CP::SystematicSet</ref><sp/>InDetTrackTruthFilterTool::affectingSystematics()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="263"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FilterSystematics;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound" tooltip="Class to wrap a set of SystematicVariations.">CP::SystematicSet</ref><sp/>InDetTrackTruthFilterTool::recommendedSystematics()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="268"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>InDetTrackSystematicsTool::recommendedSystematics();</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><ref refid="d1/d38/classCP_1_1SystematicCode" kindref="compound">CP::SystematicCode</ref><sp/>InDetTrackTruthFilterTool::applySystematicVariation(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound" tooltip="Class to wrap a set of SystematicVariations.">CP::SystematicSet</ref>&amp;<sp/>systs<sp/>)</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>InDetTrackSystematicsTool::applySystematicVariation(systs);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>InDet</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSystematicsTools/Root/InDetTrackTruthFilterTool.cxx"/>
+  </compounddef>
+</doxygen>

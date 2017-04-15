@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="de/d28/classHLT_1_1StandaloneNavigation" kind="class" prot="public">
+    <compoundname>HLT::StandaloneNavigation</compoundname>
+    <basecompoundref refid="d9/d08/classHLT_1_1TrigNavStructure" prot="public" virt="non-virtual">HLT::TrigNavStructure</basecompoundref>
+    <derivedcompoundref refid="d9/d9a/structTestTNS" prot="public" virt="non-virtual">TestTNS</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="de/d28/classHLT_1_1StandaloneNavigation_1a342021f849edf1dc3bd9a2443189f2bc" prot="private" static="no" mutable="no">
+        <type><ref refid="d8/d94/structHLT_1_1ITrigHolderFactory" kindref="compound">ITrigHolderFactory</ref> *</type>
+        <definition>ITrigHolderFactory* HLT::StandaloneNavigation::m_holderfactory</definition>
+        <argsstring></argsstring>
+        <name>m_holderfactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/StandaloneNavigation.h" line="39" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/StandaloneNavigation.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="de/d28/classHLT_1_1StandaloneNavigation_1a25cd70f1b7898cb0b6b8074125f1dfe1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HLT::StandaloneNavigation::StandaloneNavigation</definition>
+        <argsstring>()</argsstring>
+        <name>StandaloneNavigation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/StandaloneNavigation.h" line="13" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/StandaloneNavigation.cxx" bodystart="4" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d28/classHLT_1_1StandaloneNavigation_1a322fec0706b67661074501bb8a9fc7a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>HLT::StandaloneNavigation::~StandaloneNavigation</definition>
+        <argsstring>()</argsstring>
+        <name>~StandaloneNavigation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/StandaloneNavigation.h" line="14" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/StandaloneNavigation.cxx" bodystart="7" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d28/classHLT_1_1StandaloneNavigation_1a3be015376a5a94c813abec1947133996" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool HLT::StandaloneNavigation::serializeHolders</definition>
+        <argsstring>(std::vector&lt; uint32_t &gt; &amp;output) const </argsstring>
+        <name>serializeHolders</name>
+        <param>
+          <type>std::vector&lt; uint32_t &gt; &amp;</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>method serizlizes the helper objects allowing use of FeatureAccessHelpers w/o CLID This methods should be owerwritten by the derived classes </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector to place the result</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>if true then OK else some sort of failure happened (likely badly truncated structure) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/StandaloneNavigation.h" line="24" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/StandaloneNavigation.cxx" bodystart="10" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d28/classHLT_1_1StandaloneNavigation_1aeb5cd0ada0135a76e6ab15554afd9578" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool HLT::StandaloneNavigation::deserializeHolders</definition>
+        <argsstring>(std::vector&lt; uint32_t &gt;::const_iterator &amp;start, const std::vector&lt; uint32_t &gt;::const_iterator &amp;end)</argsstring>
+        <name>deserializeHolders</name>
+        <param>
+          <type>std::vector&lt; uint32_t &gt;::const_iterator &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; uint32_t &gt;::const_iterator &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/StandaloneNavigation.h" line="25" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/StandaloneNavigation.cxx" bodystart="24" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d28/classHLT_1_1StandaloneNavigation_1aa206a44ccf10cd94cd95a3018d0ab489" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool HLT::StandaloneNavigation::serialize</definition>
+        <argsstring>(std::vector&lt; uint32_t &gt; &amp;output) const </argsstring>
+        <name>serialize</name>
+        <reimplements refid="d9/d08/classHLT_1_1TrigNavStructure_1a63358d17ea66b12849ecf2564ae2c304">serialize</reimplements>
+        <param>
+          <type>std::vector&lt; uint32_t &gt; &amp;</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>method serizlizes entire navigation </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector to place the result</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>if true then OK else some sort of failure happened (likely badly truncated structure) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/StandaloneNavigation.h" line="34" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/StandaloneNavigation.cxx" bodystart="57" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d28/classHLT_1_1StandaloneNavigation_1aafc8b9e43b2102bf0d9614ddefef0590" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool HLT::StandaloneNavigation::deserialize</definition>
+        <argsstring>(const std::vector&lt; uint32_t &gt; &amp;input)</argsstring>
+        <name>deserialize</name>
+        <reimplements refid="d9/d08/classHLT_1_1TrigNavStructure_1a6142495d27544580054bbe579ef6ff78">deserialize</reimplements>
+        <param>
+          <type>const std::vector&lt; uint32_t &gt; &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/StandaloneNavigation.h" line="35" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/StandaloneNavigation.cxx" bodystart="74" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="17703">
+        <label>HLT::StandaloneNavigation</label>
+        <link refid="de/d28/classHLT_1_1StandaloneNavigation"/>
+        <childnode refid="17704" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17705">
+        <label>TestTNS</label>
+        <link refid="d9/d9a/structTestTNS"/>
+        <childnode refid="17703" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17704">
+        <label>HLT::TrigNavStructure</label>
+        <link refid="d9/d08/classHLT_1_1TrigNavStructure"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="17712">
+        <label>HLT::ITrigHolderFactory</label>
+        <link refid="d8/d94/structHLT_1_1ITrigHolderFactory"/>
+      </node>
+      <node id="17706">
+        <label>HLT::StandaloneNavigation</label>
+        <link refid="de/d28/classHLT_1_1StandaloneNavigation"/>
+        <childnode refid="17707" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17712" relation="usage">
+          <edgelabel>m_holderfactory</edgelabel>
+        </childnode>
+      </node>
+      <node id="17711">
+        <label>asg::AsgMessaging</label>
+        <link refid="d1/d97/classasg_1_1AsgMessaging"/>
+      </node>
+      <node id="17710">
+        <label>HLT::TrigHolderStructure</label>
+        <link refid="da/d94/classHLT_1_1TrigHolderStructure"/>
+        <childnode refid="17711" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17709">
+        <label>HLT::TriggerElementFactory</label>
+        <link refid="d2/de9/classHLT_1_1TriggerElementFactory"/>
+      </node>
+      <node id="17708">
+        <label>HLT::TriggerElement</label>
+        <link refid="dd/db8/classHLT_1_1TriggerElement"/>
+      </node>
+      <node id="17707">
+        <label>HLT::TrigNavStructure</label>
+        <link refid="d9/d08/classHLT_1_1TrigNavStructure"/>
+        <childnode refid="17708" relation="usage">
+          <edgelabel>m_unspecifiedTE</edgelabel>
+        </childnode>
+        <childnode refid="17709" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="17710" relation="usage">
+          <edgelabel>m_holderstorage</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/StandaloneNavigation.h" line="11" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/StandaloneNavigation.h" bodystart="11" bodyend="40"/>
+    <listofallmembers>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a75a745d3b075ae38e18c75eae3f566db" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>addNode</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1adcb31bc69a7ad668df42b2ce6d8069c3" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>addNode</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a4513556ade1b9ea77fec6509329266ff" prot="protected" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>addOneLevel</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a7d9af1a3c226fb3aa776e1d71901b537" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>addRoINode</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a854128f34ec3cef89659dbc3ab847be1" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>combine</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a9fb1d4548091143938611eed17b5d278" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>copyAllFeatures</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a8a6974de20b8dc486ffb64484dcb3ded" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>countAllOfType</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1ab1a94033197d6de5f0064b00ca7dc078" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>decreasingOrderByTEId</name></member>
+      <member refid="de/d28/classHLT_1_1StandaloneNavigation_1aafc8b9e43b2102bf0d9614ddefef0590" prot="public" virt="virtual"><scope>HLT::StandaloneNavigation</scope><name>deserialize</name></member>
+      <member refid="de/d28/classHLT_1_1StandaloneNavigation_1aeb5cd0ada0135a76e6ab15554afd9578" prot="public" virt="virtual"><scope>HLT::StandaloneNavigation</scope><name>deserializeHolders</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1aa4aab21e57b3ccb2edfcb28064368e1b" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>deserializeTEs</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a7f1d70a41ff519b61641c11af8cca069" prot="protected" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>fillSameRoIRelation</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1afcabcd4847b6d6fabce69b6e4d8d836c" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>getAll</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a311c58edad4dbe23f12bec046283c82d" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>getAllOfType</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1aec41f8e98b6ee31924eafbfde0632424" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>getAllRoIThresholdTEs</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1ae650286918584005312f998f582a6cdd" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>getAllTEs</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1ad9ef66b52d6a11e57887bf4b3525b61e" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>getDirectPredecessors</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1ade5ea71e8ff725583e5797398b514b33" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>getDirectSuccessors</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a39a7a11f23cb6aba63f0e47b63aedc23" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>getFeature</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a28a4a2362ce6fa5f34ed78b22dd2f218" prot="public" virt="virtual"><scope>HLT::StandaloneNavigation</scope><name>getFeatureAccessors</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a16f9e38ab126bf13c1af40e89f28875d" prot="protected" virt="virtual"><scope>HLT::StandaloneNavigation</scope><name>getFeatureAccessorsSingleTE</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1ac0a01b892f2170773ba260d1aa990e34" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>getFeatureRecursively</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1aaa45b12525a39f1cdd974f20c571519e" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>getHolder</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1ac0b79bae687efe8d3e4ec6939d68b65e" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>getInitialNode</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a021892a0b8a9ad19028fa855673ce22a" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>getInitialNode</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1ad3b3893fa11f9103e28a8a0d7f099b74" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>getRoINodes</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a667a5a985a39d0e214f07000da6d5e17" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>getSuccessor</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a7ae7547c73e9ffad7870bc3e6d32ba89" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>getTopologicallySpannedBy</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a8a6bb7b8505736eb054b5f5639d48062" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>hasIdFromTheSet</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a1980f85e5f8fbf12865e645fca14901e" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>haveAllCommonRoIs</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a778994c352935511fd177632cd6b6679" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>haveCommonRoI</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a03b8982034f27d2215d35f3f24d4eb24" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>haveCommonSeed</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a0c84441607c72a8040dbd9bf39ea75f3" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>haveDistinctRoI</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1adb4367f028c31868015cf8889841dfbc" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>haveDistinctSeed</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1acb192f49358cf34be527342bdc3acaa3" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>increasingOrderByTEId</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a0a90add052e10055cd4ca644c54f214e" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>isCompatibleTree</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a361e11326ab8f3751ede118edd058196" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>isInitialNode</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1aa9dc5ca3156c52ea97de417e270ff030" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>isNotActive</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1aead7239a8cd007da174eb0b813427bce" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>isRoINode</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1adcc465668f62383dc2665eeb38dc7968" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>isTerminalNode</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1af4248c3d8d3bb6ea2ce4f1011c40f643" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>isTopological</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1adb0617f1a15c49c2bbc8f3e9a1e58529" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>label</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a52a2a58ebbf13872559b534ee280f918" prot="protected" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>m_factory</name></member>
+      <member refid="de/d28/classHLT_1_1StandaloneNavigation_1a342021f849edf1dc3bd9a2443189f2bc" prot="private" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>m_holderfactory</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1ad5b7156154b1a4272cf7e9e4c3b174a2" prot="protected" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>m_holderstorage</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1ac2a9608a3d53cf7eb0e097e44d922e5d" prot="protected" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>m_unspecifiedLabel</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1ae54c0ac4cb3c6ecad93562af7e903858" prot="protected" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>m_unspecifiedTE</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a911a68e0d35f1527843ceda2d37c9bde" prot="protected" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>matchFeature</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1aa285e2f31a46b26857356f3022752d32" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>overlaps</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a7e7c1099b8533797f5e7011f40ec81c7" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>overlaps</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1ad53aa4090286e454f093c8388a2bfb0a" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>printASCIIArt</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a4e25f0499260f4b71dddeee555db7ef9" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>propagateDeactivation</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a23f79a5e2e5b4c5e5d0d5523d3465083" prot="public" virt="virtual"><scope>HLT::StandaloneNavigation</scope><name>reset</name></member>
+      <member refid="de/d28/classHLT_1_1StandaloneNavigation_1aa206a44ccf10cd94cd95a3018d0ab489" prot="public" virt="virtual"><scope>HLT::StandaloneNavigation</scope><name>serialize</name></member>
+      <member refid="de/d28/classHLT_1_1StandaloneNavigation_1a3be015376a5a94c813abec1947133996" prot="public" virt="virtual"><scope>HLT::StandaloneNavigation</scope><name>serializeHolders</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a5250b903e822670b8bfa72c8df2ffb15" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>serializeTEs</name></member>
+      <member refid="de/d28/classHLT_1_1StandaloneNavigation_1a25cd70f1b7898cb0b6b8074125f1dfe1" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>StandaloneNavigation</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a3d5444118cd06cf746b526b8279c0dc1" prot="public" virt="non-virtual"><scope>HLT::StandaloneNavigation</scope><name>subType</name></member>
+      <member refid="de/d28/classHLT_1_1StandaloneNavigation_1a322fec0706b67661074501bb8a9fc7a8" prot="public" virt="virtual"><scope>HLT::StandaloneNavigation</scope><name>~StandaloneNavigation</name></member>
+      <member refid="d9/d08/classHLT_1_1TrigNavStructure_1a9009457dcc585cd8159955954eaabb63" prot="public" virt="virtual"><scope>HLT::StandaloneNavigation</scope><name>~TrigNavStructure</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

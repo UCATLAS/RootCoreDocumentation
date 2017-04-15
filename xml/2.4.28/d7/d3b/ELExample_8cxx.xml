@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d7/d3b/ELExample_8cxx" kind="file">
+    <compoundname>ELExample.cxx</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>Iowa<sp/>State<sp/>University<sp/>2014.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>Nils<sp/>Krumnack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>(See<sp/>accompanying<sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Please<sp/>feel<sp/>free<sp/>to<sp/>contact<sp/>me<sp/>(nils.erik.krumnack@cern.ch)<sp/>for<sp/>bug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>reports,<sp/>feature<sp/>suggestions,<sp/>praise<sp/>and<sp/>complaints.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ROOTCORE</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QuickAna/ELExample.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;EventLoop/Job.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;EventLoop/Worker.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QuickAna/MessageCheck.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QuickAna/QuickAna.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TH1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>method<sp/>implementations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>needed<sp/>to<sp/>distribute<sp/>the<sp/>algorithm<sp/>to<sp/>the<sp/>workers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">ClassImp(ana::ELExample)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">namespace<sp/>ana</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>ELExample<sp/>::<sp/>ELExample<sp/>()</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>muon_n<sp/>(0)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Here<sp/>you<sp/>put<sp/>any<sp/>code<sp/>for<sp/>the<sp/>base<sp/>initialization<sp/>of<sp/>variables,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>e.g.<sp/>initialize<sp/>all<sp/>pointers<sp/>to<sp/>0.<sp/><sp/>Note<sp/>that<sp/>you<sp/>should<sp/>only<sp/>put</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>most<sp/>basic<sp/>initialization<sp/>here,<sp/>since<sp/>this<sp/>method<sp/>will<sp/>be</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>called<sp/>on<sp/>both<sp/>the<sp/>submission<sp/>and<sp/>the<sp/>worker<sp/>node.<sp/><sp/>Most<sp/>of<sp/>your</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initialization<sp/>code<sp/>will<sp/>go<sp/>into<sp/>histInitialize()<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initialize().</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>ELExample<sp/>::<sp/>setupJob<sp/>(<ref refid="da/dbb/classEL_1_1Job" kindref="compound">EL::Job</ref>&amp;<sp/>job)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Here<sp/>you<sp/>put<sp/>code<sp/>that<sp/>sets<sp/>up<sp/>the<sp/>job<sp/>on<sp/>the<sp/>submission<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>so<sp/>that<sp/>it<sp/>is<sp/>ready<sp/>to<sp/>work<sp/>with<sp/>your<sp/>algorithm,<sp/>e.g.<sp/>you<sp/>can</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>request<sp/>the<sp/>D3PDReader<sp/>service<sp/>or<sp/>add<sp/>output<sp/>files.<sp/><sp/>Any<sp/>code<sp/>you</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>put<sp/>here<sp/>could<sp/>instead<sp/>also<sp/>go<sp/>into<sp/>the<sp/>submission<sp/>script.<sp/><sp/>The</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sole<sp/>advantage<sp/>of<sp/>putting<sp/>it<sp/>here<sp/>is<sp/>that<sp/>it<sp/>gets<sp/>automatically</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>activated/deactivated<sp/>when<sp/>you<sp/>add/remove<sp/>the<sp/>algorithm<sp/>from<sp/>your</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>job,<sp/>which<sp/>may<sp/>or<sp/>may<sp/>not<sp/>be<sp/>of<sp/>value<sp/>to<sp/>you.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>job.<ref refid="da/dbb/classEL_1_1Job_1a52d21f848a949d1f7af0803aff4680e0" kindref="member">useXAOD</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>ELExample<sp/>::<sp/>histInitialize<sp/>()</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Here<sp/>you<sp/>do<sp/>everything<sp/>that<sp/>needs<sp/>to<sp/>be<sp/>done<sp/>at<sp/>the<sp/>very</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>beginning<sp/>on<sp/>each<sp/>worker<sp/>node,<sp/>e.g.<sp/>create<sp/>histograms<sp/>and<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>trees.<sp/><sp/>This<sp/>method<sp/>gets<sp/>called<sp/>before<sp/>any<sp/>input<sp/>files<sp/>are</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>connected.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>muon_n<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH1F<sp/>(</highlight><highlight class="stringliteral">&quot;muon_n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;number<sp/>of<sp/>muons&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>-0.5,<sp/>9.5);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>wk()-&gt;addOutput<sp/>(muon_n);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>ELExample<sp/>::<sp/>fileExecute<sp/>()</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Here<sp/>you<sp/>do<sp/>everything<sp/>that<sp/>needs<sp/>to<sp/>be<sp/>done<sp/>exactly<sp/>once<sp/>for<sp/>every</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>single<sp/>file,<sp/>e.g.<sp/>collect<sp/>a<sp/>list<sp/>of<sp/>all<sp/>lumi-blocks<sp/>processed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>ELExample<sp/>::<sp/>changeInput<sp/>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*firstFile*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Here<sp/>you<sp/>do<sp/>everything<sp/>you<sp/>need<sp/>to<sp/>do<sp/>when<sp/>we<sp/>change<sp/>input<sp/>files,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>e.g.<sp/>resetting<sp/>branch<sp/>addresses<sp/>on<sp/>trees.<sp/><sp/>If<sp/>you<sp/>are<sp/>using</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>D3PDReader<sp/>or<sp/>a<sp/>similar<sp/>service<sp/>this<sp/>method<sp/>is<sp/>not<sp/>needed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>ELExample<sp/>::<sp/>initialize<sp/>()</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Here<sp/>you<sp/>do<sp/>everything<sp/>that<sp/>you<sp/>need<sp/>to<sp/>do<sp/>after<sp/>the<sp/>first<sp/>input</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>file<sp/>has<sp/>been<sp/>connected<sp/>and<sp/>before<sp/>the<sp/>first<sp/>event<sp/>is<sp/>processed,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>e.g.<sp/>create<sp/>additional<sp/>histograms<sp/>based<sp/>on<sp/>which<sp/>variables<sp/>are</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>available<sp/>in<sp/>the<sp/>input<sp/>files.<sp/><sp/>You<sp/>can<sp/>also<sp/>create<sp/>all<sp/>of<sp/>your</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>histograms<sp/>and<sp/>trees<sp/>in<sp/>here,<sp/>but<sp/>be<sp/>aware<sp/>that<sp/>this<sp/>method</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>doesn&apos;t<sp/>get<sp/>called<sp/>if<sp/>no<sp/>events<sp/>are<sp/>processed.<sp/><sp/>So<sp/>any<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>you<sp/>create<sp/>here<sp/>won&apos;t<sp/>be<sp/>available<sp/>in<sp/>the<sp/>output<sp/>if<sp/>you<sp/>have<sp/>no</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>input<sp/>events.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>ANA_CHECK_SET_TYPE<sp/>(<ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unique_ptr&lt;QuickAna&gt;<sp/>myQuickAna<sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QuickAna<sp/>(</highlight><highlight class="stringliteral">&quot;quickana&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>myQuickAna-&gt;setConfig<sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>quickAna<sp/>=<sp/>std::move<sp/>(myQuickAna);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>ANA_CHECK<sp/>(quickAna-&gt;initialize());</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>ELExample<sp/>::<sp/>execute<sp/>()</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Here<sp/>you<sp/>do<sp/>everything<sp/>that<sp/>needs<sp/>to<sp/>be<sp/>done<sp/>on<sp/>every<sp/>single</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>events,<sp/>e.g.<sp/>read<sp/>input<sp/>variables,<sp/>apply<sp/>cuts,<sp/>and<sp/>fill</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>histograms<sp/>and<sp/>trees.<sp/><sp/>This<sp/>is<sp/>where<sp/>most<sp/>of<sp/>your<sp/>actual<sp/>analysis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>code<sp/>will<sp/>go.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>ANA_CHECK_SET_TYPE<sp/>(<ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>ANA_CHECK<sp/>(quickAna-&gt;process<sp/>(*wk()-&gt;xaodEvent()));</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>muon_num<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>muon<sp/>:<sp/>*quickAna-&gt;muons())</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(muon-&gt;auxdata&lt;<ref refid="d7/d63/namespaceana_1abba4ccb31bcf7a550a3e8bd5b4053041" kindref="member" tooltip="the type used for accept/select decorations">SelectType</ref>&gt;<sp/>(</highlight><highlight class="stringliteral">&quot;ana_select&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>++<sp/>muon_num;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>muon_n-&gt;Fill<sp/>(muon_num,<sp/>quickAna-&gt;weight());</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>ELExample<sp/>::<sp/>postExecute<sp/>()</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Here<sp/>you<sp/>do<sp/>everything<sp/>that<sp/>needs<sp/>to<sp/>be<sp/>done<sp/>after<sp/>the<sp/>main<sp/>event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>processing.<sp/><sp/>This<sp/>is<sp/>typically<sp/>very<sp/>rare,<sp/>particularly<sp/>in<sp/>user</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>code.<sp/><sp/>It<sp/>is<sp/>mainly<sp/>used<sp/>in<sp/>implementing<sp/>the<sp/>NTupleSvc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>ELExample<sp/>::<sp/>finalize<sp/>()</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>method<sp/>is<sp/>the<sp/>mirror<sp/>image<sp/>of<sp/>initialize(),<sp/>meaning<sp/>it<sp/>gets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>called<sp/>after<sp/>the<sp/>last<sp/>event<sp/>has<sp/>been<sp/>processed<sp/>on<sp/>the<sp/>worker<sp/>node</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>allows<sp/>you<sp/>to<sp/>finish<sp/>up<sp/>any<sp/>objects<sp/>you<sp/>created<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initialize()<sp/>before<sp/>they<sp/>are<sp/>written<sp/>to<sp/>disk.<sp/><sp/>This<sp/>is<sp/>actually</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>fairly<sp/>rare,<sp/>since<sp/>this<sp/>happens<sp/>separately<sp/>for<sp/>each<sp/>worker<sp/>node.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Most<sp/>of<sp/>the<sp/>time<sp/>you<sp/>want<sp/>to<sp/>do<sp/>your<sp/>post-processing<sp/>on<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>submission<sp/>node<sp/>after<sp/>all<sp/>your<sp/>histogram<sp/>outputs<sp/>have<sp/>been</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>merged.<sp/><sp/>This<sp/>is<sp/>different<sp/>from<sp/>histFinalize()<sp/>in<sp/>that<sp/>it<sp/>only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>gets<sp/>called<sp/>on<sp/>worker<sp/>nodes<sp/>that<sp/>processed<sp/>input<sp/>events.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>ELExample<sp/>::<sp/>histFinalize<sp/>()</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>method<sp/>is<sp/>the<sp/>mirror<sp/>image<sp/>of<sp/>histInitialize(),<sp/>meaning<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>gets<sp/>called<sp/>after<sp/>the<sp/>last<sp/>event<sp/>has<sp/>been<sp/>processed<sp/>on<sp/>the<sp/>worker</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>node<sp/>and<sp/>allows<sp/>you<sp/>to<sp/>finish<sp/>up<sp/>any<sp/>objects<sp/>you<sp/>created<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>histInitialize()<sp/>before<sp/>they<sp/>are<sp/>written<sp/>to<sp/>disk.<sp/><sp/>This<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>actually<sp/>fairly<sp/>rare,<sp/>since<sp/>this<sp/>happens<sp/>separately<sp/>for<sp/>each</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>worker<sp/>node.<sp/><sp/>Most<sp/>of<sp/>the<sp/>time<sp/>you<sp/>want<sp/>to<sp/>do<sp/>your</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>post-processing<sp/>on<sp/>the<sp/>submission<sp/>node<sp/>after<sp/>all<sp/>your<sp/>histogram</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>outputs<sp/>have<sp/>been<sp/>merged.<sp/><sp/>This<sp/>is<sp/>different<sp/>from<sp/>finalize()<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>that<sp/>it<sp/>gets<sp/>called<sp/>on<sp/>all<sp/>worker<sp/>nodes<sp/>regardless<sp/>of<sp/>whether</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>they<sp/>processed<sp/>input<sp/>events.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/ELExample.cxx"/>
+  </compounddef>
+</doxygen>

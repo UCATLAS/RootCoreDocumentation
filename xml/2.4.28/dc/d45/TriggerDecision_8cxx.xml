@@ -1,0 +1,485 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dc/d45/TriggerDecision_8cxx" kind="file">
+    <compoundname>TriggerDecision.cxx</compoundname>
+    <includes refid="dc/dc2/TriggerDecision_8h" local="yes">TrigSteeringEvent/TriggerDecision.h</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">string</includes>
+    <incdepgraph>
+      <node id="330408">
+        <label>GaudiKernel/ISvcLocator.h</label>
+      </node>
+      <node id="330412">
+        <label>iomanip</label>
+      </node>
+      <node id="330407">
+        <label>GaudiKernel/Bootstrap.h</label>
+      </node>
+      <node id="330404">
+        <label>CLIDSvc/CLASS_DEF.h</label>
+      </node>
+      <node id="330402">
+        <label>string</label>
+      </node>
+      <node id="330401">
+        <label>map</label>
+      </node>
+      <node id="330409">
+        <label>GaudiKernel/IMessageSvc.h</label>
+      </node>
+      <node id="330405">
+        <label>TrigSteeringEvent/MessageSvcProvider.h</label>
+        <link refid="d5/dd5/MessageSvcProvider_8h"/>
+        <childnode refid="330406" relation="include">
+        </childnode>
+        <childnode refid="330407" relation="include">
+        </childnode>
+        <childnode refid="330408" relation="include">
+        </childnode>
+        <childnode refid="330409" relation="include">
+        </childnode>
+        <childnode refid="330410" relation="include">
+        </childnode>
+        <childnode refid="330411" relation="include">
+        </childnode>
+      </node>
+      <node id="330410">
+        <label>GaudiKernel/IService.h</label>
+      </node>
+      <node id="330403">
+        <label>vector</label>
+      </node>
+      <node id="330400">
+        <label>TrigSteeringEvent/TriggerDecision.h</label>
+        <link refid="dc/dc2/TriggerDecision_8h_source"/>
+        <childnode refid="330401" relation="include">
+        </childnode>
+        <childnode refid="330402" relation="include">
+        </childnode>
+        <childnode refid="330403" relation="include">
+        </childnode>
+        <childnode refid="330404" relation="include">
+        </childnode>
+        <childnode refid="330405" relation="include">
+        </childnode>
+      </node>
+      <node id="330406">
+        <label>iostream</label>
+      </node>
+      <node id="330411">
+        <label>GaudiKernel/MsgStream.h</label>
+      </node>
+      <node id="330399">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/src/TriggerDecision.cxx</label>
+        <link refid="TriggerDecision.cxx"/>
+        <childnode refid="330400" relation="include">
+        </childnode>
+        <childnode refid="330412" relation="include">
+        </childnode>
+        <childnode refid="330406" relation="include">
+        </childnode>
+        <childnode refid="330402" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">NAME:<sp/><sp/><sp/><sp/><sp/>TriggerDecision.cxx</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">PACKAGE:<sp/><sp/>Trigger/TrigEvent/TrigSteeringEvent/</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">AUTHORS:<sp/><sp/>M.<sp/>Wielers</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">CREATED:<sp/><sp/>Sep<sp/>2005</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">PURPOSE:<sp/><sp/>temporary<sp/>class<sp/>to<sp/>store<sp/>the<sp/>trigger<sp/>decision</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>INCLUDE<sp/>HEADER<sp/>FILES:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TrigSteeringEvent/TriggerDecision.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>END<sp/>OF<sp/>HEADER<sp/>FILES<sp/>INCLUDE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>----------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Constructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>----------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">TriggerDecision::TriggerDecision()<sp/>:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>m_L1defined(false),<sp/>m_L2defined(false),<sp/>m_EFdefined(false)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{<sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">TriggerDecision::TriggerDecision(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>defL1,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>defL2,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>defEF)<sp/>:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>m_L1defined(defL1),<sp/>m_L2defined(defL2),<sp/>m_EFdefined(defEF)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{<sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Destructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">TriggerDecision::~TriggerDecision()</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{<sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>print<sp/>contents<sp/>of<sp/>TriggerDecision<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>----------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>private<sp/>print<sp/>method</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TriggerDecision::print(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>print_all)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="44"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>use<sp/>message<sp/>service</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>std::string<sp/>thisName(</highlight><highlight class="stringliteral">&quot;TriggerDecision::print&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>MsgStream<sp/>log(m_messageSvcProvider.<ref refid="d3/d7d/classMessageSvcProvider_1a41be2972a857662c721cb5ece1c5366b" kindref="member">msgSvc</ref>(),<sp/>thisName);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NoMenuItem<sp/>=<sp/>m_TriggerMapL1.size()<sp/>+<sp/>m_TriggerMapL2.size()</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>+<sp/>m_TriggerMapEF.size()<sp/>-<sp/>m_ignore.size();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::INFO<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;TriggerDecision:<sp/>no<sp/>of<sp/>TriggerItems<sp/>defined<sp/>in<sp/>this<sp/>run<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>NoMenuItem&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>L1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::INFO<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;TriggerDecision:<sp/>Level<sp/>1:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;endreq;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,bool&gt;::const_iterator<sp/>it1<sp/>=<sp/>m_TriggerMapL1.begin();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,bool&gt;::const_iterator<sp/>it1E<sp/>=<sp/>m_TriggerMapL1.end();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>it1!=it1E;<sp/>++it1)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(print_all<sp/>||<sp/>it1-&gt;second)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::INFO<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;TriggerDecision:<sp/>L1<sp/>Trigger<sp/>Item<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>it1-&gt;first</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>((it1-&gt;second)<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;is<sp/>fulfilled&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;<sp/>did<sp/>not<sp/>pass&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;endreq;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>L2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::INFO<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;TriggerDecision:<sp/>Level<sp/>2:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;endreq;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,bool&gt;::const_iterator<sp/>it2<sp/>=<sp/>m_TriggerMapL2.begin();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,bool&gt;::const_iterator<sp/>it2E<sp/>=<sp/>m_TriggerMapL2.end();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>it2!=it2E;<sp/>++it2)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(print_all<sp/>||<sp/>it2-&gt;second)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::INFO<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;TriggerDecision:<sp/>L2<sp/>Trigger<sp/>Item<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>it2-&gt;first</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>((it2-&gt;second)<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;is<sp/>fulfilled&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;<sp/>did<sp/>not<sp/>pass&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;endreq;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>EF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::INFO<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;TriggerDecision:<sp/>Event<sp/>Filter:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;endreq;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,bool&gt;::const_iterator<sp/>it<sp/>=<sp/>m_TriggerMapEF.begin();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,bool&gt;::const_iterator<sp/>itE<sp/>=<sp/>m_TriggerMapEF.end();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>it!=itE;<sp/>++it)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(print_all<sp/>||<sp/>it-&gt;second)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::INFO<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;TriggerDecision:<sp/>EF<sp/>Trigger<sp/>Item<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>it-&gt;first</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>((it-&gt;second)<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;is<sp/>fulfilled&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;<sp/>did<sp/>not<sp/>pass&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;endreq;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!print_all<sp/>&amp;&amp;<sp/>!<sp/><ref refid="d8/d3e/classTriggerDecision_1ab76dc95511b4f56d10e60e57c4822adf" kindref="member" tooltip="global decision">isTriggerPassed</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::INFO<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;TriggerDecision:<sp/>No<sp/>trigger<sp/>item<sp/>passed<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//<sp/>print<sp/>all<sp/>signatures:<sp/>public<sp/>method</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TriggerDecision::print()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>this-&gt;print(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">//<sp/>print<sp/>accepted<sp/>signatures:<sp/>public<sp/>method</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TriggerDecision::printAccepted()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>this-&gt;print(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Find<sp/>if<sp/>some<sp/>signature<sp/>is<sp/>defined<sp/>(at<sp/>any<sp/>level<sp/>or<sp/>at<sp/>a<sp/>certain<sp/>level)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">//<sp/>----------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>TriggerDecision::isDefined(std::string<sp/>TriggerItem)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>isDefined(TriggerItem,<sp/>L1)<sp/>||</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isDefined(TriggerItem,<sp/>L2)<sp/>||</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isDefined(TriggerItem,<sp/>EF)<sp/>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>TriggerDecision::isDefined(std::string<sp/>TriggerItem,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>use<sp/>message<sp/>service</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>std::string<sp/>thisName(</highlight><highlight class="stringliteral">&quot;TriggerDecision::isDefined&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>MsgStream<sp/>log(m_messageSvcProvider.<ref refid="d3/d7d/classMessageSvcProvider_1a41be2972a857662c721cb5ece1c5366b" kindref="member">msgSvc</ref>(),<sp/>thisName);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,bool&gt;::const_iterator<sp/>it;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level<sp/>==<sp/>L1<sp/>&amp;&amp;<sp/>m_L1defined)<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>it<sp/>=<sp/>m_TriggerMapL1.find(TriggerItem);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>!=<sp/>m_TriggerMapL1.end())<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::VERBOSE<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Trigger<sp/>Item<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>TriggerItem</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>not<sp/>defined!!!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level<sp/>==<sp/>L2<sp/>&amp;&amp;<sp/>m_L2defined)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>it<sp/>=<sp/>m_TriggerMapL2.find(TriggerItem);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>!=<sp/>m_TriggerMapL2.end())<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::VERBOSE<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Trigger<sp/>Item<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>TriggerItem</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>not<sp/>defined!!!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level<sp/>==<sp/>EF<sp/>&amp;&amp;<sp/>m_EFdefined)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>it<sp/>=<sp/>m_TriggerMapEF.find(TriggerItem);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>!=<sp/>m_TriggerMapEF.end())<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::VERBOSE<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Trigger<sp/>Item<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>TriggerItem</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>not<sp/>defined!!!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::VERBOSE<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Trigger<sp/>level<sp/>enum<sp/>TrigLevel[&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>level<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;]<sp/>not<sp/>defined!!!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Find<sp/>if<sp/>some<sp/>signature<sp/>was<sp/>passed<sp/>(at<sp/>some<sp/>trigger<sp/>level)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="comment">//<sp/>----------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d8/d3e/classTriggerDecision_1ab7ff43696285cddeda63352c1c098f83" kindref="member" tooltip="checks if given signature is satisfied">TriggerDecision::isTriggered</ref>(std::string<sp/>TriggerItem)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>use<sp/>message<sp/>service</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>std::string<sp/>thisName(</highlight><highlight class="stringliteral">&quot;TriggerDecision::isTriggered&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>MsgStream<sp/>log(m_messageSvcProvider.<ref refid="d3/d7d/classMessageSvcProvider_1a41be2972a857662c721cb5ece1c5366b" kindref="member">msgSvc</ref>(),<sp/>thisName);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>look<sp/>in<sp/>all<sp/>levels</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>isDefined(TriggerItem,L1)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="d8/d3e/classTriggerDecision_1ab7ff43696285cddeda63352c1c098f83" kindref="member" tooltip="checks if given signature is satisfied">isTriggered</ref>(TriggerItem,L1)<sp/>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>isDefined(TriggerItem,L2)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="d8/d3e/classTriggerDecision_1ab7ff43696285cddeda63352c1c098f83" kindref="member" tooltip="checks if given signature is satisfied">isTriggered</ref>(TriggerItem,L2)<sp/>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>isDefined(TriggerItem,EF)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="d8/d3e/classTriggerDecision_1ab7ff43696285cddeda63352c1c098f83" kindref="member" tooltip="checks if given signature is satisfied">isTriggered</ref>(TriggerItem,EF)<sp/>);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::VERBOSE<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Trigger<sp/>Item<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>TriggerItem</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>not<sp/>defined!!!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d8/d3e/classTriggerDecision_1ab7ff43696285cddeda63352c1c098f83" kindref="member" tooltip="checks if given signature is satisfied">TriggerDecision::isTriggered</ref>(std::string<sp/>TriggerItem,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>use<sp/>message<sp/>service</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>std::string<sp/>thisName(</highlight><highlight class="stringliteral">&quot;TriggerDecision::isTriggered&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>MsgStream<sp/>log(m_messageSvcProvider.<ref refid="d3/d7d/classMessageSvcProvider_1a41be2972a857662c721cb5ece1c5366b" kindref="member">msgSvc</ref>(),<sp/>thisName);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,bool&gt;::const_iterator<sp/>it;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level<sp/>==<sp/>L1<sp/>&amp;&amp;<sp/>m_L1defined)<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>it<sp/>=<sp/>m_TriggerMapL1.find(TriggerItem);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>!=<sp/>m_TriggerMapL1.end())<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(it-&gt;second);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::VERBOSE<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Trigger<sp/>Item<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>TriggerItem</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>not<sp/>defined!!!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level<sp/>==<sp/>L2<sp/>&amp;&amp;<sp/>m_L2defined)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>it<sp/>=<sp/>m_TriggerMapL2.find(TriggerItem);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>!=<sp/>m_TriggerMapL2.end())<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(it-&gt;second);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::VERBOSE<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Trigger<sp/>Item<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>TriggerItem</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>not<sp/>defined!!!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level<sp/>==<sp/>EF<sp/>&amp;&amp;<sp/>m_EFdefined)<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>it<sp/>=<sp/>m_TriggerMapEF.find(TriggerItem);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>!=<sp/>m_TriggerMapEF.end())<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(it-&gt;second);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::VERBOSE<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Trigger<sp/>Item<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>TriggerItem</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>not<sp/>defined!!!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::VERBOSE<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Trigger<sp/>level<sp/>enum<sp/>TrigLevel[&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>level<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;]<sp/>not<sp/>defined!!!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Find<sp/>if<sp/>event<sp/>passed<sp/>trigger<sp/>selection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="comment">//<sp/>at<sp/>the<sp/>highest<sp/>defined<sp/>trigger<sp/>level</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d8/d3e/classTriggerDecision_1ab76dc95511b4f56d10e60e57c4822adf" kindref="member" tooltip="global decision">TriggerDecision::isTriggerPassed</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="223"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>use<sp/>message<sp/>service</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/>std::string<sp/>thisName(</highlight><highlight class="stringliteral">&quot;TriggerDecision::isTriggerPassed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/>MsgStream<sp/>log(m_messageSvcProvider.<ref refid="d3/d7d/classMessageSvcProvider_1a41be2972a857662c721cb5ece1c5366b" kindref="member">msgSvc</ref>(),<sp/>thisName);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>returns<sp/>true<sp/>if<sp/>EF<sp/>defined<sp/>and<sp/>some<sp/>EF<sp/>signature<sp/>passed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>EF<sp/>not<sp/>defined,<sp/>try<sp/>next<sp/>level<sp/>down,<sp/>and<sp/>so<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>triggered<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_EFdefined)<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>triggered<sp/>=<sp/>isPassedEF();</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_L2defined)<sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>triggered<sp/>=<sp/>isPassedL2();</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_L1defined)<sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>triggered<sp/>=<sp/>isPassedL1();</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>log<sp/>&lt;&lt;<sp/>MSG::VERBOSE<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>Trigger<sp/>Levels<sp/>defined!!!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(triggered);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="comment">//<sp/>at<sp/>level<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>TriggerDecision::isPassedL1()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>triggered<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,bool&gt;::const_iterator<sp/>it<sp/>=<sp/>m_TriggerMapL1.begin();</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,bool&gt;::const_iterator<sp/>itE<sp/>=<sp/>m_TriggerMapL1.end();</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>it!=itE;<sp/>++it)<sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it-&gt;second==</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>triggered=</highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>triggered;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="comment">//<sp/>at<sp/>level<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>TriggerDecision::isPassedL2()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>triggered<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,bool&gt;::const_iterator<sp/>it<sp/>=<sp/>m_TriggerMapL2.begin();</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,bool&gt;::const_iterator<sp/>itE<sp/>=<sp/>m_TriggerMapL2.end();</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>it!=itE;<sp/>++it)<sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it-&gt;second==</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>triggered=</highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>triggered;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="comment">//<sp/>at<sp/>event<sp/>filter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>TriggerDecision::isPassedEF()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>triggered<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,bool&gt;::const_iterator<sp/>it<sp/>=<sp/>m_TriggerMapEF.begin();</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,bool&gt;::const_iterator<sp/>itE<sp/>=<sp/>m_TriggerMapEF.end();</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>it!=itE;<sp/>++it)<sp/>{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it-&gt;second==</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>triggered=</highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>triggered;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="comment">//<sp/>----------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Accessors<sp/>to<sp/>return<sp/>list<sp/>of<sp/>signatures<sp/>and<sp/>copy<sp/>of<sp/>internal<sp/>maps</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight><highlight class="comment">//<sp/>----------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="comment">//<sp/>return<sp/>vector<sp/>with<sp/>all<sp/>signature<sp/>labels<sp/>for<sp/>all<sp/>configured<sp/>trigger<sp/>levels</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal">std::vector&lt;std::string&gt;<sp/><ref refid="d8/d3e/classTriggerDecision_1ac535568aabb4fb6c4091fbd0c1afe560" kindref="member" tooltip="list of all defined signatures">TriggerDecision::signatures</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="288"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/>std::vector&lt;std::string&gt;<sp/>v_labels;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_L1defined)<sp/>{</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>t_vec<sp/>=<sp/><ref refid="d8/d3e/classTriggerDecision_1ac535568aabb4fb6c4091fbd0c1afe560" kindref="member" tooltip="list of all defined signatures">signatures</ref>(L1);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;t_vec.size();<sp/>++i)<sp/>v_labels.push_back(t_vec[i]);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_L2defined)<sp/>{</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>t_vec<sp/>=<sp/><ref refid="d8/d3e/classTriggerDecision_1ac535568aabb4fb6c4091fbd0c1afe560" kindref="member" tooltip="list of all defined signatures">signatures</ref>(L1);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;t_vec.size();<sp/>++i)<sp/>v_labels.push_back(t_vec[i]);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_EFdefined)<sp/>{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>t_vec<sp/>=<sp/><ref refid="d8/d3e/classTriggerDecision_1ac535568aabb4fb6c4091fbd0c1afe560" kindref="member" tooltip="list of all defined signatures">signatures</ref>(L1);</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;t_vec.size();<sp/>++i)<sp/>v_labels.push_back(t_vec[i]);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v_labels;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight><highlight class="comment">//<sp/>return<sp/>vector<sp/>with<sp/>labels<sp/>for<sp/>all<sp/>signatures<sp/>defined<sp/>at<sp/>a<sp/>certain<sp/>level</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal">std::vector&lt;std::string&gt;<sp/><ref refid="d8/d3e/classTriggerDecision_1ac535568aabb4fb6c4091fbd0c1afe560" kindref="member" tooltip="list of all defined signatures">TriggerDecision::signatures</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="309"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,<sp/>bool&gt;::const_iterator<sp/>it;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,<sp/>bool&gt;::const_iterator<sp/>end;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/>std::vector&lt;std::string&gt;<sp/>v_labels;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>find<sp/>which<sp/>level<sp/>map<sp/>should<sp/>be<sp/>read</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level<sp/>==<sp/>L1<sp/>&amp;&amp;<sp/>m_L1defined)<sp/>{</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>it<sp/><sp/>=<sp/>m_TriggerMapL1.begin();</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>end<sp/>=<sp/>m_TriggerMapL1.end();</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level<sp/>==<sp/>L2<sp/>&amp;&amp;<sp/>m_L2defined)<sp/>{</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>it<sp/><sp/>=<sp/>m_TriggerMapL2.begin();</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>end<sp/>=<sp/>m_TriggerMapL2.end();</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level<sp/>==<sp/>EF<sp/>&amp;&amp;<sp/>m_EFdefined)<sp/>{</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>it<sp/><sp/>=<sp/>m_TriggerMapEF.begin();</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/>end<sp/>=<sp/>m_TriggerMapEF.end();</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v_labels;<sp/></highlight><highlight class="comment">//<sp/>no<sp/>level<sp/>selected,<sp/>return<sp/>empty<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>loop<sp/>over<sp/>map<sp/>for<sp/>selected<sp/>level<sp/>and<sp/>fill<sp/>output<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>it<sp/>!=<sp/>end;<sp/>++it)<sp/>{</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>push<sp/>label<sp/>into<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>v_labels.push_back(<sp/>it-&gt;first<sp/>);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v_labels;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight><highlight class="comment">//<sp/>return<sp/>copies<sp/>of<sp/>the<sp/>internal<sp/>maps</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal">std::map&lt;std::string,bool&gt;<sp/><ref refid="d8/d3e/classTriggerDecision_1a893a13739d7d21e3932895e6fc3f1a82" kindref="member" tooltip="all signatures to satisfied/unsatisfied map for Lvl1 This map contains mapping from...">TriggerDecision::L1map</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_TriggerMapL1;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal">std::map&lt;std::string,bool&gt;<sp/><ref refid="d8/d3e/classTriggerDecision_1a1fe0451adfea382e5f93b9bc3020b8d3" kindref="member" tooltip="all signatures to satisfied/unsatisfied map for Lvl2">TriggerDecision::L2map</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_TriggerMapL2;</highlight></codeline>
+<codeline lineno="345"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal">std::map&lt;std::string,bool&gt;<sp/><ref refid="d8/d3e/classTriggerDecision_1ab59c7ba6f3a526d7fe8b9c6655079103" kindref="member" tooltip="all signatures to satisfied/unsatisfied map for Lvl2">TriggerDecision::EFmap</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_TriggerMapEF;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal">std::vector&lt;std::string&gt;<sp/><ref refid="d8/d3e/classTriggerDecision_1ad15c24e887121b90432f19524142fda0" kindref="member" tooltip="list of signatures which were ignored during TriggerDecision object creation (do...">TriggerDecision::ignoredSigs</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_ignore;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Methods<sp/>to<sp/>fill<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight><highlight class="comment">//<sp/>insert<sp/>trigger<sp/>items<sp/>in<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d8/d3e/classTriggerDecision_1a4c7a77848932e592206c19dbfcfafad6" kindref="member" tooltip="sets the active/inactive state for a signature">TriggerDecision::set_TriggerItem</ref>(std::string<sp/>TriggerItem,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>triggered,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level)</highlight></codeline>
+<codeline lineno="361"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level<sp/>==<sp/>L1<sp/>&amp;&amp;<sp/>m_L1defined)<sp/>{</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>m_TriggerMapL1.insert(std::map&lt;std::string,bool&gt;::value_type(TriggerItem,<sp/>triggered));</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level<sp/>==<sp/>L2<sp/>&amp;&amp;<sp/>m_L2defined)<sp/>{</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>m_TriggerMapL2.insert(std::map&lt;std::string,bool&gt;::value_type(TriggerItem,<sp/>triggered));</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level<sp/>==<sp/>EF<sp/>&amp;&amp;<sp/>m_EFdefined)<sp/>{</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>m_TriggerMapEF.insert(std::map&lt;std::string,bool&gt;::value_type(TriggerItem,<sp/>triggered));</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="372"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight><highlight class="comment">//<sp/>set<sp/>ignorable<sp/>signatures</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d8/d3e/classTriggerDecision_1a47a108e7b9de529cc1b2742a3ec53a4e" kindref="member" tooltip="adds signature to the list of this to be ignored">TriggerDecision::set_ignore_TriggerItem</ref>(std::string<sp/>TriggerItem)</highlight></codeline>
+<codeline lineno="376"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/>m_ignore.push_back(TriggerItem);</highlight></codeline>
+<codeline lineno="378"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight><highlight class="comment">//<sp/>check<sp/>if<sp/>trigger<sp/>item<sp/>is<sp/>ignorable<sp/>//<sp/>this<sp/>is<sp/>unused<sp/>anyway</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d8/d3e/classTriggerDecision_1a1941e4b78cb413cbddc302c2569cd4b1" kindref="member" tooltip="checki if signature is ignored">TriggerDecision::ignore_TriggerItem</ref>(std::string<sp/>TriggerItem)</highlight></codeline>
+<codeline lineno="382"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ignore=</highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;m_ignore.size();++i)<sp/>{</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_ignore[i]==TriggerItem)<sp/>{</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ignore=</highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(ignore);</highlight></codeline>
+<codeline lineno="391"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/src/TriggerDecision.cxx"/>
+  </compounddef>
+</doxygen>

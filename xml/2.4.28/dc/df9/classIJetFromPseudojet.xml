@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dc/df9/classIJetFromPseudojet" kind="class" prot="public">
+    <compoundname>IJetFromPseudojet</compoundname>
+    <basecompoundref refid="d4/d20/classasg_1_1IAsgTool" prot="public" virt="virtual">asg::IAsgTool</basecompoundref>
+    <derivedcompoundref refid="d9/d31/classJetFromPseudojet" prot="public" virt="virtual">JetFromPseudojet</derivedcompoundref>
+    <includes refid="d3/ded/IJetFromPseudojet_8h" local="no">IJetFromPseudojet.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="dc/df9/classIJetFromPseudojet_1a5a01d29870ceb8f8e3d693d05e15d3f7" prot="public" static="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>typedef std::vector&lt;std::string&gt; IJetFromPseudojet::NameList</definition>
+        <argsstring></argsstring>
+        <name>NameList</name>
+        <briefdescription>
+<para>Type for ghost labels. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetFromPseudojet.h" line="27" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetFromPseudojet.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/df9/classIJetFromPseudojet_1aa6834a0b06e6d1141a4c8631734d55d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual IJetFromPseudojet::~IJetFromPseudojet</definition>
+        <argsstring>()</argsstring>
+        <name>~IJetFromPseudojet</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetFromPseudojet.h" line="30" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetFromPseudojet.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/df9/classIJetFromPseudojet_1a550ce3a5cab21c8f84571d4bcb9e6c82" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="db/d9c/classxAOD_1_1Jet__v1" kindref="compound">xAOD::Jet</ref> *</type>
+        <definition>virtual xAOD::Jet* IJetFromPseudojet::add</definition>
+        <argsstring>(const fastjet::PseudoJet &amp;pj, xAOD::JetContainer &amp;jets, xAOD::JetInput::Type inputtype, const NameList &amp;ghostlabs) const =0</argsstring>
+        <name>add</name>
+        <reimplementedby refid="d9/d31/classJetFromPseudojet_1a381979f45c3a47a9535f10b5ed5a77d9">add</reimplementedby>
+        <param>
+          <type>const fastjet::PseudoJet &amp;</type>
+          <declname>pj</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::JetContainer</ref> &amp;</type>
+          <declname>jets</declname>
+        </param>
+        <param>
+          <type>xAOD::JetInput::Type</type>
+          <declname>inputtype</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dc/df9/classIJetFromPseudojet_1a5a01d29870ceb8f8e3d693d05e15d3f7" kindref="member">NameList</ref> &amp;</type>
+          <declname>ghostlabs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method to construct an ATLAS jet from a pseudojet, input type and vector of ghost labels. The new jet is put in the supplied container and is returned. Returns null for failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetFromPseudojet.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/df9/classIJetFromPseudojet_1aa070c0b7f3745d0f513732e96df5dc10" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="db/d9c/classxAOD_1_1Jet__v1" kindref="compound">xAOD::Jet</ref> *</type>
+        <definition>virtual xAOD::Jet* IJetFromPseudojet::add</definition>
+        <argsstring>(const fastjet::PseudoJet &amp;pj, xAOD::JetContainer &amp;jets, const xAOD::Jet *pparent) const =0</argsstring>
+        <name>add</name>
+        <reimplementedby refid="d9/d31/classJetFromPseudojet_1a713c405385644bb53587afa1f71b2445">add</reimplementedby>
+        <param>
+          <type>const fastjet::PseudoJet &amp;</type>
+          <declname>pj</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::JetContainer</ref> &amp;</type>
+          <declname>jets</declname>
+        </param>
+        <param>
+          <type>const <ref refid="db/d9c/classxAOD_1_1Jet__v1" kindref="compound">xAOD::Jet</ref> *</type>
+          <declname>pparent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method to construct an ATLAS jet from a pseudojet and parent jet. The new jet is put in the supplied container and is returned. Returns null for failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetFromPseudojet.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="dc/df9/classIJetFromPseudojet" kindref="compound">IJetFromPseudojet</ref> is a dual-use tool interface for a tool that constructs a new ATLAS jet from a fastjet pseudojet. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="9646">
+        <label>IJetFromPseudojet</label>
+        <link refid="dc/df9/classIJetFromPseudojet"/>
+        <childnode refid="9647" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9647">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="9648">
+        <label>JetFromPseudojet</label>
+        <link refid="d9/d31/classJetFromPseudojet"/>
+        <childnode refid="9646" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9649">
+        <label>IJetFromPseudojet</label>
+        <link refid="dc/df9/classIJetFromPseudojet"/>
+        <childnode refid="9650" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9650">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetFromPseudojet.h" line="21" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetFromPseudojet.h" bodystart="21" bodyend="46"/>
+    <listofallmembers>
+      <member refid="dc/df9/classIJetFromPseudojet_1a550ce3a5cab21c8f84571d4bcb9e6c82" prot="public" virt="pure-virtual"><scope>IJetFromPseudojet</scope><name>add</name></member>
+      <member refid="dc/df9/classIJetFromPseudojet_1aa070c0b7f3745d0f513732e96df5dc10" prot="public" virt="pure-virtual"><scope>IJetFromPseudojet</scope><name>add</name></member>
+      <member refid="dc/df9/classIJetFromPseudojet_1a5a01d29870ceb8f8e3d693d05e15d3f7" prot="public" virt="non-virtual"><scope>IJetFromPseudojet</scope><name>NameList</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1af1aac990b958e92bf38123318d926e67" prot="public" virt="pure-virtual"><scope>IJetFromPseudojet</scope><name>print</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1a77b49d52f1f8c272cb665b8309d6082d" prot="public" virt="virtual"><scope>IJetFromPseudojet</scope><name>~IAsgTool</name></member>
+      <member refid="dc/df9/classIJetFromPseudojet_1aa6834a0b06e6d1141a4c8631734d55d4" prot="public" virt="virtual"><scope>IJetFromPseudojet</scope><name>~IJetFromPseudojet</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dc/d6c/JetReclusteringAlgo_8cxx" kind="file">
+    <compoundname>JetReclusteringAlgo.cxx</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifdef<sp/>ROOTCORE</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;EventLoop/Job.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;EventLoop/StatusCode.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;EventLoop/Worker.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;JetReclustering/JetReclusteringAlgo.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;JetReclustering/JetReclusteringTool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODEventInfo/EventInfo.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODJet/JetContainer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>in<sp/>case<sp/>we<sp/>want<sp/>to<sp/>write<sp/>the<sp/>output<sp/>reclustered<sp/>jet<sp/>collections</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;EventLoop/OutputStream.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ANA_CHECK<sp/>macro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;AsgTools/MessageCheck.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>needed<sp/>to<sp/>distribute<sp/>the<sp/>algorithm<sp/>to<sp/>the<sp/>workers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">ClassImp(JetReclusteringAlgo)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">JetReclusteringAlgo<sp/>::<sp/>JetReclusteringAlgo<sp/>()<sp/>:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>m_jetReclusteringTool(&quot;<ref refid="d6/d10/classJetReclusteringTool" kindref="compound">JetReclusteringTool</ref>/&quot;+m_name)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>JetReclusteringAlgo<sp/>::<sp/>setupJob<sp/>(<ref refid="da/dbb/classEL_1_1Job" kindref="compound">EL::Job</ref>&amp;<sp/>job)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>ANA_CHECK_SET_TYPE<sp/>(<ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>job.<ref refid="da/dbb/classEL_1_1Job_1a52d21f848a949d1f7af0803aff4680e0" kindref="member">useXAOD</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>ANA_CHECK(<ref refid="dd/d44/namespacexAOD_1a2b6ff6013c964ff2254bd3540cd1738d" kindref="member">xAOD::Init</ref>());<sp/></highlight><highlight class="comment">//<sp/>call<sp/>before<sp/>opening<sp/>first<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_outputXAODName.empty()){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>an<sp/>output<sp/>xAOD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/dfe/classEL_1_1OutputStream" kindref="compound">EL::OutputStream</ref><sp/>output_xAOD(m_outputXAODName);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>job.outputAdd(output_xAOD);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>JetReclusteringAlgo<sp/>::<sp/>histInitialize<sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;<sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>JetReclusteringAlgo<sp/>::<sp/>fileExecute<sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;<sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>JetReclusteringAlgo<sp/>::<sp/>changeInput<sp/>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*firstFile*/</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;<sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>JetReclusteringAlgo<sp/>::<sp/>initialize<sp/>()</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>ANA_CHECK_SET_TYPE<sp/>(<ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>Info(</highlight><highlight class="stringliteral">&quot;initialize()&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;JetReclusteringAlgo_%s&quot;</highlight><highlight class="normal">,<sp/>m_inputJetContainer.c_str()<sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>m_event<sp/>=<sp/>wk()-&gt;xaodEvent();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>m_store<sp/>=<sp/>wk()-&gt;xaodStore();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_rc_alg.empty()){</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>Info(</highlight><highlight class="stringliteral">&quot;setupJob()&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;m_rc_alg<sp/>is<sp/>empty.<sp/>Setting<sp/>to<sp/>`AntiKt`<sp/>by<sp/>default.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>m_rc_alg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;AntiKt&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_outputXAODName.empty()){</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>TFile<sp/>*file<sp/>=<sp/>wk()-&gt;getOutputFile(m_outputXAODName);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_event-&gt;writeTo(file).isSuccess()){</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Error(</highlight><highlight class="stringliteral">&quot;initialize()&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>set<sp/>up<sp/>an<sp/>output<sp/>file<sp/>to<sp/>write<sp/>xAODs<sp/>to.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>m_name<sp/>needs<sp/>to<sp/>be<sp/>set<sp/>and<sp/>unique<sp/>or<sp/>we<sp/>have<sp/>conflicts<sp/>with<sp/>multiple<sp/>tools</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_name.empty()){</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>Error(</highlight><highlight class="stringliteral">&quot;initialize()&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;m_name<sp/>needs<sp/>to<sp/>be<sp/>set<sp/>and<sp/>unique.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>ANA_CHECK(ASG_MAKE_ANA_TOOL(m_jetReclusteringTool,<sp/><ref refid="d6/d10/classJetReclusteringTool" kindref="compound">JetReclusteringTool</ref>));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>ANA_CHECK(m_jetReclusteringTool.setProperty(</highlight><highlight class="stringliteral">&quot;InputJetContainer&quot;</highlight><highlight class="normal">,<sp/><sp/>m_inputJetContainer));</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>ANA_CHECK(m_jetReclusteringTool.setProperty(</highlight><highlight class="stringliteral">&quot;OutputJetContainer&quot;</highlight><highlight class="normal">,<sp/>m_outputJetContainer));</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>ANA_CHECK(m_jetReclusteringTool.setProperty(</highlight><highlight class="stringliteral">&quot;ReclusterRadius&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/>m_radius));</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>ANA_CHECK(m_jetReclusteringTool.setProperty(</highlight><highlight class="stringliteral">&quot;ReclusterAlgorithm&quot;</highlight><highlight class="normal">,<sp/>m_rc_alg));</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>ANA_CHECK(m_jetReclusteringTool.setProperty(</highlight><highlight class="stringliteral">&quot;VariableRMinRadius&quot;</highlight><highlight class="normal">,<sp/>m_varR_minR));</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>ANA_CHECK(m_jetReclusteringTool.setProperty(</highlight><highlight class="stringliteral">&quot;VariableRMassScale&quot;</highlight><highlight class="normal">,<sp/>m_varR_mass));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>ANA_CHECK(m_jetReclusteringTool.setProperty(</highlight><highlight class="stringliteral">&quot;InputJetPtMin&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>m_ptMin_input));</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>ANA_CHECK(m_jetReclusteringTool.setProperty(</highlight><highlight class="stringliteral">&quot;RCJetPtMin&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_ptMin_rc));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>ANA_CHECK(m_jetReclusteringTool.setProperty(</highlight><highlight class="stringliteral">&quot;RCJetPtFrac&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_ptFrac));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>ANA_CHECK(m_jetReclusteringTool.setProperty(</highlight><highlight class="stringliteral">&quot;RCJetSubjetRadius&quot;</highlight><highlight class="normal">,<sp/><sp/>m_subjet_radius));</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>ANA_CHECK(m_jetReclusteringTool.setProperty(</highlight><highlight class="stringliteral">&quot;DoArea&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_doArea));</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>ANA_CHECK(m_jetReclusteringTool.setProperty(</highlight><highlight class="stringliteral">&quot;AreaAttributes&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>m_areaAttributes));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>ANA_CHECK(m_jetReclusteringTool.retrieve());</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_debug)<sp/>m_jetReclusteringTool-&gt;print();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>JetReclusteringAlgo<sp/>::<sp/>execute<sp/>()</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//ANA_CHECK_SET_TYPE<sp/>(EL::StatusCode);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>m_jetReclusteringTool-&gt;execute();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>print<sp/>debugging<sp/>information<sp/>if<sp/>needed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_debug){</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="d0/d4d/classDataVector" kindref="compound" tooltip="Derived DataVector&amp;lt;T&amp;gt;.">xAOD::JetContainer</ref><sp/>jet_t;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d0/d4d/classDataVector" kindref="compound" tooltip="Derived DataVector&amp;lt;T&amp;gt;.">xAOD::JetContainer</ref>*<sp/>smallRjets(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d0/d4d/classDataVector" kindref="compound" tooltip="Derived DataVector&amp;lt;T&amp;gt;.">xAOD::JetContainer</ref>*<sp/>reclusteredJets(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_store-&gt;contains&lt;jet_t&gt;(m_inputJetContainer)){</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_store-&gt;retrieve(<sp/>smallRjets,<sp/>m_inputJetContainer<sp/>).isSuccess())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_event-&gt;contains&lt;jet_t&gt;(m_inputJetContainer)){</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_event-&gt;retrieve(<sp/>smallRjets,<sp/>m_inputJetContainer<sp/>).isSuccess())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Error(</highlight><highlight class="stringliteral">&quot;execute()&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>find<sp/>the<sp/>input<sp/>jet<sp/>container.<sp/>That&apos;s<sp/>fucking<sp/>weird.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_store-&gt;contains&lt;jet_t&gt;(m_outputJetContainer)){</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_store-&gt;retrieve(<sp/>reclusteredJets,<sp/>m_outputJetContainer<sp/>).isSuccess())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_event-&gt;contains&lt;jet_t&gt;(m_outputJetContainer)){</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_event-&gt;retrieve(<sp/>reclusteredJets,<sp/>m_outputJetContainer<sp/>).isSuccess())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Error(</highlight><highlight class="stringliteral">&quot;execute()&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>find<sp/>the<sp/>output<sp/>jet<sp/>container.<sp/>Did<sp/>the<sp/>tool<sp/>execute<sp/>properly?<sp/>Maybe<sp/>it<sp/>was<sp/>misconfigured.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>printStr<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\tPt:<sp/>%0.2f\tMass:<sp/>%0.2f\tEta:<sp/>%0.2f\tPhi:<sp/>%0.2f\tNum<sp/>Subjets:<sp/>%zu&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>Info(</highlight><highlight class="stringliteral">&quot;execute()&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;%zu<sp/>small-R<sp/>jets&quot;</highlight><highlight class="normal">,<sp/>smallRjets-&gt;size());</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jet:<sp/>*smallRjets)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Info(</highlight><highlight class="stringliteral">&quot;execute()&quot;</highlight><highlight class="normal">,<sp/>printStr.c_str(),<sp/>jet-&gt;pt()/1000.,<sp/>jet-&gt;m()/1000.,<sp/>jet-&gt;eta(),<sp/>jet-&gt;phi(),<sp/>jet-&gt;numConstituents());</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>Info(</highlight><highlight class="stringliteral">&quot;execute()&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;%zu<sp/>reclustered<sp/>jets&quot;</highlight><highlight class="normal">,<sp/>reclusteredJets-&gt;size());</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jet:<sp/>*reclusteredJets)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Info(</highlight><highlight class="stringliteral">&quot;execute()&quot;</highlight><highlight class="normal">,<sp/>printStr.c_str(),<sp/>jet-&gt;pt()/1000.,<sp/>jet-&gt;m()/1000.,<sp/>jet-&gt;eta(),<sp/>jet-&gt;phi(),<sp/>jet-&gt;numConstituents());</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>need<sp/>to<sp/>update<sp/>later,<sp/>must<sp/>retrieve<sp/>all<sp/>objects<sp/>include<sp/>cluster<sp/>sequence<sp/>and<sp/>pseudojets,<sp/>and<sp/>record<sp/>them<sp/>one<sp/>at<sp/>a<sp/>time</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/>if(!m_outputXAODName.empty()){</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/><sp/><sp/><sp/>ANA_CHECK(m_event-&gt;copy(<sp/>reclusteredJets,<sp/>m_outputJetContainer<sp/>));</highlight></codeline>
+<codeline lineno="135"><highlight class="comment"></highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>fill<sp/>the<sp/>file</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/><sp/>m_event-&gt;fill();</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>JetReclusteringAlgo<sp/>::<sp/>postExecute<sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;<sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>JetReclusteringAlgo<sp/>::<sp/>finalize<sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_outputXAODName.empty()){</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>TFile<sp/>*file<sp/>=<sp/>wk()-&gt;getOutputFile(m_outputXAODName);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_event-&gt;finishWritingTo(file).isSuccess()){</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Error(</highlight><highlight class="stringliteral">&quot;finalize()&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>finish<sp/>writing<sp/>to<sp/>file...<sp/>shit.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">EL::StatusCode</ref><sp/>JetReclusteringAlgo<sp/>::<sp/>histFinalize<sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EL::StatusCode::SUCCESS;<sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ROOTCORE</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetReclustering/Root/JetReclusteringAlgo.cxx"/>
+  </compounddef>
+</doxygen>

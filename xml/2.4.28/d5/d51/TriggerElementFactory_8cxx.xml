@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d5/d51/TriggerElementFactory_8cxx" kind="file">
+    <compoundname>TriggerElementFactory.cxx</compoundname>
+    <includes local="no">iostream</includes>
+    <includes refid="d1/dc0/TriggerElementFactory_8h" local="yes">TrigNavStructure/TriggerElementFactory.h</includes>
+    <incdepgraph>
+      <node id="328425">
+        <label>stdint.h</label>
+      </node>
+      <node id="328422">
+        <label>TrigNavStructure/TriggerElementFactory.h</label>
+        <link refid="d1/dc0/TriggerElementFactory_8h_source"/>
+        <childnode refid="328423" relation="include">
+        </childnode>
+        <childnode refid="328424" relation="include">
+        </childnode>
+        <childnode refid="328427" relation="include">
+        </childnode>
+      </node>
+      <node id="328429">
+        <label>string</label>
+      </node>
+      <node id="328428">
+        <label>map</label>
+      </node>
+      <node id="328426">
+        <label>boost/variant.hpp</label>
+      </node>
+      <node id="328424">
+        <label>TrigNavStructure/Types.h</label>
+        <link refid="d5/d81/TrigNavStructure_2Types_8h_source"/>
+        <childnode refid="328425" relation="include">
+        </childnode>
+        <childnode refid="328426" relation="include">
+        </childnode>
+      </node>
+      <node id="328427">
+        <label>TrigNavStructure/TriggerElement.h</label>
+        <link refid="d7/d71/TriggerElement_8h_source"/>
+        <childnode refid="328428" relation="include">
+        </childnode>
+        <childnode refid="328423" relation="include">
+        </childnode>
+        <childnode refid="328429" relation="include">
+        </childnode>
+        <childnode refid="328425" relation="include">
+        </childnode>
+        <childnode refid="328421" relation="include">
+        </childnode>
+        <childnode refid="328424" relation="include">
+        </childnode>
+      </node>
+      <node id="328423">
+        <label>vector</label>
+      </node>
+      <node id="328420">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/TriggerElementFactory.cxx</label>
+        <link refid="TriggerElementFactory.cxx"/>
+        <childnode refid="328421" relation="include">
+        </childnode>
+        <childnode refid="328422" relation="include">
+        </childnode>
+      </node>
+      <node id="328421">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TrigNavStructure/TriggerElementFactory.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">HLT::TriggerElementFactory::TriggerElementFactory()<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>&quot;TriggerElementFactory::TriggerElementFactory()<sp/>&quot;<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">HLT::TriggerElementFactory::~TriggerElementFactory()<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound" tooltip="TriggerElement is the basic ingreedient of the interface between HLT algorithms and...">HLT::TriggerElement</ref>*<sp/>HLT::TriggerElementFactory::produce(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ghost,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>nofwd)<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound" tooltip="TriggerElement is the basic ingreedient of the interface between HLT algorithms and...">HLT::TriggerElement</ref><sp/>*te<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound" tooltip="TriggerElement is the basic ingreedient of the interface between HLT algorithms and...">HLT::TriggerElement</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>ghost,<sp/>nofwd);<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>m_list.push_back(te);<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>m_groupedById[id].push_back(te);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>te;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>HLT::TriggerElementFactory::empty()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_list.empty();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HLT::TriggerElementFactory::reset()<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>std::vector&lt;<sp/>HLT::TriggerElement*<sp/>&gt;::iterator<sp/>i;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/>m_list.begin();<sp/>i<sp/>!=<sp/>m_list.end();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>(*i);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>m_list.clear();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>m_groupedById.clear();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/TriggerElementFactory.cxx"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,2161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d7/d4d/InDetTrackSystsToolTester_8cxx" kind="file">
+    <compoundname>InDetTrackSystsToolTester.cxx</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">TFile.h</includes>
+    <includes local="no">TError.h</includes>
+    <includes local="no">TString.h</includes>
+    <includes local="no">TH1.h</includes>
+    <includes refid="d9/d60/EventInfo_8h" local="yes">xAODEventInfo/EventInfo.h</includes>
+    <includes refid="da/d31/TrackParticleContainer_8h" local="yes">xAODTracking/TrackParticleContainer.h</includes>
+    <includes refid="d0/d3b/InDetTrackSmearingTool_8h" local="yes">InDetTrackSystematicsTools/InDetTrackSmearingTool.h</includes>
+    <includes refid="da/d58/InDetTrackBiasingTool_8h" local="yes">InDetTrackSystematicsTools/InDetTrackBiasingTool.h</includes>
+    <includes refid="d2/d76/InDetTrackTruthFilterTool_8h" local="yes">InDetTrackSystematicsTools/InDetTrackTruthFilterTool.h</includes>
+    <includes refid="dd/d21/InDetTrackTruthOriginTool_8h" local="yes">InDetTrackSystematicsTools/InDetTrackTruthOriginTool.h</includes>
+    <includes refid="d0/d25/JetTrackFilterTool_8h" local="yes">InDetTrackSystematicsTools/JetTrackFilterTool.h</includes>
+    <includes refid="d1/de7/IOStats_8h" local="yes">xAODCore/tools/IOStats.h</includes>
+    <includes refid="d6/dda/ReadStats_8h" local="yes">xAODCore/tools/ReadStats.h</includes>
+    <includes refid="d8/d71/ShallowCopy_8h" local="yes">xAODCore/ShallowCopy.h</includes>
+    <includes refid="d3/d77/make__unique_8h" local="yes">CxxUtils/make_unique.h</includes>
+    <incdepgraph>
+      <node id="140626">
+        <label>list</label>
+      </node>
+      <node id="140635">
+        <label>AthContainers/tools/DVL_algorithms.icc</label>
+        <link refid="df/daa/DVL__algorithms_8icc"/>
+        <childnode refid="140620" relation="include">
+        </childnode>
+        <childnode refid="140627" relation="include">
+        </childnode>
+        <childnode refid="140551" relation="include">
+        </childnode>
+        <childnode refid="140616" relation="include">
+        </childnode>
+        <childnode refid="140558" relation="include">
+        </childnode>
+      </node>
+      <node id="140620">
+        <label>AthContainers/tools/DVLNoBase.h</label>
+        <link refid="d7/d92/DVLNoBase_8h"/>
+      </node>
+      <node id="140596">
+        <label>boost/thread/mutex.hpp</label>
+      </node>
+      <node id="140642">
+        <label>AthContainers/tools/DVLDataBucket.h</label>
+        <link refid="d4/d16/DVLDataBucket_8h"/>
+        <childnode refid="140643" relation="include">
+        </childnode>
+        <childnode refid="140621" relation="include">
+        </childnode>
+        <childnode refid="140538" relation="include">
+        </childnode>
+        <childnode refid="140644" relation="include">
+        </childnode>
+      </node>
+      <node id="140598">
+        <label>CxxUtils/unordered_map.h</label>
+        <link refid="db/daa/unordered__map_8h"/>
+        <childnode refid="140557" relation="include">
+        </childnode>
+        <childnode refid="140559" relation="include">
+        </childnode>
+        <childnode refid="140538" relation="include">
+        </childnode>
+        <childnode refid="140564" relation="include">
+        </childnode>
+      </node>
+      <node id="140678">
+        <label>AsgTools/IAsgTool.h</label>
+        <link refid="df/dd4/IAsgTool_8h_source"/>
+        <childnode refid="140549" relation="include">
+        </childnode>
+        <childnode refid="140677" relation="include">
+        </childnode>
+        <childnode refid="140679" relation="include">
+        </childnode>
+        <childnode refid="140680" relation="include">
+        </childnode>
+      </node>
+      <node id="140544">
+        <label>xAODEventInfo/EventInfo.h</label>
+        <link refid="d9/d60/EventInfo_8h_source"/>
+        <childnode refid="140545" relation="include">
+        </childnode>
+        <childnode refid="140654" relation="include">
+        </childnode>
+      </node>
+      <node id="140599">
+        <label>AthContainers/AuxTypeRegistry.icc</label>
+        <link refid="d8/df3/AuxTypeRegistry_8icc"/>
+      </node>
+      <node id="140566">
+        <label>AthContainersInterfaces/IAuxStore.h</label>
+        <link refid="d6/d3e/IAuxStore_8h"/>
+        <childnode refid="140553" relation="include">
+        </childnode>
+        <childnode refid="140555" relation="include">
+        </childnode>
+        <childnode refid="140567" relation="include">
+        </childnode>
+        <childnode refid="140565" relation="include">
+        </childnode>
+      </node>
+      <node id="140663">
+        <label>EventPrimitives/EventPrimitives.h</label>
+        <link refid="d1/d54/EventPrimitives_8h_source"/>
+        <childnode refid="140664" relation="include">
+        </childnode>
+        <childnode refid="140665" relation="include">
+        </childnode>
+        <childnode refid="140666" relation="include">
+        </childnode>
+      </node>
+      <node id="140563">
+        <label>boost/type_traits/remove_const.hpp</label>
+      </node>
+      <node id="140564">
+        <label>functional</label>
+      </node>
+      <node id="140689">
+        <label>PATInterfaces/ISystematicsTool.h</label>
+        <link refid="d6/db3/ISystematicsTool_8h_source"/>
+        <childnode refid="140678" relation="include">
+        </childnode>
+        <childnode refid="140690" relation="include">
+        </childnode>
+        <childnode refid="140686" relation="include">
+        </childnode>
+        <childnode refid="140691" relation="include">
+        </childnode>
+      </node>
+      <node id="140617">
+        <label>boost/version.hpp</label>
+      </node>
+      <node id="140562">
+        <label>limits</label>
+      </node>
+      <node id="140567">
+        <label>SGTools/BaseInfo.h</label>
+      </node>
+      <node id="140755">
+        <label>xAODCore/ShallowAuxInfo.h</label>
+        <link refid="da/d3b/ShallowAuxInfo_8h_source"/>
+        <childnode refid="140751" relation="include">
+        </childnode>
+        <childnode refid="140654" relation="include">
+        </childnode>
+        <childnode refid="140653" relation="include">
+        </childnode>
+      </node>
+      <node id="140739">
+        <label>xAODBTagging/versions/BTaggingContainer_v1.h</label>
+        <link refid="d9/d93/BTaggingContainer__v1_8h_source"/>
+        <childnode refid="140611" relation="include">
+        </childnode>
+        <childnode refid="140719" relation="include">
+        </childnode>
+      </node>
+      <node id="140711">
+        <label>xAODTruth/TruthVertexFwd.h</label>
+        <link refid="d5/d1a/TruthVertexFwd_8h_source"/>
+      </node>
+      <node id="140594">
+        <label>boost/thread/tss.hpp</label>
+      </node>
+      <node id="140680">
+        <label>GaudiKernel/IAlgTool.h</label>
+      </node>
+      <node id="140560">
+        <label>iterator</label>
+      </node>
+      <node id="140582">
+        <label>AthContainersInterfaces/AuxDataOption.h</label>
+        <link refid="d1/dc5/AuxDataOption_8h"/>
+        <childnode refid="140549" relation="include">
+        </childnode>
+        <childnode refid="140583" relation="include">
+        </childnode>
+      </node>
+      <node id="140702">
+        <label>InDetTrackSystematicsTools/InDetTrackTruthFilterTool.h</label>
+        <link refid="d2/d76/InDetTrackTruthFilterTool_8h_source"/>
+        <childnode refid="140703" relation="include">
+        </childnode>
+        <childnode refid="140676" relation="include">
+        </childnode>
+        <childnode refid="140704" relation="include">
+        </childnode>
+        <childnode refid="140686" relation="include">
+        </childnode>
+        <childnode refid="140691" relation="include">
+        </childnode>
+        <childnode refid="140692" relation="include">
+        </childnode>
+        <childnode refid="140656" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+      </node>
+      <node id="140715">
+        <label>xAODJet/Jet.h</label>
+        <link refid="da/db7/Jet_8h_source"/>
+        <childnode refid="140716" relation="include">
+        </childnode>
+        <childnode refid="140654" relation="include">
+        </childnode>
+      </node>
+      <node id="140753">
+        <label>AthContainersInterfaces/IAuxStoreHolder.h</label>
+        <link refid="d7/dab/IAuxStoreHolder_8h_source"/>
+      </node>
+      <node id="140737">
+        <label>xAODBTagging/versions/BTagVertex_v1.h</label>
+        <link refid="d6/df4/BTagVertex__v1_8h_source"/>
+        <childnode refid="140551" relation="include">
+        </childnode>
+        <childnode refid="140650" relation="include">
+        </childnode>
+        <childnode refid="140659" relation="include">
+        </childnode>
+        <childnode refid="140673" relation="include">
+        </childnode>
+        <childnode refid="140655" relation="include">
+        </childnode>
+        <childnode refid="140722" relation="include">
+        </childnode>
+        <childnode refid="140721" relation="include">
+        </childnode>
+        <childnode refid="140693" relation="include">
+        </childnode>
+        <childnode refid="140548" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+        <childnode refid="140565" relation="include">
+        </childnode>
+      </node>
+      <node id="140745">
+        <label>xAODJet/versions/JetContainer_v1.h</label>
+        <link refid="df/d28/JetContainer__v1_8h_source"/>
+        <childnode refid="140611" relation="include">
+        </childnode>
+        <childnode refid="140716" relation="include">
+        </childnode>
+      </node>
+      <node id="140641">
+        <label>SGTools/ClassName.h</label>
+      </node>
+      <node id="140684">
+        <label>PATInterfaces/CorrectionTool.h</label>
+        <link refid="d5/d57/CorrectionTool_8h_source"/>
+        <childnode refid="140685" relation="include">
+        </childnode>
+      </node>
+      <node id="140647">
+        <label>AthContainers/DataVector.icc</label>
+        <link refid="da/de6/DataVector_8icc"/>
+        <childnode refid="140648" relation="include">
+        </childnode>
+        <childnode refid="140615" relation="include">
+        </childnode>
+        <childnode refid="140562" relation="include">
+        </childnode>
+        <childnode refid="140564" relation="include">
+        </childnode>
+        <childnode refid="140649" relation="include">
+        </childnode>
+      </node>
+      <node id="140606">
+        <label>AthContainers/exceptions.h</label>
+        <link refid="d4/d03/exceptions_8h"/>
+        <childnode refid="140554" relation="include">
+        </childnode>
+        <childnode refid="140607" relation="include">
+        </childnode>
+        <childnode refid="140608" relation="include">
+        </childnode>
+        <childnode refid="140575" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+      </node>
+      <node id="140579">
+        <label>AthContainers/tools/AuxDataTraits.h</label>
+        <link refid="d3/d5a/AuxDataTraits_8h"/>
+        <childnode refid="140548" relation="include">
+        </childnode>
+        <childnode refid="140539" relation="include">
+        </childnode>
+      </node>
+      <node id="140546">
+        <label>stdint.h</label>
+      </node>
+      <node id="140627">
+        <label>AthContainers/tools/DVLCast.h</label>
+        <link refid="df/d5c/DVLCast_8h"/>
+        <childnode refid="140562" relation="include">
+        </childnode>
+        <childnode refid="140628" relation="include">
+        </childnode>
+        <childnode refid="140575" relation="include">
+        </childnode>
+        <childnode refid="140539" relation="include">
+        </childnode>
+        <childnode refid="140555" relation="include">
+        </childnode>
+      </node>
+      <node id="140613">
+        <label>AthContainers/IndexTrackingPolicy.h</label>
+        <link refid="d0/da5/IndexTrackingPolicy_8h"/>
+      </node>
+      <node id="140576">
+        <label>AthContainersInterfaces/IAuxTypeVectorFactory.h</label>
+        <link refid="d4/d2c/IAuxTypeVectorFactory_8h"/>
+        <childnode refid="140555" relation="include">
+        </childnode>
+        <childnode refid="140575" relation="include">
+        </childnode>
+      </node>
+      <node id="140725">
+        <label>Eigen/Geometry</label>
+      </node>
+      <node id="140752">
+        <label>AthContainersInterfaces/IAuxStoreIO.h</label>
+        <link refid="d9/db5/IAuxStoreIO_8h"/>
+        <childnode refid="140554" relation="include">
+        </childnode>
+        <childnode refid="140575" relation="include">
+        </childnode>
+        <childnode refid="140547" relation="include">
+        </childnode>
+        <childnode refid="140565" relation="include">
+        </childnode>
+      </node>
+      <node id="140571">
+        <label>RVersion.h</label>
+      </node>
+      <node id="140556">
+        <label>CxxUtils/unordered_set.h</label>
+        <link refid="df/d26/unordered__set_8h"/>
+        <childnode refid="140557" relation="include">
+        </childnode>
+        <childnode refid="140538" relation="include">
+        </childnode>
+        <childnode refid="140564" relation="include">
+        </childnode>
+      </node>
+      <node id="140561">
+        <label>cmath</label>
+      </node>
+      <node id="140610">
+        <label>cassert</label>
+      </node>
+      <node id="140618">
+        <label>boost/mpl/if.hpp</label>
+      </node>
+      <node id="140637">
+        <label>boost/static_assert.hpp</label>
+      </node>
+      <node id="140608">
+        <label>stdexcept</label>
+      </node>
+      <node id="140681">
+        <label>AsgTools/MsgLevel.h</label>
+        <link refid="de/d80/MsgLevel_8h"/>
+        <childnode refid="140549" relation="include">
+        </childnode>
+        <childnode refid="140677" relation="include">
+        </childnode>
+        <childnode refid="140682" relation="include">
+        </childnode>
+      </node>
+      <node id="140597">
+        <label>boost/thread/thread.hpp</label>
+      </node>
+      <node id="140665">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="140624">
+        <label>boost/type_traits/is_pointer.hpp</label>
+      </node>
+      <node id="140667">
+        <label>xAODTracking/VertexContainerFwd.h</label>
+        <link refid="d0/dc4/VertexContainerFwd_8h_source"/>
+        <childnode refid="140611" relation="include">
+        </childnode>
+        <childnode refid="140668" relation="include">
+        </childnode>
+      </node>
+      <node id="140672">
+        <label>xAODTracking/TrackParticleContainerFwd.h</label>
+        <link refid="de/dea/TrackParticleContainerFwd_8h_source"/>
+        <childnode refid="140611" relation="include">
+        </childnode>
+        <childnode refid="140673" relation="include">
+        </childnode>
+        <childnode refid="140674" relation="include">
+        </childnode>
+      </node>
+      <node id="140632">
+        <label>boost/iterator/iterator_adaptor.hpp</label>
+      </node>
+      <node id="140706">
+        <label>InDetTrackSystematicsTools/InDetTrackTruthOriginTool.h</label>
+        <link refid="dd/d21/InDetTrackTruthOriginTool_8h_source"/>
+        <childnode refid="140707" relation="include">
+        </childnode>
+        <childnode refid="140676" relation="include">
+        </childnode>
+        <childnode refid="140656" relation="include">
+        </childnode>
+        <childnode refid="140708" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+      </node>
+      <node id="140660">
+        <label>TLorentzVector.h</label>
+      </node>
+      <node id="140700">
+        <label>InDetTrackSystematicsTools/IInDetTrackBiasingTool.h</label>
+        <link refid="de/d39/IInDetTrackBiasingTool_8h_source"/>
+        <childnode refid="140678" relation="include">
+        </childnode>
+        <childnode refid="140685" relation="include">
+        </childnode>
+        <childnode refid="140689" relation="include">
+        </childnode>
+        <childnode refid="140655" relation="include">
+        </childnode>
+      </node>
+      <node id="140709">
+        <label>xAODTruth/versions/TruthParticle_v1.h</label>
+        <link refid="d3/d3b/TruthParticle__v1_8h_source"/>
+        <childnode refid="140650" relation="include">
+        </childnode>
+        <childnode refid="140659" relation="include">
+        </childnode>
+        <childnode refid="140661" relation="include">
+        </childnode>
+        <childnode refid="140710" relation="include">
+        </childnode>
+      </node>
+      <node id="140677">
+        <label>AsgTools/AsgToolsConf.h</label>
+        <link refid="df/db7/AsgToolsConf_8h_source"/>
+      </node>
+      <node id="140549">
+        <label>string</label>
+      </node>
+      <node id="140600">
+        <label>AthContainers/AuxVectorData.h</label>
+        <link refid="d9/df2/AuxVectorData_8h"/>
+        <childnode refid="140554" relation="include">
+        </childnode>
+        <childnode refid="140553" relation="include">
+        </childnode>
+        <childnode refid="140582" relation="include">
+        </childnode>
+        <childnode refid="140579" relation="include">
+        </childnode>
+        <childnode refid="140568" relation="include">
+        </childnode>
+        <childnode refid="140601" relation="include">
+        </childnode>
+        <childnode refid="140602" relation="include">
+        </childnode>
+        <childnode refid="140585" relation="include">
+        </childnode>
+        <childnode refid="140548" relation="include">
+        </childnode>
+        <childnode refid="140559" relation="include">
+        </childnode>
+        <childnode refid="140539" relation="include">
+        </childnode>
+        <childnode refid="140603" relation="include">
+        </childnode>
+        <childnode refid="140604" relation="include">
+        </childnode>
+        <childnode refid="140592" relation="include">
+        </childnode>
+        <childnode refid="140605" relation="include">
+        </childnode>
+      </node>
+      <node id="140574">
+        <label>AthContainersInterfaces/IAuxTypeVector.h</label>
+        <link refid="d8/d0e/IAuxTypeVector_8h"/>
+        <childnode refid="140555" relation="include">
+        </childnode>
+        <childnode refid="140575" relation="include">
+        </childnode>
+      </node>
+      <node id="140750">
+        <label>CxxUtils/make_unique.h</label>
+        <link refid="d3/d77/make__unique_8h"/>
+      </node>
+      <node id="140657">
+        <label>versions/TrackParticle_v1.h</label>
+        <link refid="d2/d7f/TrackParticle__v1_8h_source"/>
+        <childnode refid="140658" relation="include">
+        </childnode>
+        <childnode refid="140546" relation="include">
+        </childnode>
+        <childnode refid="140650" relation="include">
+        </childnode>
+        <childnode refid="140611" relation="include">
+        </childnode>
+        <childnode refid="140659" relation="include">
+        </childnode>
+        <childnode refid="140662" relation="include">
+        </childnode>
+        <childnode refid="140667" relation="include">
+        </childnode>
+        <childnode refid="140669" relation="include">
+        </childnode>
+        <childnode refid="140670" relation="include">
+        </childnode>
+      </node>
+      <node id="140603">
+        <label>AthContainers/tools/likely.h</label>
+        <link refid="d6/dd6/likely_8h"/>
+      </node>
+      <node id="140719">
+        <label>xAODBTagging/versions/BTagging_v1.h</label>
+        <link refid="dc/da1/BTagging__v1_8h_source"/>
+        <childnode refid="140551" relation="include">
+        </childnode>
+        <childnode refid="140650" relation="include">
+        </childnode>
+        <childnode refid="140720" relation="include">
+        </childnode>
+        <childnode refid="140655" relation="include">
+        </childnode>
+        <childnode refid="140721" relation="include">
+        </childnode>
+        <childnode refid="140735" relation="include">
+        </childnode>
+        <childnode refid="140693" relation="include">
+        </childnode>
+        <childnode refid="140548" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+        <childnode refid="140639" relation="include">
+        </childnode>
+        <childnode refid="140565" relation="include">
+        </childnode>
+      </node>
+      <node id="140716">
+        <label>xAODJet/versions/Jet_v1.h</label>
+        <link refid="df/d71/Jet__v1_8h_source"/>
+        <childnode refid="140693" relation="include">
+        </childnode>
+        <childnode refid="140650" relation="include">
+        </childnode>
+        <childnode refid="140659" relation="include">
+        </childnode>
+        <childnode refid="140673" relation="include">
+        </childnode>
+        <childnode refid="140717" relation="include">
+        </childnode>
+        <childnode refid="140740" relation="include">
+        </childnode>
+        <childnode refid="140743" relation="include">
+        </childnode>
+        <childnode refid="140741" relation="include">
+        </childnode>
+        <childnode refid="140744" relation="include">
+        </childnode>
+      </node>
+      <node id="140629">
+        <label>AthContainers/tools/DVLIterator.h</label>
+        <link refid="d3/dc7/DVLIterator_8h_source"/>
+        <childnode refid="140612" relation="include">
+        </childnode>
+        <childnode refid="140627" relation="include">
+        </childnode>
+        <childnode refid="140630" relation="include">
+        </childnode>
+        <childnode refid="140632" relation="include">
+        </childnode>
+        <childnode refid="140617" relation="include">
+        </childnode>
+        <childnode refid="140560" relation="include">
+        </childnode>
+        <childnode refid="140539" relation="include">
+        </childnode>
+      </node>
+      <node id="140643">
+        <label>SGTools/DataBucket.h</label>
+      </node>
+      <node id="140693">
+        <label>map</label>
+      </node>
+      <node id="140644">
+        <label>AthContainers/tools/DVLDataBucket.icc</label>
+        <link refid="d3/d21/DVLDataBucket_8icc"/>
+        <childnode refid="140645" relation="include">
+        </childnode>
+      </node>
+      <node id="140645">
+        <label>SGTools/IRegisterTransient.h</label>
+      </node>
+      <node id="140572">
+        <label>RootMetaSelection.h</label>
+      </node>
+      <node id="140589">
+        <label>AthContainers/tools/AuxTypeVector.icc</label>
+        <link refid="d5/d84/AuxTypeVector_8icc"/>
+      </node>
+      <node id="140694">
+        <label>InDetTrackSystematicsTools/InDetTrackSystematics.h</label>
+        <link refid="de/d93/InDetTrackSystematics_8h_source"/>
+        <childnode refid="140686" relation="include">
+        </childnode>
+        <childnode refid="140695" relation="include">
+        </childnode>
+      </node>
+      <node id="140726">
+        <label>VxVertex/VxTrackAtVertex.h</label>
+      </node>
+      <node id="140634">
+        <label>AthContainers/tools/DVL_algorithms.h</label>
+        <link refid="d0/d7a/DVL__algorithms_8h"/>
+        <childnode refid="140629" relation="include">
+        </childnode>
+        <childnode refid="140560" relation="include">
+        </childnode>
+        <childnode refid="140558" relation="include">
+        </childnode>
+        <childnode refid="140635" relation="include">
+        </childnode>
+      </node>
+      <node id="140604">
+        <label>AthContainers/tools/assume.h</label>
+        <link refid="d2/d20/assume_8h"/>
+      </node>
+      <node id="140742">
+        <label>Math/Vector4D.h</label>
+      </node>
+      <node id="140586">
+        <label>AthContainers/PackedContainer.icc</label>
+        <link refid="d1/d0c/PackedContainer_8icc"/>
+      </node>
+      <node id="140721">
+        <label>xAODTracking/VertexContainer.h</label>
+        <link refid="d6/dd8/VertexContainer_8h_source"/>
+        <childnode refid="140722" relation="include">
+        </childnode>
+        <childnode refid="140734" relation="include">
+        </childnode>
+        <childnode refid="140654" relation="include">
+        </childnode>
+      </node>
+      <node id="140630">
+        <label>AthContainers/tools/ElementProxy.h</label>
+        <link refid="db/d26/ElementProxy_8h"/>
+        <childnode refid="140612" relation="include">
+        </childnode>
+        <childnode refid="140570" relation="include">
+        </childnode>
+        <childnode refid="140538" relation="include">
+        </childnode>
+        <childnode refid="140631" relation="include">
+        </childnode>
+      </node>
+      <node id="140682">
+        <label>GaudiKernel/IMessageSvc.h</label>
+      </node>
+      <node id="140552">
+        <label>AthContainersInterfaces/IAuxElement.h</label>
+        <link refid="dd/d7a/IAuxElement_8h"/>
+      </node>
+      <node id="140570">
+        <label>AthLinks/tools/selection_ns.h</label>
+        <link refid="d3/dec/selection__ns_8h"/>
+        <childnode refid="140571" relation="include">
+        </childnode>
+        <childnode refid="140572" relation="include">
+        </childnode>
+      </node>
+      <node id="140602">
+        <label>AthenaKernel/IThinningSvc.h</label>
+      </node>
+      <node id="140595">
+        <label>boost/atomic.hpp</label>
+      </node>
+      <node id="140674">
+        <label>xAODTracking/TrackParticleFwd.h</label>
+        <link refid="d1/dc4/TrackParticleFwd_8h_source"/>
+      </node>
+      <node id="140720">
+        <label>xAODBTagging/BTaggingEnums.h</label>
+        <link refid="dd/de5/BTaggingEnums_8h_source"/>
+      </node>
+      <node id="140628">
+        <label>limits.h</label>
+      </node>
+      <node id="140541">
+        <label>TError.h</label>
+      </node>
+      <node id="140622">
+        <label>AthContainers/tools/ClassID.h</label>
+        <link refid="de/de2/ClassID_8h"/>
+        <childnode refid="140623" relation="include">
+        </childnode>
+      </node>
+      <node id="140734">
+        <label>xAODTracking/versions/VertexContainer_v1.h</label>
+        <link refid="d2/dda/VertexContainer__v1_8h_source"/>
+        <childnode refid="140611" relation="include">
+        </childnode>
+        <childnode refid="140723" relation="include">
+        </childnode>
+      </node>
+      <node id="140699">
+        <label>InDetTrackSystematicsTools/InDetTrackBiasingTool.h</label>
+        <link refid="da/d58/InDetTrackBiasingTool_8h_source"/>
+        <childnode refid="140700" relation="include">
+        </childnode>
+        <childnode refid="140676" relation="include">
+        </childnode>
+        <childnode refid="140684" relation="include">
+        </childnode>
+        <childnode refid="140692" relation="include">
+        </childnode>
+        <childnode refid="140655" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+        <childnode refid="140548" relation="include">
+        </childnode>
+        <childnode refid="140701" relation="include">
+        </childnode>
+        <childnode refid="140698" relation="include">
+        </childnode>
+      </node>
+      <node id="140543">
+        <label>TH1.h</label>
+      </node>
+      <node id="140581">
+        <label>AthContainers/PackedParameters.h</label>
+        <link refid="d4/d43/PackedParameters_8h"/>
+        <childnode refid="140582" relation="include">
+        </childnode>
+        <childnode refid="140562" relation="include">
+        </childnode>
+        <childnode refid="140546" relation="include">
+        </childnode>
+        <childnode refid="140584" relation="include">
+        </childnode>
+      </node>
+      <node id="140691">
+        <label>PATInterfaces/SystematicSet.h</label>
+        <link refid="d4/db8/SystematicSet_8h_source"/>
+        <childnode refid="140687" relation="include">
+        </childnode>
+        <childnode refid="140547" relation="include">
+        </childnode>
+        <childnode refid="140548" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+        <childnode refid="140564" relation="include">
+        </childnode>
+        <childnode refid="140690" relation="include">
+        </childnode>
+        <childnode refid="140686" relation="include">
+        </childnode>
+      </node>
+      <node id="140705">
+        <label>GaudiKernel/ToolHandle.h</label>
+      </node>
+      <node id="140554">
+        <label>AthContainersInterfaces/AuxTypes.h</label>
+        <link refid="d1/dea/AuxTypes_8h"/>
+        <childnode refid="140555" relation="include">
+        </childnode>
+        <childnode refid="140556" relation="include">
+        </childnode>
+      </node>
+      <node id="140651">
+        <label>AthLinks/ElementLinkBase.h</label>
+        <link refid="d0/d16/ElementLinkBase_8h_source"/>
+        <childnode refid="140546" relation="include">
+        </childnode>
+      </node>
+      <node id="140686">
+        <label>PATInterfaces/SystematicVariation.h</label>
+        <link refid="d1/def/SystematicVariation_8h_source"/>
+        <childnode refid="140687" relation="include">
+        </childnode>
+        <childnode refid="140550" relation="include">
+        </childnode>
+        <childnode refid="140547" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+      </node>
+      <node id="140666">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="140557">
+        <label>CxxUtils/hashtable.h</label>
+        <link refid="dd/d16/hashtable_8h"/>
+        <childnode refid="140558" relation="include">
+        </childnode>
+        <childnode refid="140559" relation="include">
+        </childnode>
+        <childnode refid="140560" relation="include">
+        </childnode>
+        <childnode refid="140555" relation="include">
+        </childnode>
+        <childnode refid="140539" relation="include">
+        </childnode>
+        <childnode refid="140561" relation="include">
+        </childnode>
+        <childnode refid="140562" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+        <childnode refid="140563" relation="include">
+        </childnode>
+      </node>
+      <node id="140615">
+        <label>AthContainers/tools/ATHCONTAINERS_ASSERT.h</label>
+        <link refid="de/d6b/ATHCONTAINERS__ASSERT_8h"/>
+        <childnode refid="140610" relation="include">
+        </childnode>
+      </node>
+      <node id="140659">
+        <label>xAODBase/IParticle.h</label>
+        <link refid="d5/dac/IParticle_8h_source"/>
+        <childnode refid="140660" relation="include">
+        </childnode>
+        <childnode refid="140551" relation="include">
+        </childnode>
+        <childnode refid="140661" relation="include">
+        </childnode>
+        <childnode refid="140567" relation="include">
+        </childnode>
+      </node>
+      <node id="140661">
+        <label>ObjectType.h</label>
+        <link refid="d8/d04/ObjectType_8h_source"/>
+        <childnode refid="140550" relation="include">
+        </childnode>
+      </node>
+      <node id="140545">
+        <label>xAODEventInfo/versions/EventInfo_v1.h</label>
+        <link refid="d4/da0/EventInfo__v1_8h_source"/>
+        <childnode refid="140546" relation="include">
+        </childnode>
+        <childnode refid="140547" relation="include">
+        </childnode>
+        <childnode refid="140548" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+        <childnode refid="140550" relation="include">
+        </childnode>
+        <childnode refid="140551" relation="include">
+        </childnode>
+        <childnode refid="140611" relation="include">
+        </childnode>
+        <childnode refid="140650" relation="include">
+        </childnode>
+        <childnode refid="140653" relation="include">
+        </childnode>
+      </node>
+      <node id="140743">
+        <label>xAODJet/JetAttributes.h</label>
+        <link refid="d3/df8/JetAttributes_8h"/>
+      </node>
+      <node id="140685">
+        <label>PATInterfaces/CorrectionCode.h</label>
+        <link refid="d8/dab/CorrectionCode_8h_source"/>
+      </node>
+      <node id="140631">
+        <label>AthContainers/tools/ElementProxy.icc</label>
+        <link refid="d6/d70/ElementProxy_8icc"/>
+        <childnode refid="140627" relation="include">
+        </childnode>
+        <childnode refid="140615" relation="include">
+        </childnode>
+      </node>
+      <node id="140575">
+        <label>typeinfo</label>
+      </node>
+      <node id="140662">
+        <label>xAODTracking/TrackingPrimitives.h</label>
+        <link refid="d2/d4c/TrackingPrimitives_8h_source"/>
+        <childnode refid="140663" relation="include">
+        </childnode>
+      </node>
+      <node id="140609">
+        <label>AthContainers/AuxElement.icc</label>
+        <link refid="d2/d37/AuxElement_8icc"/>
+        <childnode refid="140603" relation="include">
+        </childnode>
+        <childnode refid="140610" relation="include">
+        </childnode>
+      </node>
+      <node id="140611">
+        <label>AthContainers/DataVector.h</label>
+        <link refid="d7/dd6/DataVector_8h"/>
+        <childnode refid="140606" relation="include">
+        </childnode>
+        <childnode refid="140612" relation="include">
+        </childnode>
+        <childnode refid="140613" relation="include">
+        </childnode>
+        <childnode refid="140614" relation="include">
+        </childnode>
+        <childnode refid="140620" relation="include">
+        </childnode>
+        <childnode refid="140621" relation="include">
+        </childnode>
+        <childnode refid="140627" relation="include">
+        </childnode>
+        <childnode refid="140629" relation="include">
+        </childnode>
+        <childnode refid="140633" relation="include">
+        </childnode>
+        <childnode refid="140634" relation="include">
+        </childnode>
+        <childnode refid="140630" relation="include">
+        </childnode>
+        <childnode refid="140636" relation="include">
+        </childnode>
+        <childnode refid="140570" relation="include">
+        </childnode>
+        <childnode refid="140637" relation="include">
+        </childnode>
+        <childnode refid="140638" relation="include">
+        </childnode>
+        <childnode refid="140632" relation="include">
+        </childnode>
+        <childnode refid="140548" relation="include">
+        </childnode>
+        <childnode refid="140575" relation="include">
+        </childnode>
+        <childnode refid="140564" relation="include">
+        </childnode>
+        <childnode refid="140639" relation="include">
+        </childnode>
+        <childnode refid="140558" relation="include">
+        </childnode>
+        <childnode refid="140608" relation="include">
+        </childnode>
+        <childnode refid="140560" relation="include">
+        </childnode>
+        <childnode refid="140567" relation="include">
+        </childnode>
+        <childnode refid="140640" relation="include">
+        </childnode>
+        <childnode refid="140642" relation="include">
+        </childnode>
+        <childnode refid="140646" relation="include">
+        </childnode>
+        <childnode refid="140647" relation="include">
+        </childnode>
+      </node>
+      <node id="140687">
+        <label>PATInterfaces/Global.h</label>
+        <link refid="dd/d0c/PATInterfaces_2PATInterfaces_2Global_8h_source"/>
+      </node>
+      <node id="140728">
+        <label>xAODTracking/NeutralParticle.h</label>
+        <link refid="d4/daa/NeutralParticle_8h_source"/>
+        <childnode refid="140729" relation="include">
+        </childnode>
+        <childnode refid="140654" relation="include">
+        </childnode>
+      </node>
+      <node id="140658">
+        <label>bitset</label>
+      </node>
+      <node id="140746">
+        <label>xAODCore/tools/IOStats.h</label>
+        <link refid="d1/de7/IOStats_8h_source"/>
+      </node>
+      <node id="140584">
+        <label>AthContainers/PackedParameters.icc</label>
+        <link refid="db/d30/PackedParameters_8icc"/>
+      </node>
+      <node id="140652">
+        <label>AthLinks/tools/TypeTools.h</label>
+        <link refid="dd/db1/TypeTools_8h_source"/>
+      </node>
+      <node id="140601">
+        <label>AthenaKernel/ILockable.h</label>
+      </node>
+      <node id="140569">
+        <label>AthLinks/DataLinkBase.h</label>
+        <link refid="db/da8/DataLinkBase_8h_source"/>
+        <childnode refid="140546" relation="include">
+        </childnode>
+      </node>
+      <node id="140723">
+        <label>xAODTracking/versions/Vertex_v1.h</label>
+        <link refid="d7/dcc/Vertex__v1_8h_source"/>
+        <childnode refid="140548" relation="include">
+        </childnode>
+        <childnode refid="140551" relation="include">
+        </childnode>
+        <childnode refid="140650" relation="include">
+        </childnode>
+        <childnode refid="140663" relation="include">
+        </childnode>
+        <childnode refid="140724" relation="include">
+        </childnode>
+        <childnode refid="140726" relation="include">
+        </childnode>
+        <childnode refid="140662" relation="include">
+        </childnode>
+        <childnode refid="140672" relation="include">
+        </childnode>
+        <childnode refid="140727" relation="include">
+        </childnode>
+        <childnode refid="140661" relation="include">
+        </childnode>
+        <childnode refid="140653" relation="include">
+        </childnode>
+      </node>
+      <node id="140583">
+        <label>AthContainersInterfaces/AuxDataOption.icc</label>
+        <link refid="db/d68/AuxDataOption_8icc"/>
+      </node>
+      <node id="140588">
+        <label>boost/type_traits/is_arithmetic.hpp</label>
+      </node>
+      <node id="140621">
+        <label>AthContainers/tools/DVLInfo.h</label>
+        <link refid="d3/d2e/DVLInfo_8h"/>
+        <childnode refid="140622" relation="include">
+        </childnode>
+        <childnode refid="140614" relation="include">
+        </childnode>
+        <childnode refid="140575" relation="include">
+        </childnode>
+        <childnode refid="140555" relation="include">
+        </childnode>
+        <childnode refid="140563" relation="include">
+        </childnode>
+        <childnode refid="140624" relation="include">
+        </childnode>
+        <childnode refid="140587" relation="include">
+        </childnode>
+        <childnode refid="140625" relation="include">
+        </childnode>
+      </node>
+      <node id="140747">
+        <label>xAODCore/tools/ReadStats.h</label>
+        <link refid="d6/dda/ReadStats_8h_source"/>
+        <childnode refid="140693" relation="include">
+        </childnode>
+        <childnode refid="140548" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+        <childnode refid="140748" relation="include">
+        </childnode>
+        <childnode refid="140554" relation="include">
+        </childnode>
+      </node>
+      <node id="140565">
+        <label>SGTools/CLASS_DEF.h</label>
+      </node>
+      <node id="140664">
+        <label>unistd.h</label>
+      </node>
+      <node id="140640">
+        <label>AthContainers/ClassName.h</label>
+        <link refid="dd/d6b/AthContainers_2AthContainers_2ClassName_8h_source"/>
+        <childnode refid="140641" relation="include">
+        </childnode>
+      </node>
+      <node id="140573">
+        <label>AthContainers/AuxTypeRegistry.h</label>
+        <link refid="db/d7f/AuxTypeRegistry_8h"/>
+        <childnode refid="140554" relation="include">
+        </childnode>
+        <childnode refid="140574" relation="include">
+        </childnode>
+        <childnode refid="140576" relation="include">
+        </childnode>
+        <childnode refid="140577" relation="include">
+        </childnode>
+        <childnode refid="140590" relation="include">
+        </childnode>
+        <childnode refid="140592" relation="include">
+        </childnode>
+        <childnode refid="140555" relation="include">
+        </childnode>
+        <childnode refid="140575" relation="include">
+        </childnode>
+        <childnode refid="140548" relation="include">
+        </childnode>
+        <childnode refid="140598" relation="include">
+        </childnode>
+        <childnode refid="140599" relation="include">
+        </childnode>
+      </node>
+      <node id="140548">
+        <label>vector</label>
+      </node>
+      <node id="140697">
+        <label>TF2.h</label>
+      </node>
+      <node id="140673">
+        <label>xAODBase/IParticleContainer.h</label>
+        <link refid="dd/d2d/IParticleContainer_8h_source"/>
+        <childnode refid="140611" relation="include">
+        </childnode>
+        <childnode refid="140659" relation="include">
+        </childnode>
+        <childnode refid="140565" relation="include">
+        </childnode>
+      </node>
+      <node id="140648">
+        <label>AthContainers/tools/CompareAndPrint.h</label>
+        <link refid="d5/da8/CompareAndPrint_8h_source"/>
+        <childnode refid="140558" relation="include">
+        </childnode>
+        <childnode refid="140575" relation="include">
+        </childnode>
+      </node>
+      <node id="140540">
+        <label>TFile.h</label>
+      </node>
+      <node id="140722">
+        <label>xAODTracking/Vertex.h</label>
+        <link refid="d9/d2d/Vertex_8h_source"/>
+        <childnode refid="140723" relation="include">
+        </childnode>
+      </node>
+      <node id="140731">
+        <label>xAODTracking/versions/NeutralParticleContainer_v1.h</label>
+        <link refid="d6/d5f/NeutralParticleContainer__v1_8h_source"/>
+        <childnode refid="140546" relation="include">
+        </childnode>
+        <childnode refid="140611" relation="include">
+        </childnode>
+        <childnode refid="140729" relation="include">
+        </childnode>
+        <childnode refid="140732" relation="include">
+        </childnode>
+      </node>
+      <node id="140744">
+        <label>xAODJet/JetContainerInfo.h</label>
+        <link refid="d8/d2a/JetContainerInfo_8h_source"/>
+        <childnode refid="140549" relation="include">
+        </childnode>
+      </node>
+      <node id="140749">
+        <label>xAODCore/ShallowCopy.h</label>
+        <link refid="d8/d71/ShallowCopy_8h_source"/>
+        <childnode refid="140693" relation="include">
+        </childnode>
+        <childnode refid="140639" relation="include">
+        </childnode>
+        <childnode refid="140750" relation="include">
+        </childnode>
+        <childnode refid="140568" relation="include">
+        </childnode>
+        <childnode refid="140553" relation="include">
+        </childnode>
+        <childnode refid="140751" relation="include">
+        </childnode>
+        <childnode refid="140755" relation="include">
+        </childnode>
+      </node>
+      <node id="140649">
+        <label>AthContainers/tools/DVLEltBaseInfo.icc</label>
+        <link refid="dd/d5e/DVLEltBaseInfo_8icc"/>
+      </node>
+      <node id="140717">
+        <label>xAODBTagging/BTaggingContainer.h</label>
+        <link refid="d8/d3b/BTaggingContainer_8h_source"/>
+        <childnode refid="140718" relation="include">
+        </childnode>
+        <childnode refid="140739" relation="include">
+        </childnode>
+        <childnode refid="140654" relation="include">
+        </childnode>
+      </node>
+      <node id="140559">
+        <label>utility</label>
+      </node>
+      <node id="140646">
+        <label>SGTools/DataBucketTraitFwd.h</label>
+      </node>
+      <node id="140585">
+        <label>CxxUtils/override.h</label>
+        <link refid="de/d0e/override_8h"/>
+      </node>
+      <node id="140710">
+        <label>xAODTruth/TruthVertexContainerFwd.h</label>
+        <link refid="da/ddf/TruthVertexContainerFwd_8h_source"/>
+        <childnode refid="140611" relation="include">
+        </childnode>
+        <childnode refid="140711" relation="include">
+        </childnode>
+      </node>
+      <node id="140724">
+        <label>GeoPrimitives/GeoPrimitives.h</label>
+        <link refid="d7/d87/GeoPrimitives_8h_source"/>
+        <childnode refid="140664" relation="include">
+        </childnode>
+        <childnode refid="140725" relation="include">
+        </childnode>
+      </node>
+      <node id="140713">
+        <label>InDetTrackSystematicsTools/IJetTrackFilterTool.h</label>
+        <link refid="dd/d22/IJetTrackFilterTool_8h_source"/>
+        <childnode refid="140678" relation="include">
+        </childnode>
+        <childnode refid="140689" relation="include">
+        </childnode>
+        <childnode refid="140674" relation="include">
+        </childnode>
+        <childnode refid="140714" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+      </node>
+      <node id="140668">
+        <label>xAODTracking/VertexFwd.h</label>
+        <link refid="d9/ddd/VertexFwd_8h_source"/>
+      </node>
+      <node id="140619">
+        <label>AthContainers/AuxVectorBase.icc</label>
+        <link refid="d4/d50/AuxVectorBase_8icc"/>
+      </node>
+      <node id="140593">
+        <label>boost/thread/shared_mutex.hpp</label>
+      </node>
+      <node id="140736">
+        <label>xAODBTagging/BTagVertex.h</label>
+        <link refid="d4/d51/BTagVertex_8h_source"/>
+        <childnode refid="140737" relation="include">
+        </childnode>
+      </node>
+      <node id="140578">
+        <label>AthContainersInterfaces/IAuxSetOption.h</label>
+        <link refid="d7/d7e/IAuxSetOption_8h"/>
+      </node>
+      <node id="140592">
+        <label>AthContainers/tools/threading.h</label>
+        <link refid="d7/d22/threading_8h"/>
+        <childnode refid="140593" relation="include">
+        </childnode>
+        <childnode refid="140594" relation="include">
+        </childnode>
+        <childnode refid="140595" relation="include">
+        </childnode>
+        <childnode refid="140596" relation="include">
+        </childnode>
+        <childnode refid="140597" relation="include">
+        </childnode>
+      </node>
+      <node id="140701">
+        <label>TH2.h</label>
+      </node>
+      <node id="140550">
+        <label>iosfwd</label>
+      </node>
+      <node id="140539">
+        <label>cstdlib</label>
+      </node>
+      <node id="140754">
+        <label>xAODCore/AuxSelection.h</label>
+        <link refid="d3/dd4/AuxSelection_8h_source"/>
+        <childnode refid="140547" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+        <childnode refid="140554" relation="include">
+        </childnode>
+      </node>
+      <node id="140751">
+        <label>xAODCore/ShallowAuxContainer.h</label>
+        <link refid="d8/d42/ShallowAuxContainer_8h_source"/>
+        <childnode refid="140568" relation="include">
+        </childnode>
+        <childnode refid="140566" relation="include">
+        </childnode>
+        <childnode refid="140752" relation="include">
+        </childnode>
+        <childnode refid="140753" relation="include">
+        </childnode>
+        <childnode refid="140592" relation="include">
+        </childnode>
+        <childnode refid="140601" relation="include">
+        </childnode>
+        <childnode refid="140754" relation="include">
+        </childnode>
+        <childnode refid="140654" relation="include">
+        </childnode>
+        <childnode refid="140653" relation="include">
+        </childnode>
+      </node>
+      <node id="140656">
+        <label>xAODTracking/TrackParticle.h</label>
+        <link refid="d2/d15/TrackParticle_8h_source"/>
+        <childnode refid="140657" relation="include">
+        </childnode>
+        <childnode refid="140654" relation="include">
+        </childnode>
+      </node>
+      <node id="140639">
+        <label>iostream</label>
+      </node>
+      <node id="140607">
+        <label>CxxUtils/noreturn.h</label>
+        <link refid="de/d6f/noreturn_8h"/>
+      </node>
+      <node id="140704">
+        <label>AsgTools/ToolHandle.h</label>
+        <link refid="de/d2d/ToolHandle_8h_source"/>
+        <childnode refid="140677" relation="include">
+        </childnode>
+        <childnode refid="140705" relation="include">
+        </childnode>
+      </node>
+      <node id="140671">
+        <label>xAODTracking/versions/TrackParticleContainer_v1.h</label>
+        <link refid="d7/d3b/TrackParticleContainer__v1_8h_source"/>
+        <childnode refid="140546" relation="include">
+        </childnode>
+        <childnode refid="140611" relation="include">
+        </childnode>
+        <childnode refid="140657" relation="include">
+        </childnode>
+        <childnode refid="140672" relation="include">
+        </childnode>
+      </node>
+      <node id="140553">
+        <label>AthContainersInterfaces/IConstAuxStore.h</label>
+        <link refid="d7/d3a/IConstAuxStore_8h"/>
+        <childnode refid="140554" relation="include">
+        </childnode>
+        <childnode refid="140555" relation="include">
+        </childnode>
+        <childnode refid="140565" relation="include">
+        </childnode>
+      </node>
+      <node id="140555">
+        <label>cstddef</label>
+      </node>
+      <node id="140695">
+        <label>unordered_map</label>
+      </node>
+      <node id="140748">
+        <label>TNamed.h</label>
+      </node>
+      <node id="140605">
+        <label>AthContainers/AuxVectorData.icc</label>
+        <link refid="da/de7/AuxVectorData_8icc"/>
+        <childnode refid="140573" relation="include">
+        </childnode>
+        <childnode refid="140566" relation="include">
+        </childnode>
+        <childnode refid="140553" relation="include">
+        </childnode>
+        <childnode refid="140603" relation="include">
+        </childnode>
+        <childnode refid="140604" relation="include">
+        </childnode>
+      </node>
+      <node id="140679">
+        <label>AsgTools/AsgToolMacros.h</label>
+        <link refid="d1/d68/AsgToolMacros_8h_source"/>
+      </node>
+      <node id="140653">
+        <label>xAODCore/BaseInfo.h</label>
+        <link refid="d3/d17/BaseInfo_8h_source"/>
+        <childnode refid="140567" relation="include">
+        </childnode>
+      </node>
+      <node id="140542">
+        <label>TString.h</label>
+      </node>
+      <node id="140696">
+        <label>TH2F.h</label>
+      </node>
+      <node id="140718">
+        <label>xAODBTagging/BTagging.h</label>
+        <link refid="d2/d81/BTagging_8h_source"/>
+        <childnode refid="140719" relation="include">
+        </childnode>
+      </node>
+      <node id="140688">
+        <label>InDetTrackSystematicsTools/IInDetTrackSmearingTool.h</label>
+        <link refid="d7/d41/IInDetTrackSmearingTool_8h_source"/>
+        <childnode refid="140678" relation="include">
+        </childnode>
+        <childnode refid="140689" relation="include">
+        </childnode>
+        <childnode refid="140686" relation="include">
+        </childnode>
+        <childnode refid="140685" relation="include">
+        </childnode>
+        <childnode refid="140655" relation="include">
+        </childnode>
+      </node>
+      <node id="140741">
+        <label>xAODJet/JetTypes.h</label>
+        <link refid="d6/d2a/JetTypes_8h_source"/>
+        <childnode refid="140742" relation="include">
+        </childnode>
+      </node>
+      <node id="140740">
+        <label>xAODJet/JetConstituentVector.h</label>
+        <link refid="de/dd4/JetConstituentVector_8h_source"/>
+        <childnode refid="140650" relation="include">
+        </childnode>
+        <childnode refid="140659" relation="include">
+        </childnode>
+        <childnode refid="140673" relation="include">
+        </childnode>
+        <childnode refid="140741" relation="include">
+        </childnode>
+      </node>
+      <node id="140730">
+        <label>TrkNeutralParameters/NeutralParameters.h</label>
+      </node>
+      <node id="140625">
+        <label>AthContainers/tools/DVLInfo.icc</label>
+        <link refid="da/d83/DVLInfo_8icc"/>
+        <childnode refid="140612" relation="include">
+        </childnode>
+        <childnode refid="140548" relation="include">
+        </childnode>
+        <childnode refid="140626" relation="include">
+        </childnode>
+        <childnode refid="140610" relation="include">
+        </childnode>
+        <childnode refid="140539" relation="include">
+        </childnode>
+        <childnode refid="140567" relation="include">
+        </childnode>
+      </node>
+      <node id="140577">
+        <label>AthContainers/tools/AuxTypeVector.h</label>
+        <link refid="d6/dd2/AuxTypeVector_8h"/>
+        <childnode refid="140574" relation="include">
+        </childnode>
+        <childnode refid="140578" relation="include">
+        </childnode>
+        <childnode refid="140579" relation="include">
+        </childnode>
+        <childnode refid="140580" relation="include">
+        </childnode>
+        <childnode refid="140585" relation="include">
+        </childnode>
+        <childnode refid="140575" relation="include">
+        </childnode>
+        <childnode refid="140548" relation="include">
+        </childnode>
+        <childnode refid="140558" relation="include">
+        </childnode>
+        <childnode refid="140546" relation="include">
+        </childnode>
+        <childnode refid="140587" relation="include">
+        </childnode>
+        <childnode refid="140588" relation="include">
+        </childnode>
+        <childnode refid="140589" relation="include">
+        </childnode>
+      </node>
+      <node id="140669">
+        <label>TrkParameters/TrackParameters.h</label>
+      </node>
+      <node id="140714">
+        <label>xAODJet/JetContainer.h</label>
+        <link refid="d5/d55/JetContainer_8h_source"/>
+        <childnode refid="140715" relation="include">
+        </childnode>
+        <childnode refid="140745" relation="include">
+        </childnode>
+        <childnode refid="140654" relation="include">
+        </childnode>
+      </node>
+      <node id="140708">
+        <label>xAODTruth/TruthParticle.h</label>
+        <link refid="dd/d44/TruthParticle_8h_source"/>
+        <childnode refid="140709" relation="include">
+        </childnode>
+      </node>
+      <node id="140729">
+        <label>versions/NeutralParticle_v1.h</label>
+        <link refid="da/d85/NeutralParticle__v1_8h_source"/>
+        <childnode refid="140650" relation="include">
+        </childnode>
+        <childnode refid="140611" relation="include">
+        </childnode>
+        <childnode refid="140659" relation="include">
+        </childnode>
+        <childnode refid="140662" relation="include">
+        </childnode>
+        <childnode refid="140667" relation="include">
+        </childnode>
+        <childnode refid="140658" relation="include">
+        </childnode>
+        <childnode refid="140546" relation="include">
+        </childnode>
+        <childnode refid="140730" relation="include">
+        </childnode>
+      </node>
+      <node id="140707">
+        <label>IInDetTrackTruthOriginTool.h</label>
+        <link refid="d0/d05/IInDetTrackTruthOriginTool_8h_source"/>
+        <childnode refid="140678" relation="include">
+        </childnode>
+        <childnode refid="140656" relation="include">
+        </childnode>
+      </node>
+      <node id="140733">
+        <label>xAODTracking/NeutralParticleFwd.h</label>
+        <link refid="d4/d90/NeutralParticleFwd_8h_source"/>
+      </node>
+      <node id="140587">
+        <label>boost/type_traits/is_base_of.hpp</label>
+      </node>
+      <node id="140727">
+        <label>xAODTracking/NeutralParticleContainer.h</label>
+        <link refid="da/d7f/NeutralParticleContainer_8h_source"/>
+        <childnode refid="140728" relation="include">
+        </childnode>
+        <childnode refid="140731" relation="include">
+        </childnode>
+        <childnode refid="140654" relation="include">
+        </childnode>
+      </node>
+      <node id="140614">
+        <label>AthContainers/AuxVectorBase.h</label>
+        <link refid="d7/d18/AuxVectorBase_8h"/>
+        <childnode refid="140600" relation="include">
+        </childnode>
+        <childnode refid="140612" relation="include">
+        </childnode>
+        <childnode refid="140613" relation="include">
+        </childnode>
+        <childnode refid="140551" relation="include">
+        </childnode>
+        <childnode refid="140573" relation="include">
+        </childnode>
+        <childnode refid="140606" relation="include">
+        </childnode>
+        <childnode refid="140615" relation="include">
+        </childnode>
+        <childnode refid="140566" relation="include">
+        </childnode>
+        <childnode refid="140616" relation="include">
+        </childnode>
+        <childnode refid="140548" relation="include">
+        </childnode>
+        <childnode refid="140619" relation="include">
+        </childnode>
+      </node>
+      <node id="140547">
+        <label>set</label>
+      </node>
+      <node id="140654">
+        <label>xAODCore/CLASS_DEF.h</label>
+        <link refid="d6/d20/xAODCore_2xAODCore_2CLASS__DEF_8h"/>
+        <childnode refid="140565" relation="include">
+        </childnode>
+      </node>
+      <node id="140591">
+        <label>AthContainers/tools/AuxTypeVectorFactory.icc</label>
+        <link refid="dc/d02/AuxTypeVectorFactory_8icc"/>
+      </node>
+      <node id="140580">
+        <label>AthContainers/PackedContainer.h</label>
+        <link refid="d6/dda/PackedContainer_8h"/>
+        <childnode refid="140578" relation="include">
+        </childnode>
+        <childnode refid="140581" relation="include">
+        </childnode>
+        <childnode refid="140585" relation="include">
+        </childnode>
+        <childnode refid="140548" relation="include">
+        </childnode>
+        <childnode refid="140586" relation="include">
+        </childnode>
+      </node>
+      <node id="140558">
+        <label>algorithm</label>
+      </node>
+      <node id="140636">
+        <label>AthContainers/tools/IsMostDerivedFlag.h</label>
+        <link refid="d5/dfa/IsMostDerivedFlag_8h"/>
+      </node>
+      <node id="140670">
+        <label>TrkTrack/TrackCollection.h</label>
+      </node>
+      <node id="140551">
+        <label>AthContainers/AuxElement.h</label>
+        <link refid="d1/d6f/AuxElement_8h"/>
+        <childnode refid="140552" relation="include">
+        </childnode>
+        <childnode refid="140553" relation="include">
+        </childnode>
+        <childnode refid="140566" relation="include">
+        </childnode>
+        <childnode refid="140568" relation="include">
+        </childnode>
+        <childnode refid="140573" relation="include">
+        </childnode>
+        <childnode refid="140600" relation="include">
+        </childnode>
+        <childnode refid="140579" relation="include">
+        </childnode>
+        <childnode refid="140606" relation="include">
+        </childnode>
+        <childnode refid="140603" relation="include">
+        </childnode>
+        <childnode refid="140555" relation="include">
+        </childnode>
+        <childnode refid="140609" relation="include">
+        </childnode>
+      </node>
+      <node id="140675">
+        <label>InDetTrackSystematicsTools/InDetTrackSmearingTool.h</label>
+        <link refid="d0/d3b/InDetTrackSmearingTool_8h_source"/>
+        <childnode refid="140676" relation="include">
+        </childnode>
+        <childnode refid="140684" relation="include">
+        </childnode>
+        <childnode refid="140686" relation="include">
+        </childnode>
+        <childnode refid="140655" relation="include">
+        </childnode>
+        <childnode refid="140688" relation="include">
+        </childnode>
+        <childnode refid="140692" relation="include">
+        </childnode>
+        <childnode refid="140540" relation="include">
+        </childnode>
+        <childnode refid="140696" relation="include">
+        </childnode>
+        <childnode refid="140697" relation="include">
+        </childnode>
+        <childnode refid="140698" relation="include">
+        </childnode>
+      </node>
+      <node id="140676">
+        <label>AsgTools/AsgTool.h</label>
+        <link refid="d4/d29/AsgTool_8h_source"/>
+        <childnode refid="140677" relation="include">
+        </childnode>
+        <childnode refid="140678" relation="include">
+        </childnode>
+        <childnode refid="140681" relation="include">
+        </childnode>
+        <childnode refid="140683" relation="include">
+        </childnode>
+      </node>
+      <node id="140703">
+        <label>InDetTrackSystematicsTools/IInDetTrackTruthFilterTool.h</label>
+        <link refid="d1/d9e/IInDetTrackTruthFilterTool_8h_source"/>
+        <childnode refid="140678" relation="include">
+        </childnode>
+        <childnode refid="140689" relation="include">
+        </childnode>
+        <childnode refid="140656" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+      </node>
+      <node id="140568">
+        <label>AthLinks/DataLink.h</label>
+        <link refid="da/de8/DataLink_8h_source"/>
+        <childnode refid="140546" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+        <childnode refid="140569" relation="include">
+        </childnode>
+        <childnode refid="140570" relation="include">
+        </childnode>
+      </node>
+      <node id="140633">
+        <label>AthContainers/tools/DVL_iter_swap.h</label>
+        <link refid="d6/ddb/DVL__iter__swap_8h"/>
+        <childnode refid="140629" relation="include">
+        </childnode>
+        <childnode refid="140615" relation="include">
+        </childnode>
+        <childnode refid="140560" relation="include">
+        </childnode>
+      </node>
+      <node id="140612">
+        <label>AthContainers/OwnershipPolicy.h</label>
+        <link refid="d3/da4/OwnershipPolicy_8h_source"/>
+      </node>
+      <node id="140650">
+        <label>AthLinks/ElementLink.h</label>
+        <link refid="dc/d24/ElementLink_8h_source"/>
+        <childnode refid="140546" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+        <childnode refid="140651" relation="include">
+        </childnode>
+        <childnode refid="140570" relation="include">
+        </childnode>
+        <childnode refid="140652" relation="include">
+        </childnode>
+      </node>
+      <node id="140738">
+        <label>xAODBTagging/versions/BTagVertexContainer_v1.h</label>
+        <link refid="d1/d37/BTagVertexContainer__v1_8h_source"/>
+        <childnode refid="140611" relation="include">
+        </childnode>
+        <childnode refid="140737" relation="include">
+        </childnode>
+      </node>
+      <node id="140683">
+        <label>AsgTools/SetProperty.h</label>
+        <link refid="df/db0/SetProperty_8h_source"/>
+      </node>
+      <node id="140712">
+        <label>InDetTrackSystematicsTools/JetTrackFilterTool.h</label>
+        <link refid="d0/d25/JetTrackFilterTool_8h_source"/>
+        <childnode refid="140713" relation="include">
+        </childnode>
+        <childnode refid="140676" relation="include">
+        </childnode>
+        <childnode refid="140704" relation="include">
+        </childnode>
+        <childnode refid="140686" relation="include">
+        </childnode>
+        <childnode refid="140691" relation="include">
+        </childnode>
+        <childnode refid="140674" relation="include">
+        </childnode>
+        <childnode refid="140714" relation="include">
+        </childnode>
+        <childnode refid="140692" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+      </node>
+      <node id="140698">
+        <label>TRandom3.h</label>
+      </node>
+      <node id="140537">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSystematicsTools/util/InDetTrackSystsToolTester.cxx</label>
+        <link refid="InDetTrackSystsToolTester.cxx"/>
+        <childnode refid="140538" relation="include">
+        </childnode>
+        <childnode refid="140539" relation="include">
+        </childnode>
+        <childnode refid="140540" relation="include">
+        </childnode>
+        <childnode refid="140541" relation="include">
+        </childnode>
+        <childnode refid="140542" relation="include">
+        </childnode>
+        <childnode refid="140543" relation="include">
+        </childnode>
+        <childnode refid="140544" relation="include">
+        </childnode>
+        <childnode refid="140655" relation="include">
+        </childnode>
+        <childnode refid="140675" relation="include">
+        </childnode>
+        <childnode refid="140699" relation="include">
+        </childnode>
+        <childnode refid="140702" relation="include">
+        </childnode>
+        <childnode refid="140706" relation="include">
+        </childnode>
+        <childnode refid="140712" relation="include">
+        </childnode>
+        <childnode refid="140746" relation="include">
+        </childnode>
+        <childnode refid="140747" relation="include">
+        </childnode>
+        <childnode refid="140749" relation="include">
+        </childnode>
+        <childnode refid="140750" relation="include">
+        </childnode>
+      </node>
+      <node id="140655">
+        <label>xAODTracking/TrackParticleContainer.h</label>
+        <link refid="da/d31/TrackParticleContainer_8h_source"/>
+        <childnode refid="140656" relation="include">
+        </childnode>
+        <childnode refid="140671" relation="include">
+        </childnode>
+        <childnode refid="140654" relation="include">
+        </childnode>
+      </node>
+      <node id="140690">
+        <label>PATInterfaces/SystematicCode.h</label>
+        <link refid="df/df5/SystematicCode_8h_source"/>
+      </node>
+      <node id="140623">
+        <label>GaudiKernel/ClassID.h</label>
+      </node>
+      <node id="140638">
+        <label>boost/type_traits.hpp</label>
+      </node>
+      <node id="140538">
+        <label>memory</label>
+      </node>
+      <node id="140732">
+        <label>xAODTracking/NeutralParticleContainerFwd.h</label>
+        <link refid="d2/db4/NeutralParticleContainerFwd_8h_source"/>
+        <childnode refid="140611" relation="include">
+        </childnode>
+        <childnode refid="140673" relation="include">
+        </childnode>
+        <childnode refid="140733" relation="include">
+        </childnode>
+      </node>
+      <node id="140590">
+        <label>AthContainers/tools/AuxTypeVectorFactory.h</label>
+        <link refid="dc/d69/AuxTypeVectorFactory_8h"/>
+        <childnode refid="140576" relation="include">
+        </childnode>
+        <childnode refid="140577" relation="include">
+        </childnode>
+        <childnode refid="140591" relation="include">
+        </childnode>
+      </node>
+      <node id="140692">
+        <label>InDetTrackSystematicsTools/InDetTrackSystematicsTool.h</label>
+        <link refid="dd/d95/InDetTrackSystematicsTool_8h_source"/>
+        <childnode refid="140549" relation="include">
+        </childnode>
+        <childnode refid="140693" relation="include">
+        </childnode>
+        <childnode refid="140538" relation="include">
+        </childnode>
+        <childnode refid="140694" relation="include">
+        </childnode>
+        <childnode refid="140676" relation="include">
+        </childnode>
+        <childnode refid="140689" relation="include">
+        </childnode>
+        <childnode refid="140691" relation="include">
+        </childnode>
+        <childnode refid="140540" relation="include">
+        </childnode>
+      </node>
+      <node id="140616">
+        <label>AthContainersInterfaces/AuxStore_traits.h</label>
+        <link refid="dd/d70/AuxStore__traits_8h"/>
+        <childnode refid="140552" relation="include">
+        </childnode>
+        <childnode refid="140566" relation="include">
+        </childnode>
+        <childnode refid="140553" relation="include">
+        </childnode>
+        <childnode refid="140587" relation="include">
+        </childnode>
+        <childnode refid="140617" relation="include">
+        </childnode>
+        <childnode refid="140618" relation="include">
+        </childnode>
+        <childnode refid="140549" relation="include">
+        </childnode>
+      </node>
+      <node id="140735">
+        <label>xAODBTagging/BTagVertexContainer.h</label>
+        <link refid="d5/da2/BTagVertexContainer_8h_source"/>
+        <childnode refid="140736" relation="include">
+        </childnode>
+        <childnode refid="140738" relation="include">
+        </childnode>
+        <childnode refid="140654" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="d7/d4d/InDetTrackSystsToolTester_8cxx_1a3bc147c92ad62e07ed967798aecdbb79" prot="public" static="no">
+        <name>CHECK</name>
+        <param><defname>ARG</defname></param>
+        <initializer>do {                                                  \
+      const bool result = ARG;                           \
+      if( ! result ) {                                   \
+         ::Error( APP_NAME, &quot;Failed to execute: \&quot;%s\&quot;&quot;, \
+                  #ARG );                                \
+         return 1;                                       \
+      }                                                  \
+   } while( false )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSystematicsTools/util/InDetTrackSystsToolTester.cxx" line="49" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSystematicsTools/util/InDetTrackSystsToolTester.cxx" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d7/d4d/InDetTrackSystsToolTester_8cxx_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>comment / uncomment these lines to test </para>        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSystematicsTools/util/InDetTrackSystsToolTester.cxx" line="52" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSystematicsTools/util/InDetTrackSystsToolTester.cxx" bodystart="52" bodyend="225"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>System<sp/>includes:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ROOT<sp/>includes:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TFile.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TError.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TString.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TH1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Infrastructure<sp/>includes:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ROOTCORE</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODRootAccess/Init.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODRootAccess/TEvent.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODRootAccess/TStore.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ROOTCORE</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>EDM<sp/>includes:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODEventInfo/EventInfo.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODTracking/TrackParticleContainer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Local<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;InDetTrackSystematicsTools/InDetTrackSmearingTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;InDetTrackSystematicsTools/InDetTrackBiasingTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;InDetTrackSystematicsTools/InDetTrackTruthFilterTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;InDetTrackSystematicsTools/InDetTrackTruthOriginTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;InDetTrackSystematicsTools/JetTrackFilterTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Smart<sp/>slim<sp/>testing<sp/>includes:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODCore/tools/IOStats.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODCore/tools/ReadStats.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Other<sp/>includes:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODCore/ShallowCopy.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d3/d77/make__unique_8h" kindref="compound" tooltip="Provide a version of the C++14 make_unique.">CxxUtils/make_unique.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::string;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>CxxUtils::make_unique;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CHECK(<sp/>ARG<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>bool<sp/>result<sp/>=<sp/>ARG;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>!<sp/>result<sp/>)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::Error(<sp/>APP_NAME,<sp/>&quot;Failed<sp/>to<sp/>execute:<sp/>\&quot;%s\&quot;&quot;,<sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ARG<sp/>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/>}<sp/>while(<sp/>false<sp/>)</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[]<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>application&apos;s<sp/>name:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>APP_NAME<sp/>=<sp/>argv[<sp/>0<sp/>];</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fileName;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>we<sp/>received<sp/>a<sp/>file<sp/>name:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>argc<sp/>&lt;<sp/>2<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>fileName<sp/>=<sp/>std::getenv(</highlight><highlight class="stringliteral">&quot;ROOTCORE_TEST_FILE&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fileName.empty())<sp/>Error(<sp/>APP_NAME,<sp/></highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>open<sp/>$ROOTCORE_TEST_FILE&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>fileName<sp/>=<sp/>argv[<sp/>1<sp/>];</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/>StatusCode::enableFailure();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><ref refid="db/d8a/classCP_1_1CorrectionCode_1af2337c3c4b130cd6bc26538b7b73a214" kindref="member" tooltip="Enable failure (with a backtrace) on an unchecked correction code.">CP::CorrectionCode::enableFailure</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><ref refid="d1/d38/classCP_1_1SystematicCode_1a72dc5f356e55dba77bace74fef3237d3" kindref="member" tooltip="Enable failure (with a backtrace) on an unchecked systematic code.">CP::SystematicCode::enableFailure</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialise<sp/>the<sp/>application:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/>CHECK(<sp/><ref refid="dd/d44/namespacexAOD_1a2b6ff6013c964ff2254bd3540cd1738d" kindref="member">xAOD::Init</ref>(<sp/>APP_NAME<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Open<sp/>the<sp/>input<sp/>file:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/>Info(<sp/>APP_NAME,<sp/></highlight><highlight class="stringliteral">&quot;Opening<sp/>file:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>fileName.data()<sp/>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/>std::unique_ptr&lt;<sp/>TFile<sp/>&gt;<sp/>ifile(<sp/>TFile::Open(<sp/>fileName.data(),<sp/></highlight><highlight class="stringliteral">&quot;READ&quot;</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/>CHECK(<sp/>ifile.get()<sp/>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>TEvent<sp/>object:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>xAOD::TEvent<sp/>event(<sp/>xAOD::TEvent::kClassAccess<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><ref refid="de/d95/classxAOD_1_1TEvent" kindref="compound" tooltip="Tool for accessing xAOD files outside of Athena.">xAOD::TEvent</ref><sp/>event(<sp/><ref refid="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348a89f268521007c479d536d29ee506ee82" kindref="member" tooltip="Access containers/objects like Athena does.">xAOD::TEvent::kAthenaAccess</ref><sp/>);<sp/></highlight><highlight class="comment">//<sp/>at<sp/>time<sp/>of<sp/>writing<sp/>this<sp/>is<sp/>required<sp/>for<sp/>the<sp/>rootcore<sp/>test<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/>CHECK(<sp/>event.readFrom(<sp/>ifile.get()<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/>Info(<sp/>APP_NAME,<sp/></highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>events<sp/>in<sp/>the<sp/>file:<sp/>%i&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_cast&lt;<sp/>int<sp/>&gt;(<sp/>event.getEntries()<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>transient<sp/>object<sp/>store.<sp/>Needed<sp/>for<sp/>the<sp/>tools.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><ref refid="dd/dae/classxAOD_1_1TStore" kindref="compound">xAOD::TStore</ref><sp/>store;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Decide<sp/>how<sp/>many<sp/>events<sp/>to<sp/>run<sp/>over:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/>Long64_t<sp/>entries<sp/>=<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">.getEntries();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>argc<sp/>&gt;<sp/>2<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Long64_t<sp/>e<sp/>=<sp/>atoll(<sp/>argv[<sp/>2<sp/>]<sp/>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>e<sp/>&lt;<sp/>entries<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entries<sp/>=<sp/>e;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>maximum<sp/>to<sp/>500</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(entries<sp/>&gt;<sp/>500)<sp/>entries<sp/>=<sp/>500;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>the<sp/>tool(s)<sp/>to<sp/>test:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><ref refid="de/d6d/classInDet_1_1InDetTrackSmearingTool" kindref="compound">InDet::InDetTrackSmearingTool</ref><sp/>smearingTool(<sp/></highlight><highlight class="stringliteral">&quot;InDetTrackSmearingTool&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><ref refid="d6/d30/classInDet_1_1InDetTrackBiasingTool" kindref="compound">InDet::InDetTrackBiasingTool</ref><sp/>biasingTool(<sp/></highlight><highlight class="stringliteral">&quot;InDetTrackBiasingTool&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CHECK(<sp/>biasingTool.setProperty(<sp/>&quot;isData&quot;,<sp/>true<sp/>)<sp/>);<sp/>//<sp/>override<sp/>to<sp/>test,<sp/>since<sp/>ROOTCORE_TEST_FILE<sp/>is<sp/>simluation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>uint32_t<sp/>testRunNumber<sp/>=<sp/>310000;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CHECK(<sp/>biasingTool.setProperty(<sp/>&quot;runNumber&quot;,<sp/>testRunNumber<sp/>)<sp/>);<sp/>//<sp/>this<sp/>line<sp/>is<sp/>only<sp/>for<sp/>testing<sp/>that<sp/>other<sp/>files<sp/>are<sp/>properly<sp/>accessibl</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><ref refid="de/d74/classInDet_1_1InDetTrackTruthFilterTool" kindref="compound">InDet::InDetTrackTruthFilterTool</ref><sp/>filterTool(<sp/></highlight><highlight class="stringliteral">&quot;InDetTrackFilterTool&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>originTool<sp/>=<sp/>make_unique&lt;InDet::InDetTrackTruthOriginTool&gt;<sp/>(<sp/></highlight><highlight class="stringliteral">&quot;InDetTrackTruthOriginTool&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/>CHECK(<sp/>originTool-&gt;initialize()<sp/>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/>ToolHandle&lt;<sp/>InDet::IInDetTrackTruthOriginTool<sp/>&gt;<sp/>trackTruthOriginToolHandle(<sp/>originTool.get()<sp/>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/>CHECK(<sp/>filterTool.setProperty(</highlight><highlight class="stringliteral">&quot;trackOriginTool&quot;</highlight><highlight class="normal">,<sp/>trackTruthOriginToolHandle)<sp/>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><ref refid="db/d54/classInDet_1_1JetTrackFilterTool" kindref="compound">InDet::JetTrackFilterTool</ref><sp/>jetFilterTool(<sp/></highlight><highlight class="stringliteral">&quot;JetTrackFilterTool&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Not<sp/>a<sp/>realistic<sp/>set<sp/>of<sp/>systematics<sp/>-<sp/>we<sp/>just<sp/>want<sp/>to<sp/>make<sp/>sure<sp/>they<sp/>can<sp/>all<sp/>be<sp/>applied<sp/>without<sp/>breaking<sp/>the<sp/>tools</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound" tooltip="Class to wrap a set of SystematicVariations.">CP::SystematicSet</ref><sp/>systSet<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>InDet::TrackSystematicMap[InDet::TRK_RES_D0_MEAS],<sp/>//<sp/>could<sp/>use<sp/>this<sp/>map,<sp/>but<sp/>the<sp/>CP::SystematicVaration<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>InDet::TrackSystematicMap[InDet::TRK_RES_Z0_MEAS],<sp/>//<sp/>interface<sp/>is<sp/>more<sp/>universal:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;TRK_RES_D0_MEAS&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;TRK_RES_Z0_MEAS&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CP::SystematicVariation(&quot;TRK_RES_D0_MEAS&quot;,<sp/>1),<sp/>//<sp/>these<sp/>options<sp/>are<sp/>recommended<sp/>for<sp/>advanced<sp/>users<sp/>only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CP::SystematicVariation(&quot;TRK_RES_Z0_MEAS&quot;,<sp/>1),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CP::SystematicVariation(&quot;TRK_RES_D0_MEAS&quot;,<sp/>-1),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CP::SystematicVariation(&quot;TRK_RES_Z0_MEAS&quot;,<sp/>-1),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;TRK_RES_D0_DEAD&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;TRK_RES_Z0_DEAD&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;TRK_BIAS_D0_WM&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;TRK_BIAS_Z0_WM&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;TRK_BIAS_QOVERP_SAGITTA_WM&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;TRK_FAKE_RATE_LOOSE&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CP::SystematicVariation(&quot;TRK_FAKE_RATE_TIGHT&quot;),<sp/>//<sp/>have<sp/>to<sp/>pick<sp/>one<sp/>of<sp/>these,<sp/>and<sp/>TIGHT<sp/>isn&apos;t<sp/>implmeneted<sp/>yet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;TRK_EFF_LOOSE_GLOBAL&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;TRK_EFF_LOOSE_IBL&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;TRK_EFF_LOOSE_PP0&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;TRK_EFF_LOOSE_PHYSMODEL&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CP::SystematicVariation(&quot;TRK_EFF_TIGHT_GLOBAL&quot;),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CP::SystematicVariation(&quot;TRK_EFF_TIGHT_IBL&quot;),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CP::SystematicVariation(&quot;TRK_EFF_TIGHT_PP0&quot;),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CP::SystematicVariation(&quot;TRK_EFF_TIGHT_PHYSMODEL&quot;),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;TRK_EFF_LOOSE_TIDE&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/>std::vector&lt;<sp/>InDet::InDetTrackSystematicsTool*<sp/>&gt;<sp/>tools<sp/>=<sp/>{&amp;smearingTool,<sp/>&amp;biasingTool,<sp/>&amp;filterTool,<sp/>&amp;jetFilterTool};</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>and<sp/>initialise<sp/>the<sp/>tool(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="d3/d6b/classInDet_1_1InDetTrackSystematicsTool" kindref="compound">InDet::InDetTrackSystematicsTool</ref>*<sp/>tool<sp/>:<sp/>tools)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>tool-&gt;msg().setLevel(<sp/>MSG::DEBUG<sp/>);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>CHECK(<sp/>tool-&gt;initialize()<sp/>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>systCode<sp/>=<sp/>tool-&gt;applySystematicVariation(systSet);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(systCode<sp/>!=<sp/><ref refid="d1/d38/classCP_1_1SystematicCode_1a07da906f4dfdca0598ec3a4ac9bfb686ae0356fe67c0b21740893766ab2f334aa" kindref="member" tooltip="The requested systematic will be applied.">CP::SystematicCode::Ok</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Error(<sp/>APP_NAME,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>apply<sp/>systematic<sp/>variation<sp/>on<sp/>tool<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>tool-&gt;name().data()<sp/>);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>doTIDE<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>jetCollectionName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;AntiKt4EMTopoJets&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>outfile<sp/>=<sp/>make_unique&lt;TFile&gt;(</highlight><highlight class="stringliteral">&quot;InDetTrackSystsToolTester.out.root&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;RECREATE&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/>TH1*<sp/>d0_B<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH1F(</highlight><highlight class="stringliteral">&quot;d0_B&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;original<sp/>d_{0}&quot;</highlight><highlight class="normal">,100,-5,5);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/>TH1*<sp/>z0_B<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH1F(</highlight><highlight class="stringliteral">&quot;z0_B&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;original<sp/>z_{0}&quot;</highlight><highlight class="normal">,100,-200,200);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/>TH1*<sp/>d0sm<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH1F(</highlight><highlight class="stringliteral">&quot;d0sm&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;d_{0}<sp/>after<sp/>smearing&quot;</highlight><highlight class="normal">,100,-5,5);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/>TH1*<sp/>z0sm<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH1F(</highlight><highlight class="stringliteral">&quot;z0sm&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;z_{0}<sp/>after<sp/>smearing&quot;</highlight><highlight class="normal">,100,-200,200);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/>TH1*<sp/>subtract_d0<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH1F(</highlight><highlight class="stringliteral">&quot;subtract_d0&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;#delta<sp/>d_{0}&quot;</highlight><highlight class="normal">,100,-1.0,1.0);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/>TH1*<sp/>subtract_z0<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH1F(</highlight><highlight class="stringliteral">&quot;subtract_z0&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;#delta<sp/>z_{0}&quot;</highlight><highlight class="normal">,100,-10.0,10.0);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Loop<sp/>over<sp/>the<sp/>events:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/>Long64_t<sp/>entry<sp/>=<sp/>0;<sp/>entry<sp/>&lt;<sp/>entries;<sp/>++entry<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Tell<sp/>the<sp/>object<sp/>which<sp/>entry<sp/>to<sp/>look<sp/>at:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">.getEntry(<sp/>entry<sp/>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>shallow<sp/>copy<sp/>of<sp/>InDetTrackParticles:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d0/d4d/classDataVector" kindref="compound" tooltip="Derived DataVector&amp;lt;T&amp;gt;.">xAOD::TrackParticleContainer</ref><sp/>*ParticlesID<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>CHECK(<sp/>event.retrieve(<sp/>ParticlesID<sp/>,<sp/></highlight><highlight class="stringliteral">&quot;InDetTrackParticles&quot;</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d0/d4d/classDataVector" kindref="compound" tooltip="Derived DataVector&amp;lt;T&amp;gt;.">xAOD::JetContainer</ref>*<sp/>jets<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(doTIDE)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>CHECK(<sp/>event.retrieve(<sp/>jets,<sp/>jetCollectionName<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::pair&lt;<sp/>xAOD::TrackParticleContainer*,<sp/>xAOD::ShallowAuxContainer*<sp/>&gt;<sp/>ParticlesID_shallowCopy<sp/>=<sp/><ref refid="dd/d44/namespacexAOD_1a085ed78569d97f9ff21bea6a65b4aea3" kindref="member">xAOD::shallowCopyContainer</ref>(<sp/>*ParticlesID<sp/>);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/><ref refid="d9/d1d/classxAOD_1_1TrackParticle__v1" kindref="compound">xAOD::TrackParticle</ref>*<sp/>trkCpy<sp/>:<sp/>*(ParticlesID_shallowCopy.first)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!filterTool.accept(trkCpy)<sp/>)<sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>doTIDE<sp/>&amp;&amp;<sp/>!jetFilterTool.accept(<sp/>trkCpy,<sp/>jets<sp/>)<sp/>)<sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d0_1=0,d0_2=0,z0_1=0,z0_2=0;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>d0_1<sp/>=<sp/>trkCpy-&gt;d0();</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>z0_1<sp/>=<sp/>trkCpy-&gt;z0();</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(biasingTool.applyCorrection(*trkCpy)<sp/>==<sp/><ref refid="db/d8a/classCP_1_1CorrectionCode_1a0a040c70626c77bad65a0fbf757d7b83a9faf702fadfcc1135b182dd78ec9d718" kindref="member" tooltip="Some error happened during the object correction.">CP::CorrectionCode::Error</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Error(__func__,<sp/></highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>apply<sp/>bias<sp/>correction!&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(smearingTool.applyCorrection(*trkCpy)<sp/>==<sp/><ref refid="db/d8a/classCP_1_1CorrectionCode_1a0a040c70626c77bad65a0fbf757d7b83a9faf702fadfcc1135b182dd78ec9d718" kindref="member" tooltip="Some error happened during the object correction.">CP::CorrectionCode::Error</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Error(__func__,<sp/></highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>apply<sp/>smearing<sp/>correction!&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>d0_B-&gt;Fill(<sp/>d0_1<sp/>);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>z0_B-&gt;Fill(<sp/>z0_1<sp/>);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>d0_2<sp/>=<sp/>trkCpy-&gt;d0();</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>z0_2<sp/>=<sp/>trkCpy-&gt;z0();</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>d0sm-&gt;Fill(<sp/>d0_2<sp/>);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>z0sm-&gt;Fill(<sp/>z0_2<sp/>);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>subtract_d0-&gt;Fill(<sp/>d0_2-d0_1<sp/>);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>subtract_z0-&gt;Fill(<sp/>z0_2-z0_1<sp/>);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>ParticlesID_shallowCopy.first;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>ParticlesID_shallowCopy.second;<sp/></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/>outfile-&gt;Write();</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>testing<sp/>smart<sp/>slimming<sp/>feature:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><ref refid="d2/d34/classxAOD_1_1IOStats_1ae4117e7fcedb5d1b7aa79231e9cb0c89" kindref="member" tooltip="Singleton object accessor.">xAOD::IOStats::instance</ref>().stats().printSmartSlimmingBranchList();</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>gracefully:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSystematicsTools/util/InDetTrackSystsToolTester.cxx"/>
+  </compounddef>
+</doxygen>

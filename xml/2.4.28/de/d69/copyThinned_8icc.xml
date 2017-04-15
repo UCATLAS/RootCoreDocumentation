@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="de/d69/copyThinned_8icc" kind="file">
+    <compoundname>copyThinned.icc</compoundname>
+    <includedby refid="d8/d9e/copyThinned_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/tools/copyThinned.h</includedby>
+    <invincdepgraph>
+      <node id="53268">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/copyThinned_test.cxx</label>
+        <link refid="d3/d98/copyThinned__test_8cxx"/>
+      </node>
+      <node id="53266">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/tools/copyThinned.icc</label>
+        <link refid="copyThinned.icc"/>
+        <childnode refid="53267" relation="include">
+        </childnode>
+      </node>
+      <node id="53267">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/tools/copyThinned.h</label>
+        <link refid="d8/d9e/copyThinned_8h"/>
+        <childnode refid="53268" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="dd/d59/namespaceSG">SG</innernamespace>
+    <briefdescription>
+<para>Helper to copy an object while applying thinning. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>scott snyder &lt;<ulink url="mailto:snyder@bnl.gov">snyder@bnl.gov</ulink>&gt; </para></simplesect>
+<simplesect kind="date"><para>Jul, 2014 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>$Id$</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SG<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>CONTAINER&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">CONTAINER*</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="dd/d59/namespaceSG_1a7657080dab6e0c36636f2ef30a689e83" kindref="member" tooltip="Helper to copy an object while applying thinning.">copyThinned1</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CONTAINER&amp;<sp/>orig,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/></highlight><highlight class="comment">/*dummy*/</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IThinningSvc*<sp/></highlight><highlight class="comment">/*svc*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CONTAINER<sp/>(orig);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>CONTAINER&gt;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">CONTAINER*</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="dd/d59/namespaceSG_1a7657080dab6e0c36636f2ef30a689e83" kindref="member" tooltip="Helper to copy an object while applying thinning.">copyThinned1</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CONTAINER&amp;<sp/>orig,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d0/d4d/classDataVector" kindref="compound" tooltip="Derived DataVector&amp;lt;T&amp;gt;.">DataVector&lt;typename CONTAINER::base_value_type&gt;</ref>*<sp/></highlight><highlight class="comment">/*dummy*/</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IThinningSvc*<sp/>svc)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size<sp/>=<sp/>orig.size();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>&gt;<sp/>0<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>svc<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>svc-&gt;thinningOccurred<sp/>(&amp;orig))</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/db1/classConstDataVector" kindref="compound" tooltip="DataVector adapter that acts like it holds const pointers.">ConstDataVector&lt;CONTAINER&gt;</ref>*<sp/>newcont<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="de/db1/classConstDataVector" kindref="compound" tooltip="DataVector adapter that acts like it holds const pointers.">ConstDataVector&lt;CONTAINER&gt;</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>newcont-&gt;<ref refid="de/db1/classConstDataVector_1ae8944232be996809a74b641ac20e7aa2" kindref="member" tooltip="Erase all the elements in the collection.">clear</ref><sp/>(<ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8ad7d4cf2303700f0966e4140f236c4bf1" kindref="member" tooltip="this data object is a view, it does not own its elmts">SG::VIEW_ELEMENTS</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>newcont-&gt;reserve<sp/>(size);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!IThinningSvc::isThinned<sp/>(svc-&gt;index<sp/>(&amp;orig,<sp/>i)))<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newcont-&gt;<ref refid="de/db1/classConstDataVector_1a83ff6832bd6d52468225dca32c516121" kindref="member" tooltip="Add an element to the end of the collection.">push_back</ref><sp/>(orig[i]);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FIXME:<sp/>This<sp/>is<sp/>a<sp/>const-correctness<sp/>violation,<sp/>but<sp/>it&apos;s<sp/>too</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>hard<sp/>to<sp/>actually<sp/>fix<sp/>the<sp/>interfaces<sp/>at<sp/>this<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>It&apos;s<sp/>problematic<sp/>to<sp/>have<sp/>@c<sp/>createPersistent<sp/>return</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>const<sp/>pointer,<sp/>because<sp/>the<sp/>converter<sp/>code<sp/>will<sp/>then<sp/>try</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>register<sp/>the<sp/>results<sp/>of<sp/>extending<sp/>converters,<sp/>requiring</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>non-const<sp/>pointer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="normal">CONTAINER*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(newcont-&gt;<ref refid="de/db1/classConstDataVector_1afc25e0985e21c58a97654203aa8c2635" kindref="member" tooltip="Return a pointer to this object, as a const DataVector.">asDataVector</ref>());</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CONTAINER<sp/>(orig);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>CONTAINER&gt;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">CONTAINER*</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><ref refid="dd/d59/namespaceSG_1a7657080dab6e0c36636f2ef30a689e83" kindref="member" tooltip="Helper to copy an object while applying thinning.">copyThinned1</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CONTAINER&amp;<sp/>orig,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dc/d05/classSG_1_1IAuxStore" kindref="compound" tooltip="Interface for non-const operations on an auxiliary store.">SG::IAuxStore</ref>*<sp/></highlight><highlight class="comment">/*dummy*/</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IThinningSvc*<sp/>svc)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>T-&gt;P<sp/>conversion<sp/>is<sp/>done<sp/>from<sp/>within<sp/>copyAuxStoreThinned,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>so<sp/>we<sp/>need<sp/>to<sp/>call<sp/>it<sp/>regardless<sp/>of<sp/>whether<sp/>or<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>thinning<sp/>is<sp/>actually<sp/>done.<sp/><sp/>Don&apos;t<sp/>call<sp/>it<sp/>though<sp/>if<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>container<sp/>is<sp/>empty.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(orig.size()<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>CONTAINER*<sp/>newcont<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CONTAINER;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d59/namespaceSG_1a38b539ad86491a55bf89748a05e7906a" kindref="member" tooltip="Helper to copy an aux store while applying thinning.">copyAuxStoreThinned</ref><sp/>(orig,<sp/>*newcont,<sp/>svc);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>newcont;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CONTAINER<sp/>(orig);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>CONTAINER&gt;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">CONTAINER*<sp/><ref refid="dd/d59/namespaceSG_1a698cf63fca9debb795083d1e9fd7ee35" kindref="member" tooltip="Helper to copy an object while applying thinning.">copyThinned</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CONTAINER&amp;<sp/>orig,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IThinningSvc*<sp/>svc)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dd/d59/namespaceSG_1a7657080dab6e0c36636f2ef30a689e83" kindref="member" tooltip="Helper to copy an object while applying thinning.">copyThinned1</ref><sp/>(orig,<sp/>&amp;orig,<sp/>svc);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>SG</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/tools/copyThinned.icc"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d4/d97/convertFF_8cxx" kind="file">
+    <compoundname>convertFF.cxx</compoundname>
+    <includes refid="da/d90/FudgeMCTool_8h" local="yes">ElectronPhotonShowerShapeFudgeTool/FudgeMCTool.h</includes>
+    <includes local="yes">TFile.h</includes>
+    <includes local="yes">TH2D.h</includes>
+    <includes local="yes">TString.h</includes>
+    <incdepgraph>
+      <node id="126834">
+        <label>cmath</label>
+      </node>
+      <node id="126837">
+        <label>TH2D.h</label>
+      </node>
+      <node id="126830">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonShowerShapeFudgeTool/util/convertFF.cxx</label>
+        <link refid="convertFF.cxx"/>
+        <childnode refid="126831" relation="include">
+        </childnode>
+        <childnode refid="126838" relation="include">
+        </childnode>
+        <childnode refid="126837" relation="include">
+        </childnode>
+        <childnode refid="126839" relation="include">
+        </childnode>
+      </node>
+      <node id="126838">
+        <label>TFile.h</label>
+      </node>
+      <node id="126831">
+        <label>ElectronPhotonShowerShapeFudgeTool/FudgeMCTool.h</label>
+        <link refid="da/d90/FudgeMCTool_8h_source"/>
+        <childnode refid="126832" relation="include">
+        </childnode>
+        <childnode refid="126833" relation="include">
+        </childnode>
+        <childnode refid="126834" relation="include">
+        </childnode>
+        <childnode refid="126835" relation="include">
+        </childnode>
+        <childnode refid="126836" relation="include">
+        </childnode>
+        <childnode refid="126837" relation="include">
+        </childnode>
+      </node>
+      <node id="126836">
+        <label>TGraphErrors.h</label>
+      </node>
+      <node id="126832">
+        <label>iostream</label>
+      </node>
+      <node id="126835">
+        <label>PtEtaCollection.h</label>
+        <link refid="d3/d6a/PtEtaCollection_8h_source"/>
+        <childnode refid="126832" relation="include">
+        </childnode>
+      </node>
+      <node id="126839">
+        <label>TString.h</label>
+      </node>
+      <node id="126833">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d4/d97/convertFF_8cxx_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonShowerShapeFudgeTool/util/convertFF.cxx" line="6" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonShowerShapeFudgeTool/util/convertFF.cxx" bodystart="6" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;ElectronPhotonShowerShapeFudgeTool/FudgeMCTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TFile.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TH2D.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TString.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><ref refid="d4/d79/classFudgeMCTool" kindref="compound">FudgeMCTool</ref><sp/>fftool(0,0,0,0);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>TFile*<sp/>f<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TFile(</highlight><highlight class="stringliteral">&quot;ElectronPhotonShowerShapeFudgeTool/data/PhotonFudgeFactors.root&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;UPDATE&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>preselection<sp/>=<sp/>0;<sp/>preselection<sp/>&lt;<sp/>22;<sp/>preselection++)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(preselection<sp/>==<sp/>9)<sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>TString<sp/>directory<sp/>=<sp/>Form(</highlight><highlight class="stringliteral">&quot;TUNE%d&quot;</highlight><highlight class="normal">,preselection);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>retvalue<sp/>=<sp/>f-&gt;Cd(directory);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retvalue)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;WARNING:<sp/>directory<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>directory<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>already<sp/>exists.<sp/>Skipping...&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>f-&gt;mkdir(directory);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>f-&gt;Cd(directory);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>TString<sp/>name;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_u_rhad1<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::RHAD1,0,preselection);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_RHAD1_UNCONV&quot;</highlight><highlight class="normal">;<sp/>h_u_rhad1-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_u_rhad<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::RHAD,0,preselection);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_RHAD_UNCONV&quot;</highlight><highlight class="normal">;<sp/>h_u_rhad-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_u_e277<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::E277,0,preselection);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_E277_UNCONV&quot;</highlight><highlight class="normal">;<sp/>h_u_e277-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_u_reta<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::RETA,0,preselection);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_RETA_UNCONV&quot;</highlight><highlight class="normal">;<sp/>h_u_reta-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_u_rphi<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::RPHI,0,preselection);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_RPHI_UNCONV&quot;</highlight><highlight class="normal">;<sp/>h_u_rphi-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_u_weta2<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::WETA2,0,preselection);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_WETA2_UNCONV&quot;</highlight><highlight class="normal">;<sp/>h_u_weta2-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_u_f1<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::F1,0,preselection);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_F1_UNCONV&quot;</highlight><highlight class="normal">;<sp/>h_u_f1-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_u_fside<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::FSIDE,0,preselection);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_FSIDE_UNCONV&quot;</highlight><highlight class="normal">;<sp/>h_u_fside-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_u_wtot<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::WTOT,0,preselection);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_WTOT_UNCONV&quot;</highlight><highlight class="normal">;<sp/>h_u_wtot-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_u_w1<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::W1,0,preselection);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_W1_UNCONV&quot;</highlight><highlight class="normal">;<sp/>h_u_w1-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_u_de<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::DE,0,preselection);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_DE_UNCONV&quot;</highlight><highlight class="normal">;<sp/>h_u_de-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_u_eratio<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::ERATIO,0,preselection);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_ERATIO_UNCONV&quot;</highlight><highlight class="normal">;<sp/>h_u_eratio-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_c_rhad1<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::RHAD1,1,preselection);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_RHAD1_CONV&quot;</highlight><highlight class="normal">;<sp/>h_c_rhad1-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_c_rhad<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::RHAD,1,preselection);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_RHAD_CONV&quot;</highlight><highlight class="normal">;<sp/>h_c_rhad-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_c_e277<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::E277,1,preselection);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_E277_CONV&quot;</highlight><highlight class="normal">;<sp/>h_c_e277-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_c_reta<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::RETA,1,preselection);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_RETA_CONV&quot;</highlight><highlight class="normal">;<sp/>h_c_reta-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_c_rphi<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::RPHI,1,preselection);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_RPHI_CONV&quot;</highlight><highlight class="normal">;<sp/>h_c_rphi-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_c_weta2<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::WETA2,1,preselection);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_WETA2_CONV&quot;</highlight><highlight class="normal">;<sp/>h_c_weta2-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_c_f1<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::F1,1,preselection);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_F1_CONV&quot;</highlight><highlight class="normal">;<sp/>h_c_f1-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_c_fside<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::FSIDE,1,preselection);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_FSIDE_CONV&quot;</highlight><highlight class="normal">;<sp/>h_c_fside-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_c_wtot<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::WTOT,1,preselection);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_WTOT_CONV&quot;</highlight><highlight class="normal">;<sp/>h_c_wtot-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_c_w1<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::W1,1,preselection);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_W1_CONV&quot;</highlight><highlight class="normal">;<sp/>h_c_w1-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_c_de<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::DE,1,preselection);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_DE_CONV&quot;</highlight><highlight class="normal">;<sp/>h_c_de-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>TH2D*<sp/>h_c_eratio<sp/>=<sp/>fftool.GetFFTH2D(IDVAR::ERATIO,1,preselection);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;FF_ERATIO_CONV&quot;</highlight><highlight class="normal">;<sp/>h_c_eratio-&gt;SetNameTitle(name,name);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>f-&gt;Cd(</highlight><highlight class="stringliteral">&quot;..&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>f-&gt;Write();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>f-&gt;Close();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonShowerShapeFudgeTool/util/convertFF.cxx"/>
+  </compounddef>
+</doxygen>

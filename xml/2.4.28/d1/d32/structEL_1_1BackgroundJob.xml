@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d1/d32/structEL_1_1BackgroundJob" kind="struct" prot="public">
+    <compoundname>EL::BackgroundJob</compoundname>
+    <includes refid="d3/d77/BackgroundJob_8h" local="no">BackgroundJob.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d1/d32/structEL_1_1BackgroundJob_1aa9158882f5b5f852d18959d3d714f84c" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="de/ddb/classEL_1_1Algorithm" kindref="compound">Algorithm</ref> * &gt;</type>
+        <definition>std::vector&lt;Algorithm*&gt; EL::BackgroundJob::algs</definition>
+        <argsstring></argsstring>
+        <name>algs</name>
+        <briefdescription>
+<para>the list of algorithms we are using </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/BackgroundJob.h" line="42" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/BackgroundJob.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d32/structEL_1_1BackgroundJob_1aed5b7e05c4afda3ac0e274a179c9ba3b" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="d5/dfe/classEL_1_1OutputStream" kindref="compound">OutputStream</ref> &gt;</type>
+        <definition>std::vector&lt;OutputStream&gt; EL::BackgroundJob::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+<para>the list of output streams we are using </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/BackgroundJob.h" line="46" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/BackgroundJob.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d32/structEL_1_1BackgroundJob_1a911402ce4b8a54d6acd8725cf78dc98b" prot="public" static="no" mutable="no">
+        <type><ref refid="db/d3a/classSH_1_1MetaObject" kindref="compound">SH::MetaObject</ref></type>
+        <definition>SH::MetaObject EL::BackgroundJob::meta</definition>
+        <argsstring></argsstring>
+        <name>meta</name>
+        <briefdescription>
+<para>the sample meta-information </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/BackgroundJob.h" line="50" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/BackgroundJob.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/d32/structEL_1_1BackgroundJob_1aa6a35717a1b1b0129611f3d29d149ef5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EL::BackgroundJob::ClassDef</definition>
+        <argsstring>(BackgroundJob, 1)</argsstring>
+        <name>ClassDef</name>
+        <param>
+          <type><ref refid="d1/d32/structEL_1_1BackgroundJob" kindref="compound">BackgroundJob</ref></type>
+        </param>
+        <param>
+          <type>1</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/BackgroundJob.h" line="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>the job description as communicated to the background process </para>    </briefdescription>
+    <detaileddescription>
+<para>This is streamed to the disk in the main thread and then read back in another thread. Ideally we&apos;d just stream it into the message, but the root documentation is a little sparse on the details for that.</para><para>There is some memory leak in the background thread, but that ought to be fine since this is only read once and doing otherwise would be tedious. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="2124">
+        <label>EL::BackgroundJob</label>
+        <link refid="d1/d32/structEL_1_1BackgroundJob"/>
+        <childnode refid="2125" relation="usage">
+          <edgelabel>meta</edgelabel>
+        </childnode>
+      </node>
+      <node id="2125">
+        <label>SH::MetaObject</label>
+        <link refid="db/d3a/classSH_1_1MetaObject"/>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/BackgroundJob.h" line="39" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/BackgroundJob.h" bodystart="38" bodyend="53"/>
+    <listofallmembers>
+      <member refid="d1/d32/structEL_1_1BackgroundJob_1aa9158882f5b5f852d18959d3d714f84c" prot="public" virt="non-virtual"><scope>EL::BackgroundJob</scope><name>algs</name></member>
+      <member refid="d1/d32/structEL_1_1BackgroundJob_1aa6a35717a1b1b0129611f3d29d149ef5" prot="public" virt="non-virtual"><scope>EL::BackgroundJob</scope><name>ClassDef</name></member>
+      <member refid="d1/d32/structEL_1_1BackgroundJob_1a911402ce4b8a54d6acd8725cf78dc98b" prot="public" virt="non-virtual"><scope>EL::BackgroundJob</scope><name>meta</name></member>
+      <member refid="d1/d32/structEL_1_1BackgroundJob_1aed5b7e05c4afda3ac0e274a179c9ba3b" prot="public" virt="non-virtual"><scope>EL::BackgroundJob</scope><name>output</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

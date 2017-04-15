@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d7/d5b/classana_1_1IsolationBase" kind="class" prot="public">
+    <compoundname>ana::IsolationBase</compoundname>
+    <derivedcompoundref refid="db/d31/classana_1_1AbsoluteIsolationDC14" prot="public" virt="non-virtual">ana::AbsoluteIsolationDC14</derivedcompoundref>
+    <derivedcompoundref refid="de/da7/classana_1_1ApproxPTVarCone" prot="public" virt="non-virtual">ana::ApproxPTVarCone</derivedcompoundref>
+    <derivedcompoundref refid="d6/dd2/classana_1_1RelativePTVarCone" prot="public" virt="non-virtual">ana::RelativePTVarCone</derivedcompoundref>
+    <derivedcompoundref refid="dc/d3e/classana_1_1StandardIsolation" prot="public" virt="non-virtual">ana::StandardIsolation</derivedcompoundref>
+    <includes refid="d9/d26/IsolationTools_8h" local="no">IsolationTools.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d7/d5b/classana_1_1IsolationBase_1ad440dba43515972ffbd08ed7f6cc8a74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ana::IsolationBase::IsolationBase</definition>
+        <argsstring>()</argsstring>
+        <name>IsolationBase</name>
+        <briefdescription>
+<para>Create. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IsolationTools.h" line="23" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/IsolationTools.cxx" bodystart="7" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d5b/classana_1_1IsolationBase_1a921e857925d6b64f7dab197eb01bed7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>ana::IsolationBase::~IsolationBase</definition>
+        <argsstring>()</argsstring>
+        <name>~IsolationBase</name>
+        <briefdescription>
+<para>Destroy! </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IsolationTools.h" line="26" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/IsolationTools.cxx" bodystart="10" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d5b/classana_1_1IsolationBase_1acdb483ed6290c059ba4feb749f9cfe85" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool ana::IsolationBase::passSelection</definition>
+        <argsstring>(const xAOD::IParticle &amp;p) const =0</argsstring>
+        <name>passSelection</name>
+        <reimplementedby refid="dc/d3e/classana_1_1StandardIsolation_1abcbd59a6cff8d23d33f42669909bf72d">passSelection</reimplementedby>
+        <reimplementedby refid="de/da7/classana_1_1ApproxPTVarCone_1af4662462820f2cf476a28df52b549ef5">passSelection</reimplementedby>
+        <reimplementedby refid="d6/dd2/classana_1_1RelativePTVarCone_1abb91797d92d0b8b1e814b64bd7e20354">passSelection</reimplementedby>
+        <reimplementedby refid="db/d31/classana_1_1AbsoluteIsolationDC14_1a0c132f381c0a3614d5915fa6fbb9fdd5">passSelection</reimplementedby>
+        <param>
+          <type>const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">xAOD::IParticle</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>For applying isolation cuts to the analysis (tight) lepton. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that you must implement this otherwise it wont compile. Ha.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The lepton </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if it passes the isolation cuts, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IsolationTools.h" line="36"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d5b/classana_1_1IsolationBase_1a3e4b759d09efda514205eb2d09110c40" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool ana::IsolationBase::passSelectionLoose</definition>
+        <argsstring>(const xAOD::IParticle &amp;p) const =0</argsstring>
+        <name>passSelectionLoose</name>
+        <reimplementedby refid="dc/d3e/classana_1_1StandardIsolation_1a53d2f52eca4e808dde1c37231f99f4bb">passSelectionLoose</reimplementedby>
+        <reimplementedby refid="de/da7/classana_1_1ApproxPTVarCone_1a975faedf9410f96a204dfac7dee75123">passSelectionLoose</reimplementedby>
+        <reimplementedby refid="d6/dd2/classana_1_1RelativePTVarCone_1a5e42fd7e1dd97baa292585712994e567">passSelectionLoose</reimplementedby>
+        <reimplementedby refid="db/d31/classana_1_1AbsoluteIsolationDC14_1a4350da63197f368399713f6a8c938527">passSelectionLoose</reimplementedby>
+        <param>
+          <type>const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">xAOD::IParticle</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>For applying loose isolation cuts to the loose lepton. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that you must implement this otherwise it wont compile. Ha.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The lepton </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if it passes the isolation cuts, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IsolationTools.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d5b/classana_1_1IsolationBase_1a692bfd063006d522eea9d2432a7ae907" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ana::IsolationBase::print</definition>
+        <argsstring>(std::ostream &amp;os) const =0</argsstring>
+        <name>print</name>
+        <reimplementedby refid="dc/d3e/classana_1_1StandardIsolation_1a148da2bc0383b4c359bac4aa02c0dae6">print</reimplementedby>
+        <reimplementedby refid="de/da7/classana_1_1ApproxPTVarCone_1ac0e23a8d95858db16ae3b62889d7ba86">print</reimplementedby>
+        <reimplementedby refid="d6/dd2/classana_1_1RelativePTVarCone_1a8593f4f70889888b688851ade07a1377">print</reimplementedby>
+        <reimplementedby refid="db/d31/classana_1_1AbsoluteIsolationDC14_1a501362d09b4052c24081b235dc63cb14">print</reimplementedby>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+<para>Because people like to know what isolation cuts they&apos;re applying. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Where to print things to, e.g. cout. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IsolationTools.h" line="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="d4/dc4/structA" kindref="compound">A</ref> common base for implementing isolation cuts. Probably these isolation tools should be in individual files? Time will tell. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10578">
+        <label>ana::ApproxPTVarCone</label>
+        <link refid="de/da7/classana_1_1ApproxPTVarCone"/>
+        <childnode refid="10576" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10577">
+        <label>ana::AbsoluteIsolationDC14</label>
+        <link refid="db/d31/classana_1_1AbsoluteIsolationDC14"/>
+        <childnode refid="10576" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10580">
+        <label>ana::StandardIsolation</label>
+        <link refid="dc/d3e/classana_1_1StandardIsolation"/>
+        <childnode refid="10576" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10576">
+        <label>ana::IsolationBase</label>
+        <link refid="d7/d5b/classana_1_1IsolationBase"/>
+      </node>
+      <node id="10579">
+        <label>ana::RelativePTVarCone</label>
+        <link refid="d6/dd2/classana_1_1RelativePTVarCone"/>
+        <childnode refid="10576" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IsolationTools.h" line="20" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IsolationTools.h" bodystart="20" bodyend="54"/>
+    <listofallmembers>
+      <member refid="d7/d5b/classana_1_1IsolationBase_1ad440dba43515972ffbd08ed7f6cc8a74" prot="public" virt="non-virtual"><scope>ana::IsolationBase</scope><name>IsolationBase</name></member>
+      <member refid="d7/d5b/classana_1_1IsolationBase_1acdb483ed6290c059ba4feb749f9cfe85" prot="public" virt="pure-virtual"><scope>ana::IsolationBase</scope><name>passSelection</name></member>
+      <member refid="d7/d5b/classana_1_1IsolationBase_1a3e4b759d09efda514205eb2d09110c40" prot="public" virt="pure-virtual"><scope>ana::IsolationBase</scope><name>passSelectionLoose</name></member>
+      <member refid="d7/d5b/classana_1_1IsolationBase_1a692bfd063006d522eea9d2432a7ae907" prot="public" virt="pure-virtual"><scope>ana::IsolationBase</scope><name>print</name></member>
+      <member refid="d7/d5b/classana_1_1IsolationBase_1a921e857925d6b64f7dab197eb01bed7e" prot="public" virt="virtual"><scope>ana::IsolationBase</scope><name>~IsolationBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d0/d98/APWeightSumEnsemble_8cxx" kind="file">
+    <compoundname>APWeightSumEnsemble.cxx</compoundname>
+    <includes refid="d3/d5d/APWeightSumEnsemble_8h" local="yes">ReweightUtils/APWeightSumEnsemble.h</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">iostream</includes>
+    <includes local="yes">TH1F.h</includes>
+    <includes local="yes">TVirtualFitter.h</includes>
+    <includes refid="d5/d5c/APWeightEntry_8h" local="yes">ReweightUtils/APWeightEntry.h</includes>
+    <incdepgraph>
+      <node id="261679">
+        <label>ReweightUtils/APWeightSumEnsemble.h</label>
+        <link refid="d3/d5d/APWeightSumEnsemble_8h_source"/>
+        <childnode refid="261680" relation="include">
+        </childnode>
+        <childnode refid="261683" relation="include">
+        </childnode>
+      </node>
+      <node id="261684">
+        <label>cmath</label>
+      </node>
+      <node id="261688">
+        <label>ReweightUtils/APWeightEntry.h</label>
+        <link refid="d5/d5c/APWeightEntry_8h_source"/>
+        <childnode refid="261689" relation="include">
+        </childnode>
+      </node>
+      <node id="261682">
+        <label>APEvtWeight.h</label>
+        <link refid="da/d15/APEvtWeight_8h_source"/>
+        <childnode refid="261681" relation="include">
+        </childnode>
+        <childnode refid="261683" relation="include">
+        </childnode>
+      </node>
+      <node id="261683">
+        <label>vector</label>
+      </node>
+      <node id="261689">
+        <label>Rtypes.h</label>
+      </node>
+      <node id="261680">
+        <label>APWeightSum.h</label>
+        <link refid="d9/d4c/APWeightSum_8h_source"/>
+        <childnode refid="261681" relation="include">
+        </childnode>
+        <childnode refid="261682" relation="include">
+        </childnode>
+        <childnode refid="261683" relation="include">
+        </childnode>
+      </node>
+      <node id="261686">
+        <label>TH1F.h</label>
+      </node>
+      <node id="261685">
+        <label>iostream</label>
+      </node>
+      <node id="261687">
+        <label>TVirtualFitter.h</label>
+      </node>
+      <node id="261681">
+        <label>TNamed.h</label>
+      </node>
+      <node id="261678">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSumEnsemble.cxx</label>
+        <link refid="APWeightSumEnsemble.cxx"/>
+        <childnode refid="261679" relation="include">
+        </childnode>
+        <childnode refid="261684" relation="include">
+        </childnode>
+        <childnode refid="261685" relation="include">
+        </childnode>
+        <childnode refid="261686" relation="include">
+        </childnode>
+        <childnode refid="261687" relation="include">
+        </childnode>
+        <childnode refid="261688" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="d0/d98/APWeightSumEnsemble_8cxx_1ac9f419dd64a9199a3174fe033dd8d7dc" prot="public" static="no">
+        <name>APWeightSumEnsemble_cxx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSumEnsemble.cxx" line="1" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSumEnsemble.cxx" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#define<sp/>APWeightSumEnsemble_cxx</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;ReweightUtils/APWeightSumEnsemble.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TH1F.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TVirtualFitter.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ReweightUtils/APWeightEntry.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="d9/dbd/classAPWeightSumEnsemble_1a6499afc6222be3186c68a97143984752" kindref="member">APWeightSumEnsemble::APWeightSumEnsemble</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><ref refid="d8/d06/classAPWeightSum_1abf5ca57db0ae3eebe029ec0ad160d457" kindref="member">_k_evt_orig</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>_ensembleTest_done<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>_pdf<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>_ensemble_mode<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>_ensemble_sigma<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>_rel_prec<sp/>=<sp/>0.01;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="d9/dbd/classAPWeightSumEnsemble_1a8d73c37cbad1e191656b0cb9d955508a" kindref="member">APWeightSumEnsemble::~APWeightSumEnsemble</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_pdf;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d9/dbd/classAPWeightSumEnsemble_1aaab0a900fa63ed4325a1f4faaf68a69e" kindref="member">APWeightSumEnsemble::SetRelPrecision</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rel_prec)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>_rel_prec<sp/>=<sp/>rel_prec;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>_ensembleTest_done<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d9/dbd/classAPWeightSumEnsemble_1acc2f0c929b65da3d1c2dc183cedeffed" kindref="member">APWeightSumEnsemble::AddWeightToEvt</ref>(<ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>*<sp/>weight)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><ref refid="d9/dbd/classAPWeightSumEnsemble_1acc2f0c929b65da3d1c2dc183cedeffed" kindref="member">APWeightSum::AddWeightToEvt</ref>(weight);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>_current_evt_pdfs.push_back(weight);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>_ensembleTest_done<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="d9/dbd/classAPWeightSumEnsemble_1a9b36c24079f7717645729e4f4dbc44f8" kindref="member">APWeightSumEnsemble::GetQuantile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>prob)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_ensembleTest_done)<sp/>Compute();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>prob_in[1]<sp/>=<sp/>{prob};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>quant[1];</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>_pdf-&gt;GetQuantiles(1,<sp/>quant,<sp/>prob_in);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>quant[0];</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="d9/dbd/classAPWeightSumEnsemble_1aa5a77f749bc703b2e6190901e19c41b4" kindref="member">APWeightSumEnsemble::GetRandom</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_ensembleTest_done)<sp/>Compute();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_pdf-&gt;GetRandom();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="d9/dbd/classAPWeightSumEnsemble_1ad65b4ff62abd20ea5f70448651089826" kindref="member">APWeightSumEnsemble::GetEnsemblePDFMode</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_ensembleTest_done)<sp/>Compute();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_ensemble_mode;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="d9/dbd/classAPWeightSumEnsemble_1accc1d2da4e75d016f5182a5239259334" kindref="member">APWeightSumEnsemble::GetEnsemblePDFStdDev</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_ensembleTest_done)<sp/>Compute();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_ensemble_sigma;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">TH1F*<sp/><ref refid="d9/dbd/classAPWeightSumEnsemble_1a412cd1dc924976c811aca02a02ee445e" kindref="member">APWeightSumEnsemble::GetPDF</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_ensembleTest_done)<sp/>Compute();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_pdf;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d9/dbd/classAPWeightSumEnsemble_1af8abfdb7881c64202ba447a0917a1c73" kindref="member">APWeightSumEnsemble::FinishEvt</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ext_weight)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><ref refid="d9/dbd/classAPWeightSumEnsemble_1af8abfdb7881c64202ba447a0917a1c73" kindref="member">APWeightSum::FinishEvt</ref>(ext_weight);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>_weight_vector.push_back(_current_evt_pdfs);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>_ext_weights.push_back(ext_weight);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>_current_evt_pdfs.clear();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>APWeightSumEnsemble::Compute()<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>_current_evt_pdfs.size()<sp/>&gt;<sp/>0<sp/>)<sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;ERROR<sp/>in<sp/>APWeightSumEnsemble::Compute:<sp/>Last<sp/>event<sp/>was<sp/>not<sp/>finished<sp/>and<sp/>will<sp/>not<sp/>be<sp/>taken<sp/>into<sp/>account<sp/>for<sp/>the<sp/>calculation!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//Improve<sp/>estimation<sp/>of<sp/>range</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_pdf<sp/>!=<sp/>0)<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_pdf;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>_pdf<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH1F(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>1000,<sp/><ref refid="d8/d06/classAPWeightSum_1ad9aa86ecc988e7a934bddce83b991470" kindref="member">_k_evt_weight</ref><sp/>-<sp/>6.<sp/>*<sp/>sqrt(<ref refid="d8/d06/classAPWeightSum_1ad9aa86ecc988e7a934bddce83b991470" kindref="member">_k_evt_weight</ref>),<sp/><ref refid="d8/d06/classAPWeightSum_1ad9aa86ecc988e7a934bddce83b991470" kindref="member">_k_evt_weight</ref><sp/>+<sp/>6.<sp/>*<sp/>sqrt(<ref refid="d8/d06/classAPWeightSum_1ad9aa86ecc988e7a934bddce83b991470" kindref="member">_k_evt_weight</ref>));</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>100000000;<sp/>++i)<sp/>{<sp/></highlight><highlight class="comment">//variable<sp/>n_iter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sum_weights<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/><ref refid="d8/d06/classAPWeightSum_1abf5ca57db0ae3eebe029ec0ad160d457" kindref="member">_k_evt_orig</ref>;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>weight<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l<sp/>=<sp/>0,<sp/>L<sp/>=<sp/>_weight_vector[j].size();<sp/>l<sp/>&lt;<sp/>L;<sp/>++l)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weight<sp/>*=<sp/>(1.<sp/>-<sp/>(_weight_vector[j][l])-&gt;<ref refid="d9/dbd/classAPWeightSumEnsemble_1aa5a77f749bc703b2e6190901e19c41b4" kindref="member">GetRandom</ref>());</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sum_weights<sp/>+=<sp/>_ext_weights[j]<sp/>*<sp/>(1.<sp/>-<sp/>weight);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>_pdf-&gt;Fill(sum_weights);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>%<sp/>100<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_pdf-&gt;Fit(</highlight><highlight class="stringliteral">&quot;gaus&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;0Q&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>TVirtualFitter<sp/>*fitter<sp/>=<sp/>TVirtualFitter::GetFitter();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>fitter-&gt;GetParError(2)<sp/>/<sp/>fitter-&gt;GetParameter(2)<sp/>&lt;<sp/>_rel_prec<sp/>)<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>_pdf-&gt;Fit(</highlight><highlight class="stringliteral">&quot;gaus&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;0Q&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>TVirtualFitter<sp/>*fitter<sp/>=<sp/>TVirtualFitter::GetFitter();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>_ensemble_mode<sp/>=<sp/>fitter-&gt;GetParameter(1);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>_ensemble_sigma<sp/>=<sp/>fitter-&gt;GetParameter(2);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>_ensembleTest_done<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSumEnsemble.cxx"/>
+  </compounddef>
+</doxygen>

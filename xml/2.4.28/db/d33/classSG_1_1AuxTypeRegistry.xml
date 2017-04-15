@@ -1,0 +1,2098 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="db/d33/classSG_1_1AuxTypeRegistry" kind="class" prot="public">
+    <compoundname>SG::AuxTypeRegistry</compoundname>
+    <includes refid="db/d7f/AuxTypeRegistry_8h" local="no">AuxTypeRegistry.h</includes>
+    <innerclass refid="d6/d97/structSG_1_1AuxTypeRegistry_1_1stringpair__hash" prot="private">SG::AuxTypeRegistry::stringpair_hash</innerclass>
+    <innerclass refid="d1/df0/structSG_1_1AuxTypeRegistry_1_1typeinfo__t" prot="private">SG::AuxTypeRegistry::typeinfo_t</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="db/d33/classSG_1_1AuxTypeRegistry_1ab8ea8cc59560278a76628bf5b3d9cfee" prot="public" static="no">
+        <type>AthContainers_detail::upgrade_mutex</type>
+        <definition>typedef AthContainers_detail::upgrade_mutex SG::AuxTypeRegistry::mutex_t</definition>
+        <argsstring></argsstring>
+        <name>mutex_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="74" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="db/d33/classSG_1_1AuxTypeRegistry_1aefdcfbab5345c2deb80742f95018eb1c" prot="public" static="no">
+        <type><ref refid="d9/d35/classAthContainers__detail_1_1strict__shared__lock" kindref="compound">AthContainers_detail::strict_shared_lock</ref>&lt; <ref refid="db/d33/classSG_1_1AuxTypeRegistry" kindref="compound">AuxTypeRegistry</ref> &gt;</type>
+        <definition>typedef AthContainers_detail::strict_shared_lock&lt;AuxTypeRegistry&gt; SG::AuxTypeRegistry::lock_t</definition>
+        <argsstring></argsstring>
+        <name>lock_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="75" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="db/d33/classSG_1_1AuxTypeRegistry_1a21e533a815f497a4353d5cff9674483f" prot="public" static="no">
+        <type><ref refid="d4/ddc/classAthContainers__detail_1_1upgrading__lock" kindref="compound">AthContainers_detail::upgrading_lock</ref>&lt; mutex_t &gt;</type>
+        <definition>typedef AthContainers_detail::upgrading_lock&lt;mutex_t&gt; SG::AuxTypeRegistry::upgrading_lock_t</definition>
+        <argsstring></argsstring>
+        <name>upgrading_lock_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="76" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="db/d33/classSG_1_1AuxTypeRegistry_1a38e8fc72a236ef70ea60ad736a8793d2" prot="private" static="no">
+        <type>std::pair&lt; std::string, std::string &gt;</type>
+        <definition>typedef std::pair&lt;std::string, std::string&gt; SG::AuxTypeRegistry::key_t</definition>
+        <argsstring></argsstring>
+        <name>key_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Key used for name -&gt; auxid lookup. First element is name, second is class name. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="623" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" bodystart="623" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="db/d33/classSG_1_1AuxTypeRegistry_1a5898bcf91ccdd0590cce52e6c7a79e29" prot="private" static="no">
+        <type><ref refid="d1/d3b/classSG_1_1unordered__map" kindref="compound">SG_STD_OR_SG::unordered_map</ref>&lt; key_t, <ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref>, stringpair_hash &gt;</type>
+        <definition>typedef SG_STD_OR_SG::unordered_map&lt;key_t, SG::auxid_t, stringpair_hash&gt; SG::AuxTypeRegistry::id_map_t</definition>
+        <argsstring></argsstring>
+        <name>id_map_t</name>
+        <briefdescription>
+<para>Map from name -&gt; auxid. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="645" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" bodystart="645" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="db/d33/classSG_1_1AuxTypeRegistry_1a51f258387098c15f6487afeef107cde8" prot="private" static="no">
+        <type><ref refid="d1/d3b/classSG_1_1unordered__map" kindref="compound">SG_STD_OR_SG::unordered_map</ref>&lt; const std::type_info *, const <ref refid="d9/d9f/classSG_1_1IAuxTypeVectorFactory" kindref="compound">IAuxTypeVectorFactory</ref> * &gt;</type>
+        <definition>typedef SG_STD_OR_SG::unordered_map&lt;const std::type_info*, const IAuxTypeVectorFactory*&gt; SG::AuxTypeRegistry::ti_map_t</definition>
+        <argsstring></argsstring>
+        <name>ti_map_t</name>
+        <briefdescription>
+<para>Map from type_info -&gt; <ref refid="d9/d9f/classSG_1_1IAuxTypeVectorFactory" kindref="compound">IAuxTypeVectorFactory</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="650" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" bodystart="650" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="db/d33/classSG_1_1AuxTypeRegistry_1ab4f32822d530b57133b46c8a74357375" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; typeinfo_t &gt;</type>
+        <definition>std::vector&lt;typeinfo_t&gt; SG::AuxTypeRegistry::m_types</definition>
+        <argsstring></argsstring>
+        <name>m_types</name>
+        <briefdescription>
+<para>Table of aux data items, indexed by <computeroutput>auxid</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="618" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" bodystart="618" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d33/classSG_1_1AuxTypeRegistry_1ac9dab9bb50dcd5035fa37e2519ccf6a6" prot="private" static="no" mutable="no">
+        <type><ref refid="d1/d3b/classSG_1_1unordered__map" kindref="compound">id_map_t</ref></type>
+        <definition>id_map_t SG::AuxTypeRegistry::m_auxids</definition>
+        <argsstring></argsstring>
+        <name>m_auxids</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="646" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" bodystart="646" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d33/classSG_1_1AuxTypeRegistry_1acd776bed0ea6c1a1f5b86e28995e5818" prot="private" static="no" mutable="no">
+        <type><ref refid="d1/d3b/classSG_1_1unordered__map" kindref="compound">ti_map_t</ref></type>
+        <definition>ti_map_t SG::AuxTypeRegistry::m_factories</definition>
+        <argsstring></argsstring>
+        <name>m_factories</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="651" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" bodystart="651" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d33/classSG_1_1AuxTypeRegistry_1a7848090fd8e103204455f198cd872917" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; const <ref refid="d9/d9f/classSG_1_1IAuxTypeVectorFactory" kindref="compound">IAuxTypeVectorFactory</ref> * &gt;</type>
+        <definition>std::vector&lt;const IAuxTypeVectorFactory*&gt; SG::AuxTypeRegistry::m_oldFactories</definition>
+        <argsstring></argsstring>
+        <name>m_oldFactories</name>
+        <briefdescription>
+<para>Hold additional factory instances we need to delete. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="655" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" bodystart="655" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d33/classSG_1_1AuxTypeRegistry_1a189ccfb6c8649d80c0f9738b3c766979" prot="private" static="no" mutable="yes">
+        <type>mutex_t</type>
+        <definition>mutex_t SG::AuxTypeRegistry::m_mutex</definition>
+        <argsstring></argsstring>
+        <name>m_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mutex controlling access to the registry. Reads should be much more common than writes, so use an upgrade_mutex. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="659" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" bodystart="659" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d33/classSG_1_1AuxTypeRegistry_1a46676e51ba6ec7586349b04dd357b9a8" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>std::vector&lt;bool&gt; SG::AuxTypeRegistry::m_isEL</definition>
+        <argsstring></argsstring>
+        <name>m_isEL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag that a variable is an <ref refid="d6/d6e/classElementLink" kindref="compound">ElementLink</ref>. ??? Should go away when we extend the factory interface. ??? Separate from typeinfo_t to avoid the need for a full rebuild. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="664" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" bodystart="664" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d33/classSG_1_1AuxTypeRegistry_1ab03f12170153ff66290e07030e1d13ee" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>std::vector&lt;bool&gt; SG::AuxTypeRegistry::m_isELVec</definition>
+        <argsstring></argsstring>
+        <name>m_isELVec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag that a variable is a vector of <ref refid="d6/d6e/classElementLink" kindref="compound">ElementLink</ref>. ??? Should go away when we extend the factory interface. ??? Separate from typeinfo_t to avoid the need for a full rebuild. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="669" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" bodystart="669" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1ab22c247525e0883b46012f14b6f5a048" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/d33/classSG_1_1AuxTypeRegistry" kindref="compound">AuxTypeRegistry</ref> &amp;</type>
+        <definition>AuxTypeRegistry &amp; SG::AuxTypeRegistry::instance</definition>
+        <argsstring>()</argsstring>
+        <name>instance</name>
+        <briefdescription>
+<para>Return the singleton registry instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="81" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="26" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a5b1f2839e2695b9f56494d2b9dbc5057" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+        <definition>SG::auxid_t SG::AuxTypeRegistry::getAuxID</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;clsname=&quot;&quot;)</argsstring>
+        <name>getAuxID</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>clsname</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Look up a name -&gt; <computeroutput>auxid_t</computeroutput> mapping. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the aux data item. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clsname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of its associated class. May be blank.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The type of the item is given by the template parameter <computeroutput><ref refid="d1/def/classT" kindref="compound">T</ref></computeroutput>. If an item with the same name was previously requested with a different type, then raise <computeroutput><ref refid="df/d74/classSG_1_1ExcAuxTypeMismatch" kindref="compound">SG::ExcAuxTypeMismatch</ref></computeroutput>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the aux data item. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clsname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of its associated class. May be blank.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The type of the item is given by the template parameter <computeroutput><ref refid="d1/def/classT" kindref="compound">T</ref></computeroutput>. If an item with the same name was previously requested with a different type, then raise an <computeroutput>AuxTypeMismatch</computeroutput> exception. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="95" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.icc" bodystart="24" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a4187e62f47b28ca7a0a8df62cfda5e98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+        <definition>SG::auxid_t SG::AuxTypeRegistry::getAuxID</definition>
+        <argsstring>(const std::type_info &amp;ti, const std::string &amp;name, const std::string &amp;clsname=&quot;&quot;)</argsstring>
+        <name>getAuxID</name>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>clsname</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Look up a name -&gt; <computeroutput>auxid_t</computeroutput> mapping. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the aux data item. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the aux data item. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clsname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of its associated class. May be blank.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The type of the item is given by <emphasis>ti</emphasis>. Return <computeroutput>null_auxid</computeroutput> if we don&apos;t know how to make vectors of <emphasis>ti</emphasis>. (Use <computeroutput>addFactory</computeroutput> to register additional types.) If an item with the same name was previously requested with a different type, then raise <computeroutput><ref refid="df/d74/classSG_1_1ExcAuxTypeMismatch" kindref="compound">SG::ExcAuxTypeMismatch</ref></computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="112" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="45" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1ab2a0b495f974d906674065233edd5184" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+        <definition>SG::auxid_t SG::AuxTypeRegistry::findAuxID</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;clsname=&quot;&quot;) const </argsstring>
+        <name>findAuxID</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>clsname</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Look up a name -&gt; <computeroutput>auxid_t</computeroutput> mapping. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the aux data item. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clsname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of its associated class. May be blank.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Will only find an existing <computeroutput>auxid_t</computeroutput>; unlike <computeroutput>getAuxID</computeroutput>, this won&apos;t make a new one. If the item isn&apos;t found, this returns <computeroutput>null_auxid</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="125" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="63" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a28ccdff841aa48f6862b9067ddba9976" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="de/d12/classSG_1_1IAuxTypeVector" kindref="compound">IAuxTypeVector</ref> *</type>
+        <definition>IAuxTypeVector * SG::AuxTypeRegistry::makeVector</definition>
+        <argsstring>(SG::auxid_t auxid, size_t size, size_t capacity) const </argsstring>
+        <name>makeVector</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>capacity</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new vector to hold an aux item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial size of the new vector. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>capacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial capacity of the new vector. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="136" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="82" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a7f2229620d14addb9711be7d1240826a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="de/d12/classSG_1_1IAuxTypeVector" kindref="compound">IAuxTypeVector</ref> *</type>
+        <definition>IAuxTypeVector * SG::AuxTypeRegistry::makeVector</definition>
+        <argsstring>(lock_t &amp;lock, SG::auxid_t auxid, size_t size, size_t capacity) const </argsstring>
+        <name>makeVector</name>
+        <param>
+          <type><ref refid="d9/d35/classAthContainers__detail_1_1strict__shared__lock" kindref="compound">lock_t</ref> &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>capacity</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new vector to hold an aux item (external locking). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The registry lock. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial size of the new vector. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>capacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial capacity of the new vector. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="149" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="99" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a640765027dc1055579b7f97171d66273" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string SG::AuxTypeRegistry::getName</definition>
+        <argsstring>(SG::auxid_t auxid) const </argsstring>
+        <name>getName</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return the name of an aux data item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="156" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="114" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a014f06c5a2f72a745692349d68a19086" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string SG::AuxTypeRegistry::getName</definition>
+        <argsstring>(lock_t &amp;lock, SG::auxid_t auxid) const </argsstring>
+        <name>getName</name>
+        <param>
+          <type><ref refid="d9/d35/classAthContainers__detail_1_1strict__shared__lock" kindref="compound">lock_t</ref> &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return the name of an aux data item (external locking). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The registry lock. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="165" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="126" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a91aca01cd796c7e7f61ddf09d56c45a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string SG::AuxTypeRegistry::getClassName</definition>
+        <argsstring>(SG::auxid_t auxid) const </argsstring>
+        <name>getClassName</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return the class name associated with an aux data item (may be blank). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="173" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="140" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a173bf064a139f0c16ec7ab1e5ed03604" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string SG::AuxTypeRegistry::getClassName</definition>
+        <argsstring>(lock_t &amp;lock, SG::auxid_t auxid) const </argsstring>
+        <name>getClassName</name>
+        <param>
+          <type><ref refid="d9/d35/classAthContainers__detail_1_1strict__shared__lock" kindref="compound">lock_t</ref> &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return the class name associated with an aux data item (may be blank). [external locking.]. </para>        </briefdescription>
+        <detaileddescription>
+<para>Return the class name associated with an aux data item (may be blank). [external locking].</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The registry lock. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="183" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="153" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a0e81c5cfde800f9bffe4516aea41cc2b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::type_info *</type>
+        <definition>const std::type_info * SG::AuxTypeRegistry::getType</definition>
+        <argsstring>(SG::auxid_t auxid) const </argsstring>
+        <name>getType</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return the type of an aux data item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="190" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="166" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a7523762bb445cdddc42bf8bdf3c64659" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::type_info *</type>
+        <definition>const std::type_info * SG::AuxTypeRegistry::getType</definition>
+        <argsstring>(lock_t &amp;lock, SG::auxid_t auxid) const </argsstring>
+        <name>getType</name>
+        <param>
+          <type><ref refid="d9/d35/classAthContainers__detail_1_1strict__shared__lock" kindref="compound">lock_t</ref> &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return the type of an aux data item (external locking). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The registry lock. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="199" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="178" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a282421c8647cedea97b439141dfaac2d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string SG::AuxTypeRegistry::getTypeName</definition>
+        <argsstring>(SG::auxid_t auxid) const </argsstring>
+        <name>getTypeName</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return the type name of an aux data item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns an empty string if the type is not known. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="208" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="193" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1af2880e23ae5a61a064f0573cc5f60e7f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string SG::AuxTypeRegistry::getTypeName</definition>
+        <argsstring>(lock_t &amp;lock, SG::auxid_t auxid) const </argsstring>
+        <name>getTypeName</name>
+        <param>
+          <type><ref refid="d9/d35/classAthContainers__detail_1_1strict__shared__lock" kindref="compound">lock_t</ref> &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return the type name of an aux data item (external locking). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The registry lock. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns an empty string if the type is not known. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="219" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="207" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a46a133b8d431c150ef45279530a35f8f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::type_info *</type>
+        <definition>const std::type_info * SG::AuxTypeRegistry::getVecType</definition>
+        <argsstring>(SG::auxid_t auxid) const </argsstring>
+        <name>getVecType</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return the type of the STL vector used to hold an aux data item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="226" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="220" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1aebf215b00aa8e4781c757f52798b4c86" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::type_info *</type>
+        <definition>const std::type_info * SG::AuxTypeRegistry::getVecType</definition>
+        <argsstring>(lock_t &amp;lock, SG::auxid_t auxid) const </argsstring>
+        <name>getVecType</name>
+        <param>
+          <type><ref refid="d9/d35/classAthContainers__detail_1_1strict__shared__lock" kindref="compound">lock_t</ref> &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return the type name of the STL vector used to hold an aux data item (external locking). </para>        </briefdescription>
+        <detaileddescription>
+<para>Return the type of the STL vector used to hold an aux data item. (external locking).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The registry lock. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="236" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="235" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a0f91c8db38c08e11342bff6ce88b30ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string SG::AuxTypeRegistry::getVecTypeName</definition>
+        <argsstring>(SG::auxid_t auxid) const </argsstring>
+        <name>getVecTypeName</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return the type of the STL vector used to hold an aux data item. </para>        </briefdescription>
+        <detaileddescription>
+<para>Return the type name of the STL vector used to hold an aux data item.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns an empty string if the type is not known. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="245" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="251" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a039ac7f63dd417c0d33ccd1e6c47ee16" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string SG::AuxTypeRegistry::getVecTypeName</definition>
+        <argsstring>(lock_t &amp;lock, SG::auxid_t auxid) const </argsstring>
+        <name>getVecTypeName</name>
+        <param>
+          <type><ref refid="d9/d35/classAthContainers__detail_1_1strict__shared__lock" kindref="compound">lock_t</ref> &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return the type name of the STL vector used to hold an aux data item (external locking). </para>        </briefdescription>
+        <detaileddescription>
+<para>Return the type name of the STL vector used to hold an aux data item. (external locking).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The registry lock. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns an empty string if the type is not known. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="257" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="268" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a1429d97078f8731031ddeae38654039e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SG::AuxTypeRegistry::getEltSize</definition>
+        <argsstring>(SG::auxid_t auxid) const </argsstring>
+        <name>getEltSize</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return size of an element in the STL vector. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="264" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="282" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1aa0b300367134cb3b7b872fef7fd7be1b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SG::AuxTypeRegistry::getEltSize</definition>
+        <argsstring>(lock_t &amp;lock, SG::auxid_t auxid) const </argsstring>
+        <name>getEltSize</name>
+        <param>
+          <type><ref refid="d9/d35/classAthContainers__detail_1_1strict__shared__lock" kindref="compound">lock_t</ref> &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return size of an element in the STL vector (external locking). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The registry lock. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="274" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="297" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a9184409636833f5bc1b0a920957fe319" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SG::AuxTypeRegistry::copy</definition>
+        <argsstring>(SG::auxid_t auxid, void *dst, size_t dst_index, const void *src, size_t src_index)</argsstring>
+        <name>copy</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dst_index</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>src_index</declname>
+        </param>
+        <briefdescription>
+<para>Copy an element between vectors. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The aux data item being operated on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the start of the destination vector&apos;s data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of destination element in the vector. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the start of the source vector&apos;s data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of source element in the vector.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<computeroutput>dst</computeroutput> and @ src can be either the same or different. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="289" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="317" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a636c5d64f11f263b5d84f02abc568dc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SG::AuxTypeRegistry::copy</definition>
+        <argsstring>(lock_t &amp;lock, SG::auxid_t auxid, void *dst, size_t dst_index, const void *src, size_t src_index)</argsstring>
+        <name>copy</name>
+        <param>
+          <type><ref refid="d9/d35/classAthContainers__detail_1_1strict__shared__lock" kindref="compound">lock_t</ref> &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dst_index</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>src_index</declname>
+        </param>
+        <briefdescription>
+<para>Copy an element between vectors (external locking). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The registry lock. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The aux data item being operated on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the start of the destination vector&apos;s data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of destination element in the vector. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the start of the source vector&apos;s data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of source element in the vector.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<computeroutput>dst</computeroutput> and @ src can be either the same or different. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="306" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="338" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a866eaa9297ab39ad8d07f49c349a6449" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SG::AuxTypeRegistry::copyForOutput</definition>
+        <argsstring>(SG::auxid_t auxid, void *dst, size_t dst_index, const void *src, size_t src_index)</argsstring>
+        <name>copyForOutput</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dst_index</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>src_index</declname>
+        </param>
+        <briefdescription>
+<para>Copy an element between vectors. Apply any transformations needed for output. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The aux data item being operated on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the start of the destination vector&apos;s data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of destination element in the vector. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the start of the source vector&apos;s data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of source element in the vector.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<computeroutput>dst</computeroutput> and @ src can be either the same or different. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="322" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="360" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1af1ccab05e0f9005d01487663f116ffde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SG::AuxTypeRegistry::copyForOutput</definition>
+        <argsstring>(lock_t &amp;lock, SG::auxid_t auxid, void *dst, size_t dst_index, const void *src, size_t src_index)</argsstring>
+        <name>copyForOutput</name>
+        <param>
+          <type><ref refid="d9/d35/classAthContainers__detail_1_1strict__shared__lock" kindref="compound">lock_t</ref> &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dst_index</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>src_index</declname>
+        </param>
+        <briefdescription>
+<para>Copy an element between vectors (external locking). Apply any transformations needed for output. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The registry lock. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The aux data item being operated on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the start of the destination vector&apos;s data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of destination element in the vector. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the start of the source vector&apos;s data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of source element in the vector.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<computeroutput>dst</computeroutput> and @ src can be either the same or different. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="340" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="390" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a5ff58673f48fe3db1a1654bcce6a33ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SG::AuxTypeRegistry::swap</definition>
+        <argsstring>(SG::auxid_t auxid, void *a, size_t aindex, void *b, size_t bindex)</argsstring>
+        <name>swap</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>aindex</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bindex</declname>
+        </param>
+        <briefdescription>
+<para>Swap an element between vectors. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The aux data item being operated on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the start of the first vector&apos;s data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aindex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the element in the first vector. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the start of the second vector&apos;s data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bindex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the element in the second vector.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<computeroutput>a</computeroutput> and @ b can be either the same or different. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="355" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="418" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a4b21c577fe3704d3b0454a539d0a68f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SG::AuxTypeRegistry::swap</definition>
+        <argsstring>(lock_t &amp;lock, SG::auxid_t auxid, void *a, size_t aindex, void *b, size_t bindex)</argsstring>
+        <name>swap</name>
+        <param>
+          <type><ref refid="d9/d35/classAthContainers__detail_1_1strict__shared__lock" kindref="compound">lock_t</ref> &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>aindex</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bindex</declname>
+        </param>
+        <briefdescription>
+<para>Swap an element between vectors (external locking). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The registry lock. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The aux data item being operated on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the start of the first vector&apos;s data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aindex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the element in the first vector. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the start of the second vector&apos;s data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bindex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the element in the second vector.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<computeroutput>a</computeroutput> and @ b can be either the same or different. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="372" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="439" bodyend="447"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a26344bbacb847a9e7290ad4881cfc966" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SG::AuxTypeRegistry::clear</definition>
+        <argsstring>(SG::auxid_t auxid, void *dst, size_t dst_index)</argsstring>
+        <name>clear</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dst_index</declname>
+        </param>
+        <briefdescription>
+<para>Clear an element within a vector. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The aux data item being operated on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the start of the vector&apos;s data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the element in the vector. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="381" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="456" bodyend="461"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a66da77177a008b6269c77d2697f925ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SG::AuxTypeRegistry::clear</definition>
+        <argsstring>(lock_t &amp;lock, SG::auxid_t auxid, void *dst, size_t dst_index)</argsstring>
+        <name>clear</name>
+        <param>
+          <type><ref refid="d9/d35/classAthContainers__detail_1_1strict__shared__lock" kindref="compound">lock_t</ref> &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dst_index</declname>
+        </param>
+        <briefdescription>
+<para>Clear an element within a vector (external locking). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The registry lock. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The aux data item being operated on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the start of the vector&apos;s data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the element in the vector. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="392" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="471" bodyend="477"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1acc19ffbaedbe7e1f96401b5aa76b260e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="d9/d9f/classSG_1_1IAuxTypeVectorFactory" kindref="compound">IAuxTypeVectorFactory</ref> *</type>
+        <definition>const IAuxTypeVectorFactory * SG::AuxTypeRegistry::getFactory</definition>
+        <argsstring>(const std::type_info &amp;ti) const </argsstring>
+        <name>getFactory</name>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <briefdescription>
+<para>Return the vector factory for a given vector element type. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the vector element.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns 0 if the type is not known. (Use <computeroutput>addFactory</computeroutput> to add new mappings.) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="402" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="488" bodyend="492"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1afb2ecced1fa6b540542f5947156211d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="d9/d9f/classSG_1_1IAuxTypeVectorFactory" kindref="compound">IAuxTypeVectorFactory</ref> *</type>
+        <definition>const IAuxTypeVectorFactory * SG::AuxTypeRegistry::getFactory</definition>
+        <argsstring>(lock_t &amp;lock, const std::type_info &amp;ti) const </argsstring>
+        <name>getFactory</name>
+        <param>
+          <type><ref refid="d9/d35/classAthContainers__detail_1_1strict__shared__lock" kindref="compound">lock_t</ref> &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <briefdescription>
+<para>Return the vector factory for a given vector element type. (external locking). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The registry lock. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the vector element.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns 0 if the type is not known. (Use <computeroutput>addFactory</computeroutput> to add new mappings.) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="415" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="505" bodyend="509"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1ace89fee7b6c3711c3d3666a628297667" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="d9/d9f/classSG_1_1IAuxTypeVectorFactory" kindref="compound">IAuxTypeVectorFactory</ref> *</type>
+        <definition>const IAuxTypeVectorFactory * SG::AuxTypeRegistry::getFactory</definition>
+        <argsstring>(upgrading_lock_t &amp;lock, const std::type_info &amp;ti) const </argsstring>
+        <name>getFactory</name>
+        <param>
+          <type><ref refid="d4/ddc/classAthContainers__detail_1_1upgrading__lock" kindref="compound">upgrading_lock_t</ref> &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <briefdescription>
+<para>Return the vector factory for a given vector element type. (external locking). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The registry lock. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the vector element.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns 0 if the type is not known. (Use <computeroutput>addFactory</computeroutput> to add new mappings.) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="428" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="522" bodyend="526"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1af9a9b911f91be479c5c6859eb5834d76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SG::AuxTypeRegistry::addFactory</definition>
+        <argsstring>(const std::type_info &amp;ti, IAuxTypeVectorFactory *factory)</argsstring>
+        <name>addFactory</name>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/d9f/classSG_1_1IAuxTypeVectorFactory" kindref="compound">IAuxTypeVectorFactory</ref> *</type>
+          <declname>factory</declname>
+        </param>
+        <briefdescription>
+<para>Add a new type -&gt; factory mapping. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the vector element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>factory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The factory instance. The registry will take ownership.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This records that <computeroutput>factory</computeroutput> can be used to construct vectors with an element type of <computeroutput>ti</computeroutput>. If a mapping already exists, the new factory is discarded, unless the old one is a dynamic factory and the new one isn&apos;t, in which case the new replaces the old one. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="441" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="539" bodyend="544"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a9abf795801939a63b3713de8f95cbfef" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SG::AuxTypeRegistry::lock_shared</definition>
+        <argsstring>() const </argsstring>
+        <name>lock_shared</name>
+        <briefdescription>
+<para>Lock the registry for shared access. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="447" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.icc" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a3fa7946112e3b948826fbba887af97d4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SG::AuxTypeRegistry::unlock_shared</definition>
+        <argsstring>() const </argsstring>
+        <name>unlock_shared</name>
+        <briefdescription>
+<para>Unlock the registry for shared access. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="453" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.icc" bodystart="45" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a5d5b50f455831f432ebbebebaacf3a5e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SG::AuxTypeRegistry::AuxTypeRegistry</definition>
+        <argsstring>()</argsstring>
+        <name>AuxTypeRegistry</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Populates the type -&gt; factory mappings for standard C++ types. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="462" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="587" bodyend="613"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a3ded30b088c6ef071cb6812205de942d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SG::AuxTypeRegistry::~AuxTypeRegistry</definition>
+        <argsstring>()</argsstring>
+        <name>~AuxTypeRegistry</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Delete factory instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="470" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="621" bodyend="627"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1aafb0833f527e944379e5baf8b8dcbab6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SG::AuxTypeRegistry::AuxTypeRegistry</definition>
+        <argsstring>(const AuxTypeRegistry &amp;)</argsstring>
+        <name>AuxTypeRegistry</name>
+        <param>
+          <type>const <ref refid="db/d33/classSG_1_1AuxTypeRegistry" kindref="compound">AuxTypeRegistry</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Disallow copy construction and assignment. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="474"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a3d2b21e5547786c0d40143113fb7c91c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/d33/classSG_1_1AuxTypeRegistry" kindref="compound">AuxTypeRegistry</ref> &amp;</type>
+        <definition>AuxTypeRegistry&amp; SG::AuxTypeRegistry::operator=</definition>
+        <argsstring>(const AuxTypeRegistry &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="db/d33/classSG_1_1AuxTypeRegistry" kindref="compound">AuxTypeRegistry</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="475"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1ab57e2becb6df3fea1912a780529b66e0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+        <definition>SG::auxid_t SG::AuxTypeRegistry::findAuxID</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;clsname, const std::type_info &amp;ti, IAuxTypeVectorFactory *(AuxTypeRegistry::*makeFactory)() const)</argsstring>
+        <name>findAuxID</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>clsname</declname>
+        </param>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/d9f/classSG_1_1IAuxTypeVectorFactory" kindref="compound">IAuxTypeVectorFactory</ref> *(AuxTypeRegistry::*)() const </type>
+          <declname>makeFactory</declname>
+        </param>
+        <briefdescription>
+<para>Look up a name -&gt; <computeroutput>auxid_t</computeroutput> mapping. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the aux data item. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clsname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of its associated class. May be blank. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of this aux data item. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>makeFactory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function to create a factory for this type, if needed. May return 0 if the type is unknown.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+If the aux data item already exists, check to see if the provided type matches the type that was used before. If so, then set return the auxid; otherwise, raise <computeroutput><ref refid="df/d74/classSG_1_1ExcAuxTypeMismatch" kindref="compound">SG::ExcAuxTypeMismatch</ref></computeroutput>.</para><para>If the aux data item does not already exist, then see if we have a factory registered for this <computeroutput>type_info</computeroutput>. If not, then call <computeroutput>makeFactory</computeroutput> and use what it returns. If that returns 0, then fail and return null_auxid. Otherwise, assign a new auxid and return it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="501" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="650" bodyend="708"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1aca98e66925d26c6f855b1e3bd5b92d51" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="d9/d9f/classSG_1_1IAuxTypeVectorFactory" kindref="compound">IAuxTypeVectorFactory</ref> *</type>
+        <definition>const IAuxTypeVectorFactory * SG::AuxTypeRegistry::getFactoryLocked</definition>
+        <argsstring>(const std::type_info &amp;ti) const </argsstring>
+        <name>getFactoryLocked</name>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <briefdescription>
+<para>Return the vector factory for a given vector element type. The registry lock must be held. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the vector element.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns 0 if the type is not known. (Use <computeroutput>addFactory</computeroutput> to add new mappings.) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="512" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="720" bodyend="726"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1aa157c6af4b6f95bf05840f936edeb442" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/d9f/classSG_1_1IAuxTypeVectorFactory" kindref="compound">IAuxTypeVectorFactory</ref> *</type>
+        <definition>const IAuxTypeVectorFactory * SG::AuxTypeRegistry::getFactory</definition>
+        <argsstring>(SG::auxid_t auxid) const </argsstring>
+        <name>getFactory</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return the vector factory for a given auxid. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns 0 if the type is not known. (Use <computeroutput>addFactory</computeroutput> to add new mappings.) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="522" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.icc" bodystart="60" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a22a567e6a5e4a7f39dee775169086c1a" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/d9f/classSG_1_1IAuxTypeVectorFactory" kindref="compound">IAuxTypeVectorFactory</ref> *</type>
+        <definition>const IAuxTypeVectorFactory * SG::AuxTypeRegistry::getFactory</definition>
+        <argsstring>(lock_t &amp;, SG::auxid_t auxid) const </argsstring>
+        <name>getFactory</name>
+        <param>
+          <type><ref refid="d9/d35/classAthContainers__detail_1_1strict__shared__lock" kindref="compound">lock_t</ref> &amp;</type>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return the vector factory for a given auxid. (external locking). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The registry lock. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired aux data item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns 0 if the type is not known. (Use <computeroutput>addFactory</computeroutput> to add new mappings.) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="534" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.icc" bodystart="79" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1ab03e7aaa1d4c115847336f6ffffdf8f4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SG::AuxTypeRegistry::addFactory</definition>
+        <argsstring>(upgrading_lock_t &amp;lock, const std::type_info &amp;ti, IAuxTypeVectorFactory *factory)</argsstring>
+        <name>addFactory</name>
+        <param>
+          <type><ref refid="d4/ddc/classAthContainers__detail_1_1upgrading__lock" kindref="compound">upgrading_lock_t</ref> &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/d9f/classSG_1_1IAuxTypeVectorFactory" kindref="compound">IAuxTypeVectorFactory</ref> *</type>
+          <declname>factory</declname>
+        </param>
+        <briefdescription>
+<para>Add a new type -&gt; factory mapping. (external locking). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The registry lock. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the vector element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>factory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The factory instance. The registry will take ownership.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This records that <computeroutput>factory</computeroutput> can be used to construct vectors with an element type of <computeroutput>ti</computeroutput>. If a mapping already exists, the new factory is discarded, unless the old one is a dynamic factory and the new one isn&apos;t, in which case the new replaces the old one. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="550" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="558" bodyend="579"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a435c65af46a3d59508ddd9d46698b87a" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="d9/d9f/classSG_1_1IAuxTypeVectorFactory" kindref="compound">IAuxTypeVectorFactory</ref> *</type>
+        <definition>IAuxTypeVectorFactory * SG::AuxTypeRegistry::makeFactory</definition>
+        <argsstring>() const </argsstring>
+        <name>makeFactory</name>
+        <briefdescription>
+<para>Create an <computeroutput><ref refid="d6/d8c/classSG_1_1AuxTypeVectorFactory" kindref="compound">AuxTypeVectorFactory</ref></computeroutput> instance. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is passed to <computeroutput>findAuxID</computeroutput> when we&apos;re looking up an item for which we know the type at compile-time. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="560" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.icc" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a6b6d2ff8ee13e14a92fc3220b54500d1" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/d9f/classSG_1_1IAuxTypeVectorFactory" kindref="compound">IAuxTypeVectorFactory</ref> *</type>
+        <definition>IAuxTypeVectorFactory * SG::AuxTypeRegistry::makeFactoryNull</definition>
+        <argsstring>() const </argsstring>
+        <name>makeFactoryNull</name>
+        <briefdescription>
+<para><computeroutput>makeFactory</computeroutput> implementation that always returns 0. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is passed to <computeroutput>findAuxID</computeroutput> when we&apos;re looking up an item for which we do not know the type at compile-time. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="569" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.icc" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1aa5d297e4a221017b4a6a5df12aaa1f9c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SG::AuxTypeRegistry::setELFlags</definition>
+        <argsstring>(upgrading_lock_t &amp;lock, auxid_t auxid)</argsstring>
+        <name>setELFlags</name>
+        <param>
+          <type><ref refid="d4/ddc/classAthContainers__detail_1_1upgrading__lock" kindref="compound">upgrading_lock_t</ref> &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the m_isEL* flags for a given variable. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable for which the flags should be initialized. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The registry lock (must be locked).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+??? Should go away when we extend the factory interface. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="579" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="736" bodyend="747"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1adc7892bde31a39b49dc0339bd52dbd9f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SG::AuxTypeRegistry::applyELThinning</definition>
+        <argsstring>(void *dst)</argsstring>
+        <name>applyELThinning</name>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Apply <computeroutput><ref refid="d6/d6e/classElementLink" kindref="compound">ElementLink</ref></computeroutput> output transformations to a single element. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the element.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+??? Should go away when we extend the factory interface. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="588" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="761" bodyend="764"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d33/classSG_1_1AuxTypeRegistry_1a1acc8c6d73e5eee46304c88ae1a43ec1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SG::AuxTypeRegistry::applyELVecThinning</definition>
+        <argsstring>(void *dst)</argsstring>
+        <name>applyELVecThinning</name>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Apply <computeroutput><ref refid="d6/d6e/classElementLink" kindref="compound">ElementLink</ref></computeroutput> output transformations to a vector. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the vector.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+??? Should go away when we extend the factory interface. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="597" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxTypeRegistry.cxx" bodystart="779" bodyend="786"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Handle mappings between names and auxid_t. </para>    </briefdescription>
+    <detaileddescription>
+<para>Each auxiliary data item associated with a container has a name. Internally, they are identified by small integers of type <computeroutput>auxid_t</computeroutput>. This class handles the mapping between names and <computeroutput>auxid_t&apos;s</computeroutput>. It also keeps track of the type of each aux data item, and provides some generic methods for operating on this data.</para><para>The <computeroutput>auxid_t</computeroutput> namespace is global, shared among all classes. It&apos;s no problem for two classes to use aux data with the same <computeroutput>auxid_t</computeroutput>, as long as the type is the same. If they want to define them as different types, though, that&apos;s a problem. To help with this, an optional class name may be supplied; this qualifies the aux data name to make it unique across classes.</para><para>This class is meant to be used as a singleton. Use the <computeroutput>instance</computeroutput> method to get the singleton instance.</para><para>Methods are locked internally, so access is thread-safe. However, since calls to registry methods are often used in a loop, externally-locked variants are also provided in order to reduce the overhead of locking. Use them like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><ref refid="db/d33/classSG_1_1AuxTypeRegistry" kindref="compound" tooltip="Handle mappings between names and auxid_t.">SG::AuxTypeRegistry</ref>&amp;<sp/>r<sp/>=<sp/><ref refid="db/d33/classSG_1_1AuxTypeRegistry_1ab22c247525e0883b46012f14b6f5a048" kindref="member" tooltip="Return the singleton registry instance.">SG::AuxTypeRegistry::instance</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><ref refid="d9/d35/classAthContainers__detail_1_1strict__shared__lock" kindref="compound">SG::AuxTypeRegistry::lock_t</ref><sp/>lock<sp/>(r);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>std::string<sp/>name<sp/>=<sp/>r.<ref refid="db/d33/classSG_1_1AuxTypeRegistry_1a640765027dc1055579b7f97171d66273" kindref="member" tooltip="Return the name of an aux data item.">getName</ref><sp/>(lock,<sp/>auxid);</highlight></codeline>
+</programlisting></para><para>Thread-safety is not supported in standalone builds. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1976">
+        <label>SG::AuxTypeRegistry</label>
+        <link refid="db/d33/classSG_1_1AuxTypeRegistry"/>
+        <childnode refid="1977" relation="usage">
+          <edgelabel>m_mutex</edgelabel>
+        </childnode>
+        <childnode refid="1978" relation="usage">
+          <edgelabel>m_factories</edgelabel>
+        </childnode>
+        <childnode refid="1983" relation="usage">
+          <edgelabel>m_auxids</edgelabel>
+        </childnode>
+      </node>
+      <node id="1985">
+        <label>Internal::rehash_base&lt;Internal::prime_rehash_policy , hashtable&lt;key_t , std::pair&lt; const key_t, SG::auxid_t &gt; , std::allocator&lt; std::pair&lt; const key_t, SG::auxid_t &gt; &gt; , Internal::extract1st&lt; std::pair&lt; const key_t, SG::auxid_t &gt; &gt; , std::equal_to&lt; key_t &gt; , stringpair_hash , Internal::mod_range_hashing , Internal::default_ranged_hash , Internal::prime_rehash_policy , cache_hash_code, constant_iterators, unique_keys&gt; &gt;</label>
+        <link refid="db/d2b/classInternal_1_1rehash__base"/>
+      </node>
+      <node id="1978">
+        <label>SG::unordered_map&lt; const std::type_info *, const IAuxTypeVectorFactory * &gt;</label>
+        <link refid="d1/d3b/classSG_1_1unordered__map"/>
+        <childnode refid="1979" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1980">
+        <label>Internal::rehash_base&lt;Internal::prime_rehash_policy , hashtable&lt;const std::type_info * , std::pair&lt; const const std::type_info *, const IAuxTypeVectorFactory * &gt; , std::allocator&lt; std::pair&lt; const const std::type_info *, const IAuxTypeVectorFactory * &gt; &gt; , Internal::extract1st&lt; std::pair&lt; const const std::type_info *, const IAuxTypeVectorFactory * &gt; &gt; , std::equal_to&lt; const std::type_info * &gt; , hash&lt; const std::type_info * &gt; , Internal::mod_range_hashing , Internal::default_ranged_hash , Internal::prime_rehash_policy , cache_hash_code, constant_iterators, unique_keys&gt; &gt;</label>
+        <link refid="db/d2b/classInternal_1_1rehash__base"/>
+      </node>
+      <node id="1983">
+        <label>SG::unordered_map&lt; key_t, SG::auxid_t, stringpair_hash &gt;</label>
+        <link refid="d1/d3b/classSG_1_1unordered__map"/>
+        <childnode refid="1984" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1987">
+        <label>Internal::map_base&lt;key_t , std::pair&lt; const key_t, SG::auxid_t &gt; , Internal::extract1st&lt; std::pair&lt; const key_t, SG::auxid_t &gt; &gt; , unique_keys, hashtable&lt;key_t , std::pair&lt; const key_t, SG::auxid_t &gt; , std::allocator&lt; std::pair&lt; const key_t, SG::auxid_t &gt; &gt; , Internal::extract1st&lt; std::pair&lt; const key_t, SG::auxid_t &gt; &gt; , std::equal_to&lt; key_t &gt; , stringpair_hash , Internal::mod_range_hashing , Internal::default_ranged_hash , Internal::prime_rehash_policy , cache_hash_code, constant_iterators, unique_keys&gt; &gt;</label>
+        <link refid="d1/d54/classInternal_1_1map__base"/>
+      </node>
+      <node id="1986">
+        <label>Internal::hash_code_base&lt;key_t , std::pair&lt; const key_t, SG::auxid_t &gt; , Internal::extract1st&lt; std::pair&lt; const key_t, SG::auxid_t &gt; &gt; , std::equal_to&lt; key_t &gt; , stringpair_hash , Internal::mod_range_hashing , Internal::default_ranged_hash , cache_hash_code&gt;</label>
+        <link refid="d0/d2e/classInternal_1_1hash__code__base"/>
+      </node>
+      <node id="1981">
+        <label>Internal::hash_code_base&lt;const std::type_info * , std::pair&lt; const const std::type_info *, const IAuxTypeVectorFactory * &gt; , Internal::extract1st&lt; std::pair&lt; const const std::type_info *, const IAuxTypeVectorFactory * &gt; &gt; , std::equal_to&lt; const std::type_info * &gt; , hash&lt; const std::type_info * &gt; , Internal::mod_range_hashing , Internal::default_ranged_hash , cache_hash_code&gt;</label>
+        <link refid="d0/d2e/classInternal_1_1hash__code__base"/>
+      </node>
+      <node id="1982">
+        <label>Internal::map_base&lt;const std::type_info * , std::pair&lt; const const std::type_info *, const IAuxTypeVectorFactory * &gt; , Internal::extract1st&lt; std::pair&lt; const const std::type_info *, const IAuxTypeVectorFactory * &gt; &gt; , unique_keys, hashtable&lt;const std::type_info * , std::pair&lt; const const std::type_info *, const IAuxTypeVectorFactory * &gt; , std::allocator&lt; std::pair&lt; const const std::type_info *, const IAuxTypeVectorFactory * &gt; &gt; , Internal::extract1st&lt; std::pair&lt; const const std::type_info *, const IAuxTypeVectorFactory * &gt; &gt; , std::equal_to&lt; const std::type_info * &gt; , hash&lt; const std::type_info * &gt; , Internal::mod_range_hashing , Internal::default_ranged_hash , Internal::prime_rehash_policy , cache_hash_code, constant_iterators, unique_keys&gt; &gt;</label>
+        <link refid="d1/d54/classInternal_1_1map__base"/>
+      </node>
+      <node id="1979">
+        <label>SG::hashtable&lt; const std::type_info *, std::pair&lt; const const std::type_info *, const IAuxTypeVectorFactory * &gt;, std::allocator&lt; std::pair&lt; const const std::type_info *, const IAuxTypeVectorFactory * &gt; &gt;, Internal::extract1st&lt; std::pair&lt; const const std::type_info *, const IAuxTypeVectorFactory * &gt; &gt;, std::equal_to&lt; const std::type_info * &gt;, hash&lt; const std::type_info * &gt;, Internal::mod_range_hashing, Internal::default_ranged_hash, Internal::prime_rehash_policy, false, false, true &gt;</label>
+        <link refid="de/d63/classSG_1_1hashtable"/>
+        <childnode refid="1980" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1981" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1982" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1984">
+        <label>SG::hashtable&lt; key_t, std::pair&lt; const key_t, SG::auxid_t &gt;, std::allocator&lt; std::pair&lt; const key_t, SG::auxid_t &gt; &gt;, Internal::extract1st&lt; std::pair&lt; const key_t, SG::auxid_t &gt; &gt;, std::equal_to&lt; key_t &gt;, stringpair_hash, Internal::mod_range_hashing, Internal::default_ranged_hash, Internal::prime_rehash_policy, false, false, true &gt;</label>
+        <link refid="de/d63/classSG_1_1hashtable"/>
+        <childnode refid="1985" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1986" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1987" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1977">
+        <label>upgrade_mutex</label>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" line="72" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxTypeRegistry.h" bodystart="71" bodyend="670"/>
+    <listofallmembers>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1af9a9b911f91be479c5c6859eb5834d76" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>addFactory</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1ab03e7aaa1d4c115847336f6ffffdf8f4" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>addFactory</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1adc7892bde31a39b49dc0339bd52dbd9f" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>applyELThinning</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a1acc8c6d73e5eee46304c88ae1a43ec1" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>applyELVecThinning</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a5d5b50f455831f432ebbebebaacf3a5e" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>AuxTypeRegistry</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1aafb0833f527e944379e5baf8b8dcbab6" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>AuxTypeRegistry</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a26344bbacb847a9e7290ad4881cfc966" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>clear</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a66da77177a008b6269c77d2697f925ec" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>clear</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a9184409636833f5bc1b0a920957fe319" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>copy</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a636c5d64f11f263b5d84f02abc568dc4" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>copy</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a866eaa9297ab39ad8d07f49c349a6449" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>copyForOutput</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1af1ccab05e0f9005d01487663f116ffde" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>copyForOutput</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1ab2a0b495f974d906674065233edd5184" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>findAuxID</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1ab57e2becb6df3fea1912a780529b66e0" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>findAuxID</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a5b1f2839e2695b9f56494d2b9dbc5057" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getAuxID</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a4187e62f47b28ca7a0a8df62cfda5e98" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getAuxID</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a91aca01cd796c7e7f61ddf09d56c45a1" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getClassName</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a173bf064a139f0c16ec7ab1e5ed03604" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getClassName</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a1429d97078f8731031ddeae38654039e" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getEltSize</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1aa0b300367134cb3b7b872fef7fd7be1b" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getEltSize</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1acc19ffbaedbe7e1f96401b5aa76b260e" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getFactory</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1afb2ecced1fa6b540542f5947156211d5" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getFactory</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1ace89fee7b6c3711c3d3666a628297667" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getFactory</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1aa157c6af4b6f95bf05840f936edeb442" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getFactory</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a22a567e6a5e4a7f39dee775169086c1a" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getFactory</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1aca98e66925d26c6f855b1e3bd5b92d51" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getFactoryLocked</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a640765027dc1055579b7f97171d66273" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getName</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a014f06c5a2f72a745692349d68a19086" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getName</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a0e81c5cfde800f9bffe4516aea41cc2b" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getType</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a7523762bb445cdddc42bf8bdf3c64659" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getType</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a282421c8647cedea97b439141dfaac2d" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getTypeName</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1af2880e23ae5a61a064f0573cc5f60e7f" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getTypeName</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a46a133b8d431c150ef45279530a35f8f" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getVecType</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1aebf215b00aa8e4781c757f52798b4c86" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getVecType</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a0f91c8db38c08e11342bff6ce88b30ee" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getVecTypeName</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a039ac7f63dd417c0d33ccd1e6c47ee16" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>getVecTypeName</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a5898bcf91ccdd0590cce52e6c7a79e29" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>id_map_t</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1ab22c247525e0883b46012f14b6f5a048" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>instance</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a38e8fc72a236ef70ea60ad736a8793d2" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>key_t</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a9abf795801939a63b3713de8f95cbfef" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>lock_shared</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1aefdcfbab5345c2deb80742f95018eb1c" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>lock_t</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1ac9dab9bb50dcd5035fa37e2519ccf6a6" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>m_auxids</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1acd776bed0ea6c1a1f5b86e28995e5818" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>m_factories</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a46676e51ba6ec7586349b04dd357b9a8" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>m_isEL</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1ab03f12170153ff66290e07030e1d13ee" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>m_isELVec</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a189ccfb6c8649d80c0f9738b3c766979" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>m_mutex</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a7848090fd8e103204455f198cd872917" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>m_oldFactories</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1ab4f32822d530b57133b46c8a74357375" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>m_types</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a435c65af46a3d59508ddd9d46698b87a" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>makeFactory</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a6b6d2ff8ee13e14a92fc3220b54500d1" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>makeFactoryNull</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a28ccdff841aa48f6862b9067ddba9976" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>makeVector</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a7f2229620d14addb9711be7d1240826a" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>makeVector</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1ab8ea8cc59560278a76628bf5b3d9cfee" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>mutex_t</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a3d2b21e5547786c0d40143113fb7c91c" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>operator=</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1aa5d297e4a221017b4a6a5df12aaa1f9c" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>setELFlags</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a5ff58673f48fe3db1a1654bcce6a33ea" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>swap</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a4b21c577fe3704d3b0454a539d0a68f0" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>swap</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a51f258387098c15f6487afeef107cde8" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>ti_map_t</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a3fa7946112e3b948826fbba887af97d4" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>unlock_shared</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a21e533a815f497a4353d5cff9674483f" prot="public" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>upgrading_lock_t</name></member>
+      <member refid="db/d33/classSG_1_1AuxTypeRegistry_1a3ded30b088c6ef071cb6812205de942d" prot="private" virt="non-virtual"><scope>SG::AuxTypeRegistry</scope><name>~AuxTypeRegistry</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

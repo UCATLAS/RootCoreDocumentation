@@ -1,0 +1,586 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d4/dcb/classSUSY_1_1CrossSectionDB" kind="class" prot="public">
+    <compoundname>SUSY::CrossSectionDB</compoundname>
+    <innerclass refid="df/d0a/classSUSY_1_1CrossSectionDB_1_1Key" prot="public">SUSY::CrossSectionDB::Key</innerclass>
+    <innerclass refid="d4/d10/classSUSY_1_1CrossSectionDB_1_1Process" prot="public">SUSY::CrossSectionDB::Process</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="d4/dcb/classSUSY_1_1CrossSectionDB_1a8650c41701fb90e2c30d5bf4241c13e5" prot="private" static="no">
+        <type>std::map&lt; <ref refid="df/d0a/classSUSY_1_1CrossSectionDB_1_1Key" kindref="compound">Key</ref>, <ref refid="d4/d10/classSUSY_1_1CrossSectionDB_1_1Process" kindref="compound">Process</ref> &gt;</type>
+        <definition>typedef std::map&lt;Key, Process&gt; SUSY::CrossSectionDB::xsDB_t</definition>
+        <argsstring></argsstring>
+        <name>xsDB_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="105" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="d4/dcb/classSUSY_1_1CrossSectionDB_1a1ed606dc34dfc74b8b4e9ef3afdc51d0" prot="public" static="no">
+        <type>xsDB_t::const_iterator</type>
+        <definition>typedef xsDB_t::const_iterator SUSY::CrossSectionDB::iterator</definition>
+        <argsstring></argsstring>
+        <name>iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="108" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d4/dcb/classSUSY_1_1CrossSectionDB_1a2517ba2b8f2f209765589590fa7dfa9f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SUSY::CrossSectionDB::m_extended</definition>
+        <argsstring></argsstring>
+        <name>m_extended</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="106" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dcb/classSUSY_1_1CrossSectionDB_1aa30ce0fb775ea231829d68a088aecd66" prot="private" static="no" mutable="no">
+        <type>xsDB_t</type>
+        <definition>xsDB_t SUSY::CrossSectionDB::m_xsectDB</definition>
+        <argsstring></argsstring>
+        <name>m_xsectDB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="115" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dcb/classSUSY_1_1CrossSectionDB_1ae8d0c03c2224c0ce1260a6594199fbfe" prot="private" static="no" mutable="no">
+        <type>xsDB_t</type>
+        <definition>xsDB_t SUSY::CrossSectionDB::m_cache</definition>
+        <argsstring></argsstring>
+        <name>m_cache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="116" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1aad121af36c54e431105b09a90566c75c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SUSY::CrossSectionDB::CrossSectionDB</definition>
+        <argsstring>(const std::string &amp;txtfilenameOrDir=&quot;SUSYTools/data/mc15_13TeV/&quot;, bool usePathResolver=false, bool isExtended=false)</argsstring>
+        <name>CrossSectionDB</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>txtfilenameOrDir</declname>
+          <defval>&quot;SUSYTools/data/mc15_13TeV/&quot;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>usePathResolver</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isExtended</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="22" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/Root/SUSYCrossSection.cxx" bodystart="9" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1abba3c257142393e91fd23fb857ab75bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SUSY::CrossSectionDB::loadFile</definition>
+        <argsstring>(const std::string &amp;)</argsstring>
+        <name>loadFile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>txtfilename</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="25" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/Root/SUSYCrossSection.cxx" bodystart="41" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1a4fdc7f9556e1a8f11b647d19a53ec1dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SUSY::CrossSectionDB::extend</definition>
+        <argsstring>(const std::string &amp;)</argsstring>
+        <name>extend</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>txtfilename</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="27" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/Root/SUSYCrossSection.cxx" bodystart="83" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1ae8eb397a3f3dde47f584d0f575ed6561" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SUSY::CrossSectionDB::setExtended</definition>
+        <argsstring>(bool isExtended=true)</argsstring>
+        <name>setExtended</name>
+        <param>
+          <type>bool</type>
+          <declname>isExtended</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="76" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1a4a60865ac0a661ca3773fca79ab7808d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/d10/classSUSY_1_1CrossSectionDB_1_1Process" kindref="compound">Process</ref></type>
+        <definition>SUSY::CrossSectionDB::Process SUSY::CrossSectionDB::process</definition>
+        <argsstring>(int id, int proc=0) const </argsstring>
+        <name>process</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>proc</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="80" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/Root/SUSYCrossSection.cxx" bodystart="125" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1a4cbe76caa2d12a8ce770297cb90ff0f9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d4/d10/classSUSY_1_1CrossSectionDB_1_1Process" kindref="compound">Process</ref></type>
+        <definition>Process SUSY::CrossSectionDB::process</definition>
+        <argsstring>(int id, int pdgId1, int pdgId2) const </argsstring>
+        <name>process</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pdgId1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pdgId2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="81" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1a93057851715f3d65f52f201016215c57" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SUSY::CrossSectionDB::xsectTimesEff</definition>
+        <argsstring>(int id, int proc=0) const </argsstring>
+        <name>xsectTimesEff</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>proc</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="84" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1a15ba304352332424085bb4fdf577e057" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SUSY::CrossSectionDB::xsectTimesEff</definition>
+        <argsstring>(int id, int pdgId1, int pdgId2) const </argsstring>
+        <name>xsectTimesEff</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pdgId1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pdgId2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="88" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1ae3bcf6c8a072c18faa347cf0f8e1620e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SUSY::CrossSectionDB::rawxsect</definition>
+        <argsstring>(int id, int proc=0) const </argsstring>
+        <name>rawxsect</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>proc</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="89" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="89" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1a8bcc0e40bea05abf6e7fe198d5f6558c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SUSY::CrossSectionDB::rawxsect</definition>
+        <argsstring>(int id, int pdgId1, int pdgId2) const </argsstring>
+        <name>rawxsect</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pdgId1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pdgId2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="90" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1a01620226d03ffbb05780d5736e1d2c0b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SUSY::CrossSectionDB::kfactor</definition>
+        <argsstring>(int id, int proc=0) const </argsstring>
+        <name>kfactor</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>proc</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="91" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="91" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1af01b338e44932be1fe0dfc95e105bce0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SUSY::CrossSectionDB::kfactor</definition>
+        <argsstring>(int id, int pdgId1, int pdgId2) const </argsstring>
+        <name>kfactor</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pdgId1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pdgId2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="92" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1a7373b6b12dc66d567ad1fd901234d706" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SUSY::CrossSectionDB::efficiency</definition>
+        <argsstring>(int id, int proc=0) const </argsstring>
+        <name>efficiency</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>proc</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="93" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1ac9d3d84c14b63ec1aedd1beee0ac798f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SUSY::CrossSectionDB::efficiency</definition>
+        <argsstring>(int id, int pdgId1, int pdgId2) const </argsstring>
+        <name>efficiency</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pdgId1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pdgId2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="94" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="94" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1a9a37ff32fc75b491cc343bcfb85a0b93" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SUSY::CrossSectionDB::rel_uncertainty</definition>
+        <argsstring>(int id, int proc=0) const </argsstring>
+        <name>rel_uncertainty</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>proc</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="95" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1aa156e05eff4f39df3f96eba28542ac36" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SUSY::CrossSectionDB::rel_uncertainty</definition>
+        <argsstring>(int id, int pdgId1, int pdgId2) const </argsstring>
+        <name>rel_uncertainty</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pdgId1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pdgId2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="96" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1a9ab83b8976d1de00877daacec290aca8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SUSY::CrossSectionDB::sumweight</definition>
+        <argsstring>(int id, int proc=0) const </argsstring>
+        <name>sumweight</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>proc</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="97" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1a6443c92daf12797acd1220f1a82120f5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SUSY::CrossSectionDB::sumweight</definition>
+        <argsstring>(int id, int pdgId1, int pdgId2) const </argsstring>
+        <name>sumweight</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pdgId1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pdgId2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="98" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1a793f883ca495f2d93e6e796261f48756" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string SUSY::CrossSectionDB::name</definition>
+        <argsstring>(int id) const </argsstring>
+        <name>name</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="101" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="101" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1a09197a57839fcc116e1912035838636f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>iterator</type>
+        <definition>iterator SUSY::CrossSectionDB::begin</definition>
+        <argsstring>() const </argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="109" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1ac43da8758208208fdb332a94d64814cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>iterator</type>
+        <definition>iterator SUSY::CrossSectionDB::end</definition>
+        <argsstring>() const </argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="110" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="110" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d4/dcb/classSUSY_1_1CrossSectionDB_1a19088bc864b30ffb0bf4b55060dd7b3e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>xsDB_t::iterator</type>
+        <definition>SUSY::CrossSectionDB::xsDB_t::iterator SUSY::CrossSectionDB::my_find</definition>
+        <argsstring>(const int proc)</argsstring>
+        <name>my_find</name>
+        <param>
+          <type>const int</type>
+          <declname>proc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="114" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/Root/SUSYCrossSection.cxx" bodystart="75" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" line="20" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYCrossSection.h" bodystart="19" bodyend="117"/>
+    <listofallmembers>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1a09197a57839fcc116e1912035838636f" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>begin</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1aad121af36c54e431105b09a90566c75c" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>CrossSectionDB</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1a7373b6b12dc66d567ad1fd901234d706" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>efficiency</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1ac9d3d84c14b63ec1aedd1beee0ac798f" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>efficiency</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1ac43da8758208208fdb332a94d64814cd" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>end</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1a4fdc7f9556e1a8f11b647d19a53ec1dc" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>extend</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1a1ed606dc34dfc74b8b4e9ef3afdc51d0" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>iterator</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1a01620226d03ffbb05780d5736e1d2c0b" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>kfactor</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1af01b338e44932be1fe0dfc95e105bce0" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>kfactor</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1abba3c257142393e91fd23fb857ab75bf" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>loadFile</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1ae8d0c03c2224c0ce1260a6594199fbfe" prot="private" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>m_cache</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1a2517ba2b8f2f209765589590fa7dfa9f" prot="private" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>m_extended</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1aa30ce0fb775ea231829d68a088aecd66" prot="private" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>m_xsectDB</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1a19088bc864b30ffb0bf4b55060dd7b3e" prot="private" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>my_find</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1a793f883ca495f2d93e6e796261f48756" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>name</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1a4a60865ac0a661ca3773fca79ab7808d" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>process</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1a4cbe76caa2d12a8ce770297cb90ff0f9" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>process</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1ae3bcf6c8a072c18faa347cf0f8e1620e" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>rawxsect</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1a8bcc0e40bea05abf6e7fe198d5f6558c" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>rawxsect</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1a9a37ff32fc75b491cc343bcfb85a0b93" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>rel_uncertainty</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1aa156e05eff4f39df3f96eba28542ac36" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>rel_uncertainty</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1ae8eb397a3f3dde47f584d0f575ed6561" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>setExtended</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1a9ab83b8976d1de00877daacec290aca8" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>sumweight</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1a6443c92daf12797acd1220f1a82120f5" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>sumweight</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1a8650c41701fb90e2c30d5bf4241c13e5" prot="private" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>xsDB_t</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1a93057851715f3d65f52f201016215c57" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>xsectTimesEff</name></member>
+      <member refid="d4/dcb/classSUSY_1_1CrossSectionDB_1a15ba304352332424085bb4fdf577e057" prot="public" virt="non-virtual"><scope>SUSY::CrossSectionDB</scope><name>xsectTimesEff</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

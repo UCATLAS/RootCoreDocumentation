@@ -1,0 +1,1033 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="da/d12/classEL_1_1Worker" kind="class" prot="public">
+    <compoundname>EL::Worker</compoundname>
+    <derivedcompoundref refid="d9/de8/classEL_1_1BackgroundWorker" prot="public" virt="non-virtual">EL::BackgroundWorker</derivedcompoundref>
+    <derivedcompoundref refid="df/d6a/classEL_1_1BatchWorker" prot="public" virt="non-virtual">EL::BatchWorker</derivedcompoundref>
+    <derivedcompoundref refid="d0/dd1/classEL_1_1DirectWorker" prot="public" virt="non-virtual">EL::DirectWorker</derivedcompoundref>
+    <derivedcompoundref refid="d3/d7a/classEL_1_1GridWorker" prot="public" virt="non-virtual">EL::GridWorker</derivedcompoundref>
+    <derivedcompoundref refid="dd/d99/classEL_1_1ProofWorker" prot="public" virt="non-virtual">EL::ProofWorker</derivedcompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="da/d12/classEL_1_1Worker_1aa5e5f8a8afb1d5796aeafb8c06251ce5" prot="private" static="no">
+        <name>AlgInitState</name>
+        <enumvalue id="da/d12/classEL_1_1Worker_1aa5e5f8a8afb1d5796aeafb8c06251ce5a88ca06f9718117d617461c9ce8929cca" prot="private">
+          <name>AIS_NEW</name>
+          <briefdescription>
+<para>the algorithms have been created, but not yet initialized </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d12/classEL_1_1Worker_1aa5e5f8a8afb1d5796aeafb8c06251ce5a6040dfe5b1c4bc4646e50ded86fb4af2" prot="private">
+          <name>AIS_HIST_INITIALIZED</name>
+          <briefdescription>
+<para>the algorithms have been hist-initialized, but not yet initialized </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d12/classEL_1_1Worker_1aa5e5f8a8afb1d5796aeafb8c06251ce5a869a4fea8c49e4f4460e87a1ff73501e" prot="private">
+          <name>AIS_INITIALIZED</name>
+          <briefdescription>
+<para>the algorithms have been initialized and hist-initialized </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d12/classEL_1_1Worker_1aa5e5f8a8afb1d5796aeafb8c06251ce5a4371e2a3e06ad0530ae343ae4c2caf02" prot="private">
+          <name>AIS_FINALIZED</name>
+          <briefdescription>
+<para>the algorithms have been finalized, but not hist-finalized </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d12/classEL_1_1Worker_1aa5e5f8a8afb1d5796aeafb8c06251ce5a0f579303d469798c83f8b0d74aa6df3d" prot="private">
+          <name>AIS_HIST_FINALIZED</name>
+          <briefdescription>
+<para>the algorithms have been finalized as well as hist-finalized </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d12/classEL_1_1Worker_1aa5e5f8a8afb1d5796aeafb8c06251ce5ab94f8ad551ba2f1e114404979cff64d0" prot="private">
+          <name>AIS_NONE</name>
+          <briefdescription>
+<para>the algorithms are in an inconsistent and essentially broken state. as an argument for changing state, it means there is no target for the initialization state </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>the initialization state of the algorithms </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="426" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="425" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/d12/classEL_1_1Worker_1a934c82ead36d80707c704079bfd6b64c" prot="private" static="no">
+        <name>AlgExecState</name>
+        <enumvalue id="da/d12/classEL_1_1Worker_1a934c82ead36d80707c704079bfd6b64caf3e29d1c46f7c56ec4f8ab0f1d3e509a" prot="private">
+          <name>AES_BLANK</name>
+          <briefdescription>
+<para>the algorithms are in a blank state, i.e. not pointed at any file </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d12/classEL_1_1Worker_1a934c82ead36d80707c704079bfd6b64caa687861f2a9637b61cdcf2a9364e4bd5" prot="private">
+          <name>AES_FILE_EXECUTED</name>
+          <briefdescription>
+<para>the algorithms have received fileExecute for the current file, if appropriate (i.e. on event 0) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d12/classEL_1_1Worker_1a934c82ead36d80707c704079bfd6b64ca9ee00664ced08b400e3c95beccfb62f2" prot="private">
+          <name>AES_INPUT_CHANGED</name>
+          <briefdescription>
+<para>the algorithms have received the changeInput signal for the current file </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d12/classEL_1_1Worker_1a934c82ead36d80707c704079bfd6b64cac8589577a1bef86953ca0c8ef53c995f" prot="private">
+          <name>AES_NONE</name>
+          <briefdescription>
+<para>the algorithms are in an inconsistent and essentially broken state. as an argument for changing state, it means there is no target for the execution state </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>the execution state of the algorithms </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="461" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="460" bodyend="478"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/d12/classEL_1_1Worker_1a75633a1102bf9b9306431693e63afdf3" prot="private" static="no">
+        <name>InputState</name>
+        <enumvalue id="da/d12/classEL_1_1Worker_1a75633a1102bf9b9306431693e63afdf3a93960b2b1c5fc2d9b7d6effc4331827f" prot="private">
+          <name>VALID_NONE</name>
+          <briefdescription>
+<para>the input is not valid at all </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d12/classEL_1_1Worker_1a75633a1102bf9b9306431693e63afdf3a98c3734a12ba93b639078de1fbfff944" prot="private">
+          <name>VALID_FILE</name>
+          <briefdescription>
+<para>the input file is valid, but the input event may not be </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d12/classEL_1_1Worker_1a75633a1102bf9b9306431693e63afdf3a04ba2102db84306cc8409b7f848ca487" prot="private">
+          <name>VALID_EVENT</name>
+          <briefdescription>
+<para>the input file and event are both valid </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>the current state of the input </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="488" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="487" bodyend="498"/>
+      </memberdef>
+      <memberdef kind="typedef" id="da/d12/classEL_1_1Worker_1aa162db9f3d864f2e388d7ce2e00ef0a9" prot="private" static="no">
+        <type>std::map&lt; std::string, TH1 * &gt;::const_iterator</type>
+        <definition>typedef std::map&lt;std::string,TH1*&gt;::const_iterator EL::Worker::OutputHistMapIter</definition>
+        <argsstring></argsstring>
+        <name>OutputHistMapIter</name>
+        <briefdescription>
+<para>the output map </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="376" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="da/d12/classEL_1_1Worker_1aff5c503d0bbc539e619bac40bfa10da4" prot="private" static="no">
+        <type>std::map&lt; std::string, <ref refid="db/dd1/classSH_1_1DiskWriter" kindref="compound">SH::DiskWriter</ref> * &gt;::const_iterator</type>
+        <definition>typedef std::map&lt;std::string,SH::DiskWriter*&gt;::const_iterator EL::Worker::outputFilesIter</definition>
+        <argsstring></argsstring>
+        <name>outputFilesIter</name>
+        <briefdescription>
+<para>description: the list of output files </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="382" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="382" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="da/d12/classEL_1_1Worker_1a4a3ca29553f9aa3e67d835ca2acefbb6" prot="private" static="no">
+        <type>std::vector&lt; <ref refid="de/ddb/classEL_1_1Algorithm" kindref="compound">EL::Algorithm</ref> * &gt;::const_iterator</type>
+        <definition>typedef std::vector&lt;EL::Algorithm*&gt;::const_iterator EL::Worker::algsIter</definition>
+        <argsstring></argsstring>
+        <name>algsIter</name>
+        <briefdescription>
+<para>description: the list of algorithms </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="388" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="388" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="da/d12/classEL_1_1Worker_1aa2a4a49041c8908b851b162d2442c15b" prot="private" static="no" mutable="no">
+        <type>const <ref refid="db/d3a/classSH_1_1MetaObject" kindref="compound">SH::MetaObject</ref> *</type>
+        <definition>const SH::MetaObject* EL::Worker::m_metaData</definition>
+        <argsstring></argsstring>
+        <name>m_metaData</name>
+        <initializer> nullptr</initializer>
+        <briefdescription>
+<para>description: members directly corresponding to accessors </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="356" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d12/classEL_1_1Worker_1ad27a641277752264fa94704e354faf09" prot="private" static="no" mutable="no">
+        <type>TFile *</type>
+        <definition>TFile* EL::Worker::m_inputFile</definition>
+        <argsstring></argsstring>
+        <name>m_inputFile</name>
+        <initializer> nullptr</initializer>
+        <briefdescription>
+<para>the value of <ref refid="da/d12/classEL_1_1Worker_1a3af6d6032f1adac04bec5a169807eafb" kindref="member">inputFile</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="360" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="360" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d12/classEL_1_1Worker_1a902958dbc5fa259bb59431b2356bc7dc" prot="private" static="no" mutable="no">
+        <type>TTree *</type>
+        <definition>TTree* EL::Worker::m_tree</definition>
+        <argsstring></argsstring>
+        <name>m_tree</name>
+        <initializer> nullptr</initializer>
+        <briefdescription>
+<para>the value of <ref refid="da/d12/classEL_1_1Worker_1a61fcc322c35032ff655c5fef8e6da48d" kindref="member">tree</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="364" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="364" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d12/classEL_1_1Worker_1ac38d803d4c2582b170aadf55a445602d" prot="private" static="no" mutable="no">
+        <type>Long64_t</type>
+        <definition>Long64_t EL::Worker::m_treeEntry</definition>
+        <argsstring></argsstring>
+        <name>m_treeEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="367" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="367" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d12/classEL_1_1Worker_1a935e4d6dd718b5529c1a61c4d5165294" prot="private" static="no" mutable="no">
+        <type>TList *</type>
+        <definition>TList* EL::Worker::m_output</definition>
+        <argsstring></argsstring>
+        <name>m_output</name>
+        <initializer> nullptr</initializer>
+        <briefdescription>
+<para>description: the output list </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="371" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="371" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d12/classEL_1_1Worker_1a0c3e0401f8e7ddd92adb23587861a110" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, TH1 * &gt;</type>
+        <definition>std::map&lt;std::string,TH1*&gt; EL::Worker::m_outputHistMap</definition>
+        <argsstring></argsstring>
+        <name>m_outputHistMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="377" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="377" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d12/classEL_1_1Worker_1a196cd85ab45ebe784deae310094edd3a" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, <ref refid="db/dd1/classSH_1_1DiskWriter" kindref="compound">SH::DiskWriter</ref> * &gt;</type>
+        <definition>std::map&lt;std::string,SH::DiskWriter*&gt; EL::Worker::m_outputFiles</definition>
+        <argsstring></argsstring>
+        <name>m_outputFiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="383" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d12/classEL_1_1Worker_1a4f302e726b535c4dea422db0740909f2" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="de/ddb/classEL_1_1Algorithm" kindref="compound">EL::Algorithm</ref> * &gt;</type>
+        <definition>std::vector&lt;EL::Algorithm*&gt; EL::Worker::m_algs</definition>
+        <argsstring></argsstring>
+        <name>m_algs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="389" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d12/classEL_1_1Worker_1ade893435e30a4eac43f21fe79ff98ba7" prot="private" static="no" mutable="no">
+        <type>TH1 *</type>
+        <definition>TH1* EL::Worker::m_eventCount</definition>
+        <argsstring></argsstring>
+        <name>m_eventCount</name>
+        <initializer> nullptr</initializer>
+        <briefdescription>
+<para>description: the event counter for the algorithms </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="394" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d12/classEL_1_1Worker_1a7e16eb85e9f64ddafaed8985926a7c95" prot="private" static="no" mutable="no">
+        <type>TH1 *</type>
+        <definition>TH1* EL::Worker::m_runTime</definition>
+        <argsstring></argsstring>
+        <name>m_runTime</name>
+        <initializer> nullptr</initializer>
+        <briefdescription>
+<para>the run time summary histogram </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="399" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d12/classEL_1_1Worker_1aff23d11f9a95318e39a475d7c9e0c38b" prot="private" static="no" mutable="no">
+        <type>TTree *</type>
+        <definition>TTree* EL::Worker::m_fileExecutedTree</definition>
+        <argsstring></argsstring>
+        <name>m_fileExecutedTree</name>
+        <initializer> nullptr</initializer>
+        <briefdescription>
+<para>the tree containing the list of files for which fileExecute has been called </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="405" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d12/classEL_1_1Worker_1ad4312901a4575affa06d43b040184fe9" prot="private" static="no" mutable="no">
+        <type>TString *</type>
+        <definition>TString* EL::Worker::m_fileExecutedName</definition>
+        <argsstring></argsstring>
+        <name>m_fileExecutedName</name>
+        <initializer> nullptr</initializer>
+        <briefdescription>
+<para>the name of the file being executed, to be stored inside m_fileExecutedTree </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="410" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d12/classEL_1_1Worker_1a2d542cbc50251a021ac7796253a10f5d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EL::Worker::m_skipEvent</definition>
+        <argsstring></argsstring>
+        <name>m_skipEvent</name>
+        <briefdescription>
+<para>description: whether we are skipping the event </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="415" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d12/classEL_1_1Worker_1a4d51d41643b698ff6c8b5e30131b3921" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; TStopwatch &gt;</type>
+        <definition>std::unique_ptr&lt;TStopwatch&gt; EL::Worker::m_stopwatch</definition>
+        <argsstring></argsstring>
+        <name>m_stopwatch</name>
+        <briefdescription>
+<para>the stop watch we use for measuring total time spend </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="420" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d12/classEL_1_1Worker_1a22c617e4c975775c0eb6fe4a109e5cee" prot="private" static="no" mutable="no">
+        <type>AlgInitState</type>
+        <definition>AlgInitState EL::Worker::m_initState</definition>
+        <argsstring></argsstring>
+        <name>m_initState</name>
+        <briefdescription>
+<para>the value of AlgInitState </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="455" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="455" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d12/classEL_1_1Worker_1a05f242cf867e62ea13e3cf63f9f7bdeb" prot="private" static="no" mutable="no">
+        <type>AlgExecState</type>
+        <definition>AlgExecState EL::Worker::m_execState</definition>
+        <argsstring></argsstring>
+        <name>m_execState</name>
+        <briefdescription>
+<para>the value of AlgExecState </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="482" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="482" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a64f78ba7f80703b68569d244dffad75c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Worker::testInvariant</definition>
+        <argsstring>() const </argsstring>
+        <name>testInvariant</name>
+        <reimplementedby refid="d3/d7a/classEL_1_1GridWorker_1aced289537258f344f0e246429f71f139">testInvariant</reimplementedby>
+        <reimplementedby refid="dd/d99/classEL_1_1ProofWorker_1a350f22082022e1762093d3c181477040">testInvariant</reimplementedby>
+        <reimplementedby refid="d0/dd1/classEL_1_1DirectWorker_1ad5968fddef61d299a4cb368e9dfd2300">testInvariant</reimplementedby>
+        <reimplementedby refid="df/d6a/classEL_1_1BatchWorker_1a4cf119a7c3a00d4edf6e84fb8105337c">testInvariant</reimplementedby>
+        <reimplementedby refid="d9/de8/classEL_1_1BackgroundWorker_1a24ba2f8803025159db971229f2dee45d">testInvariant</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: test the invariant of this object guarantee: no-fail </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="58" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="91" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1ab3b260403c28ffffb508d178db56e69a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>EL::Worker::~Worker</definition>
+        <argsstring>()</argsstring>
+        <name>~Worker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: standard destructor guarantee: no-fail rationale: virtual destructor for base class </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="65" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="118" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1aff16c75575802fa0f8402fe8b0f9eb3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Worker::addOutput</definition>
+        <argsstring>(TObject *output_swallow)</argsstring>
+        <name>addOutput</name>
+        <param>
+          <type>TObject *</type>
+          <declname>output_swallow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: add an object to the output. the worker takes over ownership of the object, but the caller may maintain a reference to it guarantee: basic, argument is always swallowed failures: out of memory I requires: output_swallow != 0 warning: so far I placed no requirements on the output objects. I may do that at a later stage though, possibly breaking existing code. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="78" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="140" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a5ee33c4aa9150b08eb7020153ccb0b26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Worker::addOutputList</definition>
+        <argsstring>(const std::string &amp;name, TObject *output_swallow)</argsstring>
+        <name>addOutputList</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>TObject *</type>
+          <declname>output_swallow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: add a given object to the output. instead of trying to merge the outputs from multiple jobs the output file will contain a TList of the given name with the objects from all the output. guarantee: basic, argument is always swallowed failures: out of memory II requires: output_swallow != 0 rationale: This was primarily build to allow the GRL output to be collected from EventLoop jobs, but it can be used for any kind of output that can not or should not be merged. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="92" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="158" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a84447d3932620b92f8f81ce54260d22b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TH1 *</type>
+        <definition>TH1 * EL::Worker::getOutputHist</definition>
+        <argsstring>(const std::string &amp;name) const </argsstring>
+        <name>getOutputHist</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>get the output histogram with the given name </para>        </briefdescription>
+        <detaileddescription>
+<para>This is mostly meant, so that I can emulate the <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref> histogram mechanism. <simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>object not found </para></simplesect>
+<simplesect kind="post"><para>result != 0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="105" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="175" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a65939f2fcf944b0417586f87d6c2d8d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TFile *</type>
+        <definition>TFile * EL::Worker::getOutputFile</definition>
+        <argsstring>(const std::string &amp;label) const </argsstring>
+        <name>getOutputFile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: get the output file that goes into the dataset with the given label. this dataset has to be registered before the job is submitted. typically that happens in the doSetupJob method. guarantee: strong failures: no dataset with the given label postcondition: result != 0 note: the default value for the argument corresponds to the default label value in the OutputInfo class. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="118" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="189" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1ab08f2b1ef331dbe53e3ca5f09c499346" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TFile *</type>
+        <definition>TFile * EL::Worker::getOutputFileNull</definition>
+        <argsstring>(const std::string &amp;label) const </argsstring>
+        <name>getOutputFileNull</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: get the output file that goes into the dataset with the given label. this dataset has to be registered before the job is submitted. typically that happens in the doSetupJob method. guarantee: strong failures: internal errors note: the default value for the argument corresponds to the default label value in the OutputInfo class. rationale: this method was added to support optional output files, i.e.: the algorithm leaves it to the user whether or not the output file gets configured. then the algorithm just checks whether the output file is there. if so it fills it, otherwise it ignores it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="135" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="201" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a53da237f8ee9f81f202729414af16bd5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="db/d3a/classSH_1_1MetaObject" kindref="compound">SH::MetaObject</ref> *</type>
+        <definition>const SH::MetaObject * EL::Worker::metaData</definition>
+        <argsstring>() const </argsstring>
+        <name>metaData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>description: the sample meta-data we are working on guarantee: no-fail invariant: metaData != 0 rationale: this can be used for accessing sample meta-data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="143" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="213" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a61fcc322c35032ff655c5fef8e6da48d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TTree *</type>
+        <definition>TTree * EL::Worker::tree</definition>
+        <argsstring>() const </argsstring>
+        <name>tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>description: the tree we are running on guarantee: no-fail </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="149" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="222" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a5822faaac316f06b0b74b60a59d132c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Long64_t</type>
+        <definition>Long64_t EL::Worker::treeEntry</definition>
+        <argsstring>() const </argsstring>
+        <name>treeEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>description: the entry in the tree we are reading guarantee: no-fail </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="155" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="231" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a3af6d6032f1adac04bec5a169807eafb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TFile *</type>
+        <definition>TFile * EL::Worker::inputFile</definition>
+        <argsstring>() const </argsstring>
+        <name>inputFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>description: the file we are reading the current tree from guarantee: no-fail </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="161" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="240" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a500b4636942e9d4dc4e6d4777134b928" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string EL::Worker::inputFileName</definition>
+        <argsstring>() const </argsstring>
+        <name>inputFileName</name>
+        <briefdescription>
+<para>the name of the file we are reading the current tree from, without the path component </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="169" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="249" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a08fcf2e906ab203aa4701e416c2552bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TTree *</type>
+        <definition>TTree * EL::Worker::triggerConfig</definition>
+        <argsstring>() const </argsstring>
+        <name>triggerConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>description: the trigger config tree from the input file, or NULL if we did not find it guarantee: strong failures: i/o errors </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="177" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="263" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1ad9513943a0f00baaa5f20adef007481c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>D3PDReader::Event *</type>
+        <definition>D3PDReader::Event * EL::Worker::d3pdreader</definition>
+        <argsstring>() const </argsstring>
+        <name>d3pdreader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>description: the D3PDReader event guarantee: strong failures: out of memory I failures: D3PDReaderSvc not configured postcondition: result != 0 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="186" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="272" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a36ae2dee5cc97f9691055be659c7691b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="de/d95/classxAOD_1_1TEvent" kindref="compound">xAOD::TEvent</ref> *</type>
+        <definition>xAOD::TEvent * EL::Worker::xaodEvent</definition>
+        <argsstring>() const </argsstring>
+        <name>xaodEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>description: the <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> event and store guarantee: strong failures: out of memory I failures: TEventSvc not configured postcondition: result != 0 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="195" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="291" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a268b297f7a5f6626268e83a079ad1b1c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/dae/classxAOD_1_1TStore" kindref="compound">xAOD::TStore</ref> *</type>
+        <definition>xAOD::TStore * EL::Worker::xaodStore</definition>
+        <argsstring>() const </argsstring>
+        <name>xaodStore</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="196" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="310" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a8ca73bf715218c951793aebad3df88dd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EL::Worker::hasD3pdreader</definition>
+        <argsstring>() const </argsstring>
+        <name>hasD3pdreader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>returns: whether we have a D3PDReader configured guarantee: strong failures: out of memory I </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="203" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="329" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1acad573dfc141fde9408617ed1637bcc2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="de/ddb/classEL_1_1Algorithm" kindref="compound">EL::Algorithm</ref> *</type>
+        <definition>Algorithm * EL::Worker::getAlg</definition>
+        <argsstring>(const std::string &amp;name) const </argsstring>
+        <name>getAlg</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: returns the algorithms with the given name or NULL if there is none guarantee: strong failures: out of memory II </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="211" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="345" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a5155e7ddbcee2de9ecc177ffb7fec674" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Worker::skipEvent</definition>
+        <argsstring>()</argsstring>
+        <name>skipEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: skip the current event, i.e. skip the rest of the algorithms for this event guarantee: no-fail rationale: if you have an analysis strategy in which you divide work into multiple algorithms you may want to have dedicated algorithms for event selection that then skip later algorithms that fill histograms </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="222" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="359" bodyend="363"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1acc441920b5219ccda0fb42fe94a28c46" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EL::Worker::Worker</definition>
+        <argsstring>(const SH::MetaObject *val_metaData, TList *output)</argsstring>
+        <name>Worker</name>
+        <param>
+          <type>const <ref refid="db/d3a/classSH_1_1MetaObject" kindref="compound">SH::MetaObject</ref> *</type>
+          <declname>val_metaData</declname>
+        </param>
+        <param>
+          <type>TList *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: standard constructor guarantee: strong failures: low level errors I requires: val_metaData != 0 requires: output != 0 warning: you have to keep the meta-data object around until the worker object is destroyed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="238" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="368" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1acc7df673f6aa991a408b43e98283952e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Worker::addOutputFile</definition>
+        <argsstring>(const std::string &amp;label, TFile *file_swallow)</argsstring>
+        <name>addOutputFile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>TFile *</type>
+          <declname>file_swallow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: add another output file guarantee: strong failures: low level errors II failures: label already used requires: file_swallow != 0 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="247" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="392" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a1bc18ab2b0c3f4d27fdac1ef3aba805f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Worker::addOutputWriter</definition>
+        <argsstring>(const std::string &amp;label, SH::DiskWriter *writer_swallow)</argsstring>
+        <name>addOutputWriter</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd1/classSH_1_1DiskWriter" kindref="compound">SH::DiskWriter</ref> *</type>
+          <declname>writer_swallow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="249" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="403" bodyend="414"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1aca936d72198faafde477941f61ffeed4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Worker::addAlg</definition>
+        <argsstring>(EL::Algorithm *alg_swallow)</argsstring>
+        <name>addAlg</name>
+        <param>
+          <type><ref refid="de/ddb/classEL_1_1Algorithm" kindref="compound">EL::Algorithm</ref> *</type>
+          <declname>alg_swallow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: add another algorithm guarantee: strong failures: out of memory II requires: alg_swallow != 0 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="257" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="419" bodyend="429"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a551253c77c0fbeaf9c4eb30f5d78db6e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Worker::algsChangeInput</definition>
+        <argsstring>()</argsstring>
+        <name>algsChangeInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: tell all algorithms that we started a new file, so they should either initialize themselves, or update file specific pointers guarantee: basic failures: algorithm dependent requires: file pointers are set properly postcondition: algorithms are initialized </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="268" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="434" bodyend="440"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a51d9eea50fe32a30805d40938c44a0ff" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Worker::algsExecute</definition>
+        <argsstring>()</argsstring>
+        <name>algsExecute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: tell all algorithms that they should process the next event guarantee: basic failures: algorithm dependent requires: file pointers are set properly requires: algorithms are initialized </para>        </detaileddescription>
+        <inbodydescription>
+<para>rationale: this will make sure that the post-processing runs for all algorithms for which the regular processing was run </para>        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="278" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="445" bodyend="471"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1adabfb74ecb5f5313331f463f3cb3c677" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Worker::algsEndOfFile</definition>
+        <argsstring>()</argsstring>
+        <name>algsEndOfFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: do any actions that should happen at the end of a file guarantee: basic failures: configuration dependent requires: file pointers are set properly requires: algorithms are initialized rationale: this doesn&apos;t actually talk to the algorithms, but is still named in the same manner to indiciate that it is to be used in the same way as the ones notifying the algorithms. rationale: calling this function is optional, since not all submission modes can support (especially not PROOF) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="293" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="476" bodyend="481"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1aca4f6f0e6aa4702331963ca168d540a4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Worker::algsFinalize</definition>
+        <argsstring>()</argsstring>
+        <name>algsFinalize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: tell all algorithms that they should finish processing guarantee: basic failures: algorithm dependent failures: worker in wrong state requires: file pointers are set properly </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="302" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="486" bodyend="491"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a215d8e053292e068311083e2791469d0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Worker::treeEntry</definition>
+        <argsstring>(Long64_t val_treeEntry)</argsstring>
+        <name>treeEntry</name>
+        <param>
+          <type>Long64_t</type>
+          <declname>val_treeEntry</declname>
+        </param>
+        <briefdescription>
+<para>description: s.a. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="307" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="553" bodyend="557"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a967f58afb058264f474cca98d77350b9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Worker::setInputFile</definition>
+        <argsstring>(TFile *val_inputFile)</argsstring>
+        <name>setInputFile</name>
+        <param>
+          <type>TFile *</type>
+          <declname>val_inputFile</declname>
+        </param>
+        <briefdescription>
+<para>set the value of <ref refid="da/d12/classEL_1_1Worker_1a3af6d6032f1adac04bec5a169807eafb" kindref="member">inputFile</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para>as side effects it also retrieves the input tree from the file, and sets the cache parameters if requested by the user. <simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>errors initializing input tree </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="319" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="496" bodyend="521"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a1aa9932cb415b18a2b680ca733755751" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Worker::setTreeProofOnly</definition>
+        <argsstring>(TTree *val_tree)</argsstring>
+        <name>setTreeProofOnly</name>
+        <param>
+          <type>TTree *</type>
+          <declname>val_tree</declname>
+        </param>
+        <briefdescription>
+<para>set the input tree (for PROOF driver only) </para>        </briefdescription>
+        <detaileddescription>
+<para>Normal workers should set the input file/tree via <ref refid="da/d12/classEL_1_1Worker_1a967f58afb058264f474cca98d77350b9" kindref="member">setInputFile</ref>, which handles empty files gracefully. However since PROOF natively works on the level of trees and filters out empty files (plus sets the cache parameters internally), this special routine is provided for it. <simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="332" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="526" bodyend="534"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a73f9bca159d9fd97d7052dd860d04350" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Long64_t</type>
+        <definition>Long64_t EL::Worker::inputFileNumEntries</definition>
+        <argsstring>() const </argsstring>
+        <name>inputFileNumEntries</name>
+        <briefdescription>
+<para>the number of events in the input file </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+<simplesect kind="pre"><para><ref refid="da/d12/classEL_1_1Worker_1a3af6d6032f1adac04bec5a169807eafb" kindref="member">inputFile()</ref> != 0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="340" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="539" bodyend="548"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="da/d12/classEL_1_1Worker_1a7d8bbdd2995e08e2bd8cbe77dbabbf69" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Worker::changeAlgState</definition>
+        <argsstring>(AlgInitState targetInit, AlgExecState targetExec, InputState inputState)</argsstring>
+        <name>changeAlgState</name>
+        <param>
+          <type>AlgInitState</type>
+          <declname>targetInit</declname>
+        </param>
+        <param>
+          <type>AlgExecState</type>
+          <declname>targetExec</declname>
+        </param>
+        <param>
+          <type>InputState</type>
+          <declname>inputState</declname>
+        </param>
+        <briefdescription>
+<para>switch to the given target state for the algorithms </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>basic </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>invalid target state<linebreak/>
+ algorithm failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="509" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/Root/Worker.cxx" bodystart="562" bodyend="762"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="23195">
+        <label>EL::GridWorker</label>
+        <link refid="d3/d7a/classEL_1_1GridWorker"/>
+        <childnode refid="23191" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23193">
+        <label>EL::BatchWorker</label>
+        <link refid="df/d6a/classEL_1_1BatchWorker"/>
+        <childnode refid="23191" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23191">
+        <label>EL::Worker</label>
+        <link refid="da/d12/classEL_1_1Worker"/>
+      </node>
+      <node id="23194">
+        <label>EL::DirectWorker</label>
+        <link refid="d0/dd1/classEL_1_1DirectWorker"/>
+        <childnode refid="23191" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23196">
+        <label>EL::ProofWorker</label>
+        <link refid="dd/d99/classEL_1_1ProofWorker"/>
+        <childnode refid="23191" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23192">
+        <label>EL::BackgroundWorker</label>
+        <link refid="d9/de8/classEL_1_1BackgroundWorker"/>
+        <childnode refid="23191" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="23197">
+        <label>EL::Worker</label>
+        <link refid="da/d12/classEL_1_1Worker"/>
+        <childnode refid="23198" relation="usage">
+          <edgelabel>m_metaData</edgelabel>
+        </childnode>
+      </node>
+      <node id="23198">
+        <label>SH::MetaObject</label>
+        <link refid="db/d3a/classSH_1_1MetaObject"/>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" line="50" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Worker.h" bodystart="49" bodyend="510"/>
+    <listofallmembers>
+      <member refid="da/d12/classEL_1_1Worker_1aca936d72198faafde477941f61ffeed4" prot="protected" virt="non-virtual"><scope>EL::Worker</scope><name>addAlg</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1aff16c75575802fa0f8402fe8b0f9eb3f" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>addOutput</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1acc7df673f6aa991a408b43e98283952e" prot="protected" virt="non-virtual"><scope>EL::Worker</scope><name>addOutputFile</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a5ee33c4aa9150b08eb7020153ccb0b26" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>addOutputList</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a1bc18ab2b0c3f4d27fdac1ef3aba805f" prot="protected" virt="non-virtual"><scope>EL::Worker</scope><name>addOutputWriter</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a934c82ead36d80707c704079bfd6b64caf3e29d1c46f7c56ec4f8ab0f1d3e509a" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>AES_BLANK</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a934c82ead36d80707c704079bfd6b64caa687861f2a9637b61cdcf2a9364e4bd5" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>AES_FILE_EXECUTED</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a934c82ead36d80707c704079bfd6b64ca9ee00664ced08b400e3c95beccfb62f2" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>AES_INPUT_CHANGED</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a934c82ead36d80707c704079bfd6b64cac8589577a1bef86953ca0c8ef53c995f" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>AES_NONE</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1aa5e5f8a8afb1d5796aeafb8c06251ce5a4371e2a3e06ad0530ae343ae4c2caf02" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>AIS_FINALIZED</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1aa5e5f8a8afb1d5796aeafb8c06251ce5a0f579303d469798c83f8b0d74aa6df3d" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>AIS_HIST_FINALIZED</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1aa5e5f8a8afb1d5796aeafb8c06251ce5a6040dfe5b1c4bc4646e50ded86fb4af2" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>AIS_HIST_INITIALIZED</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1aa5e5f8a8afb1d5796aeafb8c06251ce5a869a4fea8c49e4f4460e87a1ff73501e" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>AIS_INITIALIZED</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1aa5e5f8a8afb1d5796aeafb8c06251ce5a88ca06f9718117d617461c9ce8929cca" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>AIS_NEW</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1aa5e5f8a8afb1d5796aeafb8c06251ce5ab94f8ad551ba2f1e114404979cff64d0" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>AIS_NONE</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a934c82ead36d80707c704079bfd6b64c" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>AlgExecState</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1aa5e5f8a8afb1d5796aeafb8c06251ce5" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>AlgInitState</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a551253c77c0fbeaf9c4eb30f5d78db6e" prot="protected" virt="non-virtual"><scope>EL::Worker</scope><name>algsChangeInput</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1adabfb74ecb5f5313331f463f3cb3c677" prot="protected" virt="non-virtual"><scope>EL::Worker</scope><name>algsEndOfFile</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a51d9eea50fe32a30805d40938c44a0ff" prot="protected" virt="non-virtual"><scope>EL::Worker</scope><name>algsExecute</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1aca4f6f0e6aa4702331963ca168d540a4" prot="protected" virt="non-virtual"><scope>EL::Worker</scope><name>algsFinalize</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a4a3ca29553f9aa3e67d835ca2acefbb6" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>algsIter</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a7d8bbdd2995e08e2bd8cbe77dbabbf69" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>changeAlgState</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1ad9513943a0f00baaa5f20adef007481c" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>d3pdreader</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1acad573dfc141fde9408617ed1637bcc2" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>getAlg</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a65939f2fcf944b0417586f87d6c2d8d1" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>getOutputFile</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1ab08f2b1ef331dbe53e3ca5f09c499346" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>getOutputFileNull</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a84447d3932620b92f8f81ce54260d22b" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>getOutputHist</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a8ca73bf715218c951793aebad3df88dd" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>hasD3pdreader</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a3af6d6032f1adac04bec5a169807eafb" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>inputFile</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a500b4636942e9d4dc4e6d4777134b928" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>inputFileName</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a73f9bca159d9fd97d7052dd860d04350" prot="protected" virt="non-virtual"><scope>EL::Worker</scope><name>inputFileNumEntries</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a75633a1102bf9b9306431693e63afdf3" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>InputState</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a4f302e726b535c4dea422db0740909f2" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>m_algs</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1ade893435e30a4eac43f21fe79ff98ba7" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>m_eventCount</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a05f242cf867e62ea13e3cf63f9f7bdeb" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>m_execState</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1ad4312901a4575affa06d43b040184fe9" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>m_fileExecutedName</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1aff23d11f9a95318e39a475d7c9e0c38b" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>m_fileExecutedTree</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a22c617e4c975775c0eb6fe4a109e5cee" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>m_initState</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1ad27a641277752264fa94704e354faf09" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>m_inputFile</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1aa2a4a49041c8908b851b162d2442c15b" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>m_metaData</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a935e4d6dd718b5529c1a61c4d5165294" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>m_output</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a196cd85ab45ebe784deae310094edd3a" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>m_outputFiles</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a0c3e0401f8e7ddd92adb23587861a110" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>m_outputHistMap</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a7e16eb85e9f64ddafaed8985926a7c95" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>m_runTime</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a2d542cbc50251a021ac7796253a10f5d" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>m_skipEvent</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a4d51d41643b698ff6c8b5e30131b3921" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>m_stopwatch</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a902958dbc5fa259bb59431b2356bc7dc" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>m_tree</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1ac38d803d4c2582b170aadf55a445602d" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>m_treeEntry</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a53da237f8ee9f81f202729414af16bd5" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>metaData</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1aff5c503d0bbc539e619bac40bfa10da4" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>outputFilesIter</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1aa162db9f3d864f2e388d7ce2e00ef0a9" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>OutputHistMapIter</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a967f58afb058264f474cca98d77350b9" prot="protected" virt="non-virtual"><scope>EL::Worker</scope><name>setInputFile</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a1aa9932cb415b18a2b680ca733755751" prot="protected" virt="non-virtual"><scope>EL::Worker</scope><name>setTreeProofOnly</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a5155e7ddbcee2de9ecc177ffb7fec674" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>skipEvent</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a64f78ba7f80703b68569d244dffad75c" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>testInvariant</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a61fcc322c35032ff655c5fef8e6da48d" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>tree</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a5822faaac316f06b0b74b60a59d132c3" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>treeEntry</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a215d8e053292e068311083e2791469d0" prot="protected" virt="non-virtual"><scope>EL::Worker</scope><name>treeEntry</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a08fcf2e906ab203aa4701e416c2552bd" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>triggerConfig</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a75633a1102bf9b9306431693e63afdf3a04ba2102db84306cc8409b7f848ca487" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>VALID_EVENT</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a75633a1102bf9b9306431693e63afdf3a98c3734a12ba93b639078de1fbfff944" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>VALID_FILE</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a75633a1102bf9b9306431693e63afdf3a93960b2b1c5fc2d9b7d6effc4331827f" prot="private" virt="non-virtual"><scope>EL::Worker</scope><name>VALID_NONE</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1acc441920b5219ccda0fb42fe94a28c46" prot="protected" virt="non-virtual"><scope>EL::Worker</scope><name>Worker</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a36ae2dee5cc97f9691055be659c7691b" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>xaodEvent</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1a268b297f7a5f6626268e83a079ad1b1c" prot="public" virt="non-virtual"><scope>EL::Worker</scope><name>xaodStore</name></member>
+      <member refid="da/d12/classEL_1_1Worker_1ab3b260403c28ffffb508d178db56e69a" prot="public" virt="virtual"><scope>EL::Worker</scope><name>~Worker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

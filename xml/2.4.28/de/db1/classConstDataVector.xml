@@ -1,0 +1,1531 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="de/db1/classConstDataVector" kind="class" prot="public">
+    <compoundname>ConstDataVector</compoundname>
+    <basecompoundref refid="d3/d78/structDV" prot="private" virt="non-virtual">DV&lt; T &gt;</basecompoundref>
+    <includes refid="d2/d0d/ConstDataVector_8h" local="no">ConstDataVector.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>DV</declname>
+        <defname>DV</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="user-defined">
+      <header>Private helpers.</header>
+      <description><para><anchor id="_1amgrpe5a69a01ae6824427c974a9ce34af1a7"/> </para></description>
+      <memberdef kind="friend" id="de/db1/classConstDataVector_1a2b0a1ab3eaccbc67e7a492a884e6238c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class DataModel_detail::ElementProxy&lt; ConstDataVector &gt;</definition>
+        <argsstring></argsstring>
+        <name>DataModel_detail::ElementProxy&lt; ConstDataVector &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="799" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="799" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="de/db1/classConstDataVector_1a1119a539ef95e66a83ed73e65ce4acb9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend void</type>
+        <definition>void test2_assignelement1</definition>
+        <argsstring>()</argsstring>
+        <name>test2_assignelement1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="800" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/DataList_test.cxx" bodystart="3170" bodyend="3181"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a623bc144efdcba0cf04c578f8bcb5546" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstDataVector&lt; DV &gt;::assignElement</definition>
+        <argsstring>(typename BaseContainer::iterator pos, value_type newElem)</argsstring>
+        <name>assignElement</name>
+        <param>
+          <type>typename BaseContainer::iterator</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="de/db1/classConstDataVector_1a5fd314970812a0e01af18df65729d2bd" kindref="member">value_type</ref></type>
+          <declname>newElem</declname>
+        </param>
+        <briefdescription>
+<para>Handle element assignment. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position in the container to assign. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new element to assign.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The old element is freed if this container owns elements. Auxiliary data are copied if appropriate. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="811" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="944" bodyend="948"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1af5e415150be85ed0fca8ead936741905" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstDataVector&lt; DV &gt;::assignBaseElement</definition>
+        <argsstring>(typename BaseContainer::iterator pos, typename BaseContainer::value_type newElem)</argsstring>
+        <name>assignBaseElement</name>
+        <param>
+          <type>typename BaseContainer::iterator</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>typename BaseContainer::value_type</type>
+          <declname>newElem</declname>
+        </param>
+        <briefdescription>
+<para>Handle element assignment from a base pointer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position in the container to assign. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new element to assign.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The old element is freed if this container owns elements. Auxiliary data are copied if appropriate. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="840" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="986" bodyend="990"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1aff277598234d8cbc64e28259775db377" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>ConstDataVector&lt; DV &gt;::iterator ConstDataVector&lt; DV &gt;::to_my_iterator</definition>
+        <argsstring>(typename DV::iterator it)</argsstring>
+        <name>to_my_iterator</name>
+        <param>
+          <type>typename DV::iterator</type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+<para>Convert an iterator of the base <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> to a <computeroutput><ref refid="de/db1/classConstDataVector_1abf241232ecaa158cfe092713d2699d5f" kindref="member">ConstDataVector::iterator</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>it</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> iterator to convert. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="857" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="1015" bodyend="1018"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1ad66fe7de4683f525a4cd47d4a18b2d3b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/d05/classDataModel__detail_1_1ElementProxy" kindref="compound">ElementProxy</ref></type>
+        <definition>ConstDataVector&lt; DV &gt;::ElementProxy ConstDataVector&lt; DV &gt;::to_element_proxy</definition>
+        <argsstring>(typename BaseContainer::iterator i)</argsstring>
+        <name>to_element_proxy</name>
+        <param>
+          <type>typename BaseContainer::iterator</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Convert an iterator of the base <computeroutput>vector</computeroutput> to an <computeroutput>ElementProxy</computeroutput> for the <computeroutput><ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Convert an iterator of the base <computeroutput>vector</computeroutput> an <computeroutput>ElementProxy</computeroutput> for the <computeroutput><ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref></computeroutput>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>it</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base <computeroutput>vector</computeroutput> iterator to convert. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="865" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="1029" bodyend="1032"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a753f68e45b0352b1a7e7cc0873dac8ff" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DV::iterator</type>
+        <definition>DV::iterator ConstDataVector&lt; DV &gt;::to_base_iterator</definition>
+        <argsstring>(iterator it)</argsstring>
+        <name>to_base_iterator</name>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+<para>Convert a <computeroutput><ref refid="de/db1/classConstDataVector_1abf241232ecaa158cfe092713d2699d5f" kindref="member">ConstDataVector::iterator</ref></computeroutput> to an iterator of the base <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>it</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput><ref refid="de/db1/classConstDataVector_1abf241232ecaa158cfe092713d2699d5f" kindref="member">ConstDataVector::iterator</ref></computeroutput> to convert. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="849" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="1001" bodyend="1004"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Constructors, destructors, assignment.</header>
+      <description><para><anchor id="_1amgrpb39bb9cb1bc18cddc74e7f363d4e2167"/> </para></description>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a1cdaac1590ea31083cc54ac56adb9caa" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ConstDataVector&lt; DV &gt;::ConstDataVector</definition>
+        <argsstring>(SG::OwnershipPolicy ownPolicy=SG::OWN_ELEMENTS)</argsstring>
+        <name>ConstDataVector</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8" kindref="member">SG::OwnershipPolicy</ref></type>
+          <declname>ownPolicy</declname>
+          <defval>SG::OWN_ELEMENTS</defval>
+        </param>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ownPolicy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ownership mode for the container.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+By default, a <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> will own its elements. To avoid this, pass <computeroutput><ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8ad7d4cf2303700f0966e4140f236c4bf1" kindref="member">SG::VIEW_ELEMENTS</ref></computeroutput> for <emphasis>ownPolicy</emphasis>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="165" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a981d20627c4b6e8ac36e6e5972dc0ab9" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ConstDataVector&lt; DV &gt;::ConstDataVector</definition>
+        <argsstring>(size_type n, SG::OwnershipPolicy ownPolicy=SG::OWN_ELEMENTS)</argsstring>
+        <name>ConstDataVector</name>
+        <param>
+          <type><ref refid="de/db1/classConstDataVector_1a0b7cdd6c8969c3dbdbbb23eabfb4d524" kindref="member">size_type</ref></type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8" kindref="member">SG::OwnershipPolicy</ref></type>
+          <declname>ownPolicy</declname>
+          <defval>SG::OWN_ELEMENTS</defval>
+        </param>
+        <briefdescription>
+<para>Sized constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the container. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ownPolicy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ownership mode for the container.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Note that unlike the standard vector constructor, you can&apos;t specify an initial value here. The container will be initialized with 0&apos;s.</para><para>By default, a <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> will own its elements. To avoid this, pass <computeroutput><ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8ad7d4cf2303700f0966e4140f236c4bf1" kindref="member">SG::VIEW_ELEMENTS</ref></computeroutput> for <emphasis>ownPolicy</emphasis>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="180" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="65" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1aa6ea74c079d85b66156704a096d14a89" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class InputIterator</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ConstDataVector&lt; DV &gt;::ConstDataVector</definition>
+        <argsstring>(InputIterator first, InputIterator last, SG::OwnershipPolicy ownPolicy=SG::VIEW_ELEMENTS)</argsstring>
+        <name>ConstDataVector</name>
+        <param>
+          <type>InputIterator</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>InputIterator</type>
+          <declname>last</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8" kindref="member">SG::OwnershipPolicy</ref></type>
+          <declname>ownPolicy</declname>
+          <defval>SG::VIEW_ELEMENTS</defval>
+        </param>
+        <briefdescription>
+<para>Constructor from iterators. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the range to put in the new container. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The end of the range to put in the new container. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ownPolicy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ownership mode for the container.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+By default, a <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> will own its elements (and take ownership of the pointers passed to this constructor). To avoid this, pass <computeroutput><ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8ad7d4cf2303700f0966e4140f236c4bf1" kindref="member">SG::VIEW_ELEMENTS</ref></computeroutput> for <emphasis>ownPolicy</emphasis>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="195" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="88" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1ab0e570bb8e3da3b9ce9c465327eed052" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref> &amp;</type>
+        <definition>ConstDataVector&lt; DV &gt; &amp; ConstDataVector&lt; DV &gt;::operator=</definition>
+        <argsstring>(const ConstDataVector &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Assignment operator.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The container from which to copy.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This is a `shallow&apos; copy; the new container will not own its elements. Assignment operator. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref> from which to assign. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This object.</para></simplesect>
+This is a `shallow&apos; copy; after the completion of this, the <ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref> will not own its elements. Any elements it owned prior to this call will be released.</para><para>Note: this method may only be called using the most derived <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> in the hierarchy.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref> from which to assign. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This object.</para></simplesect>
+This is a `shallow&apos; copy; after the completion of this, the <ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref> will not own its elements. Any elements it owned prior to this call will be released.</para><para>Note: this method may only be called using the most derived <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> in the hierarchy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="254" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="151" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a52e7a6b1254389e5ad4ebe7e8e4505bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class InputIterator</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ConstDataVector&lt; DV &gt;::assign</definition>
+        <argsstring>(InputIterator first, InputIterator last)</argsstring>
+        <name>assign</name>
+        <param>
+          <type>InputIterator</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>InputIterator</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+<para>Assign from iterators. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the range to put in the container. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The end of the range to put in the container.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Any existing owned elements will be released. The <computeroutput>DataVector&apos;s</computeroutput> ownership policy determines whether it will take ownership of the new elements. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="291" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="210" bodyend="216"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Element access.</header>
+      <description><para><anchor id="_1amgrp03f08060dbcda9a05f3dd6a98ff9f981"/> </para></description>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1aae62dc3e4f66c0fd8ef43c252a13b48d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/d05/classDataModel__detail_1_1ElementProxy" kindref="compound">ElementProxy</ref></type>
+        <definition>ConstDataVector&lt; DV &gt;::ElementProxy ConstDataVector&lt; DV &gt;::operator[]</definition>
+        <argsstring>(size_type n)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="de/db1/classConstDataVector_1a0b7cdd6c8969c3dbdbbb23eabfb4d524" kindref="member">size_type</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Access an element, as an lvalue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array index to access. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Proxy to the element at <emphasis>n</emphasis>.</para></simplesect>
+No bounds checking is done. Note that we return a proxy object rather than a reference; the proxy will handle deleting an owned element if it&apos;s assigned to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="322" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="252" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a7565e82eb51c3c4492ca8f5abd915138" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/d05/classDataModel__detail_1_1ElementProxy" kindref="compound">ElementProxy</ref></type>
+        <definition>ConstDataVector&lt; DV &gt;::ElementProxy ConstDataVector&lt; DV &gt;::at</definition>
+        <argsstring>(size_type n)</argsstring>
+        <name>at</name>
+        <param>
+          <type><ref refid="de/db1/classConstDataVector_1a0b7cdd6c8969c3dbdbbb23eabfb4d524" kindref="member">size_type</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Access an element, as an lvalue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array index to access. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Proxy to the element at <emphasis>n</emphasis>.</para></simplesect>
+Will raise <computeroutput>std::out_of_range</computeroutput> if the index is out-of-bounds. Note that we return a proxy object rather than a reference; the proxy will handle deleting an owned element if it&apos;s assigned to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="334" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="270" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a4993339b08404582cd9d83127c344802" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/d05/classDataModel__detail_1_1ElementProxy" kindref="compound">ElementProxy</ref></type>
+        <definition>ConstDataVector&lt; DV &gt;::ElementProxy ConstDataVector&lt; DV &gt;::front</definition>
+        <argsstring>()</argsstring>
+        <name>front</name>
+        <briefdescription>
+<para>Access the first element in the collection as an lvalue. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Proxy to the first element in the collection.</para></simplesect>
+No checking is done to ensure that the container is not empty. Note that we return a proxy object rather than a reference; the proxy will handle deleting an owned element if it&apos;s assigned to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="345" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="289" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1ab16ba63da380c5fef188eded070fca0d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/d05/classDataModel__detail_1_1ElementProxy" kindref="compound">ElementProxy</ref></type>
+        <definition>ConstDataVector&lt; DV &gt;::ElementProxy ConstDataVector&lt; DV &gt;::back</definition>
+        <argsstring>()</argsstring>
+        <name>back</name>
+        <briefdescription>
+<para>Access the last element in the collection as an lvalue. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Proxy to the last element in the collection.</para></simplesect>
+No checking is done to ensure that the container is not empty. Note that we return a proxy object rather than a reference; the proxy will handle deleting an owned element if it&apos;s assigned to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="356" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="306" bodyend="309"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Iterator creation.</header>
+      <description><para><anchor id="_1amgrp04fea93d7622927e954392dcd5690674"/> </para></description>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a1eebe42ee99ce34ab685d69a53b65dc0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>ConstDataVector&lt; DV &gt;::iterator ConstDataVector&lt; DV &gt;::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>Return an <computeroutput>iterator</computeroutput> pointing at the beginning of the collection. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>An <computeroutput>iterator</computeroutput>.</para></simplesect>
+Note that dereferencing the iterator will yield a proxy rather than a reference; the proxy will handle deleting an owned element if it&apos;s assigned to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="374" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="327" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a7e790c3b42f79d58586ebb3cf027781a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>ConstDataVector&lt; DV &gt;::iterator ConstDataVector&lt; DV &gt;::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+<para>Return an <computeroutput>iterator</computeroutput> pointing past the end of the collection. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>An <computeroutput>iterator</computeroutput>.</para></simplesect>
+Note that dereferencing the iterator will yield a proxy rather than a reference; the proxy will handle deleting an owned element if it&apos;s assigned to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="386" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="345" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1ae71dc63f2039fcb8a99040701ec37e7a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/db1/classConstDataVector_1ad6f83847ddbbcc881f467bdfa06d93a9" kindref="member">reverse_iterator</ref></type>
+        <definition>ConstDataVector&lt; DV &gt;::reverse_iterator ConstDataVector&lt; DV &gt;::rbegin</definition>
+        <argsstring>()</argsstring>
+        <name>rbegin</name>
+        <briefdescription>
+<para>Return a <computeroutput>reverse_iterator</computeroutput> pointing past the end of the collection. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="d4/dc4/structA" kindref="compound">A</ref> <computeroutput>reverse_iterator</computeroutput>.</para></simplesect>
+Note that dereferencing the iterator will yield a proxy rather than a reference; the proxy will handle deleting an owned element if it&apos;s assigned to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="398" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="363" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1abdeb7d8faaaf6e0fd5d4c5dbc29fc94a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/db1/classConstDataVector_1ad6f83847ddbbcc881f467bdfa06d93a9" kindref="member">reverse_iterator</ref></type>
+        <definition>ConstDataVector&lt; DV &gt;::reverse_iterator ConstDataVector&lt; DV &gt;::rend</definition>
+        <argsstring>()</argsstring>
+        <name>rend</name>
+        <briefdescription>
+<para>Return a <computeroutput>reverse_iterator</computeroutput> pointing at the beginning of the collection. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="d4/dc4/structA" kindref="compound">A</ref> <computeroutput>reverse_iterator</computeroutput>.</para></simplesect>
+Note that dereferencing the iterator will yield a proxy rather than a reference; the proxy will handle deleting an owned element if it&apos;s assigned to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="410" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="381" bodyend="384"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Insertion operations.</header>
+      <description><para><anchor id="_1amgrpc4ff45e64b9f41cc82677be76808116c"/> </para></description>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a83ff6832bd6d52468225dca32c516121" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstDataVector&lt; DV &gt;::push_back</definition>
+        <argsstring>(value_type pElem)</argsstring>
+        <name>push_back</name>
+        <param>
+          <type><ref refid="de/db1/classConstDataVector_1a5fd314970812a0e01af18df65729d2bd" kindref="member">value_type</ref></type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add an element to the end of the collection. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The element to add to the collection.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The container&apos;s ownership policy will determine if it takes ownership of the new element.</para><para>Note: this method may only be called using the most derived <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> in the hierarchy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="429" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="402" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1aaad6e69e9afc63551cf6aa9898807a90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstDataVector&lt; DV &gt;::emplace_back</definition>
+        <argsstring>(value_type pElem)</argsstring>
+        <name>emplace_back</name>
+        <param>
+          <type><ref refid="de/db1/classConstDataVector_1a5fd314970812a0e01af18df65729d2bd" kindref="member">value_type</ref></type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add an element to the end of the collection. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The element to add to the collection.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The container&apos;s ownership policy will determine if it takes ownership of the new element.</para><para>Note: this method may only be called using the most derived <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> in the hierarchy.</para><para>For <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput>, this is just the same as <computeroutput>push_back</computeroutput>. It&apos;s included just for interface compatibility with `stdvector`. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="445" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="423" bodyend="426"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1ad6acd17f41c3809ce00ed14aa78e7d80" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>ConstDataVector&lt; DV &gt;::iterator ConstDataVector&lt; DV &gt;::insert</definition>
+        <argsstring>(iterator position, value_type pElem)</argsstring>
+        <name>insert</name>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type><ref refid="de/db1/classConstDataVector_1a5fd314970812a0e01af18df65729d2bd" kindref="member">value_type</ref></type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add a new element to the collection. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator before which the element will be added. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The element to add to the collection. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An iterator that points to the inserted data.</para></simplesect>
+The container&apos;s ownership policy will determine if it takes ownership of the new element.</para><para>Note: this method may only be called using the most derived <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> in the hierarchy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="460" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="444" bodyend="449"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a7d0675548e4ee8d8e5cc50960a5b0fc5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>ConstDataVector&lt; DV &gt;::iterator ConstDataVector&lt; DV &gt;::emplace</definition>
+        <argsstring>(iterator position, value_type pElem)</argsstring>
+        <name>emplace</name>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type><ref refid="de/db1/classConstDataVector_1a5fd314970812a0e01af18df65729d2bd" kindref="member">value_type</ref></type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add a new element to the collection. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator before which the element will be added. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The element to add to the collection. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An iterator that points to the inserted data.</para></simplesect>
+The container&apos;s ownership policy will determine if it takes ownership of the new element.</para><para>Note: this method may only be called using the most derived <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> in the hierarchy.</para><para>For <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput>, this is just the same as <computeroutput>insert</computeroutput>. It&apos;s included just for interface compatibility with `stdvector`. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="478" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="470" bodyend="473"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a6a95569685418afead723f1798ac143f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class InputIterator</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ConstDataVector&lt; DV &gt;::insert</definition>
+        <argsstring>(iterator position, InputIterator first, InputIterator last)</argsstring>
+        <name>insert</name>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>InputIterator</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>InputIterator</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+<para>Add a group of new elements to the collection. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator before which the element will be added. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the range to put in the container. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The end of the range to put in the container.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The container&apos;s ownership policy will determine if it takes ownership of the new element.</para><para>Note: this method may only be called using the most derived <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> in the hierarchy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="494" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="491" bodyend="502"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Erasure operations.</header>
+      <description><para><anchor id="_1amgrp5dd35913d37b538bffc58eac1d7946e3"/> </para></description>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a191b17e706f9efc349510e54b00f8a19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>ConstDataVector&lt; DV &gt;::iterator ConstDataVector&lt; DV &gt;::erase</definition>
+        <argsstring>(iterator position)</argsstring>
+        <name>erase</name>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Remove element at a given position. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the element to be removed. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An iterator pointing to the next element (or <computeroutput><ref refid="de/db1/classConstDataVector_1a7e790c3b42f79d58586ebb3cf027781a" kindref="member">end()</ref></computeroutput>).</para></simplesect>
+If the container owns its elements, then the pointed-to element will be deleted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="555" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="586" bodyend="589"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1ad4e0cbb65c66bb7b712bde4e92de182e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>ConstDataVector&lt; DV &gt;::iterator ConstDataVector&lt; DV &gt;::erase</definition>
+        <argsstring>(iterator first, iterator last)</argsstring>
+        <name>erase</name>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+<para>Remove a range of elements. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the first element to be removed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing one past the last element to be removed. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An iterator pointing to the element pointed to by <emphasis>last</emphasis> prior to erasing (or <computeroutput><ref refid="de/db1/classConstDataVector_1a7e790c3b42f79d58586ebb3cf027781a" kindref="member">end()</ref></computeroutput>).</para></simplesect>
+If the container owns its elements, then the removed elements will be deleted. Any duplicates will be removed in this process, but don&apos;t rely on this. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="569" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="606" bodyend="611"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1ae8944232be996809a74b641ac20e7aa2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstDataVector&lt; DV &gt;::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+<para>Erase all the elements in the collection. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="de/db1/classConstDataVector_1ae8944232be996809a74b641ac20e7aa2" kindref="member">clear()</ref></para><para>If the container owns its elements, then the removed elements will be deleted. Any duplicates will be removed in this process, but don&apos;t rely on this.</para><para>Erase all the elements in the collection. If the container owns its elements, then the removed elements will be deleted. Any duplicates will be removed in this process, but don&apos;t rely on this. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="579" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="624" bodyend="627"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Swap and sort.</header>
+      <description><para><anchor id="_1amgrp48740572230bf871bbbe3f4450b8e26c"/> </para></description>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1ae42c031d0522fde4a983f3a8c10328d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstDataVector&lt; DV &gt;::swap</definition>
+        <argsstring>(ConstDataVector &amp;rhs)</argsstring>
+        <name>swap</name>
+        <param>
+          <type><ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Swap this collection with another. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The collection with which to swap.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Ownership is swapped along with the collection content.</para><para>Note: this method may only be called using the most-derived <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> in the hierarchy. The <emphasis>rhs</emphasis> must also be referenced using the most-derived <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="598" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="642" bodyend="645"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1af4024a744ff89b92eb8e8a8e60e80d0e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstDataVector&lt; DV &gt;::iter_swap</definition>
+        <argsstring>(iterator a, iterator b)</argsstring>
+        <name>iter_swap</name>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Swap the referents of two <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> iterators. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first iterator for the swap. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second iterator for the swap/ </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="606" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="655" bodyend="659"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Non-standard operations.</header>
+      <description><para><anchor id="_1amgrp67b3645f65a6afd377578740fa3b4ed2"/> </para></description>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a63dd71d02bdefb4cf4501b8d788998bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstDataVector&lt; DV &gt;::swapElement</definition>
+        <argsstring>(size_type index, value_type newElem, reference oldElem)</argsstring>
+        <name>swapElement</name>
+        <param>
+          <type><ref refid="de/db1/classConstDataVector_1a0b7cdd6c8969c3dbdbbb23eabfb4d524" kindref="member">size_type</ref></type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="de/db1/classConstDataVector_1a5fd314970812a0e01af18df65729d2bd" kindref="member">value_type</ref></type>
+          <declname>newElem</declname>
+        </param>
+        <param>
+          <type>reference</type>
+          <declname>oldElem</declname>
+        </param>
+        <briefdescription>
+<para>Swap one element out of the container. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the element in the container to swap. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New element to put in the container. May be 0. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oldElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to receive the element removed from the container.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Reference <emphasis>oldElem</emphasis> is initialized with element <emphasis>index</emphasis> of the collection (no bounds checking). Then element <emphasis>index</emphasis> is set to <computeroutput>newElem</computeroutput>. If the collection owns its elements, then it will take ownership of <emphasis>newElem</emphasis> and release (without deleting) the element returned through <emphasis>oldElem</emphasis>.</para><para>Note: this method may only be called using the most derived <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> in the hierarchy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="633" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="685" bodyend="692"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a86413c1535c7b64e7d9fff0b55295a08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstDataVector&lt; DV &gt;::swapElement</definition>
+        <argsstring>(iterator pos, value_type newElem, reference oldElem)</argsstring>
+        <name>swapElement</name>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="de/db1/classConstDataVector_1a5fd314970812a0e01af18df65729d2bd" kindref="member">value_type</ref></type>
+          <declname>newElem</declname>
+        </param>
+        <param>
+          <type>reference</type>
+          <declname>oldElem</declname>
+        </param>
+        <briefdescription>
+<para>Swap one element out of the container. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The element in the container to swap. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New element to put in the container. May be 0. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oldElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to receive the element removed from the container.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Reference <emphasis>oldElem</emphasis> is initialized with element <emphasis>pos</emphasis> of the collection (no bounds checking). Then element <emphasis>index</emphasis> is set to <computeroutput>newElem</computeroutput>. If the collection owns its elements, then it will take ownership of <emphasis>newElem</emphasis> and release (without deleting) the element returned through <emphasis>oldElem</emphasis>.</para><para>Note: this method may only be called using the most derived <computeroutput><ref refid="d9/dfb/classDataList" kindref="compound">DataList</ref></computeroutput> in the hierarchy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="653" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="715" bodyend="722"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1afc25e0985e21c58a97654203aa8c2635" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d3/d78/structDV" kindref="compound">DV</ref> *</type>
+        <definition>const DV * ConstDataVector&lt; DV &gt;::asDataVector</definition>
+        <argsstring>() const </argsstring>
+        <name>asDataVector</name>
+        <briefdescription>
+<para>Return a pointer to this object, as a const <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="712" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="803" bodyend="806"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a12fe9d9af90d3aa4afbe056fe433a5cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstDataVector&lt; DV &gt;::resortAux</definition>
+        <argsstring>(iterator, iterator)</argsstring>
+        <name>resortAux</name>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+        </param>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+        </param>
+        <briefdescription>
+<para>Reset indices / reorder aux data after elements have been permuted. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>beg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start of the range of elements to process. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End of the range of elements to process.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This is a no-op for <computeroutput><ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref></computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="722" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="818" bodyend="820"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a60cd1ffb1829e484e82e6739ab7c872e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstDataVector&lt; DV &gt;::clear</definition>
+        <argsstring>(SG::OwnershipPolicy ownPolicy)</argsstring>
+        <name>clear</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8" kindref="member">SG::OwnershipPolicy</ref></type>
+          <declname>ownPolicy</declname>
+        </param>
+        <briefdescription>
+<para>Erase all the elements in the collection, and reset the ownership mode. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ownPolicy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new ownership policy of the container.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+If the container owns its elements, then the removed elements will be deleted. Any duplicates will be removed in this process, but don&apos;t rely on this. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="734" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="834" bodyend="837"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a5d42315073854c68017710bf0134289b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="dd/da5/classSG_1_1AuxVectorBase" kindref="compound">SG::AuxVectorBase</ref> &amp;</type>
+        <definition>const SG::AuxVectorBase &amp; ConstDataVector&lt; DV &gt;::auxbase</definition>
+        <argsstring>() const </argsstring>
+        <name>auxbase</name>
+        <briefdescription>
+<para>Convert to <computeroutput>AuxVectorBase</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Needed to get  AuxVectorBase from a <computeroutput><ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref></computeroutput>. Present in <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> as well for consistency. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="743" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="848" bodyend="851"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Relational operators.</header>
+      <description><para><anchor id="_1amgrp2dfb2a28709c2d057d20a41ab65c066f"/> </para></description>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1ac5c9d1ec571f2c3ab6026ab0b72fe923" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ConstDataVector&lt; DV &gt;::operator&lt;</definition>
+        <argsstring>(const ConstDataVector &amp;b) const </argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Vector ordering relation. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="d4/dc4/structA" kindref="compound">A</ref> <computeroutput><ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref></computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="d4/dc4/structA" kindref="compound">A</ref> <computeroutput><ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref></computeroutput> of the same type as <emphasis>x</emphasis>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True iff <emphasis>x</emphasis> is lexicographically less than <emphasis>y</emphasis>.</para></simplesect>
+This is a total ordering relation. It is linear in the size of the vectors. Comparisons are done on the pointer values of the elements.</para><para>See <computeroutput>std::lexicographical_compare()</computeroutput> for how the determination is made. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="763" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="870" bodyend="873"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a66ba01eeef2c5261ea250243dea97cc1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ConstDataVector&lt; DV &gt;::operator&gt;</definition>
+        <argsstring>(const ConstDataVector &amp;b) const </argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>const <ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Based on operator&lt;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="766" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="879" bodyend="882"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1ac9ce62241a1eda0eedb063e3ab3c4ae4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ConstDataVector&lt; DV &gt;::operator&lt;=</definition>
+        <argsstring>(const ConstDataVector &amp;b) const </argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>const <ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Based on operator&lt;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="769" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="888" bodyend="891"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a92ccbf552b74b78803c2e1cab7e29b34" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ConstDataVector&lt; DV &gt;::operator&gt;=</definition>
+        <argsstring>(const ConstDataVector &amp;b) const </argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>const <ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Based on operator&lt;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="772" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="897" bodyend="900"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1ac7823edb4c1dce015b3bd63ca32da738" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ConstDataVector&lt; DV &gt;::operator==</definition>
+        <argsstring>(const ConstDataVector &amp;b) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Vector equality comparison. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="d4/dc4/structA" kindref="compound">A</ref> <computeroutput><ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref></computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="d4/dc4/structA" kindref="compound">A</ref> <computeroutput><ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref></computeroutput> of the same type as <emphasis>x</emphasis>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True iff the size and elements of the vectors are equal.</para></simplesect>
+This is an equivalence relation. It is linear in the size of the vectors. Vectors are considered equivalent if their sizes are equal, and if corresponding elements compare equal. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="785" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="915" bodyend="918"/>
+      </memberdef>
+      <memberdef kind="function" id="de/db1/classConstDataVector_1a7170fcea63b52dd151c3c3f1d20a830e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ConstDataVector&lt; DV &gt;::operator!=</definition>
+        <argsstring>(const ConstDataVector &amp;b) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Based on operator==. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="788" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.icc" bodystart="924" bodyend="927"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1a0b7cdd6c8969c3dbdbbb23eabfb4d524" prot="public" static="no">
+        <type>DV::size_type</type>
+        <definition>typedef DV::size_type ConstDataVector&lt; DV &gt;::size_type</definition>
+        <argsstring></argsstring>
+        <name>size_type</name>
+        <briefdescription>
+<para>Basic types, forwarded from the base. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="78" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1ae91ee747ca495db8cd44dbfa71ba00b8" prot="public" static="no">
+        <type>DV::difference_type</type>
+        <definition>typedef DV::difference_type ConstDataVector&lt; DV &gt;::difference_type</definition>
+        <argsstring></argsstring>
+        <name>difference_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="79" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1a9400833462c9bc512aa23be9990a5944" prot="public" static="no">
+        <type>DV::allocator_type</type>
+        <definition>typedef DV::allocator_type ConstDataVector&lt; DV &gt;::allocator_type</definition>
+        <argsstring></argsstring>
+        <name>allocator_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="80" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1a14e111177f6f6ad503b29717e6206f94" prot="public" static="no">
+        <type><ref refid="d1/def/classT" kindref="compound">DV::base_value_type</ref></type>
+        <definition>typedef DV::base_value_type ConstDataVector&lt; DV &gt;::base_value_type</definition>
+        <argsstring></argsstring>
+        <name>base_value_type</name>
+        <reimplements refid="d3/d78/structDV_1ad69bc1d8789d02e42af896d43e34d1ed">base_value_type</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="81" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1a94b6d29ec468ba71421e9024ffd94d7d" prot="public" static="no">
+        <type>DV::BaseContainer</type>
+        <definition>typedef DV::BaseContainer ConstDataVector&lt; DV &gt;::BaseContainer</definition>
+        <argsstring></argsstring>
+        <name>BaseContainer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="82" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1a37aa61669c8583d4282501f19aa31fa2" prot="public" static="no">
+        <type>DV::DVL_BASE</type>
+        <definition>typedef DV::DVL_BASE ConstDataVector&lt; DV &gt;::DVL_BASE</definition>
+        <argsstring></argsstring>
+        <name>DVL_BASE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="83" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1a935868c884bd601580c9cb16417ab824" prot="public" static="no">
+        <type>DV::const_iterator</type>
+        <definition>typedef DV::const_iterator ConstDataVector&lt; DV &gt;::const_iterator</definition>
+        <argsstring></argsstring>
+        <name>const_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="84" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1ad6bada5d12cdd28e052930b246e1c0e0" prot="public" static="no">
+        <type>DV::const_reverse_iterator</type>
+        <definition>typedef DV::const_reverse_iterator ConstDataVector&lt; DV &gt;::const_reverse_iterator</definition>
+        <argsstring></argsstring>
+        <name>const_reverse_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="85" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1a1c01b8e57502c2965543246ca1706a4f" prot="public" static="no">
+        <type><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref>&lt; <ref refid="d1/def/classT" kindref="compound">base_value_type</ref> &gt;</type>
+        <definition>typedef DataVector&lt;base_value_type&gt; ConstDataVector&lt; DV &gt;::base_data_vector</definition>
+        <argsstring></argsstring>
+        <name>base_data_vector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="88" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1a5fd314970812a0e01af18df65729d2bd" prot="public" static="no">
+        <type>DV::const_value_type</type>
+        <definition>typedef DV::const_value_type ConstDataVector&lt; DV &gt;::value_type</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>These types get modified so that the base&apos;s <computeroutput>const_value_type</computeroutput> becomes our <computeroutput>value_type</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="92" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1afc3973f6f1997d9ffe8d59d69df44064" prot="public" static="no">
+        <type>DV::const_value_type</type>
+        <definition>typedef DV::const_value_type ConstDataVector&lt; DV &gt;::const_value_type</definition>
+        <argsstring></argsstring>
+        <name>const_value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="93" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1aff756fd715ce881a7a183fbaa8cbf3dc" prot="public" static="no">
+        <type>DV::const_value_type &amp;</type>
+        <definition>typedef DV::const_value_type&amp; ConstDataVector&lt; DV &gt;::reference</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="94" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1ac4cc72b4aea1f96d7b08f164cee830bf" prot="public" static="no">
+        <type>DV::const_value_type const &amp;</type>
+        <definition>typedef DV::const_value_type const&amp; ConstDataVector&lt; DV &gt;::const_reference</definition>
+        <argsstring></argsstring>
+        <name>const_reference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="95" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1a0f977a6be1da7b3e49bd6f78cda97acb" prot="public" static="no">
+        <type>DV::const_value_type *</type>
+        <definition>typedef DV::const_value_type* ConstDataVector&lt; DV &gt;::pointer</definition>
+        <argsstring></argsstring>
+        <name>pointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="96" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1ad16134b94c5445bb9812892bbcb6f0ef" prot="public" static="no">
+        <type>DV::const_value_type const *</type>
+        <definition>typedef DV::const_value_type const* ConstDataVector&lt; DV &gt;::const_pointer</definition>
+        <argsstring></argsstring>
+        <name>const_pointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="97" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1a35cc742d7d47a25c240d3389c25b3caf" prot="public" static="no">
+        <type><ref refid="d7/d05/classDataModel__detail_1_1ElementProxy" kindref="compound">DataModel_detail::ElementProxy</ref>&lt; <ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref> &gt;</type>
+        <definition>typedef DataModel_detail::ElementProxy&lt;ConstDataVector&gt; ConstDataVector&lt; DV &gt;::ElementProxy</definition>
+        <argsstring></argsstring>
+        <name>ElementProxy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This type is used to proxy lvalue accesses to <computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> elements, in order to handle ownership. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="104" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1abf241232ecaa158cfe092713d2699d5f" prot="public" static="no">
+        <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">DataModel_detail::iterator</ref>&lt; <ref refid="de/db1/classConstDataVector" kindref="compound">ConstDataVector</ref> &gt;</type>
+        <definition>typedef DataModel_detail::iterator&lt;ConstDataVector&gt; ConstDataVector&lt; DV &gt;::iterator</definition>
+        <argsstring></argsstring>
+        <name>iterator</name>
+        <briefdescription>
+<para>The iterator for this type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="107" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/db1/classConstDataVector_1ad6f83847ddbbcc881f467bdfa06d93a9" prot="public" static="no">
+        <type>std::reverse_iterator&lt; <ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref> &gt;</type>
+        <definition>typedef std::reverse_iterator&lt;iterator&gt; ConstDataVector&lt; DV &gt;::reverse_iterator</definition>
+        <argsstring></argsstring>
+        <name>reverse_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Standard <computeroutput>reverse_iterator</computeroutput>. Note that lvalue references here will yield an <computeroutput>ElementProxy</computeroutput>, not a <computeroutput>reference</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="112" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="de/db1/classConstDataVector_1a445c221fe5fd876a4223a66274f4038b" prot="public" static="yes" mutable="no">
+        <type>const bool</type>
+        <definition>const bool ConstDataVector&lt; DV &gt;::has_virtual</definition>
+        <argsstring></argsstring>
+        <name>has_virtual</name>
+        <initializer> DV::has_virtual</initializer>
+        <briefdescription>
+<para>This needs to be forwarded from the base as well. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="100" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><computeroutput><ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref></computeroutput> adapter that acts like it holds const pointers. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4147">
+        <label>ConstDataVector&lt; DV &gt;</label>
+        <link refid="de/db1/classConstDataVector"/>
+        <childnode refid="4148" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="4148">
+        <label>DV&lt; T &gt;</label>
+        <link refid="d3/d78/structDV"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4149">
+        <label>ConstDataVector&lt; DV &gt;</label>
+        <link refid="de/db1/classConstDataVector"/>
+        <childnode refid="4150" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="4150">
+        <label>DV&lt; T &gt;</label>
+        <link refid="d3/d78/structDV"/>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" line="75" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/ConstDataVector.h" bodystart="73" bodyend="869"/>
+    <listofallmembers>
+      <member refid="de/db1/classConstDataVector_1a9400833462c9bc512aa23be9990a5944" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>allocator_type</name></member>
+      <member refid="de/db1/classConstDataVector_1afc25e0985e21c58a97654203aa8c2635" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>asDataVector</name></member>
+      <member refid="de/db1/classConstDataVector_1a52e7a6b1254389e5ad4ebe7e8e4505bb" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>assign</name></member>
+      <member refid="de/db1/classConstDataVector_1af5e415150be85ed0fca8ead936741905" prot="private" virt="non-virtual"><scope>ConstDataVector</scope><name>assignBaseElement</name></member>
+      <member refid="de/db1/classConstDataVector_1a623bc144efdcba0cf04c578f8bcb5546" prot="private" virt="non-virtual"><scope>ConstDataVector</scope><name>assignElement</name></member>
+      <member refid="de/db1/classConstDataVector_1a7565e82eb51c3c4492ca8f5abd915138" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>at</name></member>
+      <member refid="de/db1/classConstDataVector_1a5d42315073854c68017710bf0134289b" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>auxbase</name></member>
+      <member refid="de/db1/classConstDataVector_1ab16ba63da380c5fef188eded070fca0d" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>back</name></member>
+      <member refid="de/db1/classConstDataVector_1a1c01b8e57502c2965543246ca1706a4f" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>base_data_vector</name></member>
+      <member refid="de/db1/classConstDataVector_1a14e111177f6f6ad503b29717e6206f94" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>base_value_type</name></member>
+      <member refid="de/db1/classConstDataVector_1a94b6d29ec468ba71421e9024ffd94d7d" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>BaseContainer</name></member>
+      <member refid="de/db1/classConstDataVector_1a1eebe42ee99ce34ab685d69a53b65dc0" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>begin</name></member>
+      <member refid="de/db1/classConstDataVector_1ae8944232be996809a74b641ac20e7aa2" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>clear</name></member>
+      <member refid="de/db1/classConstDataVector_1a60cd1ffb1829e484e82e6739ab7c872e" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>clear</name></member>
+      <member refid="de/db1/classConstDataVector_1a935868c884bd601580c9cb16417ab824" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>const_iterator</name></member>
+      <member refid="de/db1/classConstDataVector_1ad16134b94c5445bb9812892bbcb6f0ef" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>const_pointer</name></member>
+      <member refid="de/db1/classConstDataVector_1ac4cc72b4aea1f96d7b08f164cee830bf" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>const_reference</name></member>
+      <member refid="de/db1/classConstDataVector_1ad6bada5d12cdd28e052930b246e1c0e0" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>const_reverse_iterator</name></member>
+      <member refid="de/db1/classConstDataVector_1afc3973f6f1997d9ffe8d59d69df44064" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>const_value_type</name></member>
+      <member refid="de/db1/classConstDataVector_1a1cdaac1590ea31083cc54ac56adb9caa" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>ConstDataVector</name></member>
+      <member refid="de/db1/classConstDataVector_1a981d20627c4b6e8ac36e6e5972dc0ab9" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>ConstDataVector</name></member>
+      <member refid="de/db1/classConstDataVector_1aa6ea74c079d85b66156704a096d14a89" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>ConstDataVector</name></member>
+      <member refid="de/db1/classConstDataVector_1a2b0a1ab3eaccbc67e7a492a884e6238c" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>DataModel_detail::ElementProxy&lt; ConstDataVector &gt;</name></member>
+      <member refid="de/db1/classConstDataVector_1ae91ee747ca495db8cd44dbfa71ba00b8" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>difference_type</name></member>
+      <member refid="de/db1/classConstDataVector_1a37aa61669c8583d4282501f19aa31fa2" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>DVL_BASE</name></member>
+      <member refid="de/db1/classConstDataVector_1a35cc742d7d47a25c240d3389c25b3caf" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>ElementProxy</name></member>
+      <member refid="de/db1/classConstDataVector_1a7d0675548e4ee8d8e5cc50960a5b0fc5" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>emplace</name></member>
+      <member refid="de/db1/classConstDataVector_1aaad6e69e9afc63551cf6aa9898807a90" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>emplace_back</name></member>
+      <member refid="de/db1/classConstDataVector_1a7e790c3b42f79d58586ebb3cf027781a" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>end</name></member>
+      <member refid="de/db1/classConstDataVector_1a191b17e706f9efc349510e54b00f8a19" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>erase</name></member>
+      <member refid="de/db1/classConstDataVector_1ad4e0cbb65c66bb7b712bde4e92de182e" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>erase</name></member>
+      <member refid="de/db1/classConstDataVector_1a4993339b08404582cd9d83127c344802" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>front</name></member>
+      <member refid="de/db1/classConstDataVector_1a445c221fe5fd876a4223a66274f4038b" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>has_virtual</name></member>
+      <member refid="de/db1/classConstDataVector_1ad6acd17f41c3809ce00ed14aa78e7d80" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>insert</name></member>
+      <member refid="de/db1/classConstDataVector_1a6a95569685418afead723f1798ac143f" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>insert</name></member>
+      <member refid="de/db1/classConstDataVector_1af4024a744ff89b92eb8e8a8e60e80d0e" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>iter_swap</name></member>
+      <member refid="de/db1/classConstDataVector_1abf241232ecaa158cfe092713d2699d5f" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>iterator</name></member>
+      <member refid="de/db1/classConstDataVector_1a7170fcea63b52dd151c3c3f1d20a830e" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>operator!=</name></member>
+      <member refid="de/db1/classConstDataVector_1ac5c9d1ec571f2c3ab6026ab0b72fe923" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>operator&lt;</name></member>
+      <member refid="de/db1/classConstDataVector_1ac9ce62241a1eda0eedb063e3ab3c4ae4" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>operator&lt;=</name></member>
+      <member refid="de/db1/classConstDataVector_1ab0e570bb8e3da3b9ce9c465327eed052" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>operator=</name></member>
+      <member refid="de/db1/classConstDataVector_1ac7823edb4c1dce015b3bd63ca32da738" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>operator==</name></member>
+      <member refid="de/db1/classConstDataVector_1a66ba01eeef2c5261ea250243dea97cc1" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>operator&gt;</name></member>
+      <member refid="de/db1/classConstDataVector_1a92ccbf552b74b78803c2e1cab7e29b34" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>operator&gt;=</name></member>
+      <member refid="de/db1/classConstDataVector_1aae62dc3e4f66c0fd8ef43c252a13b48d" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>operator[]</name></member>
+      <member refid="de/db1/classConstDataVector_1a0f977a6be1da7b3e49bd6f78cda97acb" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>pointer</name></member>
+      <member refid="de/db1/classConstDataVector_1a83ff6832bd6d52468225dca32c516121" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>push_back</name></member>
+      <member refid="de/db1/classConstDataVector_1ae71dc63f2039fcb8a99040701ec37e7a" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>rbegin</name></member>
+      <member refid="de/db1/classConstDataVector_1aff756fd715ce881a7a183fbaa8cbf3dc" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>reference</name></member>
+      <member refid="de/db1/classConstDataVector_1abdeb7d8faaaf6e0fd5d4c5dbc29fc94a" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>rend</name></member>
+      <member refid="de/db1/classConstDataVector_1a12fe9d9af90d3aa4afbe056fe433a5cc" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>resortAux</name></member>
+      <member refid="de/db1/classConstDataVector_1ad6f83847ddbbcc881f467bdfa06d93a9" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>reverse_iterator</name></member>
+      <member refid="de/db1/classConstDataVector_1a0b7cdd6c8969c3dbdbbb23eabfb4d524" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>size_type</name></member>
+      <member refid="de/db1/classConstDataVector_1ae42c031d0522fde4a983f3a8c10328d3" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>swap</name></member>
+      <member refid="de/db1/classConstDataVector_1a63dd71d02bdefb4cf4501b8d788998bf" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>swapElement</name></member>
+      <member refid="de/db1/classConstDataVector_1a86413c1535c7b64e7d9fff0b55295a08" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>swapElement</name></member>
+      <member refid="de/db1/classConstDataVector_1a1119a539ef95e66a83ed73e65ce4acb9" prot="private" virt="non-virtual"><scope>ConstDataVector</scope><name>test2_assignelement1</name></member>
+      <member refid="de/db1/classConstDataVector_1a753f68e45b0352b1a7e7cc0873dac8ff" prot="private" virt="non-virtual"><scope>ConstDataVector</scope><name>to_base_iterator</name></member>
+      <member refid="de/db1/classConstDataVector_1ad66fe7de4683f525a4cd47d4a18b2d3b" prot="private" virt="non-virtual"><scope>ConstDataVector</scope><name>to_element_proxy</name></member>
+      <member refid="de/db1/classConstDataVector_1aff277598234d8cbc64e28259775db377" prot="private" virt="non-virtual"><scope>ConstDataVector</scope><name>to_my_iterator</name></member>
+      <member refid="de/db1/classConstDataVector_1a5fd314970812a0e01af18df65729d2bd" prot="public" virt="non-virtual"><scope>ConstDataVector</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

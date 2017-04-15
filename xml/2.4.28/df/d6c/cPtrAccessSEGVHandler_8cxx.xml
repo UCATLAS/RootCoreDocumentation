@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="df/d6c/cPtrAccessSEGVHandler_8cxx" kind="file">
+    <compoundname>cPtrAccessSEGVHandler.cxx</compoundname>
+    <includes refid="dd/d08/cPtrAccessSEGVHandler_8h" local="yes">CxxUtils/cPtrAccessSEGVHandler.h</includes>
+    <includes refid="d7/d61/PtrAccessSEGVHandler_8h" local="yes">CxxUtils/PtrAccessSEGVHandler.h</includes>
+    <incdepgraph>
+      <node id="113396">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/cPtrAccessSEGVHandler.cxx</label>
+        <link refid="cPtrAccessSEGVHandler.cxx"/>
+        <childnode refid="113397" relation="include">
+        </childnode>
+        <childnode refid="113399" relation="include">
+        </childnode>
+      </node>
+      <node id="113400">
+        <label>vector</label>
+      </node>
+      <node id="113398">
+        <label>signal.h</label>
+      </node>
+      <node id="113399">
+        <label>CxxUtils/PtrAccessSEGVHandler.h</label>
+        <link refid="d7/d61/PtrAccessSEGVHandler_8h"/>
+        <childnode refid="113398" relation="include">
+        </childnode>
+        <childnode refid="113400" relation="include">
+        </childnode>
+      </node>
+      <node id="113397">
+        <label>CxxUtils/cPtrAccessSEGVHandler.h</label>
+        <link refid="dd/d08/cPtrAccessSEGVHandler_8h"/>
+        <childnode refid="113398" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="df/d6c/cPtrAccessSEGVHandler_8cxx_1aa070207cfba599e27affc99c2f4a1ada" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setPtrAccessSEGVHandler</definition>
+        <argsstring>(PtrAccessSEGVHandler *h)</argsstring>
+        <name>setPtrAccessSEGVHandler</name>
+        <param>
+          <type><ref refid="dc/d96/classPtrAccessSEGVHandler" kindref="compound">PtrAccessSEGVHandler</ref> *</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/cPtrAccessSEGVHandler.cxx" line="7" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/cPtrAccessSEGVHandler.cxx" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d6c/cPtrAccessSEGVHandler_8cxx_1a4694a4511812eb538fdfe017e6f801bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cPtrAccessSEGVHandler</definition>
+        <argsstring>(int signal, siginfo_t *si, void *old)</argsstring>
+        <name>cPtrAccessSEGVHandler</name>
+        <param>
+          <type>int</type>
+          <declname>signal</declname>
+        </param>
+        <param>
+          <type><ref refid="dc/dbc/structsiginfo__t" kindref="compound">siginfo_t</ref> *</type>
+          <declname>si</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>old</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/cPtrAccessSEGVHandler.cxx" line="8" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/cPtrAccessSEGVHandler.cxx" bodystart="8" bodyend="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dd/d08/cPtrAccessSEGVHandler_8h" kindref="compound" tooltip="a C wrapper providing access to PtrAccessSEGVHandler::handle the way sigaction wants...">CxxUtils/cPtrAccessSEGVHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/d61/PtrAccessSEGVHandler_8h" kindref="compound" tooltip="This class provides a handle function that logs the addresses that had an access...">CxxUtils/PtrAccessSEGVHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><ref refid="dc/d96/classPtrAccessSEGVHandler" kindref="compound">PtrAccessSEGVHandler</ref>*<sp/>s_pHandler(0);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setPtrAccessSEGVHandler(<ref refid="dc/d96/classPtrAccessSEGVHandler" kindref="compound">PtrAccessSEGVHandler</ref>*<sp/>h)<sp/>{<sp/>s_pHandler=h;<sp/>}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cPtrAccessSEGVHandler(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>signal,<sp/><ref refid="dc/dbc/structsiginfo__t" kindref="compound">siginfo_t</ref>*<sp/>si,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>old)<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>s_pHandler-&gt;handle(signal,<sp/>si,<sp/>old);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/cPtrAccessSEGVHandler.cxx"/>
+  </compounddef>
+</doxygen>

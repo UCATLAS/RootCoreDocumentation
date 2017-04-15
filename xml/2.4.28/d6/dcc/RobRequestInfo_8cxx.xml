@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d6/dcc/RobRequestInfo_8cxx" kind="file">
+    <compoundname>RobRequestInfo.cxx</compoundname>
+    <includes refid="dc/d86/RobRequestInfo_8h" local="yes">TrigSteeringEvent/RobRequestInfo.h</includes>
+    <incdepgraph>
+      <node id="330387">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/src/RobRequestInfo.cxx</label>
+        <link refid="RobRequestInfo.cxx"/>
+        <childnode refid="330388" relation="include">
+        </childnode>
+      </node>
+      <node id="330390">
+        <label>stdint.h</label>
+      </node>
+      <node id="330389">
+        <label>vector</label>
+      </node>
+      <node id="330388">
+        <label>TrigSteeringEvent/RobRequestInfo.h</label>
+        <link refid="dc/d86/RobRequestInfo_8h_source"/>
+        <childnode refid="330389" relation="include">
+        </childnode>
+        <childnode refid="330390" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;TrigSteeringEvent/RobRequestInfo.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HLT::RobRequestInfo::addRequestScheduledRobIDs(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;uint32_t&gt;&amp;<sp/>roblist)<sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/>m_requestScheduledRobIDs.resize(m_requestScheduledRobIDs.size()+roblist.size());</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/>std::copy_backward(roblist.begin(),roblist.end(),<sp/>m_requestScheduledRobIDs.end());</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HLT::RobRequestInfo::addRequestScheduledRobIDs(uint32_t<sp/>rob)<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/>m_requestScheduledRobIDs.push_back(rob);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/src/RobRequestInfo.cxx"/>
+  </compounddef>
+</doxygen>

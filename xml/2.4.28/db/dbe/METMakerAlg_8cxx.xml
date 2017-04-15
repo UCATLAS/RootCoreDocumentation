@@ -1,0 +1,2728 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="db/dbe/METMakerAlg_8cxx" kind="file">
+    <compoundname>METMakerAlg.cxx</compoundname>
+    <includes refid="dc/d01/METMakerAlg_8h" local="yes">METMakerAlg.h</includes>
+    <includes refid="d0/dd7/IMETMaker_8h" local="yes">METInterface/IMETMaker.h</includes>
+    <includes refid="d5/d10/MissingETContainer_8h" local="yes">xAODMissingET/MissingETContainer.h</includes>
+    <includes refid="dd/db4/MissingETAuxContainer_8h" local="yes">xAODMissingET/MissingETAuxContainer.h</includes>
+    <includes refid="d1/d18/MissingETComposition_8h" local="yes">xAODMissingET/MissingETComposition.h</includes>
+    <includes refid="df/db3/MissingETAssociationMap_8h" local="yes">xAODMissingET/MissingETAssociationMap.h</includes>
+    <includes refid="d5/d55/JetContainer_8h" local="yes">xAODJet/JetContainer.h</includes>
+    <includes refid="df/dea/ElectronContainer_8h" local="yes">xAODEgamma/ElectronContainer.h</includes>
+    <includes refid="da/dcb/PhotonContainer_8h" local="yes">xAODEgamma/PhotonContainer.h</includes>
+    <includes refid="dc/dd9/MuonContainer_8h" local="yes">xAODMuon/MuonContainer.h</includes>
+    <includes refid="dd/d08/TauJetContainer_8h" local="yes">xAODTau/TauJetContainer.h</includes>
+    <includes refid="d7/d39/IMuonSelectionTool_8h" local="yes">MuonSelectorTools/IMuonSelectionTool.h</includes>
+    <includes refid="d1/da7/IAsgElectronLikelihoodTool_8h" local="yes">ElectronPhotonSelectorTools/IAsgElectronLikelihoodTool.h</includes>
+    <includes refid="db/db5/IAsgPhotonIsEMSelector_8h" local="yes">ElectronPhotonSelectorTools/IAsgPhotonIsEMSelector.h</includes>
+    <includes refid="d8/d56/ITauSelectionTool_8h" local="yes">TauAnalysisTools/ITauSelectionTool.h</includes>
+    <incdepgraph>
+      <node id="208224">
+        <label>list</label>
+      </node>
+      <node id="208233">
+        <label>AthContainers/tools/DVL_algorithms.icc</label>
+        <link refid="df/daa/DVL__algorithms_8icc"/>
+        <childnode refid="208218" relation="include">
+        </childnode>
+        <childnode refid="208225" relation="include">
+        </childnode>
+        <childnode refid="208133" relation="include">
+        </childnode>
+        <childnode refid="208214" relation="include">
+        </childnode>
+        <childnode refid="208140" relation="include">
+        </childnode>
+      </node>
+      <node id="208218">
+        <label>AthContainers/tools/DVLNoBase.h</label>
+        <link refid="d7/d92/DVLNoBase_8h"/>
+      </node>
+      <node id="208178">
+        <label>boost/thread/mutex.hpp</label>
+      </node>
+      <node id="208374">
+        <label>ElectronPhotonSelectorTools/IAsgElectronLikelihoodTool.h</label>
+        <link refid="d1/da7/IAsgElectronLikelihoodTool_8h_source"/>
+        <childnode refid="208375" relation="include">
+        </childnode>
+        <childnode refid="208363" relation="include">
+        </childnode>
+        <childnode refid="208361" relation="include">
+        </childnode>
+      </node>
+      <node id="208240">
+        <label>AthContainers/tools/DVLDataBucket.h</label>
+        <link refid="d4/d16/DVLDataBucket_8h"/>
+        <childnode refid="208241" relation="include">
+        </childnode>
+        <childnode refid="208219" relation="include">
+        </childnode>
+        <childnode refid="208147" relation="include">
+        </childnode>
+        <childnode refid="208242" relation="include">
+        </childnode>
+      </node>
+      <node id="208368">
+        <label>xAODMuon/versions/MuonContainer_v1.h</label>
+        <link refid="da/d0b/MuonContainer__v1_8h_source"/>
+        <childnode refid="208123" relation="include">
+        </childnode>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208289" relation="include">
+        </childnode>
+      </node>
+      <node id="208180">
+        <label>CxxUtils/unordered_map.h</label>
+        <link refid="db/daa/unordered__map_8h"/>
+        <childnode refid="208139" relation="include">
+        </childnode>
+        <childnode refid="208141" relation="include">
+        </childnode>
+        <childnode refid="208147" relation="include">
+        </childnode>
+        <childnode refid="208148" relation="include">
+        </childnode>
+      </node>
+      <node id="208327">
+        <label>AsgTools/IAsgTool.h</label>
+        <link refid="df/dd4/IAsgTool_8h_source"/>
+        <childnode refid="208124" relation="include">
+        </childnode>
+        <childnode refid="208328" relation="include">
+        </childnode>
+        <childnode refid="208329" relation="include">
+        </childnode>
+        <childnode refid="208330" relation="include">
+        </childnode>
+      </node>
+      <node id="208181">
+        <label>AthContainers/AuxTypeRegistry.icc</label>
+        <link refid="d8/df3/AuxTypeRegistry_8icc"/>
+      </node>
+      <node id="208150">
+        <label>AthContainersInterfaces/IAuxStore.h</label>
+        <link refid="d6/d3e/IAuxStore_8h"/>
+        <childnode refid="208135" relation="include">
+        </childnode>
+        <childnode refid="208137" relation="include">
+        </childnode>
+        <childnode refid="208151" relation="include">
+        </childnode>
+        <childnode refid="208149" relation="include">
+        </childnode>
+      </node>
+      <node id="208252">
+        <label>EventPrimitives/EventPrimitives.h</label>
+        <link refid="d1/d54/EventPrimitives_8h_source"/>
+        <childnode refid="208253" relation="include">
+        </childnode>
+        <childnode refid="208254" relation="include">
+        </childnode>
+        <childnode refid="208255" relation="include">
+        </childnode>
+      </node>
+      <node id="208347">
+        <label>xAODMissingET/versions/MissingETAuxContainer_v1.h</label>
+        <link refid="d9/d36/MissingETAuxContainer__v1_8h_source"/>
+        <childnode refid="208348" relation="include">
+        </childnode>
+        <childnode refid="208333" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208282" relation="include">
+        </childnode>
+      </node>
+      <node id="208146">
+        <label>boost/type_traits/remove_const.hpp</label>
+      </node>
+      <node id="208367">
+        <label>xAODMuon/MuonContainer.h</label>
+        <link refid="dc/dd9/MuonContainer_8h_source"/>
+        <childnode refid="208288" relation="include">
+        </childnode>
+        <childnode refid="208368" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208148">
+        <label>functional</label>
+      </node>
+      <node id="208215">
+        <label>boost/version.hpp</label>
+      </node>
+      <node id="208145">
+        <label>limits</label>
+      </node>
+      <node id="208151">
+        <label>SGTools/BaseInfo.h</label>
+      </node>
+      <node id="208312">
+        <label>xAODBTagging/versions/BTaggingContainer_v1.h</label>
+        <link refid="d9/d93/BTaggingContainer__v1_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208306" relation="include">
+        </childnode>
+      </node>
+      <node id="208176">
+        <label>boost/thread/tss.hpp</label>
+      </node>
+      <node id="208369">
+        <label>xAODTau/TauJetContainer.h</label>
+        <link refid="dd/d08/TauJetContainer_8h_source"/>
+        <childnode refid="208296" relation="include">
+        </childnode>
+        <childnode refid="208370" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208330">
+        <label>GaudiKernel/IAlgTool.h</label>
+      </node>
+      <node id="208335">
+        <label>boost/tuple/tuple.hpp</label>
+      </node>
+      <node id="208142">
+        <label>iterator</label>
+      </node>
+      <node id="208203">
+        <label>xAODCaloEvent/versions/CaloClusterBadChannelData_v1.h</label>
+        <link refid="d5/d3a/CaloClusterBadChannelData__v1_8h_source"/>
+        <childnode refid="208200" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+      </node>
+      <node id="208348">
+        <label>xAODCore/AuxContainerBase.h</label>
+        <link refid="d0/d70/AuxContainerBase_8h_source"/>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208124" relation="include">
+        </childnode>
+        <childnode refid="208150" relation="include">
+        </childnode>
+        <childnode refid="208349" relation="include">
+        </childnode>
+        <childnode refid="208350" relation="include">
+        </childnode>
+        <childnode refid="208174" relation="include">
+        </childnode>
+        <childnode refid="208162" relation="include">
+        </childnode>
+        <childnode refid="208183" relation="include">
+        </childnode>
+        <childnode refid="208351" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+        <childnode refid="208282" relation="include">
+        </childnode>
+      </node>
+      <node id="208164">
+        <label>AthContainersInterfaces/AuxDataOption.h</label>
+        <link refid="d1/dc5/AuxDataOption_8h"/>
+        <childnode refid="208124" relation="include">
+        </childnode>
+        <childnode refid="208165" relation="include">
+        </childnode>
+      </node>
+      <node id="208301">
+        <label>xAODJet/Jet.h</label>
+        <link refid="da/db7/Jet_8h_source"/>
+        <childnode refid="208302" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208350">
+        <label>AthContainersInterfaces/IAuxStoreHolder.h</label>
+        <link refid="d7/dab/IAuxStoreHolder_8h_source"/>
+      </node>
+      <node id="208342">
+        <label>SGTools/ClassID_traits.h</label>
+      </node>
+      <node id="208205">
+        <label>CaloEvent/CaloRecoStatus.h</label>
+      </node>
+      <node id="208310">
+        <label>xAODBTagging/versions/BTagVertex_v1.h</label>
+        <link refid="d6/df4/BTagVertex__v1_8h_source"/>
+        <childnode refid="208133" relation="include">
+        </childnode>
+        <childnode refid="208122" relation="include">
+        </childnode>
+        <childnode refid="208131" relation="include">
+        </childnode>
+        <childnode refid="208248" relation="include">
+        </childnode>
+        <childnode refid="208264" relation="include">
+        </childnode>
+        <childnode refid="208270" relation="include">
+        </childnode>
+        <childnode refid="208283" relation="include">
+        </childnode>
+        <childnode refid="208303" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208124" relation="include">
+        </childnode>
+        <childnode refid="208149" relation="include">
+        </childnode>
+      </node>
+      <node id="208317">
+        <label>xAODJet/versions/JetContainer_v1.h</label>
+        <link refid="df/d28/JetContainer__v1_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208302" relation="include">
+        </childnode>
+      </node>
+      <node id="208334">
+        <label>xAODMissingET/versions/MissingETBase.h</label>
+        <link refid="d4/da9/MissingETBase_8h_source"/>
+        <childnode refid="208137" relation="include">
+        </childnode>
+        <childnode refid="208144" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208124" relation="include">
+        </childnode>
+        <childnode refid="208335" relation="include">
+        </childnode>
+      </node>
+      <node id="208256">
+        <label>CxxUtils/final.h</label>
+        <link refid="da/d9b/final_8h"/>
+      </node>
+      <node id="208239">
+        <label>SGTools/ClassName.h</label>
+      </node>
+      <node id="208288">
+        <label>xAODMuon/Muon.h</label>
+        <link refid="d2/dfd/Muon_8h_source"/>
+        <childnode refid="208289" relation="include">
+        </childnode>
+      </node>
+      <node id="208245">
+        <label>AthContainers/DataVector.icc</label>
+        <link refid="da/de6/DataVector_8icc"/>
+        <childnode refid="208246" relation="include">
+        </childnode>
+        <childnode refid="208213" relation="include">
+        </childnode>
+        <childnode refid="208145" relation="include">
+        </childnode>
+        <childnode refid="208148" relation="include">
+        </childnode>
+        <childnode refid="208247" relation="include">
+        </childnode>
+      </node>
+      <node id="208188">
+        <label>AthContainers/exceptions.h</label>
+        <link refid="d4/d03/exceptions_8h"/>
+        <childnode refid="208136" relation="include">
+        </childnode>
+        <childnode refid="208189" relation="include">
+        </childnode>
+        <childnode refid="208190" relation="include">
+        </childnode>
+        <childnode refid="208156" relation="include">
+        </childnode>
+        <childnode refid="208124" relation="include">
+        </childnode>
+      </node>
+      <node id="208352">
+        <label>xAODMissingET/MissingETComposition.h</label>
+        <link refid="d1/d18/MissingETComposition_8h_source"/>
+        <childnode refid="208340" relation="include">
+        </childnode>
+        <childnode refid="208332" relation="include">
+        </childnode>
+        <childnode refid="208353" relation="include">
+        </childnode>
+        <childnode refid="208355" relation="include">
+        </childnode>
+        <childnode refid="208338" relation="include">
+        </childnode>
+        <childnode refid="208337" relation="include">
+        </childnode>
+        <childnode refid="208301" relation="include">
+        </childnode>
+      </node>
+      <node id="208160">
+        <label>AthContainers/tools/AuxDataTraits.h</label>
+        <link refid="d3/d5a/AuxDataTraits_8h"/>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208143" relation="include">
+        </childnode>
+      </node>
+      <node id="208343">
+        <label>AthContainers/ConstDataVector.icc</label>
+        <link refid="d2/d61/ConstDataVector_8icc"/>
+        <childnode refid="208344" relation="include">
+        </childnode>
+        <childnode refid="208148" relation="include">
+        </childnode>
+      </node>
+      <node id="208123">
+        <label>stdint.h</label>
+      </node>
+      <node id="208377">
+        <label>ElectronPhotonSelectorTools/IAsgEGammaIsEMSelector.h</label>
+        <link refid="da/d85/IAsgEGammaIsEMSelector_8h_source"/>
+        <childnode refid="208375" relation="include">
+        </childnode>
+        <childnode refid="208378" relation="include">
+        </childnode>
+        <childnode refid="208361" relation="include">
+        </childnode>
+        <childnode refid="208286" relation="include">
+        </childnode>
+        <childnode refid="208363" relation="include">
+        </childnode>
+      </node>
+      <node id="208364">
+        <label>xAODEgamma/PhotonContainer.h</label>
+        <link refid="da/dcb/PhotonContainer_8h_source"/>
+        <childnode refid="208268" relation="include">
+        </childnode>
+        <childnode refid="208365" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208225">
+        <label>AthContainers/tools/DVLCast.h</label>
+        <link refid="df/d5c/DVLCast_8h"/>
+        <childnode refid="208145" relation="include">
+        </childnode>
+        <childnode refid="208226" relation="include">
+        </childnode>
+        <childnode refid="208156" relation="include">
+        </childnode>
+        <childnode refid="208143" relation="include">
+        </childnode>
+        <childnode refid="208137" relation="include">
+        </childnode>
+      </node>
+      <node id="208211">
+        <label>AthContainers/IndexTrackingPolicy.h</label>
+        <link refid="d0/da5/IndexTrackingPolicy_8h"/>
+      </node>
+      <node id="208157">
+        <label>AthContainersInterfaces/IAuxTypeVectorFactory.h</label>
+        <link refid="d4/d2c/IAuxTypeVectorFactory_8h"/>
+        <childnode refid="208137" relation="include">
+        </childnode>
+        <childnode refid="208156" relation="include">
+        </childnode>
+      </node>
+      <node id="208273">
+        <label>Eigen/Geometry</label>
+      </node>
+      <node id="208349">
+        <label>AthContainersInterfaces/IAuxStoreIO.h</label>
+        <link refid="d9/db5/IAuxStoreIO_8h"/>
+        <childnode refid="208136" relation="include">
+        </childnode>
+        <childnode refid="208156" relation="include">
+        </childnode>
+        <childnode refid="208287" relation="include">
+        </childnode>
+        <childnode refid="208149" relation="include">
+        </childnode>
+      </node>
+      <node id="208365">
+        <label>xAODEgamma/versions/PhotonContainer_v1.h</label>
+        <link refid="d1/dd1/PhotonContainer__v1_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208269" relation="include">
+        </childnode>
+        <childnode refid="208359" relation="include">
+        </childnode>
+        <childnode refid="208366" relation="include">
+        </childnode>
+      </node>
+      <node id="208127">
+        <label>RVersion.h</label>
+      </node>
+      <node id="208357">
+        <label>xAODEgamma/ElectronContainer.h</label>
+        <link refid="df/dea/ElectronContainer_8h_source"/>
+        <childnode refid="208120" relation="include">
+        </childnode>
+        <childnode refid="208358" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208361">
+        <label>xAODEgamma/EgammaFwd.h</label>
+        <link refid="dc/d0f/EgammaFwd_8h_source"/>
+      </node>
+      <node id="208320">
+        <label>xAODPFlow/versions/PFO_v1.h</label>
+        <link refid="d0/d00/PFO__v1_8h_source"/>
+        <childnode refid="208122" relation="include">
+        </childnode>
+        <childnode refid="208321" relation="include">
+        </childnode>
+        <childnode refid="208131" relation="include">
+        </childnode>
+        <childnode refid="208248" relation="include">
+        </childnode>
+        <childnode refid="208323" relation="include">
+        </childnode>
+        <childnode refid="208197" relation="include">
+        </childnode>
+        <childnode refid="208207" relation="include">
+        </childnode>
+        <childnode refid="208283" relation="include">
+        </childnode>
+        <childnode refid="208258" relation="include">
+        </childnode>
+        <childnode refid="208264" relation="include">
+        </childnode>
+        <childnode refid="208324" relation="include">
+        </childnode>
+        <childnode refid="208209" relation="include">
+        </childnode>
+      </node>
+      <node id="208138">
+        <label>CxxUtils/unordered_set.h</label>
+        <link refid="df/d26/unordered__set_8h"/>
+        <childnode refid="208139" relation="include">
+        </childnode>
+        <childnode refid="208147" relation="include">
+        </childnode>
+        <childnode refid="208148" relation="include">
+        </childnode>
+      </node>
+      <node id="208208">
+        <label>xAODCaloEvent/versions/CaloClusterContainer_v1.h</label>
+        <link refid="d8/dda/CaloClusterContainer__v1_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208248" relation="include">
+        </childnode>
+        <childnode refid="208198" relation="include">
+        </childnode>
+      </node>
+      <node id="208144">
+        <label>cmath</label>
+      </node>
+      <node id="208192">
+        <label>cassert</label>
+      </node>
+      <node id="208216">
+        <label>boost/mpl/if.hpp</label>
+      </node>
+      <node id="208235">
+        <label>boost/static_assert.hpp</label>
+      </node>
+      <node id="208344">
+        <label>boost/iterator/transform_iterator.hpp</label>
+      </node>
+      <node id="208291">
+        <label>xAODMuon/MuonSegment.h</label>
+        <link refid="de/d5b/MuonSegment_8h_source"/>
+        <childnode refid="208292" relation="include">
+        </childnode>
+      </node>
+      <node id="208190">
+        <label>stdexcept</label>
+      </node>
+      <node id="208331">
+        <label>xAODMissingET/MissingETContainer.h</label>
+        <link refid="d5/d10/MissingETContainer_8h_source"/>
+        <childnode refid="208332" relation="include">
+        </childnode>
+        <childnode refid="208336" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208179">
+        <label>boost/thread/thread.hpp</label>
+      </node>
+      <node id="208254">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="208222">
+        <label>boost/type_traits/is_pointer.hpp</label>
+      </node>
+      <node id="208260">
+        <label>xAODTracking/VertexContainerFwd.h</label>
+        <link refid="d0/dc4/VertexContainerFwd_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208261" relation="include">
+        </childnode>
+      </node>
+      <node id="208266">
+        <label>xAODTracking/TrackParticleContainerFwd.h</label>
+        <link refid="de/dea/TrackParticleContainerFwd_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208248" relation="include">
+        </childnode>
+        <childnode refid="208267" relation="include">
+        </childnode>
+      </node>
+      <node id="208230">
+        <label>boost/iterator/iterator_adaptor.hpp</label>
+      </node>
+      <node id="208132">
+        <label>TLorentzVector.h</label>
+      </node>
+      <node id="208286">
+        <label>xAODEgamma/PhotonFwd.h</label>
+        <link refid="dd/d2c/PhotonFwd_8h_source"/>
+      </node>
+      <node id="208328">
+        <label>AsgTools/AsgToolsConf.h</label>
+        <link refid="df/db7/AsgToolsConf_8h_source"/>
+      </node>
+      <node id="208200">
+        <label>CaloGeoHelpers/CaloSampling.h</label>
+        <link refid="d7/d85/CaloSampling_8h_source"/>
+        <childnode refid="208124" relation="include">
+        </childnode>
+        <childnode refid="208201" relation="include">
+        </childnode>
+      </node>
+      <node id="208378">
+        <label>ElectronPhotonSelectorTools/egammaPIDdefs.h</label>
+        <link refid="da/db1/egammaPIDdefs_8h_source"/>
+        <childnode refid="208379" relation="include">
+        </childnode>
+      </node>
+      <node id="208124">
+        <label>string</label>
+      </node>
+      <node id="208182">
+        <label>AthContainers/AuxVectorData.h</label>
+        <link refid="d9/df2/AuxVectorData_8h"/>
+        <childnode refid="208136" relation="include">
+        </childnode>
+        <childnode refid="208135" relation="include">
+        </childnode>
+        <childnode refid="208164" relation="include">
+        </childnode>
+        <childnode refid="208160" relation="include">
+        </childnode>
+        <childnode refid="208152" relation="include">
+        </childnode>
+        <childnode refid="208183" relation="include">
+        </childnode>
+        <childnode refid="208184" relation="include">
+        </childnode>
+        <childnode refid="208167" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208141" relation="include">
+        </childnode>
+        <childnode refid="208143" relation="include">
+        </childnode>
+        <childnode refid="208185" relation="include">
+        </childnode>
+        <childnode refid="208186" relation="include">
+        </childnode>
+        <childnode refid="208174" relation="include">
+        </childnode>
+        <childnode refid="208187" relation="include">
+        </childnode>
+      </node>
+      <node id="208155">
+        <label>AthContainersInterfaces/IAuxTypeVector.h</label>
+        <link refid="d8/d0e/IAuxTypeVector_8h"/>
+        <childnode refid="208137" relation="include">
+        </childnode>
+        <childnode refid="208156" relation="include">
+        </childnode>
+      </node>
+      <node id="208259">
+        <label>versions/TrackParticle_v1.h</label>
+        <link refid="d2/d7f/TrackParticle__v1_8h_source"/>
+        <childnode refid="208199" relation="include">
+        </childnode>
+        <childnode refid="208123" relation="include">
+        </childnode>
+        <childnode refid="208122" relation="include">
+        </childnode>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208131" relation="include">
+        </childnode>
+        <childnode refid="208257" relation="include">
+        </childnode>
+        <childnode refid="208260" relation="include">
+        </childnode>
+        <childnode refid="208262" relation="include">
+        </childnode>
+        <childnode refid="208263" relation="include">
+        </childnode>
+      </node>
+      <node id="208185">
+        <label>AthContainers/tools/likely.h</label>
+        <link refid="d6/dd6/likely_8h"/>
+      </node>
+      <node id="208295">
+        <label>xAODMuon/versions/MuonSegmentContainer_v1.h</label>
+        <link refid="dd/dcd/MuonSegmentContainer__v1_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208292" relation="include">
+        </childnode>
+      </node>
+      <node id="208306">
+        <label>xAODBTagging/versions/BTagging_v1.h</label>
+        <link refid="dc/da1/BTagging__v1_8h_source"/>
+        <childnode refid="208133" relation="include">
+        </childnode>
+        <childnode refid="208122" relation="include">
+        </childnode>
+        <childnode refid="208307" relation="include">
+        </childnode>
+        <childnode refid="208264" relation="include">
+        </childnode>
+        <childnode refid="208283" relation="include">
+        </childnode>
+        <childnode refid="208308" relation="include">
+        </childnode>
+        <childnode refid="208303" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208124" relation="include">
+        </childnode>
+        <childnode refid="208237" relation="include">
+        </childnode>
+        <childnode refid="208149" relation="include">
+        </childnode>
+      </node>
+      <node id="208302">
+        <label>xAODJet/versions/Jet_v1.h</label>
+        <link refid="df/d71/Jet__v1_8h_source"/>
+        <childnode refid="208303" relation="include">
+        </childnode>
+        <childnode refid="208122" relation="include">
+        </childnode>
+        <childnode refid="208131" relation="include">
+        </childnode>
+        <childnode refid="208248" relation="include">
+        </childnode>
+        <childnode refid="208304" relation="include">
+        </childnode>
+        <childnode refid="208313" relation="include">
+        </childnode>
+        <childnode refid="208315" relation="include">
+        </childnode>
+        <childnode refid="208314" relation="include">
+        </childnode>
+        <childnode refid="208316" relation="include">
+        </childnode>
+      </node>
+      <node id="208366">
+        <label>xAODEgamma/PhotonContainerFwd.h</label>
+        <link refid="d7/daf/PhotonContainerFwd_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208286" relation="include">
+        </childnode>
+        <childnode refid="208360" relation="include">
+        </childnode>
+      </node>
+      <node id="208227">
+        <label>AthContainers/tools/DVLIterator.h</label>
+        <link refid="d3/dc7/DVLIterator_8h_source"/>
+        <childnode refid="208210" relation="include">
+        </childnode>
+        <childnode refid="208225" relation="include">
+        </childnode>
+        <childnode refid="208228" relation="include">
+        </childnode>
+        <childnode refid="208230" relation="include">
+        </childnode>
+        <childnode refid="208215" relation="include">
+        </childnode>
+        <childnode refid="208142" relation="include">
+        </childnode>
+        <childnode refid="208143" relation="include">
+        </childnode>
+      </node>
+      <node id="208120">
+        <label>xAODEgamma/Electron.h</label>
+        <link refid="dc/db4/Electron_8h_source"/>
+        <childnode refid="208121" relation="include">
+        </childnode>
+      </node>
+      <node id="208241">
+        <label>SGTools/DataBucket.h</label>
+      </node>
+      <node id="208303">
+        <label>map</label>
+      </node>
+      <node id="208250">
+        <label>xAODPrimitives/IsolationType.h</label>
+        <link refid="d2/d36/IsolationType_8h_source"/>
+      </node>
+      <node id="208242">
+        <label>AthContainers/tools/DVLDataBucket.icc</label>
+        <link refid="d3/d21/DVLDataBucket_8icc"/>
+        <childnode refid="208243" relation="include">
+        </childnode>
+      </node>
+      <node id="208249">
+        <label>xAODPrimitives/IsolationCorrection.h</label>
+        <link refid="d3/de5/xAODPrimitives_2xAODPrimitives_2IsolationCorrection_8h_source"/>
+        <childnode refid="208199" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+      </node>
+      <node id="208346">
+        <label>xAODMissingET/MissingETAuxContainer.h</label>
+        <link refid="dd/db4/MissingETAuxContainer_8h_source"/>
+        <childnode refid="208332" relation="include">
+        </childnode>
+        <childnode refid="208347" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208243">
+        <label>SGTools/IRegisterTransient.h</label>
+      </node>
+      <node id="208128">
+        <label>RootMetaSelection.h</label>
+      </node>
+      <node id="208116">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/src/METMakerAlg.cxx</label>
+        <link refid="METMakerAlg.cxx"/>
+        <childnode refid="208117" relation="include">
+        </childnode>
+        <childnode refid="208326" relation="include">
+        </childnode>
+        <childnode refid="208331" relation="include">
+        </childnode>
+        <childnode refid="208346" relation="include">
+        </childnode>
+        <childnode refid="208352" relation="include">
+        </childnode>
+        <childnode refid="208337" relation="include">
+        </childnode>
+        <childnode refid="208300" relation="include">
+        </childnode>
+        <childnode refid="208357" relation="include">
+        </childnode>
+        <childnode refid="208364" relation="include">
+        </childnode>
+        <childnode refid="208367" relation="include">
+        </childnode>
+        <childnode refid="208369" relation="include">
+        </childnode>
+        <childnode refid="208371" relation="include">
+        </childnode>
+        <childnode refid="208374" relation="include">
+        </childnode>
+        <childnode refid="208376" relation="include">
+        </childnode>
+        <childnode refid="208380" relation="include">
+        </childnode>
+      </node>
+      <node id="208171">
+        <label>AthContainers/tools/AuxTypeVector.icc</label>
+        <link refid="d5/d84/AuxTypeVector_8icc"/>
+      </node>
+      <node id="208362">
+        <label>xAODEgamma/ElectronContainerFwd.h</label>
+        <link refid="de/d36/ElectronContainerFwd_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208363" relation="include">
+        </childnode>
+        <childnode refid="208360" relation="include">
+        </childnode>
+      </node>
+      <node id="208274">
+        <label>VxVertex/VxTrackAtVertex.h</label>
+      </node>
+      <node id="208232">
+        <label>AthContainers/tools/DVL_algorithms.h</label>
+        <link refid="d0/d7a/DVL__algorithms_8h"/>
+        <childnode refid="208227" relation="include">
+        </childnode>
+        <childnode refid="208142" relation="include">
+        </childnode>
+        <childnode refid="208140" relation="include">
+        </childnode>
+        <childnode refid="208233" relation="include">
+        </childnode>
+      </node>
+      <node id="208117">
+        <label>METMakerAlg.h</label>
+        <link refid="dc/d01/METMakerAlg_8h_source"/>
+        <childnode refid="208118" relation="include">
+        </childnode>
+        <childnode refid="208119" relation="include">
+        </childnode>
+        <childnode refid="208120" relation="include">
+        </childnode>
+        <childnode refid="208268" relation="include">
+        </childnode>
+        <childnode refid="208288" relation="include">
+        </childnode>
+        <childnode refid="208296" relation="include">
+        </childnode>
+      </node>
+      <node id="208186">
+        <label>AthContainers/tools/assume.h</label>
+        <link refid="d2/d20/assume_8h"/>
+      </node>
+      <node id="208292">
+        <label>versions/MuonSegment_v1.h</label>
+        <link refid="df/d0d/MuonSegment__v1_8h_source"/>
+        <childnode refid="208133" relation="include">
+        </childnode>
+        <childnode refid="208122" relation="include">
+        </childnode>
+        <childnode refid="208293" relation="include">
+        </childnode>
+        <childnode refid="208294" relation="include">
+        </childnode>
+      </node>
+      <node id="208299">
+        <label>Math/Vector4D.h</label>
+      </node>
+      <node id="208168">
+        <label>AthContainers/PackedContainer.icc</label>
+        <link refid="d1/d0c/PackedContainer_8icc"/>
+      </node>
+      <node id="208345">
+        <label>xAODMissingET/versions/MissingETAssociationMap_v1.h</label>
+        <link refid="d9/da7/MissingETAssociationMap__v1_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208301" relation="include">
+        </childnode>
+        <childnode refid="208339" relation="include">
+        </childnode>
+        <childnode refid="208124" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208303" relation="include">
+        </childnode>
+        <childnode refid="208237" relation="include">
+        </childnode>
+        <childnode refid="208282" relation="include">
+        </childnode>
+      </node>
+      <node id="208283">
+        <label>xAODTracking/VertexContainer.h</label>
+        <link refid="d6/dd8/VertexContainer_8h_source"/>
+        <childnode refid="208270" relation="include">
+        </childnode>
+        <childnode refid="208284" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208268">
+        <label>xAODEgamma/Photon.h</label>
+        <link refid="d4/df7/Photon_8h_source"/>
+        <childnode refid="208269" relation="include">
+        </childnode>
+      </node>
+      <node id="208228">
+        <label>AthContainers/tools/ElementProxy.h</label>
+        <link refid="db/d26/ElementProxy_8h"/>
+        <childnode refid="208210" relation="include">
+        </childnode>
+        <childnode refid="208126" relation="include">
+        </childnode>
+        <childnode refid="208147" relation="include">
+        </childnode>
+        <childnode refid="208229" relation="include">
+        </childnode>
+      </node>
+      <node id="208134">
+        <label>AthContainersInterfaces/IAuxElement.h</label>
+        <link refid="dd/d7a/IAuxElement_8h"/>
+      </node>
+      <node id="208126">
+        <label>AthLinks/tools/selection_ns.h</label>
+        <link refid="d3/dec/selection__ns_8h"/>
+        <childnode refid="208127" relation="include">
+        </childnode>
+        <childnode refid="208128" relation="include">
+        </childnode>
+      </node>
+      <node id="208184">
+        <label>AthenaKernel/IThinningSvc.h</label>
+      </node>
+      <node id="208177">
+        <label>boost/atomic.hpp</label>
+      </node>
+      <node id="208293">
+        <label>MuonIdHelpers/MuonStationIndex.h</label>
+        <link refid="d5/d3f/MuonStationIndex_8h_source"/>
+        <childnode refid="208124" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+      </node>
+      <node id="208267">
+        <label>xAODTracking/TrackParticleFwd.h</label>
+        <link refid="d1/dc4/TrackParticleFwd_8h_source"/>
+      </node>
+      <node id="208307">
+        <label>xAODBTagging/BTaggingEnums.h</label>
+        <link refid="dd/de5/BTaggingEnums_8h_source"/>
+      </node>
+      <node id="208226">
+        <label>limits.h</label>
+      </node>
+      <node id="208290">
+        <label>xAODMuon/MuonSegmentContainer.h</label>
+        <link refid="d5/d26/MuonSegmentContainer_8h_source"/>
+        <childnode refid="208291" relation="include">
+        </childnode>
+        <childnode refid="208295" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208359">
+        <label>xAODEgamma/versions/EgammaContainer_v1.h</label>
+        <link refid="d0/d71/EgammaContainer__v1_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208248" relation="include">
+        </childnode>
+        <childnode refid="208130" relation="include">
+        </childnode>
+        <childnode refid="208360" relation="include">
+        </childnode>
+      </node>
+      <node id="208220">
+        <label>AthContainers/tools/ClassID.h</label>
+        <link refid="de/de2/ClassID_8h"/>
+        <childnode refid="208221" relation="include">
+        </childnode>
+      </node>
+      <node id="208289">
+        <label>versions/Muon_v1.h</label>
+        <link refid="da/dde/Muon__v1_8h_source"/>
+        <childnode refid="208133" relation="include">
+        </childnode>
+        <childnode refid="208122" relation="include">
+        </childnode>
+        <childnode refid="208249" relation="include">
+        </childnode>
+        <childnode refid="208250" relation="include">
+        </childnode>
+        <childnode refid="208251" relation="include">
+        </childnode>
+        <childnode refid="208131" relation="include">
+        </childnode>
+        <childnode refid="208257" relation="include">
+        </childnode>
+        <childnode refid="208264" relation="include">
+        </childnode>
+        <childnode refid="208207" relation="include">
+        </childnode>
+        <childnode refid="208290" relation="include">
+        </childnode>
+        <childnode refid="208199" relation="include">
+        </childnode>
+        <childnode refid="208123" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+        <childnode refid="208209" relation="include">
+        </childnode>
+      </node>
+      <node id="208284">
+        <label>xAODTracking/versions/VertexContainer_v1.h</label>
+        <link refid="d2/dda/VertexContainer__v1_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208271" relation="include">
+        </childnode>
+      </node>
+      <node id="208163">
+        <label>AthContainers/PackedParameters.h</label>
+        <link refid="d4/d43/PackedParameters_8h"/>
+        <childnode refid="208164" relation="include">
+        </childnode>
+        <childnode refid="208145" relation="include">
+        </childnode>
+        <childnode refid="208123" relation="include">
+        </childnode>
+        <childnode refid="208166" relation="include">
+        </childnode>
+      </node>
+      <node id="208119">
+        <label>GaudiKernel/ToolHandle.h</label>
+      </node>
+      <node id="208136">
+        <label>AthContainersInterfaces/AuxTypes.h</label>
+        <link refid="d1/dea/AuxTypes_8h"/>
+        <childnode refid="208137" relation="include">
+        </childnode>
+        <childnode refid="208138" relation="include">
+        </childnode>
+      </node>
+      <node id="208360">
+        <label>xAODEgamma/EgammaContainerFwd.h</label>
+        <link refid="d3/d76/EgammaContainerFwd_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208248" relation="include">
+        </childnode>
+        <childnode refid="208361" relation="include">
+        </childnode>
+      </node>
+      <node id="208324">
+        <label>TVector3.h</label>
+      </node>
+      <node id="208125">
+        <label>AthLinks/ElementLinkBase.h</label>
+        <link refid="d0/d16/ElementLinkBase_8h_source"/>
+        <childnode refid="208123" relation="include">
+        </childnode>
+      </node>
+      <node id="208255">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="208139">
+        <label>CxxUtils/hashtable.h</label>
+        <link refid="dd/d16/hashtable_8h"/>
+        <childnode refid="208140" relation="include">
+        </childnode>
+        <childnode refid="208141" relation="include">
+        </childnode>
+        <childnode refid="208142" relation="include">
+        </childnode>
+        <childnode refid="208137" relation="include">
+        </childnode>
+        <childnode refid="208143" relation="include">
+        </childnode>
+        <childnode refid="208144" relation="include">
+        </childnode>
+        <childnode refid="208145" relation="include">
+        </childnode>
+        <childnode refid="208124" relation="include">
+        </childnode>
+        <childnode refid="208146" relation="include">
+        </childnode>
+      </node>
+      <node id="208213">
+        <label>AthContainers/tools/ATHCONTAINERS_ASSERT.h</label>
+        <link refid="de/d6b/ATHCONTAINERS__ASSERT_8h"/>
+        <childnode refid="208192" relation="include">
+        </childnode>
+      </node>
+      <node id="208131">
+        <label>xAODBase/IParticle.h</label>
+        <link refid="d5/dac/IParticle_8h_source"/>
+        <childnode refid="208132" relation="include">
+        </childnode>
+        <childnode refid="208133" relation="include">
+        </childnode>
+        <childnode refid="208193" relation="include">
+        </childnode>
+        <childnode refid="208151" relation="include">
+        </childnode>
+      </node>
+      <node id="208193">
+        <label>ObjectType.h</label>
+        <link refid="d8/d04/ObjectType_8h_source"/>
+        <childnode refid="208194" relation="include">
+        </childnode>
+      </node>
+      <node id="208376">
+        <label>ElectronPhotonSelectorTools/IAsgPhotonIsEMSelector.h</label>
+        <link refid="db/db5/IAsgPhotonIsEMSelector_8h_source"/>
+        <childnode refid="208375" relation="include">
+        </childnode>
+        <childnode refid="208377" relation="include">
+        </childnode>
+        <childnode refid="208378" relation="include">
+        </childnode>
+        <childnode refid="208361" relation="include">
+        </childnode>
+        <childnode refid="208286" relation="include">
+        </childnode>
+        <childnode refid="208363" relation="include">
+        </childnode>
+      </node>
+      <node id="208298">
+        <label>xAODTau/TauDefs.h</label>
+        <link refid="da/df4/TauDefs_8h_source"/>
+        <childnode refid="208299" relation="include">
+        </childnode>
+        <childnode refid="208199" relation="include">
+        </childnode>
+      </node>
+      <node id="208198">
+        <label>xAODCaloEvent/versions/CaloCluster_v1.h</label>
+        <link refid="dc/d4b/CaloCluster__v1_8h_source"/>
+        <childnode refid="208123" relation="include">
+        </childnode>
+        <childnode refid="208199" relation="include">
+        </childnode>
+        <childnode refid="208131" relation="include">
+        </childnode>
+        <childnode refid="208200" relation="include">
+        </childnode>
+        <childnode refid="208202" relation="include">
+        </childnode>
+        <childnode refid="208122" relation="include">
+        </childnode>
+        <childnode refid="208204" relation="include">
+        </childnode>
+        <childnode refid="208205" relation="include">
+        </childnode>
+      </node>
+      <node id="208315">
+        <label>xAODJet/JetAttributes.h</label>
+        <link refid="d3/df8/JetAttributes_8h"/>
+      </node>
+      <node id="208229">
+        <label>AthContainers/tools/ElementProxy.icc</label>
+        <link refid="d6/d70/ElementProxy_8icc"/>
+        <childnode refid="208225" relation="include">
+        </childnode>
+        <childnode refid="208213" relation="include">
+        </childnode>
+      </node>
+      <node id="208121">
+        <label>xAODEgamma/versions/Electron_v1.h</label>
+        <link refid="df/d27/Electron__v1_8h_source"/>
+        <childnode refid="208122" relation="include">
+        </childnode>
+        <childnode refid="208130" relation="include">
+        </childnode>
+        <childnode refid="208196" relation="include">
+        </childnode>
+        <childnode refid="208257" relation="include">
+        </childnode>
+        <childnode refid="208258" relation="include">
+        </childnode>
+        <childnode refid="208264" relation="include">
+        </childnode>
+        <childnode refid="208256" relation="include">
+        </childnode>
+        <childnode refid="208167" relation="include">
+        </childnode>
+      </node>
+      <node id="208156">
+        <label>typeinfo</label>
+      </node>
+      <node id="208257">
+        <label>xAODTracking/TrackingPrimitives.h</label>
+        <link refid="d2/d4c/TrackingPrimitives_8h_source"/>
+        <childnode refid="208252" relation="include">
+        </childnode>
+      </node>
+      <node id="208191">
+        <label>AthContainers/AuxElement.icc</label>
+        <link refid="d2/d37/AuxElement_8icc"/>
+        <childnode refid="208185" relation="include">
+        </childnode>
+        <childnode refid="208192" relation="include">
+        </childnode>
+      </node>
+      <node id="208321">
+        <label>AthLinks/ElementLinkVector.h</label>
+        <link refid="de/df1/ElementLinkVector_8h_source"/>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208122" relation="include">
+        </childnode>
+        <childnode refid="208322" relation="include">
+        </childnode>
+        <childnode refid="208126" relation="include">
+        </childnode>
+      </node>
+      <node id="208197">
+        <label>xAODCaloEvent/CaloCluster.h</label>
+        <link refid="db/d88/CaloCluster_8h_source"/>
+        <childnode refid="208198" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208209">
+        <label>AthContainers/DataVector.h</label>
+        <link refid="d7/dd6/DataVector_8h"/>
+        <childnode refid="208188" relation="include">
+        </childnode>
+        <childnode refid="208210" relation="include">
+        </childnode>
+        <childnode refid="208211" relation="include">
+        </childnode>
+        <childnode refid="208212" relation="include">
+        </childnode>
+        <childnode refid="208218" relation="include">
+        </childnode>
+        <childnode refid="208219" relation="include">
+        </childnode>
+        <childnode refid="208225" relation="include">
+        </childnode>
+        <childnode refid="208227" relation="include">
+        </childnode>
+        <childnode refid="208231" relation="include">
+        </childnode>
+        <childnode refid="208232" relation="include">
+        </childnode>
+        <childnode refid="208228" relation="include">
+        </childnode>
+        <childnode refid="208234" relation="include">
+        </childnode>
+        <childnode refid="208126" relation="include">
+        </childnode>
+        <childnode refid="208235" relation="include">
+        </childnode>
+        <childnode refid="208236" relation="include">
+        </childnode>
+        <childnode refid="208230" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208156" relation="include">
+        </childnode>
+        <childnode refid="208148" relation="include">
+        </childnode>
+        <childnode refid="208237" relation="include">
+        </childnode>
+        <childnode refid="208140" relation="include">
+        </childnode>
+        <childnode refid="208190" relation="include">
+        </childnode>
+        <childnode refid="208142" relation="include">
+        </childnode>
+        <childnode refid="208151" relation="include">
+        </childnode>
+        <childnode refid="208238" relation="include">
+        </childnode>
+        <childnode refid="208240" relation="include">
+        </childnode>
+        <childnode refid="208244" relation="include">
+        </childnode>
+        <childnode refid="208245" relation="include">
+        </childnode>
+      </node>
+      <node id="208276">
+        <label>xAODTracking/NeutralParticle.h</label>
+        <link refid="d4/daa/NeutralParticle_8h_source"/>
+        <childnode refid="208277" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208199">
+        <label>bitset</label>
+      </node>
+      <node id="208166">
+        <label>AthContainers/PackedParameters.icc</label>
+        <link refid="db/d30/PackedParameters_8icc"/>
+      </node>
+      <node id="208129">
+        <label>AthLinks/tools/TypeTools.h</label>
+        <link refid="dd/db1/TypeTools_8h_source"/>
+      </node>
+      <node id="208326">
+        <label>METInterface/IMETMaker.h</label>
+        <link refid="d0/dd7/IMETMaker_8h_source"/>
+        <childnode refid="208327" relation="include">
+        </childnode>
+        <childnode refid="208248" relation="include">
+        </childnode>
+        <childnode refid="208331" relation="include">
+        </childnode>
+        <childnode refid="208337" relation="include">
+        </childnode>
+        <childnode refid="208300" relation="include">
+        </childnode>
+      </node>
+      <node id="208183">
+        <label>AthenaKernel/ILockable.h</label>
+      </node>
+      <node id="208153">
+        <label>AthLinks/DataLinkBase.h</label>
+        <link refid="db/da8/DataLinkBase_8h_source"/>
+        <childnode refid="208123" relation="include">
+        </childnode>
+      </node>
+      <node id="208271">
+        <label>xAODTracking/versions/Vertex_v1.h</label>
+        <link refid="d7/dcc/Vertex__v1_8h_source"/>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208133" relation="include">
+        </childnode>
+        <childnode refid="208122" relation="include">
+        </childnode>
+        <childnode refid="208252" relation="include">
+        </childnode>
+        <childnode refid="208272" relation="include">
+        </childnode>
+        <childnode refid="208274" relation="include">
+        </childnode>
+        <childnode refid="208257" relation="include">
+        </childnode>
+        <childnode refid="208266" relation="include">
+        </childnode>
+        <childnode refid="208275" relation="include">
+        </childnode>
+        <childnode refid="208193" relation="include">
+        </childnode>
+        <childnode refid="208282" relation="include">
+        </childnode>
+      </node>
+      <node id="208165">
+        <label>AthContainersInterfaces/AuxDataOption.icc</label>
+        <link refid="db/d68/AuxDataOption_8icc"/>
+      </node>
+      <node id="208170">
+        <label>boost/type_traits/is_arithmetic.hpp</label>
+      </node>
+      <node id="208219">
+        <label>AthContainers/tools/DVLInfo.h</label>
+        <link refid="d3/d2e/DVLInfo_8h"/>
+        <childnode refid="208220" relation="include">
+        </childnode>
+        <childnode refid="208212" relation="include">
+        </childnode>
+        <childnode refid="208156" relation="include">
+        </childnode>
+        <childnode refid="208137" relation="include">
+        </childnode>
+        <childnode refid="208146" relation="include">
+        </childnode>
+        <childnode refid="208222" relation="include">
+        </childnode>
+        <childnode refid="208169" relation="include">
+        </childnode>
+        <childnode refid="208223" relation="include">
+        </childnode>
+      </node>
+      <node id="208149">
+        <label>SGTools/CLASS_DEF.h</label>
+      </node>
+      <node id="208253">
+        <label>unistd.h</label>
+      </node>
+      <node id="208238">
+        <label>AthContainers/ClassName.h</label>
+        <link refid="dd/d6b/AthContainers_2AthContainers_2ClassName_8h_source"/>
+        <childnode refid="208239" relation="include">
+        </childnode>
+      </node>
+      <node id="208154">
+        <label>AthContainers/AuxTypeRegistry.h</label>
+        <link refid="db/d7f/AuxTypeRegistry_8h"/>
+        <childnode refid="208136" relation="include">
+        </childnode>
+        <childnode refid="208155" relation="include">
+        </childnode>
+        <childnode refid="208157" relation="include">
+        </childnode>
+        <childnode refid="208158" relation="include">
+        </childnode>
+        <childnode refid="208172" relation="include">
+        </childnode>
+        <childnode refid="208174" relation="include">
+        </childnode>
+        <childnode refid="208137" relation="include">
+        </childnode>
+        <childnode refid="208156" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208180" relation="include">
+        </childnode>
+        <childnode refid="208181" relation="include">
+        </childnode>
+      </node>
+      <node id="208161">
+        <label>vector</label>
+      </node>
+      <node id="208248">
+        <label>xAODBase/IParticleContainer.h</label>
+        <link refid="dd/d2d/IParticleContainer_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208131" relation="include">
+        </childnode>
+        <childnode refid="208149" relation="include">
+        </childnode>
+      </node>
+      <node id="208246">
+        <label>AthContainers/tools/CompareAndPrint.h</label>
+        <link refid="d5/da8/CompareAndPrint_8h_source"/>
+        <childnode refid="208140" relation="include">
+        </childnode>
+        <childnode refid="208156" relation="include">
+        </childnode>
+      </node>
+      <node id="208339">
+        <label>xAODMissingET/versions/MissingETAssociation_v1.h</label>
+        <link refid="d4/dd5/MissingETAssociation__v1_8h_source"/>
+        <childnode refid="208133" relation="include">
+        </childnode>
+        <childnode refid="208131" relation="include">
+        </childnode>
+        <childnode refid="208248" relation="include">
+        </childnode>
+        <childnode refid="208340" relation="include">
+        </childnode>
+        <childnode refid="208333" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208287" relation="include">
+        </childnode>
+      </node>
+      <node id="208381">
+        <label>TFile.h</label>
+      </node>
+      <node id="208270">
+        <label>xAODTracking/Vertex.h</label>
+        <link refid="d9/d2d/Vertex_8h_source"/>
+        <childnode refid="208271" relation="include">
+        </childnode>
+      </node>
+      <node id="208279">
+        <label>xAODTracking/versions/NeutralParticleContainer_v1.h</label>
+        <link refid="d6/d5f/NeutralParticleContainer__v1_8h_source"/>
+        <childnode refid="208123" relation="include">
+        </childnode>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208277" relation="include">
+        </childnode>
+        <childnode refid="208280" relation="include">
+        </childnode>
+      </node>
+      <node id="208316">
+        <label>xAODJet/JetContainerInfo.h</label>
+        <link refid="d8/d2a/JetContainerInfo_8h_source"/>
+        <childnode refid="208124" relation="include">
+        </childnode>
+      </node>
+      <node id="208269">
+        <label>xAODEgamma/versions/Photon_v1.h</label>
+        <link refid="d3/d5c/Photon__v1_8h_source"/>
+        <childnode refid="208122" relation="include">
+        </childnode>
+        <childnode refid="208270" relation="include">
+        </childnode>
+        <childnode refid="208283" relation="include">
+        </childnode>
+        <childnode refid="208264" relation="include">
+        </childnode>
+        <childnode refid="208130" relation="include">
+        </childnode>
+        <childnode refid="208285" relation="include">
+        </childnode>
+        <childnode refid="208256" relation="include">
+        </childnode>
+        <childnode refid="208167" relation="include">
+        </childnode>
+      </node>
+      <node id="208341">
+        <label>AthContainers/ConstDataVector.h</label>
+        <link refid="d2/d0d/ConstDataVector_8h"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208342" relation="include">
+        </childnode>
+        <childnode refid="208343" relation="include">
+        </childnode>
+      </node>
+      <node id="208247">
+        <label>AthContainers/tools/DVLEltBaseInfo.icc</label>
+        <link refid="dd/d5e/DVLEltBaseInfo_8icc"/>
+      </node>
+      <node id="208322">
+        <label>AthLinks/ElementLinkVectorBase.h</label>
+        <link refid="dc/d52/ElementLinkVectorBase_8h_source"/>
+        <childnode refid="208123" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+      </node>
+      <node id="208304">
+        <label>xAODBTagging/BTaggingContainer.h</label>
+        <link refid="d8/d3b/BTaggingContainer_8h_source"/>
+        <childnode refid="208305" relation="include">
+        </childnode>
+        <childnode refid="208312" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208202">
+        <label>xAODCaloEvent/CaloClusterBadChannelData.h</label>
+        <link refid="d1/d93/CaloClusterBadChannelData_8h_source"/>
+        <childnode refid="208203" relation="include">
+        </childnode>
+      </node>
+      <node id="208141">
+        <label>utility</label>
+      </node>
+      <node id="208244">
+        <label>SGTools/DataBucketTraitFwd.h</label>
+      </node>
+      <node id="208167">
+        <label>CxxUtils/override.h</label>
+        <link refid="de/d0e/override_8h"/>
+      </node>
+      <node id="208130">
+        <label>xAODEgamma/versions/Egamma_v1.h</label>
+        <link refid="d9/d42/Egamma__v1_8h_source"/>
+        <childnode refid="208122" relation="include">
+        </childnode>
+        <childnode refid="208131" relation="include">
+        </childnode>
+        <childnode refid="208195" relation="include">
+        </childnode>
+        <childnode refid="208196" relation="include">
+        </childnode>
+        <childnode refid="208197" relation="include">
+        </childnode>
+        <childnode refid="208207" relation="include">
+        </childnode>
+        <childnode refid="208249" relation="include">
+        </childnode>
+        <childnode refid="208250" relation="include">
+        </childnode>
+        <childnode refid="208251" relation="include">
+        </childnode>
+        <childnode refid="208252" relation="include">
+        </childnode>
+        <childnode refid="208256" relation="include">
+        </childnode>
+        <childnode refid="208167" relation="include">
+        </childnode>
+        <childnode refid="208123" relation="include">
+        </childnode>
+      </node>
+      <node id="208207">
+        <label>xAODCaloEvent/CaloClusterContainer.h</label>
+        <link refid="da/dc3/CaloClusterContainer_8h_source"/>
+        <childnode refid="208197" relation="include">
+        </childnode>
+        <childnode refid="208208" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208296">
+        <label>xAODTau/TauJet.h</label>
+        <link refid="de/d61/TauJet_8h_source"/>
+        <childnode refid="208297" relation="include">
+        </childnode>
+      </node>
+      <node id="208333">
+        <label>xAODMissingET/versions/MissingET_v1.h</label>
+        <link refid="df/d79/MissingET__v1_8h_source"/>
+        <childnode refid="208133" relation="include">
+        </childnode>
+        <childnode refid="208131" relation="include">
+        </childnode>
+        <childnode refid="208334" relation="include">
+        </childnode>
+        <childnode refid="208124" relation="include">
+        </childnode>
+        <childnode refid="208148" relation="include">
+        </childnode>
+        <childnode refid="208141" relation="include">
+        </childnode>
+      </node>
+      <node id="208272">
+        <label>GeoPrimitives/GeoPrimitives.h</label>
+        <link refid="d7/d87/GeoPrimitives_8h_source"/>
+        <childnode refid="208253" relation="include">
+        </childnode>
+        <childnode refid="208273" relation="include">
+        </childnode>
+      </node>
+      <node id="208319">
+        <label>xAODPFlow/PFO.h</label>
+        <link refid="d1/d98/PFO_8h_source"/>
+        <childnode refid="208320" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208380">
+        <label>TauAnalysisTools/ITauSelectionTool.h</label>
+        <link refid="d8/d56/ITauSelectionTool_8h_source"/>
+        <childnode refid="208327" relation="include">
+        </childnode>
+        <childnode refid="208372" relation="include">
+        </childnode>
+        <childnode refid="208296" relation="include">
+        </childnode>
+        <childnode refid="208381" relation="include">
+        </childnode>
+      </node>
+      <node id="208261">
+        <label>xAODTracking/VertexFwd.h</label>
+        <link refid="d9/ddd/VertexFwd_8h_source"/>
+      </node>
+      <node id="208217">
+        <label>AthContainers/AuxVectorBase.icc</label>
+        <link refid="d4/d50/AuxVectorBase_8icc"/>
+      </node>
+      <node id="208175">
+        <label>boost/thread/shared_mutex.hpp</label>
+      </node>
+      <node id="208332">
+        <label>xAODMissingET/MissingET.h</label>
+        <link refid="d0/d22/MissingET_8h_source"/>
+        <childnode refid="208333" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208309">
+        <label>xAODBTagging/BTagVertex.h</label>
+        <link refid="d4/d51/BTagVertex_8h_source"/>
+        <childnode refid="208310" relation="include">
+        </childnode>
+      </node>
+      <node id="208375">
+        <label>PATCore/IAsgSelectionTool.h</label>
+        <link refid="d9/dfd/IAsgSelectionTool_8h_source"/>
+        <childnode refid="208327" relation="include">
+        </childnode>
+        <childnode refid="208372" relation="include">
+        </childnode>
+      </node>
+      <node id="208159">
+        <label>AthContainersInterfaces/IAuxSetOption.h</label>
+        <link refid="d7/d7e/IAuxSetOption_8h"/>
+      </node>
+      <node id="208336">
+        <label>xAODMissingET/versions/MissingETContainer_v1.h</label>
+        <link refid="df/df3/MissingETContainer__v1_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208334" relation="include">
+        </childnode>
+        <childnode refid="208333" relation="include">
+        </childnode>
+        <childnode refid="208124" relation="include">
+        </childnode>
+        <childnode refid="208282" relation="include">
+        </childnode>
+      </node>
+      <node id="208174">
+        <label>AthContainers/tools/threading.h</label>
+        <link refid="d7/d22/threading_8h"/>
+        <childnode refid="208175" relation="include">
+        </childnode>
+        <childnode refid="208176" relation="include">
+        </childnode>
+        <childnode refid="208177" relation="include">
+        </childnode>
+        <childnode refid="208178" relation="include">
+        </childnode>
+        <childnode refid="208179" relation="include">
+        </childnode>
+      </node>
+      <node id="208201">
+        <label>CaloGeoHelpers/CaloSampling.def</label>
+      </node>
+      <node id="208354">
+        <label>xAODMissingET/versions/MissingETComponent_v1.h</label>
+        <link refid="d1/d98/MissingETComponent__v1_8h"/>
+        <childnode refid="208133" relation="include">
+        </childnode>
+        <childnode refid="208131" relation="include">
+        </childnode>
+        <childnode refid="208248" relation="include">
+        </childnode>
+        <childnode refid="208340" relation="include">
+        </childnode>
+        <childnode refid="208331" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+      </node>
+      <node id="208194">
+        <label>iosfwd</label>
+      </node>
+      <node id="208143">
+        <label>cstdlib</label>
+      </node>
+      <node id="208297">
+        <label>xAODTau/versions/TauJet_v2.h</label>
+        <link refid="d0/d82/TauJet__v2_8h_source"/>
+        <childnode refid="208122" relation="include">
+        </childnode>
+        <childnode refid="208131" relation="include">
+        </childnode>
+        <childnode refid="208248" relation="include">
+        </childnode>
+        <childnode refid="208298" relation="include">
+        </childnode>
+        <childnode refid="208264" relation="include">
+        </childnode>
+        <childnode refid="208283" relation="include">
+        </childnode>
+        <childnode refid="208300" relation="include">
+        </childnode>
+        <childnode refid="208318" relation="include">
+        </childnode>
+        <childnode refid="208209" relation="include">
+        </childnode>
+      </node>
+      <node id="208351">
+        <label>xAODCore/AuxSelection.h</label>
+        <link refid="d3/dd4/AuxSelection_8h_source"/>
+        <childnode refid="208287" relation="include">
+        </childnode>
+        <childnode refid="208124" relation="include">
+        </childnode>
+        <childnode refid="208136" relation="include">
+        </childnode>
+      </node>
+      <node id="208258">
+        <label>xAODTracking/TrackParticle.h</label>
+        <link refid="d2/d15/TrackParticle_8h_source"/>
+        <childnode refid="208259" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208237">
+        <label>iostream</label>
+      </node>
+      <node id="208189">
+        <label>CxxUtils/noreturn.h</label>
+        <link refid="de/d6f/noreturn_8h"/>
+      </node>
+      <node id="208265">
+        <label>xAODTracking/versions/TrackParticleContainer_v1.h</label>
+        <link refid="d7/d3b/TrackParticleContainer__v1_8h_source"/>
+        <childnode refid="208123" relation="include">
+        </childnode>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208259" relation="include">
+        </childnode>
+        <childnode refid="208266" relation="include">
+        </childnode>
+      </node>
+      <node id="208338">
+        <label>xAODMissingET/MissingETAssociation.h</label>
+        <link refid="d2/df6/MissingETAssociation_8h_source"/>
+        <childnode refid="208339" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208135">
+        <label>AthContainersInterfaces/IConstAuxStore.h</label>
+        <link refid="d7/d3a/IConstAuxStore_8h"/>
+        <childnode refid="208136" relation="include">
+        </childnode>
+        <childnode refid="208137" relation="include">
+        </childnode>
+        <childnode refid="208149" relation="include">
+        </childnode>
+      </node>
+      <node id="208137">
+        <label>cstddef</label>
+      </node>
+      <node id="208372">
+        <label>PATCore/TAccept.h</label>
+        <link refid="d0/dcf/TAccept_8h_source"/>
+        <childnode refid="208373" relation="include">
+        </childnode>
+        <childnode refid="208303" relation="include">
+        </childnode>
+        <childnode refid="208199" relation="include">
+        </childnode>
+      </node>
+      <node id="208187">
+        <label>AthContainers/AuxVectorData.icc</label>
+        <link refid="da/de7/AuxVectorData_8icc"/>
+        <childnode refid="208154" relation="include">
+        </childnode>
+        <childnode refid="208150" relation="include">
+        </childnode>
+        <childnode refid="208135" relation="include">
+        </childnode>
+        <childnode refid="208185" relation="include">
+        </childnode>
+        <childnode refid="208186" relation="include">
+        </childnode>
+      </node>
+      <node id="208379">
+        <label>climits</label>
+      </node>
+      <node id="208329">
+        <label>AsgTools/AsgToolMacros.h</label>
+        <link refid="d1/d68/AsgToolMacros_8h_source"/>
+      </node>
+      <node id="208282">
+        <label>xAODCore/BaseInfo.h</label>
+        <link refid="d3/d17/BaseInfo_8h_source"/>
+        <childnode refid="208151" relation="include">
+        </childnode>
+      </node>
+      <node id="208196">
+        <label>xAODEgamma/EgammaEnums.h</label>
+        <link refid="d4/d8f/EgammaEnums_8h_source"/>
+      </node>
+      <node id="208373">
+        <label>TString.h</label>
+      </node>
+      <node id="208325">
+        <label>xAODPFlow/versions/PFOContainer_v1.h</label>
+        <link refid="d7/d93/PFOContainer__v1_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208320" relation="include">
+        </childnode>
+      </node>
+      <node id="208305">
+        <label>xAODBTagging/BTagging.h</label>
+        <link refid="d2/d81/BTagging_8h_source"/>
+        <childnode refid="208306" relation="include">
+        </childnode>
+      </node>
+      <node id="208314">
+        <label>xAODJet/JetTypes.h</label>
+        <link refid="d6/d2a/JetTypes_8h_source"/>
+        <childnode refid="208299" relation="include">
+        </childnode>
+      </node>
+      <node id="208323">
+        <label>xAODPFlow/PFODefs.h</label>
+        <link refid="de/d76/xAODPFlow_2xAODPFlow_2PFODefs_8h_source"/>
+        <childnode refid="208299" relation="include">
+        </childnode>
+      </node>
+      <node id="208313">
+        <label>xAODJet/JetConstituentVector.h</label>
+        <link refid="de/dd4/JetConstituentVector_8h_source"/>
+        <childnode refid="208122" relation="include">
+        </childnode>
+        <childnode refid="208131" relation="include">
+        </childnode>
+        <childnode refid="208248" relation="include">
+        </childnode>
+        <childnode refid="208314" relation="include">
+        </childnode>
+      </node>
+      <node id="208278">
+        <label>TrkNeutralParameters/NeutralParameters.h</label>
+      </node>
+      <node id="208223">
+        <label>AthContainers/tools/DVLInfo.icc</label>
+        <link refid="da/d83/DVLInfo_8icc"/>
+        <childnode refid="208210" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208224" relation="include">
+        </childnode>
+        <childnode refid="208192" relation="include">
+        </childnode>
+        <childnode refid="208143" relation="include">
+        </childnode>
+        <childnode refid="208151" relation="include">
+        </childnode>
+      </node>
+      <node id="208158">
+        <label>AthContainers/tools/AuxTypeVector.h</label>
+        <link refid="d6/dd2/AuxTypeVector_8h"/>
+        <childnode refid="208155" relation="include">
+        </childnode>
+        <childnode refid="208159" relation="include">
+        </childnode>
+        <childnode refid="208160" relation="include">
+        </childnode>
+        <childnode refid="208162" relation="include">
+        </childnode>
+        <childnode refid="208167" relation="include">
+        </childnode>
+        <childnode refid="208156" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208140" relation="include">
+        </childnode>
+        <childnode refid="208123" relation="include">
+        </childnode>
+        <childnode refid="208169" relation="include">
+        </childnode>
+        <childnode refid="208170" relation="include">
+        </childnode>
+        <childnode refid="208171" relation="include">
+        </childnode>
+      </node>
+      <node id="208340">
+        <label>xAODMissingET/versions/MissingETCompositionBase.h</label>
+        <link refid="d9/d25/MissingETCompositionBase_8h_source"/>
+        <childnode refid="208334" relation="include">
+        </childnode>
+        <childnode refid="208131" relation="include">
+        </childnode>
+        <childnode refid="208248" relation="include">
+        </childnode>
+        <childnode refid="208341" relation="include">
+        </childnode>
+        <childnode refid="208122" relation="include">
+        </childnode>
+        <childnode refid="208331" relation="include">
+        </childnode>
+        <childnode refid="208300" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208142" relation="include">
+        </childnode>
+      </node>
+      <node id="208294">
+        <label>TrkSegment/SegmentCollection.h</label>
+      </node>
+      <node id="208262">
+        <label>TrkParameters/TrackParameters.h</label>
+      </node>
+      <node id="208353">
+        <label>xAODMissingET/MissingETComponent.h</label>
+        <link refid="d5/d39/MissingETComponent_8h_source"/>
+        <childnode refid="208354" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208300">
+        <label>xAODJet/JetContainer.h</label>
+        <link refid="d5/d55/JetContainer_8h_source"/>
+        <childnode refid="208301" relation="include">
+        </childnode>
+        <childnode refid="208317" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208195">
+        <label>xAODEgamma/EgammaDefs.h</label>
+        <link refid="dd/d34/EgammaDefs_8h_source"/>
+        <childnode refid="208123" relation="include">
+        </childnode>
+      </node>
+      <node id="208277">
+        <label>versions/NeutralParticle_v1.h</label>
+        <link refid="da/d85/NeutralParticle__v1_8h_source"/>
+        <childnode refid="208122" relation="include">
+        </childnode>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208131" relation="include">
+        </childnode>
+        <childnode refid="208257" relation="include">
+        </childnode>
+        <childnode refid="208260" relation="include">
+        </childnode>
+        <childnode refid="208199" relation="include">
+        </childnode>
+        <childnode refid="208123" relation="include">
+        </childnode>
+        <childnode refid="208278" relation="include">
+        </childnode>
+      </node>
+      <node id="208281">
+        <label>xAODTracking/NeutralParticleFwd.h</label>
+        <link refid="d4/d90/NeutralParticleFwd_8h_source"/>
+      </node>
+      <node id="208118">
+        <label>AthenaBaseComps/AthAlgorithm.h</label>
+      </node>
+      <node id="208370">
+        <label>xAODTau/versions/TauJetContainer_v2.h</label>
+        <link refid="d5/d28/TauJetContainer__v2_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208297" relation="include">
+        </childnode>
+      </node>
+      <node id="208363">
+        <label>xAODEgamma/ElectronFwd.h</label>
+        <link refid="db/d18/ElectronFwd_8h_source"/>
+      </node>
+      <node id="208285">
+        <label>xAODEgamma/PhotonxAODHelpers.h</label>
+        <link refid="d5/d20/PhotonxAODHelpers_8h_source"/>
+        <childnode refid="208286" relation="include">
+        </childnode>
+        <childnode refid="208261" relation="include">
+        </childnode>
+        <childnode refid="208267" relation="include">
+        </childnode>
+        <childnode refid="208196" relation="include">
+        </childnode>
+        <childnode refid="208272" relation="include">
+        </childnode>
+        <childnode refid="208137" relation="include">
+        </childnode>
+        <childnode refid="208287" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+      </node>
+      <node id="208169">
+        <label>boost/type_traits/is_base_of.hpp</label>
+      </node>
+      <node id="208275">
+        <label>xAODTracking/NeutralParticleContainer.h</label>
+        <link refid="da/d7f/NeutralParticleContainer_8h_source"/>
+        <childnode refid="208276" relation="include">
+        </childnode>
+        <childnode refid="208279" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208212">
+        <label>AthContainers/AuxVectorBase.h</label>
+        <link refid="d7/d18/AuxVectorBase_8h"/>
+        <childnode refid="208182" relation="include">
+        </childnode>
+        <childnode refid="208210" relation="include">
+        </childnode>
+        <childnode refid="208211" relation="include">
+        </childnode>
+        <childnode refid="208133" relation="include">
+        </childnode>
+        <childnode refid="208154" relation="include">
+        </childnode>
+        <childnode refid="208188" relation="include">
+        </childnode>
+        <childnode refid="208213" relation="include">
+        </childnode>
+        <childnode refid="208150" relation="include">
+        </childnode>
+        <childnode refid="208214" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208217" relation="include">
+        </childnode>
+      </node>
+      <node id="208287">
+        <label>set</label>
+      </node>
+      <node id="208251">
+        <label>xAODPrimitives/IsolationFlavour.h</label>
+        <link refid="da/d23/IsolationFlavour_8h_source"/>
+      </node>
+      <node id="208206">
+        <label>xAODCore/CLASS_DEF.h</label>
+        <link refid="d6/d20/xAODCore_2xAODCore_2CLASS__DEF_8h"/>
+        <childnode refid="208149" relation="include">
+        </childnode>
+      </node>
+      <node id="208173">
+        <label>AthContainers/tools/AuxTypeVectorFactory.icc</label>
+        <link refid="dc/d02/AuxTypeVectorFactory_8icc"/>
+      </node>
+      <node id="208162">
+        <label>AthContainers/PackedContainer.h</label>
+        <link refid="d6/dda/PackedContainer_8h"/>
+        <childnode refid="208159" relation="include">
+        </childnode>
+        <childnode refid="208163" relation="include">
+        </childnode>
+        <childnode refid="208167" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208168" relation="include">
+        </childnode>
+      </node>
+      <node id="208140">
+        <label>algorithm</label>
+      </node>
+      <node id="208337">
+        <label>xAODMissingET/MissingETAssociationMap.h</label>
+        <link refid="df/db3/MissingETAssociationMap_8h_source"/>
+        <childnode refid="208338" relation="include">
+        </childnode>
+        <childnode refid="208345" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208204">
+        <label>CaloEvent/CaloClusterCellLinkContainer.h</label>
+      </node>
+      <node id="208234">
+        <label>AthContainers/tools/IsMostDerivedFlag.h</label>
+        <link refid="d5/dfa/IsMostDerivedFlag_8h"/>
+      </node>
+      <node id="208263">
+        <label>TrkTrack/TrackCollection.h</label>
+      </node>
+      <node id="208358">
+        <label>xAODEgamma/versions/ElectronContainer_v1.h</label>
+        <link refid="dc/d7f/ElectronContainer__v1_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208121" relation="include">
+        </childnode>
+        <childnode refid="208359" relation="include">
+        </childnode>
+        <childnode refid="208362" relation="include">
+        </childnode>
+      </node>
+      <node id="208133">
+        <label>AthContainers/AuxElement.h</label>
+        <link refid="d1/d6f/AuxElement_8h"/>
+        <childnode refid="208134" relation="include">
+        </childnode>
+        <childnode refid="208135" relation="include">
+        </childnode>
+        <childnode refid="208150" relation="include">
+        </childnode>
+        <childnode refid="208152" relation="include">
+        </childnode>
+        <childnode refid="208154" relation="include">
+        </childnode>
+        <childnode refid="208182" relation="include">
+        </childnode>
+        <childnode refid="208160" relation="include">
+        </childnode>
+        <childnode refid="208188" relation="include">
+        </childnode>
+        <childnode refid="208185" relation="include">
+        </childnode>
+        <childnode refid="208137" relation="include">
+        </childnode>
+        <childnode refid="208191" relation="include">
+        </childnode>
+      </node>
+      <node id="208152">
+        <label>AthLinks/DataLink.h</label>
+        <link refid="da/de8/DataLink_8h_source"/>
+        <childnode refid="208123" relation="include">
+        </childnode>
+        <childnode refid="208124" relation="include">
+        </childnode>
+        <childnode refid="208153" relation="include">
+        </childnode>
+        <childnode refid="208126" relation="include">
+        </childnode>
+      </node>
+      <node id="208231">
+        <label>AthContainers/tools/DVL_iter_swap.h</label>
+        <link refid="d6/ddb/DVL__iter__swap_8h"/>
+        <childnode refid="208227" relation="include">
+        </childnode>
+        <childnode refid="208213" relation="include">
+        </childnode>
+        <childnode refid="208142" relation="include">
+        </childnode>
+      </node>
+      <node id="208210">
+        <label>AthContainers/OwnershipPolicy.h</label>
+        <link refid="d3/da4/OwnershipPolicy_8h_source"/>
+      </node>
+      <node id="208122">
+        <label>AthLinks/ElementLink.h</label>
+        <link refid="dc/d24/ElementLink_8h_source"/>
+        <childnode refid="208123" relation="include">
+        </childnode>
+        <childnode refid="208124" relation="include">
+        </childnode>
+        <childnode refid="208125" relation="include">
+        </childnode>
+        <childnode refid="208126" relation="include">
+        </childnode>
+        <childnode refid="208129" relation="include">
+        </childnode>
+      </node>
+      <node id="208311">
+        <label>xAODBTagging/versions/BTagVertexContainer_v1.h</label>
+        <link refid="d1/d37/BTagVertexContainer__v1_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208310" relation="include">
+        </childnode>
+      </node>
+      <node id="208318">
+        <label>xAODPFlow/PFOContainer.h</label>
+        <link refid="dd/d85/PFOContainer_8h_source"/>
+        <childnode refid="208319" relation="include">
+        </childnode>
+        <childnode refid="208325" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208264">
+        <label>xAODTracking/TrackParticleContainer.h</label>
+        <link refid="da/d31/TrackParticleContainer_8h_source"/>
+        <childnode refid="208258" relation="include">
+        </childnode>
+        <childnode refid="208265" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208221">
+        <label>GaudiKernel/ClassID.h</label>
+      </node>
+      <node id="208356">
+        <label>xAODMissingET/versions/MissingETComponentMap_v1.h</label>
+        <link refid="dd/ddb/MissingETComponentMap__v1_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208193" relation="include">
+        </childnode>
+        <childnode refid="208340" relation="include">
+        </childnode>
+        <childnode refid="208332" relation="include">
+        </childnode>
+        <childnode refid="208354" relation="include">
+        </childnode>
+        <childnode refid="208124" relation="include">
+        </childnode>
+        <childnode refid="208161" relation="include">
+        </childnode>
+        <childnode refid="208303" relation="include">
+        </childnode>
+        <childnode refid="208282" relation="include">
+        </childnode>
+      </node>
+      <node id="208236">
+        <label>boost/type_traits.hpp</label>
+      </node>
+      <node id="208147">
+        <label>memory</label>
+      </node>
+      <node id="208280">
+        <label>xAODTracking/NeutralParticleContainerFwd.h</label>
+        <link refid="d2/db4/NeutralParticleContainerFwd_8h_source"/>
+        <childnode refid="208209" relation="include">
+        </childnode>
+        <childnode refid="208248" relation="include">
+        </childnode>
+        <childnode refid="208281" relation="include">
+        </childnode>
+      </node>
+      <node id="208355">
+        <label>xAODMissingET/MissingETComponentMap.h</label>
+        <link refid="d9/d23/MissingETComponentMap_8h_source"/>
+        <childnode refid="208353" relation="include">
+        </childnode>
+        <childnode refid="208356" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208172">
+        <label>AthContainers/tools/AuxTypeVectorFactory.h</label>
+        <link refid="dc/d69/AuxTypeVectorFactory_8h"/>
+        <childnode refid="208157" relation="include">
+        </childnode>
+        <childnode refid="208158" relation="include">
+        </childnode>
+        <childnode refid="208173" relation="include">
+        </childnode>
+      </node>
+      <node id="208214">
+        <label>AthContainersInterfaces/AuxStore_traits.h</label>
+        <link refid="dd/d70/AuxStore__traits_8h"/>
+        <childnode refid="208134" relation="include">
+        </childnode>
+        <childnode refid="208150" relation="include">
+        </childnode>
+        <childnode refid="208135" relation="include">
+        </childnode>
+        <childnode refid="208169" relation="include">
+        </childnode>
+        <childnode refid="208215" relation="include">
+        </childnode>
+        <childnode refid="208216" relation="include">
+        </childnode>
+        <childnode refid="208124" relation="include">
+        </childnode>
+      </node>
+      <node id="208308">
+        <label>xAODBTagging/BTagVertexContainer.h</label>
+        <link refid="d5/da2/BTagVertexContainer_8h_source"/>
+        <childnode refid="208309" relation="include">
+        </childnode>
+        <childnode refid="208311" relation="include">
+        </childnode>
+        <childnode refid="208206" relation="include">
+        </childnode>
+      </node>
+      <node id="208371">
+        <label>MuonSelectorTools/IMuonSelectionTool.h</label>
+        <link refid="d7/d39/IMuonSelectionTool_8h_source"/>
+        <childnode refid="208327" relation="include">
+        </childnode>
+        <childnode refid="208372" relation="include">
+        </childnode>
+        <childnode refid="208288" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="df/d0d/namespacemet">met</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>METMakerAlg.cxx</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;METMakerAlg.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;METInterface/IMETMaker.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODMissingET/MissingETContainer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODMissingET/MissingETAuxContainer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODMissingET/MissingETComposition.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODMissingET/MissingETAssociationMap.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODJet/JetContainer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODEgamma/ElectronContainer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODEgamma/PhotonContainer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODMuon/MuonContainer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODTau/TauJetContainer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;MuonSelectorTools/IMuonSelectionTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ElectronPhotonSelectorTools/IAsgElectronLikelihoodTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ElectronPhotonSelectorTools/IAsgPhotonIsEMSelector.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TauAnalysisTools/ITauSelectionTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::string;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">xAOD;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">met<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="d6/d6e/classElementLink" kindref="compound" tooltip="ElementLink implementation for ROOT usage.">ElementLink&lt;xAOD::IParticleContainer&gt;</ref><sp/>iplink_t;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/d86/classSG_1_1AuxElement_1_1ConstAccessor" kindref="compound" tooltip="Helper class to provide constant type-safe access to aux data.">SG::AuxElement::ConstAccessor&lt; std::vector&lt;iplink_t &gt;</ref><sp/>&gt;<sp/>acc_constitObjLinks(</highlight><highlight class="stringliteral">&quot;ConstitObjectLinks&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//**********************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>METMakerAlg::METMakerAlg(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ISvcLocator*<sp/>pSvcLocator<sp/>)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>::AthAlgorithm(<sp/>name,<sp/>pSvcLocator<sp/>),</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>m_muonSelTool(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>m_elecSelLHTool(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>m_photonSelIsEMTool(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>m_tauSelTool(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;Maker&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_metmaker<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;METMapName&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>m_mapname<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;METAssoc&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;METCoreName&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/>m_corename<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;MET_Core&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;METName&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_outname<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;MET_Reference&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;AllowOverwrite&quot;</highlight><highlight class="normal">,<sp/>m_overwrite<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;METSoftClName&quot;</highlight><highlight class="normal">,<sp/><sp/>m_softclname<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SoftClus&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;METSoftTrkName&quot;</highlight><highlight class="normal">,<sp/>m_softtrkname<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;PVSoftTrk&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;InputJets&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>m_jetColl<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;AntiKt4LCTopoJets&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;InputElectrons&quot;</highlight><highlight class="normal">,<sp/>m_eleColl<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Electrons&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;InputPhotons&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/>m_gammaColl<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Photons&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;InputTaus&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>m_tauColl<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;TauJets&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;InputMuons&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>m_muonColl<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Muons&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;MuonSelectionTool&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_muonSelTool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;ElectronLHSelectionTool&quot;</highlight><highlight class="normal">,<sp/><sp/>m_elecSelLHTool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;PhotonIsEMSelectionTool&quot;</highlight><highlight class="normal"><sp/>,<sp/>m_photonSelIsEMTool<sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;TauSelectionTool&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_tauSelTool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;DoTruthLeptons&quot;</highlight><highlight class="normal">,<sp/>m_doTruthLep<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//**********************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><ref refid="d0/d1c/classmet_1_1METMakerAlg_1a09a7162708482726040f608241d64361" kindref="member" tooltip="Destructor:.">METMakerAlg::~METMakerAlg</ref>()<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//**********************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>StatusCode<sp/><ref refid="d0/d1c/classmet_1_1METMakerAlg_1aae116874259d643e61a247969383850d" kindref="member" tooltip="Athena algorithm&amp;#39;s Hooks.">METMakerAlg::initialize</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_INFO(</highlight><highlight class="stringliteral">&quot;Initializing<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;...&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_INFO(</highlight><highlight class="stringliteral">&quot;Retrieving<sp/>tools...&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>retrieve<sp/>tools</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>m_metmaker.retrieve().isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_ERROR(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>retrieve<sp/>tool:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_metmaker-&gt;name());</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>m_muonSelTool.retrieve().isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_ERROR(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>retrieve<sp/>tool:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_muonSelTool-&gt;name());</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>m_elecSelLHTool.retrieve().isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_ERROR(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>retrieve<sp/>tool:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_elecSelLHTool-&gt;name());</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>m_photonSelIsEMTool.retrieve().isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_ERROR(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>retrieve<sp/>tool:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_photonSelIsEMTool-&gt;name());</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>m_tauSelTool.retrieve().isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_ERROR(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>retrieve<sp/>tool:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_tauSelTool-&gt;name());</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//**********************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>StatusCode<sp/>METMakerAlg::finalize()<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_INFO<sp/>(</highlight><highlight class="stringliteral">&quot;Finalizing<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;...&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//**********************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>StatusCode<sp/><ref refid="d0/d1c/classmet_1_1METMakerAlg_1ae36e8c6d4bda62bfbd0e5d92c6867f92" kindref="member">METMakerAlg::execute</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_VERBOSE(</highlight><highlight class="stringliteral">&quot;Executing<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;...&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>containerExists<sp/>=<sp/>evtStore()-&gt;contains&lt;<ref refid="d0/d90/classxAOD_1_1MissingETContainer__v1" kindref="compound" tooltip="Container for xAOD::MissingET_v1 objects.">xAOD::MissingETContainer</ref>&gt;(m_outname);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_overwrite<sp/>&amp;&amp;<sp/>containerExists)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;METContainer<sp/>\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_outname<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;<sp/>is<sp/>already<sp/>present<sp/>and<sp/>AllowOverwrite=False,<sp/>exiting.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>MissingETContainer<sp/>with<sp/>its<sp/>aux<sp/>store</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/d90/classxAOD_1_1MissingETContainer__v1" kindref="compound" tooltip="Container for xAOD::MissingET_v1 objects.">MissingETContainer</ref>*<sp/>newMet<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d0/d90/classxAOD_1_1MissingETContainer__v1" kindref="compound" tooltip="Container for xAOD::MissingET_v1 objects.">MissingETContainer</ref>();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dbe/classxAOD_1_1MissingETAuxContainer__v1" kindref="compound" tooltip="Auxiliary data store for xAOD::MissingETContainer.">MissingETAuxContainer</ref>*<sp/>metAuxCont<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d9/dbe/classxAOD_1_1MissingETAuxContainer__v1" kindref="compound" tooltip="Auxiliary data store for xAOD::MissingETContainer.">MissingETAuxContainer</ref>();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_overwrite)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>evtStore()-&gt;overwrite(newMet,<sp/>m_outname,</highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight><highlight class="keyword">false</highlight><highlight class="normal">).isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>record<sp/>MissingETContainer:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_outname);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>evtStore()-&gt;overwrite(metAuxCont,<sp/>m_outname+</highlight><highlight class="stringliteral">&quot;Aux.&quot;</highlight><highlight class="normal">,</highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight><highlight class="keyword">false</highlight><highlight class="normal">).isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>record<sp/>MissingETAuxContainer:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_outname+</highlight><highlight class="stringliteral">&quot;Aux.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>evtStore()-&gt;record(newMet,<sp/>m_outname).isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>record<sp/>MissingETContainer:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_outname);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>evtStore()-&gt;record(metAuxCont,<sp/>m_outname+</highlight><highlight class="stringliteral">&quot;Aux.&quot;</highlight><highlight class="normal">).isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>record<sp/>MissingETAuxContainer:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_outname+</highlight><highlight class="stringliteral">&quot;Aux.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>newMet-&gt;setStore(metAuxCont);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d5/d3a/classxAOD_1_1MissingETAssociationMap__v1" kindref="compound">MissingETAssociationMap</ref>*<sp/>metMap<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>evtStore()-&gt;retrieve(metMap,<sp/>m_mapname).isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>retrieve<sp/>MissingETAssociationMap:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_mapname);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>metMap-&gt;resetObjSelectionFlags();</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Retrieve<sp/>containers<sp/>***********************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d0/d90/classxAOD_1_1MissingETContainer__v1" kindref="compound" tooltip="Container for xAOD::MissingET_v1 objects.">MissingETContainer</ref>*<sp/>coreMet(0);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>evtStore()-&gt;retrieve(coreMet,<sp/>m_corename).isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>retrieve<sp/>MissingETContainer:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_corename);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/d44/namespacexAOD_1a0eb9af0abb884a9bcf1d45c2326894c0" kindref="member" tooltip="Definition of the current &amp;quot;jet container version&amp;quot;.">JetContainer</ref>*<sp/>jetCont(0);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>evtStore()-&gt;retrieve(jetCont,<sp/>m_jetColl).isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>retrieve<sp/>input<sp/>jet<sp/>container:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_jetColl);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_DEBUG(</highlight><highlight class="stringliteral">&quot;Successfully<sp/>retrieved<sp/>jet<sp/>collection&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d0/d4d/classDataVector" kindref="compound" tooltip="Derived DataVector&amp;lt;T&amp;gt;.">ElectronContainer</ref>*<sp/>elCont(0);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_eleColl.empty())<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>evtStore()-&gt;retrieve(elCont,<sp/>m_eleColl).isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>retrieve<sp/>input<sp/>electron<sp/>container:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_eleColl);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_DEBUG(</highlight><highlight class="stringliteral">&quot;Successfully<sp/>retrieved<sp/>electron<sp/>collection&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d0/d4d/classDataVector" kindref="compound" tooltip="Derived DataVector&amp;lt;T&amp;gt;.">PhotonContainer</ref>*<sp/>phCont(0);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_gammaColl.empty())<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>evtStore()-&gt;retrieve(phCont,<sp/>m_gammaColl).isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>retrieve<sp/>input<sp/>photon<sp/>container:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_gammaColl);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_DEBUG(</highlight><highlight class="stringliteral">&quot;Successfully<sp/>retrieved<sp/>photon<sp/>collection&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d0/d4d/classDataVector" kindref="compound" tooltip="Derived DataVector&amp;lt;T&amp;gt;.">TauJetContainer</ref>*<sp/>tauCont(0);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_tauColl.empty())<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>evtStore()-&gt;retrieve(tauCont,<sp/>m_tauColl).isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>retrieve<sp/>input<sp/>tau<sp/>container:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_tauColl);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_DEBUG(</highlight><highlight class="stringliteral">&quot;Successfully<sp/>retrieved<sp/>tau<sp/>collection&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d0/d4d/classDataVector" kindref="compound" tooltip="Derived DataVector&amp;lt;T&amp;gt;.">MuonContainer</ref>*<sp/>muonCont(0);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_muonColl.empty())<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>evtStore()-&gt;retrieve(muonCont,<sp/>m_muonColl).isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>retrieve<sp/>input<sp/>muon<sp/>container:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_muonColl);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_DEBUG(</highlight><highlight class="stringliteral">&quot;Successfully<sp/>retrieved<sp/>muon<sp/>collection&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Select<sp/>and<sp/>flag<sp/>objects<sp/>for<sp/>final<sp/>MET<sp/>building<sp/>***************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/dd2/namespaceMissingETBase_1_1UsageHandler_1adc82230b57f6a7bcfbffe1e66c06130e" kindref="member" tooltip="Policies on usage checks.">MissingETBase::UsageHandler::Policy</ref><sp/>objScale<sp/>=<sp/><ref refid="de/dd2/namespaceMissingETBase_1_1UsageHandler_1adc82230b57f6a7bcfbffe1e66c06130eaeb1607e7362104eae3082d4a54115369" kindref="member" tooltip="Physics object based.">MissingETBase::UsageHandler::PhysicsObject</ref>;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_doTruthLep)<sp/>objScale<sp/>=<sp/><ref refid="de/dd2/namespaceMissingETBase_1_1UsageHandler_1adc82230b57f6a7bcfbffe1e66c06130ea69a3df63c334debb0ca1f2facb0e0aea" kindref="member" tooltip="Truth particle based.">MissingETBase::UsageHandler::TruthParticle</ref>;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Electrons</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_eleColl.empty())<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/db1/classConstDataVector" kindref="compound" tooltip="DataVector adapter that acts like it holds const pointers.">ConstDataVector&lt;ElectronContainer&gt;</ref><sp/>metElectrons(<ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8ad7d4cf2303700f0966e4140f236c4bf1" kindref="member" tooltip="this data object is a view, it does not own its elmts">SG::VIEW_ELEMENTS</ref>);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>el<sp/>:<sp/>*elCont)<sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(accept(el))<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>metElectrons.push_back(el);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>m_metmaker-&gt;rebuildMET(</highlight><highlight class="stringliteral">&quot;RefEle&quot;</highlight><highlight class="normal">,<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a0199381ad718edc5748453cf69eb0fed" kindref="member" tooltip="The object is an electron.">xAOD::Type::Electron</ref>,<sp/>newMet,</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>metElectrons.asDataVector(),</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>metMap,<sp/>objScale).isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>build<sp/>electron<sp/>term.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_DEBUG(</highlight><highlight class="stringliteral">&quot;Selected<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>metElectrons.size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>MET<sp/>electrons.<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>acc_constitObjLinks(*(*newMet)[</highlight><highlight class="stringliteral">&quot;RefEle&quot;</highlight><highlight class="normal">]).size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>are<sp/>non-overlapping.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Photons</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_gammaColl.empty())<sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/db1/classConstDataVector" kindref="compound" tooltip="DataVector adapter that acts like it holds const pointers.">ConstDataVector&lt;PhotonContainer&gt;</ref><sp/>metPhotons(<ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8ad7d4cf2303700f0966e4140f236c4bf1" kindref="member" tooltip="this data object is a view, it does not own its elmts">SG::VIEW_ELEMENTS</ref>);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>ph<sp/>:<sp/>*phCont)<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(accept(ph))<sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>metPhotons.push_back(ph);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>m_metmaker-&gt;rebuildMET(</highlight><highlight class="stringliteral">&quot;RefGamma&quot;</highlight><highlight class="normal">,<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434ab4340d8e5195d6c17d7f6147d8ce187f" kindref="member" tooltip="The object is a photon.">xAOD::Type::Photon</ref>,<sp/>newMet,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>metPhotons.asDataVector(),</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>metMap,<sp/>objScale).isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>build<sp/>photon<sp/>term.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_DEBUG(</highlight><highlight class="stringliteral">&quot;Selected<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>metPhotons.size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>MET<sp/>photons.<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>acc_constitObjLinks(*(*newMet)[</highlight><highlight class="stringliteral">&quot;RefGamma&quot;</highlight><highlight class="normal">]).size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>are<sp/>non-overlapping.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Taus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_tauColl.empty())<sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/db1/classConstDataVector" kindref="compound" tooltip="DataVector adapter that acts like it holds const pointers.">ConstDataVector&lt;TauJetContainer&gt;</ref><sp/>metTaus(<ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8ad7d4cf2303700f0966e4140f236c4bf1" kindref="member" tooltip="this data object is a view, it does not own its elmts">SG::VIEW_ELEMENTS</ref>);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>tau<sp/>:<sp/>*tauCont)<sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(accept(tau))<sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>metTaus.push_back(tau);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>m_metmaker-&gt;rebuildMET(</highlight><highlight class="stringliteral">&quot;RefTau&quot;</highlight><highlight class="normal">,<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a0f85bdf366b6aa1f3c1308c12ddc5613" kindref="member" tooltip="The object is a tau (jet).">xAOD::Type::Tau</ref>,<sp/>newMet,</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>metTaus.asDataVector(),</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>metMap,<sp/>objScale).isFailure()<sp/>){</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>build<sp/>tau<sp/>term.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_DEBUG(</highlight><highlight class="stringliteral">&quot;Selected<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>metTaus.size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>MET<sp/>taus.<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>acc_constitObjLinks(*(*newMet)[</highlight><highlight class="stringliteral">&quot;RefTau&quot;</highlight><highlight class="normal">]).size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>are<sp/>non-overlapping.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Muons</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_muonColl.empty())<sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/db1/classConstDataVector" kindref="compound" tooltip="DataVector adapter that acts like it holds const pointers.">ConstDataVector&lt;MuonContainer&gt;</ref><sp/>metMuons(<ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8ad7d4cf2303700f0966e4140f236c4bf1" kindref="member" tooltip="this data object is a view, it does not own its elmts">SG::VIEW_ELEMENTS</ref>);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>mu<sp/>:<sp/>*muonCont)<sp/>{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(accept(mu))<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>metMuons.push_back(mu);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_doTruthLep)<sp/>objScale<sp/>=<sp/><ref refid="de/dd2/namespaceMissingETBase_1_1UsageHandler_1adc82230b57f6a7bcfbffe1e66c06130ea54f9180e3289c67d6c196acbd530b23d" kindref="member" tooltip="Track based only.">MissingETBase::UsageHandler::OnlyTrack</ref>;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>m_metmaker-&gt;rebuildMET(</highlight><highlight class="stringliteral">&quot;Muons&quot;</highlight><highlight class="normal">,<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434af612e5722903badfe4fd0fd721fc4b13" kindref="member" tooltip="The object is a muon.">xAOD::Type::Muon</ref>,<sp/>newMet,</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>metMuons.asDataVector(),</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>metMap,<sp/>objScale).isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>build<sp/>muon<sp/>term.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_DEBUG(</highlight><highlight class="stringliteral">&quot;Selected<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>metMuons.size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>MET<sp/>muons.<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>acc_constitObjLinks(*(*newMet)[</highlight><highlight class="stringliteral">&quot;Muons&quot;</highlight><highlight class="normal">]).size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>are<sp/>non-overlapping.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>m_metmaker-&gt;rebuildJetMET(</highlight><highlight class="stringliteral">&quot;RefJet&quot;</highlight><highlight class="normal">,<sp/>m_softclname,<sp/>m_softtrkname,<sp/>newMet,</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jetCont,<sp/>coreMet,<sp/>metMap,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>).isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>build<sp/>jet<sp/>and<sp/>soft<sp/>terms.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_DEBUG(</highlight><highlight class="stringliteral">&quot;Of<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>jetCont-&gt;<ref refid="d0/d4d/classDataVector_1aa4d259c267222003a6d2592fbe9809af" kindref="member" tooltip="Returns the number of elements in the collection.">size</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>jets,<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>acc_constitObjLinks(*(*newMet)[</highlight><highlight class="stringliteral">&quot;RefJet&quot;</highlight><highlight class="normal">]).size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>are<sp/>non-overlapping,<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>acc_constitObjLinks(*(*newMet)[m_softtrkname]).size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>are<sp/>soft&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1afbe8719ef44dd43f994a3d5ea2823903" kindref="member" tooltip="Type for status word bit mask.">MissingETBase::Types::bitmask_t</ref><sp/>trksource<sp/>=<sp/><ref refid="d3/dee/structMissingETBase_1_1Source_1aa3795ae1de46033132693d8a09ec7635a64d663e60c72fc2e88ce83d5efd7dcb8" kindref="member" tooltip="Indicator for MET contribution from reconstructed charged particle tracks.">MissingETBase::Source::Track</ref>;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((*newMet)[m_softtrkname])<sp/>trksource<sp/>=<sp/>(*newMet)[m_softtrkname]-&gt;source();</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>m_metmaker-&gt;buildMETSum(</highlight><highlight class="stringliteral">&quot;FinalTrk&quot;</highlight><highlight class="normal">,<sp/>newMet,<sp/>trksource).isFailure()<sp/>){</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Building<sp/>MET<sp/>FinalTrk<sp/>sum<sp/>failed.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1afbe8719ef44dd43f994a3d5ea2823903" kindref="member" tooltip="Type for status word bit mask.">MissingETBase::Types::bitmask_t</ref><sp/>clsource<sp/>=<sp/><ref refid="d3/dee/structMissingETBase_1_1Source_1aa3795ae1de46033132693d8a09ec7635aa77bb817a164fef360ab433b5633ccca" kindref="member" tooltip="Indicator for MET contribution from TopoClusters with LCW calibration applied.">MissingETBase::Source::LCTopo</ref>;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((*newMet)[m_softclname])<sp/>clsource<sp/>=<sp/>(*newMet)[m_softclname]-&gt;source();</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>m_metmaker-&gt;buildMETSum(</highlight><highlight class="stringliteral">&quot;FinalClus&quot;</highlight><highlight class="normal">,<sp/>newMet,<sp/>clsource).isFailure()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_WARNING(</highlight><highlight class="stringliteral">&quot;Building<sp/>MET<sp/>FinalClus<sp/>sum<sp/>failed.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//**********************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>METMakerAlg::accept(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d2/d30/classxAOD_1_1Muon__v1" kindref="compound">xAOD::Muon</ref>*<sp/>mu)</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>mu-&gt;<ref refid="d2/d30/classxAOD_1_1Muon__v1_1a3238b87f70c5f7bb9aefdd0acf888c4a" kindref="member" tooltip="The transverse momentum () of the particle.">pt</ref>()&lt;2.5e3<sp/>||<sp/>mu-&gt;<ref refid="d2/d30/classxAOD_1_1Muon__v1_1a3238b87f70c5f7bb9aefdd0acf888c4a" kindref="member" tooltip="The transverse momentum () of the particle.">pt</ref>()/cosh(mu-&gt;<ref refid="d2/d30/classxAOD_1_1Muon__v1_1a9e1ec26e1cfde09690d8305e80877157" kindref="member" tooltip="The pseudorapidity () of the particle.">eta</ref>())&lt;4e3<sp/>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_muonSelTool-&gt;accept(*mu);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>METMakerAlg::accept(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/da6/classxAOD_1_1Electron" kindref="compound" tooltip="Class describing an electron.">xAOD::Electron</ref>*<sp/>el)</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>fabs(el-&gt;eta())&gt;2.47<sp/>||<sp/>el-&gt;pt()&lt;10e3<sp/>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_elecSelLHTool-&gt;accept(*el);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>METMakerAlg::accept(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dc/d42/classxAOD_1_1Photon" kindref="compound" tooltip="Class describing an photon.">xAOD::Photon</ref>*<sp/>ph)</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>!(ph-&gt;author()&amp;20)<sp/>||<sp/>fabs(ph-&gt;eta())&gt;2.47<sp/>||<sp/>ph-&gt;pt()&lt;10e3<sp/>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_photonSelIsEMTool-&gt;accept(ph);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>METMakerAlg::accept(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d5/d20/classxAOD_1_1TauJet__v2" kindref="compound">xAOD::TauJet</ref>*<sp/>tau)</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_tauSelTool-&gt;accept(<sp/>*tau<sp/>);<sp/>}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/src/METMakerAlg.cxx"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,668 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="de/ddb/classEL_1_1Algorithm" kind="class" prot="public">
+    <compoundname>EL::Algorithm</compoundname>
+    <derivedcompoundref refid="d9/dc4/classEL_1_1AlgSelect" prot="public" virt="non-virtual">EL::AlgSelect</derivedcompoundref>
+    <derivedcompoundref refid="dd/df8/classEL_1_1DuplicateChecker" prot="public" virt="non-virtual">EL::DuplicateChecker</derivedcompoundref>
+    <derivedcompoundref refid="d6/d45/classEL_1_1MetricsSvc" prot="public" virt="non-virtual">EL::MetricsSvc</derivedcompoundref>
+    <derivedcompoundref refid="d5/d4e/classEL_1_1NTupleSvc" prot="public" virt="non-virtual">EL::NTupleSvc</derivedcompoundref>
+    <derivedcompoundref refid="da/df9/classEL_1_1UnitTestAlg" prot="public" virt="non-virtual">EL::UnitTestAlg</derivedcompoundref>
+    <derivedcompoundref refid="d5/da0/classEL_1_1UnitTestAlg1" prot="public" virt="non-virtual">EL::UnitTestAlg1</derivedcompoundref>
+    <derivedcompoundref refid="d8/df0/classEL_1_1UnitTestSkim" prot="public" virt="non-virtual">EL::UnitTestSkim</derivedcompoundref>
+    <derivedcompoundref refid="dc/da6/classEL_1_1VomsProxySvc" prot="public" virt="non-virtual">EL::VomsProxySvc</derivedcompoundref>
+    <derivedcompoundref refid="d5/dda/classEL_1_1WhiteBoardSvc" prot="public" virt="non-virtual">EL::WhiteBoardSvc</derivedcompoundref>
+    <derivedcompoundref refid="d1/d55/classMD_1_1AlgCFlow" prot="public" virt="non-virtual">MD::AlgCFlow</derivedcompoundref>
+    <derivedcompoundref refid="d3/d12/classMD_1_1AlgHist" prot="public" virt="non-virtual">MD::AlgHist</derivedcompoundref>
+    <derivedcompoundref refid="d3/dae/classMD_1_1FormulaSvc" prot="public" virt="non-virtual">MD::FormulaSvc</derivedcompoundref>
+    <derivedcompoundref refid="d1/d66/classxExample" prot="public" virt="non-virtual">xExample</derivedcompoundref>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1a468b0314089506f2c36445cfc84f673b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>MsgStream &amp;</type>
+        <definition>MsgStream&amp; EL::Algorithm::msg</definition>
+        <argsstring>() const </argsstring>
+        <name>msg</name>
+        <briefdescription>
+<para>messaging interface </para>        </briefdescription>
+        <detaileddescription>
+<para>this is the interface to work with the standard messaging macros from AsgTools. Instead of enums I pass ints, so that I can avoid the include dependency (forward declarations are only allowed for enum classes AFAIK). the standard message stream for this object <simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>code not compiled with AsgTools support </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1a6d3345f2effc1ea5b8add736df764ca7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>MsgStream &amp;</type>
+        <definition>MsgStream&amp; EL::Algorithm::msg</definition>
+        <argsstring>(int level) const </argsstring>
+        <name>msg</name>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+<para>the message stream for this object, configured for the given level </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>code not compiled with AsgTools support </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1ad89c787f00a88c7b51a23a4a397f5c05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EL::Algorithm::msgLvl</definition>
+        <argsstring>(int lvl) const </argsstring>
+        <name>msgLvl</name>
+        <param>
+          <type>int</type>
+          <declname>lvl</declname>
+        </param>
+        <briefdescription>
+<para>whether we are configured to print messages at the given level </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1a767c1725616f14d347b79002d755bf55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Algorithm::setMsgLevel</definition>
+        <argsstring>(int level)</argsstring>
+        <name>setMsgLevel</name>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+<para>set the message level for the message stream for this object </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="121"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="de/ddb/classEL_1_1Algorithm_1a965d805cf4fa6e7ef721cfad15d99bcd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Job</definition>
+        <argsstring></argsstring>
+        <name>Job</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="249" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="de/ddb/classEL_1_1Algorithm_1a9de4a9533dff2ecc0919852d4c05a67b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Worker</definition>
+        <argsstring></argsstring>
+        <name>Worker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>rationale: the worker is essentially controlling the algorithm. this allows it to do it without having to duplicate most of the interface. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="274" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="de/ddb/classEL_1_1Algorithm_1a2ccf831bef066d85a3c1498339041be0" prot="private" static="no" mutable="no">
+        <type><ref refid="da/d12/classEL_1_1Worker" kindref="compound">Worker</ref> *</type>
+        <definition>Worker* EL::Algorithm::m_wk</definition>
+        <argsstring></argsstring>
+        <name>m_wk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="278" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/ddb/classEL_1_1Algorithm_1a641cdb6377b556450d0c1ed461347667" prot="private" static="no" mutable="yes">
+        <type>MsgStream *</type>
+        <definition>MsgStream* EL::Algorithm::m_msg</definition>
+        <argsstring></argsstring>
+        <name>m_msg</name>
+        <initializer> nullptr</initializer>
+        <briefdescription>
+<para>the message stream, if it has been instantiated </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="282" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/ddb/classEL_1_1Algorithm_1ab378f8bf0b494bae7db9afc1799e86bb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EL::Algorithm::m_msgLevel</definition>
+        <argsstring></argsstring>
+        <name>m_msgLevel</name>
+        <initializer> 3</initializer>
+        <briefdescription>
+<para>the message level configured </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="286" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1afa8999f46656a42d53df3731216f1296" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Algorithm::testInvariant</definition>
+        <argsstring>() const </argsstring>
+        <name>testInvariant</name>
+        <reimplementedby refid="d3/dae/classMD_1_1FormulaSvc_1aa66461bb4b0b8822bd7a15b81fdc0c75">testInvariant</reimplementedby>
+        <reimplementedby refid="d3/d12/classMD_1_1AlgHist_1aaa7989ac17d300cd56cbd75ba2caac5b">testInvariant</reimplementedby>
+        <reimplementedby refid="d1/d55/classMD_1_1AlgCFlow_1a3afc516c5659ee1f3f042bc17928eebb">testInvariant</reimplementedby>
+        <reimplementedby refid="d5/dda/classEL_1_1WhiteBoardSvc_1a8aefa8b9a59f230f243338348fa44ec4">testInvariant</reimplementedby>
+        <reimplementedby refid="d8/df0/classEL_1_1UnitTestSkim_1a6ff13a7b7b4cf1303070d8a59b29da36">testInvariant</reimplementedby>
+        <reimplementedby refid="d5/d4e/classEL_1_1NTupleSvc_1a4105c696c3585c13f3f9d8a28fca5e3d">testInvariant</reimplementedby>
+        <reimplementedby refid="dd/df8/classEL_1_1DuplicateChecker_1a9d8a4e8d5521738127eceef6ce04656f">testInvariant</reimplementedby>
+        <reimplementedby refid="d9/dc4/classEL_1_1AlgSelect_1a5be92b13ba072946324c4ecca1ef8a6d">testInvariant</reimplementedby>
+        <reimplementedby refid="dc/da6/classEL_1_1VomsProxySvc_1af94118813a34353c228aab330f973a09">testInvariant</reimplementedby>
+        <reimplementedby refid="d5/da0/classEL_1_1UnitTestAlg1_1a7d0d93e5150738b4d2694ad118a56b4c">testInvariant</reimplementedby>
+        <reimplementedby refid="da/df9/classEL_1_1UnitTestAlg_1a2001edfb43a8e91a584ce80e8ccd6e6b">testInvariant</reimplementedby>
+        <reimplementedby refid="d6/d45/classEL_1_1MetricsSvc_1aaedd9f5e2d3e7dbccdd33ad342dc2197">testInvariant</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: test the invariant of this object guarantee: no-fail </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1abb182dee6741786ce59ddbd8a8fc4cc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EL::Algorithm::Algorithm</definition>
+        <argsstring>()</argsstring>
+        <name>Algorithm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: standard default constructor guarantee: strong failures: low level errors I </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1a6d787a867dbe55af8241032c7b4aabf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EL::Algorithm::~Algorithm</definition>
+        <argsstring>()</argsstring>
+        <name>~Algorithm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: standard destructor guarantee: no-fail </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1a36e05186cb50cc0e5929121d3f6b6053" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="da/d12/classEL_1_1Worker" kindref="compound">Worker</ref> *</type>
+        <definition>Worker* EL::Algorithm::wk</definition>
+        <argsstring>() const </argsstring>
+        <name>wk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>description: the worker that is controlling us guarantee: no-fail </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1a9e2072bd4fdda18ebc86f847b691d9b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Algorithm::book</definition>
+        <argsstring>(const TH1 &amp;hist)</argsstring>
+        <name>book</name>
+        <param>
+          <type>const TH1 &amp;</type>
+          <declname>hist</declname>
+        </param>
+        <briefdescription>
+<para>book the given histogram </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>histogram booking error </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1a03872c24f8a637ba069b61d847ad557e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TH1 *</type>
+        <definition>TH1* EL::Algorithm::hist</definition>
+        <argsstring>(const std::string &amp;name) const </argsstring>
+        <name>hist</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>get the histogram with the given name </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>histogram not found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="76"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1a6bea54e06f41f386407aad066f051f59" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">StatusCode</ref></type>
+        <definition>virtual StatusCode EL::Algorithm::setupJob</definition>
+        <argsstring>(Job &amp;job)</argsstring>
+        <name>setupJob</name>
+        <reimplementedby refid="d3/d12/classMD_1_1AlgHist_1af88e8a8ec9638c76051f32ffce0d6bbf">setupJob</reimplementedby>
+        <reimplementedby refid="d1/d55/classMD_1_1AlgCFlow_1aaf689208c0af9e367d3d227a25d69336">setupJob</reimplementedby>
+        <reimplementedby refid="d5/d4e/classEL_1_1NTupleSvc_1a51b14da474bd793eab14396cf401c1d9">setupJob</reimplementedby>
+        <reimplementedby refid="dd/df8/classEL_1_1DuplicateChecker_1ad2821c6969b579bb05c07739f4d2a408">setupJob</reimplementedby>
+        <reimplementedby refid="d9/dc4/classEL_1_1AlgSelect_1a3c9dd507b27029e7cde76c3f4a938ae2">setupJob</reimplementedby>
+        <reimplementedby refid="dc/da6/classEL_1_1VomsProxySvc_1aebd7ade119d99369577493a2977a0604">setupJob</reimplementedby>
+        <reimplementedby refid="d5/da0/classEL_1_1UnitTestAlg1_1abd1e808b6023d62ea932d1d50918833e">setupJob</reimplementedby>
+        <reimplementedby refid="da/df9/classEL_1_1UnitTestAlg_1a11259f5374a772cd6d24555446cce1ac">setupJob</reimplementedby>
+        <reimplementedby refid="d1/d66/classxExample_1af58a0865416fc417499cd1710d49ce08">setupJob</reimplementedby>
+        <param>
+          <type><ref refid="da/dbb/classEL_1_1Job" kindref="compound">Job</ref> &amp;</type>
+          <declname>job</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: give the algorithm a chance to intialize the job with anything this algorithm needs. this method is automatically called before the algorithm is actually added to the job. guarantee: basic failures: algorithm dependent rationale: this is currently used to give algorithms a chance to register their output datasets, but can also be used for other stuff. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="140"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1af77e160b0f307f1b53c2678542b18492" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">StatusCode</ref></type>
+        <definition>virtual StatusCode EL::Algorithm::fileExecute</definition>
+        <argsstring>()</argsstring>
+        <name>fileExecute</name>
+        <reimplementedby refid="d5/da0/classEL_1_1UnitTestAlg1_1adc3626422fc10aee7a4e5a1dff7fb5f8">fileExecute</reimplementedby>
+        <reimplementedby refid="da/df9/classEL_1_1UnitTestAlg_1ad5ffe5e6270b1b2556ef5f492ab06ce0">fileExecute</reimplementedby>
+        <reimplementedby refid="d6/d45/classEL_1_1MetricsSvc_1a3295acddf5134670276b8269bb1217c1">fileExecute</reimplementedby>
+        <reimplementedby refid="d1/d66/classxExample_1a77e418c03f4b5694541112fd52f4b23b">fileExecute</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: do all the processing that needs to be done once per file guarantee: basic failures: algorithm dependent rationale: this is to read per-file accounting data, e.g. the list of lumi-blocks processed </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="150"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1a552f75da2376fce30abdd3164e743e57" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">StatusCode</ref></type>
+        <definition>virtual StatusCode EL::Algorithm::endOfFile</definition>
+        <argsstring>()</argsstring>
+        <name>endOfFile</name>
+        <reimplementedby refid="d6/d45/classEL_1_1MetricsSvc_1a77265d85d50b73d50098ce9bae6d0945">endOfFile</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: do the post-processing for each input file guarantee: basic failures: algorithm dependent rationale: this is mainly used for specialized services that need to save partial results for each input file </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="159"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1a555bf98d9d040bd8cca3cb55473fac0a" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">StatusCode</ref></type>
+        <definition>virtual StatusCode EL::Algorithm::changeInput</definition>
+        <argsstring>(bool firstFile)</argsstring>
+        <name>changeInput</name>
+        <reimplementedby refid="d3/dae/classMD_1_1FormulaSvc_1a4e87e2c4768b04a786b825e2d2802444">changeInput</reimplementedby>
+        <reimplementedby refid="d8/df0/classEL_1_1UnitTestSkim_1aac73b4fdd4e55c072f2964b02910b167">changeInput</reimplementedby>
+        <reimplementedby refid="d5/d4e/classEL_1_1NTupleSvc_1aa416c761aa108a43559651d5a85ef027">changeInput</reimplementedby>
+        <reimplementedby refid="dd/df8/classEL_1_1DuplicateChecker_1a37f6712da01d40794e40bd063976aad1">changeInput</reimplementedby>
+        <reimplementedby refid="d5/da0/classEL_1_1UnitTestAlg1_1a264cdbdc32a4fa2bb95bdbc765f26b2e">changeInput</reimplementedby>
+        <reimplementedby refid="da/df9/classEL_1_1UnitTestAlg_1ae9cf81ff8e394e0f7145992818915809">changeInput</reimplementedby>
+        <reimplementedby refid="d1/d66/classxExample_1a34d666e0f9f39d048bdec885b1bf73d1">changeInput</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>firstFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: do all changes to work with a new input file, e.g. set new branch addresses. if firstFile is set, this method is called just before init() is called guarantee: basic failures: algorithm dependent </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="168"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1ad880ac0eae790193a28d0ec063727f5e" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">StatusCode</ref></type>
+        <definition>virtual StatusCode EL::Algorithm::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <reimplementedby refid="d3/d12/classMD_1_1AlgHist_1a630d42c5dc619ae53473477a04eb8a5e">initialize</reimplementedby>
+        <reimplementedby refid="d1/d55/classMD_1_1AlgCFlow_1ae679dcbaea79766d978e94d381ae716e">initialize</reimplementedby>
+        <reimplementedby refid="d8/df0/classEL_1_1UnitTestSkim_1ada503a6e0ee0da28ba29a820037077c2">initialize</reimplementedby>
+        <reimplementedby refid="d5/d4e/classEL_1_1NTupleSvc_1ac4173be4e75a575a8c35f93e37085f95">initialize</reimplementedby>
+        <reimplementedby refid="dd/df8/classEL_1_1DuplicateChecker_1ad72fb61fa995a8704f72fb8b5a0418cc">initialize</reimplementedby>
+        <reimplementedby refid="d9/dc4/classEL_1_1AlgSelect_1a467674eeabb4f0ec12a6c0bf04f73e0b">initialize</reimplementedby>
+        <reimplementedby refid="d5/da0/classEL_1_1UnitTestAlg1_1a1df50f98d547f09320aa6d2494ab3b74">initialize</reimplementedby>
+        <reimplementedby refid="da/df9/classEL_1_1UnitTestAlg_1a39f7d84e69a6127f3377359b1ef8e094">initialize</reimplementedby>
+        <reimplementedby refid="d1/d66/classxExample_1aff8374576d81f9872490c91c6ce4c94e">initialize</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: do everything that needs to be done before running the algorithm, e.g. create output n-tuples and histograms. this method is called only once right after changeInput(true) is called guarantee: basic failures: algorithm dependent rationale: in principle all this work could be done on changeInput(true). However, providing this method should make it easier for the user to set up all his outputs and to do so only once. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="182"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1a495fd98dfd3af930cc2563df18ff2d01" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">StatusCode</ref></type>
+        <definition>virtual StatusCode EL::Algorithm::histInitialize</definition>
+        <argsstring>()</argsstring>
+        <name>histInitialize</name>
+        <reimplementedby refid="dc/da6/classEL_1_1VomsProxySvc_1ae7131c925dc1e57ee6bbb00d43ad4f96">histInitialize</reimplementedby>
+        <reimplementedby refid="d5/da0/classEL_1_1UnitTestAlg1_1acbc4b19357759b21d04e831d441f73b4">histInitialize</reimplementedby>
+        <reimplementedby refid="da/df9/classEL_1_1UnitTestAlg_1a2898aecf8f4fafed299ec1d5327b7ecc">histInitialize</reimplementedby>
+        <reimplementedby refid="d6/d45/classEL_1_1MetricsSvc_1a9b92fc045ec3b0c17a4ed588c560a188">histInitialize</reimplementedby>
+        <reimplementedby refid="d1/d66/classxExample_1ad2beb5c900a7ee2437ddbddc41294bd7">histInitialize</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: this is a pre-initialization routine that is called before changeInput is called. guarantee: basic failures: algorithm dependent rationale: unlike initialize(), this method is called all the time, even on empty input files. so you should create any histograms or n-tuples here that subsequent code expects </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="193"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1a2ca11106132eab43a10bba3be427ead8" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">StatusCode</ref></type>
+        <definition>virtual StatusCode EL::Algorithm::execute</definition>
+        <argsstring>()</argsstring>
+        <name>execute</name>
+        <reimplementedby refid="d3/dae/classMD_1_1FormulaSvc_1abc41713a8237a446d6d709849c3f83f0">execute</reimplementedby>
+        <reimplementedby refid="d3/d12/classMD_1_1AlgHist_1a6029d7fd17ceeb118239de28b9313079">execute</reimplementedby>
+        <reimplementedby refid="d1/d55/classMD_1_1AlgCFlow_1a53170ff884f5463def21f415d681cbb1">execute</reimplementedby>
+        <reimplementedby refid="d8/df0/classEL_1_1UnitTestSkim_1a03602b02299d46ade71313ed39799965">execute</reimplementedby>
+        <reimplementedby refid="d5/d4e/classEL_1_1NTupleSvc_1ab362206e94bb5a76105cafeb3f7d7ccc">execute</reimplementedby>
+        <reimplementedby refid="dd/df8/classEL_1_1DuplicateChecker_1ae3f9c676dabe79ddf2878af51836f21e">execute</reimplementedby>
+        <reimplementedby refid="d9/dc4/classEL_1_1AlgSelect_1ab8f634ee57bc8b63c536bb98e16d4da1">execute</reimplementedby>
+        <reimplementedby refid="d5/da0/classEL_1_1UnitTestAlg1_1a84a1f1385bb933e2c17cc1b82d0dda94">execute</reimplementedby>
+        <reimplementedby refid="da/df9/classEL_1_1UnitTestAlg_1a5822a40a79fb4a9c827ca7c801821a28">execute</reimplementedby>
+        <reimplementedby refid="d6/d45/classEL_1_1MetricsSvc_1a5e798e2cf766ffc3fe4ec75da31da18a">execute</reimplementedby>
+        <reimplementedby refid="d1/d66/classxExample_1a3b1d1bcec52ba29b46471b0878f52bf6">execute</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: process the next event guarantee: basic failures: algorithm dependent </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="200"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1a18c2689dec03b5b3159bec4236dbcd16" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">StatusCode</ref></type>
+        <definition>virtual StatusCode EL::Algorithm::postExecute</definition>
+        <argsstring>()</argsstring>
+        <name>postExecute</name>
+        <reimplementedby refid="d5/d4e/classEL_1_1NTupleSvc_1aab27977d8e43a4a751564441d5765daf">postExecute</reimplementedby>
+        <reimplementedby refid="d1/d66/classxExample_1afe9ddc58d85d17cd9c4032e058e90719">postExecute</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: do the post-processing for the event guarantee: basic failures: algorithm dependent rationale: this is mainly used for specialized services that need to get input from subsequent algorithms before filling their event data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="210"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1a322365f8d90dcfc9fd1acf2f57c35b49" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">StatusCode</ref></type>
+        <definition>virtual StatusCode EL::Algorithm::finalize</definition>
+        <argsstring>()</argsstring>
+        <name>finalize</name>
+        <reimplementedby refid="d5/da0/classEL_1_1UnitTestAlg1_1a7d84babd03aec9f5cd275199ddaf1c04">finalize</reimplementedby>
+        <reimplementedby refid="da/df9/classEL_1_1UnitTestAlg_1a335f3759f08501aa55b0c172e3b1256e">finalize</reimplementedby>
+        <reimplementedby refid="d1/d66/classxExample_1aae27d4891a11f9c4aca1fa7679cd5693">finalize</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: do everything that needs to be done after completing work on this worker guarantee: basic failures: algorithm dependent rationale: currently there is no use foreseen, but this routine is provided regardless </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="220"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1ab8844066931062378f343c956369b1ec" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">StatusCode</ref></type>
+        <definition>virtual StatusCode EL::Algorithm::histFinalize</definition>
+        <argsstring>()</argsstring>
+        <name>histFinalize</name>
+        <reimplementedby refid="d5/da0/classEL_1_1UnitTestAlg1_1a9024e2abf5647834eef2a752a0d515d9">histFinalize</reimplementedby>
+        <reimplementedby refid="da/df9/classEL_1_1UnitTestAlg_1ab22ae1f6812c9055bf7e331de5e115f0">histFinalize</reimplementedby>
+        <reimplementedby refid="d6/d45/classEL_1_1MetricsSvc_1a45db64ea0334b886bddb41e70722fcd7">histFinalize</reimplementedby>
+        <reimplementedby refid="d1/d66/classxExample_1a5d39323f9ecd624b706a2f460879ed63">histFinalize</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: this is a post-initialization routine that is called after finalize has been called. guarantee: basic failures: algorithm dependent rationale: unlike finalize(), this method is called all the time, even on empty input files. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="230"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1a3c694ed2de08251908f20b67ce9b1201" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool EL::Algorithm::hasName</definition>
+        <argsstring>(const std::string &amp;name) const </argsstring>
+        <name>hasName</name>
+        <reimplementedby refid="d5/d4e/classEL_1_1NTupleSvc_1af87ec81eedffa10b6017377d177f21c3">hasName</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>returns: whether this algorithm has the given name guarantee: basic failures: algorithm dependent rationale: this is to allow an algorithm to be known by multiple names. this is needed for <ref refid="d5/d4e/classEL_1_1NTupleSvc" kindref="compound">NTupleSvc</ref>, so that it can be located with and without the output tree name. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="240"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1a0a2caf7dba4757e7fd1ce6a5ee6c2f9e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::Algorithm::sysSetupJob</definition>
+        <argsstring>(Job &amp;job)</argsstring>
+        <name>sysSetupJob</name>
+        <param>
+          <type><ref refid="da/dbb/classEL_1_1Job" kindref="compound">Job</ref> &amp;</type>
+          <declname>job</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: give the algorithm a chance to intialize the job with anything this algorithm needs. this method is automatically called before the algorithm is actually added to the job. guarantee: basic failures: algorithm dependent rationale: this is currently used to give algorithms a chance to register their output datasets, but can also be used for other stuff. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="263"/>
+      </memberdef>
+      <memberdef kind="function" id="de/ddb/classEL_1_1Algorithm_1aaaf7e4b47c721a094449edc60a2ffe88" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EL::Algorithm::ClassDef</definition>
+        <argsstring>(Algorithm, 1)</argsstring>
+        <name>ClassDef</name>
+        <reimplementedby refid="d3/dae/classMD_1_1FormulaSvc_1adfa84927536d5982cdffad7793406be0">ClassDef</reimplementedby>
+        <reimplementedby refid="d3/d12/classMD_1_1AlgHist_1a74091decf533cfdf8cf35c68054aa4b3">ClassDef</reimplementedby>
+        <reimplementedby refid="d1/d55/classMD_1_1AlgCFlow_1a5cd3a20977adea0769f217a443ff8e96">ClassDef</reimplementedby>
+        <reimplementedby refid="d5/dda/classEL_1_1WhiteBoardSvc_1a45f21cc2c749d15f1191a8249998fd10">ClassDef</reimplementedby>
+        <reimplementedby refid="d8/df0/classEL_1_1UnitTestSkim_1ac3e98067540129397fc28a56f2a371ef">ClassDef</reimplementedby>
+        <reimplementedby refid="d5/d4e/classEL_1_1NTupleSvc_1a2a7f1eb153bd4e9570b7d9bf14a25991">ClassDef</reimplementedby>
+        <reimplementedby refid="dd/df8/classEL_1_1DuplicateChecker_1aae2b12bf60fb423566b55eecb976d59b">ClassDef</reimplementedby>
+        <reimplementedby refid="d9/dc4/classEL_1_1AlgSelect_1a1e1af2fbb34a65d003f9587478a7f949">ClassDef</reimplementedby>
+        <reimplementedby refid="dc/da6/classEL_1_1VomsProxySvc_1ac3846c4bbab4ad724af37b9a514ce4c1">ClassDef</reimplementedby>
+        <reimplementedby refid="d5/da0/classEL_1_1UnitTestAlg1_1a4d2ea1c23a9ed02cb3bf8596d8004947">ClassDef</reimplementedby>
+        <reimplementedby refid="da/df9/classEL_1_1UnitTestAlg_1ab744be1a05cbde3bb3f149f2f8fcc3c9">ClassDef</reimplementedby>
+        <reimplementedby refid="d6/d45/classEL_1_1MetricsSvc_1a06918c9cbf367d41d076c4d7c697c81b">ClassDef</reimplementedby>
+        <reimplementedby refid="d1/d66/classxExample_1a9a4eb5c0d62e3090d0324e7b2c672cbb">ClassDef</reimplementedby>
+        <param>
+          <type><ref refid="de/ddb/classEL_1_1Algorithm" kindref="compound">Algorithm</ref></type>
+        </param>
+        <param>
+          <type>1</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="288"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="364">
+        <label>EL::Algorithm</label>
+        <link refid="de/ddb/classEL_1_1Algorithm"/>
+      </node>
+      <node id="373">
+        <label>EL::WhiteBoardSvc</label>
+        <link refid="d5/dda/classEL_1_1WhiteBoardSvc"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="365">
+        <label>EL::AlgSelect</label>
+        <link refid="d9/dc4/classEL_1_1AlgSelect"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="377">
+        <label>xExample</label>
+        <link refid="d1/d66/classxExample"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="367">
+        <label>EL::MetricsSvc</label>
+        <link refid="d6/d45/classEL_1_1MetricsSvc"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="375">
+        <label>MD::AlgHist</label>
+        <link refid="d3/d12/classMD_1_1AlgHist"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="366">
+        <label>EL::DuplicateChecker</label>
+        <link refid="dd/df8/classEL_1_1DuplicateChecker"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="371">
+        <label>EL::UnitTestSkim</label>
+        <link refid="d8/df0/classEL_1_1UnitTestSkim"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="376">
+        <label>MD::FormulaSvc</label>
+        <link refid="d3/dae/classMD_1_1FormulaSvc"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="370">
+        <label>EL::UnitTestAlg1</label>
+        <link refid="d5/da0/classEL_1_1UnitTestAlg1"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="369">
+        <label>EL::UnitTestAlg</label>
+        <link refid="da/df9/classEL_1_1UnitTestAlg"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="374">
+        <label>MD::AlgCFlow</label>
+        <link refid="d1/d55/classMD_1_1AlgCFlow"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="372">
+        <label>EL::VomsProxySvc</label>
+        <link refid="dc/da6/classEL_1_1VomsProxySvc"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="368">
+        <label>EL::NTupleSvc</label>
+        <link refid="d5/d4e/classEL_1_1NTupleSvc"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="378">
+        <label>EL::Algorithm</label>
+        <link refid="de/ddb/classEL_1_1Algorithm"/>
+        <childnode refid="379" relation="usage">
+          <edgelabel>m_wk</edgelabel>
+        </childnode>
+      </node>
+      <node id="379">
+        <label>EL::Worker</label>
+        <link refid="da/d12/classEL_1_1Worker"/>
+        <childnode refid="380" relation="usage">
+          <edgelabel>m_metaData</edgelabel>
+        </childnode>
+      </node>
+      <node id="380">
+        <label>SH::MetaObject</label>
+        <link refid="db/d3a/classSH_1_1MetaObject"/>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" line="31" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoop/EventLoop/Algorithm.h" bodystart="30" bodyend="289"/>
+    <listofallmembers>
+      <member refid="de/ddb/classEL_1_1Algorithm_1abb182dee6741786ce59ddbd8a8fc4cc0" prot="public" virt="non-virtual"><scope>EL::Algorithm</scope><name>Algorithm</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a9e2072bd4fdda18ebc86f847b691d9b9" prot="public" virt="non-virtual"><scope>EL::Algorithm</scope><name>book</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a555bf98d9d040bd8cca3cb55473fac0a" prot="private" virt="virtual"><scope>EL::Algorithm</scope><name>changeInput</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1aaaf7e4b47c721a094449edc60a2ffe88" prot="private" virt="non-virtual"><scope>EL::Algorithm</scope><name>ClassDef</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a552f75da2376fce30abdd3164e743e57" prot="private" virt="virtual"><scope>EL::Algorithm</scope><name>endOfFile</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a2ca11106132eab43a10bba3be427ead8" prot="private" virt="virtual"><scope>EL::Algorithm</scope><name>execute</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1af77e160b0f307f1b53c2678542b18492" prot="private" virt="virtual"><scope>EL::Algorithm</scope><name>fileExecute</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a322365f8d90dcfc9fd1acf2f57c35b49" prot="private" virt="virtual"><scope>EL::Algorithm</scope><name>finalize</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a3c694ed2de08251908f20b67ce9b1201" prot="private" virt="virtual"><scope>EL::Algorithm</scope><name>hasName</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a03872c24f8a637ba069b61d847ad557e" prot="public" virt="non-virtual"><scope>EL::Algorithm</scope><name>hist</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1ab8844066931062378f343c956369b1ec" prot="private" virt="virtual"><scope>EL::Algorithm</scope><name>histFinalize</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a495fd98dfd3af930cc2563df18ff2d01" prot="private" virt="virtual"><scope>EL::Algorithm</scope><name>histInitialize</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1ad880ac0eae790193a28d0ec063727f5e" prot="private" virt="virtual"><scope>EL::Algorithm</scope><name>initialize</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a965d805cf4fa6e7ef721cfad15d99bcd" prot="private" virt="non-virtual"><scope>EL::Algorithm</scope><name>Job</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a641cdb6377b556450d0c1ed461347667" prot="private" virt="non-virtual"><scope>EL::Algorithm</scope><name>m_msg</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1ab378f8bf0b494bae7db9afc1799e86bb" prot="private" virt="non-virtual"><scope>EL::Algorithm</scope><name>m_msgLevel</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a2ccf831bef066d85a3c1498339041be0" prot="private" virt="non-virtual"><scope>EL::Algorithm</scope><name>m_wk</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a468b0314089506f2c36445cfc84f673b" prot="public" virt="non-virtual"><scope>EL::Algorithm</scope><name>msg</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a6d3345f2effc1ea5b8add736df764ca7" prot="public" virt="non-virtual"><scope>EL::Algorithm</scope><name>msg</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1ad89c787f00a88c7b51a23a4a397f5c05" prot="public" virt="non-virtual"><scope>EL::Algorithm</scope><name>msgLvl</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a18c2689dec03b5b3159bec4236dbcd16" prot="private" virt="virtual"><scope>EL::Algorithm</scope><name>postExecute</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a767c1725616f14d347b79002d755bf55" prot="public" virt="non-virtual"><scope>EL::Algorithm</scope><name>setMsgLevel</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a6bea54e06f41f386407aad066f051f59" prot="private" virt="virtual"><scope>EL::Algorithm</scope><name>setupJob</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a0a2caf7dba4757e7fd1ce6a5ee6c2f9e" prot="private" virt="non-virtual"><scope>EL::Algorithm</scope><name>sysSetupJob</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1afa8999f46656a42d53df3731216f1296" prot="public" virt="non-virtual"><scope>EL::Algorithm</scope><name>testInvariant</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a36e05186cb50cc0e5929121d3f6b6053" prot="public" virt="non-virtual"><scope>EL::Algorithm</scope><name>wk</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a9de4a9533dff2ecc0919852d4c05a67b" prot="private" virt="non-virtual"><scope>EL::Algorithm</scope><name>Worker</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a6d787a867dbe55af8241032c7b4aabf4" prot="public" virt="non-virtual"><scope>EL::Algorithm</scope><name>~Algorithm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

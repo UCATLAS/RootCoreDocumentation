@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d8/d97/classTrigConf_1_1HLTUtils" kind="class" prot="public">
+    <compoundname>TrigConf::HLTUtils</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d8/d97/classTrigConf_1_1HLTUtils_1af81842da8307daf333f5ade9d8b5ad08" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HLTHash</type>
+        <definition>HLTHash HLTUtils::string2hash</definition>
+        <argsstring>(const std::string &amp;, const std::string &amp;category=&quot;TE&quot;)</argsstring>
+        <name>string2hash</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>category</declname>
+          <defval>&quot;TE&quot;</defval>
+        </param>
+        <briefdescription>
+<para>hash function translating TE names into identifiers </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="25" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTUtils.cxx" bodystart="46" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d97/classTrigConf_1_1HLTUtils_1aad8c6403ed31ea7896d0876ca5148de4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const std::string HLTUtils::hash2string</definition>
+        <argsstring>(HLTHash, const std::string &amp;category=&quot;TE&quot;)</argsstring>
+        <name>hash2string</name>
+        <param>
+          <type>HLTHash</type>
+          <defname>hash</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>category</declname>
+          <defval>&quot;TE&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="26" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTUtils.cxx" bodystart="67" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d97/classTrigConf_1_1HLTUtils_1a2e96de6cab184ca43af08252d88373d8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; unsigned int &gt;</type>
+        <definition>std::vector&lt; unsigned int &gt; HLTUtils::allTEsProducedInLevel</definition>
+        <argsstring>(const std::string &amp;level, const HLTChainList &amp;chainList, const HLTSequenceList &amp;sequenceList)</argsstring>
+        <name>allTEsProducedInLevel</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d0/dfb/classTrigConf_1_1HLTChainList" kindref="compound">HLTChainList</ref> &amp;</type>
+          <declname>chainList</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d6/dbb/classTrigConf_1_1HLTSequenceList" kindref="compound">HLTSequenceList</ref> &amp;</type>
+          <declname>sequenceList</declname>
+        </param>
+        <briefdescription>
+<para>returns list of TEids which can be poduced at given level (L2 or EF) in currecnt configuration </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this method is dooing quite extensive menu inspection so it should not be executed to often ...</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>L2 or EF <ref refid="d6/db2/structTrigConf_1_1name" kindref="compound">name</ref> of trigger level </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chainsList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of configuration chains </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sequenceList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of configuration sequences </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>list of TE ids which according to the given configuration will be produced at level </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="42" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTUtils.cxx" bodystart="165" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d97/classTrigConf_1_1HLTUtils_1a3fc3f711858fa0b83a2b98ab9da21dd4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>vector&lt; string &gt; HLTUtils::explicitChainTEs</definition>
+        <argsstring>(const HLTChain &amp;ch)</argsstring>
+        <name>explicitChainTEs</name>
+        <param>
+          <type>const <ref refid="db/df4/classTrigConf_1_1HLTChain" kindref="compound">HLTChain</ref> &amp;</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+<para>returns list of TEids which are specified by Chain signatures </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="48" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTUtils.cxx" bodystart="194" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d97/classTrigConf_1_1HLTUtils_1ab1e8d9f5a0899f1743119828bad1858e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; HLTUtils::implicitChainTEs</definition>
+        <argsstring>(const HLTChain &amp;ch, const HLTSequenceList &amp;sequenceList)</argsstring>
+        <name>implicitChainTEs</name>
+        <param>
+          <type>const <ref refid="db/df4/classTrigConf_1_1HLTChain" kindref="compound">HLTChain</ref> &amp;</type>
+          <declname>ch</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d6/dbb/classTrigConf_1_1HLTSequenceList" kindref="compound">HLTSequenceList</ref> &amp;</type>
+          <declname>sequenceList</declname>
+        </param>
+        <briefdescription>
+<para>returns list of TEids which are specified by Chain signatures and which are needed by this signatures </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="55" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTUtils.cxx" bodystart="208" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d97/classTrigConf_1_1HLTUtils_1af5ea9cac19b3ab9f46dcd71fbe4e9aae" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt; std::string &gt; TrigConf::HLTUtils::inputTEs</definition>
+        <argsstring>(const std::set&lt; std::string &gt; &amp;TEs, const TrigConf::HLTSequenceList &amp;sequenceList)</argsstring>
+        <name>inputTEs</name>
+        <param>
+          <type>const std::set&lt; std::string &gt; &amp;</type>
+          <declname>TEs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d6/dbb/classTrigConf_1_1HLTSequenceList" kindref="compound">TrigConf::HLTSequenceList</ref> &amp;</type>
+          <declname>sequenceList</declname>
+        </param>
+        <briefdescription>
+<para>returns set of input TEs for given set of TEs </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="63" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTUtils.cxx" bodystart="280" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d97/classTrigConf_1_1HLTUtils_1a347856f5a8801fe27eff2abf14c633cf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt; std::string &gt; TrigConf::HLTUtils::allTEsProducedInL2Chain</definition>
+        <argsstring>(const TrigConf::HLTChain &amp;chain, const TrigConf::HLTSequenceList &amp;sequenceList)</argsstring>
+        <name>allTEsProducedInL2Chain</name>
+        <param>
+          <type>const <ref refid="db/df4/classTrigConf_1_1HLTChain" kindref="compound">TrigConf::HLTChain</ref> &amp;</type>
+          <declname>chain</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d6/dbb/classTrigConf_1_1HLTSequenceList" kindref="compound">TrigConf::HLTSequenceList</ref> &amp;</type>
+          <declname>sequenceList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="67" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTUtils.cxx" bodystart="304" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d97/classTrigConf_1_1HLTUtils_1a70749e3ed9f4bc860941c71a3b18c7af" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt; std::string &gt; TrigConf::HLTUtils::allTEsProducedInEFChain</definition>
+        <argsstring>(const TrigConf::HLTChain &amp;chain, const TrigConf::HLTSequenceList &amp;sequenceList, const std::set&lt; std::string &gt; &amp;l2tes)</argsstring>
+        <name>allTEsProducedInEFChain</name>
+        <param>
+          <type>const <ref refid="db/df4/classTrigConf_1_1HLTChain" kindref="compound">TrigConf::HLTChain</ref> &amp;</type>
+          <declname>chain</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d6/dbb/classTrigConf_1_1HLTSequenceList" kindref="compound">TrigConf::HLTSequenceList</ref> &amp;</type>
+          <declname>sequenceList</declname>
+        </param>
+        <param>
+          <type>const std::set&lt; std::string &gt; &amp;</type>
+          <declname>l2tes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="71" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTUtils.cxx" bodystart="347" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d97/classTrigConf_1_1HLTUtils_1a4aff030a9d2d991ace9b39e0d1691018" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt; std::string &gt; TrigConf::HLTUtils::allTEsProducedInL2</definition>
+        <argsstring>(const TrigConf::HLTFrame &amp;frame)</argsstring>
+        <name>allTEsProducedInL2</name>
+        <param>
+          <type>const <ref refid="d2/d5e/classTrigConf_1_1HLTFrame" kindref="compound">TrigConf::HLTFrame</ref> &amp;</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="73" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTUtils.cxx" bodystart="224" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d97/classTrigConf_1_1HLTUtils_1a46bee589bd8d1e299369b4476394445d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt; std::string &gt; TrigConf::HLTUtils::allTEsProducedInEF</definition>
+        <argsstring>(const TrigConf::HLTFrame &amp;frame, std::set&lt; std::string &gt; *l2tes=0)</argsstring>
+        <name>allTEsProducedInEF</name>
+        <param>
+          <type>const <ref refid="d2/d5e/classTrigConf_1_1HLTFrame" kindref="compound">TrigConf::HLTFrame</ref> &amp;</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type>std::set&lt; std::string &gt; *</type>
+          <declname>l2tes</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="76" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTUtils.cxx" bodystart="241" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d97/classTrigConf_1_1HLTUtils_1a0fd384a3d7af23a62ca545212e038e5f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt; std::string &gt; TrigConf::HLTUtils::allTEsProduced</definition>
+        <argsstring>(const TrigConf::HLTFrame &amp;frame)</argsstring>
+        <name>allTEsProduced</name>
+        <param>
+          <type>const <ref refid="d2/d5e/classTrigConf_1_1HLTFrame" kindref="compound">TrigConf::HLTFrame</ref> &amp;</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="78" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTUtils.cxx" bodystart="261" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d97/classTrigConf_1_1HLTUtils_1ae8255aa0ceaa524fec93fb956b3444a0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string TrigConf::HLTUtils::ChainCondenseDisplay</definition>
+        <argsstring>(const HLTChain &amp;chain, const HLTFrame &amp;frame)</argsstring>
+        <name>ChainCondenseDisplay</name>
+        <param>
+          <type>const <ref refid="db/df4/classTrigConf_1_1HLTChain" kindref="compound">HLTChain</ref> &amp;</type>
+          <declname>chain</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d5e/classTrigConf_1_1HLTFrame" kindref="compound">HLTFrame</ref> &amp;</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="81" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTUtils.cxx" bodystart="391" bodyend="456"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d97/classTrigConf_1_1HLTUtils_1ab64c1bfa3fe1ac4c8a235c0ad7e15f52" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; TrigConf::HLTUtils::splitGroups</definition>
+        <argsstring>(const std::string &amp;s)</argsstring>
+        <name>splitGroups</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="83" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTUtils.cxx" bodystart="461" bodyend="491"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d97/classTrigConf_1_1HLTUtils_1a49e205371720b466810c3f25ab3d1630" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/df5/classTrigConf_1_1HLTSequence" kindref="compound">HLTSequence</ref> *</type>
+        <definition>TrigConf::HLTSequence * TrigConf::HLTUtils::buildSequence</definition>
+        <argsstring>(const std::string &amp;desc)</argsstring>
+        <name>buildSequence</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="85" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTUtils.cxx" bodystart="494" bodyend="508"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d97/classTrigConf_1_1HLTUtils_1a95e7dde7fa0d7747fc0df5ecd25a214d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TrigConf::HLTUtils::mergeHLTChainList</definition>
+        <argsstring>(TrigConf::HLTFrame &amp;frame)</argsstring>
+        <name>mergeHLTChainList</name>
+        <param>
+          <type><ref refid="d2/d5e/classTrigConf_1_1HLTFrame" kindref="compound">TrigConf::HLTFrame</ref> &amp;</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="87" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTUtils.cxx" bodystart="512" bodyend="591"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d97/classTrigConf_1_1HLTUtils_1ac4c03762540c31140cddff3a29fa8e0d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TrigConf::HLTUtils::mergeHLTChainList2</definition>
+        <argsstring>(TrigConf::HLTFrame &amp;frame)</argsstring>
+        <name>mergeHLTChainList2</name>
+        <param>
+          <type><ref refid="d2/d5e/classTrigConf_1_1HLTFrame" kindref="compound">TrigConf::HLTFrame</ref> &amp;</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="89" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTUtils.cxx" bodystart="609" bodyend="712"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d97/classTrigConf_1_1HLTUtils_1afbe6aa6d06a1d92171a7aec78d550a67" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TrigConf::HLTUtils::mergeL2EFPrescales</definition>
+        <argsstring>(TrigConf::HLTChain *hltchain, const TrigConf::HLTPrescale &amp;l2ps, const TrigConf::HLTPrescale &amp;efps)</argsstring>
+        <name>mergeL2EFPrescales</name>
+        <param>
+          <type><ref refid="db/df4/classTrigConf_1_1HLTChain" kindref="compound">TrigConf::HLTChain</ref> *</type>
+          <declname>hltchain</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d1/df0/classTrigConf_1_1HLTPrescale" kindref="compound">TrigConf::HLTPrescale</ref> &amp;</type>
+          <declname>l2ps</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d1/df0/classTrigConf_1_1HLTPrescale" kindref="compound">TrigConf::HLTPrescale</ref> &amp;</type>
+          <declname>efps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="93" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTUtils.cxx" bodystart="597" bodyend="606"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" line="20" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/TrigConfHLTData/HLTUtils.h" bodystart="20" bodyend="95"/>
+    <listofallmembers>
+      <member refid="d8/d97/classTrigConf_1_1HLTUtils_1a0fd384a3d7af23a62ca545212e038e5f" prot="public" virt="non-virtual"><scope>TrigConf::HLTUtils</scope><name>allTEsProduced</name></member>
+      <member refid="d8/d97/classTrigConf_1_1HLTUtils_1a46bee589bd8d1e299369b4476394445d" prot="public" virt="non-virtual"><scope>TrigConf::HLTUtils</scope><name>allTEsProducedInEF</name></member>
+      <member refid="d8/d97/classTrigConf_1_1HLTUtils_1a70749e3ed9f4bc860941c71a3b18c7af" prot="public" virt="non-virtual"><scope>TrigConf::HLTUtils</scope><name>allTEsProducedInEFChain</name></member>
+      <member refid="d8/d97/classTrigConf_1_1HLTUtils_1a4aff030a9d2d991ace9b39e0d1691018" prot="public" virt="non-virtual"><scope>TrigConf::HLTUtils</scope><name>allTEsProducedInL2</name></member>
+      <member refid="d8/d97/classTrigConf_1_1HLTUtils_1a347856f5a8801fe27eff2abf14c633cf" prot="public" virt="non-virtual"><scope>TrigConf::HLTUtils</scope><name>allTEsProducedInL2Chain</name></member>
+      <member refid="d8/d97/classTrigConf_1_1HLTUtils_1a2e96de6cab184ca43af08252d88373d8" prot="public" virt="non-virtual"><scope>TrigConf::HLTUtils</scope><name>allTEsProducedInLevel</name></member>
+      <member refid="d8/d97/classTrigConf_1_1HLTUtils_1a49e205371720b466810c3f25ab3d1630" prot="public" virt="non-virtual"><scope>TrigConf::HLTUtils</scope><name>buildSequence</name></member>
+      <member refid="d8/d97/classTrigConf_1_1HLTUtils_1ae8255aa0ceaa524fec93fb956b3444a0" prot="public" virt="non-virtual"><scope>TrigConf::HLTUtils</scope><name>ChainCondenseDisplay</name></member>
+      <member refid="d8/d97/classTrigConf_1_1HLTUtils_1a3fc3f711858fa0b83a2b98ab9da21dd4" prot="public" virt="non-virtual"><scope>TrigConf::HLTUtils</scope><name>explicitChainTEs</name></member>
+      <member refid="d8/d97/classTrigConf_1_1HLTUtils_1aad8c6403ed31ea7896d0876ca5148de4" prot="public" virt="non-virtual"><scope>TrigConf::HLTUtils</scope><name>hash2string</name></member>
+      <member refid="d8/d97/classTrigConf_1_1HLTUtils_1ab1e8d9f5a0899f1743119828bad1858e" prot="public" virt="non-virtual"><scope>TrigConf::HLTUtils</scope><name>implicitChainTEs</name></member>
+      <member refid="d8/d97/classTrigConf_1_1HLTUtils_1af5ea9cac19b3ab9f46dcd71fbe4e9aae" prot="public" virt="non-virtual"><scope>TrigConf::HLTUtils</scope><name>inputTEs</name></member>
+      <member refid="d8/d97/classTrigConf_1_1HLTUtils_1a95e7dde7fa0d7747fc0df5ecd25a214d" prot="public" virt="non-virtual"><scope>TrigConf::HLTUtils</scope><name>mergeHLTChainList</name></member>
+      <member refid="d8/d97/classTrigConf_1_1HLTUtils_1ac4c03762540c31140cddff3a29fa8e0d" prot="public" virt="non-virtual"><scope>TrigConf::HLTUtils</scope><name>mergeHLTChainList2</name></member>
+      <member refid="d8/d97/classTrigConf_1_1HLTUtils_1afbe6aa6d06a1d92171a7aec78d550a67" prot="public" virt="non-virtual"><scope>TrigConf::HLTUtils</scope><name>mergeL2EFPrescales</name></member>
+      <member refid="d8/d97/classTrigConf_1_1HLTUtils_1ab64c1bfa3fe1ac4c8a235c0ad7e15f52" prot="public" virt="non-virtual"><scope>TrigConf::HLTUtils</scope><name>splitGroups</name></member>
+      <member refid="d8/d97/classTrigConf_1_1HLTUtils_1af81842da8307daf333f5ade9d8b5ad08" prot="public" virt="non-virtual"><scope>TrigConf::HLTUtils</scope><name>string2hash</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

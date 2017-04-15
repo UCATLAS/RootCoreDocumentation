@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d5/dab/UnitTestTool1A_8cxx" kind="file">
+    <compoundname>UnitTestTool1A.cxx</compoundname>
+    <includes refid="d8/d0f/UnitTestTool1A_8h" local="no">AsgExampleTools/UnitTestTool1A.h</includes>
+    <incdepgraph>
+      <node id="3588">
+        <label>AsgTools/IAsgTool.h</label>
+        <link refid="df/dd4/IAsgTool_8h_source"/>
+        <childnode refid="3589" relation="include">
+        </childnode>
+        <childnode refid="3587" relation="include">
+        </childnode>
+        <childnode refid="3590" relation="include">
+        </childnode>
+        <childnode refid="3591" relation="include">
+        </childnode>
+      </node>
+      <node id="3591">
+        <label>GaudiKernel/IAlgTool.h</label>
+      </node>
+      <node id="3592">
+        <label>AsgTools/MsgLevel.h</label>
+        <link refid="de/d80/MsgLevel_8h"/>
+        <childnode refid="3589" relation="include">
+        </childnode>
+        <childnode refid="3587" relation="include">
+        </childnode>
+        <childnode refid="3593" relation="include">
+        </childnode>
+      </node>
+      <node id="3587">
+        <label>AsgTools/AsgToolsConf.h</label>
+        <link refid="df/db7/AsgToolsConf_8h_source"/>
+      </node>
+      <node id="3589">
+        <label>string</label>
+      </node>
+      <node id="3593">
+        <label>GaudiKernel/IMessageSvc.h</label>
+      </node>
+      <node id="3585">
+        <label>AsgExampleTools/UnitTestTool1A.h</label>
+        <link refid="d8/d0f/UnitTestTool1A_8h_source"/>
+        <childnode refid="3586" relation="include">
+        </childnode>
+        <childnode refid="3595" relation="include">
+        </childnode>
+      </node>
+      <node id="3595">
+        <label>AsgExampleTools/IUnitTestTool1.h</label>
+        <link refid="d1/d21/IUnitTestTool1_8h_source"/>
+        <childnode refid="3588" relation="include">
+        </childnode>
+      </node>
+      <node id="3590">
+        <label>AsgTools/AsgToolMacros.h</label>
+        <link refid="d1/d68/AsgToolMacros_8h_source"/>
+      </node>
+      <node id="3586">
+        <label>AsgTools/AsgTool.h</label>
+        <link refid="d4/d29/AsgTool_8h_source"/>
+        <childnode refid="3587" relation="include">
+        </childnode>
+        <childnode refid="3588" relation="include">
+        </childnode>
+        <childnode refid="3592" relation="include">
+        </childnode>
+        <childnode refid="3594" relation="include">
+        </childnode>
+      </node>
+      <node id="3594">
+        <label>AsgTools/SetProperty.h</label>
+        <link refid="df/db0/SetProperty_8h_source"/>
+      </node>
+      <node id="3584">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AsgExampleTools/Root/UnitTestTool1A.cxx</label>
+        <link refid="UnitTestTool1A.cxx"/>
+        <childnode refid="3585" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="d1/d56/namespaceasg">asg</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>Iowa<sp/>State<sp/>University<sp/>2016.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>Nils<sp/>Krumnack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>(See<sp/>accompanying<sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Please<sp/>feel<sp/>free<sp/>to<sp/>contact<sp/>me<sp/>(nils.erik.krumnack@cern.ch)<sp/>for<sp/>bug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>reports,<sp/>feature<sp/>suggestions,<sp/>praise<sp/>and<sp/>complaints.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;AsgExampleTools/UnitTestTool1A.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>method<sp/>implementations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">asg</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1a47a73ac6bc81688c50ce0f012b3b2a86" kindref="member" tooltip="standard constructor">UnitTestTool1A ::</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1a47a73ac6bc81688c50ce0f012b3b2a86" kindref="member" tooltip="standard constructor">  UnitTestTool1A</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>val_name)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>AsgTool<sp/>(val_name)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty<sp/>(</highlight><highlight class="stringliteral">&quot;propertyInt&quot;</highlight><highlight class="normal">,<sp/>m_propertyInt,<sp/></highlight><highlight class="stringliteral">&quot;the<sp/>integer<sp/>property&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty<sp/>(</highlight><highlight class="stringliteral">&quot;propertyString&quot;</highlight><highlight class="normal">,<sp/>m_propertyString,<sp/></highlight><highlight class="stringliteral">&quot;the<sp/>string<sp/>property&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>declareProperty<sp/>(</highlight><highlight class="stringliteral">&quot;initializeFail&quot;</highlight><highlight class="normal">,<sp/>m_initializeFail,<sp/></highlight><highlight class="stringliteral">&quot;whether<sp/>initialize<sp/>should<sp/>fail&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>StatusCode<sp/><ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1a0a888acd80c1e04229a4622e91aaab00" kindref="member">UnitTestTool1A ::</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1a0a888acd80c1e04229a4622e91aaab00" kindref="member">  initialize</ref><sp/>()</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1a2cc6bf3ee0ec3fa06c85334096be88d4" kindref="member" tooltip="whether initialize should fail">m_initializeFail</ref>)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_ERROR<sp/>(</highlight><highlight class="stringliteral">&quot;tool<sp/>configured<sp/>to<sp/>fail<sp/>initialize&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1a2faf2a0100a7ea5c83f8b61e25830655" kindref="member" tooltip="whether initialize has been called">m_isInitialized</ref>)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_ERROR<sp/>(</highlight><highlight class="stringliteral">&quot;initialize<sp/>called<sp/>twice&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1a2faf2a0100a7ea5c83f8b61e25830655" kindref="member" tooltip="whether initialize has been called">m_isInitialized</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1a9d0f4f5bca552652bc843b02bf0463d2" kindref="member" tooltip="get the integer property">UnitTestTool1A ::</ref></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1a9d0f4f5bca552652bc843b02bf0463d2" kindref="member" tooltip="get the integer property">  getPropertyString</ref><sp/>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="55"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1a3618803fccf9a965fd95bddfef1dcde7" kindref="member" tooltip="the string property">m_propertyString</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1aa210621fbde66584072ef47e01df04e4" kindref="member" tooltip="get the integer property">UnitTestTool1A ::</ref></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1aa210621fbde66584072ef47e01df04e4" kindref="member" tooltip="get the integer property">  getPropertyInt</ref><sp/>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="63"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1ade1adab53dad81d9cfb07c5ddee44a0b" kindref="member" tooltip="the integer property">m_propertyInt</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1aa50f4540eb98af8a6a7acc7aeb9894ca" kindref="member" tooltip="get the integer property">UnitTestTool1A ::</ref></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1aa50f4540eb98af8a6a7acc7aeb9894ca" kindref="member" tooltip="get the integer property">  setPropertyInt</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val_property)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1ade1adab53dad81d9cfb07c5ddee44a0b" kindref="member" tooltip="the integer property">m_propertyInt</ref><sp/>=<sp/>val_property;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1a9b5b49a853f8fe60152d2bd19fb0a7b7" kindref="member" tooltip="get whether we have been initialized">UnitTestTool1A ::</ref></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1a9b5b49a853f8fe60152d2bd19fb0a7b7" kindref="member" tooltip="get whether we have been initialized">  isInitialized</ref><sp/>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="79"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dd/d1c/structasg_1_1UnitTestTool1A_1a2faf2a0100a7ea5c83f8b61e25830655" kindref="member" tooltip="whether initialize has been called">m_isInitialized</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AsgExampleTools/Root/UnitTestTool1A.cxx"/>
+  </compounddef>
+</doxygen>

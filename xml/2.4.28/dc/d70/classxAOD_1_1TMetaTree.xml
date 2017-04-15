@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dc/d70/classxAOD_1_1TMetaTree" kind="class" prot="public">
+    <compoundname>xAOD::TMetaTree</compoundname>
+    <includes refid="d9/d6d/TMetaTree_8h" local="no">TMetaTree.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dc/d70/classxAOD_1_1TMetaTree_1a9175487074075dda335dc3fce669eef8" prot="private" static="no" mutable="no">
+        <type><ref refid="de/d95/classxAOD_1_1TEvent" kindref="compound">TEvent</ref> *</type>
+        <definition>TEvent* xAOD::TMetaTree::m_event</definition>
+        <argsstring></argsstring>
+        <name>m_event</name>
+        <briefdescription>
+<para>Pointer to the <ref refid="de/d95/classxAOD_1_1TEvent" kindref="compound">TEvent</ref> reading the persistent metadata tree. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TMetaTree.h" line="48" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TMetaTree.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/d70/classxAOD_1_1TMetaTree_1a5dcc144d7a01cd59b66f07e1f7121d06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xAOD::TMetaTree::TMetaTree</definition>
+        <argsstring>(TEvent *event, const char *name=&quot;MetaData&quot;, const char *title=&quot;xAOD metadata transient tree&quot;)</argsstring>
+        <name>TMetaTree</name>
+        <param>
+          <type><ref refid="de/d95/classxAOD_1_1TEvent" kindref="compound">TEvent</ref> *</type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;MetaData&quot;</defval>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+          <defval>&quot;xAOD metadata transient tree&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Constructor with all the necessary parameters. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TMetaTree.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d70/classxAOD_1_1TMetaTree_1a7efa96eef27d69dcf2308a5fb2995668" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>::Int_t</type>
+        <definition>virtual ::Int_t xAOD::TMetaTree::GetEntry</definition>
+        <argsstring>(::Long64_t entry,::Int_t getall=0)</argsstring>
+        <name>GetEntry</name>
+        <param>
+          <type>::Long64_t</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>getall</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Function overriding the base class&apos;s GetEntry(...). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TMetaTree.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d70/classxAOD_1_1TMetaTree_1ab7583444cee3791de88a132cc8f478a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xAOD::TMetaTree::AddBranch</definition>
+        <argsstring>(xAOD::TMetaBranch *br)</argsstring>
+        <name>AddBranch</name>
+        <param>
+          <type><ref refid="dd/dc9/classxAOD_1_1TMetaBranch" kindref="compound">xAOD::TMetaBranch</ref> *</type>
+          <declname>br</declname>
+        </param>
+        <briefdescription>
+<para>Function adding a new xAOD::TBranch to the tree. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TMetaTree.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Transient TTree for interactive <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> metadata access</para><para>This is pretty much the same sort of thing that ARA&apos;s TTreeTrans was designed for. In order to implement everything that we need from the transient tree, we need to override some functions within the class. But to the outside user we still want to present the usual TTree interface.</para><para>This class is only meant for interactive and PyROOT access to an <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> file. It should not be used in compiled analysis code, or for writing information into a file. (The first one will be slow, the second one just impossible.)</para><para><simplesect kind="author"><para>Attila Krasznahorkay &lt;<ulink url="mailto:Attila.Krasznahorkay@cern.ch">Attila.Krasznahorkay@cern.ch</ulink>&gt;</para></simplesect>
+<simplesect kind="rcs"><title>Revision</title><para>645208 </para></simplesect>
+<simplesect kind="rcs"><title>Date</title><para>2015-02-09 16:48:59 +0100 (Mon, 09 Feb 2015) </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="19866">
+        <label>xAOD::TVirtualEvent</label>
+        <link refid="de/daf/classxAOD_1_1TVirtualEvent"/>
+      </node>
+      <node id="19865">
+        <label>xAOD::TEvent</label>
+        <link refid="de/d95/classxAOD_1_1TEvent"/>
+        <childnode refid="19866" relation="public-inheritance">
+        </childnode>
+        <childnode refid="19867" relation="usage">
+          <edgelabel>m_inChainTracker</edgelabel>
+        </childnode>
+        <childnode refid="19868" relation="usage">
+          <edgelabel>m_outputEventFormat</edgelabel>
+          <edgelabel>m_inputEventFormat</edgelabel>
+        </childnode>
+      </node>
+      <node id="19868">
+        <label>xAOD::EventFormat_v1</label>
+        <link refid="d8/d1f/classxAOD_1_1EventFormat__v1"/>
+      </node>
+      <node id="19864">
+        <label>xAOD::TMetaTree</label>
+        <link refid="dc/d70/classxAOD_1_1TMetaTree"/>
+        <childnode refid="19865" relation="usage">
+          <edgelabel>m_event</edgelabel>
+        </childnode>
+      </node>
+      <node id="19867">
+        <label>xAOD::TChainStateTracker</label>
+        <link refid="d1/d3a/classxAOD_1_1TChainStateTracker"/>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TMetaTree.h" line="33" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TMetaTree.h" bodystart="33" bodyend="53"/>
+    <listofallmembers>
+      <member refid="dc/d70/classxAOD_1_1TMetaTree_1ab7583444cee3791de88a132cc8f478a7" prot="public" virt="non-virtual"><scope>xAOD::TMetaTree</scope><name>AddBranch</name></member>
+      <member refid="dc/d70/classxAOD_1_1TMetaTree_1a7efa96eef27d69dcf2308a5fb2995668" prot="public" virt="non-virtual"><scope>xAOD::TMetaTree</scope><name>GetEntry</name></member>
+      <member refid="dc/d70/classxAOD_1_1TMetaTree_1a9175487074075dda335dc3fce669eef8" prot="private" virt="non-virtual"><scope>xAOD::TMetaTree</scope><name>m_event</name></member>
+      <member refid="dc/d70/classxAOD_1_1TMetaTree_1a5dcc144d7a01cd59b66f07e1f7121d06" prot="public" virt="non-virtual"><scope>xAOD::TMetaTree</scope><name>TMetaTree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

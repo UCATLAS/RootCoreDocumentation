@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dd/de0/METSigParam_8cxx" kind="file">
+    <compoundname>METSigParam.cxx</compoundname>
+    <includes refid="d3/dab/METSigParam_8h" local="yes">TrigConfL1Data/METSigParam.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">stdexcept</includes>
+    <incdepgraph>
+      <node id="310227">
+        <label>iomanip</label>
+      </node>
+      <node id="310224">
+        <label>TrigConfL1Data/METSigParam.h</label>
+        <link refid="d3/dab/METSigParam_8h_source"/>
+        <childnode refid="310225" relation="include">
+        </childnode>
+      </node>
+      <node id="310229">
+        <label>stdexcept</label>
+      </node>
+      <node id="310225">
+        <label>string</label>
+      </node>
+      <node id="310223">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfL1Data/Root/METSigParam.cxx</label>
+        <link refid="METSigParam.cxx"/>
+        <childnode refid="310224" relation="include">
+        </childnode>
+        <childnode refid="310226" relation="include">
+        </childnode>
+        <childnode refid="310227" relation="include">
+        </childnode>
+        <childnode refid="310228" relation="include">
+        </childnode>
+        <childnode refid="310229" relation="include">
+        </childnode>
+      </node>
+      <node id="310228">
+        <label>sstream</label>
+      </node>
+      <node id="310226">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;TrigConfL1Data/METSigParam.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">TrigConf::METSigParam::METSigParam(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>XSSigmaScale,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>XSSigmaOffset,</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>XEmin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>XEmax,</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>TESqrtMin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>TESqrtMax<sp/>)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/>:<sp/>m_xsSigmaScale(XSSigmaScale),</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>m_xsSigmaOffset(XSSigmaOffset),</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>m_XEmin(XEmin),</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>m_XEmax(XEmax),</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>m_TESqrtMin(TESqrtMin),</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>m_TESqrtMax(TESqrtMax)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/>checkValueRange(XEmin,<sp/>XEmax,<sp/>TESqrtMin,<sp/>TESqrtMax);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">TrigConf::METSigParam::METSigParam()</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/>:<sp/>m_xsSigmaScale(0),</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>m_xsSigmaOffset(0),</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>m_XEmin(0),</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>m_XEmax(0),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>m_TESqrtMin(0),</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>m_TESqrtMax(0)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">TrigConf::METSigParam::~METSigParam()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{}<sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">TrigConf::METSigParam::setValues(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>XSSigmaScale,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>XSSigmaOffset,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>XEmin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>XEmax,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>TESqrtMin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>TESqrtMax)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/>checkValueRange(XEmin,<sp/>XEmax,<sp/>TESqrtMin,<sp/>TESqrtMax);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/>m_xsSigmaScale<sp/><sp/>=<sp/>XSSigmaScale;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/>m_xsSigmaOffset<sp/>=<sp/>XSSigmaOffset;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/>m_XEmin<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>XEmin;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/>m_XEmax<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>XEmax;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/>m_TESqrtMin<sp/><sp/><sp/><sp/><sp/>=<sp/>TESqrtMin;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/>m_TESqrtMax<sp/><sp/><sp/><sp/><sp/>=<sp/>TESqrtMax;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">TrigConf::METSigParam::getValues(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>XSSigmaScale,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>XSSigmaOffset,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>XEmin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>XEmax,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>TESqrtMin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>TESqrtMax)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/>XSSigmaScale<sp/><sp/>=<sp/>m_xsSigmaScale;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/>XSSigmaOffset<sp/>=<sp/>m_xsSigmaOffset;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/>XEmin<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>m_XEmin;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/>XEmax<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>m_XEmax;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/>TESqrtMin<sp/><sp/><sp/><sp/><sp/>=<sp/>m_TESqrtMin;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/>TESqrtMax<sp/><sp/><sp/><sp/><sp/>=<sp/>m_TESqrtMax;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">TrigConf::METSigParam::print(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>indent,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*detail*/</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>METSigParam:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xsSigmaScale<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_xsSigmaScale<sp/>&lt;&lt;<sp/>std::endl</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xsSigmaOffset:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_xsSigmaOffset<sp/>&lt;&lt;<sp/>std::endl</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xeMin<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_XEmin<sp/>&lt;&lt;<sp/>std::endl</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xeMax<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_XEmax<sp/>&lt;&lt;<sp/>std::endl</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>teSqrtMin<sp/><sp/><sp/><sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_TESqrtMin<sp/>&lt;&lt;<sp/>std::endl</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>teSqrtMax<sp/><sp/><sp/><sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_TESqrtMax<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">TrigConf::METSigParam::writeXML(std::ostream<sp/>&amp;<sp/>xmlfile,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>indentLevel,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>indentWidth)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width<sp/>=<sp/>indentLevel*indentWidth;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(width!=0)<sp/>xmlfile<sp/>&lt;&lt;<sp/>std::setw(width)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/>xmlfile<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&lt;METSignificance&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>xeMin=\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_XEmin<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>xeMax=\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_XEmax<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>teSqrtMin=\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_TESqrtMin<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>teSqrtMax=\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_TESqrtMax<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>xsSigmaScale=\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_xsSigmaScale<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>xsSigmaOffset=\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_xsSigmaOffset<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;/&gt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">TrigConf::METSigParam::checkValueRange(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>XEmin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>XEmax,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>TESqrtMin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>TESqrtMax)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/>std::stringstream<sp/>outsideValues;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="da/d8a/namespaceAmg_1aa8598c3ab8774ed5c55a37e729a04dd7" kindref="member">error</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/>outsideValues<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;METSigParam:<sp/>the<sp/>following<sp/>values<sp/>are<sp/>out<sp/>of<sp/>range<sp/>[0:63]:&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>XEmin&lt;0<sp/>||<sp/>XEmin&gt;63)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>outsideValues<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>XEmin<sp/>(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>XEmin<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>error<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>XEmax&lt;0<sp/>||<sp/>XEmax&gt;63)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>outsideValues<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>XEmax<sp/>(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>XEmax<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>error<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>TESqrtMin&lt;0<sp/>||<sp/>TESqrtMin&gt;63)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>outsideValues<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>TESqrtMin<sp/>(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>TESqrtMin<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>error<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>TESqrtMax&lt;0<sp/>||<sp/>TESqrtMax&gt;63)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>outsideValues<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>TESqrtMax<sp/>(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>TESqrtMax<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>error<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(error)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::range_error(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfL1Data/Root/METSigParam.cxx"/>
+  </compounddef>
+</doxygen>

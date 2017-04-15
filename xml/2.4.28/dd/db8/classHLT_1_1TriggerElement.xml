@@ -1,0 +1,759 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dd/db8/classHLT_1_1TriggerElement" kind="class" prot="public">
+    <compoundname>HLT::TriggerElement</compoundname>
+    <includes refid="d7/d71/TriggerElement_8h" local="no">TriggerElement.h</includes>
+    <innerclass refid="da/d62/classHLT_1_1TriggerElement_1_1FeatureAccessHelper" prot="public">HLT::TriggerElement::FeatureAccessHelper</innerclass>
+    <innerclass refid="dc/d50/classHLT_1_1TriggerElement_1_1ObjectIndex" prot="public">HLT::TriggerElement::ObjectIndex</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="dd/db8/classHLT_1_1TriggerElement_1a4ebcb5339eb85e200a31158e9aadce1c" prot="public" static="no">
+        <name>Relation</name>
+        <enumvalue id="dd/db8/classHLT_1_1TriggerElement_1a4ebcb5339eb85e200a31158e9aadce1ca5f8d01b226871f6206006321d44286cb" prot="public">
+          <name>sameRoIRelation</name>
+          <briefdescription>
+<para>equilateral relation of all TEs rooted in one RoI </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/db8/classHLT_1_1TriggerElement_1a4ebcb5339eb85e200a31158e9aadce1ca26d3d30c92eb68abbdbeaeb762642900" prot="public">
+          <name>seedsRelation</name>
+          <briefdescription>
+<para>what TEs I am seeding </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/db8/classHLT_1_1TriggerElement_1a4ebcb5339eb85e200a31158e9aadce1cabd2d108894f55ce280a742f1dda89408" prot="public">
+          <name>seededByRelation</name>
+          <briefdescription>
+<para>what TEs are seeding me </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>possible relations enumeration (Note: uses no longer here) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="134" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="134" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="enum" id="dd/db8/classHLT_1_1TriggerElement_1a29e0e5b10cbde6062b279390e9d52cf5" prot="public" static="no">
+        <name>States</name>
+        <enumvalue id="dd/db8/classHLT_1_1TriggerElement_1a29e0e5b10cbde6062b279390e9d52cf5a771867259b5f17cabc6b0c47eff95009" prot="public">
+          <name>activeState</name>
+          <initializer> 0x1</initializer>
+          <briefdescription>
+<para>this bit is keeping active/inactive state of TE </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/db8/classHLT_1_1TriggerElement_1a29e0e5b10cbde6062b279390e9d52cf5a22f74740b332da89da07e76705cbf6ca" prot="public">
+          <name>ghostState</name>
+          <initializer> 0x2</initializer>
+          <briefdescription>
+<para>this TE is of type ghost/evaporating/one can&apos;t attach features to this TE </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/db8/classHLT_1_1TriggerElement_1a29e0e5b10cbde6062b279390e9d52cf5a10c397508b560d26c492456a755813aa" prot="public">
+          <name>nofwdState</name>
+          <initializer> 0x4</initializer>
+          <briefdescription>
+<para>this TE is of type which stops fwd deactivation </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/db8/classHLT_1_1TriggerElement_1a29e0e5b10cbde6062b279390e9d52cf5ac98e7b0a66bb8fff220137fd6dc84a1c" prot="public">
+          <name>errorState</name>
+          <initializer> 0x8</initializer>
+          <briefdescription>
+<para>somewhere in the algorithms dealing with this TE there was an error </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="147" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="147" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dd/db8/classHLT_1_1TriggerElement_1ad4420c3386f82907e4c82057b1ea5db6" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="da/d62/classHLT_1_1TriggerElement_1_1FeatureAccessHelper" kindref="compound">FeatureAccessHelper</ref> &gt;</type>
+        <definition>typedef std::vector&lt; FeatureAccessHelper &gt; HLT::TriggerElement::FeatureVec</definition>
+        <argsstring></argsstring>
+        <name>FeatureVec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="244" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="dd/db8/classHLT_1_1TriggerElement_1afc486c48b05cba5f0ce1bbd8feb692a4" prot="public" static="no" mutable="yes">
+        <type>std::map&lt; <ref refid="dd/db8/classHLT_1_1TriggerElement_1a4ebcb5339eb85e200a31158e9aadce1c" kindref="member">Relation</ref>, std::vector&lt; <ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> * &gt; &gt;</type>
+        <definition>std::map&lt;Relation, std::vector&lt;TriggerElement*&gt; &gt; HLT::TriggerElement::m_relations</definition>
+        <argsstring></argsstring>
+        <name>m_relations</name>
+        <briefdescription>
+<para>relations holder (features outside) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="154" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dd/db8/classHLT_1_1TriggerElement_1a2bc911c44aee21d5f3b3a916b79dfd91" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int HLT::TriggerElement::m_state</definition>
+        <argsstring></argsstring>
+        <name>m_state</name>
+        <briefdescription>
+<para>one word for all states, info in bits (saving space in serialized object) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="267" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db8/classHLT_1_1TriggerElement_1a620a7da0cb288e8c252d068ba0c4b760" prot="private" static="no" mutable="no">
+        <type>te_id_type</type>
+        <definition>te_id_type HLT::TriggerElement::m_id</definition>
+        <argsstring></argsstring>
+        <name>m_id</name>
+        <briefdescription>
+<para>id </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="268" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db8/classHLT_1_1TriggerElement_1a8356cfa23b469362c54852670950d9cb" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HLT::TriggerElement::m_transient</definition>
+        <argsstring></argsstring>
+        <name>m_transient</name>
+        <briefdescription>
+<para>marker that TE should not be serialized </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="269" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db8/classHLT_1_1TriggerElement_1a048ac54908973bb5a5b4c33dd9b6c00b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="da/d62/classHLT_1_1TriggerElement_1_1FeatureAccessHelper" kindref="compound">FeatureAccessHelper</ref> &gt;</type>
+        <definition>std::vector&lt; FeatureAccessHelper &gt; HLT::TriggerElement::m_uses</definition>
+        <argsstring></argsstring>
+        <name>m_uses</name>
+        <briefdescription>
+<para>all features attached are in this storage </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="270" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db8/classHLT_1_1TriggerElement_1abde0eb0b238b284c7c2fd50990651e6c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="da/d62/classHLT_1_1TriggerElement_1_1FeatureAccessHelper" kindref="compound">FeatureAccessHelper</ref> &gt;</type>
+        <definition>std::vector&lt; FeatureAccessHelper &gt; HLT::TriggerElement::m_prev</definition>
+        <argsstring></argsstring>
+        <name>m_prev</name>
+        <briefdescription>
+<para>all features attached are in this TE and seeding TEs </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="271" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1a7fcb213270d619e84fdc155ace9fa208" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TriggerElement::TriggerElement</definition>
+        <argsstring>()</argsstring>
+        <name>TriggerElement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="44" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/TriggerElement.cxx" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1a833b798eb76a4be7dea5c04b99a0a669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TriggerElement::TriggerElement</definition>
+        <argsstring>(te_id_type id, bool ghost, bool nofwd=false)</argsstring>
+        <name>TriggerElement</name>
+        <param>
+          <type>te_id_type</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ghost</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>nofwd</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="45" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/TriggerElement.cxx" bodystart="16" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1ab3e64a2ecd4dbd14b8915b318b936b3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TriggerElement::~TriggerElement</definition>
+        <argsstring>()</argsstring>
+        <name>~TriggerElement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="46" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/TriggerElement.cxx" bodystart="24" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1a3b549590aa2392644ce33125f62058c8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>te_id_type</type>
+        <definition>te_id_type HLT::TriggerElement::getId</definition>
+        <argsstring>() const </argsstring>
+        <name>getId</name>
+        <briefdescription>
+<para>reset internals. Needed because of TriggerStore (or TriggerFactory ...) can be used. </para>        </briefdescription>
+        <detaileddescription>
+<para>gets the id of this <ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="57" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1aa1014a6dcf9da0fd26301b9ee6d6bb7b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HLT::TriggerElement::getActiveState</definition>
+        <argsstring>() const </argsstring>
+        <name>getActiveState</name>
+        <briefdescription>
+<para>get state of the <ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="62" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1ae84fe374e160f8cce3b51738c070ff4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TriggerElement::setActiveState</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setActiveState</name>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>set state of the <ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="67" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/TriggerElement.cxx" bodystart="52" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1a055b579f6956c43f0b83a277de901e4b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HLT::TriggerElement::ghost</definition>
+        <argsstring>() const </argsstring>
+        <name>ghost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="69" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1a3051c8042a64e1ae38141f52cbc3f102" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HLT::TriggerElement::getGhostState</definition>
+        <argsstring>() const </argsstring>
+        <name>getGhostState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="70" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1a1d11679ec958434e9702233f6003a899" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TriggerElement::setGhostState</definition>
+        <argsstring>(bool t=true)</argsstring>
+        <name>setGhostState</name>
+        <param>
+          <type>bool</type>
+          <declname>t</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="71" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/TriggerElement.cxx" bodystart="79" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1a6930358456f6086ef369b2149b200aa0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HLT::TriggerElement::setTransient</definition>
+        <argsstring>(bool t=true)</argsstring>
+        <name>setTransient</name>
+        <param>
+          <type>bool</type>
+          <declname>t</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="73" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1a93de9195e6c5d77521e7b59f5421120b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HLT::TriggerElement::transient</definition>
+        <argsstring>()</argsstring>
+        <name>transient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="74" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1a4ec815f6c123f3f3f9fdd30f08bce104" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TriggerElement::setErrorState</definition>
+        <argsstring>(bool state=true)</argsstring>
+        <name>setErrorState</name>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="77" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/TriggerElement.cxx" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1a8487d51c932a77c33ce18721ae98f302" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HLT::TriggerElement::getErrorState</definition>
+        <argsstring>() const </argsstring>
+        <name>getErrorState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="79" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1ad1d65676cb6e3f810caaa517f20a6a06" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> * &gt; &amp;</type>
+        <definition>const std::vector&lt;TriggerElement*&gt;&amp; HLT::TriggerElement::getRelated</definition>
+        <argsstring>(Relation rel) const </argsstring>
+        <name>getRelated</name>
+        <param>
+          <type><ref refid="dd/db8/classHLT_1_1TriggerElement_1a4ebcb5339eb85e200a31158e9aadce1c" kindref="member">Relation</ref></type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+<para>returns reference to the likns to other TriggerElements related by relation r </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>relation name (one of HLT::Navigation::Relation) # </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>is reference ot the vector of related TEs </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="145" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="145" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1a66f9824dff31aafc9cfac3178f015fb8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TriggerElement::relate</definition>
+        <argsstring>(TriggerElement *te, Relation r) const </argsstring>
+        <name>relate</name>
+        <param>
+          <type><ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> *</type>
+          <declname>te</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/db8/classHLT_1_1TriggerElement_1a4ebcb5339eb85e200a31158e9aadce1c" kindref="member">Relation</ref></type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>reates given TE to other TE </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>te</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> pointer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>relation .. one of Relation enums Nothe that the relation is usially reflexive ... </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="162" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/TriggerElement.cxx" bodystart="83" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1afe425e431f956a2a6e19b0425c94a339" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TriggerElement::relate</definition>
+        <argsstring>(const std::vector&lt; TriggerElement * &gt; tes, Relation r) const </argsstring>
+        <name>relate</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> * &gt;</type>
+          <declname>tes</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/db8/classHLT_1_1TriggerElement_1a4ebcb5339eb85e200a31158e9aadce1c" kindref="member">Relation</ref></type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>relates this TE to vecor of other TEs </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of <ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> pointers </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>relation .. one of Relation enums </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="169" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/TriggerElement.cxx" bodystart="92" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1a4b408f1dd8cdd0b86c777492fa73cc9f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TriggerElement::serialize</definition>
+        <argsstring>(std::vector&lt; uint32_t &gt; &amp;output, const std::map&lt; TriggerElement *, uint16_t &gt; &amp;keys, const TriggerElement *previous) const </argsstring>
+        <name>serialize</name>
+        <param>
+          <type>std::vector&lt; uint32_t &gt; &amp;</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; <ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> *, uint16_t &gt; &amp;</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> *</type>
+          <declname>previous</declname>
+        </param>
+        <briefdescription>
+<para>serializes TE </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is vector of raw integers where to put serialized TE </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keys</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a map from pointers to ksys ... this keas go to serializized TE </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>previous</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UNUSED parameter </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="179" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/TriggerElement.cxx" bodystart="131" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1ae25428628c8cc1cecee804fb1ac0c95c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TriggerElement::deserialize</definition>
+        <argsstring>(std::vector&lt; uint32_t &gt;::const_iterator &amp;inputIt, const std::map&lt; uint16_t, TriggerElement * &gt; &amp;keys, const TriggerElement *previous)</argsstring>
+        <name>deserialize</name>
+        <param>
+          <type>std::vector&lt; uint32_t &gt;::const_iterator &amp;</type>
+          <declname>inputIt</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; uint16_t, <ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> * &gt; &amp;</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> *</type>
+          <declname>previous</declname>
+        </param>
+        <briefdescription>
+<para>deserialization </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputIt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a point where we should start reading </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keys</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>keys wich point to the TE related by seeds relation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>previous</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UNUSED parameter </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="187" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/TriggerElement.cxx" bodystart="174" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1abd88d0d19121eda7603e842a47968d62" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="da/d62/classHLT_1_1TriggerElement_1_1FeatureAccessHelper" kindref="compound">FeatureAccessHelper</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt; FeatureAccessHelper &gt;&amp; HLT::TriggerElement::getFeatureAccessHelpers</definition>
+        <argsstring>() const </argsstring>
+        <name>getFeatureAccessHelpers</name>
+        <briefdescription>
+<para>returns all features which ara attached to this TE </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="249" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="249" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1afac90f9f659e86a0700b66b5c3685a40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="da/d62/classHLT_1_1TriggerElement_1_1FeatureAccessHelper" kindref="compound">FeatureAccessHelper</ref> &gt; &amp;</type>
+        <definition>std::vector&lt; FeatureAccessHelper &gt;&amp; HLT::TriggerElement::getFeatureAccessHelpers</definition>
+        <argsstring>()</argsstring>
+        <name>getFeatureAccessHelpers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="250" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="250" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1ab8133c4624015a6be64e059174fb512f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TriggerElement::addFeature</definition>
+        <argsstring>(class_id_type clid, const ObjectIndex &amp;index, bool forget=false)</argsstring>
+        <name>addFeature</name>
+        <param>
+          <type>class_id_type</type>
+          <declname>clid</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dc/d50/classHLT_1_1TriggerElement_1_1ObjectIndex" kindref="compound">ObjectIndex</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>forget</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>add helper for new feature </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the CLID of the object attached </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an integer used to retrieve it </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>forget</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the flag notifying that during serialization link to this objects should be lost </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="258" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/TriggerElement.cxx" bodystart="34" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1ad9333a60d9feb62fbf6052c3ed59a5de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TriggerElement::addFeature</definition>
+        <argsstring>(const FeatureAccessHelper &amp;f)</argsstring>
+        <name>addFeature</name>
+        <param>
+          <type>const <ref refid="da/d62/classHLT_1_1TriggerElement_1_1FeatureAccessHelper" kindref="compound">FeatureAccessHelper</ref> &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="259" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/TriggerElement.cxx" bodystart="38" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1a04863be7344deff468def1c764b0e61e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="da/d62/classHLT_1_1TriggerElement_1_1FeatureAccessHelper" kindref="compound">FeatureAccessHelper</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt;FeatureAccessHelper&gt;&amp; HLT::TriggerElement::getPreviousFeatures</definition>
+        <argsstring>() const </argsstring>
+        <name>getPreviousFeatures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="262" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="262" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1ab94890fe6e32e734127210f52a7d6824" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="da/d62/classHLT_1_1TriggerElement_1_1FeatureAccessHelper" kindref="compound">FeatureAccessHelper</ref> &gt; &amp;</type>
+        <definition>std::vector&lt;FeatureAccessHelper&gt;&amp; HLT::TriggerElement::getPreviousFeatures</definition>
+        <argsstring>()</argsstring>
+        <name>getPreviousFeatures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="263" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="263" bodyend="263"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="dd/db8/classHLT_1_1TriggerElement_1a4790d7e679bfd355b9d87dfe7739a8be" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int TriggerElement::enquireId</definition>
+        <argsstring>(std::vector&lt; uint32_t &gt;::const_iterator &amp;inputIt)</argsstring>
+        <name>enquireId</name>
+        <param>
+          <type>std::vector&lt; uint32_t &gt;::const_iterator &amp;</type>
+          <declname>inputIt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="171" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/TriggerElement.cxx" bodystart="108" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> is the basic ingreedient of the interface between <ref refid="dc/d8d/namespaceHLT" kindref="compound">HLT</ref> algorithms and the navigation It holds navigation links by itself but they are not exposed. The way to work with the navigation is only via the Navigation class. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Tomasz Bold &lt;<ulink url="mailto:Tomasz.Bold@cern.ch">Tomasz.Bold@cern.ch</ulink>&gt; - U. of California - Irvine </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" line="41" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/TriggerElement.h" bodystart="41" bodyend="273"/>
+    <listofallmembers>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a29e0e5b10cbde6062b279390e9d52cf5a771867259b5f17cabc6b0c47eff95009" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>activeState</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1ab8133c4624015a6be64e059174fb512f" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>addFeature</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1ad9333a60d9feb62fbf6052c3ed59a5de" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>addFeature</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1ae25428628c8cc1cecee804fb1ac0c95c" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>deserialize</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a4790d7e679bfd355b9d87dfe7739a8be" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>enquireId</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a29e0e5b10cbde6062b279390e9d52cf5ac98e7b0a66bb8fff220137fd6dc84a1c" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>errorState</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1ad4420c3386f82907e4c82057b1ea5db6" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>FeatureVec</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1aa1014a6dcf9da0fd26301b9ee6d6bb7b" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>getActiveState</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a8487d51c932a77c33ce18721ae98f302" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>getErrorState</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1abd88d0d19121eda7603e842a47968d62" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>getFeatureAccessHelpers</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1afac90f9f659e86a0700b66b5c3685a40" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>getFeatureAccessHelpers</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a3051c8042a64e1ae38141f52cbc3f102" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>getGhostState</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a3b549590aa2392644ce33125f62058c8" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>getId</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a04863be7344deff468def1c764b0e61e" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>getPreviousFeatures</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1ab94890fe6e32e734127210f52a7d6824" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>getPreviousFeatures</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1ad1d65676cb6e3f810caaa517f20a6a06" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>getRelated</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a055b579f6956c43f0b83a277de901e4b" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>ghost</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a29e0e5b10cbde6062b279390e9d52cf5a22f74740b332da89da07e76705cbf6ca" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>ghostState</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a620a7da0cb288e8c252d068ba0c4b760" prot="private" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>m_id</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1abde0eb0b238b284c7c2fd50990651e6c" prot="private" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>m_prev</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1afc486c48b05cba5f0ce1bbd8feb692a4" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>m_relations</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a2bc911c44aee21d5f3b3a916b79dfd91" prot="private" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>m_state</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a8356cfa23b469362c54852670950d9cb" prot="private" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>m_transient</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a048ac54908973bb5a5b4c33dd9b6c00b" prot="private" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>m_uses</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a29e0e5b10cbde6062b279390e9d52cf5a10c397508b560d26c492456a755813aa" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>nofwdState</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a66f9824dff31aafc9cfac3178f015fb8" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>relate</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1afe425e431f956a2a6e19b0425c94a339" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>relate</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a4ebcb5339eb85e200a31158e9aadce1c" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>Relation</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a4ebcb5339eb85e200a31158e9aadce1ca5f8d01b226871f6206006321d44286cb" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>sameRoIRelation</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a4ebcb5339eb85e200a31158e9aadce1cabd2d108894f55ce280a742f1dda89408" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>seededByRelation</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a4ebcb5339eb85e200a31158e9aadce1ca26d3d30c92eb68abbdbeaeb762642900" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>seedsRelation</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a4b408f1dd8cdd0b86c777492fa73cc9f" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>serialize</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1ae84fe374e160f8cce3b51738c070ff4d" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>setActiveState</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a4ec815f6c123f3f3f9fdd30f08bce104" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>setErrorState</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a1d11679ec958434e9702233f6003a899" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>setGhostState</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a6930358456f6086ef369b2149b200aa0" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>setTransient</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a29e0e5b10cbde6062b279390e9d52cf5" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>States</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a93de9195e6c5d77521e7b59f5421120b" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>transient</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a7fcb213270d619e84fdc155ace9fa208" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>TriggerElement</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1a833b798eb76a4be7dea5c04b99a0a669" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>TriggerElement</name></member>
+      <member refid="dd/db8/classHLT_1_1TriggerElement_1ab3e64a2ecd4dbd14b8915b318b936b3e" prot="public" virt="non-virtual"><scope>HLT::TriggerElement</scope><name>~TriggerElement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

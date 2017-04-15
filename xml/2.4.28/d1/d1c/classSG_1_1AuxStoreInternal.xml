@@ -1,0 +1,888 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d1/d1c/classSG_1_1AuxStoreInternal" kind="class" prot="public">
+    <compoundname>SG::AuxStoreInternal</compoundname>
+    <basecompoundref refid="dc/d05/classSG_1_1IAuxStore" prot="public" virt="non-virtual">SG::IAuxStore</basecompoundref>
+    <basecompoundref refid="db/d37/classSG_1_1IAuxStoreIO" prot="public" virt="non-virtual">SG::IAuxStoreIO</basecompoundref>
+    <derivedcompoundref refid="dc/d58/classAuxStoreInternalTest" prot="public" virt="non-virtual">AuxStoreInternalTest</derivedcompoundref>
+    <derivedcompoundref refid="df/d7b/classAuxStoreTest" prot="public" virt="non-virtual">AuxStoreTest</derivedcompoundref>
+    <derivedcompoundref refid="dd/d55/classSG_1_1AuxStoreStandalone" prot="public" virt="non-virtual">SG::AuxStoreStandalone</derivedcompoundref>
+    <includes refid="d3/d0f/AuxStoreInternal_8h" local="no">AuxStoreInternal.h</includes>
+    <innerclass refid="dc/d1a/structSG_1_1AuxStoreInternal_1_1TSAuxidSet" prot="private">SG::AuxStoreInternal::TSAuxidSet</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="d1/d1c/classSG_1_1AuxStoreInternal_1acdaf620e3b86a42a6419c5d6946855ce" prot="private" static="no">
+        <type>AthContainers_detail::mutex</type>
+        <definition>typedef AthContainers_detail::mutex SG::AuxStoreInternal::mutex_t</definition>
+        <argsstring></argsstring>
+        <name>mutex_t</name>
+        <briefdescription>
+<para>Mutex used to synchronize modifications to the cache vector. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="339" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" bodystart="339" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d1/d1c/classSG_1_1AuxStoreInternal_1af1225cd8a55749cc021aef2848d1009a" prot="private" static="no">
+        <type>AthContainers_detail::lock_guard&lt; mutex_t &gt;</type>
+        <definition>typedef AthContainers_detail::lock_guard&lt;mutex_t&gt; SG::AuxStoreInternal::guard_t</definition>
+        <argsstring></argsstring>
+        <name>guard_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="340" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d1/d1c/classSG_1_1AuxStoreInternal_1af059ba519ee2e3001a6f4f22553e9ae1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SG::AuxStoreInternal::m_standalone</definition>
+        <argsstring></argsstring>
+        <name>m_standalone</name>
+        <briefdescription>
+<para>Are we being written in standalone mode? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="316" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d1c/classSG_1_1AuxStoreInternal_1ac16cb985327f90f98bfacde0bb6cf128" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="de/d12/classSG_1_1IAuxTypeVector" kindref="compound">IAuxTypeVector</ref> * &gt;</type>
+        <definition>std::vector&lt;IAuxTypeVector*&gt; SG::AuxStoreInternal::m_vecs</definition>
+        <argsstring></argsstring>
+        <name>m_vecs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The collection of vectors of aux data that we&apos;re managing, indexed by <computeroutput>auxid</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="320" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d1c/classSG_1_1AuxStoreInternal_1a94a4f5de3ec5963d258870df0c625511" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>std::vector&lt;bool&gt; SG::AuxStoreInternal::m_isDecoration</definition>
+        <argsstring></argsstring>
+        <name>m_isDecoration</name>
+        <briefdescription>
+<para>Record which variables are decorations. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="323" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d1c/classSG_1_1AuxStoreInternal_1a97ec8a5888e5e5adb43319b9744d4452" prot="private" static="no" mutable="no">
+        <type><ref refid="dd/dac/classSG_1_1unordered__set" kindref="compound">SG::auxid_set_t</ref></type>
+        <definition>SG::auxid_set_t SG::AuxStoreInternal::m_auxids</definition>
+        <argsstring></argsstring>
+        <name>m_auxids</name>
+        <briefdescription>
+<para>Set of <computeroutput>auxid&apos;s</computeroutput> for which we&apos;ve created a vector. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="329" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" bodystart="329" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d1c/classSG_1_1AuxStoreInternal_1a3aa6f8108cc3c54f9d95eac2548cb0d5" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t SG::AuxStoreInternal::m_tick</definition>
+        <argsstring></argsstring>
+        <name>m_tick</name>
+        <briefdescription>
+<para>Count changes to <computeroutput>m_auxids</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="333" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d1c/classSG_1_1AuxStoreInternal_1a10c1cb5f2ba1a0f8f87cab74bb728343" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SG::AuxStoreInternal::m_locked</definition>
+        <argsstring></argsstring>
+        <name>m_locked</name>
+        <briefdescription>
+<para>Has this container been locked? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="336" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d1c/classSG_1_1AuxStoreInternal_1a7a26b1a8e01a232a5c2bd88789c3198f" prot="private" static="no" mutable="yes">
+        <type>mutex_t</type>
+        <definition>mutex_t SG::AuxStoreInternal::m_mutex</definition>
+        <argsstring></argsstring>
+        <name>m_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="341" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d1c/classSG_1_1AuxStoreInternal_1a14872d3831a9635da408703601d4d049" prot="private" static="no" mutable="yes">
+        <type>AthContainers_detail::thread_specific_ptr&lt; TSAuxidSet &gt;</type>
+        <definition>AthContainers_detail::thread_specific_ptr&lt;TSAuxidSet&gt; SG::AuxStoreInternal::m_tsAuxids</definition>
+        <argsstring></argsstring>
+        <name>m_tsAuxids</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="351" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1adaae95b4226c1514d5327ae16c9a15cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SG::AuxStoreInternal::AuxStoreInternal</definition>
+        <argsstring>(bool standalone=false)</argsstring>
+        <name>AuxStoreInternal</name>
+        <param>
+          <type>bool</type>
+          <declname>standalone</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>standalone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, then write this in standalone mode. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="47" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="28" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1ac2a5ec4bc88d4ee304348a6e03b4a52b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>SG::AuxStoreInternal::~AuxStoreInternal</definition>
+        <argsstring>()</argsstring>
+        <name>~AuxStoreInternal</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>All contained data will be deleted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="55" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1af6f674612888bd4ac594ce7528683d5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SG::AuxStoreInternal::AuxStoreInternal</definition>
+        <argsstring>(const AuxStoreInternal &amp;orig)</argsstring>
+        <name>AuxStoreInternal</name>
+        <param>
+          <type>const <ref refid="d1/d1c/classSG_1_1AuxStoreInternal" kindref="compound">AuxStoreInternal</ref> &amp;</type>
+          <declname>orig</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="61" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="51" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1aea3863b3a7e4cf2909150703358cfde3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SG::AuxStoreInternal::standalone</definition>
+        <argsstring>() const </argsstring>
+        <name>standalone</name>
+        <briefdescription>
+<para>Return the standalone flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="67" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const void *</type>
+        <definition>const void * SG::AuxStoreInternal::getData</definition>
+        <argsstring>(SG::auxid_t auxid) const ATH_OVERRIDE</argsstring>
+        <name>getData</name>
+        <reimplements refid="d3/dd5/classSG_1_1IConstAuxStore_1aa73e6e5474cdc0d38fe3367740876c59">getData</reimplements>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return the data vector for one aux data item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of the desired aux data item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Each aux data item is stored as a vector, with one entry per entry in the owning container. This returns a pointer to the start of the vector.</para><para>This should return 0 if the item doesn&apos;t exist. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="80" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="86" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1a007edc4aa2d7bfbf7e1cada713c1dbea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void *</type>
+        <definition>void * SG::AuxStoreInternal::getData</definition>
+        <argsstring>(SG::auxid_t auxid, size_t size, size_t capacity) ATH_OVERRIDE</argsstring>
+        <name>getData</name>
+        <reimplements refid="dc/d05/classSG_1_1IAuxStore_1a0a6b90ed812993712727c76b64953c48">getData</reimplements>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>capacity</declname>
+        </param>
+        <briefdescription>
+<para>Return the data vector for one aux data item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of the desired aux data item. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current size of the container (in case the data item does not already exist). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>capacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current capacity of the container (in case the data item does not already exist).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Each aux data item is stored as a vector, with one entry per entry in the owning container. This returns a pointer to the start of the vector.</para><para>If the data item does not exist, it should be created and initialized to default values. <computeroutput>size</computeroutput> and <computeroutput>capacity</computeroutput> give the size for the new aux data item vector. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="100" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="117" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1aff9be84c9b5f841639e7bc471d07c983" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void *</type>
+        <definition>void * SG::AuxStoreInternal::getDecoration</definition>
+        <argsstring>(auxid_t auxid, size_t size, size_t capacity) ATH_OVERRIDE</argsstring>
+        <name>getDecoration</name>
+        <reimplements refid="d3/dd5/classSG_1_1IConstAuxStore_1a96728593e3bc1da60d3bdd28291969f0">getDecoration</reimplements>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>capacity</declname>
+        </param>
+        <briefdescription>
+<para>Return the data vector for one aux data decoration item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of the desired aux data item. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current size of the container (in case the data item does not already exist). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>capacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current capacity of the container (in case the data item does not already exist).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Each aux data item is stored as a vector, with one entry per entry in the owning container. This returns a pointer to the start of the vector.</para><para>If the data item does not exist, it then it will be created and initialized with default values. If the container is locked, then the new item will be marked as a decoration. <computeroutput>size</computeroutput> and <computeroutput>capacity</computeroutput> give the size for the new aux data item vector.</para><para>If the data item already exists, then we return it if either the container is not locked or the item is marked as a decoration. Otherwise we throw an exception. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="125" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="145" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1adcba0811d598f897ae6c482373428629" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SG::AuxStoreInternal::resize</definition>
+        <argsstring>(size_t sz) ATH_OVERRIDE</argsstring>
+        <name>resize</name>
+        <reimplements refid="dc/d05/classSG_1_1IAuxStore_1a3e35266b4688361e2c804b68b73892e0">resize</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+<para>Change the size of all aux data vectors. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new size.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This should be called when the size of the container changes. This should resize the vectors for all aux data items.</para><para>If the size of the container grows, the new elements should be default-initialized; if it shrinks, destructors should be run as appropriate. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="139" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="175" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1ae92332871a87ade0bd1e48dafa994d97" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SG::AuxStoreInternal::reserve</definition>
+        <argsstring>(size_t sz) ATH_OVERRIDE</argsstring>
+        <name>reserve</name>
+        <reimplements refid="dc/d05/classSG_1_1IAuxStore_1a76c099cf5b1e88b8bdfebf4c014e4d1b">reserve</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+<para>Change the capacity of all aux data vectors. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new capacity.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This should be called when the capacity of the container changes (by <computeroutput>reserve</computeroutput>). This should change the capacity for the vectors for all aux data items. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="150" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="195" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1a2adc1853052fd2b9fd101fb382471f9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SG::AuxStoreInternal::shift</definition>
+        <argsstring>(size_t pos, ptrdiff_t offs) ATH_OVERRIDE</argsstring>
+        <name>shift</name>
+        <reimplements refid="dc/d05/classSG_1_1IAuxStore_1abd4ea23e3b5eb58f8e747daaf2279068">shift</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>ptrdiff_t</type>
+          <declname>offs</declname>
+        </param>
+        <briefdescription>
+<para>Shift the elements of the container. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting index for the shift. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The (signed) amount of the shift.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This operation shifts the elements in the vectors for all aux data items, to implement an insertion or deletion. <computeroutput>offs</computeroutput> may be either positive or negative.</para><para>If <computeroutput>offs</computeroutput> is positive, then the container is growing. The container size should be increased by <computeroutput>offs</computeroutput>, the element at <computeroutput>pos</computeroutput> moved to <computeroutput>pos</computeroutput> + <computeroutput>offs</computeroutput>, and similarly for following elements. The elements between <computeroutput>pos</computeroutput> and <computeroutput>pos</computeroutput> + <computeroutput>offs</computeroutput> should be default-initialized.</para><para>If <computeroutput>offs</computeroutput> is negative, then the container is shrinking. The element at <computeroutput>pos</computeroutput> should be moved to <computeroutput>pos</computeroutput> + <computeroutput>offs</computeroutput>, and similarly for following elements. The container should then be shrunk by <computeroutput>-offs</computeroutput> elements (running destructors as appropriate). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="175" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="229" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1a40f6e8146486daebb9cc12c2b5a626a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="dd/dac/classSG_1_1unordered__set" kindref="compound">SG::auxid_set_t</ref> &amp;</type>
+        <definition>const SG::auxid_set_t &amp; SG::AuxStoreInternal::getAuxIDs</definition>
+        <argsstring>() const ATH_OVERRIDE</argsstring>
+        <name>getAuxIDs</name>
+        <reimplements refid="d3/dd5/classSG_1_1IConstAuxStore_1a3be9ddcb2b1198c3cab03c7b94764a3d">getAuxIDs</reimplements>
+        <briefdescription>
+<para>Return a set of identifiers for existing data items in this store. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should include identifiers for all items, const and non-const. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="185" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="249" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1a23e266b01b787a058136bc93af631f65" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="dd/dac/classSG_1_1unordered__set" kindref="compound">SG::auxid_set_t</ref> &amp;</type>
+        <definition>const SG::auxid_set_t &amp; SG::AuxStoreInternal::getWritableAuxIDs</definition>
+        <argsstring>() const ATH_OVERRIDE</argsstring>
+        <name>getWritableAuxIDs</name>
+        <reimplements refid="dc/d05/classSG_1_1IAuxStore_1a691e17d3a91d2733af73a4c5ae17e625">getWritableAuxIDs</reimplements>
+        <briefdescription>
+<para>Return a set of identifiers for writable data items in this store. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should include only non-const identifiers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="194" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="270" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1ac71290fd48a08ff4131de1e645b6b4dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const void *</type>
+        <definition>const void * SG::AuxStoreInternal::getIOData</definition>
+        <argsstring>(SG::auxid_t auxid) const ATH_OVERRIDE</argsstring>
+        <name>getIOData</name>
+        <reimplements refid="db/d37/classSG_1_1IAuxStoreIO_1a55ba7c049509f9b6a8b5c57e9322bcc9">getIOData</reimplements>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return a pointer to the data to be stored for one aux data item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of the desired aux data item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This will usually be a pointer to a <computeroutput>std::vector</computeroutput>; however, it may be something different for a standalone object.</para><para>Returns 0 and reports an error if the requested aux data item does not exist. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="207" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="317" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1a6a2b47cb515c1adc83220af6169ea9c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const std::type_info *</type>
+        <definition>const std::type_info * SG::AuxStoreInternal::getIOType</definition>
+        <argsstring>(SG::auxid_t auxid) const ATH_OVERRIDE</argsstring>
+        <name>getIOType</name>
+        <reimplements refid="db/d37/classSG_1_1IAuxStoreIO_1a25c3d7891a19f3881f932c3484031df2">getIOType</reimplements>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return the type of the data to be stored for one aux data item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of the desired aux data item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+For an aux data item of type <computeroutput><ref refid="d1/def/classT" kindref="compound">T</ref></computeroutput>, this will usually be <computeroutput>std::vector&lt;T&gt;</computeroutput>. For standalone objects, however, it will usually be <computeroutput><ref refid="d1/def/classT" kindref="compound">T</ref></computeroutput>; and <computeroutput>std::vector&lt;char&gt;</computeroutput> will be used instead of <computeroutput>std::vector&lt;bool&gt;</computeroutput>.</para><para>Returns 0 if the requested aux data item does not exist. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="221" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="334" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1a34ca465f3964b730da47ff59389f8545" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="dd/dac/classSG_1_1unordered__set" kindref="compound">SG::auxid_set_t</ref> &amp;</type>
+        <definition>const SG::auxid_set_t &amp; SG::AuxStoreInternal::getDynamicAuxIDs</definition>
+        <argsstring>() const ATH_OVERRIDE</argsstring>
+        <name>getDynamicAuxIDs</name>
+        <reimplements refid="db/d37/classSG_1_1IAuxStoreIO_1a09fa260bc3e6871d748d3342c602af69">getDynamicAuxIDs</reimplements>
+        <briefdescription>
+<para>Get the list of all variables that need to be handled. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="227" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="351" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1acd230c41baaae91d3dc2cc1ae9a3b59b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SG::AuxStoreInternal::lock</definition>
+        <argsstring>() ATH_OVERRIDE</argsstring>
+        <name>lock</name>
+        <reimplements refid="d3/dd5/classSG_1_1IConstAuxStore_1a6bf19cb8961665a0d4672e2d4f719aa5">lock</reimplements>
+        <briefdescription>
+<para>Lock the container. </para>        </briefdescription>
+        <detaileddescription>
+<para>After this, only decorations can be changed/modified. If the container is already locked, this is a no-op. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="236" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="363" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1a2e98e97b3ca01a085f39e33027d63834" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SG::AuxStoreInternal::clearDecorations</definition>
+        <argsstring>() ATH_OVERRIDE</argsstring>
+        <name>clearDecorations</name>
+        <reimplements refid="d3/dd5/classSG_1_1IConstAuxStore_1ab3dec2e6bc75789344ec9d31c8b8a3c3">clearDecorations</reimplements>
+        <briefdescription>
+<para>Clear all decorations. </para>        </briefdescription>
+        <detaileddescription>
+<para>Erase all decorations from the store, restoring the state to when <computeroutput>lock</computeroutput> was called. Be sure to clear the cache of the referencing container! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="246" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="377" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1a7ac1985447a8d2b73561a434f06822ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t SG::AuxStoreInternal::size</definition>
+        <argsstring>() const ATH_OVERRIDE</argsstring>
+        <name>size</name>
+        <reimplements refid="d3/dd5/classSG_1_1IConstAuxStore_1af71be6076fcf09fd0f8c1d53e704548d">size</reimplements>
+        <briefdescription>
+<para>Return the number of elements in the store. </para>        </briefdescription>
+        <detaileddescription>
+<para>May return 0 for a store with no aux data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="254" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="397" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1abacba50e0977995f28182caefc75d9ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool SG::AuxStoreInternal::setOption</definition>
+        <argsstring>(auxid_t id, const AuxDataOption &amp;option) ATH_OVERRIDE</argsstring>
+        <name>setOption</name>
+        <reimplements refid="dc/d05/classSG_1_1IAuxStore_1a371646fff1258a9f81b35d26eca3ac45">setOption</reimplements>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">auxid_t</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d7/d31/classSG_1_1AuxDataOption" kindref="compound">AuxDataOption</ref> &amp;</type>
+          <declname>option</declname>
+        </param>
+        <briefdescription>
+<para>Set an option for an auxiliary data variable. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable for which we want to set the option. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>option</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The option setting to make.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The interpretation of <computeroutput>option</computeroutput> depends on the associated auxiliary store. See <ref refid="d4/d43/PackedParameters_8h" kindref="compound">PackedParameters.h</ref> for option settings for writing packed data. Returns <computeroutput>true</computeroutput> on success, <computeroutput>false</computeroutput> otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="266" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="417" bodyend="451"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1aaec13f56e9bdb228a96d2a2a65792682" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const void *</type>
+        <definition>const void * SG::AuxStoreInternal::getIODataInternal</definition>
+        <argsstring>(auxid_t auxid, bool quiet) const </argsstring>
+        <name>getIODataInternal</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>quiet</declname>
+        </param>
+        <briefdescription>
+<para>Return a pointer to the data to be stored for one aux data item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of the desired aux data item. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>quiet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, then don&apos;t print an error on failure.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This will usually be a pointer to a <computeroutput>std::vector</computeroutput>; however, it may be something different for a standalone object.</para><para>Returns 0 and reports an error if the requested aux data item does not exist. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="281" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="287" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1ae216aba6bd1f3798955b19b0ecc16555" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SG::AuxStoreInternal::addAuxID</definition>
+        <argsstring>(auxid_t auxid)</argsstring>
+        <name>addAuxID</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Add a new auxid to the set of those being managed by this store. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxid to add. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="288" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="458" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1a03062bb63e56d14e49d32d8927554cfd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void *</type>
+        <definition>void * SG::AuxStoreInternal::getDataInternal</definition>
+        <argsstring>(SG::auxid_t auxid, size_t size, size_t capacity, bool no_lock_check)</argsstring>
+        <name>getDataInternal</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>capacity</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>no_lock_check</declname>
+        </param>
+        <briefdescription>
+<para>Return the data vector for one aux data item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of the desired aux data item. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current size of the container (in case the data item does not already exist). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>capacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current capacity of the container (in case the data item does not already exist). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>no_lock_check</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, then skip the test for a locked container.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Each aux data item is stored as a vector, with one entry per entry in the owning container. This returns a pointer to the start of the vector.</para><para>If the data item does not exist, it should be created and initialized to default values. <computeroutput>size</computeroutput> and <computeroutput>capacity</computeroutput> give the size for the new aux data item vector. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="311" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/AuxStoreInternal.cxx" bodystart="482" bodyend="499"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d1/d1c/classSG_1_1AuxStoreInternal_1a7fc7ae558ec392c387566f92b417c28b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/d1c/classSG_1_1AuxStoreInternal" kindref="compound">AuxStoreInternal</ref> &amp;</type>
+        <definition>AuxStoreInternal&amp; SG::AuxStoreInternal::operator=</definition>
+        <argsstring>(const AuxStoreInternal &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="d1/d1c/classSG_1_1AuxStoreInternal" kindref="compound">AuxStoreInternal</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="356"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An auxiliary data store that holds data internally. </para>    </briefdescription>
+    <detaileddescription>
+<para>When auxiliary data are associated with a container, the data themselves are managed by a separate `store&apos; object, described by the interfaces <computeroutput><ref refid="dc/d05/classSG_1_1IAuxStore" kindref="compound">SG::IAuxStore</ref></computeroutput> and <computeroutput><ref refid="d3/dd5/classSG_1_1IConstAuxStore" kindref="compound">SG::IConstAuxStore</ref></computeroutput>.</para><para>This class is an implementation of those interfaces that stores the data itself. This is suitable, for example, for transient auxiliary data. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1912">
+        <label>AuxStoreInternalTest</label>
+        <link refid="dc/d58/classAuxStoreInternalTest"/>
+        <childnode refid="1908" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1910">
+        <label>SG::IConstAuxStore</label>
+        <link refid="d3/dd5/classSG_1_1IConstAuxStore"/>
+      </node>
+      <node id="1911">
+        <label>SG::IAuxStoreIO</label>
+        <link refid="db/d37/classSG_1_1IAuxStoreIO"/>
+      </node>
+      <node id="1909">
+        <label>SG::IAuxStore</label>
+        <link refid="dc/d05/classSG_1_1IAuxStore"/>
+        <childnode refid="1910" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1908">
+        <label>SG::AuxStoreInternal</label>
+        <link refid="d1/d1c/classSG_1_1AuxStoreInternal"/>
+        <childnode refid="1909" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1911" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1913">
+        <label>AuxStoreTest</label>
+        <link refid="df/d7b/classAuxStoreTest"/>
+        <childnode refid="1908" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1914">
+        <label>SG::AuxStoreStandalone</label>
+        <link refid="dd/d55/classSG_1_1AuxStoreStandalone"/>
+        <childnode refid="1908" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1922">
+        <label>Internal::hash_code_base&lt;size_t , size_t , Internal::identity&lt; size_t &gt; , std::equal_to&lt; size_t &gt; , hash&lt; size_t &gt; , Internal::mod_range_hashing , Internal::default_ranged_hash , cache_hash_code&gt;</label>
+        <link refid="d0/d2e/classInternal_1_1hash__code__base"/>
+      </node>
+      <node id="1923">
+        <label>Internal::map_base&lt;size_t , size_t , Internal::identity&lt; size_t &gt; , unique_keys, hashtable&lt;size_t , size_t , std::allocator&lt; size_t &gt; , Internal::identity&lt; size_t &gt; , std::equal_to&lt; size_t &gt; , hash&lt; size_t &gt; , Internal::mod_range_hashing , Internal::default_ranged_hash , Internal::prime_rehash_policy , cache_hash_code, constant_iterators, unique_keys&gt; &gt;</label>
+        <link refid="d1/d54/classInternal_1_1map__base"/>
+      </node>
+      <node id="1917">
+        <label>SG::IConstAuxStore</label>
+        <link refid="d3/dd5/classSG_1_1IConstAuxStore"/>
+      </node>
+      <node id="1918">
+        <label>SG::IAuxStoreIO</label>
+        <link refid="db/d37/classSG_1_1IAuxStoreIO"/>
+      </node>
+      <node id="1920">
+        <label>SG::hashtable&lt; size_t, size_t, std::allocator&lt; size_t &gt;, Internal::identity&lt; size_t &gt;, std::equal_to&lt; size_t &gt;, hash&lt; size_t &gt;, Internal::mod_range_hashing, Internal::default_ranged_hash, Internal::prime_rehash_policy, false, true, true &gt;</label>
+        <link refid="de/d63/classSG_1_1hashtable"/>
+        <childnode refid="1921" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1922" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1923" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1916">
+        <label>SG::IAuxStore</label>
+        <link refid="dc/d05/classSG_1_1IAuxStore"/>
+        <childnode refid="1917" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1915">
+        <label>SG::AuxStoreInternal</label>
+        <link refid="d1/d1c/classSG_1_1AuxStoreInternal"/>
+        <childnode refid="1916" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1918" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1919" relation="usage">
+          <edgelabel>m_auxids</edgelabel>
+        </childnode>
+        <childnode refid="1924" relation="usage">
+          <edgelabel>m_mutex</edgelabel>
+        </childnode>
+      </node>
+      <node id="1921">
+        <label>Internal::rehash_base&lt;Internal::prime_rehash_policy , hashtable&lt;size_t , size_t , std::allocator&lt; size_t &gt; , Internal::identity&lt; size_t &gt; , std::equal_to&lt; size_t &gt; , hash&lt; size_t &gt; , Internal::mod_range_hashing , Internal::default_ranged_hash , Internal::prime_rehash_policy , cache_hash_code, constant_iterators, unique_keys&gt; &gt;</label>
+        <link refid="db/d2b/classInternal_1_1rehash__base"/>
+      </node>
+      <node id="1924">
+        <label>mutex</label>
+      </node>
+      <node id="1919">
+        <label>SG::unordered_set&lt; size_t &gt;</label>
+        <link refid="dd/dac/classSG_1_1unordered__set"/>
+        <childnode refid="1920" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" line="41" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/AuxStoreInternal.h" bodystart="39" bodyend="357"/>
+    <listofallmembers>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1ae216aba6bd1f3798955b19b0ecc16555" prot="protected" virt="non-virtual"><scope>SG::AuxStoreInternal</scope><name>addAuxID</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1adaae95b4226c1514d5327ae16c9a15cd" prot="public" virt="non-virtual"><scope>SG::AuxStoreInternal</scope><name>AuxStoreInternal</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1af6f674612888bd4ac594ce7528683d5c" prot="public" virt="non-virtual"><scope>SG::AuxStoreInternal</scope><name>AuxStoreInternal</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1a2e98e97b3ca01a085f39e33027d63834" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>clearDecorations</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1a40f6e8146486daebb9cc12c2b5a626a6" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>getAuxIDs</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1a90b2121f7a3ae82b0cd339cb5d212d48" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>getData</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1a007edc4aa2d7bfbf7e1cada713c1dbea" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>getData</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1a03062bb63e56d14e49d32d8927554cfd" prot="protected" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>getDataInternal</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1aff9be84c9b5f841639e7bc471d07c983" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>getDecoration</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1a34ca465f3964b730da47ff59389f8545" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>getDynamicAuxIDs</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1ac71290fd48a08ff4131de1e645b6b4dc" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>getIOData</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1aaec13f56e9bdb228a96d2a2a65792682" prot="protected" virt="non-virtual"><scope>SG::AuxStoreInternal</scope><name>getIODataInternal</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1a6a2b47cb515c1adc83220af6169ea9c0" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>getIOType</name></member>
+      <member refid="db/d37/classSG_1_1IAuxStoreIO_1ad902a6d9ee41b239fbca73870cebe237" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>getSelectedAuxIDs</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1a23e266b01b787a058136bc93af631f65" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>getWritableAuxIDs</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1af1225cd8a55749cc021aef2848d1009a" prot="private" virt="non-virtual"><scope>SG::AuxStoreInternal</scope><name>guard_t</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1acd230c41baaae91d3dc2cc1ae9a3b59b" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>lock</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1a97ec8a5888e5e5adb43319b9744d4452" prot="private" virt="non-virtual"><scope>SG::AuxStoreInternal</scope><name>m_auxids</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1a94a4f5de3ec5963d258870df0c625511" prot="private" virt="non-virtual"><scope>SG::AuxStoreInternal</scope><name>m_isDecoration</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1a10c1cb5f2ba1a0f8f87cab74bb728343" prot="private" virt="non-virtual"><scope>SG::AuxStoreInternal</scope><name>m_locked</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1a7a26b1a8e01a232a5c2bd88789c3198f" prot="private" virt="non-virtual"><scope>SG::AuxStoreInternal</scope><name>m_mutex</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1af059ba519ee2e3001a6f4f22553e9ae1" prot="private" virt="non-virtual"><scope>SG::AuxStoreInternal</scope><name>m_standalone</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1a3aa6f8108cc3c54f9d95eac2548cb0d5" prot="private" virt="non-virtual"><scope>SG::AuxStoreInternal</scope><name>m_tick</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1a14872d3831a9635da408703601d4d049" prot="private" virt="non-virtual"><scope>SG::AuxStoreInternal</scope><name>m_tsAuxids</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1ac16cb985327f90f98bfacde0bb6cf128" prot="private" virt="non-virtual"><scope>SG::AuxStoreInternal</scope><name>m_vecs</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1acdaf620e3b86a42a6419c5d6946855ce" prot="private" virt="non-virtual"><scope>SG::AuxStoreInternal</scope><name>mutex_t</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1a7fc7ae558ec392c387566f92b417c28b" prot="private" virt="non-virtual"><scope>SG::AuxStoreInternal</scope><name>operator=</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1ae92332871a87ade0bd1e48dafa994d97" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>reserve</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1adcba0811d598f897ae6c482373428629" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>resize</name></member>
+      <member refid="db/d37/classSG_1_1IAuxStoreIO_1a0ddbdecb0f824866d4dd51b666264a67" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>selectAux</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1abacba50e0977995f28182caefc75d9ad" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>setOption</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1a2adc1853052fd2b9fd101fb382471f9b" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>shift</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1a7ac1985447a8d2b73561a434f06822ab" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>size</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1aea3863b3a7e4cf2909150703358cfde3" prot="public" virt="non-virtual"><scope>SG::AuxStoreInternal</scope><name>standalone</name></member>
+      <member refid="d1/d1c/classSG_1_1AuxStoreInternal_1ac2a5ec4bc88d4ee304348a6e03b4a52b" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>~AuxStoreInternal</name></member>
+      <member refid="db/d37/classSG_1_1IAuxStoreIO_1a78166aac5abe83f66eef9946a23ced75" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>~IAuxStoreIO</name></member>
+      <member refid="d3/dd5/classSG_1_1IConstAuxStore_1a2acc9ded5fe9a64c8f508d3c0d7431a5" prot="public" virt="virtual"><scope>SG::AuxStoreInternal</scope><name>~IConstAuxStore</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="da/dec/copyAuxStoreThinned_8h" kind="file">
+    <compoundname>copyAuxStoreThinned.h</compoundname>
+    <includedby refid="d8/d9e/copyThinned_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/tools/copyThinned.h</includedby>
+    <includedby refid="dc/d3a/copyAuxStoreThinned_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/src/copyAuxStoreThinned.cxx</includedby>
+    <includedby refid="d6/d75/copyAuxStoreThinned__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/copyAuxStoreThinned_test.cxx</includedby>
+    <invincdepgraph>
+      <node id="53150">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/copyThinned_test.cxx</label>
+        <link refid="d3/d98/copyThinned__test_8cxx"/>
+      </node>
+      <node id="53148">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/tools/copyAuxStoreThinned.h</label>
+        <link refid="copyAuxStoreThinned.h"/>
+        <childnode refid="53149" relation="include">
+        </childnode>
+        <childnode refid="53151" relation="include">
+        </childnode>
+      </node>
+      <node id="53151">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/copyAuxStoreThinned_test.cxx</label>
+        <link refid="d6/d75/copyAuxStoreThinned__test_8cxx"/>
+      </node>
+      <node id="53149">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/tools/copyThinned.h</label>
+        <link refid="d8/d9e/copyThinned_8h"/>
+        <childnode refid="53150" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="dd/d59/namespaceSG">SG</innernamespace>
+    <briefdescription>
+<para>Helper to copy an aux store while applying thinning. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>scott snyder &lt;<ulink url="mailto:snyder@bnl.gov">snyder@bnl.gov</ulink>&gt; </para></simplesect>
+<simplesect kind="date"><para>Jul, 2014 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>This<sp/>file&apos;s<sp/>extension<sp/>implies<sp/>that<sp/>it&apos;s<sp/>C,<sp/>but<sp/>it&apos;s<sp/>really<sp/>-*-<sp/>C++<sp/>-*-.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id$</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight><highlight class="preprocessor">#ifndef<sp/>ATHCONTAINERS_COPYAUXSTORETHINNED_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ATHCONTAINERS_COPYAUXSTORETHINNED_H</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">IThinningSvc;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SG<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">IConstAuxStore;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">IAuxStore;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/d59/namespaceSG_1a38b539ad86491a55bf89748a05e7906a" kindref="member" tooltip="Helper to copy an aux store while applying thinning.">copyAuxStoreThinned</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d3/dd5/classSG_1_1IConstAuxStore" kindref="compound" tooltip="Interface for const operations on an auxiliary store.">SG::IConstAuxStore</ref>&amp;<sp/>orig,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dc/d05/classSG_1_1IAuxStore" kindref="compound" tooltip="Interface for non-const operations on an auxiliary store.">SG::IAuxStore</ref>&amp;<sp/>copy,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IThinningSvc*<sp/>svc);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>SG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>not<sp/>ATHCONTAINERS_COPYAUXSTORETHINNED_H</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/tools/copyAuxStoreThinned.h"/>
+  </compounddef>
+</doxygen>

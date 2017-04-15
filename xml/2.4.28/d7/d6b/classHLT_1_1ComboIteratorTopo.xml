@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d7/d6b/classHLT_1_1ComboIteratorTopo" kind="class" prot="public">
+    <compoundname>HLT::ComboIteratorTopo</compoundname>
+    <basecompoundref refid="d2/dda/classHLT_1_1ComboIterator" prot="public" virt="non-virtual">HLT::ComboIterator</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d7/d6b/classHLT_1_1ComboIteratorTopo_1a34ad111f215247bd5471f283c7aacced" prot="private" static="no" mutable="no">
+        <type>HLT::te_id_type</type>
+        <definition>HLT::te_id_type HLT::ComboIteratorTopo::m_spanId</definition>
+        <argsstring></argsstring>
+        <name>m_spanId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/ComboIterator.h" line="179" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/ComboIterator.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d7/d6b/classHLT_1_1ComboIteratorTopo_1a818f8fda1db72314735483578d2073f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HLT::ComboIteratorTopo::ComboIteratorTopo</definition>
+        <argsstring>(const std::vector&lt; TEVec &gt; &amp;tes, const TrigNavStructure *nav, HLT::te_id_type topoSpan)</argsstring>
+        <name>ComboIteratorTopo</name>
+        <param>
+          <type>const std::vector&lt; TEVec &gt; &amp;</type>
+          <declname>tes</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d08/classHLT_1_1TrigNavStructure" kindref="compound">TrigNavStructure</ref> *</type>
+          <declname>nav</declname>
+        </param>
+        <param>
+          <type>HLT::te_id_type</type>
+          <declname>topoSpan</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/ComboIterator.h" line="171" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/ComboIterator.cxx" bodystart="195" bodyend="200"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="d7/d6b/classHLT_1_1ComboIteratorTopo_1ad7054ae4ce4615822f08ed16099c7611" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool HLT::ComboIteratorTopo::overlaps</definition>
+        <argsstring>(const TriggerElement *t1, const TriggerElement *t2) const </argsstring>
+        <name>overlaps</name>
+        <reimplements refid="d2/dda/classHLT_1_1ComboIterator_1aa2f3778cbbba906894755a8069550808">overlaps</reimplements>
+        <param>
+          <type>const <ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> *</type>
+          <declname>t1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> *</type>
+          <declname>t2</declname>
+        </param>
+        <briefdescription>
+<para>Method used to test overlaps between two TEs. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>result of the overlap test; returns true if the two TEs correspond to the same RoI, false otherwise. </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first TE to check. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second TE to check. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/ComboIterator.h" line="176" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/ComboIterator.cxx" bodystart="224" bodyend="254"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d7/d6b/classHLT_1_1ComboIteratorTopo_1a5c586ccd2d95118116f6bd2ddca4899f" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HLT::ComboIteratorTopo::traverseUntilSeedsTopo</definition>
+        <argsstring>(const TriggerElement *start, std::set&lt; const TriggerElement * &gt; &amp;topos) const </argsstring>
+        <name>traverseUntilSeedsTopo</name>
+        <param>
+          <type>const <ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>std::set&lt; const <ref refid="dd/db8/classHLT_1_1TriggerElement" kindref="compound">TriggerElement</ref> * &gt; &amp;</type>
+          <declname>topos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/ComboIterator.h" line="178" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/Root/ComboIterator.cxx" bodystart="202" bodyend="222"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3977">
+        <label>HLT::ComboIteratorTopo</label>
+        <link refid="d7/d6b/classHLT_1_1ComboIteratorTopo"/>
+        <childnode refid="3978" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3979">
+        <label>HLT::ComboIteratorBase</label>
+        <link refid="db/d54/classHLT_1_1ComboIteratorBase"/>
+      </node>
+      <node id="3978">
+        <label>HLT::ComboIterator</label>
+        <link refid="d2/dda/classHLT_1_1ComboIterator"/>
+        <childnode refid="3979" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3987">
+        <label>asg::AsgMessaging</label>
+        <link refid="d1/d97/classasg_1_1AsgMessaging"/>
+      </node>
+      <node id="3986">
+        <label>HLT::TrigHolderStructure</label>
+        <link refid="da/d94/classHLT_1_1TrigHolderStructure"/>
+        <childnode refid="3987" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3980">
+        <label>HLT::ComboIteratorTopo</label>
+        <link refid="d7/d6b/classHLT_1_1ComboIteratorTopo"/>
+        <childnode refid="3981" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3982">
+        <label>HLT::ComboIteratorBase</label>
+        <link refid="db/d54/classHLT_1_1ComboIteratorBase"/>
+      </node>
+      <node id="3985">
+        <label>HLT::TriggerElementFactory</label>
+        <link refid="d2/de9/classHLT_1_1TriggerElementFactory"/>
+      </node>
+      <node id="3984">
+        <label>HLT::TriggerElement</label>
+        <link refid="dd/db8/classHLT_1_1TriggerElement"/>
+      </node>
+      <node id="3983">
+        <label>HLT::TrigNavStructure</label>
+        <link refid="d9/d08/classHLT_1_1TrigNavStructure"/>
+        <childnode refid="3984" relation="usage">
+          <edgelabel>m_unspecifiedTE</edgelabel>
+        </childnode>
+        <childnode refid="3985" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="3986" relation="usage">
+          <edgelabel>m_holderstorage</edgelabel>
+        </childnode>
+      </node>
+      <node id="3981">
+        <label>HLT::ComboIterator</label>
+        <link refid="d2/dda/classHLT_1_1ComboIterator"/>
+        <childnode refid="3982" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3983" relation="usage">
+          <edgelabel>m_nav</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/ComboIterator.h" line="169" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigNavStructure/TrigNavStructure/ComboIterator.h" bodystart="169" bodyend="181"/>
+    <listofallmembers>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1a4acb180b01a1cac8b60935f2df42615e" prot="public" virt="virtual"><scope>HLT::ComboIteratorTopo</scope><name>combination</name></member>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1a591c41d2ef2abdf62d256e12c0530d0d" prot="public" virt="non-virtual"><scope>HLT::ComboIteratorTopo</scope><name>ComboIterator</name></member>
+      <member refid="db/d54/classHLT_1_1ComboIteratorBase_1ab11b0d98a8e123b209d9049a772f4368" prot="public" virt="non-virtual"><scope>HLT::ComboIteratorTopo</scope><name>ComboIteratorBase</name></member>
+      <member refid="d7/d6b/classHLT_1_1ComboIteratorTopo_1a818f8fda1db72314735483578d2073f9" prot="public" virt="non-virtual"><scope>HLT::ComboIteratorTopo</scope><name>ComboIteratorTopo</name></member>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1aff78336b9be49a70d8f101bcb28d1dbf" prot="protected" virt="non-virtual"><scope>HLT::ComboIteratorTopo</scope><name>increment</name></member>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1a51ebb8ab86f9d5c757a2442f665c1f36" prot="protected" virt="non-virtual"><scope>HLT::ComboIteratorTopo</scope><name>incrementByOne</name></member>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1a34e6771e79433cabb5d59e839e81050e" prot="protected" virt="non-virtual"><scope>HLT::ComboIteratorTopo</scope><name>invalidate</name></member>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1a3c04bcd05974e826201233ce7363b82d" prot="public" virt="virtual"><scope>HLT::ComboIteratorTopo</scope><name>isValid</name></member>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1a9c8396341e7d44e25404ae5dbbfcae82" prot="protected" virt="non-virtual"><scope>HLT::ComboIteratorTopo</scope><name>m_comb</name></member>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1a9efcd90bb2540bdc9eb8bd70d947f4e0" prot="protected" virt="non-virtual"><scope>HLT::ComboIteratorTopo</scope><name>m_idx</name></member>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1a25954d8f882f37ac7a1e7b87fbe25a14" prot="protected" virt="non-virtual"><scope>HLT::ComboIteratorTopo</scope><name>m_nav</name></member>
+      <member refid="d7/d6b/classHLT_1_1ComboIteratorTopo_1a34ad111f215247bd5471f283c7aacced" prot="private" virt="non-virtual"><scope>HLT::ComboIteratorTopo</scope><name>m_spanId</name></member>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1a053975c028b54ba313342d86f983c25e" prot="protected" virt="non-virtual"><scope>HLT::ComboIteratorTopo</scope><name>m_tes</name></member>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1a51abe5a618e777730467111df583aaca" prot="protected" virt="non-virtual"><scope>HLT::ComboIteratorTopo</scope><name>m_valid</name></member>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1ac2542fe05f83c7f88a084c43b3aeae6c" prot="public" virt="virtual"><scope>HLT::ComboIteratorTopo</scope><name>operator*</name></member>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1aeff518b8165b77701455d13d4262b556" prot="public" virt="virtual"><scope>HLT::ComboIteratorTopo</scope><name>operator++</name></member>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1aae309bb41ead2c8fa6a6345dbbc39d07" prot="public" virt="virtual"><scope>HLT::ComboIteratorTopo</scope><name>operator++</name></member>
+      <member refid="d7/d6b/classHLT_1_1ComboIteratorTopo_1ad7054ae4ce4615822f08ed16099c7611" prot="protected" virt="virtual"><scope>HLT::ComboIteratorTopo</scope><name>overlaps</name></member>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1ac4667d44d15ae9cec21220f7ec118218" prot="protected" virt="non-virtual" ambiguityscope="HLT::ComboIterator::"><scope>HLT::ComboIteratorTopo</scope><name>overlaps</name></member>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1aa6a13afc691e7a6dd429271834cec122" prot="protected" virt="non-virtual"><scope>HLT::ComboIteratorTopo</scope><name>print</name></member>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1a4711ff7d9a43328a6127ecea214f21b9" prot="protected" virt="non-virtual"><scope>HLT::ComboIteratorTopo</scope><name>reset</name></member>
+      <member refid="d2/dda/classHLT_1_1ComboIterator_1a976b57f9bbd8b8beef38cdd79302a07f" prot="public" virt="virtual"><scope>HLT::ComboIteratorTopo</scope><name>rewind</name></member>
+      <member refid="d7/d6b/classHLT_1_1ComboIteratorTopo_1a5c586ccd2d95118116f6bd2ddca4899f" prot="private" virt="non-virtual"><scope>HLT::ComboIteratorTopo</scope><name>traverseUntilSeedsTopo</name></member>
+      <member refid="db/d54/classHLT_1_1ComboIteratorBase_1a2fd908ebdd135f475a087ac3b187e25f" prot="public" virt="virtual"><scope>HLT::ComboIteratorTopo</scope><name>~ComboIteratorBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

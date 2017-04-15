@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d9/dbe/Lvl1Item_8h" kind="file">
+    <compoundname>Lvl1Item.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes refid="d6/d20/xAODCore_2xAODCore_2CLASS__DEF_8h" local="yes">xAODCore/CLASS_DEF.h</includes>
+    <includedby refid="df/dab/CacheGlobalMemory_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigDecisionTool/Root/CacheGlobalMemory.cxx</includedby>
+    <includedby refid="da/d5b/ChainGroup_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigDecisionTool/Root/ChainGroup.cxx</includedby>
+    <includedby refid="df/d51/DecisionUnpackerStandalone_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigDecisionTool/Root/DecisionUnpackerStandalone.cxx</includedby>
+    <includedby refid="d0/dda/Lvl1Item_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/Root/Lvl1Item.cxx</includedby>
+    <includedby refid="d3/d73/Lvl1Result_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/TrigSteeringEvent/Lvl1Result.h</includedby>
+    <includedby refid="d6/dd5/TrigSteeringEventDict_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/TrigSteeringEvent/TrigSteeringEventDict.h</includedby>
+    <incdepgraph>
+      <node id="331136">
+        <label>stdint.h</label>
+      </node>
+      <node id="331137">
+        <label>string</label>
+      </node>
+      <node id="331140">
+        <label>SGTools/CLASS_DEF.h</label>
+      </node>
+      <node id="331138">
+        <label>vector</label>
+      </node>
+      <node id="331135">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/TrigSteeringEvent/Lvl1Item.h</label>
+        <link refid="Lvl1Item.h"/>
+        <childnode refid="331136" relation="include">
+        </childnode>
+        <childnode refid="331137" relation="include">
+        </childnode>
+        <childnode refid="331138" relation="include">
+        </childnode>
+        <childnode refid="331139" relation="include">
+        </childnode>
+      </node>
+      <node id="331139">
+        <label>xAODCore/CLASS_DEF.h</label>
+        <link refid="d6/d20/xAODCore_2xAODCore_2CLASS__DEF_8h"/>
+        <childnode refid="331140" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="331143">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/TrigSteeringEvent/TrigSteeringEventDict.h</label>
+        <link refid="d6/dd5/TrigSteeringEventDict_8h_source"/>
+      </node>
+      <node id="331142">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/TrigSteeringEvent/Lvl1Result.h</label>
+        <link refid="d3/d73/Lvl1Result_8h_source"/>
+        <childnode refid="331143" relation="include">
+        </childnode>
+      </node>
+      <node id="331141">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/TrigSteeringEvent/Lvl1Item.h</label>
+        <link refid="Lvl1Item.h"/>
+        <childnode refid="331142" relation="include">
+        </childnode>
+        <childnode refid="331143" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="dc/d40/classLVL1CTP_1_1Lvl1Item" prot="public">LVL1CTP::Lvl1Item</innerclass>
+    <innernamespace refid="d8/d44/namespaceLVL1CTP">LVL1CTP</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="comment">//<sp/>-*-<sp/>C++<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/**********************************************************************************</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>@Project:<sp/>HLT</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>@Package:<sp/>TrigSteeringEvent</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>@Class<sp/><sp/>:<sp/>Lvl1Result</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>@brief<sp/>container<sp/>for<sp/>compact<sp/>version<sp/>of<sp/>the<sp/>results<sp/>of<sp/>all<sp/>three<sp/>trigger<sp/>levels</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>@author<sp/>Nicolas<sp/>Berger<sp/><sp/>&lt;Nicolas.Berger@cern.ch&gt;<sp/><sp/>-<sp/>CERN</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>@author<sp/>Till<sp/>Eifert<sp/><sp/><sp/><sp/><sp/>&lt;Till.Eifert@cern.ch&gt;<sp/><sp/><sp/><sp/><sp/>-<sp/>U.<sp/>of<sp/>Geneva,<sp/>Switzerland</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>@author<sp/>Ricardo<sp/>Goncalo<sp/>&lt;Jose.Goncalo@cern.ch&gt;<sp/><sp/><sp/><sp/>-<sp/>Royal<sp/>Holloway,<sp/>U.<sp/>of<sp/>London</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>File<sp/>and<sp/>Version<sp/>Information:</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>$Id:<sp/>Lvl1Result.h,v<sp/>1.8<sp/>2008-05-15<sp/>19:17:06<sp/>eifert<sp/>Exp<sp/>$</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>**********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TRIGSTEERINGEVENT_Lvl1Item_H</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TRIGSTEERINGEVENT_Lvl1Item_H</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d6/d20/xAODCore_2xAODCore_2CLASS__DEF_8h" kindref="compound" tooltip="File providing the different SG_BASE macros.">xAODCore/CLASS_DEF.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">LVL1CTP<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="dc/d40/classLVL1CTP_1_1Lvl1Item" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="dc/d40/classLVL1CTP_1_1Lvl1Item" kindref="compound">Lvl1Item</ref><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d40/classLVL1CTP_1_1Lvl1Item" kindref="compound">Lvl1Item</ref>(<sp/>std::string<sp/>n,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hash,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>passBP<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>passAP<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>passAV<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>factor<sp/>=<sp/>1)<sp/>:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_name(n),<sp/>m_hashId(hash),<sp/>m_passBP(passBP),<sp/>m_passAP(passAP),<sp/>m_passAV(passAV),</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_prescaleFactor(factor)<sp/>{}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><sp/>name()</highlight><highlight class="keyword"><sp/><sp/><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_name;<sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hashId()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_hashId;<sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isPassedBeforePrescale()</highlight><highlight class="keyword"><sp/>const<sp/><sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_passBP;<sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isPassedAfterPrescale()</highlight><highlight class="keyword"><sp/><sp/>const<sp/><sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_passAP;<sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isPassedAfterVeto()</highlight><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/><sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_passAV;<sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isPassed()</highlight><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/><sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>isPassedAfterVeto();<sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isPrescaled()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>isPassedBeforePrescale()<sp/>&amp;&amp;<sp/>!<sp/>isPassedAfterPrescale();<sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isVeto()</highlight><highlight class="keyword"><sp/>const<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>isPassedAfterPrescale()<sp/><sp/>&amp;&amp;<sp/>!<sp/>isPassedAfterVeto();<sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>prescaleFactor()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_prescaleFactor;<sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setName<sp/><sp/>(std::string<sp/>name)<sp/>{<sp/>m_name<sp/>=<sp/>name;<sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setHashId(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hash)<sp/>{<sp/>m_hashId<sp/>=<sp/>hash;<sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setPrescaleFactor(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>factor)<sp/>{<sp/>m_prescaleFactor<sp/>=<sp/>factor;<sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>m_name;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_hashId;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_passBP,<sp/>m_passAP,<sp/>m_passAV;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>m_prescaleFactor;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>of<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/TrigSteeringEvent/Lvl1Item.h"/>
+  </compounddef>
+</doxygen>

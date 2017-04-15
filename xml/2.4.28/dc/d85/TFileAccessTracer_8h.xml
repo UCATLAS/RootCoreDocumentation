@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dc/d85/TFileAccessTracer_8h" kind="file">
+    <compoundname>TFileAccessTracer.h</compoundname>
+    <includes local="no">set</includes>
+    <includes local="no">string</includes>
+    <includes local="no">TString.h</includes>
+    <includes local="no">TInetAddress.h</includes>
+    <includedby refid="d3/dd4/TEvent_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx</includedby>
+    <includedby refid="de/d20/TFileAccessTracer_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TFileAccessTracer.cxx</includedby>
+    <includedby refid="d4/db0/ut__xaodrootaccess__tfileaccesstracer__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/test/ut_xaodrootaccess_tfileaccesstracer_test.cxx</includedby>
+    <incdepgraph>
+      <node id="412750">
+        <label>TInetAddress.h</label>
+      </node>
+      <node id="412748">
+        <label>string</label>
+      </node>
+      <node id="412749">
+        <label>TString.h</label>
+      </node>
+      <node id="412747">
+        <label>set</label>
+      </node>
+      <node id="412746">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileAccessTracer.h</label>
+        <link refid="TFileAccessTracer.h"/>
+        <childnode refid="412747" relation="include">
+        </childnode>
+        <childnode refid="412748" relation="include">
+        </childnode>
+        <childnode refid="412749" relation="include">
+        </childnode>
+        <childnode refid="412750" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="d3/d9f/classxAOD_1_1TFileAccessTracer" prot="public">xAOD::TFileAccessTracer</innerclass>
+    <innerclass refid="d3/d37/classxAOD_1_1TFileAccessTracer_1_1AccessedFile" prot="private">xAOD::TFileAccessTracer::AccessedFile</innerclass>
+    <innernamespace refid="dd/d44/namespacexAOD">xAOD</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Dear<sp/>emacs,<sp/>this<sp/>is<sp/>-*-<sp/>c++<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>TFileAccessTracer.h<sp/>781356<sp/>2016-10-31<sp/>14:03:28Z<sp/>krasznaa<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>XAODROOTACCESS_TOOLS_TFILEACCESSTRACER_H</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>XAODROOTACCESS_TOOLS_TFILEACCESSTRACER_H</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>System<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;set&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ROOT<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TString.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TInetAddress.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Forward<sp/>declaration(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">TFile;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">xAOD<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ReadStats;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="d3/d9f/classxAOD_1_1TFileAccessTracer" refkind="compound"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d3/d9f/classxAOD_1_1TFileAccessTracer" kindref="compound">TFileAccessTracer</ref><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d9f/classxAOD_1_1TFileAccessTracer_1aaea0382d31e268d07751e83e7785b8c1" kindref="member" tooltip="Default constructor.">TFileAccessTracer</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d9f/classxAOD_1_1TFileAccessTracer_1a74909672fd4163601d9506fae8eeb00f" kindref="member" tooltip="Destructor.">~TFileAccessTracer</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d9f/classxAOD_1_1TFileAccessTracer_1a32f872cebfa575219ad5835092877049" kindref="member" tooltip="Add information about a new file that got accessed.">add</ref>(<sp/>const<sp/>::TFile&amp;<sp/>file<sp/>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="d3/d9f/classxAOD_1_1TFileAccessTracer_1a6aafa0ab7c6c5f9486ed9dd02d6d2a46" kindref="member" tooltip="The address of the server that information is sent to.">serverAddress</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d9f/classxAOD_1_1TFileAccessTracer_1aca155bcf023d5c70a85ebf7ea4c3777b" kindref="member" tooltip="Set the address of the server that information is sent to.">setServerAddress</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>addr<sp/>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>::Double_t<sp/><ref refid="d3/d9f/classxAOD_1_1TFileAccessTracer_1ac9e65f41beed2d30ae4c3c525dc250b7" kindref="member" tooltip="Fraction of jobs that should send monitoring information.">monitoredFraction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d9f/classxAOD_1_1TFileAccessTracer_1a5d444cd0cf697a59c4c06302affcef68" kindref="member" tooltip="Set the fraction of jobs that should send monitoring information.">setMonitoredFraction</ref>(<sp/>::Double_t<sp/>value<sp/>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d9f/classxAOD_1_1TFileAccessTracer_1aada06df6967ffcfc19bd3b26bf3de3da" kindref="member" tooltip="Function for turning data submission on/off.">enableDataSubmission</ref>(<sp/>::Bool_t<sp/>value<sp/>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AccessedFile<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::TString<sp/>filePath;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::TString<sp/>fileName;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d1/d43/DataList_8h_1a331f1405e2b4323d37655e725a8f5b63" kindref="member" tooltip="List ordering relation.">operator&lt; </ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>AccessedFile&amp;<sp/>rhs<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::TString<sp/>fullFilePath()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::set&lt;<sp/>AccessedFile<sp/>&gt;<sp/>m_accessedFiles;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>m_serverAddress;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>::TInetAddress<sp/>m_serverInetAddress;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>::Double_t<sp/>m_monitoredFraction;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/daf/classxAOD_1_1ReadStats" kindref="compound">ReadStats</ref>*<sp/>m_readStats;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>static<sp/>::Bool_t<sp/>m_enableDataSumbission;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/>};<sp/></highlight><highlight class="comment">//<sp/>class<sp/>TFileAccessTracer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>xAOD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>XAODROOTACCESS_TOOLS_TFILEACCESSTRACER_H</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileAccessTracer.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d6/d91/HSG3TrigLeptonSFTool_8cxx" kind="file">
+    <compoundname>HSG3TrigLeptonSFTool.cxx</compoundname>
+    <includes local="yes">TError.h</includes>
+    <includes refid="d5/da0/HSG3TrigLeptonSFTool_8h" local="yes">TrigMuonEfficiency/HSG3TrigLeptonSFTool.h</includes>
+    <includes refid="d3/d1d/LeptonTriggerSF_8h" local="yes">TrigMuonEfficiency/LeptonTriggerSF.h</includes>
+    <incdepgraph>
+      <node id="328138">
+        <label>TrigMuonEfficiency/HSG3TrigLeptonSFTool.h</label>
+        <link refid="d5/da0/HSG3TrigLeptonSFTool_8h_source"/>
+        <childnode refid="328139" relation="include">
+        </childnode>
+        <childnode refid="328140" relation="include">
+        </childnode>
+        <childnode refid="328141" relation="include">
+        </childnode>
+      </node>
+      <node id="328142">
+        <label>TrigMuonEfficiency/LeptonTriggerSF.h</label>
+        <link refid="d3/d1d/LeptonTriggerSF_8h_source"/>
+        <childnode refid="328143" relation="include">
+        </childnode>
+        <childnode refid="328144" relation="include">
+        </childnode>
+        <childnode refid="328140" relation="include">
+        </childnode>
+      </node>
+      <node id="328136">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/HSG3TrigLeptonSFTool.cxx</label>
+        <link refid="HSG3TrigLeptonSFTool.cxx"/>
+        <childnode refid="328137" relation="include">
+        </childnode>
+        <childnode refid="328138" relation="include">
+        </childnode>
+        <childnode refid="328142" relation="include">
+        </childnode>
+      </node>
+      <node id="328140">
+        <label>string</label>
+      </node>
+      <node id="328144">
+        <label>map</label>
+      </node>
+      <node id="328137">
+        <label>TError.h</label>
+      </node>
+      <node id="328143">
+        <label>vector</label>
+      </node>
+      <node id="328139">
+        <label>utility</label>
+      </node>
+      <node id="328141">
+        <label>Rtypes.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>$Id:<sp/>HSG3TrigLeptonSFTool.cxx<sp/>523458<sp/>2012-10-27<sp/>01:18:33Z<sp/>takashi<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ROOT<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TError.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Local<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TrigMuonEfficiency/HSG3TrigLeptonSFTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TrigMuonEfficiency/LeptonTriggerSF.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">HSG3TrigLeptonSFTool::HSG3TrigLeptonSFTool(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>dir,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double_t<sp/>intLumiJ<sp/>=<sp/>226.391,<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double_t<sp/>intLumiK<sp/>=<sp/>590.36,<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double_t<sp/>intLumiL<sp/>=<sp/>1404.79,<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double_t<sp/>intLumiM<sp/>=<sp/>1026.94<sp/>)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/>:<sp/>fLeptonTriggerSF(<sp/>new<sp/><ref refid="d3/d83/classLeptonTriggerSF" kindref="compound" tooltip="Class providing trigger scale factors for analyses using electrons and muons.">LeptonTriggerSF</ref>(<sp/>dir<sp/>)<sp/>),</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/>fIntLumiJ(<sp/>intLumiJ<sp/>),<sp/>fIntLumiK(<sp/>intLumiK<sp/>),</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/>fIntLumiL(<sp/>intLumiL<sp/>),<sp/>fIntLumiM(<sp/>intLumiM<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/>::Info(<sp/></highlight><highlight class="stringliteral">&quot;HSG3TrigLeptonSFTool::HSG3TrigLeptonSFTool&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Initialized&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">HSG3TrigLeptonSFTool::~HSG3TrigLeptonSFTool()<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>fLeptonTriggerSF;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">Double_t<sp/>HSG3TrigLeptonSFTool::MuEff_CB_HSG3(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/></highlight><highlight class="comment">/*period*/</highlight><highlight class="normal">,<sp/>Bool_t<sp/></highlight><highlight class="comment">/*isData*/</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TLorentzVector&amp;<sp/></highlight><highlight class="comment">/*muon*/</highlight><highlight class="normal"><sp/>)</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/>Double_t<sp/>efficiency<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/>if(<sp/>period<sp/>==<sp/>&quot;per2011B2_I&quot;<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/><sp/>efficiency<sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff_CB(<sp/>per2011B2_I,<sp/>isData,<sp/>muon);</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/>}else<sp/>if(<sp/>period<sp/>==<sp/>&quot;per2011J_M&quot;<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/><sp/>efficiency<sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff_CB(<sp/>per2011J_M,<sp/>isData,<sp/>muon);</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/>}else<sp/>if(<sp/>period<sp/>==<sp/>&quot;per2011J&quot;<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/>efficiency<sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff_CB(<sp/>per2011J,<sp/>isData,<sp/>muon);</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/>}else<sp/>if(<sp/>period<sp/>==<sp/>&quot;per2011K&quot;<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/><sp/>efficiency<sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff_CB(<sp/>per2011K,<sp/>isData,<sp/>muon);</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/>}else<sp/>if(<sp/>period<sp/>==<sp/>&quot;per2011J_K&quot;<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/><sp/>Double_t<sp/>eff1<sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff_CB(<sp/>per2011J,<sp/>isData,<sp/>muon);</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/><sp/><sp/><sp/>Double_t<sp/>eff2<sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff_CB(<sp/>per2011K,<sp/>isData,<sp/>muon);</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/>efficiency<sp/>=<sp/>(fIntLumiJ*eff1<sp/>+<sp/>fIntLumiK*eff2)/(fIntLumiJ<sp/>+<sp/>fIntLumiK);<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/>}else<sp/>if(<sp/>period<sp/>==<sp/>&quot;per2011L_M&quot;<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/>Double_t<sp/>eff1<sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff_CB(<sp/>per2011L,<sp/>isData,<sp/>muon);</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/><sp/><sp/>Double_t<sp/>eff2<sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff_CB(<sp/>per2011M,<sp/>isData,<sp/>muon);</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/><sp/>efficiency<sp/>=<sp/>(fIntLumiL*eff1<sp/>+<sp/>fIntLumiM*eff2)/(fIntLumiL<sp/>+<sp/>fIntLumiM);<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/>}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>efficiency;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">std::pair&lt;<sp/>Double_t,<sp/>Double_t<sp/>&gt;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">HSG3TrigLeptonSFTool::MuEffErr_CB_HSG3(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>period,<sp/>Bool_t<sp/>isData,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TLorentzVector&amp;<sp/>muon<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/>Double_t<sp/>efficiency<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/>Double_t<sp/><ref refid="da/d8a/namespaceAmg_1aa8598c3ab8774ed5c55a37e729a04dd7" kindref="member">error</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>period<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;per2011B2_I&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>efficiency<sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff(<sp/>TrigMuonEff::per2011B_I,<sp/>isData,<sp/>muon,<sp/>combined<sp/>).first;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>error<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff(<sp/>TrigMuonEff::per2011B_I,<sp/>isData,<sp/>muon,<sp/>combined<sp/>).second;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>period<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;per2011J_M&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>efficiency<sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff(<sp/>TrigMuonEff::per2011J_M,<sp/>isData,<sp/>muon,<sp/>combined<sp/>).first;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>error<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff(<sp/>TrigMuonEff::per2011J_M,<sp/>isData,<sp/>muon,<sp/>combined<sp/>).second;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>period<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;per2011J&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>efficiency<sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff(<sp/>TrigMuonEff::per2011J,<sp/>isData,<sp/>muon,<sp/>combined<sp/>).first;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>error<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff(<sp/>TrigMuonEff::per2011J,<sp/>isData,<sp/>muon,<sp/>combined<sp/>).second;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>period<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;per2011K&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>efficiency<sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff(<sp/>TrigMuonEff::per2011K,<sp/>isData,<sp/>muon,<sp/>combined<sp/>).first;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>error<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff(<sp/>TrigMuonEff::per2011K,<sp/>isData,<sp/>muon,<sp/>combined<sp/>).second;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>period<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;per2011J_K&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>efficiency<sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff(<sp/>TrigMuonEff::per2011J_K,<sp/>isData,<sp/>muon,<sp/>combined<sp/>).first;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>error<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff(<sp/>TrigMuonEff::per2011J_K,<sp/>isData,<sp/>muon,<sp/>combined<sp/>).second;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>period<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;per2011L_M&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>efficiency<sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff(<sp/>TrigMuonEff::per2011L_M,<sp/>isData,<sp/>muon,<sp/>combined<sp/>).first;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>error<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>fLeptonTriggerSF-&gt;MuEff(<sp/>TrigMuonEff::per2011L_M,<sp/>isData,<sp/>muon,<sp/>combined<sp/>).second;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>::Error(<sp/></highlight><highlight class="stringliteral">&quot;HSG3TrigLeptonSFTool::MuEffErr_CB_HSG3&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Period<sp/>name<sp/>(\&quot;%s\&quot;)<sp/>not<sp/>recognized&quot;</highlight><highlight class="normal">,<sp/>period.c_str()<sp/>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::make_pair(<sp/>efficiency,<sp/>error<sp/>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigMuonEfficiency/Root/HSG3TrigLeptonSFTool.cxx"/>
+  </compounddef>
+</doxygen>

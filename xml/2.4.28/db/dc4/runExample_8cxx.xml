@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="db/dc4/runExample_8cxx" kind="file">
+    <compoundname>runExample.cxx</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifdef<sp/>ROOTCORE</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Adapted<sp/>from<sp/>SoftwareTutorialxAODAnalysisInROOT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>argv[1]<sp/>=<sp/>clistFile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>argv[2]<sp/>=<sp/>jobName<sp/>(relative<sp/>to<sp/>.)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>argv[3]<sp/>=<sp/>proofFlag<sp/>(none/lite/farm)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>argv[4]<sp/>=<sp/>evtMax</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Stearing<sp/>code<sp/>for<sp/>the<sp/>xExample<sp/>code</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;CPAnalysisExamples/xExample.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODRootAccess/Init.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SampleHandler/SampleHandler.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SampleHandler/ToolsDiscovery.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;EventLoop/Job.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;EventLoop/DirectDriver.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;EventLoop/ProofDriver.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TFile.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TChain.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TSystem.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[]<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>arguments</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>argc<sp/>&lt;<sp/>4<sp/>){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;Usage:<sp/>clistFile<sp/>jobName<sp/>proofFlag<sp/>maxEvt&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;proofFlag<sp/>=<sp/>none,<sp/>lite,<sp/>or<sp/>farm<sp/>name&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;Use<sp/>maxEvt<sp/>=<sp/>0<sp/>for<sp/>all<sp/>events&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>std::string<sp/>clistFile<sp/>=<sp/>argv[1];</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>std::string<sp/>jobName<sp/>=<sp/>argv[2];</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>std::string<sp/>proofFlag<sp/>=<sp/>argv[3];</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>evtMax<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>evtMax<sp/>=<sp/>std::atoi(argv[4]);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>up<sp/>the<sp/>job<sp/>for<sp/>xAOD<sp/>access:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><ref refid="dd/d44/namespacexAOD_1a2b6ff6013c964ff2254bd3540cd1738d" kindref="member">xAOD::Init</ref>().ignore();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Open<sp/>the<sp/>input<sp/>.clist<sp/>file<sp/>and<sp/>create<sp/>TChain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>Info(</highlight><highlight class="stringliteral">&quot;runExample&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Opening<sp/>.clist<sp/>file:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>clistFile.c_str()<sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>std::ifstream<sp/>inFile(<sp/>clistFile.c_str()<sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>TChain<sp/>chain(</highlight><highlight class="stringliteral">&quot;CollectionTree&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>std::string<sp/>nextFile;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>inFile<sp/>&gt;&gt;<sp/>nextFile<sp/>){</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>Info(</highlight><highlight class="stringliteral">&quot;runExample&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Adding<sp/>to<sp/>TChain<sp/>file:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>nextFile.c_str()<sp/>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>chain.Add(<sp/>nextFile.c_str()<sp/>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>new<sp/>sample<sp/>handler<sp/>for<sp/>the<sp/>TChain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><ref refid="d1/d56/classSH_1_1SampleHandler" kindref="compound" tooltip="A class that manages a list of Sample objects.">SH::SampleHandler</ref><sp/>sh;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>sh.<ref refid="d1/d56/classSH_1_1SampleHandler_1acee526c10ff2d20d525af7caab0f447f" kindref="member" tooltip="add a sample to the handler">add</ref>(<sp/><ref refid="d0/d9e/namespaceSH_1a31190573b3ca12428ca591e080edfe73" kindref="member">SH::makeFromTChain</ref>(jobName.c_str(),chain)<sp/>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>sh.<ref refid="d1/d56/classSH_1_1SampleHandler_1a09786a76670fc6b3bb6d1be6c42e582a" kindref="member" tooltip="set the meta-data string with the given name for all samples.">setMetaString</ref>(<sp/></highlight><highlight class="stringliteral">&quot;nc_tree&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;CollectionTree&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>EventLoop<sp/>job</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Driver<sp/>writes<sp/>output<sp/>in<sp/>subdirectory<sp/>jobName</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Atilla:<sp/>need<sp/>class<sp/>mode<sp/>for<sp/>electrons</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><ref refid="da/dbb/classEL_1_1Job" kindref="compound">EL::Job</ref><sp/>job;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>job.<ref refid="da/dbb/classEL_1_1Job_1a52d21f848a949d1f7af0803aff4680e0" kindref="member">useXAOD</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>job.<ref refid="da/dbb/classEL_1_1Job_1a26060474b2602f91ef3d220c415c2005" kindref="member">options</ref>()-&gt;<ref refid="db/d3a/classSH_1_1MetaObject_1a6077aad08f456b8c7bca7c8859124732" kindref="member" tooltip="set the meta-data string with the given name">setString</ref><sp/>(<ref refid="da/dbb/classEL_1_1Job_1a66cde8b91f8957ac5296722480bbeb07" kindref="member">EL::Job::optXaodAccessMode</ref>,<sp/>EL::Job::optXaodAccessMode_class);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>job.<ref refid="da/dbb/classEL_1_1Job_1aa02788adcdc922ea863ef9c28c7d5b5f" kindref="member">sampleHandler</ref>(sh);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><ref refid="d1/d66/classxExample" kindref="compound">xExample</ref>*<sp/>xt<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d1/d66/classxExample" kindref="compound">xExample</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>job.algsAdd(<sp/>xt<sp/>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>evtMax<sp/>&gt;<sp/>0<sp/>)<sp/>job.<ref refid="da/dbb/classEL_1_1Job_1a26060474b2602f91ef3d220c415c2005" kindref="member">options</ref>()-&gt;<ref refid="db/d3a/classSH_1_1MetaObject_1a56f734fd246e6143d8861312221063e6" kindref="member" tooltip="set the meta-data double with the given name">setDouble</ref>(<ref refid="da/dbb/classEL_1_1Job_1a2d1dde35c522bbf7d35027f0dfdccc97" kindref="member">EL::Job::optMaxEvents</ref>,<sp/>evtMax);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>From<sp/>https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EventLoop#PROOF_Driver</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>proofFlag<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal"><sp/>){</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;runExample<sp/>running<sp/>locally&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/dfe/classEL_1_1DirectDriver" kindref="compound">EL::DirectDriver</ref><sp/>driver;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>driver.<ref refid="de/d0a/classEL_1_1Driver_1a2229e4d8b95b2ecf65249448d596d87b" kindref="member">submit</ref>(<sp/>job,<sp/>jobName.c_str()<sp/>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>proofFlag<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;lite&quot;</highlight><highlight class="normal"><sp/>){</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;runExample<sp/>running<sp/>with<sp/>ProofLite&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d82/classEL_1_1ProofDriver" kindref="compound">EL::ProofDriver</ref><sp/>driver;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>driver.<ref refid="de/d0a/classEL_1_1Driver_1a2229e4d8b95b2ecf65249448d596d87b" kindref="member">submit</ref>(<sp/>job,<sp/>jobName.c_str()<sp/>);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>gSystem-&gt;Exit<sp/>(0);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;runExample<sp/>running<sp/>with<sp/>Proof<sp/>on<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;proofFlag<sp/>&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d82/classEL_1_1ProofDriver" kindref="compound">EL::ProofDriver</ref><sp/>driver;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>driver.<ref refid="d4/d82/classEL_1_1ProofDriver_1ab2d02c952fa7ec16b415cab09152b02a" kindref="member" tooltip="description: the name of the proof server, if we have one">proofMaster</ref><sp/>=<sp/>proofFlag.c_str();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>driver.<ref refid="d4/d82/classEL_1_1ProofDriver_1ade584ae6f5935e91b2e598893f55f25a" kindref="member" tooltip="description: the options to pass to make_par.sh">makeParOptions</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>driver.<ref refid="d4/d82/classEL_1_1ProofDriver_1a4e4e5f06e5e5593c770f26faf4047cc3" kindref="member">returnFiles</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>driver.<ref refid="de/d0a/classEL_1_1Driver_1a2229e4d8b95b2ecf65249448d596d87b" kindref="member">submit</ref>(<sp/>job,<sp/>jobName.c_str()<sp/>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>gSystem-&gt;Exit<sp/>(0);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CPAnalysisExamples/util/runExample.cxx"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dc/de4/CaloJetInput_8cxx" kind="file">
+    <compoundname>CaloJetInput.cxx</compoundname>
+    <includes refid="da/d8f/CaloJetInput_8h" local="yes">TrigConfL1Data/CaloJetInput.h</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="309930">
+        <label>TrigConfL1Data/L1DataBaseclass.h</label>
+        <link refid="d8/db1/L1DataBaseclass_8h_source"/>
+        <childnode refid="309931" relation="include">
+        </childnode>
+      </node>
+      <node id="309926">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfL1Data/Root/CaloJetInput.cxx</label>
+        <link refid="CaloJetInput.cxx"/>
+        <childnode refid="309927" relation="include">
+        </childnode>
+        <childnode refid="309932" relation="include">
+        </childnode>
+      </node>
+      <node id="309929">
+        <label>string</label>
+      </node>
+      <node id="309931">
+        <label>TrigConfL1Data/TrigConfData.h</label>
+        <link refid="da/da8/TrigConfData_8h_source"/>
+        <childnode refid="309928" relation="include">
+        </childnode>
+        <childnode refid="309929" relation="include">
+        </childnode>
+      </node>
+      <node id="309927">
+        <label>TrigConfL1Data/CaloJetInput.h</label>
+        <link refid="da/d8f/CaloJetInput_8h_source"/>
+        <childnode refid="309928" relation="include">
+        </childnode>
+        <childnode refid="309929" relation="include">
+        </childnode>
+        <childnode refid="309930" relation="include">
+        </childnode>
+      </node>
+      <node id="309928">
+        <label>iosfwd</label>
+      </node>
+      <node id="309932">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;TrigConfL1Data/CaloJetInput.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">TrigConf::CaloJetInput::CaloJetInput(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>version,</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>type,</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ptcut,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>phimin,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>phimax,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>etamin,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>etamax)<sp/>:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/>L1DataBaseclass(),</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/>m_Type(<sp/>type<sp/>),</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/>m_Ptcut(<sp/>ptcut<sp/>),</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/>m_PhiMin(phimin),</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/>m_PhiMax(phimax),</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/>m_EtaMin(etamin),</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/>m_EtaMax(etamax)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/>setName(name);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/>setVersion(version);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">TrigConf::CaloJetInput::CaloJetInput()<sp/>:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/>L1DataBaseclass()</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">TrigConf::CaloJetInput::~CaloJetInput()</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{}<sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">TrigConf::CaloJetInput::print(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>indent,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*detail*/</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;-----------------------&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;id:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>id()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>Name:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>Version:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>version()<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/><sp/></highlight><highlight class="stringliteral">&quot;Type:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;<sp/>m_Type<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>ptcut:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_Ptcut<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>phi_min:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_PhiMin<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>phi_max:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_PhiMax<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>eta_min:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_EtaMin<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>eta_max:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_EtaMax<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfL1Data/Root/CaloJetInput.cxx"/>
+  </compounddef>
+</doxygen>

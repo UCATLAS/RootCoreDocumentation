@@ -1,0 +1,605 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dd/df8/classEL_1_1DuplicateChecker" kind="class" prot="public">
+    <compoundname>EL::DuplicateChecker</compoundname>
+    <basecompoundref refid="de/ddb/classEL_1_1Algorithm" prot="public" virt="non-virtual">EL::Algorithm</basecompoundref>
+    <includes refid="d0/dc1/DuplicateChecker_8h" local="no">DuplicateChecker.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="dd/df8/classEL_1_1DuplicateChecker_1a5934616a3521ab98046f74524e97505d" prot="private" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t EL::DuplicateChecker::number_type</definition>
+        <argsstring></argsstring>
+        <name>number_type</name>
+        <briefdescription>
+<para>the integer type to use for run and event numbers </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="41" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dd/df8/classEL_1_1DuplicateChecker_1a6dc8abad00a173202f4ff5e6441eb355" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EL::DuplicateChecker::m_eventInfoName</definition>
+        <argsstring></argsstring>
+        <name>m_eventInfoName</name>
+        <briefdescription>
+<para>the value returned by <ref refid="dd/df8/classEL_1_1DuplicateChecker_1a5f09427458c48fd8e6b0f70807d46e38" kindref="member">eventInfoName</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="173" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df8/classEL_1_1DuplicateChecker_1a117a12083bff284bbae6b2a76a23b225" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EL::DuplicateChecker::m_outputTreeName</definition>
+        <argsstring></argsstring>
+        <name>m_outputTreeName</name>
+        <briefdescription>
+<para>the value returned by <ref refid="dd/df8/classEL_1_1DuplicateChecker_1a86053aa8b0360867c1e7f78b93a2da4c" kindref="member">outputTreeName</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="177" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df8/classEL_1_1DuplicateChecker_1a3a621e80d16fc8bcd8ea77779922f7be" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::pair&lt; std::string, std::string &gt;, std::map&lt; Long64_t, std::pair&lt; number_type, number_type &gt; &gt; &gt;</type>
+        <definition>std::map&lt;std::pair&lt;std::string,std::string&gt;,std::map&lt;Long64_t,std::pair&lt;number_type,number_type&gt; &gt; &gt; EL::DuplicateChecker::m_duplicates</definition>
+        <argsstring></argsstring>
+        <name>m_duplicates</name>
+        <briefdescription>
+<para>the list of known duplicates to skip </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="181" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df8/classEL_1_1DuplicateChecker_1a5c0dcc23ca000a497358006d65ae397c" prot="private" static="no" mutable="no">
+        <type>std::map&lt; Long64_t, std::pair&lt; number_type, number_type &gt; &gt; *</type>
+        <definition>std::map&lt;Long64_t,std::pair&lt;number_type,number_type&gt; &gt;* EL::DuplicateChecker::m_currentDuplicates</definition>
+        <argsstring></argsstring>
+        <name>m_currentDuplicates</name>
+        <initializer> nullptr</initializer>
+        <briefdescription>
+<para>the list of the duplicates in the current file to skip, or the null pointer if there are none </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="186" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df8/classEL_1_1DuplicateChecker_1a56128e50b935959f1a19bdc2367d9483" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::pair&lt; number_type, number_type &gt; &gt;</type>
+        <definition>std::set&lt;std::pair&lt;number_type,number_type&gt; &gt; EL::DuplicateChecker::m_processed</definition>
+        <argsstring></argsstring>
+        <name>m_processed</name>
+        <briefdescription>
+<para>the list of run-event numbers already encountered </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="191" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df8/classEL_1_1DuplicateChecker_1ab1abb0045e5d5f2d5d3c5f6c17c1d42a" prot="private" static="no" mutable="no">
+        <type><ref refid="de/d95/classxAOD_1_1TEvent" kindref="compound">xAOD::TEvent</ref> *</type>
+        <definition>xAOD::TEvent* EL::DuplicateChecker::m_event</definition>
+        <argsstring></argsstring>
+        <name>m_event</name>
+        <initializer> nullptr</initializer>
+        <briefdescription>
+<para>the event we are reading from </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="195" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df8/classEL_1_1DuplicateChecker_1ae4150d4b70b3de9da51664ba8d6eaa77" prot="private" static="no" mutable="no">
+        <type>TTree *</type>
+        <definition>TTree* EL::DuplicateChecker::m_outputTree</definition>
+        <argsstring></argsstring>
+        <name>m_outputTree</name>
+        <initializer> nullptr</initializer>
+        <briefdescription>
+<para>the output tree, if we are creating one </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="200" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df8/classEL_1_1DuplicateChecker_1a568e521aad3c2b81ce57c80219c9c38e" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EL::DuplicateChecker::m_inputFileName</definition>
+        <argsstring></argsstring>
+        <name>m_inputFileName</name>
+        <briefdescription>
+<para>the name of the input file (connected to m_outputTree, if present) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="205" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df8/classEL_1_1DuplicateChecker_1aa7d2872d98202fe40c4aa81aa07bf1c3" prot="private" static="no" mutable="no">
+        <type>Long64_t</type>
+        <definition>Long64_t EL::DuplicateChecker::m_inputFileIndex</definition>
+        <argsstring></argsstring>
+        <name>m_inputFileIndex</name>
+        <briefdescription>
+<para>the index in the input file (connected to m_outputTree, if present) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="210" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df8/classEL_1_1DuplicateChecker_1a255fdae2d3cb2dc9b9b7bc788fab3943" prot="private" static="no" mutable="no">
+        <type>number_type</type>
+        <definition>number_type EL::DuplicateChecker::m_runNumber</definition>
+        <argsstring></argsstring>
+        <name>m_runNumber</name>
+        <briefdescription>
+<para>the run number of the current event (connected to m_outputTree, if present) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="215" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df8/classEL_1_1DuplicateChecker_1a25b08c7302daa5e5c3d2135f7c8295a3" prot="private" static="no" mutable="no">
+        <type>number_type</type>
+        <definition>number_type EL::DuplicateChecker::m_eventNumber</definition>
+        <argsstring></argsstring>
+        <name>m_eventNumber</name>
+        <briefdescription>
+<para>the event number of the current event (connected to m_outputTree, if present) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="220" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df8/classEL_1_1DuplicateChecker_1ac84ffac20bc33d2b6e3d7a21b0e495c6" prot="private" static="no" mutable="no">
+        <type>Bool_t</type>
+        <definition>Bool_t EL::DuplicateChecker::m_processEvent</definition>
+        <argsstring></argsstring>
+        <name>m_processEvent</name>
+        <briefdescription>
+<para>whether the current event is/should be processed (connected to m_outputTree, if present) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="225" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/df8/classEL_1_1DuplicateChecker_1a9d8a4e8d5521738127eceef6ce04656f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::DuplicateChecker::testInvariant</definition>
+        <argsstring>() const </argsstring>
+        <name>testInvariant</name>
+        <reimplements refid="de/ddb/classEL_1_1Algorithm_1afa8999f46656a42d53df3731216f1296">testInvariant</reimplements>
+        <briefdescription>
+<para>test the invariant of this object </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df8/classEL_1_1DuplicateChecker_1aebf4b8b9b37a2b1024abe01725d07afd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EL::DuplicateChecker::DuplicateChecker</definition>
+        <argsstring>()</argsstring>
+        <name>DuplicateChecker</name>
+        <briefdescription>
+<para>standard constructor </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>out of memory I </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df8/classEL_1_1DuplicateChecker_1a5f09427458c48fd8e6b0f70807d46e38" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; EL::DuplicateChecker::eventInfoName</definition>
+        <argsstring>() const </argsstring>
+        <name>eventInfoName</name>
+        <briefdescription>
+<para>the name of the EventInfo structure to use </para>        </briefdescription>
+        <detaileddescription>
+<para>This is mostly meant, so that in my unit test code I can point it to my own specially prepared EventInfo <simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df8/classEL_1_1DuplicateChecker_1a3bb58e2fe6a24a875c9a7fc94b609be8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::DuplicateChecker::setEventInfoName</definition>
+        <argsstring>(const std::string &amp;val_eventInfoName)</argsstring>
+        <name>setEventInfoName</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>val_eventInfoName</declname>
+        </param>
+        <briefdescription>
+<para>set the value of <ref refid="dd/df8/classEL_1_1DuplicateChecker_1a5f09427458c48fd8e6b0f70807d46e38" kindref="member">eventInfoName</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>out of memory II </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df8/classEL_1_1DuplicateChecker_1a86053aa8b0360867c1e7f78b93a2da4c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; EL::DuplicateChecker::outputTreeName</definition>
+        <argsstring>() const </argsstring>
+        <name>outputTreeName</name>
+        <briefdescription>
+<para>the name of the output tree to create, or the empty string if none is created </para>        </briefdescription>
+        <detaileddescription>
+<para>The output tree contains a list of run and event numbers for all events, and whether they were processed by this job. This can be used to check whether duplicate events were processed (or whether we somehow eliminated events as duplicates that we shouldn&apos;t have). It can also be used to create a list of duplicate events for future processing rounds. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df8/classEL_1_1DuplicateChecker_1a33dba272ccf83f44758b5a56dfa6c415" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::DuplicateChecker::setOutputTreeName</definition>
+        <argsstring>(const std::string &amp;val_outputTreeName)</argsstring>
+        <name>setOutputTreeName</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>val_outputTreeName</declname>
+        </param>
+        <briefdescription>
+<para>set the value of <ref refid="dd/df8/classEL_1_1DuplicateChecker_1a86053aa8b0360867c1e7f78b93a2da4c" kindref="member">outputTreeName</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>out of memory II </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df8/classEL_1_1DuplicateChecker_1afbd20fb7897a66a00c55f44cb6ea6e4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::DuplicateChecker::addKnownDuplicate</definition>
+        <argsstring>(const std::string &amp;sampleName, const std::string &amp;fileName, Long64_t entry, number_type runNumber, number_type eventNumber)</argsstring>
+        <name>addKnownDuplicate</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>sampleName</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>Long64_t</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>number_type</type>
+          <declname>runNumber</declname>
+        </param>
+        <param>
+          <type>number_type</type>
+          <declname>eventNumber</declname>
+        </param>
+        <briefdescription>
+<para>add a known duplicate event </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>out of memory II </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df8/classEL_1_1DuplicateChecker_1ac85cb6e023c6139150a5399ed0e18dae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::DuplicateChecker::addKnownDuplicatesFile</definition>
+        <argsstring>(const std::string &amp;duplicatesFile)</argsstring>
+        <name>addKnownDuplicatesFile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>duplicatesFile</declname>
+        </param>
+        <briefdescription>
+<para>add a file with known duplicates </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>i/o errors<linebreak/>
+ out of memory III </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="117"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="dd/df8/classEL_1_1DuplicateChecker_1a66d0200ba060937b73beb9432211eb31" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool EL::DuplicateChecker::processSummary</definition>
+        <argsstring>(const std::string &amp;submitdir, const std::string &amp;treeName)</argsstring>
+        <name>processSummary</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>submitdir</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>treeName</declname>
+        </param>
+        <briefdescription>
+<para>process the summary tree from the given submission </para>        </briefdescription>
+        <detaileddescription>
+<para>This will create a file &quot;duplicates&quot; inside the submission directory that contains the list of duplicates that can be fed into future submissions to filter them out.</para><para><simplesect kind="return"><para>whether the job was successfully, i.e. each input event was read exactly once and all duplicates were skipped </para></simplesect>
+<simplesect kind="par"><title>Guarantee</title><para>basic </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>i/o errors </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="134"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df8/classEL_1_1DuplicateChecker_1a2a6408ef475960c99e3c1483192ba5f3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool EL::DuplicateChecker::processSummary</definition>
+        <argsstring>(const SH::SampleHandler &amp;sh, const std::string &amp;outputFile)</argsstring>
+        <name>processSummary</name>
+        <param>
+          <type>const <ref refid="d1/d56/classSH_1_1SampleHandler" kindref="compound">SH::SampleHandler</ref> &amp;</type>
+          <declname>sh</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>outputFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="processSummary"><para>process the summary tree from the given submission </para><para>This will create a file &quot;duplicates&quot; inside the submission directory that contains the list of duplicates that can be fed into future submissions to filter them out.</para><para><simplesect kind="return"><para>whether the job was successfully, i.e. each input event was read exactly once and all duplicates were skipped </para></simplesect>
+<simplesect kind="par"><title>Guarantee</title><para>basic </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>i/o errors </para></simplesect>
+</para></copydoc>
+</para><para>This version of the method provides a lower level interface, in which the list of inputs is given via a sample handler (with the tree name properly set), and the output file name freely choosable. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="145"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="dd/df8/classEL_1_1DuplicateChecker_1ad2821c6969b579bb05c07739f4d2a408" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">StatusCode</ref></type>
+        <definition>virtual StatusCode EL::DuplicateChecker::setupJob</definition>
+        <argsstring>(Job &amp;job) override</argsstring>
+        <name>setupJob</name>
+        <reimplements refid="de/ddb/classEL_1_1Algorithm_1a6bea54e06f41f386407aad066f051f59">setupJob</reimplements>
+        <param>
+          <type><ref refid="da/dbb/classEL_1_1Job" kindref="compound">Job</ref> &amp;</type>
+          <declname>job</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: give the algorithm a chance to intialize the job with anything this algorithm needs. this method is automatically called before the algorithm is actually added to the job. guarantee: basic failures: algorithm dependent rationale: this is currently used to give algorithms a chance to register their output datasets, but can also be used for other stuff. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="154"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df8/classEL_1_1DuplicateChecker_1a37f6712da01d40794e40bd063976aad1" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">StatusCode</ref></type>
+        <definition>virtual StatusCode EL::DuplicateChecker::changeInput</definition>
+        <argsstring>(bool firstFile) override</argsstring>
+        <name>changeInput</name>
+        <reimplements refid="de/ddb/classEL_1_1Algorithm_1a555bf98d9d040bd8cca3cb55473fac0a">changeInput</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>firstFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: do all changes to work with a new input file, e.g. set new branch addresses. if firstFile is set, this method is called just before init() is called guarantee: basic failures: algorithm dependent </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="157"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df8/classEL_1_1DuplicateChecker_1ad72fb61fa995a8704f72fb8b5a0418cc" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">StatusCode</ref></type>
+        <definition>virtual StatusCode EL::DuplicateChecker::initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>initialize</name>
+        <reimplements refid="de/ddb/classEL_1_1Algorithm_1ad880ac0eae790193a28d0ec063727f5e">initialize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: do everything that needs to be done before running the algorithm, e.g. create output n-tuples and histograms. this method is called only once right after changeInput(true) is called guarantee: basic failures: algorithm dependent rationale: in principle all this work could be done on changeInput(true). However, providing this method should make it easier for the user to set up all his outputs and to do so only once. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="160"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df8/classEL_1_1DuplicateChecker_1ae3f9c676dabe79ddf2878af51836f21e" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/daa/classEL_1_1StatusCode" kindref="compound">StatusCode</ref></type>
+        <definition>virtual StatusCode EL::DuplicateChecker::execute</definition>
+        <argsstring>() override</argsstring>
+        <name>execute</name>
+        <reimplements refid="de/ddb/classEL_1_1Algorithm_1a2ca11106132eab43a10bba3be427ead8">execute</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: process the next event guarantee: basic failures: algorithm dependent </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="163"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df8/classEL_1_1DuplicateChecker_1ade04ceab31321b258590bf32cbfda6ff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EL::DuplicateChecker::read_run_event_number</definition>
+        <argsstring>()</argsstring>
+        <name>read_run_event_number</name>
+        <briefdescription>
+<para>get the run and event number for the current event </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="229"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df8/classEL_1_1DuplicateChecker_1aae2b12bf60fb423566b55eecb976d59b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EL::DuplicateChecker::ClassDef</definition>
+        <argsstring>(DuplicateChecker, 1)</argsstring>
+        <name>ClassDef</name>
+        <reimplements refid="de/ddb/classEL_1_1Algorithm_1aaaf7e4b47c721a094449edc60a2ffe88">ClassDef</reimplements>
+        <param>
+          <type><ref refid="dd/df8/classEL_1_1DuplicateChecker" kindref="compound">DuplicateChecker</ref></type>
+        </param>
+        <param>
+          <type>1</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="235"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="todo_1_todo000005"><xreftitle>Todo</xreftitle><xrefdescription><para>add documentation </para></xrefdescription></xrefsect></para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="5311">
+        <label>EL::Algorithm</label>
+        <link refid="de/ddb/classEL_1_1Algorithm"/>
+      </node>
+      <node id="5310">
+        <label>EL::DuplicateChecker</label>
+        <link refid="dd/df8/classEL_1_1DuplicateChecker"/>
+        <childnode refid="5311" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5313">
+        <label>EL::Algorithm</label>
+        <link refid="de/ddb/classEL_1_1Algorithm"/>
+        <childnode refid="5314" relation="usage">
+          <edgelabel>m_wk</edgelabel>
+        </childnode>
+      </node>
+      <node id="5317">
+        <label>xAOD::TVirtualEvent</label>
+        <link refid="de/daf/classxAOD_1_1TVirtualEvent"/>
+      </node>
+      <node id="5314">
+        <label>EL::Worker</label>
+        <link refid="da/d12/classEL_1_1Worker"/>
+        <childnode refid="5315" relation="usage">
+          <edgelabel>m_metaData</edgelabel>
+        </childnode>
+      </node>
+      <node id="5316">
+        <label>xAOD::TEvent</label>
+        <link refid="de/d95/classxAOD_1_1TEvent"/>
+        <childnode refid="5317" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5318" relation="usage">
+          <edgelabel>m_inChainTracker</edgelabel>
+        </childnode>
+        <childnode refid="5319" relation="usage">
+          <edgelabel>m_outputEventFormat</edgelabel>
+          <edgelabel>m_inputEventFormat</edgelabel>
+        </childnode>
+      </node>
+      <node id="5320">
+        <label>string</label>
+      </node>
+      <node id="5319">
+        <label>xAOD::EventFormat_v1</label>
+        <link refid="d8/d1f/classxAOD_1_1EventFormat__v1"/>
+      </node>
+      <node id="5312">
+        <label>EL::DuplicateChecker</label>
+        <link refid="dd/df8/classEL_1_1DuplicateChecker"/>
+        <childnode refid="5313" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5316" relation="usage">
+          <edgelabel>m_event</edgelabel>
+        </childnode>
+        <childnode refid="5320" relation="usage">
+          <edgelabel>m_inputFileName</edgelabel>
+          <edgelabel>m_outputTreeName</edgelabel>
+          <edgelabel>m_eventInfoName</edgelabel>
+        </childnode>
+      </node>
+      <node id="5315">
+        <label>SH::MetaObject</label>
+        <link refid="db/d3a/classSH_1_1MetaObject"/>
+      </node>
+      <node id="5318">
+        <label>xAOD::TChainStateTracker</label>
+        <link refid="d1/d3a/classxAOD_1_1TChainStateTracker"/>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" line="34" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/EventLoopAlgs/EventLoopAlgs/DuplicateChecker.h" bodystart="33" bodyend="237"/>
+    <listofallmembers>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1afbd20fb7897a66a00c55f44cb6ea6e4c" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>addKnownDuplicate</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1ac85cb6e023c6139150a5399ed0e18dae" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>addKnownDuplicatesFile</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1abb182dee6741786ce59ddbd8a8fc4cc0" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>Algorithm</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a9e2072bd4fdda18ebc86f847b691d9b9" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>book</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1a37f6712da01d40794e40bd063976aad1" prot="private" virt="virtual"><scope>EL::DuplicateChecker</scope><name>changeInput</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1aae2b12bf60fb423566b55eecb976d59b" prot="private" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>ClassDef</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1aebf4b8b9b37a2b1024abe01725d07afd" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>DuplicateChecker</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1a5f09427458c48fd8e6b0f70807d46e38" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>eventInfoName</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1ae3f9c676dabe79ddf2878af51836f21e" prot="private" virt="virtual"><scope>EL::DuplicateChecker</scope><name>execute</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a03872c24f8a637ba069b61d847ad557e" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>hist</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1ad72fb61fa995a8704f72fb8b5a0418cc" prot="private" virt="virtual"><scope>EL::DuplicateChecker</scope><name>initialize</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1a5c0dcc23ca000a497358006d65ae397c" prot="private" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>m_currentDuplicates</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1a3a621e80d16fc8bcd8ea77779922f7be" prot="private" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>m_duplicates</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1ab1abb0045e5d5f2d5d3c5f6c17c1d42a" prot="private" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>m_event</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1a6dc8abad00a173202f4ff5e6441eb355" prot="private" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>m_eventInfoName</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1a25b08c7302daa5e5c3d2135f7c8295a3" prot="private" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>m_eventNumber</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1aa7d2872d98202fe40c4aa81aa07bf1c3" prot="private" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>m_inputFileIndex</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1a568e521aad3c2b81ce57c80219c9c38e" prot="private" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>m_inputFileName</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1ae4150d4b70b3de9da51664ba8d6eaa77" prot="private" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>m_outputTree</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1a117a12083bff284bbae6b2a76a23b225" prot="private" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>m_outputTreeName</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1a56128e50b935959f1a19bdc2367d9483" prot="private" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>m_processed</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1ac84ffac20bc33d2b6e3d7a21b0e495c6" prot="private" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>m_processEvent</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1a255fdae2d3cb2dc9b9b7bc788fab3943" prot="private" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>m_runNumber</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a468b0314089506f2c36445cfc84f673b" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>msg</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a6d3345f2effc1ea5b8add736df764ca7" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>msg</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1ad89c787f00a88c7b51a23a4a397f5c05" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>msgLvl</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1a5934616a3521ab98046f74524e97505d" prot="private" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>number_type</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1a86053aa8b0360867c1e7f78b93a2da4c" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>outputTreeName</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1a66d0200ba060937b73beb9432211eb31" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>processSummary</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1a2a6408ef475960c99e3c1483192ba5f3" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>processSummary</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1ade04ceab31321b258590bf32cbfda6ff" prot="private" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>read_run_event_number</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1a3bb58e2fe6a24a875c9a7fc94b609be8" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>setEventInfoName</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a767c1725616f14d347b79002d755bf55" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>setMsgLevel</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1a33dba272ccf83f44758b5a56dfa6c415" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>setOutputTreeName</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1ad2821c6969b579bb05c07739f4d2a408" prot="private" virt="virtual"><scope>EL::DuplicateChecker</scope><name>setupJob</name></member>
+      <member refid="dd/df8/classEL_1_1DuplicateChecker_1a9d8a4e8d5521738127eceef6ce04656f" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>testInvariant</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a36e05186cb50cc0e5929121d3f6b6053" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>wk</name></member>
+      <member refid="de/ddb/classEL_1_1Algorithm_1a6d787a867dbe55af8241032c7b4aabf4" prot="public" virt="non-virtual"><scope>EL::DuplicateChecker</scope><name>~Algorithm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d7/d42/classConstAuxStoreTest" kind="class" prot="public">
+    <compoundname>ConstAuxStoreTest</compoundname>
+    <basecompoundref refid="d3/dd5/classSG_1_1IConstAuxStore" prot="public" virt="non-virtual">SG::IConstAuxStore</basecompoundref>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="d7/d42/classConstAuxStoreTest_1ac811dc943771eb39ac8ff7d1e0f41592" prot="public" static="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>typedef std::vector&lt;float&gt; ConstAuxStoreTest::vec_t</definition>
+        <argsstring></argsstring>
+        <name>vec_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" line="84" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d7/d42/classConstAuxStoreTest_1a0f8769d644a4fdab9f2607e518021265" prot="public" static="no">
+        <type>std::map&lt; <ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref>, std::unique_ptr&lt; vec_t &gt; &gt;</type>
+        <definition>typedef std::map&lt;SG::auxid_t, std::unique_ptr&lt;vec_t&gt; &gt; ConstAuxStoreTest::map_t</definition>
+        <argsstring></argsstring>
+        <name>map_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" line="85" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d7/d42/classConstAuxStoreTest_1ae70b9ce11bcb2c0c55ca85602471ba57" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/dac/classSG_1_1unordered__set" kindref="compound">SG::auxid_set_t</ref></type>
+        <definition>SG::auxid_set_t ConstAuxStoreTest::m_set</definition>
+        <argsstring></argsstring>
+        <name>m_set</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" line="83" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d42/classConstAuxStoreTest_1a46cc6c699178e8fd69829f934678be81" prot="public" static="no" mutable="no">
+        <type>map_t</type>
+        <definition>map_t ConstAuxStoreTest::m_vecs</definition>
+        <argsstring></argsstring>
+        <name>m_vecs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" line="86" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d7/d42/classConstAuxStoreTest_1a94b4ee6ceac125a033c9eddc6ed26344" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const void *</type>
+        <definition>const void * ConstAuxStoreTest::getData</definition>
+        <argsstring>(SG::auxid_t auxid) const </argsstring>
+        <name>getData</name>
+        <reimplements refid="d3/dd5/classSG_1_1IConstAuxStore_1aa73e6e5474cdc0d38fe3367740876c59">getData</reimplements>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <briefdescription>
+<para>Return the data vector for one aux data item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of the desired aux data item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Each aux data item is stored as a vector, with one entry per entry in the owning container. This returns a pointer to the start of the vector.</para><para>This should return 0 if the item doesn&apos;t exist. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" line="74" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" bodystart="90" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d42/classConstAuxStoreTest_1ab37404e4dd42c7e4c7da0e712db2ac54" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const <ref refid="dd/dac/classSG_1_1unordered__set" kindref="compound">SG::auxid_set_t</ref> &amp;</type>
+        <definition>virtual const SG::auxid_set_t&amp; ConstAuxStoreTest::getAuxIDs</definition>
+        <argsstring>() const </argsstring>
+        <name>getAuxIDs</name>
+        <reimplements refid="d3/dd5/classSG_1_1IConstAuxStore_1a3be9ddcb2b1198c3cab03c7b94764a3d">getAuxIDs</reimplements>
+        <briefdescription>
+<para>Return a set of identifiers for existing data items in this store. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should include identifiers for all items, const and non-const. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" line="75" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d42/classConstAuxStoreTest_1a748badd90faac6de099a1bd76a873459" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void *</type>
+        <definition>virtual void* ConstAuxStoreTest::getDecoration</definition>
+        <argsstring>(SG::auxid_t, size_t, size_t)</argsstring>
+        <name>getDecoration</name>
+        <reimplements refid="d3/dd5/classSG_1_1IConstAuxStore_1a96728593e3bc1da60d3bdd28291969f0">getDecoration</reimplements>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>capacity</declname>
+        </param>
+        <briefdescription>
+<para>Return the data vector for one aux data decoration item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>auxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of the desired aux data item. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current size of the container (in case the data item does not already exist). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>capacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current capacity of the container (in case the data item does not already exist).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Each aux data item is stored as a vector, with one entry per entry in the owning container. This returns a pointer to the start of the vector.</para><para>If the data item does not exist, it then it will be created and initialized with default values. If the container is locked, then the new item will be marked as a decoration. <computeroutput>size</computeroutput> and <computeroutput>capacity</computeroutput> give the size for the new aux data item vector.</para><para>If the data item already exists, then we return it if either the container is not locked or the item is marked as a decoration. Otherwise we throw an exception. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" line="76" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d42/classConstAuxStoreTest_1a40a146599e46f1dd1479a36f4118e58f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ConstAuxStoreTest::lock</definition>
+        <argsstring>()</argsstring>
+        <name>lock</name>
+        <reimplements refid="d3/dd5/classSG_1_1IConstAuxStore_1a6bf19cb8961665a0d4672e2d4f719aa5">lock</reimplements>
+        <briefdescription>
+<para>Lock the container. </para>        </briefdescription>
+        <detaileddescription>
+<para>After this, only decorations can be changed/modified. If the container is already locked, this is a no-op. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" line="77" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d42/classConstAuxStoreTest_1a1fc988601cb50be3ddd09c3bc75bf674" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ConstAuxStoreTest::clearDecorations</definition>
+        <argsstring>()</argsstring>
+        <name>clearDecorations</name>
+        <reimplements refid="d3/dd5/classSG_1_1IConstAuxStore_1ab3dec2e6bc75789344ec9d31c8b8a3c3">clearDecorations</reimplements>
+        <briefdescription>
+<para>Clear all decorations. </para>        </briefdescription>
+        <detaileddescription>
+<para>Erase all decorations from the store, restoring the state to when <computeroutput>lock</computeroutput> was called. Be sure to clear the cache of the referencing container! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" line="78" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d42/classConstAuxStoreTest_1a66d2ba15cde6fc5a264d98179c808f8a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>size_t</type>
+        <definition>virtual size_t ConstAuxStoreTest::size</definition>
+        <argsstring>() const </argsstring>
+        <name>size</name>
+        <reimplements refid="d3/dd5/classSG_1_1IConstAuxStore_1af71be6076fcf09fd0f8c1d53e704548d">size</reimplements>
+        <briefdescription>
+<para>Return the number of elements in the store. </para>        </briefdescription>
+        <detaileddescription>
+<para>May return 0 for a store with no aux data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" line="79" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d42/classConstAuxStoreTest_1a14576256ccac69b6f0b00e318f46e6a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstAuxStoreTest::add</definition>
+        <argsstring>(SG::auxid_t auxid, std::unique_ptr&lt; std::vector&lt; float &gt; &gt; vec)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1affee481ab18822e03866e0a0d3ff011c" kindref="member">SG::auxid_t</ref></type>
+          <declname>auxid</declname>
+        </param>
+        <param>
+          <type>std::unique_ptr&lt; std::vector&lt; float &gt; &gt;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" line="81" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" bodystart="98" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4134">
+        <label>ConstAuxStoreTest</label>
+        <link refid="d7/d42/classConstAuxStoreTest"/>
+        <childnode refid="4135" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4135">
+        <label>SG::IConstAuxStore</label>
+        <link refid="d3/dd5/classSG_1_1IConstAuxStore"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4141">
+        <label>Internal::hash_code_base&lt;size_t , size_t , Internal::identity&lt; size_t &gt; , std::equal_to&lt; size_t &gt; , hash&lt; size_t &gt; , Internal::mod_range_hashing , Internal::default_ranged_hash , cache_hash_code&gt;</label>
+        <link refid="d0/d2e/classInternal_1_1hash__code__base"/>
+      </node>
+      <node id="4136">
+        <label>ConstAuxStoreTest</label>
+        <link refid="d7/d42/classConstAuxStoreTest"/>
+        <childnode refid="4137" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4138" relation="usage">
+          <edgelabel>m_set</edgelabel>
+        </childnode>
+      </node>
+      <node id="4142">
+        <label>Internal::map_base&lt;size_t , size_t , Internal::identity&lt; size_t &gt; , unique_keys, hashtable&lt;size_t , size_t , std::allocator&lt; size_t &gt; , Internal::identity&lt; size_t &gt; , std::equal_to&lt; size_t &gt; , hash&lt; size_t &gt; , Internal::mod_range_hashing , Internal::default_ranged_hash , Internal::prime_rehash_policy , cache_hash_code, constant_iterators, unique_keys&gt; &gt;</label>
+        <link refid="d1/d54/classInternal_1_1map__base"/>
+      </node>
+      <node id="4137">
+        <label>SG::IConstAuxStore</label>
+        <link refid="d3/dd5/classSG_1_1IConstAuxStore"/>
+      </node>
+      <node id="4139">
+        <label>SG::hashtable&lt; size_t, size_t, std::allocator&lt; size_t &gt;, Internal::identity&lt; size_t &gt;, std::equal_to&lt; size_t &gt;, hash&lt; size_t &gt;, Internal::mod_range_hashing, Internal::default_ranged_hash, Internal::prime_rehash_policy, false, true, true &gt;</label>
+        <link refid="de/d63/classSG_1_1hashtable"/>
+        <childnode refid="4140" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4141" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4142" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4140">
+        <label>Internal::rehash_base&lt;Internal::prime_rehash_policy , hashtable&lt;size_t , size_t , std::allocator&lt; size_t &gt; , Internal::identity&lt; size_t &gt; , std::equal_to&lt; size_t &gt; , hash&lt; size_t &gt; , Internal::mod_range_hashing , Internal::default_ranged_hash , Internal::prime_rehash_policy , cache_hash_code, constant_iterators, unique_keys&gt; &gt;</label>
+        <link refid="db/d2b/classInternal_1_1rehash__base"/>
+      </node>
+      <node id="4138">
+        <label>SG::unordered_set&lt; size_t &gt;</label>
+        <link refid="dd/dac/classSG_1_1unordered__set"/>
+        <childnode refid="4139" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" line="72" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/test/AuxElement_test.cxx" bodystart="70" bodyend="87"/>
+    <listofallmembers>
+      <member refid="d7/d42/classConstAuxStoreTest_1a14576256ccac69b6f0b00e318f46e6a0" prot="public" virt="non-virtual"><scope>ConstAuxStoreTest</scope><name>add</name></member>
+      <member refid="d7/d42/classConstAuxStoreTest_1a1fc988601cb50be3ddd09c3bc75bf674" prot="public" virt="virtual"><scope>ConstAuxStoreTest</scope><name>clearDecorations</name></member>
+      <member refid="d7/d42/classConstAuxStoreTest_1ab37404e4dd42c7e4c7da0e712db2ac54" prot="public" virt="virtual"><scope>ConstAuxStoreTest</scope><name>getAuxIDs</name></member>
+      <member refid="d7/d42/classConstAuxStoreTest_1a94b4ee6ceac125a033c9eddc6ed26344" prot="public" virt="virtual"><scope>ConstAuxStoreTest</scope><name>getData</name></member>
+      <member refid="d7/d42/classConstAuxStoreTest_1a748badd90faac6de099a1bd76a873459" prot="public" virt="virtual"><scope>ConstAuxStoreTest</scope><name>getDecoration</name></member>
+      <member refid="d7/d42/classConstAuxStoreTest_1a40a146599e46f1dd1479a36f4118e58f" prot="public" virt="virtual"><scope>ConstAuxStoreTest</scope><name>lock</name></member>
+      <member refid="d7/d42/classConstAuxStoreTest_1ae70b9ce11bcb2c0c55ca85602471ba57" prot="public" virt="non-virtual"><scope>ConstAuxStoreTest</scope><name>m_set</name></member>
+      <member refid="d7/d42/classConstAuxStoreTest_1a46cc6c699178e8fd69829f934678be81" prot="public" virt="non-virtual"><scope>ConstAuxStoreTest</scope><name>m_vecs</name></member>
+      <member refid="d7/d42/classConstAuxStoreTest_1a0f8769d644a4fdab9f2607e518021265" prot="public" virt="non-virtual"><scope>ConstAuxStoreTest</scope><name>map_t</name></member>
+      <member refid="d7/d42/classConstAuxStoreTest_1a66d2ba15cde6fc5a264d98179c808f8a" prot="public" virt="virtual"><scope>ConstAuxStoreTest</scope><name>size</name></member>
+      <member refid="d7/d42/classConstAuxStoreTest_1ac811dc943771eb39ac8ff7d1e0f41592" prot="public" virt="non-virtual"><scope>ConstAuxStoreTest</scope><name>vec_t</name></member>
+      <member refid="d3/dd5/classSG_1_1IConstAuxStore_1a2acc9ded5fe9a64c8f508d3c0d7431a5" prot="public" virt="virtual"><scope>ConstAuxStoreTest</scope><name>~IConstAuxStore</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

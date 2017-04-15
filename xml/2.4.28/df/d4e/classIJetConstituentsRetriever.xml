@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="df/d4e/classIJetConstituentsRetriever" kind="class" prot="public">
+    <compoundname>IJetConstituentsRetriever</compoundname>
+    <basecompoundref refid="d4/d20/classasg_1_1IAsgTool" prot="public" virt="virtual">asg::IAsgTool</basecompoundref>
+    <derivedcompoundref refid="d7/d2a/classJetConstituentsRetriever" prot="public" virt="virtual">JetConstituentsRetriever</derivedcompoundref>
+    <includes refid="d0/d01/IJetConstituentsRetriever_8h" local="no">IJetConstituentsRetriever.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="df/d4e/classIJetConstituentsRetriever_1a22a1d496c6f5af4acca2da065b97123b" prot="public" static="no">
+        <type>std::vector&lt; fastjet::PseudoJet &gt;</type>
+        <definition>typedef std::vector&lt;fastjet::PseudoJet&gt; IJetConstituentsRetriever::PseudoJetVector</definition>
+        <argsstring></argsstring>
+        <name>PseudoJetVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetConstituentsRetriever.h" line="28" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetConstituentsRetriever.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="df/d4e/classIJetConstituentsRetriever_1a163811f21f2c1bcfffe963cd183c08b9" prot="public" static="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>typedef std::vector&lt;std::string&gt; IJetConstituentsRetriever::NameList</definition>
+        <argsstring></argsstring>
+        <name>NameList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetConstituentsRetriever.h" line="29" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetConstituentsRetriever.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="df/d4e/classIJetConstituentsRetriever_1af7c2f8c193ae5be1ac2860420077e675" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual IJetConstituentsRetriever::~IJetConstituentsRetriever</definition>
+        <argsstring>()</argsstring>
+        <name>~IJetConstituentsRetriever</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetConstituentsRetriever.h" line="32" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetConstituentsRetriever.h" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d4e/classIJetConstituentsRetriever_1aca405d4824dc5b12e3de66468df43838" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int IJetConstituentsRetriever::constituents</definition>
+        <argsstring>(const xAOD::Jet &amp;jet, PseudoJetVector &amp;cons, NameList *pghostlabs=nullptr) const =0</argsstring>
+        <name>constituents</name>
+        <reimplementedby refid="d7/d2a/classJetConstituentsRetriever_1a876dda4848326f1eaabbde5272ce4fc0">constituents</reimplementedby>
+        <param>
+          <type>const <ref refid="db/d9c/classxAOD_1_1Jet__v1" kindref="compound">xAOD::Jet</ref> &amp;</type>
+          <declname>jet</declname>
+        </param>
+        <param>
+          <type>PseudoJetVector &amp;</type>
+          <declname>cons</declname>
+        </param>
+        <param>
+          <type>NameList *</type>
+          <declname>pghostlabs</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the constituents as pseudojets. Appends constituents to cons. Returns 0 for success. If pghostlabs is not null, then the list of ghost labels (Track, Truth, ...) is appended to that vector. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetConstituentsRetriever.h" line="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>David Adams </para></simplesect>
+<simplesect kind="date"><para>November 2014</para></simplesect>
+<ref refid="df/d4e/classIJetConstituentsRetriever" kindref="compound">IJetConstituentsRetriever</ref> is a dual-use tool interface for a tool that retrieves the constituents of a jet. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="9612">
+        <label>IJetConstituentsRetriever</label>
+        <link refid="df/d4e/classIJetConstituentsRetriever"/>
+        <childnode refid="9613" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9613">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="9614">
+        <label>JetConstituentsRetriever</label>
+        <link refid="d7/d2a/classJetConstituentsRetriever"/>
+        <childnode refid="9612" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9615">
+        <label>IJetConstituentsRetriever</label>
+        <link refid="df/d4e/classIJetConstituentsRetriever"/>
+        <childnode refid="9616" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9616">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetConstituentsRetriever.h" line="23" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetInterface/JetInterface/IJetConstituentsRetriever.h" bodystart="23" bodyend="41"/>
+    <listofallmembers>
+      <member refid="df/d4e/classIJetConstituentsRetriever_1aca405d4824dc5b12e3de66468df43838" prot="public" virt="pure-virtual"><scope>IJetConstituentsRetriever</scope><name>constituents</name></member>
+      <member refid="df/d4e/classIJetConstituentsRetriever_1a163811f21f2c1bcfffe963cd183c08b9" prot="public" virt="non-virtual"><scope>IJetConstituentsRetriever</scope><name>NameList</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1af1aac990b958e92bf38123318d926e67" prot="public" virt="pure-virtual"><scope>IJetConstituentsRetriever</scope><name>print</name></member>
+      <member refid="df/d4e/classIJetConstituentsRetriever_1a22a1d496c6f5af4acca2da065b97123b" prot="public" virt="non-virtual"><scope>IJetConstituentsRetriever</scope><name>PseudoJetVector</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1a77b49d52f1f8c272cb665b8309d6082d" prot="public" virt="virtual"><scope>IJetConstituentsRetriever</scope><name>~IAsgTool</name></member>
+      <member refid="df/d4e/classIJetConstituentsRetriever_1af7c2f8c193ae5be1ac2860420077e675" prot="public" virt="virtual"><scope>IJetConstituentsRetriever</scope><name>~IJetConstituentsRetriever</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d1/dcc/exctrace_8h" kind="file">
+    <compoundname>exctrace.h</compoundname>
+    <includes refid="d1/dc7/SealCommon_8h" local="yes">CxxUtils/SealCommon.h</includes>
+    <includes refid="d3/d3b/SealDebug_8h" local="yes">CxxUtils/SealDebug.h</includes>
+    <includes local="no">exception</includes>
+    <includedby refid="d5/ddb/exctrace_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/exctrace.cxx</includedby>
+    <includedby refid="dd/d53/exctrace1__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/test/exctrace1_test.cxx</includedby>
+    <incdepgraph>
+      <node id="106605">
+        <label>CxxUtils/SealCommon.h</label>
+        <link refid="d1/dc7/SealCommon_8h"/>
+      </node>
+      <node id="106608">
+        <label>exception</label>
+      </node>
+      <node id="106604">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/exctrace.h</label>
+        <link refid="exctrace.h"/>
+        <childnode refid="106605" relation="include">
+        </childnode>
+        <childnode refid="106606" relation="include">
+        </childnode>
+        <childnode refid="106608" relation="include">
+        </childnode>
+      </node>
+      <node id="106607">
+        <label>cstddef</label>
+      </node>
+      <node id="106606">
+        <label>CxxUtils/SealDebug.h</label>
+        <link refid="d3/d3b/SealDebug_8h"/>
+        <childnode refid="106605" relation="include">
+        </childnode>
+        <childnode refid="106607" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="de/d12/namespaceCxxUtils">CxxUtils</innernamespace>
+    <briefdescription>
+<para>Generate stack trace backs from a caught exception. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>scott snyder &lt;<ulink url="mailto:snyder@bnl.gov">snyder@bnl.gov</ulink>&gt; </para></simplesect>
+<simplesect kind="date"><para>Oct, 2009 When an exception is caught, we&apos;d sometimes want to dump out the stack at the point where the exception was thrown.</para></simplesect>
+If you run with libexctrace_collector.so added to your LD_PRELOAD, then we&apos;ll remember the backtrace from the last exception thrown. You can then call <ref refid="de/d12/namespaceCxxUtils_1a1b199b3c90529fef9ea3d0b89d9eeca0" kindref="member">CxxUtils::exctrace</ref> to print it out. This will behave sensibly if the collector module hasn&apos;t been preloaded (just print the exception, with no backtrace). </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>This<sp/>file&apos;s<sp/>extension<sp/>implies<sp/>that<sp/>it&apos;s<sp/>C,<sp/>but<sp/>it&apos;s<sp/>really<sp/>-*-<sp/>C++<sp/>-*-.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id$</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"></highlight><highlight class="preprocessor">#ifndef<sp/>CXXUTILS_EXCTRACE_H</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CXXUTILS_EXCTRACE_H</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/dc7/SealCommon_8h" kindref="compound" tooltip="Collecting a few shared bits and pieces from SEAL headers.">CxxUtils/SealCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d3/d3b/SealDebug_8h" kindref="compound" tooltip="This are the SEAL debug aids, adapted to build in Atlas, after the drop of that project...">CxxUtils/SealDebug.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;exception&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">CxxUtils<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d12/namespaceCxxUtils_1a1b199b3c90529fef9ea3d0b89d9eeca0" kindref="member" tooltip="Print out information for the last exception.">exctrace</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::exception&amp;<sp/>e,<sp/><ref refid="d1/dc7/SealCommon_8h_1a98d936fe848403f33ff9cebfc9a38597" kindref="member">IOFD</ref><sp/>fd<sp/>=<sp/><ref refid="d1/dc7/SealCommon_8h_1a066e390969fb367df2540beba5bff9ca" kindref="member">IOFD_INVALID</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>CxxUtils</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>not<sp/>CXXUTILS_EXCTRACE_H</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/exctrace.h"/>
+  </compounddef>
+</doxygen>

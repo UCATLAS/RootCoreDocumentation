@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d9/dc5/classxAOD_1_1TDestructorRegistry" kind="class" prot="public">
+    <compoundname>xAOD::TDestructorRegistry</compoundname>
+    <includes refid="d3/d87/TDestructorRegistry_8h" local="no">TDestructorRegistry.h</includes>
+    <innerclass refid="d6/d1e/classxAOD_1_1TDestructorRegistry_1_1TDestructorHolder" prot="private">xAOD::TDestructorRegistry::TDestructorHolder</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="d9/dc5/classxAOD_1_1TDestructorRegistry_1a21e2ab8ddea49ef139ff7c413bfbb93f" prot="private" static="no">
+        <type>std::map&lt; const std::type_info *, TDestructorHolder &gt;</type>
+        <definition>typedef std::map&lt; const std::type_info*, TDestructorHolder &gt; xAOD::TDestructorRegistry::Map_t</definition>
+        <argsstring></argsstring>
+        <name>Map_t</name>
+        <briefdescription>
+<para><ref refid="dd/dc8/namespacexAOD_1_1Type" kindref="compound">Type</ref> of the internal map. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TDestructorRegistry.h" line="56" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TDestructorRegistry.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d9/dc5/classxAOD_1_1TDestructorRegistry_1a56d6162393e9a573f490f500efab46b5" prot="private" static="no" mutable="no">
+        <type>Map_t</type>
+        <definition>Map_t xAOD::TDestructorRegistry::m_types</definition>
+        <argsstring></argsstring>
+        <name>m_types</name>
+        <briefdescription>
+<para>Internal map of known destructor objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TDestructorRegistry.h" line="58" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TDestructorRegistry.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d9/dc5/classxAOD_1_1TDestructorRegistry_1afde6c73e5949cb1f54f3ed7ddb3ca36b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dc5/classxAOD_1_1TDestructorRegistry" kindref="compound">TDestructorRegistry</ref> &amp;</type>
+        <definition>TDestructorRegistry &amp; xAOD::TDestructorRegistry::instance</definition>
+        <argsstring>()</argsstring>
+        <name>instance</name>
+        <briefdescription>
+<para>Function accessing the singleton instance of this type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TDestructorRegistry.h" line="34" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TDestructorRegistry.cxx" bodystart="15" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d9/dc5/classxAOD_1_1TDestructorRegistry_1a55011252f5ac5052098f320ce59d2ae3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="d5/dce/classxAOD_1_1TVirtualDestructor" kindref="compound">TVirtualDestructor</ref> *</type>
+        <definition>const TVirtualDestructor * xAOD::TDestructorRegistry::get</definition>
+        <argsstring>(const std::type_info &amp;ti) const </argsstring>
+        <name>get</name>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <briefdescription>
+<para>Get the destructor for a given type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TDestructorRegistry.h" line="37" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TDestructorRegistry.cxx" bodystart="22" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/dc5/classxAOD_1_1TDestructorRegistry_1a8687f9e979f9d8fab79e224fed5ceec0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void xAOD::TDestructorRegistry::add</definition>
+        <argsstring>()</argsstring>
+        <name>add</name>
+        <briefdescription>
+<para>Add a new destructor object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used by the code to teach the registry about new types that we want to be able to delete from a type agnostic piece of code later on. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TDestructorRegistry.h" line="40" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TDestructorRegistry.icc" bodystart="19" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Application-wide registry of destructor objects</para><para>This registry is used to keep track of how to destruct objects that are kept in the transient store, and don&apos;t have a ROOT dictionary available for them.</para><para><simplesect kind="author"><para>Attila Krasznahorkay &lt;<ulink url="mailto:Attila.Krasznahorkay@cern.ch">Attila.Krasznahorkay@cern.ch</ulink>&gt;</para></simplesect>
+<simplesect kind="rcs"><title>Revision</title><para>599851 </para></simplesect>
+<simplesect kind="rcs"><title>Date</title><para>2014-06-02 14:32:51 +0200 (Mon, 02 Jun 2014) </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TDestructorRegistry.h" line="30" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TDestructorRegistry.h" bodystart="30" bodyend="60"/>
+    <listofallmembers>
+      <member refid="d9/dc5/classxAOD_1_1TDestructorRegistry_1a8687f9e979f9d8fab79e224fed5ceec0" prot="public" virt="non-virtual"><scope>xAOD::TDestructorRegistry</scope><name>add</name></member>
+      <member refid="d9/dc5/classxAOD_1_1TDestructorRegistry_1a55011252f5ac5052098f320ce59d2ae3" prot="public" virt="non-virtual"><scope>xAOD::TDestructorRegistry</scope><name>get</name></member>
+      <member refid="d9/dc5/classxAOD_1_1TDestructorRegistry_1afde6c73e5949cb1f54f3ed7ddb3ca36b" prot="public" virt="non-virtual"><scope>xAOD::TDestructorRegistry</scope><name>instance</name></member>
+      <member refid="d9/dc5/classxAOD_1_1TDestructorRegistry_1a56d6162393e9a573f490f500efab46b5" prot="private" virt="non-virtual"><scope>xAOD::TDestructorRegistry</scope><name>m_types</name></member>
+      <member refid="d9/dc5/classxAOD_1_1TDestructorRegistry_1a21e2ab8ddea49ef139ff7c413bfbb93f" prot="private" virt="non-virtual"><scope>xAOD::TDestructorRegistry</scope><name>Map_t</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

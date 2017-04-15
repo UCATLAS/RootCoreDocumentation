@@ -1,0 +1,1818 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d0/d58/classxAOD_1_1MissingETComponentMap__v1" kind="class" prot="public">
+    <compoundname>xAOD::MissingETComponentMap_v1</compoundname>
+    <basecompoundref refid="d0/d4d/classDataVector" prot="public" virt="non-virtual">DataVector&lt; MissingETComponent_v1 &gt;</basecompoundref>
+      <sectiondef kind="user-defined">
+      <header>Internal types for local cache handling</header>
+      <description><para><anchor id="_1amgrp3b7ba446fc9103f7f21795dbb0d3da10"/> </para></description>
+      <memberdef kind="typedef" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a17da2c4a4731d3664a479056a7961597" prot="protected" static="no">
+        <type>size_t</type>
+        <definition>typedef size_t xAOD::MissingETComponentMap_v1::signal_key_t</definition>
+        <argsstring></argsstring>
+        <name>signal_key_t</name>
+        <briefdescription>
+<para>Key type for signals (clusters, tracks) is type of index in container. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="182" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1ac5d3514e08c2bd3f82bda2a406ddd3ec" prot="protected" static="no">
+        <type>const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">IParticle</ref> *</type>
+        <definition>typedef const IParticle* xAOD::MissingETComponentMap_v1::particle_key_t</definition>
+        <argsstring></argsstring>
+        <name>particle_key_t</name>
+        <briefdescription>
+<para>Key type for physics objects is the base pointer type of these objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="183" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1adcbd18616b8c6deec4a2b6a519073db6" prot="protected" static="no">
+        <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1a1a4ec6396d234a4221c7502f482b8e42" kindref="member">MissingETBase::Types::indexedlink_t</ref></type>
+        <definition>typedef MissingETBase::Types::indexedlink_t xAOD::MissingETComponentMap_v1::indexedlink_t</definition>
+        <argsstring></argsstring>
+        <name>indexedlink_t</name>
+        <briefdescription>
+<para><ref refid="dd/dc8/namespacexAOD_1_1Type" kindref="compound">Type</ref> for the description of the link locations. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a two-component type which allows holding the index of the <ref refid="d8/d38/classxAOD_1_1MissingETComponent__v1" kindref="compound">xAOD::MissingETComponent_v1</ref> object a physics or signal object is linked from, and the index of this linked object in the contributing object list. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="188" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a64a1a8c82dc65969f2a7b1ad298793fb" prot="protected" static="no">
+        <type>std::vector&lt; <ref refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1adcbd18616b8c6deec4a2b6a519073db6" kindref="member">indexedlink_t</ref> &gt;</type>
+        <definition>typedef std::vector&lt;indexedlink_t&gt; xAOD::MissingETComponentMap_v1::signal_vector_t</definition>
+        <argsstring></argsstring>
+        <name>signal_vector_t</name>
+        <briefdescription>
+<para>Indexed list type for signal object link locations. </para>        </briefdescription>
+        <detaileddescription>
+<para>In case of a signal (<ref refid="dd/d44/namespacexAOD_1a48cb7e4f34a3ea892ee409c7d6a292ea" kindref="member">xAOD::CaloCluster</ref>, <ref refid="dd/d44/namespacexAOD_1a795ac8d2e30fdc75f7c9266766629005" kindref="member">xAOD::TrackParticle</ref>) object look-up, the index of these objects can be directly used to check if they have already been used in the actual MET composition (random access in this index parallel store - with respect to the actual <ref refid="dd/d44/namespacexAOD_1a227831bfd062f97beb5ad6658b3b30f4" kindref="member">xAOD::CaloClusterContainer</ref> and the <ref refid="dd/d44/namespacexAOD_1aacaf125e409a52db5dac156356bb5a99" kindref="member">xAOD::TrackParticleContainer</ref>). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="194" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aff868da184e0159b70b7b5cd9c97bb71" prot="protected" static="no">
+        <type>std::map&lt; <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">particle_key_t</ref>, <ref refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1adcbd18616b8c6deec4a2b6a519073db6" kindref="member">indexedlink_t</ref> &gt;</type>
+        <definition>typedef std::map&lt;particle_key_t,indexedlink_t&gt; xAOD::MissingETComponentMap_v1::particle_map_t</definition>
+        <argsstring></argsstring>
+        <name>particle_map_t</name>
+        <briefdescription>
+<para>Map type for physics object. </para>        </briefdescription>
+        <detaileddescription>
+<para>In case of physics objects, a map look-up is implemented as the lack of a common container for these objects does not allow using the index as a unique key. The object pointer is used instead, and the look-up is provided by a standard map (binary search). Typically, the number of entries in this map is rather small (much less than 100) so that this storage technology should not introduce performance problems. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="201" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Internal data for local cache</header>
+      <description><para><anchor id="_1amgrpbfc84230bd7035a695605e92eab0c677"/> </para></description>
+      <memberdef kind="variable" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a562789fc7c336d72f4a4c394413201dc" prot="protected" static="no" mutable="yes">
+        <type><ref refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a64a1a8c82dc65969f2a7b1ad298793fb" kindref="member">signal_vector_t</ref></type>
+        <definition>signal_vector_t xAOD::MissingETComponentMap_v1::m_clusterLinks</definition>
+        <argsstring></argsstring>
+        <name>m_clusterLinks</name>
+        <briefdescription>
+<para>Store for linked cluuster signal information lookup. </para>        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="signal_vector_t"><para>In case of a signal (<ref refid="dd/d44/namespacexAOD_1a48cb7e4f34a3ea892ee409c7d6a292ea" kindref="member">xAOD::CaloCluster</ref>, <ref refid="dd/d44/namespacexAOD_1a795ac8d2e30fdc75f7c9266766629005" kindref="member">xAOD::TrackParticle</ref>) object look-up, the index of these objects can be directly used to check if they have already been used in the actual MET composition (random access in this index parallel store - with respect to the actual <ref refid="dd/d44/namespacexAOD_1a227831bfd062f97beb5ad6658b3b30f4" kindref="member">xAOD::CaloClusterContainer</ref> and the <ref refid="dd/d44/namespacexAOD_1aacaf125e409a52db5dac156356bb5a99" kindref="member">xAOD::TrackParticleContainer</ref>). </para></copydoc>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="208" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a72a8607a96a83d06c6d39099f1c72266" prot="protected" static="no" mutable="yes">
+        <type><ref refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a64a1a8c82dc65969f2a7b1ad298793fb" kindref="member">signal_vector_t</ref></type>
+        <definition>signal_vector_t xAOD::MissingETComponentMap_v1::m_trackLinks</definition>
+        <argsstring></argsstring>
+        <name>m_trackLinks</name>
+        <briefdescription>
+<para>Store for linked track signal information lookup. </para>        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="signal_vector_t"><para>In case of a signal (<ref refid="dd/d44/namespacexAOD_1a48cb7e4f34a3ea892ee409c7d6a292ea" kindref="member">xAOD::CaloCluster</ref>, <ref refid="dd/d44/namespacexAOD_1a795ac8d2e30fdc75f7c9266766629005" kindref="member">xAOD::TrackParticle</ref>) object look-up, the index of these objects can be directly used to check if they have already been used in the actual MET composition (random access in this index parallel store - with respect to the actual <ref refid="dd/d44/namespacexAOD_1a227831bfd062f97beb5ad6658b3b30f4" kindref="member">xAOD::CaloClusterContainer</ref> and the <ref refid="dd/d44/namespacexAOD_1aacaf125e409a52db5dac156356bb5a99" kindref="member">xAOD::TrackParticleContainer</ref>). </para></copydoc>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="211" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a079aad6f469666087f2af66ac2081eb8" prot="protected" static="no" mutable="yes">
+        <type><ref refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aff868da184e0159b70b7b5cd9c97bb71" kindref="member">particle_map_t</ref></type>
+        <definition>particle_map_t xAOD::MissingETComponentMap_v1::m_particleLinks</definition>
+        <argsstring></argsstring>
+        <name>m_particleLinks</name>
+        <briefdescription>
+<para>Store for linked physics object information lookup. </para>        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="particle_map_t"><para>In case of physics objects, a map look-up is implemented as the lack of a common container for these objects does not allow using the index as a unique key. The object pointer is used instead, and the look-up is provided by a standard map (binary search). Typically, the number of entries in this map is rather small (much less than 100) so that this storage technology should not introduce performance problems. </para></copydoc>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="214" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Find methods</header>
+      <description><para><anchor id="_1amgrpd213d6e46f5f5280aba1419e4f2553dd"/> </para></description>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a768a3e333e71cf8edd570b864a1e66e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d17/classDataModel__detail_1_1const__iterator" kindref="compound">const_iterator</ref></type>
+        <definition>MissingETComponentMap_v1::const_iterator MissingETComponentMap_v1::find</definition>
+        <argsstring>(const MissingET *pMET) const </argsstring>
+        <name>find</name>
+        <param>
+          <type>const <ref refid="dd/d06/classxAOD_1_1MissingET__v1" kindref="compound">MissingET</ref> *</type>
+          <declname>pMET</declname>
+        </param>
+        <briefdescription>
+<para>Find MET object referenced by pointer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Const iterator referencing a non-modifiable <ref refid="d8/d38/classxAOD_1_1MissingETComponent__v1" kindref="compound">xAOD::MissingETComponent_v1</ref> object linking to the given MET object. If the MET object is not in the ccomposition map, an end const iterator is returned.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pMET</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the <ref refid="dd/d44/namespacexAOD_1a3c42c356018f6111557bd691272349b7" kindref="member">xAOD::MissingET</ref> object searched for in the composition map. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="40" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="57" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a2e323c811f14d06145ea8558be2d884a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d17/classDataModel__detail_1_1const__iterator" kindref="compound">const_iterator</ref></type>
+        <definition>MissingETComponentMap_v1::const_iterator MissingETComponentMap_v1::find</definition>
+        <argsstring>(const std::string &amp;name) const </argsstring>
+        <name>find</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Find MET object referenced by name. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Const iterator referencing a non-modifiable <ref refid="d8/d38/classxAOD_1_1MissingETComponent__v1" kindref="compound">xAOD::MissingETComponent_v1</ref> object linking to the given MET object. If the MET object is not in the ccomposition map, an end const iterator is returned.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to non-modifiable string storing the name of the <ref refid="dd/d44/namespacexAOD_1a3c42c356018f6111557bd691272349b7" kindref="member">xAOD::MissingET</ref> object searched for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>It is generally expected that the name of the <ref refid="dd/d44/namespacexAOD_1a3c42c356018f6111557bd691272349b7" kindref="member">xAOD::MissingET</ref> object is unique for this composition. If not, the iterator referencing the first <ref refid="d8/d38/classxAOD_1_1MissingETComponent__v1" kindref="compound">xAOD::MissingETComponent_v1</ref> object containing a link to a <ref refid="dd/d44/namespacexAOD_1a3c42c356018f6111557bd691272349b7" kindref="member">xAOD::MissingET</ref> object with the requested name is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="51" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="70" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1ad169670e47edd777a47b85fec96c5492" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d17/classDataModel__detail_1_1const__iterator" kindref="compound">const_iterator</ref></type>
+        <definition>MissingETComponentMap_v1::const_iterator MissingETComponentMap_v1::find</definition>
+        <argsstring>(MissingETBase::Types::bitmask_t src) const </argsstring>
+        <name>find</name>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1afbe8719ef44dd43f994a3d5ea2823903" kindref="member">MissingETBase::Types::bitmask_t</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Find MET object referenced by source indicator. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Const iterator referencing a non-modifiable <ref refid="d8/d38/classxAOD_1_1MissingETComponent__v1" kindref="compound">xAOD::MissingETComponent_v1</ref> object linking to the given MET object. If the MET object is not in the ccomposition map, an end const iterator is returned.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bit pattern with the requested source indicator.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>It is generally expected that the source of the <ref refid="dd/d44/namespacexAOD_1a3c42c356018f6111557bd691272349b7" kindref="member">xAOD::MissingET</ref> object is unique for this composition. If not, the iterator referencing the first <ref refid="d8/d38/classxAOD_1_1MissingETComponent__v1" kindref="compound">xAOD::MissingETComponent_v1</ref> object containing a link to a <ref refid="dd/d44/namespacexAOD_1a3c42c356018f6111557bd691272349b7" kindref="member">xAOD::MissingET</ref> object with the requested source is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="62" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="82" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a5bfa988082e3f7c90eb3eee32b8b2b40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>MissingETComponentMap_v1::iterator MissingETComponentMap_v1::find</definition>
+        <argsstring>(const MissingET *pMET)</argsstring>
+        <name>find</name>
+        <param>
+          <type>const <ref refid="dd/d06/classxAOD_1_1MissingET__v1" kindref="compound">MissingET</ref> *</type>
+          <declname>pMET</declname>
+        </param>
+        <briefdescription>
+<para>Find MET object referenced by pointer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Iterator referencing a modifiable <ref refid="d8/d38/classxAOD_1_1MissingETComponent__v1" kindref="compound">xAOD::MissingETComponent_v1</ref> object linking to the given MET object. If the MET object is not in the ccomposition map, an end iterator is returned.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pMET</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the <ref refid="dd/d44/namespacexAOD_1a3c42c356018f6111557bd691272349b7" kindref="member">xAOD::MissingET</ref> object searched for in the composition map. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="70" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="64" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aca4461ec6e23c8b70f77b455b3adf0b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>MissingETComponentMap_v1::iterator MissingETComponentMap_v1::find</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>find</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Find MET object referenced by name. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Iterator referencing a modifiable <ref refid="d8/d38/classxAOD_1_1MissingETComponent__v1" kindref="compound">xAOD::MissingETComponent_v1</ref> object linking to the given MET object. If the MET object is not in the ccomposition map, an end iterator is returned.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to non-modifiable string storing the name of the <ref refid="dd/d44/namespacexAOD_1a3c42c356018f6111557bd691272349b7" kindref="member">xAOD::MissingET</ref> object searched for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>It is generally expected that the name of the <ref refid="dd/d44/namespacexAOD_1a3c42c356018f6111557bd691272349b7" kindref="member">xAOD::MissingET</ref> object is unique for this composition. If not, the iterator referencing the first <ref refid="d8/d38/classxAOD_1_1MissingETComponent__v1" kindref="compound">xAOD::MissingETComponent_v1</ref> object containing a link to a <ref refid="dd/d44/namespacexAOD_1a3c42c356018f6111557bd691272349b7" kindref="member">xAOD::MissingET</ref> object with the requested name is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="81" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a00fdb7ef123d625ad51b5e51fbf2e3f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>MissingETComponentMap_v1::iterator MissingETComponentMap_v1::find</definition>
+        <argsstring>(MissingETBase::Types::bitmask_t src)</argsstring>
+        <name>find</name>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1afbe8719ef44dd43f994a3d5ea2823903" kindref="member">MissingETBase::Types::bitmask_t</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Find MET object referenced by source indicator. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Iterator referencing a modifiable <ref refid="d8/d38/classxAOD_1_1MissingETComponent__v1" kindref="compound">xAOD::MissingETComponent_v1</ref> object linking to the given MET object. If the MET object is not in the ccomposition map, an end iterator is returned.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bit pattern with the requested source indicator.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>It is generally expected that the source of the <ref refid="dd/d44/namespacexAOD_1a3c42c356018f6111557bd691272349b7" kindref="member">xAOD::MissingET</ref> object is unique for this composition. If not, the iterator referencing the first <ref refid="d8/d38/classxAOD_1_1MissingETComponent__v1" kindref="compound">xAOD::MissingETComponent_v1</ref> object containing a link to a <ref refid="dd/d44/namespacexAOD_1a3c42c356018f6111557bd691272349b7" kindref="member">xAOD::MissingET</ref> object with the requested source is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="92" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="88" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aa93173c6e4c70b744472a47f25de178c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t MissingETComponentMap_v1::findIndex</definition>
+        <argsstring>(const MissingET *pMET) const </argsstring>
+        <name>findIndex</name>
+        <param>
+          <type>const <ref refid="dd/d06/classxAOD_1_1MissingET__v1" kindref="compound">MissingET</ref> *</type>
+          <declname>pMET</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="93" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="94" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aff65357a276ee44c8f30ae32baba7fd5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t MissingETComponentMap_v1::findIndex</definition>
+        <argsstring>(const std::string &amp;name) const </argsstring>
+        <name>findIndex</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="94" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="97" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a3c56a7b8d90f046d65512da53f08b1d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t MissingETComponentMap_v1::findIndex</definition>
+        <argsstring>(MissingETBase::Types::bitmask_t sw) const </argsstring>
+        <name>findIndex</name>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1afbe8719ef44dd43f994a3d5ea2823903" kindref="member">MissingETBase::Types::bitmask_t</ref></type>
+          <declname>sw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="95" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="100" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a303e35894ca4f4eb13fab326f8126bff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="dd/d06/classxAOD_1_1MissingET__v1" kindref="compound">MissingET</ref> *</type>
+        <definition>const MissingET * MissingETComponentMap_v1::retrieveMissingET</definition>
+        <argsstring>(const std::string &amp;name) const </argsstring>
+        <name>retrieveMissingET</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve MissingET object by name. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Valid pointer to MissingET typed object representing a MET term. If the requested object cannot be found, NULL is returned.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to non-modifiable dataword holding the name of the requested MET object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="103" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="185" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a4bc131d1e841ef10751ed3dcbedd69d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="dd/d06/classxAOD_1_1MissingET__v1" kindref="compound">MissingET</ref> *</type>
+        <definition>const MissingET * MissingETComponentMap_v1::retrieveMissingET</definition>
+        <argsstring>(MissingETBase::Types::bitmask_t src, bool excl=false) const </argsstring>
+        <name>retrieveMissingET</name>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1afbe8719ef44dd43f994a3d5ea2823903" kindref="member">MissingETBase::Types::bitmask_t</ref></type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>excl</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Retrieve MissingET object by source indicator. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Valid pointer to MissingET typed object representing a MET term. If the requested object cannot be found, NULL is returned.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bit pattern defining the source of the requested MET object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">excl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flag controlling the bit pattern test - if <computeroutput>false</computeroutput>, the pointer to the first MET object found with a source indicator containing the requested bit pattern is returned; if <computeroutput>true</computeroutput>, the first MET object found with exactly the requested bit pattern as a source indicator is returned. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="114" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="188" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a92492defd2f499846c765301c23b5d8a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="dd/d06/classxAOD_1_1MissingET__v1" kindref="compound">MissingET</ref> *</type>
+        <definition>const MissingET * MissingETComponentMap_v1::retrieveMissingET</definition>
+        <argsstring>(MissingETBase::Types::bitmask_t src, MissingETBase::Types::bitmask_t sw, bool excl=false) const </argsstring>
+        <name>retrieveMissingET</name>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1afbe8719ef44dd43f994a3d5ea2823903" kindref="member">MissingETBase::Types::bitmask_t</ref></type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1afbe8719ef44dd43f994a3d5ea2823903" kindref="member">MissingETBase::Types::bitmask_t</ref></type>
+          <declname>sw</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>excl</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Retrieve MissingET object by source indicator and status word. </para>        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="retrieveMissingET(MissingETBase::Types::bitmask_t)"></copydoc>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bit pattern defining the status of the MET contribution linking to the requested MET object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>While the MissingET object name should be unique within a given MET composition, MET objects can have the same source with a different contribution status. This method supports a query for a MET object with a given source/status combination. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="124" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="191" bodyend="192"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Client interactions with local cache</header>
+      <description><para><anchor id="_1amgrp4b6f5f4e668fcb2defb8a52ba0d7bc33"/> </para></description>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a6a311c1819524ad3499615ca5c25b114" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MissingETComponentMap_v1::checkUsage</definition>
+        <argsstring>(const IParticle *pPart, MissingETBase::UsageHandler::Policy p=MissingETBase::UsageHandler::OnlyCluster) const </argsstring>
+        <name>checkUsage</name>
+        <param>
+          <type>const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">IParticle</ref> *</type>
+          <declname>pPart</declname>
+        </param>
+        <param>
+          <type><ref refid="de/dd2/namespaceMissingETBase_1_1UsageHandler_1adc82230b57f6a7bcfbffe1e66c06130e" kindref="member">MissingETBase::UsageHandler::Policy</ref></type>
+          <declname>p</declname>
+          <defval>MissingETBase::UsageHandler::OnlyCluster</defval>
+        </param>
+        <briefdescription>
+<para>Check if a given object is already used in MET. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if the referenced signal object is already used.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pPart</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic (base class) pointer to signal object (<ref refid="dd/d44/namespacexAOD_1a48cb7e4f34a3ea892ee409c7d6a292ea" kindref="member">xAOD::CaloCluster</ref> or <ref refid="dd/d44/namespacexAOD_1a795ac8d2e30fdc75f7c9266766629005" kindref="member">xAOD::TrackParticle</ref>). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tags signal type to be checked to usage (optional, default is <ref refid="de/dd2/namespaceMissingETBase_1_1UsageHandler_1adc82230b57f6a7bcfbffe1e66c06130ea578ac2c907e0c34b50fbf6e7220dd9a5" kindref="member">MissingETBase::UsageHandler::OnlyCluster</ref>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="138" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="241" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a106104fe225fad21ef3b78e915968709" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MissingETComponentMap_v1::checkUsage</definition>
+        <argsstring>(MissingETBase::Types::object_vector_t &amp;sig, MissingETBase::UsageHandler::Policy p=MissingETBase::UsageHandler::OnlyCluster) const </argsstring>
+        <name>checkUsage</name>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1a4ed057deea2d9517006928914e605e8d" kindref="member">MissingETBase::Types::object_vector_t</ref> &amp;</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type><ref refid="de/dd2/namespaceMissingETBase_1_1UsageHandler_1adc82230b57f6a7bcfbffe1e66c06130e" kindref="member">MissingETBase::UsageHandler::Policy</ref></type>
+          <declname>p</declname>
+          <defval>MissingETBase::UsageHandler::OnlyCluster</defval>
+        </param>
+        <briefdescription>
+<para>Check a list of objects for prior usage in MET reconstruction. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if any of the objects in the list has already been used in another MET contribution. The iput object list contains pointer references to objects which have not yet been used.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inout]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sig reference to modifiable list of objects. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tags signal type to be checked to usage (optional, default is <ref refid="de/dd2/namespaceMissingETBase_1_1UsageHandler_1adc82230b57f6a7bcfbffe1e66c06130ea578ac2c907e0c34b50fbf6e7220dd9a5" kindref="member">MissingETBase::UsageHandler::OnlyCluster</ref>).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The list of signals on input can contain various signal (object) types. The modified list contains only references to objects with types determined by the <ref refid="de/dd2/namespaceMissingETBase_1_1UsageHandler_1adc82230b57f6a7bcfbffe1e66c06130e" kindref="member">MissingETBase::UsageHandler::Policy</ref>. By default, those are clusters. </para><simplesectsep/><para>Usage is always measured with respect to the type given by <ref refid="de/dd2/namespaceMissingETBase_1_1UsageHandler_1adc82230b57f6a7bcfbffe1e66c06130e" kindref="member">MissingETBase::UsageHandler::Policy</ref>. For example, if the input signal list has mixed object types, its content on return contains only references to objects of the type determined by the <ref refid="de/dd2/namespaceMissingETBase_1_1UsageHandler_1adc82230b57f6a7bcfbffe1e66c06130e" kindref="member">MissingETBase::UsageHandler::Policy</ref>. By default, those are clusters. This modification of the input list does not indicate that any clusters in this list have already been used. This is done by the return value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="154" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="244" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a48e5ef64ffec47924c5b1c4e208e953d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MissingETComponentMap_v1::addObjects</definition>
+        <argsstring>(const MissingET *pMET, const IParticle *pPart, const MissingETBase::Types::object_vector_t &amp;signalList, MissingETBase::UsageHandler::Policy p=MissingETBase::UsageHandler::OnlyCluster)</argsstring>
+        <name>addObjects</name>
+        <param>
+          <type>const <ref refid="dd/d06/classxAOD_1_1MissingET__v1" kindref="compound">MissingET</ref> *</type>
+          <declname>pMET</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">IParticle</ref> *</type>
+          <declname>pPart</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1a4ed057deea2d9517006928914e605e8d" kindref="member">MissingETBase::Types::object_vector_t</ref> &amp;</type>
+          <declname>signalList</declname>
+        </param>
+        <param>
+          <type><ref refid="de/dd2/namespaceMissingETBase_1_1UsageHandler_1adc82230b57f6a7bcfbffe1e66c06130e" kindref="member">MissingETBase::UsageHandler::Policy</ref></type>
+          <declname>p</declname>
+          <defval>MissingETBase::UsageHandler::OnlyCluster</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="157" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="324" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a6fb5d45ccff8effca5f5e16c6fb44c60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MissingETComponentMap_v1::setClusters</definition>
+        <argsstring>(const MissingET *pMET, const IParticle *pPart, const MissingETBase::Types::object_vector_t &amp;signalList)</argsstring>
+        <name>setClusters</name>
+        <param>
+          <type>const <ref refid="dd/d06/classxAOD_1_1MissingET__v1" kindref="compound">MissingET</ref> *</type>
+          <declname>pMET</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">IParticle</ref> *</type>
+          <declname>pPart</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1a4ed057deea2d9517006928914e605e8d" kindref="member">MissingETBase::Types::object_vector_t</ref> &amp;</type>
+          <declname>signalList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="158" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="343" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a30e3316a5778ecf3ddd9f9c49d1740f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MissingETComponentMap_v1::setTracks</definition>
+        <argsstring>(const MissingET *pMET, const IParticle *pPart, const MissingETBase::Types::object_vector_t &amp;signalList)</argsstring>
+        <name>setTracks</name>
+        <param>
+          <type>const <ref refid="dd/d06/classxAOD_1_1MissingET__v1" kindref="compound">MissingET</ref> *</type>
+          <declname>pMET</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">IParticle</ref> *</type>
+          <declname>pPart</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1a4ed057deea2d9517006928914e605e8d" kindref="member">MissingETBase::Types::object_vector_t</ref> &amp;</type>
+          <declname>signalList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="159" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="377" bodyend="409"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1ae038182a53e3b947d0527390ecf890e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MissingETComponentMap_v1::setObjects</definition>
+        <argsstring>(const MissingET *pMET, const IParticle *pPart, const MissingETBase::Types::object_vector_t &amp;objectList)</argsstring>
+        <name>setObjects</name>
+        <param>
+          <type>const <ref refid="dd/d06/classxAOD_1_1MissingET__v1" kindref="compound">MissingET</ref> *</type>
+          <declname>pMET</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">IParticle</ref> *</type>
+          <declname>pPart</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1a4ed057deea2d9517006928914e605e8d" kindref="member">MissingETBase::Types::object_vector_t</ref> &amp;</type>
+          <declname>objectList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="160" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="411" bodyend="422"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a69025c3d511709f0533af800f28fd6e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t MissingETComponentMap_v1::getComponentIndex</definition>
+        <argsstring>(const IParticle *pPart) const </argsstring>
+        <name>getComponentIndex</name>
+        <param>
+          <type>const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">IParticle</ref> *</type>
+          <declname>pPart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="161" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="439" bodyend="439"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a0ed6db1a56435097764e27ff6f4fba57" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t MissingETComponentMap_v1::getObjectIndex</definition>
+        <argsstring>(const IParticle *pPart) const </argsstring>
+        <name>getObjectIndex</name>
+        <param>
+          <type>const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">IParticle</ref> *</type>
+          <declname>pPart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="162" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="440" bodyend="440"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Internal functions for local cache handling</header>
+      <description><para><anchor id="_1amgrp3b1826f85a65e0924f77031b67956d79"/> </para></description>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aaab45013b9e9a40b2d9ab8870fc97690" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>int</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>size_t</type>
+        <definition>size_t xAOD::MissingETComponentMap_v1::f_getIndex</definition>
+        <argsstring>(const IParticle *pPart) const </argsstring>
+        <name>f_getIndex</name>
+        <param>
+          <type>const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">IParticle</ref> *</type>
+          <declname>pPart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="220" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="219" bodyend="230"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Internal object lookup cache handlers</header>
+      <description><para><anchor id="_1amgrpbcd31d5800ed8049887907c86884204a"/> </para></description>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a428b46d011a2e1f7282e53f81ec9d3db" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MissingETComponentMap_v1::f_checkObjectUsage</definition>
+        <argsstring>(MissingETBase::Types::object_vector_t &amp;sig, signal_vector_t &amp;signalLinks) const </argsstring>
+        <name>f_checkObjectUsage</name>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1a4ed057deea2d9517006928914e605e8d" kindref="member">MissingETBase::Types::object_vector_t</ref> &amp;</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a64a1a8c82dc65969f2a7b1ad298793fb" kindref="member">signal_vector_t</ref> &amp;</type>
+          <declname>signalLinks</declname>
+        </param>
+        <briefdescription>
+<para>Check signal object usage. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if any of the signal objects in the inout list is already marked as used. In addition, all used objects are removed from the input (signal) object list. If none of the objects in this list is already used, <computeroutput>false</computeroutput> is returned.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inout]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sig reference to modifiable list of signal objects to be checked for usage in MET reconstruction. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">signalLinks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to modifiable list of signals already used (means linked to a MET contribution).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This method does not add yet unused signal objects to the signal link list, as this decision is controlled by the specific MET reconstruction tool. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="245" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="273" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a50638f5164ff837fe00888434d587df1" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MissingETComponentMap_v1::f_checkObjectUsage</definition>
+        <argsstring>(MissingETBase::Types::object_vector_t &amp;objects, particle_map_t &amp;physicsLinks) const </argsstring>
+        <name>f_checkObjectUsage</name>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1a4ed057deea2d9517006928914e605e8d" kindref="member">MissingETBase::Types::object_vector_t</ref> &amp;</type>
+          <declname>objects</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aff868da184e0159b70b7b5cd9c97bb71" kindref="member">particle_map_t</ref> &amp;</type>
+          <declname>physicsLinks</declname>
+        </param>
+        <briefdescription>
+<para>Check physics object usage. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if any of the physics objects in the input list is already marked as used. In addition, all used objects are removed from the input (physics) object list. If none of the objects in this list is already used, <computeroutput>false</computeroutput> is returned.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inout]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>objects reference to modifiable list of physics objects to be checked for usage in MET reconstruction. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">physicsLinks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to modifiable map of link descriptors for physics objects already used (means linked to a MET contribution).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This method does not add yet unused physics objects to the signal link list, as this decision is controlled by the specific MET reconstruction tool. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="256" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="309" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1acd59aaaefc10df87f19a21e492b93e29" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MissingETComponentMap_v1::f_fillLookupCache</definition>
+        <argsstring>()</argsstring>
+        <name>f_fillLookupCache</name>
+        <briefdescription>
+<para>Fill the lookup cache from the composition map data content. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="258" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="434" bodyend="437"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a7431794524b68a80d1529f6affc77d39" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MissingETComponentMap_v1::f_clearLookupCache</definition>
+        <argsstring>()</argsstring>
+        <name>f_clearLookupCache</name>
+        <briefdescription>
+<para>Clear the lookup cache. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="260" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="431" bodyend="432"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a46cf6fb38a7ba69cba2a462e66fb2339" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MissingETComponentMap_v1::f_setupLookupCache</definition>
+        <argsstring>(signal_vector_t &amp;signalLinks, size_t reserve)</argsstring>
+        <name>f_setupLookupCache</name>
+        <param>
+          <type><ref refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a64a1a8c82dc65969f2a7b1ad298793fb" kindref="member">signal_vector_t</ref> &amp;</type>
+          <declname>signalLinks</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>reserve</declname>
+        </param>
+        <briefdescription>
+<para>Set up the signal object lookup. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="262" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="428" bodyend="429"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a4b68f93d6e6a12dfb58ba97bebb03254" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>int</type>
+            <declname>OBJTYPE</declname>
+            <defname>OBJTYPE</defname>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool xAOD::MissingETComponentMap_v1::f_extractSignal</definition>
+        <argsstring>(MissingETBase::Types::object_vector_t &amp;sig) const </argsstring>
+        <name>f_extractSignal</name>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1a4ed057deea2d9517006928914e605e8d" kindref="member">MissingETBase::Types::object_vector_t</ref> &amp;</type>
+          <declname>sig</declname>
+        </param>
+        <briefdescription>
+<para>Signal type extractor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if input object list contains requested signal type, else <computeroutput>false</computeroutput>. The input object list is filtered on return, meaning it only contains objects of the requested type. <ref refid="d4/dc4/structA" kindref="compound">A</ref> return of <computeroutput>false</computeroutput> thus indicates an empty list.</para></simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>SIGNAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signal type of extracted objects.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inout]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sig reference to modifiable list of signal objects to be checked for usage in MET reconstruction. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="274" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="273" bodyend="278"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Internal find methods for constant access</header>
+      <description><para><anchor id="_1amgrp5b32fe0b80dc487d593413946f8a1f42"/> </para></description>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a4cf18437e5e62bac29dd23764f754a4d" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d17/classDataModel__detail_1_1const__iterator" kindref="compound">const_iterator</ref></type>
+        <definition>MissingETComponentMap_v1::const_iterator MissingETComponentMap_v1::f_findConst</definition>
+        <argsstring>(const MissingET *pMET) const </argsstring>
+        <name>f_findConst</name>
+        <param>
+          <type>const <ref refid="dd/d06/classxAOD_1_1MissingET__v1" kindref="compound">MissingET</ref> *</type>
+          <declname>pMET</declname>
+        </param>
+        <briefdescription>
+<para>Find contribution by MET object pointer. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method finds a <ref refid="d8/d38/classxAOD_1_1MissingETComponent__v1" kindref="compound">xAOD::MissingETComponent_v1</ref> object linked to the specified <ref refid="dd/d44/namespacexAOD_1a3c42c356018f6111557bd691272349b7" kindref="member">xAOD::MissingET</ref> object. It is invoked internally by <ref refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a5bfa988082e3f7c90eb3eee32b8b2b40" kindref="member">find(const MissingET*)</ref>. It uses an internal cache to determine if this MET object has been found in the latest invocation of the find method, and returns without further action in this case. If a different MET object is searched for, it initiates a linear search and updates the internal cache with the new pointer (will be NULL if referenced MET object not found) and the datawords storing the const_iterator and the iterator referencing the non-modifiable and modifiable <ref refid="d8/d38/classxAOD_1_1MissingETComponent__v1" kindref="compound">xAOD::MissingETComponent_v1</ref> object in the composition map, respectively (both iterators will be set to the corresponding end iterator if the MET object is not in the composition map).</para><para><simplesect kind="return"><para>Valid const iterator referencing the <ref refid="d8/d38/classxAOD_1_1MissingETComponent__v1" kindref="compound">MissingETComponent_v1</ref> object linking ot the requested MET object. If this MET object is not in the list, <ref refid="d0/d4d/classDataVector_1ad7a08d945fb1698fcb3ea07ab1dccbec" kindref="member">MissingETComponentMap_v1::end()</ref> is returned.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pMET</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to non-modifiable MissingET object to be found in the composition map. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="300" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="107" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a78a315753aa9d7fccc6173930aed068f" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d17/classDataModel__detail_1_1const__iterator" kindref="compound">const_iterator</ref></type>
+        <definition>MissingETComponentMap_v1::const_iterator MissingETComponentMap_v1::f_findConst</definition>
+        <argsstring>(const std::string &amp;name) const </argsstring>
+        <name>f_findConst</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Find contribution by MET object name. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method finds a <ref refid="d8/d38/classxAOD_1_1MissingETComponent__v1" kindref="compound">xAOD::MissingETComponent_v1</ref> object linked to the specified <ref refid="dd/d44/namespacexAOD_1a3c42c356018f6111557bd691272349b7" kindref="member">xAOD::MissingET</ref> object. It is invoked internally by <ref refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aca4461ec6e23c8b70f77b455b3adf0b7" kindref="member">find(const std::string&amp;)</ref>. It uses an internal cache to determine if this MET object has been found in the latest invocation of the find method, and returns without further action in this case. If a different MET object is searched for, it initiates a linear search and updates the internal cache with the new pointer (will be NULL if referenced MET object not found) and the datawords storing the const_iterator and the iterator referencing the non-modifiable and modifiable <ref refid="d8/d38/classxAOD_1_1MissingETComponent__v1" kindref="compound">xAOD::MissingETComponent_v1</ref> object in the composition map, respectively (both iterators will be set to the corresponding end iterator if the MET object is not in the composition map).</para><para><simplesect kind="return"><para>Valid const iterator referencing the <ref refid="d8/d38/classxAOD_1_1MissingETComponent__v1" kindref="compound">MissingETComponent_v1</ref> object linking ot the requested MET object. If this MET object is not in the list, <ref refid="d0/d4d/classDataVector_1ad7a08d945fb1698fcb3ea07ab1dccbec" kindref="member">MissingETComponentMap_v1::end()</ref> is returned.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to the non-modifiable data word storing the name of the requested MET object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="315" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="125" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a09c33f5e84996ddb00f03d0b4c503693" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d17/classDataModel__detail_1_1const__iterator" kindref="compound">const_iterator</ref></type>
+        <definition>MissingETComponentMap_v1::const_iterator MissingETComponentMap_v1::f_findConst</definition>
+        <argsstring>(MissingETBase::Types::bitmask_t src) const </argsstring>
+        <name>f_findConst</name>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1afbe8719ef44dd43f994a3d5ea2823903" kindref="member">MissingETBase::Types::bitmask_t</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="316" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="143" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aaa3be46f38d2cc0a6c7b84c81b1fb6e3" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MissingETComponentMap_v1::f_setConstCache</definition>
+        <argsstring>(const_iterator fCont) const </argsstring>
+        <name>f_setConstCache</name>
+        <param>
+          <type><ref refid="d7/d17/classDataModel__detail_1_1const__iterator" kindref="compound">const_iterator</ref></type>
+          <declname>fCont</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="317" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="161" bodyend="169"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a8a25cd92ab1207bffed89548b5d79671" prot="private" static="no" mutable="yes">
+        <type>const <ref refid="dd/d06/classxAOD_1_1MissingET__v1" kindref="compound">MissingET</ref> *</type>
+        <definition>const MissingET* xAOD::MissingETComponentMap_v1::m_lastMETObject</definition>
+        <argsstring></argsstring>
+        <name>m_lastMETObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="333" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aa036015d563d585cada00e5c50a3250a" prot="private" static="no" mutable="yes">
+        <type>size_t</type>
+        <definition>size_t xAOD::MissingETComponentMap_v1::m_lastContribIndex</definition>
+        <argsstring></argsstring>
+        <name>m_lastContribIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="334" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="334" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a2d924cd4d3834217395028e31965a1ab" prot="private" static="yes" mutable="no">
+        <type>size_t</type>
+        <definition>size_t MissingETComponentMap_v1::m_clusterLinkReserve</definition>
+        <argsstring></argsstring>
+        <name>m_clusterLinkReserve</name>
+        <initializer> 10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="336" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1ae16f089776e29914709979a6c8d59725" prot="private" static="yes" mutable="no">
+        <type>size_t</type>
+        <definition>size_t MissingETComponentMap_v1::m_trackLinkReserve</definition>
+        <argsstring></argsstring>
+        <name>m_trackLinkReserve</name>
+        <initializer> 10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="337" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a8cf4b53b7b8e5615fc4cbcffa4b58f5e" prot="private" static="yes" mutable="no">
+        <type>size_t</type>
+        <definition>size_t MissingETComponentMap_v1::m_maxClusterSize</definition>
+        <argsstring></argsstring>
+        <name>m_maxClusterSize</name>
+        <initializer> 5000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="338" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a713fd5c38ccfdc4d835d428dacb02ee8" prot="private" static="yes" mutable="no">
+        <type>size_t</type>
+        <definition>size_t MissingETComponentMap_v1::m_maxTrackSize</definition>
+        <argsstring></argsstring>
+        <name>m_maxTrackSize</name>
+        <initializer> 5000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="339" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="339" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a6c5c55fabffd30fe59521bf7cf76f5c5" prot="private" static="yes" mutable="no">
+        <type>size_t</type>
+        <definition>size_t MissingETComponentMap_v1::m_maxSignalSize</definition>
+        <argsstring></argsstring>
+        <name>m_maxSignalSize</name>
+        <initializer> fmax(m_maxTrackSize,m_maxClusterSize)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="340" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a584f650aeb64f3b55942446f4ab3173e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MissingETComponentMap_v1::MissingETComponentMap_v1</definition>
+        <argsstring>(SG::OwnershipPolicy own=SG::OWN_ELEMENTS, SG::IndexTrackingPolicy trackIndices=SG::DEFAULT_TRACK_INDICES)</argsstring>
+        <name>MissingETComponentMap_v1</name>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8" kindref="member">SG::OwnershipPolicy</ref></type>
+          <declname>own</declname>
+          <defval>SG::OWN_ELEMENTS</defval>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1a9f3d699f65390b7f8baf54d9cd634573" kindref="member">SG::IndexTrackingPolicy</ref></type>
+          <declname>trackIndices</declname>
+          <defval>SG::DEFAULT_TRACK_INDICES</defval>
+        </param>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="24" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="31" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a7316c1b5e393f530862d353cf8abba80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MissingETComponentMap_v1::MissingETComponentMap_v1</definition>
+        <argsstring>(MissingETComponentMap_v1::iterator first, MissingETComponentMap_v1::iterator last, SG::OwnershipPolicy own=SG::OWN_ELEMENTS, SG::IndexTrackingPolicy trackIndices=SG::DEFAULT_TRACK_INDICES)</argsstring>
+        <name>MissingETComponentMap_v1</name>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">MissingETComponentMap_v1::iterator</ref></type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">MissingETComponentMap_v1::iterator</ref></type>
+          <declname>last</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8" kindref="member">SG::OwnershipPolicy</ref></type>
+          <declname>own</declname>
+          <defval>SG::OWN_ELEMENTS</defval>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1a9f3d699f65390b7f8baf54d9cd634573" kindref="member">SG::IndexTrackingPolicy</ref></type>
+          <declname>trackIndices</declname>
+          <defval>SG::DEFAULT_TRACK_INDICES</defval>
+        </param>
+        <briefdescription>
+<para>Constructor from iterators. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="27" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="40" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1af4f6c03165e8d6b462ead0309a43821a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>MissingETComponentMap_v1::~MissingETComponentMap_v1</definition>
+        <argsstring>()</argsstring>
+        <name>~MissingETComponentMap_v1</name>
+        <briefdescription>
+<para>Base class destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="29" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="50" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a5acc242b0dbaa4d76b85857fb0ebd696" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xAOD::MissingETComponentMap_v1::resize</definition>
+        <argsstring>(size_type sz)</argsstring>
+        <name>resize</name>
+        <reimplements refid="d0/d4d/classDataVector_1a15eb577a199c519cb5126233b04cc429">resize</reimplements>
+        <param>
+          <type>size_type</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="168" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.icc" bodystart="13" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1afc4b4a4eccabae3091372560a5fdc807" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xAOD::MissingETComponentMap_v1::pop_back</definition>
+        <argsstring>()</argsstring>
+        <name>pop_back</name>
+        <reimplements refid="d0/d4d/classDataVector_1a52881ff983e0d0dd21b23c4d03824b68">pop_back</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="169" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.icc" bodystart="16" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a37d1a8e2caeb7d1dae2dd744fc808302" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xAOD::MissingETComponentMap_v1::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <reimplements refid="d0/d4d/classDataVector_1af2b028c097d741794a59b03c184fb70a">clear</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="170" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.icc" bodystart="25" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a782b33852df8afc2db5f72e3756125eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xAOD::MissingETComponentMap_v1::sort</definition>
+        <argsstring>()</argsstring>
+        <name>sort</name>
+        <reimplements refid="d0/d4d/classDataVector_1a33ee222cacf6bcdf7a561a8505ec09c1">sort</reimplements>
+        <briefdescription>
+<para>Sort the container. </para>        </briefdescription>
+        <detaileddescription>
+<para>This just sorts by pointer value, so it&apos;s probably not very useful. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="171" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.icc" bodystart="19" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aaf524f276a71cdbd2b4684f0ce5bd425" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class COMPARE</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void xAOD::MissingETComponentMap_v1::sort</definition>
+        <argsstring>(COMPARE comp)</argsstring>
+        <name>sort</name>
+        <reimplements refid="d0/d4d/classDataVector_1a81fae208d38453acd5d3aaccafe5c10d">sort</reimplements>
+        <param>
+          <type>COMPARE</type>
+          <declname>comp</declname>
+        </param>
+        <briefdescription>
+<para>Sort the container with a user-specified comparison operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>comp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Functional to compare two values. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="172" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.icc" bodystart="22" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a8c078565a19b37e6dca4e17a93f3fb48" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xAOD::MissingETComponentMap_v1::clear</definition>
+        <argsstring>(SG::OwnershipPolicy ownPolicy)</argsstring>
+        <name>clear</name>
+        <reimplements refid="d0/d4d/classDataVector_1ae40a6a2cf044fdeb1defe4889213c5e2">clear</reimplements>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8" kindref="member">SG::OwnershipPolicy</ref></type>
+          <declname>ownPolicy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="173" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.icc" bodystart="28" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a3bf9c9742788c62ba811bf0ca104916c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xAOD::MissingETComponentMap_v1::clear</definition>
+        <argsstring>(SG::OwnershipPolicy ownPolicy, SG::IndexTrackingPolicy trackIndices)</argsstring>
+        <name>clear</name>
+        <reimplements refid="d0/d4d/classDataVector_1a70c20dac9bc136ec903ae571a203314f">clear</reimplements>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1acd9d1a31242c6243cc1c6fab0fbc7cd8" kindref="member">SG::OwnershipPolicy</ref></type>
+          <declname>ownPolicy</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d59/namespaceSG_1a9f3d699f65390b7f8baf54d9cd634573" kindref="member">SG::IndexTrackingPolicy</ref></type>
+          <declname>trackIndices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="174" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.icc" bodystart="31" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a44b8b3e159c8229c086ede659d87d88a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>xAOD::MissingETComponentMap_v1::iterator xAOD::MissingETComponentMap_v1::erase</definition>
+        <argsstring>(iterator position)</argsstring>
+        <name>erase</name>
+        <reimplements refid="d0/d4d/classDataVector_1a249b08ecb8260e288fe9087e3db48950">erase</reimplements>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Remove element at a given position. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the element to be removed. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An iterator pointing to the next element (or <computeroutput><ref refid="d0/d4d/classDataVector_1ad7a08d945fb1698fcb3ea07ab1dccbec" kindref="member">end()</ref></computeroutput>).</para></simplesect>
+If the container owns its elements, then the pointed-to element will be deleted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="175" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.icc" bodystart="34" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a0d4b08a35784be97f20c4df4878a2f42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>xAOD::MissingETComponentMap_v1::iterator xAOD::MissingETComponentMap_v1::erase</definition>
+        <argsstring>(iterator first, iterator last)</argsstring>
+        <name>erase</name>
+        <reimplements refid="d0/d4d/classDataVector_1acaf33a6392cb774a35ee362d140fd17c">erase</reimplements>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+<para>Remove a range of elements. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the first element to be removed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing one past the last element to be removed. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An iterator pointing to the element pointed to by <emphasis>last</emphasis> prior to erasing (or <computeroutput><ref refid="d0/d4d/classDataVector_1ad7a08d945fb1698fcb3ea07ab1dccbec" kindref="member">end()</ref></computeroutput>).</para></simplesect>
+If the container owns its elements, then the removed elements will be deleted. Any duplicates will be removed in this process, but don&apos;t rely on this. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="176" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.icc" bodystart="37" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a6be2bfd7ecdf93030fcef75842796dbf" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>MissingETComponentMap_v1::iterator MissingETComponentMap_v1::f_find</definition>
+        <argsstring>(const MissingET *pMET)</argsstring>
+        <name>f_find</name>
+        <param>
+          <type>const <ref refid="dd/d06/classxAOD_1_1MissingET__v1" kindref="compound">MissingET</ref> *</type>
+          <declname>pMET</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="320" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="116" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a6ee104d7424d748b319fb9d9eb77bb20" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>MissingETComponentMap_v1::iterator MissingETComponentMap_v1::f_find</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>f_find</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="321" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="134" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a5910ef407a265267f1b09597c88bb403" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>MissingETComponentMap_v1::iterator MissingETComponentMap_v1::f_find</definition>
+        <argsstring>(MissingETBase::Types::bitmask_t src)</argsstring>
+        <name>f_find</name>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1afbe8719ef44dd43f994a3d5ea2823903" kindref="member">MissingETBase::Types::bitmask_t</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="322" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="152" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a83bd8e84d05b768c36964583ea67358f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MissingETComponentMap_v1::f_setCache</definition>
+        <argsstring>(iterator fCont)</argsstring>
+        <name>f_setCache</name>
+        <param>
+          <type><ref refid="d5/d70/classDataModel__detail_1_1iterator" kindref="compound">iterator</ref></type>
+          <declname>fCont</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="323" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="171" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1afadd26a4a3d87364495fa060ee3638f5" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xAOD::MissingETComponentMap_v1::resetCache</definition>
+        <argsstring>() const </argsstring>
+        <name>resetCache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="324" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.icc" bodystart="7" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a79b2b0747cff9384a0e71540f12c6381" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="dd/d06/classxAOD_1_1MissingET__v1" kindref="compound">MissingET</ref> *</type>
+        <definition>const MissingET * MissingETComponentMap_v1::f_retrieveMissingETExcl</definition>
+        <argsstring>(MissingETBase::Types::bitmask_t src) const </argsstring>
+        <name>f_retrieveMissingETExcl</name>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1afbe8719ef44dd43f994a3d5ea2823903" kindref="member">MissingETBase::Types::bitmask_t</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="326" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="198" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a9245cf1244dc5c2786ba6f88489909c3" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="dd/d06/classxAOD_1_1MissingET__v1" kindref="compound">MissingET</ref> *</type>
+        <definition>const MissingET * MissingETComponentMap_v1::f_retrieveMissingETExcl</definition>
+        <argsstring>(MissingETBase::Types::bitmask_t src, MissingETBase::Types::bitmask_t sw) const </argsstring>
+        <name>f_retrieveMissingETExcl</name>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1afbe8719ef44dd43f994a3d5ea2823903" kindref="member">MissingETBase::Types::bitmask_t</ref></type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1afbe8719ef44dd43f994a3d5ea2823903" kindref="member">MissingETBase::Types::bitmask_t</ref></type>
+          <declname>sw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="327" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="201" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a8fb0a0139bfd2841de9d505f71a2581b" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="dd/d06/classxAOD_1_1MissingET__v1" kindref="compound">MissingET</ref> *</type>
+        <definition>const MissingET * MissingETComponentMap_v1::f_retrieveMissingETIncl</definition>
+        <argsstring>(MissingETBase::Types::bitmask_t src) const </argsstring>
+        <name>f_retrieveMissingETIncl</name>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1afbe8719ef44dd43f994a3d5ea2823903" kindref="member">MissingETBase::Types::bitmask_t</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="328" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="212" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1ac662960be7e5692126219132a326fd74" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="dd/d06/classxAOD_1_1MissingET__v1" kindref="compound">MissingET</ref> *</type>
+        <definition>const MissingET * MissingETComponentMap_v1::f_retrieveMissingETIncl</definition>
+        <argsstring>(MissingETBase::Types::bitmask_t src, MissingETBase::Types::bitmask_t sw) const </argsstring>
+        <name>f_retrieveMissingETIncl</name>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1afbe8719ef44dd43f994a3d5ea2823903" kindref="member">MissingETBase::Types::bitmask_t</ref></type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1afbe8719ef44dd43f994a3d5ea2823903" kindref="member">MissingETBase::Types::bitmask_t</ref></type>
+          <declname>sw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="329" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/Root/MissingETComponentMap_v1.cxx" bodystart="223" bodyend="235"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="14360">
+        <label>DataVector&lt; MissingETComponent_v1 &gt;</label>
+        <link refid="d0/d4d/classDataVector"/>
+        <childnode refid="14361" relation="private-inheritance">
+        </childnode>
+        <childnode refid="14362" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14362">
+        <label>typename DataVectorBase&lt;MissingETComponent_v1 &gt;::Base</label>
+        <link refid="d5/dd9/classtypename_01DataVectorBase_1_1Base"/>
+      </node>
+      <node id="14361">
+        <label>KeepFirstTemplateArguments&lt; 1 &gt;</label>
+        <link refid="d6/de5/classKeepFirstTemplateArguments"/>
+      </node>
+      <node id="14359">
+        <label>xAOD::MissingETComponentMap_v1</label>
+        <link refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1"/>
+        <childnode refid="14360" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="14383">
+        <label>Internal::rehash_base&lt;Internal::prime_rehash_policy , hashtable&lt;Value , Value , Alloc , Internal::identity&lt; Value &gt; , Pred , Hash , Internal::mod_range_hashing , Internal::default_ranged_hash , Internal::prime_rehash_policy , cache_hash_code, constant_iterators, unique_keys&gt; &gt;</label>
+        <link refid="db/d2b/classInternal_1_1rehash__base"/>
+      </node>
+      <node id="14384">
+        <label>Internal::hash_code_base&lt;Value , Value , Internal::identity&lt; Value &gt; , Pred , Hash , Internal::mod_range_hashing , Internal::default_ranged_hash , cache_hash_code&gt;</label>
+        <link refid="d0/d2e/classInternal_1_1hash__code__base"/>
+      </node>
+      <node id="14364">
+        <label>DataVector&lt; MissingETComponent_v1 &gt;</label>
+        <link refid="d0/d4d/classDataVector"/>
+        <childnode refid="14365" relation="private-inheritance">
+        </childnode>
+        <childnode refid="14366" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14367" relation="usage">
+          <edgelabel>m_isMostDerived</edgelabel>
+        </childnode>
+        <childnode refid="14368" relation="usage">
+          <edgelabel>s_info</edgelabel>
+        </childnode>
+      </node>
+      <node id="14379">
+        <label>xAOD::TVirtualEvent</label>
+        <link refid="de/daf/classxAOD_1_1TVirtualEvent"/>
+      </node>
+      <node id="14388">
+        <label>SG::AuxElementData</label>
+        <link refid="dc/dfb/classSG_1_1AuxElementData"/>
+        <childnode refid="14373" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14382">
+        <label>SG::hashtable&lt; Value, Value, Alloc, Internal::identity&lt; Value &gt;, Pred, Hash, Internal::mod_range_hashing, Internal::default_ranged_hash, Internal::prime_rehash_policy, cache_hash_code, true, true &gt;</label>
+        <link refid="de/d63/classSG_1_1hashtable"/>
+        <childnode refid="14383" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14384" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14385" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14377">
+        <label>SelectNoInstance</label>
+        <link refid="d9/dec/classSelectNoInstance"/>
+      </node>
+      <node id="14367">
+        <label>SG::IsMostDerivedFlag</label>
+        <link refid="df/d76/classSG_1_1IsMostDerivedFlag"/>
+      </node>
+      <node id="14378">
+        <label>DataLinkBase</label>
+        <link refid="dd/d9d/classDataLinkBase"/>
+      </node>
+      <node id="14372">
+        <label>SG::IAuxElement</label>
+        <link refid="df/dca/classSG_1_1IAuxElement"/>
+      </node>
+      <node id="14375">
+        <label>SG::IConstAuxStore</label>
+        <link refid="d3/dd5/classSG_1_1IConstAuxStore"/>
+      </node>
+      <node id="14366">
+        <label>typename DataVectorBase&lt;MissingETComponent_v1 &gt;::Base</label>
+        <link refid="d5/dd9/classtypename_01DataVectorBase_1_1Base"/>
+      </node>
+      <node id="14376">
+        <label>DataLink&lt; SG::IConstAuxStore &gt;</label>
+        <link refid="da/da2/classDataLink"/>
+        <childnode refid="14377" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14378" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14379" relation="usage">
+          <edgelabel>m_event</edgelabel>
+        </childnode>
+        <childnode refid="14375" relation="usage">
+          <edgelabel>m_object</edgelabel>
+        </childnode>
+      </node>
+      <node id="14365">
+        <label>KeepFirstTemplateArguments&lt; 1 &gt;</label>
+        <link refid="d6/de5/classKeepFirstTemplateArguments"/>
+      </node>
+      <node id="14370">
+        <label>xAOD::MissingET_v1</label>
+        <link refid="dd/d06/classxAOD_1_1MissingET__v1"/>
+        <childnode refid="14371" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14374">
+        <label>SG::IAuxStore</label>
+        <link refid="dc/d05/classSG_1_1IAuxStore"/>
+        <childnode refid="14375" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14381">
+        <label>SG::unordered_set&lt; Value, Hash, Pred, Alloc, cache_hash_code &gt;</label>
+        <link refid="dd/dac/classSG_1_1unordered__set"/>
+        <childnode refid="14382" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14369">
+        <label>DataModel_detail::DVLInfoBase</label>
+        <link refid="da/d8a/classDataModel__detail_1_1DVLInfoBase"/>
+      </node>
+      <node id="14385">
+        <label>Internal::map_base&lt;Value , Value , Internal::identity&lt; Value &gt; , unique_keys, hashtable&lt;Value , Value , Alloc , Internal::identity&lt; Value &gt; , Pred , Hash , Internal::mod_range_hashing , Internal::default_ranged_hash , Internal::prime_rehash_policy , cache_hash_code, constant_iterators, unique_keys&gt; &gt;</label>
+        <link refid="d1/d54/classInternal_1_1map__base"/>
+      </node>
+      <node id="14386">
+        <label>SG::AuxVectorData::Cache</label>
+        <childnode refid="14387" relation="usage">
+          <edgelabel>m_cache</edgelabel>
+        </childnode>
+      </node>
+      <node id="14380">
+        <label>mutex</label>
+      </node>
+      <node id="14363">
+        <label>xAOD::MissingETComponentMap_v1</label>
+        <link refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1"/>
+        <childnode refid="14364" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14370" relation="usage">
+          <edgelabel>m_lastMETObject</edgelabel>
+        </childnode>
+      </node>
+      <node id="14371">
+        <label>SG::AuxElement</label>
+        <link refid="dc/db0/classSG_1_1AuxElement"/>
+        <childnode refid="14372" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14373" relation="usage">
+          <edgelabel>m_container</edgelabel>
+        </childnode>
+        <childnode refid="14388" relation="usage">
+          <edgelabel>m_privateData</edgelabel>
+          <edgelabel>s_privatePlaceholder</edgelabel>
+        </childnode>
+      </node>
+      <node id="14368">
+        <label>DataModel_detail::DVLInfo&lt; DataVector&lt; MissingETComponent_v1 &gt; &gt;</label>
+        <link refid="df/d12/classDataModel__detail_1_1DVLInfo"/>
+        <childnode refid="14369" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14387">
+        <label>void</label>
+      </node>
+      <node id="14373">
+        <label>SG::AuxVectorData</label>
+        <link refid="db/dd6/classSG_1_1AuxVectorData"/>
+        <childnode refid="14374" relation="usage">
+          <edgelabel>m_store</edgelabel>
+        </childnode>
+        <childnode refid="14376" relation="usage">
+          <edgelabel>m_constStoreLink</edgelabel>
+        </childnode>
+        <childnode refid="14375" relation="usage">
+          <edgelabel>m_constStore</edgelabel>
+        </childnode>
+        <childnode refid="14380" relation="usage">
+          <edgelabel>m_mutex</edgelabel>
+        </childnode>
+        <childnode refid="14381" relation="usage">
+          <edgelabel>s_emptySet</edgelabel>
+        </childnode>
+        <childnode refid="14386" relation="usage">
+          <edgelabel>m_cache</edgelabel>
+          <edgelabel>m_constCache</edgelabel>
+          <edgelabel>m_decorCache</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" line="20" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODMissingET/xAODMissingET/versions/MissingETComponentMap_v1.h" bodystart="19" bodyend="342"/>
+    <listofallmembers>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a48e5ef64ffec47924c5b1c4e208e953d" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>addObjects</name></member>
+      <member refid="d0/d4d/classDataVector_1a058fe076dee6b863cedbe61025ebf24e" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>allocator_type</name></member>
+      <member refid="d0/d4d/classDataVector_1a39b727c555a667c66094016314050332" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>assign</name></member>
+      <member refid="d0/d4d/classDataVector_1a3f598b345c9b1eb8793fd9cc6c16abe3" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>at</name></member>
+      <member refid="d0/d4d/classDataVector_1ac9c3322bdb72e9bc502a578715937807" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>at</name></member>
+      <member refid="d0/d4d/classDataVector_1a749ffc30735b0fbd0269df4e750851a7" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>auxbase</name></member>
+      <member refid="d0/d4d/classDataVector_1aee6b47538e67f772011367fccbf0e83f" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>back</name></member>
+      <member refid="d0/d4d/classDataVector_1a56c7d05bd0d914c446598aab3402e020" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>back</name></member>
+      <member refid="d0/d4d/classDataVector_1af41f7b0dcfd7647422459e4386d6cc8e" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>base_value_type</name></member>
+      <member refid="d0/d4d/classDataVector_1a6a6d678ca42e0eee8fec9e17eae6c0a4" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>BaseContainer</name></member>
+      <member refid="d0/d4d/classDataVector_1a3af6f600eec6df2c3652211ba80fc031" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>baseOffset</name></member>
+      <member refid="d0/d4d/classDataVector_1ad1616eb350fff0fc40908c62bb8fd9da" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>baseOffset1</name></member>
+      <member refid="d0/d4d/classDataVector_1a66c78bd83eeb15e5616a898557598b36" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>begin</name></member>
+      <member refid="d0/d4d/classDataVector_1a2c42ec99129008304681ddef6b812c15" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>begin</name></member>
+      <member refid="d0/d4d/classDataVector_1a60c5cb0eab20bb3f2325ca9037ec3b5b" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>capacity</name></member>
+      <member refid="d0/d4d/classDataVector_1a2ba633ea0a2c1c0a8413ca4897817e4e" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>cbegin</name></member>
+      <member refid="d0/d4d/classDataVector_1aa42d00ed3a26858f32f25e2e1010ca4f" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>cend</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a6a311c1819524ad3499615ca5c25b114" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>checkUsage</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a106104fe225fad21ef3b78e915968709" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>checkUsage</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a37d1a8e2caeb7d1dae2dd744fc808302" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>clear</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a8c078565a19b37e6dca4e17a93f3fb48" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>clear</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a3bf9c9742788c62ba811bf0ca104916c" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>clear</name></member>
+      <member refid="d0/d4d/classDataVector_1a94c4e1b8437edab8296380c7d620faac" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>clearMostDerived</name></member>
+      <member refid="d0/d4d/classDataVector_1a105a683f8b36d88454de49c757747fde" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>const_iterator</name></member>
+      <member refid="d0/d4d/classDataVector_1ad64bda7c082445e7612279b8d8fe45b5" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>const_pointer</name></member>
+      <member refid="d0/d4d/classDataVector_1a00f78b0e29b4b50cea072aaa82800311" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>const_reference</name></member>
+      <member refid="d0/d4d/classDataVector_1ab289e00e978a3cbcbb642ab9dc28617c" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>const_reverse_iterator</name></member>
+      <member refid="d0/d4d/classDataVector_1a6b0c09ea08315b3675274f96c1c30f0e" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>const_value_type</name></member>
+      <member refid="d0/d4d/classDataVector_1ade43c536beab58ae6b2e037fd67ff8e2" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>crbegin</name></member>
+      <member refid="d0/d4d/classDataVector_1a07fbb4e8bddec66621cc3f78defbc92b" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>crend</name></member>
+      <member refid="d0/d4d/classDataVector_1a2cf6a773e2f312ccade13b686b8f01d6" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>DataModel_detail::ElementProxy&lt; DataVector &gt;</name></member>
+      <member refid="d0/d4d/classDataVector_1a16bded828caf6b976bd7052d3439b5b6" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>DataVector</name></member>
+      <member refid="d0/d4d/classDataVector_1a10e3c4b4b0de95c7fd13ad9a3be5fb58" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>DataVector</name></member>
+      <member refid="d0/d4d/classDataVector_1ac113b3ae53f2d1254efc34bbacd25f14" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>DataVector</name></member>
+      <member refid="d0/d4d/classDataVector_1adbb7524fe05522edf000e397dc36a183" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>DataVector_BASE</name></member>
+      <member refid="d0/d4d/classDataVector_1aab17483aa47f11399ccaafb2931de121" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>difference_type</name></member>
+      <member refid="d0/d4d/classDataVector_1abf16cf8a9eb9c1c6a4419be395208ca0" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>do_cast</name></member>
+      <member refid="d0/d4d/classDataVector_1abced550e4bb02a91c1b1c660ddf9071d" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>DVL_BASE</name></member>
+      <member refid="d0/d4d/classDataVector_1a4831de47c79708079d0c1e1e1c9e4363" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>dvlinfo</name></member>
+      <member refid="d0/d4d/classDataVector_1ac7fb23bf395a0e3894f454fc7f072764" prot="public" virt="virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>dvlinfo_v</name></member>
+      <member refid="d0/d4d/classDataVector_1a51e5972e57ba800d8f93b781c7af58e3" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>ElementProxy</name></member>
+      <member refid="d0/d4d/classDataVector_1ac6f57a40acf210dfbb95205bb078be3b" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>emplace</name></member>
+      <member refid="d0/d4d/classDataVector_1af6206e99fb0d7d2e2fce1eafe99877f1" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>emplace_back</name></member>
+      <member refid="d0/d4d/classDataVector_1a85aede44dff3bf86318e9d7ee71f0de5" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>empty</name></member>
+      <member refid="d0/d4d/classDataVector_1a1d5dd5515d2c9bc20f417830f5d05b5e" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>end</name></member>
+      <member refid="d0/d4d/classDataVector_1ad7a08d945fb1698fcb3ea07ab1dccbec" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>end</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a44b8b3e159c8229c086ede659d87d88a" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>erase</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a0d4b08a35784be97f20c4df4878a2f42" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>erase</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a428b46d011a2e1f7282e53f81ec9d3db" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_checkObjectUsage</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a50638f5164ff837fe00888434d587df1" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_checkObjectUsage</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a7431794524b68a80d1529f6affc77d39" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_clearLookupCache</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a4b68f93d6e6a12dfb58ba97bebb03254" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_extractSignal</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1acd59aaaefc10df87f19a21e492b93e29" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_fillLookupCache</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a6be2bfd7ecdf93030fcef75842796dbf" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_find</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a6ee104d7424d748b319fb9d9eb77bb20" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_find</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a5910ef407a265267f1b09597c88bb403" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_find</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a4cf18437e5e62bac29dd23764f754a4d" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_findConst</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a78a315753aa9d7fccc6173930aed068f" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_findConst</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a09c33f5e84996ddb00f03d0b4c503693" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_findConst</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aaab45013b9e9a40b2d9ab8870fc97690" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_getIndex</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a79b2b0747cff9384a0e71540f12c6381" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_retrieveMissingETExcl</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a9245cf1244dc5c2786ba6f88489909c3" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_retrieveMissingETExcl</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a8fb0a0139bfd2841de9d505f71a2581b" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_retrieveMissingETIncl</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1ac662960be7e5692126219132a326fd74" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_retrieveMissingETIncl</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a83bd8e84d05b768c36964583ea67358f" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_setCache</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aaa3be46f38d2cc0a6c7b84c81b1fb6e3" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_setConstCache</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a46cf6fb38a7ba69cba2a462e66fb2339" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>f_setupLookupCache</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a768a3e333e71cf8edd570b864a1e66e0" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>find</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a2e323c811f14d06145ea8558be2d884a" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>find</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1ad169670e47edd777a47b85fec96c5492" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>find</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a5bfa988082e3f7c90eb3eee32b8b2b40" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>find</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aca4461ec6e23c8b70f77b455b3adf0b7" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>find</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a00fdb7ef123d625ad51b5e51fbf2e3f8" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>find</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aa93173c6e4c70b744472a47f25de178c" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>findIndex</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aff65357a276ee44c8f30ae32baba7fd5" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>findIndex</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a3c56a7b8d90f046d65512da53f08b1d2" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>findIndex</name></member>
+      <member refid="d0/d4d/classDataVector_1ad60c996521bcea5c5a57bc078b08b876" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>front</name></member>
+      <member refid="d0/d4d/classDataVector_1a1ad4290a3853f0a10ea79452c4a0b423" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>front</name></member>
+      <member refid="d0/d4d/classDataVector_1aee535632a89bd041be90a3fa3058e36b" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>get</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a69025c3d511709f0533af800f28fd6e8" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>getComponentIndex</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a0ed6db1a56435097764e27ff6f4fba57" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>getObjectIndex</name></member>
+      <member refid="d0/d4d/classDataVector_1a353125037b2c1b2472f49c7e0adeb7f3" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>has_virtual</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1adcbd18616b8c6deec4a2b6a519073db6" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>indexedlink_t</name></member>
+      <member refid="d0/d4d/classDataVector_1a4bfe807fd5835ae4e484eb505bb03533" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>insert</name></member>
+      <member refid="d0/d4d/classDataVector_1a173e4fcf883f04507805618118c444a9" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>insert</name></member>
+      <member refid="d0/d4d/classDataVector_1a309f0e29bcde5ca107c5232cbf6b9d4c" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>iter_swap</name></member>
+      <member refid="d0/d4d/classDataVector_1a720d2b9643ffc12ed1725cec9ecc691e" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>iterator</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a2d924cd4d3834217395028e31965a1ab" prot="private" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>m_clusterLinkReserve</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a562789fc7c336d72f4a4c394413201dc" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>m_clusterLinks</name></member>
+      <member refid="d0/d4d/classDataVector_1a731423a95c8a02f9ced02e25b8197cc9" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>m_isMostDerived</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aa036015d563d585cada00e5c50a3250a" prot="private" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>m_lastContribIndex</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a8a25cd92ab1207bffed89548b5d79671" prot="private" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>m_lastMETObject</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a8cf4b53b7b8e5615fc4cbcffa4b58f5e" prot="private" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>m_maxClusterSize</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a6c5c55fabffd30fe59521bf7cf76f5c5" prot="private" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>m_maxSignalSize</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a713fd5c38ccfdc4d835d428dacb02ee8" prot="private" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>m_maxTrackSize</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a079aad6f469666087f2af66ac2081eb8" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>m_particleLinks</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1ae16f089776e29914709979a6c8d59725" prot="private" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>m_trackLinkReserve</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a72a8607a96a83d06c6d39099f1c72266" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>m_trackLinks</name></member>
+      <member refid="d0/d4d/classDataVector_1afaa2425da1ced3fa685a37a2a0561b05" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>max_size</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a584f650aeb64f3b55942446f4ab3173e" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>MissingETComponentMap_v1</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a7316c1b5e393f530862d353cf8abba80" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>MissingETComponentMap_v1</name></member>
+      <member refid="d0/d4d/classDataVector_1a31f28630872abd2e694534c7cc8fa4ec" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>operator=</name></member>
+      <member refid="d0/d4d/classDataVector_1ab22de888b8cf10f2b05fe6bc48465381" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>operator[]</name></member>
+      <member refid="d0/d4d/classDataVector_1a9e0e83fd312a9ebdc94666283bf65de9" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>operator[]</name></member>
+      <member refid="d0/d4d/classDataVector_1a23689a65fe5243d0bd00c3aa79640f98" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>ownPolicy</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1ac5d3514e08c2bd3f82bda2a406ddd3ec" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>particle_key_t</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aff868da184e0159b70b7b5cd9c97bb71" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>particle_map_t</name></member>
+      <member refid="d0/d4d/classDataVector_1a27b9433721506dc44069b1b6c91c873e" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>pointer</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1afc4b4a4eccabae3091372560a5fdc807" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>pop_back</name></member>
+      <member refid="d0/d4d/classDataVector_1ac8d41eaf271f444aeacb80705fde49d9" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>PtrVector</name></member>
+      <member refid="d0/d4d/classDataVector_1a486aeb4868e7c29331717adb06ea0df2" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>push_back</name></member>
+      <member refid="d0/d4d/classDataVector_1a71dc1d0d8666c71cdbd98cf12ed58832" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>rbegin</name></member>
+      <member refid="d0/d4d/classDataVector_1ab216c17baaede1e4a8dd98f53071b354" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>rbegin</name></member>
+      <member refid="d0/d4d/classDataVector_1a93d4d960378dca6d5b26597d06247ae7" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>reference</name></member>
+      <member refid="d0/d4d/classDataVector_1ae09c48f39c028009bf8dbc0bc9340e80" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>rend</name></member>
+      <member refid="d0/d4d/classDataVector_1a49e6422f38b1483a45b642534c7f83f4" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>rend</name></member>
+      <member refid="d0/d4d/classDataVector_1a3827d1fa4f134ba36346893715dd5bc1" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>reserve</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1afadd26a4a3d87364495fa060ee3638f5" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>resetCache</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a5acc242b0dbaa4d76b85857fb0ebd696" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>resize</name></member>
+      <member refid="d0/d4d/classDataVector_1af1d9fb01d514c009d7acefc7ac7b02c1" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>resortAux</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a303e35894ca4f4eb13fab326f8126bff" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>retrieveMissingET</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a4bc131d1e841ef10751ed3dcbedd69d7" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>retrieveMissingET</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a92492defd2f499846c765301c23b5d8a" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>retrieveMissingET</name></member>
+      <member refid="d0/d4d/classDataVector_1a48b8aeb52be5374ae659f1c383e6e172" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>reverse_iterator</name></member>
+      <member refid="d0/d4d/classDataVector_1ae8b99ec086854d309f18be7c803984f1" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>self</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a6fb5d45ccff8effca5f5e16c6fb44c60" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>setClusters</name></member>
+      <member refid="d0/d4d/classDataVector_1ac4e7932eb52095ae3e88c913a77f4685" prot="protected" virt="virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>setMostDerived</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1ae038182a53e3b947d0527390ecf890e4" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>setObjects</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a30e3316a5778ecf3ddd9f9c49d1740f7" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>setTracks</name></member>
+      <member refid="d0/d4d/classDataVector_1a8edc54fe5f97284d23ef5e88319c7a86" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>shrink_to_fit</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a17da2c4a4731d3664a479056a7961597" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>signal_key_t</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a64a1a8c82dc65969f2a7b1ad298793fb" prot="protected" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>signal_vector_t</name></member>
+      <member refid="d0/d4d/classDataVector_1aa4d259c267222003a6d2592fbe9809af" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>size</name></member>
+      <member refid="d0/d4d/classDataVector_1a2d11ee2f3a2528ce3ea9f0791dcb58c9" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>size_type</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1a782b33852df8afc2db5f72e3756125eb" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>sort</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1aaf524f276a71cdbd2b4684f0ce5bd425" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>sort</name></member>
+      <member refid="d0/d4d/classDataVector_1a0e2e64a35d842a206c96ccfec265df21" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>stdcont</name></member>
+      <member refid="d0/d4d/classDataVector_1a53d2dcc591d07cc817b06d2523442432" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>swap</name></member>
+      <member refid="d0/d4d/classDataVector_1a9a0337f2ef172c59b899e4aaf816891d" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>swapElement</name></member>
+      <member refid="d0/d4d/classDataVector_1abe2ea523c0d8d9afc0e2cbfb643b72cc" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>swapElement</name></member>
+      <member refid="d0/d4d/classDataVector_1a3a87c3dae960c19e5108bbacad44b557" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>testInsert</name></member>
+      <member refid="d0/d4d/classDataVector_1aebc91510c38d2fd8e413736faa744258" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>testInsertOol</name></member>
+      <member refid="d0/d4d/classDataVector_1a1055f8ad9a5f8ed057a4f047a87def97" prot="public" virt="non-virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>value_type</name></member>
+      <member refid="d0/d58/classxAOD_1_1MissingETComponentMap__v1_1af4f6c03165e8d6b462ead0309a43821a" prot="public" virt="virtual"><scope>xAOD::MissingETComponentMap_v1</scope><name>~MissingETComponentMap_v1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

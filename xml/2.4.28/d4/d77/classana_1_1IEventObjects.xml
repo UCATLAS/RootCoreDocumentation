@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d4/d77/classana_1_1IEventObjects" kind="class" prot="public">
+    <compoundname>ana::IEventObjects</compoundname>
+    <derivedcompoundref refid="de/d3d/classana_1_1EventObjects" prot="public" virt="non-virtual">ana::EventObjects</derivedcompoundref>
+    <derivedcompoundref refid="df/dea/classana_1_1OptimizedObjects" prot="public" virt="non-virtual">ana::OptimizedObjects</derivedcompoundref>
+    <includes refid="d0/d2d/IEventObjects_8h" local="no">IEventObjects.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d4/d77/classana_1_1IEventObjects_1a202eff7c83635c65c07f2c66eccd5f2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ana::IEventObjects::~IEventObjects</definition>
+        <argsstring>()</argsstring>
+        <name>~IEventObjects</name>
+        <briefdescription>
+<para>standard virtual destructor for base class </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d77/classana_1_1IEventObjects_1a1de8972d4ca6f273f1edbef819a309d7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="d1/def/classT" kindref="compound">T</ref> *</type>
+        <definition>T * ana::IEventObjects::get</definition>
+        <argsstring>(ObjectType type) const </argsstring>
+        <name>get</name>
+        <param>
+          <type><ref refid="d7/d63/namespaceana_1ae3f743901acd68af2cd8583a1f982eee" kindref="member">ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>the object or object container for the given object type or NULL if it hasn&apos;t been filled (yet). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="47" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.icc" bodystart="7" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d77/classana_1_1IEventObjects_1a2f3f32a33390dce9f1a2fd11d6131346" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::IParticleContainer</ref> *</type>
+        <definition>xAOD::IParticleContainer * ana::IEventObjects::getParticles</definition>
+        <argsstring>(ObjectType type)</argsstring>
+        <name>getParticles</name>
+        <param>
+          <type><ref refid="d7/d63/namespaceana_1ae3f743901acd68af2cd8583a1f982eee" kindref="member">ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>the object container as a <ref refid="dd/d44/namespacexAOD_1af9180607c834ca3623ad4eb67d8bb273" kindref="member">xAOD::IParticleContainer</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>object type not of IParticle type </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="56" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/IEventObjects.cxx" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d77/classana_1_1IEventObjects_1a39f4ad3cfa6ef050394eb001c7c3e3af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void *</type>
+        <definition>virtual void* ana::IEventObjects::getVoid</definition>
+        <argsstring>(ObjectType type) const =0</argsstring>
+        <name>getVoid</name>
+        <reimplementedby refid="df/dea/classana_1_1OptimizedObjects_1af850856b0dceff0894ca69cc0f47fd37">getVoid</reimplementedby>
+        <reimplementedby refid="de/d3d/classana_1_1EventObjects_1a38754281efa92435a15b915be54457ae">getVoid</reimplementedby>
+        <param>
+          <type><ref refid="d7/d63/namespaceana_1ae3f743901acd68af2cd8583a1f982eee" kindref="member">ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>get the object or object container for the given object type or NULL if it hasn&apos;t been filled (yet). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail  this has to be cast exactly to the type defined by ObjecTypeInfo::asXAOD. it is much easier to go with the <ref refid="d4/d77/classana_1_1IEventObjects_1a1de8972d4ca6f273f1edbef819a309d7" kindref="member">get</ref> function instead. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d77/classana_1_1IEventObjects_1af453f5e23def7e692cc34be2b7b28f0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>StatusCode</type>
+        <definition>virtual StatusCode ana::IEventObjects::addCopy</definition>
+        <argsstring>(ObjectType type, const std::string &amp;name)=0</argsstring>
+        <name>addCopy</name>
+        <reimplementedby refid="df/dea/classana_1_1OptimizedObjects_1adc3d6e67d199f7fbc9f17d8646e02154">addCopy</reimplementedby>
+        <reimplementedby refid="de/d3d/classana_1_1EventObjects_1a1098547f3b2ba178c46fe3856c832314">addCopy</reimplementedby>
+        <param>
+          <type><ref refid="d7/d63/namespaceana_1ae3f743901acd68af2cd8583a1f982eee" kindref="member">ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>add a shallow copy of the input container with the given name </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>basic </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>object already initialized<linebreak/>
+ input object not found<linebreak/>
+ shallow copy failures </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d77/classana_1_1IEventObjects_1a2b6d7b0a810828c9007573426382e013" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>StatusCode</type>
+        <definition>virtual StatusCode ana::IEventObjects::addNew</definition>
+        <argsstring>(ObjectType type)=0</argsstring>
+        <name>addNew</name>
+        <reimplementedby refid="df/dea/classana_1_1OptimizedObjects_1afda42d75b1ac30112c88940ec23df074">addNew</reimplementedby>
+        <reimplementedby refid="de/d3d/classana_1_1EventObjects_1a07d951292e091319f5bfe1a984dc6265">addNew</reimplementedby>
+        <param>
+          <type><ref refid="d7/d63/namespaceana_1ae3f743901acd68af2cd8583a1f982eee" kindref="member">ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>add a new container of the given type </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>basic </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>object already initialized<linebreak/>
+ object creation failures </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d77/classana_1_1IEventObjects_1a829f2d11b8af597ccfa12eed49505dba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>float</type>
+        <definition>virtual float ana::IEventObjects::eventWeight</definition>
+        <argsstring>() const =0</argsstring>
+        <name>eventWeight</name>
+        <reimplementedby refid="df/dea/classana_1_1OptimizedObjects_1a4f644fe1d657ee860cdaa418474608b1">eventWeight</reimplementedby>
+        <reimplementedby refid="de/d3d/classana_1_1EventObjects_1adb2b2f39baaa3c314c71ea62de0c7ac9">eventWeight</reimplementedby>
+        <briefdescription>
+<para>the event weight </para>        </briefdescription>
+        <detaileddescription>
+<para>this is a dummy for now and the mechanism might change at some point </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d77/classana_1_1IEventObjects_1a7d37924c0555aa4ae0267840d03f008c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="df/df8/classxAOD_1_1EventInfo__v1" kindref="compound">xAOD::EventInfo</ref> *</type>
+        <definition>xAOD::EventInfo * ana::IEventObjects::eventinfo</definition>
+        <argsstring>() const </argsstring>
+        <name>eventinfo</name>
+        <briefdescription>
+<para>the eventinfo object </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="104" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.icc" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d77/classana_1_1IEventObjects_1a8649c81b4537176df441f2aa1ac6d647" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="df/df8/classxAOD_1_1EventInfo__v1" kindref="compound">EventSelectType</ref> *</type>
+        <definition>EventSelectType * ana::IEventObjects::eventSelect</definition>
+        <argsstring>() const </argsstring>
+        <name>eventSelect</name>
+        <briefdescription>
+<para>the eventinfo object </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="111" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.icc" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d77/classana_1_1IEventObjects_1ac6cca040b8933c914171e38478c8b593" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::MuonContainer</ref> *</type>
+        <definition>xAOD::MuonContainer * ana::IEventObjects::muons</definition>
+        <argsstring>() const </argsstring>
+        <name>muons</name>
+        <briefdescription>
+<para>the muon container </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="118" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.icc" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d77/classana_1_1IEventObjects_1a58dba0f72ad58fca4f400234fd3aba0d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::TauJetContainer</ref> *</type>
+        <definition>xAOD::TauJetContainer * ana::IEventObjects::taus</definition>
+        <argsstring>() const </argsstring>
+        <name>taus</name>
+        <briefdescription>
+<para>the tau container </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="125" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.icc" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d77/classana_1_1IEventObjects_1ab310fffb0cdbbc11fea4ba82a866622a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::ElectronContainer</ref> *</type>
+        <definition>xAOD::ElectronContainer * ana::IEventObjects::electrons</definition>
+        <argsstring>() const </argsstring>
+        <name>electrons</name>
+        <briefdescription>
+<para>the electron container </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="132" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.icc" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d77/classana_1_1IEventObjects_1a5eed81a11f7f25dfc67bb6450a092f0a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::PhotonContainer</ref> *</type>
+        <definition>xAOD::PhotonContainer * ana::IEventObjects::photons</definition>
+        <argsstring>() const </argsstring>
+        <name>photons</name>
+        <briefdescription>
+<para>the photon container </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="139" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.icc" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d77/classana_1_1IEventObjects_1aac35e110b1af1c8fac2f9c2585dbec94" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::JetContainer</ref> *</type>
+        <definition>xAOD::JetContainer * ana::IEventObjects::jets</definition>
+        <argsstring>() const </argsstring>
+        <name>jets</name>
+        <briefdescription>
+<para>the jet container </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="146" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.icc" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d77/classana_1_1IEventObjects_1a53c3b375eadf37bb9de54985f6a2fe94" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::JetContainer</ref> *</type>
+        <definition>xAOD::JetContainer * ana::IEventObjects::fat_jets</definition>
+        <argsstring>() const </argsstring>
+        <name>fat_jets</name>
+        <briefdescription>
+<para>the fat jet container </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="153" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.icc" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d77/classana_1_1IEventObjects_1a6d113cae51c2ed2ed56e6d99cf72f947" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/d90/classxAOD_1_1MissingETContainer__v1" kindref="compound">xAOD::MissingETContainer</ref> *</type>
+        <definition>xAOD::MissingETContainer * ana::IEventObjects::met</definition>
+        <argsstring>() const </argsstring>
+        <name>met</name>
+        <briefdescription>
+<para>the met container </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="160" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.icc" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d77/classana_1_1IEventObjects_1a0ae9be506ccfe00df52cb021130df461" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/d90/classxAOD_1_1MissingETContainer__v1" kindref="compound">xAOD::MissingETContainer</ref> *</type>
+        <definition>xAOD::MissingETContainer * ana::IEventObjects::met2</definition>
+        <argsstring>() const </argsstring>
+        <name>met2</name>
+        <briefdescription>
+<para>the met container </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="167" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.icc" bodystart="88" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The interface class for accessing the correct event objects. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is in essence a wrapper around StoreGate or TEvent/TStore, using ObjectType to stand in for the name (and also implying the type). </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="9471">
+        <label>ana::EventObjects</label>
+        <link refid="de/d3d/classana_1_1EventObjects"/>
+        <childnode refid="9470" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9470">
+        <label>ana::IEventObjects</label>
+        <link refid="d4/d77/classana_1_1IEventObjects"/>
+      </node>
+      <node id="9472">
+        <label>ana::OptimizedObjects</label>
+        <link refid="df/dea/classana_1_1OptimizedObjects"/>
+        <childnode refid="9470" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" line="30" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h" bodystart="29" bodyend="168"/>
+    <listofallmembers>
+      <member refid="d4/d77/classana_1_1IEventObjects_1af453f5e23def7e692cc34be2b7b28f0b" prot="public" virt="pure-virtual"><scope>ana::IEventObjects</scope><name>addCopy</name></member>
+      <member refid="d4/d77/classana_1_1IEventObjects_1a2b6d7b0a810828c9007573426382e013" prot="public" virt="pure-virtual"><scope>ana::IEventObjects</scope><name>addNew</name></member>
+      <member refid="d4/d77/classana_1_1IEventObjects_1ab310fffb0cdbbc11fea4ba82a866622a" prot="public" virt="non-virtual"><scope>ana::IEventObjects</scope><name>electrons</name></member>
+      <member refid="d4/d77/classana_1_1IEventObjects_1a7d37924c0555aa4ae0267840d03f008c" prot="public" virt="non-virtual"><scope>ana::IEventObjects</scope><name>eventinfo</name></member>
+      <member refid="d4/d77/classana_1_1IEventObjects_1a8649c81b4537176df441f2aa1ac6d647" prot="public" virt="non-virtual"><scope>ana::IEventObjects</scope><name>eventSelect</name></member>
+      <member refid="d4/d77/classana_1_1IEventObjects_1a829f2d11b8af597ccfa12eed49505dba" prot="public" virt="pure-virtual"><scope>ana::IEventObjects</scope><name>eventWeight</name></member>
+      <member refid="d4/d77/classana_1_1IEventObjects_1a53c3b375eadf37bb9de54985f6a2fe94" prot="public" virt="non-virtual"><scope>ana::IEventObjects</scope><name>fat_jets</name></member>
+      <member refid="d4/d77/classana_1_1IEventObjects_1a1de8972d4ca6f273f1edbef819a309d7" prot="public" virt="non-virtual"><scope>ana::IEventObjects</scope><name>get</name></member>
+      <member refid="d4/d77/classana_1_1IEventObjects_1a2f3f32a33390dce9f1a2fd11d6131346" prot="public" virt="non-virtual"><scope>ana::IEventObjects</scope><name>getParticles</name></member>
+      <member refid="d4/d77/classana_1_1IEventObjects_1a39f4ad3cfa6ef050394eb001c7c3e3af" prot="public" virt="pure-virtual"><scope>ana::IEventObjects</scope><name>getVoid</name></member>
+      <member refid="d4/d77/classana_1_1IEventObjects_1aac35e110b1af1c8fac2f9c2585dbec94" prot="public" virt="non-virtual"><scope>ana::IEventObjects</scope><name>jets</name></member>
+      <member refid="d4/d77/classana_1_1IEventObjects_1a6d113cae51c2ed2ed56e6d99cf72f947" prot="public" virt="non-virtual"><scope>ana::IEventObjects</scope><name>met</name></member>
+      <member refid="d4/d77/classana_1_1IEventObjects_1a0ae9be506ccfe00df52cb021130df461" prot="public" virt="non-virtual"><scope>ana::IEventObjects</scope><name>met2</name></member>
+      <member refid="d4/d77/classana_1_1IEventObjects_1ac6cca040b8933c914171e38478c8b593" prot="public" virt="non-virtual"><scope>ana::IEventObjects</scope><name>muons</name></member>
+      <member refid="d4/d77/classana_1_1IEventObjects_1a5eed81a11f7f25dfc67bb6450a092f0a" prot="public" virt="non-virtual"><scope>ana::IEventObjects</scope><name>photons</name></member>
+      <member refid="d4/d77/classana_1_1IEventObjects_1a58dba0f72ad58fca4f400234fd3aba0d" prot="public" virt="non-virtual"><scope>ana::IEventObjects</scope><name>taus</name></member>
+      <member refid="d4/d77/classana_1_1IEventObjects_1a202eff7c83635c65c07f2c66eccd5f2c" prot="public" virt="virtual"><scope>ana::IEventObjects</scope><name>~IEventObjects</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,988 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d2/d7b/ParticleScaleFactorTool_8cxx" kind="file">
+    <compoundname>ParticleScaleFactorTool.cxx</compoundname>
+    <includes refid="d4/d52/ParticleScaleFactorTool_8h" local="yes">ReweightUtils/ParticleScaleFactorTool.h</includes>
+    <includes refid="d3/d32/PathResolver_8h" local="yes">PathResolver/PathResolver.h</includes>
+    <includes refid="de/d22/SystematicRegistry_8h" local="yes">PATInterfaces/SystematicRegistry.h</includes>
+    <includes local="yes">TH2D.h</includes>
+    <includes local="yes">TKey.h</includes>
+    <includes local="yes">TClass.h</includes>
+    <includes local="yes">TFile.h</includes>
+    <incdepgraph>
+      <node id="262026">
+        <label>boost/thread/mutex.hpp</label>
+      </node>
+      <node id="262028">
+        <label>CxxUtils/unordered_map.h</label>
+        <link refid="db/daa/unordered__map_8h"/>
+        <childnode refid="261985" relation="include">
+        </childnode>
+        <childnode refid="261987" relation="include">
+        </childnode>
+        <childnode refid="261993" relation="include">
+        </childnode>
+        <childnode refid="261975" relation="include">
+        </childnode>
+      </node>
+      <node id="261959">
+        <label>AsgTools/IAsgTool.h</label>
+        <link refid="df/dd4/IAsgTool_8h_source"/>
+        <childnode refid="261960" relation="include">
+        </childnode>
+        <childnode refid="261958" relation="include">
+        </childnode>
+        <childnode refid="261961" relation="include">
+        </childnode>
+        <childnode refid="261962" relation="include">
+        </childnode>
+      </node>
+      <node id="262029">
+        <label>AthContainers/AuxTypeRegistry.icc</label>
+        <link refid="d8/df3/AuxTypeRegistry_8icc"/>
+      </node>
+      <node id="261995">
+        <label>AthContainersInterfaces/IAuxStore.h</label>
+        <link refid="d6/d3e/IAuxStore_8h"/>
+        <childnode refid="261981" relation="include">
+        </childnode>
+        <childnode refid="261983" relation="include">
+        </childnode>
+        <childnode refid="261996" relation="include">
+        </childnode>
+        <childnode refid="261994" relation="include">
+        </childnode>
+      </node>
+      <node id="261992">
+        <label>boost/type_traits/remove_const.hpp</label>
+      </node>
+      <node id="261975">
+        <label>functional</label>
+      </node>
+      <node id="261967">
+        <label>PATInterfaces/ISystematicsTool.h</label>
+        <link refid="d6/db3/ISystematicsTool_8h_source"/>
+        <childnode refid="261959" relation="include">
+        </childnode>
+        <childnode refid="261968" relation="include">
+        </childnode>
+        <childnode refid="261969" relation="include">
+        </childnode>
+        <childnode refid="261973" relation="include">
+        </childnode>
+      </node>
+      <node id="261991">
+        <label>limits</label>
+      </node>
+      <node id="261996">
+        <label>SGTools/BaseInfo.h</label>
+      </node>
+      <node id="262024">
+        <label>boost/thread/tss.hpp</label>
+      </node>
+      <node id="261962">
+        <label>GaudiKernel/IAlgTool.h</label>
+      </node>
+      <node id="261988">
+        <label>iterator</label>
+      </node>
+      <node id="262012">
+        <label>AthContainersInterfaces/AuxDataOption.h</label>
+        <link refid="d1/dc5/AuxDataOption_8h"/>
+        <childnode refid="261960" relation="include">
+        </childnode>
+        <childnode refid="262013" relation="include">
+        </childnode>
+      </node>
+      <node id="262036">
+        <label>AthContainers/exceptions.h</label>
+        <link refid="d4/d03/exceptions_8h"/>
+        <childnode refid="261982" relation="include">
+        </childnode>
+        <childnode refid="262037" relation="include">
+        </childnode>
+        <childnode refid="262038" relation="include">
+        </childnode>
+        <childnode refid="262005" relation="include">
+        </childnode>
+        <childnode refid="261960" relation="include">
+        </childnode>
+      </node>
+      <node id="262009">
+        <label>AthContainers/tools/AuxDataTraits.h</label>
+        <link refid="d3/d5a/AuxDataTraits_8h"/>
+        <childnode refid="261974" relation="include">
+        </childnode>
+        <childnode refid="261989" relation="include">
+        </childnode>
+      </node>
+      <node id="261998">
+        <label>stdint.h</label>
+      </node>
+      <node id="262006">
+        <label>AthContainersInterfaces/IAuxTypeVectorFactory.h</label>
+        <link refid="d4/d2c/IAuxTypeVectorFactory_8h"/>
+        <childnode refid="261983" relation="include">
+        </childnode>
+        <childnode refid="262005" relation="include">
+        </childnode>
+      </node>
+      <node id="262001">
+        <label>RVersion.h</label>
+      </node>
+      <node id="261984">
+        <label>CxxUtils/unordered_set.h</label>
+        <link refid="df/d26/unordered__set_8h"/>
+        <childnode refid="261985" relation="include">
+        </childnode>
+        <childnode refid="261993" relation="include">
+        </childnode>
+        <childnode refid="261975" relation="include">
+        </childnode>
+      </node>
+      <node id="262048">
+        <label>AthenaBaseComps/AthMsgStreamMacros.h</label>
+      </node>
+      <node id="261990">
+        <label>cmath</label>
+      </node>
+      <node id="262040">
+        <label>cassert</label>
+      </node>
+      <node id="262038">
+        <label>stdexcept</label>
+      </node>
+      <node id="261963">
+        <label>AsgTools/MsgLevel.h</label>
+        <link refid="de/d80/MsgLevel_8h"/>
+        <childnode refid="261960" relation="include">
+        </childnode>
+        <childnode refid="261958" relation="include">
+        </childnode>
+        <childnode refid="261964" relation="include">
+        </childnode>
+      </node>
+      <node id="262027">
+        <label>boost/thread/thread.hpp</label>
+      </node>
+      <node id="261978">
+        <label>TLorentzVector.h</label>
+      </node>
+      <node id="261958">
+        <label>AsgTools/AsgToolsConf.h</label>
+        <link refid="df/db7/AsgToolsConf_8h_source"/>
+      </node>
+      <node id="261960">
+        <label>string</label>
+      </node>
+      <node id="262030">
+        <label>AthContainers/AuxVectorData.h</label>
+        <link refid="d9/df2/AuxVectorData_8h"/>
+        <childnode refid="261982" relation="include">
+        </childnode>
+        <childnode refid="261981" relation="include">
+        </childnode>
+        <childnode refid="262012" relation="include">
+        </childnode>
+        <childnode refid="262009" relation="include">
+        </childnode>
+        <childnode refid="261997" relation="include">
+        </childnode>
+        <childnode refid="262031" relation="include">
+        </childnode>
+        <childnode refid="262032" relation="include">
+        </childnode>
+        <childnode refid="262015" relation="include">
+        </childnode>
+        <childnode refid="261974" relation="include">
+        </childnode>
+        <childnode refid="261987" relation="include">
+        </childnode>
+        <childnode refid="261989" relation="include">
+        </childnode>
+        <childnode refid="262033" relation="include">
+        </childnode>
+        <childnode refid="262034" relation="include">
+        </childnode>
+        <childnode refid="262022" relation="include">
+        </childnode>
+        <childnode refid="262035" relation="include">
+        </childnode>
+      </node>
+      <node id="262004">
+        <label>AthContainersInterfaces/IAuxTypeVector.h</label>
+        <link refid="d8/d0e/IAuxTypeVector_8h"/>
+        <childnode refid="261983" relation="include">
+        </childnode>
+        <childnode refid="262005" relation="include">
+        </childnode>
+      </node>
+      <node id="262033">
+        <label>AthContainers/tools/likely.h</label>
+        <link refid="d6/dd6/likely_8h"/>
+      </node>
+      <node id="262050">
+        <label>TH2D.h</label>
+      </node>
+      <node id="262002">
+        <label>RootMetaSelection.h</label>
+      </node>
+      <node id="262019">
+        <label>AthContainers/tools/AuxTypeVector.icc</label>
+        <link refid="d5/d84/AuxTypeVector_8icc"/>
+      </node>
+      <node id="262034">
+        <label>AthContainers/tools/assume.h</label>
+        <link refid="d2/d20/assume_8h"/>
+      </node>
+      <node id="262016">
+        <label>AthContainers/PackedContainer.icc</label>
+        <link refid="d1/d0c/PackedContainer_8icc"/>
+      </node>
+      <node id="261980">
+        <label>AthContainersInterfaces/IAuxElement.h</label>
+        <link refid="dd/d7a/IAuxElement_8h"/>
+      </node>
+      <node id="261964">
+        <label>GaudiKernel/IMessageSvc.h</label>
+      </node>
+      <node id="262000">
+        <label>AthLinks/tools/selection_ns.h</label>
+        <link refid="d3/dec/selection__ns_8h"/>
+        <childnode refid="262001" relation="include">
+        </childnode>
+        <childnode refid="262002" relation="include">
+        </childnode>
+      </node>
+      <node id="262032">
+        <label>AthenaKernel/IThinningSvc.h</label>
+      </node>
+      <node id="262025">
+        <label>boost/atomic.hpp</label>
+      </node>
+      <node id="261966">
+        <label>AsgAnalysisInterfaces/IObservableTool.h</label>
+        <link refid="de/d50/IObservableTool_8h_source"/>
+        <childnode refid="261959" relation="include">
+        </childnode>
+      </node>
+      <node id="261976">
+        <label>TH1.h</label>
+      </node>
+      <node id="262011">
+        <label>AthContainers/PackedParameters.h</label>
+        <link refid="d4/d43/PackedParameters_8h"/>
+        <childnode refid="262012" relation="include">
+        </childnode>
+        <childnode refid="261991" relation="include">
+        </childnode>
+        <childnode refid="261998" relation="include">
+        </childnode>
+        <childnode refid="262014" relation="include">
+        </childnode>
+      </node>
+      <node id="261973">
+        <label>PATInterfaces/SystematicSet.h</label>
+        <link refid="d4/db8/SystematicSet_8h_source"/>
+        <childnode refid="261970" relation="include">
+        </childnode>
+        <childnode refid="261972" relation="include">
+        </childnode>
+        <childnode refid="261974" relation="include">
+        </childnode>
+        <childnode refid="261960" relation="include">
+        </childnode>
+        <childnode refid="261975" relation="include">
+        </childnode>
+        <childnode refid="261968" relation="include">
+        </childnode>
+        <childnode refid="261969" relation="include">
+        </childnode>
+      </node>
+      <node id="261982">
+        <label>AthContainersInterfaces/AuxTypes.h</label>
+        <link refid="d1/dea/AuxTypes_8h"/>
+        <childnode refid="261983" relation="include">
+        </childnode>
+        <childnode refid="261984" relation="include">
+        </childnode>
+      </node>
+      <node id="261969">
+        <label>PATInterfaces/SystematicVariation.h</label>
+        <link refid="d1/def/SystematicVariation_8h_source"/>
+        <childnode refid="261970" relation="include">
+        </childnode>
+        <childnode refid="261971" relation="include">
+        </childnode>
+        <childnode refid="261972" relation="include">
+        </childnode>
+        <childnode refid="261960" relation="include">
+        </childnode>
+      </node>
+      <node id="261985">
+        <label>CxxUtils/hashtable.h</label>
+        <link refid="dd/d16/hashtable_8h"/>
+        <childnode refid="261986" relation="include">
+        </childnode>
+        <childnode refid="261987" relation="include">
+        </childnode>
+        <childnode refid="261988" relation="include">
+        </childnode>
+        <childnode refid="261983" relation="include">
+        </childnode>
+        <childnode refid="261989" relation="include">
+        </childnode>
+        <childnode refid="261990" relation="include">
+        </childnode>
+        <childnode refid="261991" relation="include">
+        </childnode>
+        <childnode refid="261960" relation="include">
+        </childnode>
+        <childnode refid="261992" relation="include">
+        </childnode>
+      </node>
+      <node id="261977">
+        <label>xAODBase/IParticle.h</label>
+        <link refid="d5/dac/IParticle_8h_source"/>
+        <childnode refid="261978" relation="include">
+        </childnode>
+        <childnode refid="261979" relation="include">
+        </childnode>
+        <childnode refid="262041" relation="include">
+        </childnode>
+        <childnode refid="261996" relation="include">
+        </childnode>
+      </node>
+      <node id="262041">
+        <label>ObjectType.h</label>
+        <link refid="d8/d04/ObjectType_8h_source"/>
+        <childnode refid="261971" relation="include">
+        </childnode>
+      </node>
+      <node id="262005">
+        <label>typeinfo</label>
+      </node>
+      <node id="262039">
+        <label>AthContainers/AuxElement.icc</label>
+        <link refid="d2/d37/AuxElement_8icc"/>
+        <childnode refid="262033" relation="include">
+        </childnode>
+        <childnode refid="262040" relation="include">
+        </childnode>
+      </node>
+      <node id="261970">
+        <label>PATInterfaces/Global.h</label>
+        <link refid="dd/d0c/PATInterfaces_2PATInterfaces_2Global_8h_source"/>
+      </node>
+      <node id="262014">
+        <label>AthContainers/PackedParameters.icc</label>
+        <link refid="db/d30/PackedParameters_8icc"/>
+      </node>
+      <node id="262031">
+        <label>AthenaKernel/ILockable.h</label>
+      </node>
+      <node id="262047">
+        <label>AsgTools/MsgStreamMacros.h</label>
+        <link refid="d3/ded/AsgTools_2AsgTools_2MsgStreamMacros_8h_source"/>
+        <childnode refid="261958" relation="include">
+        </childnode>
+        <childnode refid="261963" relation="include">
+        </childnode>
+        <childnode refid="262048" relation="include">
+        </childnode>
+      </node>
+      <node id="261999">
+        <label>AthLinks/DataLinkBase.h</label>
+        <link refid="db/da8/DataLinkBase_8h_source"/>
+        <childnode refid="261998" relation="include">
+        </childnode>
+      </node>
+      <node id="262013">
+        <label>AthContainersInterfaces/AuxDataOption.icc</label>
+        <link refid="db/d68/AuxDataOption_8icc"/>
+      </node>
+      <node id="262018">
+        <label>boost/type_traits/is_arithmetic.hpp</label>
+      </node>
+      <node id="261994">
+        <label>SGTools/CLASS_DEF.h</label>
+      </node>
+      <node id="262003">
+        <label>AthContainers/AuxTypeRegistry.h</label>
+        <link refid="db/d7f/AuxTypeRegistry_8h"/>
+        <childnode refid="261982" relation="include">
+        </childnode>
+        <childnode refid="262004" relation="include">
+        </childnode>
+        <childnode refid="262006" relation="include">
+        </childnode>
+        <childnode refid="262007" relation="include">
+        </childnode>
+        <childnode refid="262020" relation="include">
+        </childnode>
+        <childnode refid="262022" relation="include">
+        </childnode>
+        <childnode refid="261983" relation="include">
+        </childnode>
+        <childnode refid="262005" relation="include">
+        </childnode>
+        <childnode refid="261974" relation="include">
+        </childnode>
+        <childnode refid="262028" relation="include">
+        </childnode>
+        <childnode refid="262029" relation="include">
+        </childnode>
+      </node>
+      <node id="261974">
+        <label>vector</label>
+      </node>
+      <node id="262049">
+        <label>PATInterfaces/SystematicRegistry.h</label>
+        <link refid="de/d22/SystematicRegistry_8h_source"/>
+        <childnode refid="261970" relation="include">
+        </childnode>
+        <childnode refid="261973" relation="include">
+        </childnode>
+      </node>
+      <node id="262053">
+        <label>TFile.h</label>
+      </node>
+      <node id="262051">
+        <label>TKey.h</label>
+      </node>
+      <node id="261987">
+        <label>utility</label>
+      </node>
+      <node id="262015">
+        <label>CxxUtils/override.h</label>
+        <link refid="de/d0e/override_8h"/>
+      </node>
+      <node id="262045">
+        <label>sstream</label>
+      </node>
+      <node id="262023">
+        <label>boost/thread/shared_mutex.hpp</label>
+      </node>
+      <node id="262008">
+        <label>AthContainersInterfaces/IAuxSetOption.h</label>
+        <link refid="d7/d7e/IAuxSetOption_8h"/>
+      </node>
+      <node id="262022">
+        <label>AthContainers/tools/threading.h</label>
+        <link refid="d7/d22/threading_8h"/>
+        <childnode refid="262023" relation="include">
+        </childnode>
+        <childnode refid="262024" relation="include">
+        </childnode>
+        <childnode refid="262025" relation="include">
+        </childnode>
+        <childnode refid="262026" relation="include">
+        </childnode>
+        <childnode refid="262027" relation="include">
+        </childnode>
+      </node>
+      <node id="261955">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/ParticleScaleFactorTool.cxx</label>
+        <link refid="ParticleScaleFactorTool.cxx"/>
+        <childnode refid="261956" relation="include">
+        </childnode>
+        <childnode refid="262042" relation="include">
+        </childnode>
+        <childnode refid="262049" relation="include">
+        </childnode>
+        <childnode refid="262050" relation="include">
+        </childnode>
+        <childnode refid="262051" relation="include">
+        </childnode>
+        <childnode refid="262052" relation="include">
+        </childnode>
+        <childnode refid="262053" relation="include">
+        </childnode>
+      </node>
+      <node id="261971">
+        <label>iosfwd</label>
+      </node>
+      <node id="261989">
+        <label>cstdlib</label>
+      </node>
+      <node id="262037">
+        <label>CxxUtils/noreturn.h</label>
+        <link refid="de/d6f/noreturn_8h"/>
+      </node>
+      <node id="261981">
+        <label>AthContainersInterfaces/IConstAuxStore.h</label>
+        <link refid="d7/d3a/IConstAuxStore_8h"/>
+        <childnode refid="261982" relation="include">
+        </childnode>
+        <childnode refid="261983" relation="include">
+        </childnode>
+        <childnode refid="261994" relation="include">
+        </childnode>
+      </node>
+      <node id="261983">
+        <label>cstddef</label>
+      </node>
+      <node id="262046">
+        <label>GaudiKernel/MsgStream.h</label>
+      </node>
+      <node id="262044">
+        <label>AsgTools/MsgStream.h</label>
+        <link refid="d3/d95/AsgTools_2AsgTools_2MsgStream_8h_source"/>
+        <childnode refid="261960" relation="include">
+        </childnode>
+        <childnode refid="262045" relation="include">
+        </childnode>
+        <childnode refid="261958" relation="include">
+        </childnode>
+        <childnode refid="261963" relation="include">
+        </childnode>
+        <childnode refid="261959" relation="include">
+        </childnode>
+        <childnode refid="262046" relation="include">
+        </childnode>
+      </node>
+      <node id="262052">
+        <label>TClass.h</label>
+      </node>
+      <node id="262035">
+        <label>AthContainers/AuxVectorData.icc</label>
+        <link refid="da/de7/AuxVectorData_8icc"/>
+        <childnode refid="262003" relation="include">
+        </childnode>
+        <childnode refid="261995" relation="include">
+        </childnode>
+        <childnode refid="261981" relation="include">
+        </childnode>
+        <childnode refid="262033" relation="include">
+        </childnode>
+        <childnode refid="262034" relation="include">
+        </childnode>
+      </node>
+      <node id="261961">
+        <label>AsgTools/AsgToolMacros.h</label>
+        <link refid="d1/d68/AsgToolMacros_8h_source"/>
+      </node>
+      <node id="262007">
+        <label>AthContainers/tools/AuxTypeVector.h</label>
+        <link refid="d6/dd2/AuxTypeVector_8h"/>
+        <childnode refid="262004" relation="include">
+        </childnode>
+        <childnode refid="262008" relation="include">
+        </childnode>
+        <childnode refid="262009" relation="include">
+        </childnode>
+        <childnode refid="262010" relation="include">
+        </childnode>
+        <childnode refid="262015" relation="include">
+        </childnode>
+        <childnode refid="262005" relation="include">
+        </childnode>
+        <childnode refid="261974" relation="include">
+        </childnode>
+        <childnode refid="261986" relation="include">
+        </childnode>
+        <childnode refid="261998" relation="include">
+        </childnode>
+        <childnode refid="262017" relation="include">
+        </childnode>
+        <childnode refid="262018" relation="include">
+        </childnode>
+        <childnode refid="262019" relation="include">
+        </childnode>
+      </node>
+      <node id="262042">
+        <label>PathResolver/PathResolver.h</label>
+        <link refid="d3/d32/PathResolver_8h_source"/>
+        <childnode refid="262043" relation="include">
+        </childnode>
+        <childnode refid="261960" relation="include">
+        </childnode>
+      </node>
+      <node id="262043">
+        <label>AsgTools/AsgMessaging.h</label>
+        <link refid="d3/d61/AsgMessaging_8h_source"/>
+        <childnode refid="261960" relation="include">
+        </childnode>
+        <childnode refid="261958" relation="include">
+        </childnode>
+        <childnode refid="262044" relation="include">
+        </childnode>
+        <childnode refid="262047" relation="include">
+        </childnode>
+      </node>
+      <node id="262017">
+        <label>boost/type_traits/is_base_of.hpp</label>
+      </node>
+      <node id="261956">
+        <label>ReweightUtils/ParticleScaleFactorTool.h</label>
+        <link refid="d4/d52/ParticleScaleFactorTool_8h_source"/>
+        <childnode refid="261957" relation="include">
+        </childnode>
+        <childnode refid="261966" relation="include">
+        </childnode>
+        <childnode refid="261967" relation="include">
+        </childnode>
+        <childnode refid="261976" relation="include">
+        </childnode>
+        <childnode refid="261977" relation="include">
+        </childnode>
+        <childnode refid="261975" relation="include">
+        </childnode>
+      </node>
+      <node id="261972">
+        <label>set</label>
+      </node>
+      <node id="262021">
+        <label>AthContainers/tools/AuxTypeVectorFactory.icc</label>
+        <link refid="dc/d02/AuxTypeVectorFactory_8icc"/>
+      </node>
+      <node id="262010">
+        <label>AthContainers/PackedContainer.h</label>
+        <link refid="d6/dda/PackedContainer_8h"/>
+        <childnode refid="262008" relation="include">
+        </childnode>
+        <childnode refid="262011" relation="include">
+        </childnode>
+        <childnode refid="262015" relation="include">
+        </childnode>
+        <childnode refid="261974" relation="include">
+        </childnode>
+        <childnode refid="262016" relation="include">
+        </childnode>
+      </node>
+      <node id="261986">
+        <label>algorithm</label>
+      </node>
+      <node id="261979">
+        <label>AthContainers/AuxElement.h</label>
+        <link refid="d1/d6f/AuxElement_8h"/>
+        <childnode refid="261980" relation="include">
+        </childnode>
+        <childnode refid="261981" relation="include">
+        </childnode>
+        <childnode refid="261995" relation="include">
+        </childnode>
+        <childnode refid="261997" relation="include">
+        </childnode>
+        <childnode refid="262003" relation="include">
+        </childnode>
+        <childnode refid="262030" relation="include">
+        </childnode>
+        <childnode refid="262009" relation="include">
+        </childnode>
+        <childnode refid="262036" relation="include">
+        </childnode>
+        <childnode refid="262033" relation="include">
+        </childnode>
+        <childnode refid="261983" relation="include">
+        </childnode>
+        <childnode refid="262039" relation="include">
+        </childnode>
+      </node>
+      <node id="261957">
+        <label>AsgTools/AsgTool.h</label>
+        <link refid="d4/d29/AsgTool_8h_source"/>
+        <childnode refid="261958" relation="include">
+        </childnode>
+        <childnode refid="261959" relation="include">
+        </childnode>
+        <childnode refid="261963" relation="include">
+        </childnode>
+        <childnode refid="261965" relation="include">
+        </childnode>
+      </node>
+      <node id="261997">
+        <label>AthLinks/DataLink.h</label>
+        <link refid="da/de8/DataLink_8h_source"/>
+        <childnode refid="261998" relation="include">
+        </childnode>
+        <childnode refid="261960" relation="include">
+        </childnode>
+        <childnode refid="261999" relation="include">
+        </childnode>
+        <childnode refid="262000" relation="include">
+        </childnode>
+      </node>
+      <node id="261965">
+        <label>AsgTools/SetProperty.h</label>
+        <link refid="df/db0/SetProperty_8h_source"/>
+      </node>
+      <node id="261968">
+        <label>PATInterfaces/SystematicCode.h</label>
+        <link refid="df/df5/SystematicCode_8h_source"/>
+      </node>
+      <node id="261993">
+        <label>memory</label>
+      </node>
+      <node id="262020">
+        <label>AthContainers/tools/AuxTypeVectorFactory.h</label>
+        <link refid="dc/d69/AuxTypeVectorFactory_8h"/>
+        <childnode refid="262006" relation="include">
+        </childnode>
+        <childnode refid="262007" relation="include">
+        </childnode>
+        <childnode refid="262021" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>ReweightUtils<sp/>includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ReweightUtils/ParticleScaleFactorTool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;PathResolver/PathResolver.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;PATInterfaces/SystematicRegistry.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TH2D.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TKey.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TClass.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TFile.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">ParticleScaleFactorTool::ParticleScaleFactorTool(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name<sp/>)<sp/>:<sp/>asg::AsgTool(<sp/>name<sp/>){</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>declareProperty(<sp/></highlight><highlight class="stringliteral">&quot;File&quot;</highlight><highlight class="normal">,<sp/>m_configFile<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>,<sp/></highlight><highlight class="stringliteral">&quot;User<sp/>should<sp/>specify<sp/>config<sp/>file<sp/>to<sp/>read&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">ParticleScaleFactorTool::~ParticleScaleFactorTool()<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//delete<sp/>all<sp/>histograms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>a<sp/>:<sp/>m_hists)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>b<sp/>:<sp/>a.second.hists)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>b.second;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">StatusCode<sp/><ref refid="db/de9/classParticleScaleFactorTool_1ae26b46082effbd8cc02383335e4264b8" kindref="member" tooltip="Initialize is required by AsgTool base class.">ParticleScaleFactorTool::initialize</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>std::string<sp/>file<sp/>=<sp/>PathResolverFindCalibFile(m_configFile);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(file==</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>TFile*<sp/>f<sp/>=<sp/>TFile::Open(file.c_str());</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!f)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_ERROR(</highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>open<sp/>file<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>file);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>m_affectingSysts.<ref refid="d4/d52/classCP_1_1SystematicSet_1a5c0754cb8a3ab4d64b316ba2ea4497a3" kindref="member" tooltip="description: insert a systematic into the set">insert</ref>(<ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">));<sp/></highlight><highlight class="comment">//add<sp/>the<sp/>nominal<sp/>syst</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//loop<sp/>over<sp/>the<sp/>keys<sp/>in<sp/>the<sp/>file,<sp/>we<sp/>are<sp/>looking<sp/>for<sp/>TDirectory<sp/>(systematics)<sp/>and<sp/>TH1<sp/>(factors)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;TIterator&gt;<sp/>itr(f-&gt;GetListOfKeys()-&gt;MakeIterator());</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>TKey*<sp/>key<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>(key<sp/>=<sp/>static_cast&lt;TKey*&gt;(itr-&gt;Next()))<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>TClass*<sp/>cl<sp/>=<sp/>TClass::GetClass(key-&gt;GetClassName());</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!cl<sp/>||<sp/>!cl-&gt;InheritsFrom(TDirectory::Class()))<sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_DEBUG(</highlight><highlight class="stringliteral">&quot;Detected<sp/>systematic<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>key-&gt;GetName());</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>m_affectingSysts.<ref refid="d4/d52/classCP_1_1SystematicSet_1a5c0754cb8a3ab4d64b316ba2ea4497a3" kindref="member" tooltip="description: insert a systematic into the set">insert</ref>(<ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(key-&gt;GetName()));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(key-&gt;GetName()).parameter())<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_ERROR(</highlight><highlight class="stringliteral">&quot;Systematic<sp/>must<sp/>be<sp/>of<sp/>form:<sp/>&lt;string&gt;__Xup<sp/><sp/>OR<sp/><sp/>&lt;string&gt;__Xdown<sp/><sp/>...<sp/>where<sp/>X<sp/>is<sp/>a<sp/>number&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/>itr-&gt;Reset();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>(key<sp/>=<sp/>static_cast&lt;TKey*&gt;(itr-&gt;Next()))<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>TClass*<sp/>cl<sp/>=<sp/>TClass::GetClass(key-&gt;GetClassName());</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!cl<sp/>||<sp/>!cl-&gt;InheritsFrom(</highlight><highlight class="stringliteral">&quot;TH1&quot;</highlight><highlight class="normal">))<sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>ATH_MSG_DEBUG(</highlight><highlight class="stringliteral">&quot;Detected<sp/>scale<sp/>factor<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>key-&gt;GetName());</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//loop<sp/>over<sp/>systematics</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>syst<sp/>:<sp/>m_affectingSysts)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>TString<sp/>h<sp/>=<sp/>(syst==<ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">))<sp/>?<sp/>std::string(key-&gt;GetName())<sp/>:<sp/>syst.name()+<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::string(key-&gt;GetName());</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>TH1*<sp/>hist<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">TH1*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(f-&gt;Get(h));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!hist)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!(syst==<ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)))<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_VERBOSE(</highlight><highlight class="stringliteral">&quot;No<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>syst.name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>variation<sp/>of<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>key-&gt;GetName());</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//fine,<sp/>just<sp/>no<sp/>systematic<sp/>variation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_ERROR(</highlight><highlight class="stringliteral">&quot;Failed<sp/>at<sp/>retrieving<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>key-&gt;GetName());</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//detect<sp/>particle<sp/>type<sp/>from<sp/>title</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434" kindref="member">xAOD::Type::ObjectType</ref><sp/>type<sp/>=<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a8efcd873e2c0bfe30ea84f2d0cae396e" kindref="member" tooltip="An object not falling into any of the other categories.">xAOD::Type::Other</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(hist-&gt;GetTitle(),</highlight><highlight class="stringliteral">&quot;Electron&quot;</highlight><highlight class="normal">)==0)<sp/>type<sp/>=<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a0199381ad718edc5748453cf69eb0fed" kindref="member" tooltip="The object is an electron.">xAOD::Type::Electron</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(hist-&gt;GetTitle(),</highlight><highlight class="stringliteral">&quot;Muon&quot;</highlight><highlight class="normal">)==0)<sp/>type<sp/>=<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434af612e5722903badfe4fd0fd721fc4b13" kindref="member" tooltip="The object is a muon.">xAOD::Type::Muon</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(hist-&gt;GetTitle(),</highlight><highlight class="stringliteral">&quot;Jet&quot;</highlight><highlight class="normal">)==0)<sp/>type<sp/>=<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a2c3009abc16936d9f1b2bdc544ebb926" kindref="member" tooltip="The object is a jet.">xAOD::Type::Jet</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(hist-&gt;GetTitle(),</highlight><highlight class="stringliteral">&quot;Photon&quot;</highlight><highlight class="normal">)==0)<sp/>type<sp/>=<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434ab4340d8e5195d6c17d7f6147d8ce187f" kindref="member" tooltip="The object is a photon.">xAOD::Type::Photon</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(hist-&gt;GetTitle(),</highlight><highlight class="stringliteral">&quot;Tau&quot;</highlight><highlight class="normal">)==0)<sp/>type<sp/>=<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a0f85bdf366b6aa1f3c1308c12ddc5613" kindref="member" tooltip="The object is a tau (jet).">xAOD::Type::Tau</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_ERROR(</highlight><highlight class="stringliteral">&quot;Unknown<sp/>particle<sp/>type:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>hist-&gt;GetTitle());</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//check<sp/>all<sp/>axis<sp/>are<sp/>labelled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strlen(hist-&gt;GetXaxis()-&gt;GetTitle())==0<sp/>||<sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(hist-&gt;GetDimension()&gt;1<sp/>&amp;&amp;<sp/>strlen(hist-&gt;GetYaxis()-&gt;GetTitle())==0)<sp/>||<sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(hist-&gt;GetDimension()&gt;2<sp/>&amp;&amp;<sp/>strlen(hist-&gt;GetZaxis()-&gt;GetTitle())==0)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_ERROR(</highlight><highlight class="stringliteral">&quot;All<sp/>axis<sp/>of<sp/>histogram<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>hist-&gt;GetName()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>need<sp/>to<sp/>be<sp/>labelled&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//see<sp/>if<sp/>nominal<sp/>already<sp/>present,<sp/>if<sp/>it<sp/>is<sp/>we<sp/>have<sp/>to<sp/>&apos;extend&apos;<sp/>the<sp/>existing<sp/>histogram</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>TH1*&amp;<sp/>existHist<sp/>=<sp/>m_hists[type].hists[syst.name()];</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(existHist)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_DEBUG(</highlight><highlight class="stringliteral">&quot;Combining<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>hist-&gt;GetTitle()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>f(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>existHist-&gt;GetXaxis()-&gt;GetTitle()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>hist-&gt;GetXaxis()-&gt;GetTitle()<sp/>&lt;&lt;<sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;)<sp/>=<sp/>2*f(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>existHist-&gt;GetXaxis()-&gt;GetTitle()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)*f(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hist-&gt;GetXaxis()-&gt;GetTitle()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)/[f(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>existHist-&gt;GetXaxis()-&gt;GetTitle()<sp/>&lt;&lt;<sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;)+f(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>hist-&gt;GetXaxis()-&gt;GetTitle()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TH1*<sp/>newHist<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(existHist-&gt;GetDimension()==1<sp/>&amp;&amp;<sp/>hist-&gt;GetDimension()==1)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>binEdges1,<sp/>binEdges2;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=1;i&lt;=existHist-&gt;GetNbinsX()+1;i++)<sp/>binEdges1.push_back(existHist-&gt;GetBinLowEdge(i));</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=1;i&lt;=hist-&gt;GetNbinsX()+1;i++)<sp/>binEdges2.push_back(hist-&gt;GetBinLowEdge(i));</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newHist<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH2D(</highlight><highlight class="stringliteral">&quot;myHist&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;myHist&quot;</highlight><highlight class="normal">,existHist-&gt;GetNbinsX(),&amp;binEdges1[0],hist-&gt;GetNbinsX(),&amp;binEdges2[0]);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newHist-&gt;SetDirectory(0);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newHist-&gt;GetXaxis()-&gt;SetTitle(existHist-&gt;GetTitle());</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newHist-&gt;GetYaxis()-&gt;SetTitle(hist-&gt;GetTitle());</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;i&lt;=existHist-&gt;GetNbinsX()+1;i++)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j=0;j&lt;=hist-&gt;GetNbinsX()+1;j++)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>existHist-&gt;GetBinContent(i);<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>hist-&gt;GetBinContent(j);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(a<sp/>&amp;&amp;<sp/>b)<sp/>newHist-&gt;SetBinContent(newHist-&gt;GetBin(i,j),<sp/>2.0<sp/>*<sp/>(a*b)/(a+b)<sp/>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//combine<sp/>error<sp/>...<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!(syst==<ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)))<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>da<sp/>=<sp/>existHist-&gt;GetBinError(i);</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>db<sp/>=<sp/>hist-&gt;GetBinError(j);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(a<sp/>&amp;&amp;<sp/>b)<sp/>newHist-&gt;SetBinError(newHist-&gt;GetBin(i,j),<sp/>2.0<sp/>*<sp/>(da*b*b<sp/>+<sp/>db*a*a)/((a+b)*(a+b))<sp/>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>existHist;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>existHist<sp/>=<sp/>newHist;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_ERROR(</highlight><highlight class="stringliteral">&quot;Unsupported<sp/>scale<sp/>factor<sp/>reparamertization<sp/>:-(&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;<sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>existHist<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">TH1*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(hist-&gt;Clone(</highlight><highlight class="stringliteral">&quot;myHist&quot;</highlight><highlight class="normal">));<sp/>existHist-&gt;SetDirectory(0);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//no<sp/>systematic<sp/>if<sp/>nominal<sp/>hist<sp/>...<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if(syst==CP::SystematicVariation(&quot;&quot;))<sp/>for(int<sp/>i=0;i&lt;(hist-&gt;GetNbinsX()+2)*(hist-&gt;GetNbinsY()+2)*(hist-&gt;GetNbinsZ()+2);i++)<sp/>hist-&gt;SetBinError(i,0);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(syst==<ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;i&lt;hist-&gt;GetDimension();i++)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>axisTitle<sp/>=<sp/>(<sp/>i==0<sp/>)<sp/>?<sp/>hist-&gt;GetXaxis()-&gt;GetTitle()<sp/>:<sp/>(<sp/>(i==1)<sp/>?<sp/>hist-&gt;GetYaxis()-&gt;GetTitle()<sp/>:<sp/>hist-&gt;GetZaxis()-&gt;GetTitle()<sp/>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>axisTitle.erase(remove_if(axisTitle.begin(),<sp/>axisTitle.end(),<sp/>isspace),axisTitle.end());</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::function&lt;double(const<sp/>xAOD::IParticle&amp;)&gt;<sp/>bfunc;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ATH_MSG_DEBUG(</highlight><highlight class="stringliteral">&quot;<sp/><sp/>Parameter<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>axisTitle);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(axisTitle==</highlight><highlight class="stringliteral">&quot;pt&quot;</highlight><highlight class="normal"><sp/>||<sp/>axisTitle==</highlight><highlight class="stringliteral">&quot;pt/MeV&quot;</highlight><highlight class="normal"><sp/>||<sp/>axisTitle==</highlight><highlight class="stringliteral">&quot;pt[MeV]&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bfunc<sp/>=<sp/>part_pt;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(axisTitle<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;pt/GeV&quot;</highlight><highlight class="normal"><sp/>||<sp/>axisTitle==</highlight><highlight class="stringliteral">&quot;pt[GeV]&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bfunc<sp/>=<sp/>part_pt_gev;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(axisTitle==</highlight><highlight class="stringliteral">&quot;eta&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bfunc<sp/>=<sp/>part_eta;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bfunc<sp/>=<sp/>std::bind(part_decor,<sp/>std::placeholders::_1,<sp/>axisTitle);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_hists[type].axisFuncs.push_back(bfunc);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//remove<sp/>the<sp/>nominal<sp/>syst<sp/>to<sp/>finish<sp/>up</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound" tooltip="Class to wrap a set of SystematicVariations.">CP::SystematicSet</ref><sp/>tmpSet(m_affectingSysts);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/>m_affectingSysts.clear();</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>s<sp/>:<sp/>tmpSet)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(s==<ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">))<sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>m_affectingSysts.insert(s);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//m_affectingSysts.insert(CP::SystematicVariation(s.basename(),-1));<sp/>//add<sp/>the<sp/>negative<sp/>fluctuation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>f-&gt;Close();</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>f;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>f<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="d4/d6e/classCP_1_1SystematicRegistry_1a6bfc41e5ad75c56240e635dba9423ad1" kindref="member" tooltip="Get the singleton instance of the registry.">CP::SystematicRegistry::getInstance</ref>().registerSystematics(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">)<sp/>!=<sp/><ref refid="d1/d38/classCP_1_1SystematicCode_1a07da906f4dfdca0598ec3a4ac9bfb686ae0356fe67c0b21740893766ab2f334aa" kindref="member" tooltip="The requested systematic will be applied.">CP::SystematicCode::Ok</ref><sp/>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="db/de9/classParticleScaleFactorTool_1a05d31a558312f15d22e82b8cfdbb1efe" kindref="member" tooltip="returns: the value that was calculated from the xAOD::IParticle">ParticleScaleFactorTool::evaluate</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">xAOD::IParticle</ref>*<sp/>particle<sp/>)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//check<sp/>we<sp/>have<sp/>a<sp/>hist<sp/>for<sp/>this<sp/>particle<sp/>type<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>histItr<sp/>=<sp/>m_hists.find(particle-&gt;<ref refid="d5/d4c/classxAOD_1_1IParticle_1a852e62cdcea85eb9f99461898c301e02" kindref="member" tooltip="The type of the object as a simple enumeration.">type</ref>());</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(histItr==m_hists.end())<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>ATH_MSG_ERROR(</highlight><highlight class="stringliteral">&quot;No<sp/>scale<sp/>factor<sp/>available<sp/>for<sp/>particle<sp/>type:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>particle-&gt;<ref refid="d5/d4c/classxAOD_1_1IParticle_1a852e62cdcea85eb9f99461898c301e02" kindref="member" tooltip="The type of the object as a simple enumeration.">type</ref>());</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(TString::Format(</highlight><highlight class="stringliteral">&quot;%s<sp/>:<sp/>No<sp/>scale<sp/>factor<sp/>available<sp/>for<sp/>particle<sp/>type<sp/>%d&quot;</highlight><highlight class="normal">,name().c_str(),</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">(particle-&gt;<ref refid="d5/d4c/classxAOD_1_1IParticle_1a852e62cdcea85eb9f99461898c301e02" kindref="member" tooltip="The type of the object as a simple enumeration.">type</ref>())).Data());</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/>std::pair&lt;CP::SystematicVariation,TH1*&gt;<sp/>res<sp/>=<sp/>histItr-&gt;second.getHist(m_currentSyst);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TH1*<sp/>hist<sp/>=<sp/>res.second;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bin<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(hist-&gt;GetDimension())<sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:<sp/>bin<sp/>=<sp/>hist-&gt;FindFixBin(histItr-&gt;second.axisFuncs[0](*particle));<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:<sp/>bin<sp/>=<sp/>hist-&gt;FindFixBin(histItr-&gt;second.axisFuncs[0](*particle),histItr-&gt;second.axisFuncs[1](*particle));<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:<sp/>bin<sp/>=<sp/>hist-&gt;FindFixBin(histItr-&gt;second.axisFuncs[0](*particle),histItr-&gt;second.axisFuncs[1](*particle),histItr-&gt;second.axisFuncs[2](*particle));<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!res.first.parameter())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hist-&gt;GetBinContent(bin);<sp/></highlight><highlight class="comment">//must<sp/>have<sp/>been<sp/>nominal;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>nom<sp/>=<sp/>histItr-&gt;second.getHist(<ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)).second-&gt;GetBinContent(bin);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//got<sp/>here<sp/>so<sp/>get<sp/>nominal<sp/>hist<sp/>and<sp/>do<sp/>difference<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nom<sp/>+<sp/>(m_currentSyst.<ref refid="dd/d2d/classCP_1_1SystematicVariation_1a2b6754480c75e0649348930bf7f84d85" kindref="member">parameter</ref>()/res.first.parameter())<sp/>*<sp/>(hist-&gt;GetBinContent(bin)<sp/>-<sp/>nom);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::pair&lt;CP::SystematicVariation,TH1*&gt;<sp/>ParticleScaleFactorTool::Hists::getHist(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>&amp;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//find<sp/>hist<sp/>that<sp/>matches<sp/>basename<sp/>and<sp/>take<sp/>the<sp/>one<sp/>that<sp/>has<sp/>the<sp/>closest<sp/>parameter<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>std::pair&lt;CP::SystematicVariation,TH1*&gt;<sp/>result(<ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">),0);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>s<sp/>:<sp/>hists)<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(s.first.basename()!=</highlight><highlight class="keyword">set</highlight><highlight class="normal">.basename())<sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!result.second)<sp/>{result<sp/>=<sp/>s;}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="keyword">set</highlight><highlight class="normal">.parameter()*s.first.parameter()&gt;0)<sp/>result<sp/>=<sp/>s;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(result.second)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//return<sp/>nominal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>hists.find(<ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">));<sp/></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/>*it;<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//return<sp/>it-&gt;second;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><ref refid="d1/d38/classCP_1_1SystematicCode" kindref="compound">CP::SystematicCode</ref><sp/><ref refid="db/de9/classParticleScaleFactorTool_1a8f177abe5104fdfd6cfc4da444ed2e51" kindref="member">ParticleScaleFactorTool::applySystematicVariation</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound" tooltip="Class to wrap a set of SystematicVariations.">CP::SystematicSet</ref>&amp;<sp/>systConfig<sp/>)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>syst<sp/>:<sp/>systConfig)<sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>s<sp/>:<sp/>m_affectingSysts)<sp/>{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(s.basename()==syst.basename())<sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_currentSyst<sp/>=<sp/>syst;<sp/>m_isNominal=</highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d1/d38/classCP_1_1SystematicCode_1a07da906f4dfdca0598ec3a4ac9bfb686ae0356fe67c0b21740893766ab2f334aa" kindref="member" tooltip="The requested systematic will be applied.">CP::SystematicCode::Ok</ref>;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>m_currentSyst<sp/>=<sp/><ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>m_isNominal<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d1/d38/classCP_1_1SystematicCode_1a07da906f4dfdca0598ec3a4ac9bfb686ae0356fe67c0b21740893766ab2f334aa" kindref="member" tooltip="The requested systematic will be applied.">CP::SystematicCode::Ok</ref>;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/ParticleScaleFactorTool.cxx"/>
+  </compounddef>
+</doxygen>

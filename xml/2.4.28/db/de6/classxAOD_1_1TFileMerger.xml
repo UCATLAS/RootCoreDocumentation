@@ -1,0 +1,579 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="db/de6/classxAOD_1_1TFileMerger" kind="class" prot="public">
+    <compoundname>xAOD::TFileMerger</compoundname>
+    <includes refid="d0/da4/TFileMerger_8h" local="no">TFileMerger.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="db/de6/classxAOD_1_1TFileMerger_1a524bac63ef08968935fcbe058a2ad999" prot="public" static="no">
+        <name>EMergeMode</name>
+        <enumvalue id="db/de6/classxAOD_1_1TFileMerger_1a524bac63ef08968935fcbe058a2ad999a0a260fc569034b3bdfc29f216c9a9cab" prot="public">
+          <name>kSlowMerge</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>Merging is done using <ref refid="de/d95/classxAOD_1_1TEvent" kindref="compound">TEvent</ref>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="db/de6/classxAOD_1_1TFileMerger_1a524bac63ef08968935fcbe058a2ad999a68c28f0ccbffb4234b84340ae3729ef6" prot="public">
+          <name>kFastMerge</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>Merging is done using fast TTree merge. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Types of merging that can be done</para><para>Non-xAOD trees are always merged using fast TTree merging. It&apos;s only the method for the <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> tree merging that can be controlled here. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="65" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" bodystart="65" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="db/de6/classxAOD_1_1TFileMerger_1a4327bfd6ed35c7dc21f18d1b1cba03b7" prot="public" static="yes" mutable="no">
+        <type>const ::Long64_t</type>
+        <definition>const ::Long64_t xAOD::TFileMerger::kBigNumber</definition>
+        <argsstring></argsstring>
+        <name>kBigNumber</name>
+        <initializer> 1234567890</initializer>
+        <briefdescription>
+<para>Number of entries that are assumed to be never exceeded in a file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="71" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="db/de6/classxAOD_1_1TFileMerger_1a0db42627510cfeb6632c9eb33cb62abd" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; ::TFile * &gt;</type>
+        <definition>std::vector&lt; ::TFile* &gt; xAOD::TFileMerger::m_input</definition>
+        <argsstring></argsstring>
+        <name>m_input</name>
+        <briefdescription>
+<para>The list of input files to be merged. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="111" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/de6/classxAOD_1_1TFileMerger_1a4bd1f425806593e8e3664ea456ff871f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>std::vector&lt; bool &gt; xAOD::TFileMerger::m_copiedInput</definition>
+        <argsstring></argsstring>
+        <name>m_copiedInput</name>
+        <briefdescription>
+<para>Whether the files were copied locally before being merged. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="113" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/de6/classxAOD_1_1TFileMerger_1a2693ee5d9ae9ba5711f9f36876d808b3" prot="private" static="no" mutable="no">
+        <type>::TFile *</type>
+        <definition>::TFile* xAOD::TFileMerger::m_output</definition>
+        <argsstring></argsstring>
+        <name>m_output</name>
+        <briefdescription>
+<para>The output file to write to. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="115" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/de6/classxAOD_1_1TFileMerger_1a2b974e37b0650195adb60c052c9410f5" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt; std::string &gt; xAOD::TFileMerger::m_treesToSkip</definition>
+        <argsstring></argsstring>
+        <name>m_treesToSkip</name>
+        <briefdescription>
+<para>Names of the TTrees to skip from the merge. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="118" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/de6/classxAOD_1_1TFileMerger_1a4c19297e9536d2e347819d58c87ed447" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, <ref refid="de/d95/classxAOD_1_1TEvent" kindref="compound">TEvent</ref> &gt;</type>
+        <definition>std::map&lt; std::string, TEvent &gt; xAOD::TFileMerger::m_events</definition>
+        <argsstring></argsstring>
+        <name>m_events</name>
+        <briefdescription>
+<para>Helper objects for merging the <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> Tree(s) from the input file(s). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="121" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/de6/classxAOD_1_1TFileMerger_1adbb121b9c7f6205f55118ccf00f47d80" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; ::TFile * &gt;</type>
+        <definition>std::vector&lt; ::TFile* &gt; xAOD::TFileMerger::m_helperFiles</definition>
+        <argsstring></argsstring>
+        <name>m_helperFiles</name>
+        <briefdescription>
+<para>Helper in-memory files used during fast merging. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="123" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/de6/classxAOD_1_1TFileMerger_1aadd6b2712a7b963b3ff7068ff3ea0f5c" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt; std::string &gt; xAOD::TFileMerger::m_metaDataToolNames</definition>
+        <argsstring></argsstring>
+        <name>m_metaDataToolNames</name>
+        <briefdescription>
+<para>Names of the metadata handling tools. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="126" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/de6/classxAOD_1_1TFileMerger_1abd6061617ce95705551a598c0118e6f4" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, <ref refid="d0/d85/classxAOD_1_1THolder" kindref="compound">THolder</ref> &gt;</type>
+        <definition>std::map&lt; std::string, THolder &gt; xAOD::TFileMerger::m_metaDataTools</definition>
+        <argsstring></argsstring>
+        <name>m_metaDataTools</name>
+        <briefdescription>
+<para>Metadata tools instantiated for the file merging. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="128" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/de6/classxAOD_1_1TFileMerger_1a6ed0b256df8c0ab065fff9e154600eea" prot="private" static="no" mutable="no">
+        <type><ref refid="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348" kindref="member">TEvent::EAuxMode</ref></type>
+        <definition>TEvent::EAuxMode xAOD::TFileMerger::m_mode</definition>
+        <argsstring></argsstring>
+        <name>m_mode</name>
+        <briefdescription>
+<para>Access mode for the created <ref refid="de/d95/classxAOD_1_1TEvent" kindref="compound">TEvent</ref> objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="131" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/de6/classxAOD_1_1TFileMerger_1aa1955269c424348d72438ac1bbd2d3c0" prot="private" static="no" mutable="no">
+        <type>::Long64_t</type>
+        <definition>::Long64_t xAOD::TFileMerger::m_entriesToMerge</definition>
+        <argsstring></argsstring>
+        <name>m_entriesToMerge</name>
+        <briefdescription>
+<para>Events to merge into the output. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="134" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/de6/classxAOD_1_1TFileMerger_1a455bc94f9f4efece73a9db1eefc4eef9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xAOD::TFileMerger::m_verbosity</definition>
+        <argsstring></argsstring>
+        <name>m_verbosity</name>
+        <briefdescription>
+<para>Verbosity level. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="137" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1a3e2cf9f378fbb0be1cbe3a011465af8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xAOD::TFileMerger::TFileMerger</definition>
+        <argsstring>()</argsstring>
+        <name>TFileMerger</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1a665ada8acdc515be12c3d9bd3ab42f90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xAOD::TFileMerger::~TFileMerger</definition>
+        <argsstring>()</argsstring>
+        <name>~TFileMerger</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1a22dd51d1986bd64c7f7132aef3a0f718" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TFileMerger::setOutputFileName</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;mode=&quot;RECREATE&quot;)</argsstring>
+        <name>setOutputFileName</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>mode</declname>
+          <defval>&quot;RECREATE&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Set the name of the output file that should be created. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1aac91fa6d9ad65f87ffac7d69bde2b093" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TFileMerger::addFile</definition>
+        <argsstring>(const std::string &amp;name, bool copyLocally=false)</argsstring>
+        <name>addFile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>copyLocally</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Add a file to the list to be merged, by name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1a7532c699eba45f1207f3fac0098f36f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TFileMerger::addMetaDataTool</definition>
+        <argsstring>(const std::string &amp;typeName)</argsstring>
+        <name>addMetaDataTool</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>typeName</declname>
+        </param>
+        <briefdescription>
+<para>Add a metadata tool to be used during the merging. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1a662d0f806c36abdf2c976f615415842e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TFileMerger::merge</definition>
+        <argsstring>(EMergeMode mode=kFastMerge,::Long64_t entries=kBigNumber)</argsstring>
+        <name>merge</name>
+        <param>
+          <type><ref refid="db/de6/classxAOD_1_1TFileMerger_1a524bac63ef08968935fcbe058a2ad999" kindref="member">EMergeMode</ref></type>
+          <declname>mode</declname>
+          <defval>kFastMerge</defval>
+        </param>
+        <param>
+          <type>::Long64_t</type>
+          <declname>entries</declname>
+          <defval><ref refid="db/de6/classxAOD_1_1TFileMerger_1a4327bfd6ed35c7dc21f18d1b1cba03b7" kindref="member">kBigNumber</ref></defval>
+        </param>
+        <briefdescription>
+<para>Execute the file merge itself. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1a14b55d561b376a63278e60f763292783" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348" kindref="member">TEvent::EAuxMode</ref></type>
+        <definition>TEvent::EAuxMode xAOD::TFileMerger::accessMode</definition>
+        <argsstring>() const </argsstring>
+        <name>accessMode</name>
+        <briefdescription>
+<para>The access mode used for slow and metadata merging. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1a2d31e020ba31620b48e6d724ee3c2f72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xAOD::TFileMerger::setAccessMode</definition>
+        <argsstring>(TEvent::EAuxMode mode)</argsstring>
+        <name>setAccessMode</name>
+        <param>
+          <type><ref refid="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348" kindref="member">TEvent::EAuxMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Set the access mode used for slow and metadata merging. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1ab5b6a5c71a3c520187f1b89dceb87cbe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xAOD::TFileMerger::verbosity</definition>
+        <argsstring>() const </argsstring>
+        <name>verbosity</name>
+        <briefdescription>
+<para>The current verbosity level. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1a4d557cef7cb66cbc91014e9dde9dda9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xAOD::TFileMerger::setVerbosity</definition>
+        <argsstring>(int value)</argsstring>
+        <name>setVerbosity</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set verbosity level (meant for debugging mainly). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1ad1b4b355b376556c2445bd9546384549" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::set&lt; std::string &gt; &amp;</type>
+        <definition>const std::set&lt; std::string &gt;&amp; xAOD::TFileMerger::treesSkipped</definition>
+        <argsstring>() const </argsstring>
+        <name>treesSkipped</name>
+        <briefdescription>
+<para>Get the names of the trees that will be skipped from the merge. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1a6c5563d83af031b6660da5cb9ea565ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xAOD::TFileMerger::addTreeToSkip</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>addTreeToSkip</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Add a tree name that should be skipped during the merging. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="90"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1a9bce5c981c05c827d19517949cbe42d8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TFileMerger::closeFiles</definition>
+        <argsstring>()</argsstring>
+        <name>closeFiles</name>
+        <briefdescription>
+<para>Close all the open files. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1acec4f579611487d1dd38a9d2f3b6483a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TFileMerger::mergeDirectory</definition>
+        <argsstring>(::TDirectory &amp;input,::TDirectory &amp;output, EMergeMode mode, bool topLevelDir)</argsstring>
+        <name>mergeDirectory</name>
+        <param>
+          <type>::TDirectory &amp;</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>::TDirectory &amp;</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type><ref refid="db/de6/classxAOD_1_1TFileMerger_1a524bac63ef08968935fcbe058a2ad999" kindref="member">EMergeMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>topLevelDir</declname>
+        </param>
+        <briefdescription>
+<para>Merge the contents of one directory from the input files. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1a7ba16f24c94055ad5db145c459dba80f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TFileMerger::mergeObject</definition>
+        <argsstring>(::TObject &amp;input,::TObject &amp;output)</argsstring>
+        <name>mergeObject</name>
+        <param>
+          <type>::TObject &amp;</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>::TObject &amp;</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Merge two top level objects that were found in the inputs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1ab23f948df96305acf000a6e07b6b0cad" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TFileMerger::createMetaDataTools</definition>
+        <argsstring>()</argsstring>
+        <name>createMetaDataTools</name>
+        <briefdescription>
+<para>Instantiate the metadata handling tools. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1ac310f0669b58c2aee80271102cdc4acb" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; ::TBranch * &gt;</type>
+        <definition>std::vector&lt; ::TBranch* &gt; xAOD::TFileMerger::getMissingBranches</definition>
+        <argsstring>(::TTree *first,::TTree *second) const </argsstring>
+        <name>getMissingBranches</name>
+        <param>
+          <type>::TTree *</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>::TTree *</type>
+          <declname>second</declname>
+        </param>
+        <briefdescription>
+<para>Get the auxiliary branches missing in one of the trees. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="104"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1a351838beec3bf58ade1d722283d417cf" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; ::TBranch * &gt;</type>
+        <definition>std::vector&lt; ::TBranch* &gt; xAOD::TFileMerger::getSkippedBranches</definition>
+        <argsstring>(::TTree *tree) const </argsstring>
+        <name>getSkippedBranches</name>
+        <param>
+          <type>::TTree *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+<para>Get the branches that should be skipped from merging. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de6/classxAOD_1_1TFileMerger_1a0fc7930d138f3e9bdaefde5e2f792d50" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TFileMerger::addAuxBranch</definition>
+        <argsstring>(::TTree *otree,::TBranch *ibranch) const </argsstring>
+        <name>addAuxBranch</name>
+        <param>
+          <type>::TTree *</type>
+          <declname>otree</declname>
+        </param>
+        <param>
+          <type>::TBranch *</type>
+          <declname>ibranch</declname>
+        </param>
+        <briefdescription>
+<para>Duplicate an auxiliary branch from the input into the output. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Helper class for merging <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> files</para><para>This is a slightly dubmed down version of ROOT&apos;s <ref refid="db/de6/classxAOD_1_1TFileMerger" kindref="compound">TFileMerger</ref> class in some respects, and is a bit smarter in other respects. It can be used by user code to merge <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> files in a user friendly way from C++ code. It is also used by the xAODMerge application to do the heavy lifting during the merge.</para><para><simplesect kind="author"><para>Attila Krasznahorkay &lt;<ulink url="mailto:Attila.Krasznahorkay@cern.ch">Attila.Krasznahorkay@cern.ch</ulink>&gt;</para></simplesect>
+<simplesect kind="rcs"><title>Revision</title><para>676314 </para></simplesect>
+<simplesect kind="rcs"><title>Date</title><para>2015-06-18 14:07:05 +0200 (Thu, 18 Jun 2015) </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" line="41" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/tools/TFileMerger.h" bodystart="41" bodyend="142"/>
+    <listofallmembers>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a14b55d561b376a63278e60f763292783" prot="public" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>accessMode</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a0fc7930d138f3e9bdaefde5e2f792d50" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>addAuxBranch</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1aac91fa6d9ad65f87ffac7d69bde2b093" prot="public" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>addFile</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a7532c699eba45f1207f3fac0098f36f9" prot="public" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>addMetaDataTool</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a6c5563d83af031b6660da5cb9ea565ad" prot="public" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>addTreeToSkip</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a9bce5c981c05c827d19517949cbe42d8" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>closeFiles</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1ab23f948df96305acf000a6e07b6b0cad" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>createMetaDataTools</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a524bac63ef08968935fcbe058a2ad999" prot="public" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>EMergeMode</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1ac310f0669b58c2aee80271102cdc4acb" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>getMissingBranches</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a351838beec3bf58ade1d722283d417cf" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>getSkippedBranches</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a4327bfd6ed35c7dc21f18d1b1cba03b7" prot="public" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>kBigNumber</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a524bac63ef08968935fcbe058a2ad999a68c28f0ccbffb4234b84340ae3729ef6" prot="public" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>kFastMerge</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a524bac63ef08968935fcbe058a2ad999a0a260fc569034b3bdfc29f216c9a9cab" prot="public" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>kSlowMerge</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a4bd1f425806593e8e3664ea456ff871f" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>m_copiedInput</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1aa1955269c424348d72438ac1bbd2d3c0" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>m_entriesToMerge</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a4c19297e9536d2e347819d58c87ed447" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>m_events</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1adbb121b9c7f6205f55118ccf00f47d80" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>m_helperFiles</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a0db42627510cfeb6632c9eb33cb62abd" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>m_input</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1aadd6b2712a7b963b3ff7068ff3ea0f5c" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>m_metaDataToolNames</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1abd6061617ce95705551a598c0118e6f4" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>m_metaDataTools</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a6ed0b256df8c0ab065fff9e154600eea" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>m_mode</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a2693ee5d9ae9ba5711f9f36876d808b3" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>m_output</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a2b974e37b0650195adb60c052c9410f5" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>m_treesToSkip</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a455bc94f9f4efece73a9db1eefc4eef9" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>m_verbosity</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a662d0f806c36abdf2c976f615415842e" prot="public" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>merge</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1acec4f579611487d1dd38a9d2f3b6483a" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>mergeDirectory</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a7ba16f24c94055ad5db145c459dba80f" prot="private" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>mergeObject</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a2d31e020ba31620b48e6d724ee3c2f72" prot="public" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>setAccessMode</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a22dd51d1986bd64c7f7132aef3a0f718" prot="public" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>setOutputFileName</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a4d557cef7cb66cbc91014e9dde9dda9f" prot="public" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>setVerbosity</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a3e2cf9f378fbb0be1cbe3a011465af8a" prot="public" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>TFileMerger</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1ad1b4b355b376556c2445bd9546384549" prot="public" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>treesSkipped</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1ab5b6a5c71a3c520187f1b89dceb87cbe" prot="public" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>verbosity</name></member>
+      <member refid="db/de6/classxAOD_1_1TFileMerger_1a665ada8acdc515be12c3d9bd3ab42f90" prot="public" virt="non-virtual"><scope>xAOD::TFileMerger</scope><name>~TFileMerger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

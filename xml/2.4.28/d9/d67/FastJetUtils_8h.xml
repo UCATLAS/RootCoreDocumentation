@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d9/d67/FastJetUtils_8h" kind="file">
+    <compoundname>FastJetUtils.h</compoundname>
+    <includes local="yes">fastjet/JetDefinition.hh</includes>
+    <includes refid="d8/d2a/JetContainerInfo_8h" local="yes">xAODJet/JetContainerInfo.h</includes>
+    <includedby refid="d0/d8e/FastJetUtils_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetEDM/Root/FastJetUtils.cxx</includedby>
+    <includedby refid="df/d4e/JetFinder_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetRec/Root/JetFinder.cxx</includedby>
+    <includedby refid="d8/d68/JetPruner_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetRec/Root/JetPruner.cxx</includedby>
+    <includedby refid="d8/d86/SubjetFinderTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetSubStructureMomentTools/Root/SubjetFinderTool.cxx</includedby>
+    <includedby refid="d4/da2/SubjetRecorderTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetSubStructureMomentTools/Root/SubjetRecorderTool.cxx</includedby>
+    <incdepgraph>
+      <node id="150392">
+        <label>string</label>
+      </node>
+      <node id="150389">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetEDM/JetEDM/FastJetUtils.h</label>
+        <link refid="FastJetUtils.h"/>
+        <childnode refid="150390" relation="include">
+        </childnode>
+        <childnode refid="150391" relation="include">
+        </childnode>
+      </node>
+      <node id="150390">
+        <label>fastjet/JetDefinition.hh</label>
+      </node>
+      <node id="150391">
+        <label>xAODJet/JetContainerInfo.h</label>
+        <link refid="d8/d2a/JetContainerInfo_8h_source"/>
+        <childnode refid="150392" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="dd/d44/namespacexAOD">xAOD</innernamespace>
+    <innernamespace refid="d8/d6d/namespacexAOD_1_1JetAlgorithmType">xAOD::JetAlgorithmType</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>this<sp/>is<sp/>-*-<sp/>c++<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>JETEDM_FASTJETUTILS_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>JETEDM_FASTJETUTILS_H</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;fastjet/JetDefinition.hh&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODJet/JetContainerInfo.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">xAOD<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">JetAlgorithmType<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>conversion<sp/>from<sp/>fastjet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>algName(fastjet::JetAlgorithm<sp/>a);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>ID<sp/>algId(fastjet::JetAlgorithm<sp/>a);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>conversion<sp/>to<sp/>fastjet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>fastjet::JetAlgorithm<sp/>fastJetDef(ID<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>fastjet::JetAlgorithm<sp/>fastJetDef(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetEDM/JetEDM/FastJetUtils.h"/>
+  </compounddef>
+</doxygen>

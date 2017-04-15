@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="da/dc1/Lvl1Result_8cxx" kind="file">
+    <compoundname>Lvl1Result.cxx</compoundname>
+    <includes refid="d3/d73/Lvl1Result_8h" local="yes">TrigSteeringEvent/Lvl1Result.h</includes>
+    <incdepgraph>
+      <node id="330372">
+        <label>stdint.h</label>
+      </node>
+      <node id="330373">
+        <label>CLIDSvc/CLASS_DEF.h</label>
+      </node>
+      <node id="330375">
+        <label>string</label>
+      </node>
+      <node id="330371">
+        <label>TrigSteeringEvent/Lvl1Result.h</label>
+        <link refid="d3/d73/Lvl1Result_8h_source"/>
+        <childnode refid="330372" relation="include">
+        </childnode>
+        <childnode refid="330373" relation="include">
+        </childnode>
+        <childnode refid="330374" relation="include">
+        </childnode>
+      </node>
+      <node id="330378">
+        <label>SGTools/CLASS_DEF.h</label>
+      </node>
+      <node id="330376">
+        <label>vector</label>
+      </node>
+      <node id="330374">
+        <label>TrigSteeringEvent/Lvl1Item.h</label>
+        <link refid="d9/dbe/Lvl1Item_8h_source"/>
+        <childnode refid="330372" relation="include">
+        </childnode>
+        <childnode refid="330375" relation="include">
+        </childnode>
+        <childnode refid="330376" relation="include">
+        </childnode>
+        <childnode refid="330377" relation="include">
+        </childnode>
+      </node>
+      <node id="330370">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/src/Lvl1Result.cxx</label>
+        <link refid="Lvl1Result.cxx"/>
+        <childnode refid="330371" relation="include">
+        </childnode>
+      </node>
+      <node id="330377">
+        <label>xAODCore/CLASS_DEF.h</label>
+        <link refid="d6/d20/xAODCore_2xAODCore_2CLASS__DEF_8h"/>
+        <childnode refid="330378" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;TrigSteeringEvent/Lvl1Result.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">LVL1CTP;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Lvl1Result::anyActiveL1ItemAfterVeto()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="6"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>m_l1_itemsTAV.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_l1_itemsTAV[i]<sp/>!=<sp/>0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d4/dc2/classLVL1CTP_1_1Lvl1Result_1a8ae2bd6378420a90c3525e996755e29d" kindref="member" tooltip="final LVL1 decision &amp;amp;&amp;amp; isConfigured">Lvl1Result::isAccepted</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="16"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="d4/dc2/classLVL1CTP_1_1Lvl1Result_1a78236d0a82733aa6cf096753b4932851" kindref="member" tooltip="is LVL1 configured ?">isConfigured</ref>()<sp/>&amp;&amp;<sp/><ref refid="d4/dc2/classLVL1CTP_1_1Lvl1Result_1a6906677081e3023f4538cf956632bd8a" kindref="member" tooltip="any LVL1 item passed after prescale, veto ?">anyActiveL1ItemAfterVeto</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d4/dc2/classLVL1CTP_1_1Lvl1Result_1a7f531776c17a07f9633d7ca0d3b18a07" kindref="member" tooltip="raw L1 item">Lvl1Result::isPassedBeforePrescale</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>item)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="22"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item<sp/>&gt;=<sp/>m_l1_itemsTBP.size()*32)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>uint32_t<sp/>word<sp/>=<sp/>m_l1_itemsTBP[item/32];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(((word<sp/>&gt;&gt;<sp/>(item<sp/>%<sp/>32))<sp/>&amp;<sp/>0x1)<sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d4/dc2/classLVL1CTP_1_1Lvl1Result_1a93d6149068bc9c4144df1aeb78fb1d18" kindref="member" tooltip="after prescale">Lvl1Result::isPassedAfterPrescale</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>item)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="29"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item<sp/>&gt;=<sp/>m_l1_itemsTAP.size()*32)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>uint32_t<sp/>word<sp/>=<sp/>m_l1_itemsTAP[item/32];</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(((word<sp/>&gt;&gt;<sp/>(item<sp/>%<sp/>32))<sp/>&amp;<sp/>0x1)<sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d4/dc2/classLVL1CTP_1_1Lvl1Result_1ab52bc7e578277a6eeba5a69f2b080ce1" kindref="member" tooltip="final L1 decision for this item">Lvl1Result::isPassedAfterVeto</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>item)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="36"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item<sp/>&gt;=<sp/>m_l1_itemsTAV.size()*32)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>uint32_t<sp/>word<sp/>=<sp/>m_l1_itemsTAV[item/32];</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(((word<sp/>&gt;&gt;<sp/>(item<sp/>%<sp/>32))<sp/>&amp;<sp/>0x1)<sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d4/dc2/classLVL1CTP_1_1Lvl1Result_1a69c6e55ffe9c0b3d25d298badf3dee03" kindref="member" tooltip="same as isPassedBeforePrescale">Lvl1Result::isPassedRaw</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>item)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="44"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d4/dc2/classLVL1CTP_1_1Lvl1Result_1a7f531776c17a07f9633d7ca0d3b18a07" kindref="member" tooltip="raw L1 item">isPassedBeforePrescale</ref>(item);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d4/dc2/classLVL1CTP_1_1Lvl1Result_1a6dc62c79ae63b11c3ffc18a7da95f583" kindref="member" tooltip="item isPassedBeforePrescale and _not_ isPassedAfterPrescale">Lvl1Result::isPrescaled</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>item)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="50"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d4/dc2/classLVL1CTP_1_1Lvl1Result_1a7f531776c17a07f9633d7ca0d3b18a07" kindref="member" tooltip="raw L1 item">isPassedBeforePrescale</ref>(item)<sp/>&amp;&amp;<sp/>!<sp/><ref refid="d4/dc2/classLVL1CTP_1_1Lvl1Result_1a93d6149068bc9c4144df1aeb78fb1d18" kindref="member" tooltip="after prescale">isPassedAfterPrescale</ref>(item);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d4/dc2/classLVL1CTP_1_1Lvl1Result_1a8a42cc63475b24efbb123f7848ef4b04" kindref="member" tooltip="item isPassedAfterPrescale and _not_ isPassedAfterVeto">Lvl1Result::isVeto</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>item)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="55"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d4/dc2/classLVL1CTP_1_1Lvl1Result_1a93d6149068bc9c4144df1aeb78fb1d18" kindref="member" tooltip="after prescale">isPassedAfterPrescale</ref>(item)<sp/>&amp;&amp;<sp/>!<ref refid="d4/dc2/classLVL1CTP_1_1Lvl1Result_1ab52bc7e578277a6eeba5a69f2b080ce1" kindref="member" tooltip="final L1 decision for this item">isPassedAfterVeto</ref>(item);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigSteeringEvent/src/Lvl1Result.cxx"/>
+  </compounddef>
+</doxygen>

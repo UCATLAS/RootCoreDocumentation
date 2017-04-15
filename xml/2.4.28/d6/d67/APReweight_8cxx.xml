@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d6/d67/APReweight_8cxx" kind="file">
+    <compoundname>APReweight.cxx</compoundname>
+    <includes refid="df/d85/APReweight_8h" local="yes">ReweightUtils/APReweight.h</includes>
+    <includes refid="d5/d5c/APWeightEntry_8h" local="yes">ReweightUtils/APWeightEntry.h</includes>
+    <includes refid="de/df3/MathTools_8h" local="yes">ReweightUtils/MathTools.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="yes">TTree.h</includes>
+    <includes local="yes">TH1.h</includes>
+    <incdepgraph>
+      <node id="261587">
+        <label>ReweightUtils/APReweight.h</label>
+        <link refid="df/d85/APReweight_8h_source"/>
+        <childnode refid="261588" relation="include">
+        </childnode>
+        <childnode refid="261590" relation="include">
+        </childnode>
+        <childnode refid="261591" relation="include">
+        </childnode>
+      </node>
+      <node id="261588">
+        <label>APReweightBase.h</label>
+        <link refid="d3/d99/APReweightBase_8h_source"/>
+        <childnode refid="261589" relation="include">
+        </childnode>
+      </node>
+      <node id="261592">
+        <label>ReweightUtils/APWeightEntry.h</label>
+        <link refid="d5/d5c/APWeightEntry_8h_source"/>
+        <childnode refid="261593" relation="include">
+        </childnode>
+      </node>
+      <node id="261590">
+        <label>string</label>
+      </node>
+      <node id="261597">
+        <label>TH1.h</label>
+      </node>
+      <node id="261586">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweight.cxx</label>
+        <link refid="APReweight.cxx"/>
+        <childnode refid="261587" relation="include">
+        </childnode>
+        <childnode refid="261592" relation="include">
+        </childnode>
+        <childnode refid="261594" relation="include">
+        </childnode>
+        <childnode refid="261595" relation="include">
+        </childnode>
+        <childnode refid="261596" relation="include">
+        </childnode>
+        <childnode refid="261597" relation="include">
+        </childnode>
+      </node>
+      <node id="261591">
+        <label>vector</label>
+      </node>
+      <node id="261593">
+        <label>Rtypes.h</label>
+      </node>
+      <node id="261595">
+        <label>iostream</label>
+      </node>
+      <node id="261589">
+        <label>TNamed.h</label>
+      </node>
+      <node id="261596">
+        <label>TTree.h</label>
+      </node>
+      <node id="261594">
+        <label>ReweightUtils/MathTools.h</label>
+        <link refid="de/df3/MathTools_8h_source"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="d6/d67/APReweight_8cxx_1af5fda6d6a8af855b8175c415a48e0909" prot="public" static="no">
+        <name>APReweight_cxx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweight.cxx" line="1" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweight.cxx" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#define<sp/>APReweight_cxx</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;ReweightUtils/APReweight.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ReweightUtils/APWeightEntry.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ReweightUtils/MathTools.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TTree.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TH1.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="da/d0b/classAPReweight_1a0b182358c5ec30bc8aec6767c88518b4" kindref="member">APReweight::APReweight</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><ref refid="d5/d8d/classAPReweightBase" kindref="compound">APReweightBase</ref>(),</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>_denominator_hist(0),</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>_numerator_hist(0),</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>_n_bins(0),</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>_axis(0)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>_isQuiet<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><ref refid="da/d0b/classAPReweight_1a0b182358c5ec30bc8aec6767c88518b4" kindref="member">APReweight::APReweight</ref>(TTree*<sp/>denominator,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>denominator_branch,<sp/>TTree*<sp/>numerator,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>numerator_branch,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_bins,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x_min,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x_max,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isTrig)<sp/>:<sp/><ref refid="d5/d8d/classAPReweightBase" kindref="compound">APReweightBase</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>_empty_weight<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>(0,<sp/>0,<sp/>1.);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>_denominator_hist<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH1D(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;denominator_hist&quot;</highlight><highlight class="normal">,<sp/>n_bins,<sp/>x_min,<sp/>x_max);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>_numerator_hist<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH1D(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;numerator_hist&quot;</highlight><highlight class="normal">,<sp/>n_bins,<sp/>x_min,<sp/>x_max);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>_axis<sp/>=<sp/>(TAxis*)<sp/>_denominator_hist-&gt;GetXaxis()-&gt;Clone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>_n_bins<sp/>=<sp/>_denominator_hist-&gt;GetNbinsX();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//Readout<sp/>from<sp/>Trees<sp/>and<sp/>fill<sp/>histograms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>vector&lt;double&gt;<sp/>*denominator_vec<sp/>=<sp/>0,<sp/>*numerator_vec<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>TBranch<sp/>*b_denominator_vec,<sp/>*b_numerator_vec;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>denominator-&gt;SetBranchAddress(denominator_branch.c_str(),<sp/>&amp;denominator_vec,<sp/>&amp;b_denominator_vec);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>numerator-&gt;SetBranchAddress(numerator_branch.c_str(),<sp/>&amp;numerator_vec,<sp/>&amp;b_numerator_vec);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>nentries_denominator<sp/>=<sp/>denominator-&gt;GetEntries(),<sp/>nentries_numerator<sp/>=<sp/>numerator-&gt;GetEntries(),<sp/>counter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(counter<sp/>&lt;<sp/>nentries_denominator)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>denominator-&gt;GetEntry(counter);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0,<sp/>I<sp/>=<sp/>denominator_vec-&gt;size();<sp/>i<sp/>&lt;<sp/>I;<sp/>++i)<sp/>_denominator_hist-&gt;Fill((*denominator_vec)[i]);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>++counter;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>counter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(counter<sp/>&lt;<sp/>nentries_numerator)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>numerator-&gt;GetEntry(counter);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0,<sp/>I<sp/>=<sp/>numerator_vec-&gt;size();<sp/>i<sp/>&lt;<sp/>I;<sp/>++i)<sp/>_numerator_hist-&gt;Fill((*numerator_vec)[i]);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>++counter;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//Cleanup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>denominator-&gt;ResetBranchAddress(b_denominator_vec);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>numerator-&gt;ResetBranchAddress(b_numerator_vec);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>b_denominator_vec;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>b_numerator_vec;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>denominator_vec-&gt;clear();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>denominator_vec;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>numerator_vec-&gt;clear();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>numerator_vec;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>_scale<sp/>=<sp/>(double)<sp/>nentries_denominator<sp/>/<sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)<sp/>nentries_numerator;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>_isTrig<sp/>=<sp/>isTrig;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>_isQuiet<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>_n_bins;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>*<sp/>temp_entry<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>_denominator_hist-&gt;GetBinContent(i<sp/>+<sp/>1),<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)<sp/>_numerator_hist-&gt;GetBinContent(i<sp/>+<sp/>1),<sp/>_scale,<sp/>_isTrig);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>temp_entry-&gt;SetCoordinates(vector&lt;int&gt;(1,i+1),vector&lt;int&gt;(1,_n_bins));</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>temp_entry-&gt;<ref refid="d1/d16/classAPWeightEntry_1a14f659558878599eb4711c1f77ad271e" kindref="member">SetID</ref>(_ID);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>_weights.push_back(temp_entry);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><ref refid="da/d0b/classAPReweight_1a0b182358c5ec30bc8aec6767c88518b4" kindref="member">APReweight::APReweight</ref>(vector&lt;double&gt;<sp/>denominator,<sp/>vector&lt;double&gt;<sp/>numerator,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_bins,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x_min,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x_max,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isTrig)<sp/>:<sp/><ref refid="d5/d8d/classAPReweightBase" kindref="compound">APReweightBase</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>_empty_weight<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>(0,<sp/>0,<sp/>1.);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>_denominator_hist<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH1D(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;denominator_hist&quot;</highlight><highlight class="normal">,<sp/>n_bins,<sp/>x_min,<sp/>x_max);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>_numerator_hist<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH1D(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;numerator_hist&quot;</highlight><highlight class="normal">,<sp/>n_bins,<sp/>x_min,<sp/>x_max);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>_axis<sp/>=<sp/>(TAxis*)<sp/>_denominator_hist-&gt;GetXaxis()-&gt;Clone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>_n_bins<sp/>=<sp/>_denominator_hist-&gt;GetNbinsX();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//Readout<sp/>from<sp/>vectors<sp/>and<sp/>fill<sp/>histograms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0,<sp/>I<sp/>=<sp/>denominator.size();<sp/>i<sp/>&lt;<sp/>I;<sp/>++i)<sp/>_denominator_hist-&gt;Fill(denominator[i]);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0,<sp/>I<sp/>=<sp/>numerator.size();<sp/>i<sp/>&lt;<sp/>I;<sp/>++i)<sp/>_numerator_hist-&gt;Fill(numerator[i]);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>_scale<sp/>=<sp/>(double)<sp/>denominator.size()<sp/>/<sp/>(double)<sp/>numerator.size();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>_isTrig<sp/>=<sp/>isTrig;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>_isQuiet<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>_n_bins;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>*<sp/>temp_entry<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>_denominator_hist-&gt;GetBinContent(i<sp/>+<sp/>1),<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)<sp/>_numerator_hist-&gt;GetBinContent(i<sp/>+<sp/>1),<sp/>_scale,<sp/>_isTrig);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>temp_entry-&gt;SetCoordinates(vector&lt;int&gt;(1,i+1),vector&lt;int&gt;(1,_n_bins));</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>temp_entry-&gt;<ref refid="d1/d16/classAPWeightEntry_1a14f659558878599eb4711c1f77ad271e" kindref="member">SetID</ref>(_ID);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>_weights.push_back(temp_entry);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><ref refid="da/d0b/classAPReweight_1a0b182358c5ec30bc8aec6767c88518b4" kindref="member">APReweight::APReweight</ref>(TH1*<sp/>denominator_in,<sp/>TH1*<sp/>numerator_in,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isTrig)<sp/>:<sp/><ref refid="d5/d8d/classAPReweightBase" kindref="compound">APReweightBase</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>_empty_weight<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>(0,<sp/>0,<sp/>1.);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>_denominator_hist<sp/>=<sp/>(TH1D*)<sp/>denominator_in-&gt;Clone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>_numerator_hist<sp/>=<sp/>(TH1D*)<sp/>numerator_in-&gt;Clone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>_axis<sp/>=<sp/>(TAxis*)<sp/>_denominator_hist-&gt;GetXaxis()-&gt;Clone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>_n_bins<sp/>=<sp/>_denominator_hist-&gt;GetNbinsX();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>_scale<sp/>=<sp/>(double)<sp/>denominator_in-&gt;GetEntries()<sp/>/<sp/>(double)<sp/>numerator_in-&gt;GetEntries();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>_isTrig<sp/>=<sp/>isTrig;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>_isQuiet<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>_n_bins;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>*<sp/>temp_entry<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>_denominator_hist-&gt;GetBinContent(i<sp/>+<sp/>1),<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)<sp/>_numerator_hist-&gt;GetBinContent(i<sp/>+<sp/>1),<sp/>_scale,<sp/>_isTrig);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>temp_entry-&gt;SetCoordinates(vector&lt;int&gt;(1,i+1),vector&lt;int&gt;(1,_n_bins));</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>temp_entry-&gt;<ref refid="d1/d16/classAPWeightEntry_1a14f659558878599eb4711c1f77ad271e" kindref="member">SetID</ref>(_ID);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>_weights.push_back(temp_entry);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>_isTrig<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>_numerator_hist-&gt;GetNbinsX();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>_numerator_hist-&gt;GetBinContent(i)<sp/>&gt;<sp/>_denominator_hist-&gt;GetBinContent(i)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;WARNING<sp/>in<sp/>APReweight::~APReweight(TH1*<sp/>denominator_in,<sp/>TH1*<sp/>numerator_in,<sp/>bool<sp/>isTrig)<sp/>:<sp/>Using<sp/>histograms<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>_numerator_hist-&gt;GetName()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>and<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>_denominator_hist-&gt;GetName()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>the<sp/>efficiency<sp/>is<sp/>larger<sp/>than<sp/>1<sp/>for<sp/>bin<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>i<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;!<sp/>This<sp/>is<sp/>inconsistent<sp/>and<sp/>can<sp/>lead<sp/>to<sp/>unwanted<sp/>behaviour<sp/>(weights<sp/>&gt;<sp/>1,<sp/>variance<sp/>&lt;<sp/>0<sp/>)!<sp/>Please<sp/>check<sp/>your<sp/>input<sp/>histograms.<sp/>In<sp/>order<sp/>to<sp/>avoid<sp/>negative<sp/>variances,<sp/>the<sp/>efficiency<sp/>in<sp/>this<sp/>bin<sp/>will<sp/>be<sp/>set<sp/>to<sp/>0.<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_numerator_hist-&gt;SetBinContent(i,0);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="da/d0b/classAPReweight_1a3581dfab2d388d9d955b312fb5ef6c41" kindref="member">APReweight::ReadEfficiency</ref>(TH1*<sp/>efficiency_in,<sp/>TH1*<sp/>err_low_in,<sp/>TH1*<sp/>err_high_in)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err_high_in<sp/>==<sp/>0)<sp/>err_high_in<sp/>=<sp/>err_low_in;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><ref refid="d5/d8d/classAPReweightBase_1ad15d436b3818e80a88cd9dd7ddbac6c8" kindref="member">_empty_weight</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>(0,<sp/>0,<sp/>1.);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>_denominator_hist<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH1D(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>1,<sp/>0.,<sp/>1.);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>_numerator_hist<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TH1D(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>1,<sp/>0.,<sp/>1.);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>_axis<sp/>=<sp/>(TAxis*)<sp/>efficiency_in-&gt;GetXaxis()-&gt;Clone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>_n_bins<sp/>=<sp/>efficiency_in-&gt;GetNbinsX();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><ref refid="d5/d8d/classAPReweightBase_1a33b2bc5e6e743b11af4a79c15d024a40" kindref="member">_scale</ref><sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><ref refid="d5/d8d/classAPReweightBase_1aaa9eeec4436a6d116d26ee3987cf0fc8" kindref="member">_isTrig</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>_n_bins;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref><sp/>*temp_entry<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>temp_entry-&gt;<ref refid="d1/d16/classAPWeightEntry_1a263117cc573f120b9833f3dc2fa87a0c" kindref="member">ReadEfficiency</ref>(efficiency_in-&gt;GetBinContent(i<sp/>+<sp/>1),<sp/>err_low_in-&gt;GetBinContent(i<sp/>+<sp/>1),<sp/>err_high_in-&gt;GetBinContent(i<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>temp_entry-&gt;SetCoordinates(vector&lt;int&gt;(1,i+1),vector&lt;int&gt;(1,_n_bins));</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>temp_entry-&gt;<ref refid="d1/d16/classAPWeightEntry_1a14f659558878599eb4711c1f77ad271e" kindref="member">SetID</ref>(<ref refid="d5/d8d/classAPReweightBase_1a3257ca3dca895cb399a11226a5edb508" kindref="member">_ID</ref>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>_weights.push_back(temp_entry);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><ref refid="da/d0b/classAPReweight_1a0f6f8d1cb39d849a205bcc92b62c096e" kindref="member">APReweight::~APReweight</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_denominator_hist;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_numerator_hist;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="d5/d8d/classAPReweightBase_1ad15d436b3818e80a88cd9dd7ddbac6c8" kindref="member">_empty_weight</ref>;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_axis;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(vector&lt;APWeightEntry*&gt;::reverse_iterator<sp/>it<sp/>=<sp/>_weights.rbegin();<sp/>it<sp/>!=<sp/>_weights.rend();<sp/>++it)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>*it;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>_weights.clear();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>*<sp/><ref refid="da/d0b/classAPReweight_1aaef69849862eb9236d1d5b349eceb8ef" kindref="member">APReweight::GetBinWeight</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bin)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bin<sp/>==<sp/>0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d5/d8d/classAPReweightBase_1ad15d436b3818e80a88cd9dd7ddbac6c8" kindref="member">_empty_weight</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_weights[bin<sp/>-<sp/>1];</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref>*<sp/><ref refid="da/d0b/classAPReweight_1a3930df045709640046ba069e800b384d" kindref="member">APReweight::GetWeight</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="da/d0b/classAPReweight_1aaef69849862eb9236d1d5b349eceb8ef" kindref="member">GetBinWeight</ref>(<ref refid="da/d0b/classAPReweight_1a2361cc82a87d782b5e5da422d3118e5f" kindref="member">GetBin</ref>(value));</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">TH1D*<sp/><ref refid="da/d0b/classAPReweight_1a9537432013271bcbc96fd5bcdae184a3" kindref="member">APReweight::GetDenominatorHist</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_denominator_hist;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal">TH1D*<sp/><ref refid="da/d0b/classAPReweight_1af53efbb8f7d2c9bfed8f006459f1d1d7" kindref="member">APReweight::GetNumeratorHist</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_numerator_hist;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="da/d0b/classAPReweight_1aaa614347c585121762d7026b3f977568" kindref="member">APReweight::GetSampleScale</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d5/d8d/classAPReweightBase_1a33b2bc5e6e743b11af4a79c15d024a40" kindref="member">_scale</ref>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="da/d0b/classAPReweight_1aacc7ea0de64c0703aca314e5867f820a" kindref="member">APReweight::NBins</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_n_bins;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="da/d0b/classAPReweight_1a2361cc82a87d782b5e5da422d3118e5f" kindref="member">APReweight::GetBin</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;=<sp/>_n_bins;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>&gt;=<sp/>_axis-&gt;GetBinLowEdge(i)<sp/>&amp;&amp;<sp/>value<sp/>&lt;=<sp/>_axis-&gt;GetBinUpEdge(i))<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="d5/d8d/classAPReweightBase_1a7662580ec2cef7f62400ce5b7a915487" kindref="member">_isQuiet</ref>)<sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;WARNING<sp/>in<sp/>APReweight::GetBin:<sp/>Value<sp/>out<sp/>of<sp/>range!<sp/>Returning<sp/>0.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="da/d0b/classAPReweight_1af74912541a1324d954c3986fcfc2c29f" kindref="member">APReweight::SetSystUncert</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rel_uncert)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;=<sp/>_n_bins;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="da/d0b/classAPReweight_1aaef69849862eb9236d1d5b349eceb8ef" kindref="member">GetBinWeight</ref>(i)-&gt;<ref refid="d1/d16/classAPWeightEntry_1ada0f0515884c4262406a13c558bef135" kindref="member">SetSystUncert</ref>(rel_uncert);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="da/d0b/classAPReweight_1a12354826e755ae8cccb542faca148f99" kindref="member">APReweight::SetQuietMode</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isQuiet)<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><ref refid="d5/d8d/classAPReweightBase_1a7662580ec2cef7f62400ce5b7a915487" kindref="member">_isQuiet</ref><sp/>=<sp/>isQuiet;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweight.cxx"/>
+  </compounddef>
+</doxygen>

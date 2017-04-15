@@ -1,0 +1,420 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="df/d0d/namespacemet" kind="namespace">
+    <compoundname>met</compoundname>
+    <innerclass refid="dc/d1f/classmet_1_1METMaker" prot="public">met::METMaker</innerclass>
+    <innerclass refid="d2/dad/classmet_1_1METRebuilder" prot="public">met::METRebuilder</innerclass>
+    <innerclass refid="d5/d66/structmet_1_1missingEt" prot="public">met::missingEt</innerclass>
+    <innerclass refid="db/da9/classmet_1_1METSystematicsTool" prot="public">met::METSystematicsTool</innerclass>
+    <innerclass refid="d0/d1c/classmet_1_1METMakerAlg" prot="public">met::METMakerAlg</innerclass>
+    <innerclass refid="db/d7b/classmet_1_1METUtilAlg" prot="public">met::METUtilAlg</innerclass>
+    <innernamespace refid="d6/d10/namespacemet_1_1jetTrkAffSyst">met::jetTrkAffSyst</innernamespace>
+    <innernamespace refid="d8/dc1/namespacemet_1_1softCaloAffSyst">met::softCaloAffSyst</innernamespace>
+    <innernamespace refid="df/def/namespacemet_1_1softTrkAffSyst">met::softTrkAffSyst</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="df/d0d/namespacemet_1a0f7690f42248b954b758e0a72d96fac3" prot="public" static="no">
+        <name>SystType</name>
+        <enumvalue id="df/d0d/namespacemet_1a0f7690f42248b954b758e0a72d96fac3aad5612bb126d6ae2dc857bc39b2e5893" prot="public">
+          <name>INVALID</name>
+          <initializer>-1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d0d/namespacemet_1a0f7690f42248b954b758e0a72d96fac3a7b29adce527aac95c406da436ebb93a0" prot="public">
+          <name>SOFTCALO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d0d/namespacemet_1a0f7690f42248b954b758e0a72d96fac3a199fba45f681441fde2fe1b8ada41bdb" prot="public">
+          <name>SOFTTRK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d0d/namespacemet_1a0f7690f42248b954b758e0a72d96fac3a61f950bec9f9dc2f703cdaef88ffa4e6" prot="public">
+          <name>JETTRK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METInterface/METInterface/IMETSystematicsTool.h" line="40" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METInterface/METInterface/IMETSystematicsTool.h" bodystart="40" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="enum" id="df/d0d/namespacemet_1ac3a74854a7261e196e16fb802709e251" prot="public" static="no">
+        <name>SystApplied</name>
+        <enumvalue id="df/d0d/namespacemet_1ac3a74854a7261e196e16fb802709e251ad0eea77bb41bb945f8d96b798179e691" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d0d/namespacemet_1ac3a74854a7261e196e16fb802709e251a11f3156a7c003fddcbde531b65a0d9dd" prot="public">
+          <name>MET_SOFTTRK_SCALEUP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d0d/namespacemet_1ac3a74854a7261e196e16fb802709e251af607679065b2f0ab6e7985cbd2fac7f5" prot="public">
+          <name>MET_SOFTTRK_SCALEDOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d0d/namespacemet_1ac3a74854a7261e196e16fb802709e251a7537e79e8a0ec3d33e657f3402692141" prot="public">
+          <name>MET_SOFTTRK_RESOPARA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d0d/namespacemet_1ac3a74854a7261e196e16fb802709e251a7c2fb8f54edaad8d78c4d5be5c47dbe4" prot="public">
+          <name>MET_SOFTTRK_RESOPERP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d0d/namespacemet_1ac3a74854a7261e196e16fb802709e251a76a727fda86259d3f7bcf63aae03f4e0" prot="public">
+          <name>MET_SOFTTRK_RESOCORR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d0d/namespacemet_1ac3a74854a7261e196e16fb802709e251a211981ca5cb26fb46139997a669600ce" prot="public">
+          <name>MET_SOFTCALO_SCALEUP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d0d/namespacemet_1ac3a74854a7261e196e16fb802709e251a620394824513ff347052c9bee8a24ca7" prot="public">
+          <name>MET_SOFTCALO_SCALEDOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d0d/namespacemet_1ac3a74854a7261e196e16fb802709e251a372102e92a643eba56a08bb2815feb97" prot="public">
+          <name>MET_SOFTCALO_RESO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d0d/namespacemet_1ac3a74854a7261e196e16fb802709e251a8a3c498d7b4ccde5b7a5c68247d13989" prot="public">
+          <name>MET_JETTRK_SCALEUP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d0d/namespacemet_1ac3a74854a7261e196e16fb802709e251a0603af01b27b60652286dba07ce65fee" prot="public">
+          <name>MET_JETTRK_SCALEDOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/METUtilities/METSystematicsTool.h" line="56" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/METUtilities/METSystematicsTool.h" bodystart="56" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="df/d0d/namespacemet_1a73581697272f2973874c0625feaf790c" prot="public" static="no">
+        <type><ref refid="d6/d6e/classElementLink" kindref="compound">ElementLink</ref>&lt; <ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::IParticleContainer</ref> &gt;</type>
+        <definition>typedef ElementLink&lt; xAOD::IParticleContainer &gt; met::obj_link_t</definition>
+        <argsstring></argsstring>
+        <name>obj_link_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/METUtilities/METMaker.h" line="30" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/METUtilities/METMaker.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="df/d0d/namespacemet_1a4d54f1e922e4103502e791d23fa123c2" prot="public" static="no">
+        <type><ref refid="d6/d6e/classElementLink" kindref="compound">ElementLink</ref>&lt; <ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::IParticleContainer</ref> &gt;</type>
+        <definition>typedef ElementLink&lt; xAOD::IParticleContainer &gt; met::iplink_t</definition>
+        <argsstring></argsstring>
+        <name>iplink_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METMaker.cxx" line="54" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METMaker.cxx" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="df/d0d/namespacemet_1a6474e55a2f0697c516f12200f55530e2" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="dd/d86/classSG_1_1AuxElement_1_1ConstAccessor" kindref="compound">SG::AuxElement::ConstAccessor</ref>&lt; <ref refid="d6/d6e/classElementLink" kindref="compound">iplink_t</ref> &gt;</type>
+        <definition>const SG::AuxElement::ConstAccessor&lt; iplink_t &gt; met::acc_originalObject(&quot;originalObjectLink&quot;)</definition>
+        <argsstring>(&quot;originalObjectLink&quot;)</argsstring>
+        <name>acc_originalObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METMaker.cxx" line="55"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d0d/namespacemet_1ad425acb14ff96fe710431c4347f392d8" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="dd/d86/classSG_1_1AuxElement_1_1ConstAccessor" kindref="compound">SG::AuxElement::ConstAccessor</ref>&lt; std::vector&lt; <ref refid="d6/d6e/classElementLink" kindref="compound">iplink_t</ref> &gt; &gt;</type>
+        <definition>const SG::AuxElement::ConstAccessor&lt; std::vector&lt;iplink_t &gt; &gt; met::acc_ghostMuons(&quot;GhostMuon&quot;)</definition>
+        <argsstring>(&quot;GhostMuon&quot;)</argsstring>
+        <name>acc_ghostMuons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METMaker.cxx" line="56"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d0d/namespacemet_1af563203e3960758b60f8888646567aee" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="dd/d86/classSG_1_1AuxElement_1_1ConstAccessor" kindref="compound">SG::AuxElement::ConstAccessor</ref>&lt; std::vector&lt; int &gt; &gt;</type>
+        <definition>const SG::AuxElement::ConstAccessor&lt; std::vector&lt;int&gt; &gt; met::acc_trkN(&quot;NumTrkPt500&quot;)</definition>
+        <argsstring>(&quot;NumTrkPt500&quot;)</argsstring>
+        <name>acc_trkN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METMaker.cxx" line="58"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d0d/namespacemet_1a10199cc145d499e14aff8b88076ad06f" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="dd/d86/classSG_1_1AuxElement_1_1ConstAccessor" kindref="compound">SG::AuxElement::ConstAccessor</ref>&lt; std::vector&lt; float &gt; &gt;</type>
+        <definition>const SG::AuxElement::ConstAccessor&lt; std::vector&lt;float&gt; &gt; met::acc_trksumpt(&quot;SumPtTrkPt500&quot;)</definition>
+        <argsstring>(&quot;SumPtTrkPt500&quot;)</argsstring>
+        <name>acc_trksumpt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METMaker.cxx" line="59"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d0d/namespacemet_1af26b9a4eab1db0a2cbceeed72fac089a" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="dd/d86/classSG_1_1AuxElement_1_1ConstAccessor" kindref="compound">SG::AuxElement::ConstAccessor</ref>&lt; std::vector&lt; float &gt; &gt;</type>
+        <definition>const SG::AuxElement::ConstAccessor&lt; std::vector&lt;float&gt; &gt; met::acc_sampleE(&quot;EnergyPerSampling&quot;)</definition>
+        <argsstring>(&quot;EnergyPerSampling&quot;)</argsstring>
+        <name>acc_sampleE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METMaker.cxx" line="60"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d0d/namespacemet_1adba4f9e4552649458e62c9fb8de551c3" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="dd/d86/classSG_1_1AuxElement_1_1ConstAccessor" kindref="compound">SG::AuxElement::ConstAccessor</ref>&lt; float &gt;</type>
+        <definition>const SG::AuxElement::ConstAccessor&lt;float&gt; met::acc_emf(&quot;EMFrac&quot;)</definition>
+        <argsstring>(&quot;EMFrac&quot;)</argsstring>
+        <name>acc_emf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METMaker.cxx" line="62"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d0d/namespacemet_1a7995a44ddf7f95e0fd3d92fff69a6640" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="dd/d86/classSG_1_1AuxElement_1_1ConstAccessor" kindref="compound">SG::AuxElement::ConstAccessor</ref>&lt; float &gt;</type>
+        <definition>const SG::AuxElement::ConstAccessor&lt;float&gt; met::acc_width(&quot;Width&quot;)</definition>
+        <argsstring>(&quot;Width&quot;)</argsstring>
+        <name>acc_width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METMaker.cxx" line="63"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d0d/namespacemet_1a64167cbca9fbc6b4aaac68e982881291" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="dd/d86/classSG_1_1AuxElement_1_1ConstAccessor" kindref="compound">SG::AuxElement::ConstAccessor</ref>&lt; float &gt;</type>
+        <definition>const SG::AuxElement::ConstAccessor&lt;float&gt; met::acc_Eloss(&quot;EnergyLoss&quot;)</definition>
+        <argsstring>(&quot;EnergyLoss&quot;)</argsstring>
+        <name>acc_Eloss</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METMaker.cxx" line="64"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d0d/namespacemet_1a832c7bd093629a9ebde33ede7ba04e87" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="d3/d59/classSG_1_1AuxElement_1_1Decorator" kindref="compound">SG::AuxElement::Decorator</ref>&lt; std::vector&lt; <ref refid="d6/d6e/classElementLink" kindref="compound">iplink_t</ref> &gt; &gt;</type>
+        <definition>const SG::AuxElement::Decorator&lt; std::vector&lt;iplink_t&gt; &gt; met::dec_constitObjLinks(&quot;ConstitObjectLinks&quot;)</definition>
+        <argsstring>(&quot;ConstitObjectLinks&quot;)</argsstring>
+        <name>dec_constitObjLinks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METMaker.cxx" line="66"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d0d/namespacemet_1a7a3c311ed3d1e481926d8354f700a4d1" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="d3/d59/classSG_1_1AuxElement_1_1Decorator" kindref="compound">SG::AuxElement::Decorator</ref>&lt; std::vector&lt; float &gt; &gt;</type>
+        <definition>const SG::AuxElement::Decorator&lt; std::vector&lt;float&gt; &gt; met::dec_constitObjWeights(&quot;ConstitObjectWeights&quot;)</definition>
+        <argsstring>(&quot;ConstitObjectWeights&quot;)</argsstring>
+        <name>dec_constitObjWeights</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METMaker.cxx" line="67"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d0d/namespacemet_1abc73922f03acd30dada152f3ed354552" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="d2/d5b/namespaceMissingETBase_1_1Types_1afbe8719ef44dd43f994a3d5ea2823903" kindref="member">MissingETBase::Types::bitmask_t</ref></type>
+        <definition>const MissingETBase::Types::bitmask_t met::invisSource</definition>
+        <argsstring></argsstring>
+        <name>invisSource</name>
+        <initializer> 0x100000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METMaker.cxx" line="71" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METMaker.cxx" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d0d/namespacemet_1a6e97bd527cc09a606a27904e42b25a2f" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="d8/d31/classSG_1_1AuxElement_1_1Accessor" kindref="compound">SG::AuxElement::Accessor</ref>&lt; <ref refid="d6/d6e/classElementLink" kindref="compound">obj_link_t</ref> &gt;</type>
+        <definition>const SG::AuxElement::Accessor&lt;obj_link_t&gt; met::objLinkAcc(&quot;originalObjectLink&quot;)</definition>
+        <argsstring>(&quot;originalObjectLink&quot;)</argsstring>
+        <name>objLinkAcc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METRebuilder.cxx" line="42"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d0d/namespacemet_1aa3e9b5347cc5153081615737b4fa7e3d" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="dd/d86/classSG_1_1AuxElement_1_1ConstAccessor" kindref="compound">SG::AuxElement::ConstAccessor</ref>&lt; std::vector&lt; <ref refid="d6/d6e/classElementLink" kindref="compound">iplink_t</ref> &gt; &gt;</type>
+        <definition>const SG::AuxElement::ConstAccessor&lt; std::vector&lt;iplink_t &gt; &gt; met::acc_constitObjLinks(&quot;ConstitObjectLinks&quot;)</definition>
+        <argsstring>(&quot;ConstitObjectLinks&quot;)</argsstring>
+        <name>acc_constitObjLinks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METSystematicsTool.cxx" line="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="df/d0d/namespacemet_1ad6e25c74b5eb35bbee546d82a4edfb64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SystType</type>
+        <definition>SystType met::getSystType</definition>
+        <argsstring>(const CP::SystematicVariation &amp;systematic)</argsstring>
+        <name>getSystType</name>
+        <param>
+          <type>const <ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">CP::SystematicVariation</ref> &amp;</type>
+          <declname>systematic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METInterface/METInterface/IMETSystematicsTool.h" line="48" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METInterface/METInterface/IMETSystematicsTool.h" bodystart="47" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d0d/namespacemet_1a8e820a04120646ec255448d7392c1a84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void met::addGhostMuonsToJets</definition>
+        <argsstring>(const xAOD::MuonContainer &amp;muons, xAOD::JetContainer &amp;jets)</argsstring>
+        <name>addGhostMuonsToJets</name>
+        <param>
+          <type>const <ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::MuonContainer</ref> &amp;</type>
+          <declname>muons</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::JetContainer</ref> &amp;</type>
+          <declname>jets</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/METUtilities/METHelpers.h" line="11" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METHelpers.cxx" bodystart="26" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d0d/namespacemet_1ad52144e5f1c221c146daf2c96037b0c2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="dd/d86/classSG_1_1AuxElement_1_1ConstAccessor" kindref="compound">SG::AuxElement::ConstAccessor</ref>&lt; <ref refid="d6/d6e/classElementLink" kindref="compound">iplink_t</ref> &gt;</type>
+        <definition>static const SG::AuxElement::ConstAccessor&lt; iplink_t &gt; met::acc_originalObject</definition>
+        <argsstring>(&quot;originalObjectLink&quot;)</argsstring>
+        <name>acc_originalObject</name>
+        <param>
+          <type>&quot;originalObjectLink&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METSystematicsTool.cxx" line="25"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d0d/namespacemet_1a1def40ce589c76427f896994211f4d46" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="dd/d86/classSG_1_1AuxElement_1_1ConstAccessor" kindref="compound">SG::AuxElement::ConstAccessor</ref>&lt; std::vector&lt; <ref refid="d6/d6e/classElementLink" kindref="compound">iplink_t</ref> &gt; &gt;</type>
+        <definition>static const SG::AuxElement::ConstAccessor&lt; std::vector&lt;iplink_t &gt; &gt; met::acc_constitObjLinks</definition>
+        <argsstring>(&quot;ConstitObjectLinks&quot;)</argsstring>
+        <name>acc_constitObjLinks</name>
+        <param>
+          <type>&quot;ConstitObjectLinks&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/src/METMakerAlg.cxx" line="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METInterface/METInterface/IMETSystematicsTool.h" line="19"/>
+  </compounddef>
+</doxygen>

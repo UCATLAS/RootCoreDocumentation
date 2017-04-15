@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d9/ddb/CalibrationDataUpdater_8cxx" kind="file">
+    <compoundname>CalibrationDataUpdater.cxx</compoundname>
+    <includes refid="dd/d3a/CalibrationDataUpdater_8h" local="yes">CalibrationDataInterface/CalibrationDataUpdater.h</includes>
+    <includes local="yes">TObject.h</includes>
+    <includes local="yes">TDirectory.h</includes>
+    <includes local="yes">TFile.h</includes>
+    <incdepgraph>
+      <node id="96955">
+        <label>string</label>
+      </node>
+      <node id="96957">
+        <label>TDirectory.h</label>
+      </node>
+      <node id="96951">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/src/CalibrationDataUpdater.cxx</label>
+        <link refid="CalibrationDataUpdater.cxx"/>
+        <childnode refid="96952" relation="include">
+        </childnode>
+        <childnode refid="96956" relation="include">
+        </childnode>
+        <childnode refid="96957" relation="include">
+        </childnode>
+        <childnode refid="96958" relation="include">
+        </childnode>
+      </node>
+      <node id="96953">
+        <label>GaudiKernel/Algorithm.h</label>
+      </node>
+      <node id="96956">
+        <label>TObject.h</label>
+      </node>
+      <node id="96958">
+        <label>TFile.h</label>
+      </node>
+      <node id="96954">
+        <label>GaudiKernel/MsgStream.h</label>
+      </node>
+      <node id="96952">
+        <label>CalibrationDataInterface/CalibrationDataUpdater.h</label>
+        <link refid="dd/d3a/CalibrationDataUpdater_8h_source"/>
+        <childnode refid="96953" relation="include">
+        </childnode>
+        <childnode refid="96954" relation="include">
+        </childnode>
+        <childnode refid="96955" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="2"><highlight class="comment">//<sp/>CalibrationDataUpdater.cxx,<sp/>(c)<sp/>ATLAS<sp/>Detector<sp/>software</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;CalibrationDataInterface/CalibrationDataUpdater.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TObject.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TDirectory.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TFile.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::string;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//================<sp/>Constructor<sp/>=================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="d9/df6/classAnalysis_1_1CalibrationDataUpdater_1ac60df21e686109dd6e146a63f393afd0" kindref="member">Analysis::CalibrationDataUpdater::CalibrationDataUpdater</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>name,<sp/>ISvcLocator*<sp/>pSvcLocator)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>Algorithm(name,pSvcLocator),</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>m_log(msgSvc(),name)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>property<sp/>declarations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>declareProperty(</highlight><highlight class="stringliteral">&quot;inputRootFile&quot;</highlight><highlight class="normal">,<sp/>m_inputRootFile<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ROOT<sp/>file<sp/>containing<sp/>new<sp/>parametrisations&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>declareProperty(</highlight><highlight class="stringliteral">&quot;DbRootFile&quot;</highlight><highlight class="normal">,<sp/>m_DbRootFile<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ROOT<sp/>file<sp/>to<sp/>be<sp/>entered<sp/>in<sp/>COOL&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>declareProperty(</highlight><highlight class="stringliteral">&quot;paramNames&quot;</highlight><highlight class="normal">,<sp/>m_paramNames,<sp/></highlight><highlight class="stringliteral">&quot;list<sp/>of<sp/>input<sp/>and<sp/>output<sp/>parametrisation<sp/>names&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>declareProperty(</highlight><highlight class="stringliteral">&quot;overrideDefaults&quot;</highlight><highlight class="normal">,<sp/>m_overrideDefaults<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;true<sp/>if<sp/>new<sp/>results<sp/>are<sp/>to<sp/>be<sp/>used<sp/>as<sp/>default&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//================<sp/>Destructor<sp/>=================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="d9/df6/classAnalysis_1_1CalibrationDataUpdater_1a65f3cc6982cbae7cf24ff139533d654e" kindref="member">Analysis::CalibrationDataUpdater::~CalibrationDataUpdater</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//================<sp/>Initialisation<sp/>=================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">StatusCode<sp/><ref refid="d9/df6/classAnalysis_1_1CalibrationDataUpdater_1a13034f8c51bb51d5fc9deabc7b7c2bfd" kindref="member">Analysis::CalibrationDataUpdater::initialize</ref>()</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Code<sp/>entered<sp/>here<sp/>will<sp/>be<sp/>executed<sp/>once<sp/>at<sp/>program<sp/>start.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>m_log.setLevel(outputLevel());</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>m_log<sp/>&lt;&lt;<sp/>MSG::INFO<sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>initialize()&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>basic<sp/>sanity<sp/>and<sp/>consistency<sp/>checks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>TFile*<sp/>fIn<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>newInput<sp/>=<sp/>(m_inputRootFile<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(newInput)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>fIn<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TFile(m_inputRootFile.c_str());</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fIn-&gt;IsZombie())<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_log<sp/>&lt;&lt;<sp/>MSG::FATAL<sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>requested<sp/>input<sp/>ROOT<sp/>file<sp/>invalid:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>m_inputRootFile<sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>m_overrideDefaults)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>m_log<sp/>&lt;&lt;<sp/>MSG::FATAL<sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>no<sp/>input<sp/>ROOT<sp/>file<sp/>given<sp/>and<sp/>no<sp/>defaults<sp/>to<sp/>be<sp/>modified:&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>no<sp/>action<sp/>to<sp/>be<sp/>taken&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_DbRootFile<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>m_log<sp/>&lt;&lt;<sp/>MSG::FATAL<sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>no<sp/>DB<sp/>ROOT<sp/>file<sp/>given&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>TFile*<sp/>fOut<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TFile(m_DbRootFile.c_str(),<sp/></highlight><highlight class="stringliteral">&quot;UPDATE&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fOut-&gt;IsZombie())<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>m_log<sp/>&lt;&lt;<sp/>MSG::FATAL<sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>DB<sp/>ROOT<sp/>file<sp/>invalid:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>m_DbRootFile<sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::FAILURE;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::vector&lt;string&gt;::const_iterator<sp/>itname<sp/>=<sp/>m_paramNames.begin(),</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>itend<sp/>=<sp/>m_paramNames.end();<sp/>itname<sp/>!=<sp/>itend;<sp/>++itname)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>to<sp/>=<sp/>*itname;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1.<sp/>determine<sp/>whether<sp/>to<sp/>insert<sp/>new<sp/>results</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(newInput)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>no<sp/>&quot;-&gt;&quot;<sp/>is<sp/>found,<sp/>assume<sp/>that<sp/>the<sp/>input<sp/>and<sp/>output<sp/>object<sp/>names<sp/>are<sp/>identical</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>string::size_type<sp/>delim<sp/>=<sp/>itname-&gt;find(</highlight><highlight class="stringliteral">&quot;-&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>from<sp/>=<sp/>(delim<sp/>==<sp/>string::npos)<sp/>?<sp/>*itname<sp/>:<sp/>itname-&gt;substr(0,<sp/>delim);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(delim<sp/>!=<sp/>string::npos)<sp/>to<sp/>=<sp/>itname-&gt;substr(delim+2);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>copyResults(from,<sp/>to,<sp/>fIn,<sp/>fOut);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>isValidName(to))<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_log<sp/>&lt;&lt;<sp/>MSG::WARNING<sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>invalid<sp/>parametrisation<sp/>name:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>to<sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2.<sp/>make<sp/>these<sp/>new<sp/>results<sp/>the<sp/>default<sp/>(if<sp/>requested<sp/>or<sp/>if<sp/>no<sp/>default<sp/>exists<sp/>yet)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>setDefaultResults(to,<sp/>fOut);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>m_log<sp/>&lt;&lt;<sp/>MSG::DEBUG<sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>all<sp/>done&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fIn)<sp/>fIn-&gt;Close();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>fOut-&gt;Close();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>m_log<sp/>&lt;&lt;<sp/>MSG::INFO<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;initialize()<sp/>successful<sp/>in<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Analysis::CalibrationDataUpdater::setDefaultResults(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>Name,<sp/>TFile*<sp/>fOut)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="98"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>fOut-&gt;cd(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>TObject*<sp/>obj<sp/>=<sp/>fOut-&gt;Get(Name.c_str());</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>obj)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>m_log<sp/>&lt;&lt;<sp/>MSG::WARNING<sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>nonexistent<sp/>parametrisation<sp/>name:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>Name<sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>string::size_type<sp/>delim<sp/>=<sp/>Name.rfind(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>dir<sp/>=<sp/>Name.substr(0,<sp/>delim);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>TDirectory*<sp/>newdir<sp/>=<sp/>fOut-&gt;GetDirectory(dir.c_str());</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>newdir-&gt;cd())<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>should<sp/>never<sp/>happen,<sp/>given<sp/>that<sp/>the<sp/>object<sp/>above<sp/>apparently<sp/>exists...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>m_log<sp/>&lt;&lt;<sp/>MSG::WARNING<sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>Name<sp/>now:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>Name<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;;<sp/>pwd:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>gDirectory-&gt;GetPath()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;;<sp/>cd()<sp/>to<sp/>subdir<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>dir<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>failed!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>no<sp/>change<sp/>of<sp/>defaults<sp/>is<sp/>requested<sp/>to<sp/>begin<sp/>with,<sp/>check<sp/>whether<sp/>a<sp/>default</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>exists<sp/>already</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>delim<sp/>=<sp/>Name.rfind(</highlight><highlight class="stringliteral">&quot;_&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>defaultName(</highlight><highlight class="stringliteral">&quot;default&quot;</highlight><highlight class="normal">);<sp/>defaultName<sp/>+=<sp/>Name.substr(delim);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>m_overrideDefaults)<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fullName(dir);<sp/>fullName<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">;<sp/>fullName<sp/>+=<sp/>defaultName;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fOut-&gt;Get(fullName.c_str()))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>m_log<sp/>&lt;&lt;<sp/>MSG::INFO<sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>copying<sp/>parametrisation<sp/>name:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>Name<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(+<sp/>stat.,<sp/>syst.)<sp/>as<sp/>default&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>do<sp/>the<sp/>actual<sp/>copying<sp/>for<sp/>the<sp/>parametrisation<sp/>itself</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>obj-&gt;Write(defaultName.c_str());</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>for<sp/>the<sp/>parameter<sp/>covariance<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>nameCov(Name);<sp/>nameCov<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;_stat&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>defaultNameCov(defaultName);<sp/>defaultNameCov<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;_stat&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>fOut-&gt;Get(nameCov.c_str())-&gt;Write(defaultNameCov.c_str());</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>for<sp/>the<sp/>systematic<sp/>uncertainty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>nameSyst(Name);<sp/>nameSyst<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;_syst&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>defaultNameSyst(defaultName);<sp/>defaultNameSyst<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;_syst&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>fOut-&gt;Get(nameSyst.c_str())-&gt;Write(defaultNameSyst.c_str());</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Analysis::CalibrationDataUpdater::copyResults(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>from,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>to,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TFile*<sp/>fIn,<sp/>TFile*<sp/>fOut)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="145"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>isValidName(to))<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>m_log<sp/>&lt;&lt;<sp/>MSG::WARNING<sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>invalid<sp/>parametrisation<sp/>name:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>to<sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>copy<sp/>the<sp/>parametrisation<sp/>itself</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>TObject*<sp/>in<sp/>=<sp/>fIn-&gt;Get(from.c_str());</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>in)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>m_log<sp/>&lt;&lt;<sp/>MSG::WARNING<sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>input<sp/>parametrisation<sp/>name<sp/>not<sp/>found:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>from<sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>writeOutput(in,<sp/>to,<sp/>fOut);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>copy<sp/>the<sp/>corresponding<sp/>covariance<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>std::string<sp/>fromCov(from);<sp/>fromCov<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;_stat&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>std::string<sp/>toCov(to);<sp/>toCov<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;_stat&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>in<sp/>=<sp/>fIn-&gt;Get(fromCov.c_str());</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>in)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>m_log<sp/>&lt;&lt;<sp/>MSG::WARNING<sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>input<sp/>parametrisation<sp/>covariance<sp/>matrix<sp/>name<sp/>not<sp/>found:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>fromCov<sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/>writeOutput(in,<sp/>toCov,<sp/>fOut);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>copy<sp/>the<sp/>corresponding<sp/>covariance<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>std::string<sp/>fromSyst(from);<sp/>fromSyst<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;_syst&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>std::string<sp/>toSyst(to);<sp/>toSyst<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;_syst&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>in<sp/>=<sp/>fIn-&gt;Get(fromSyst.c_str());</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>in)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>m_log<sp/>&lt;&lt;<sp/>MSG::WARNING<sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>input<sp/>parametrisation<sp/>systematics<sp/>name<sp/>not<sp/>found:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>fromSyst<sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>writeOutput(in,<sp/>toSyst,<sp/>fOut);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Analysis::CalibrationDataUpdater::isValidName(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>Name)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="186"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>a<sp/>very<sp/>basic<sp/>check:<sp/>the<sp/>name<sp/>should<sp/>contain<sp/>four<sp/>slashes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>should<sp/>end<sp/>either<sp/>in<sp/>&quot;_SF&quot;<sp/>or<sp/>&quot;_Eff&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>slashes<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>string::size_type<sp/>delim<sp/>=<sp/>Name.find(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(delim<sp/>!=<sp/>string::npos)<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>++slashes;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>Name<sp/>=<sp/>Name.substr(delim+1);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>delim<sp/>=<sp/>Name.find(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(slashes<sp/>!=<sp/>4)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/>delim<sp/>=<sp/>Name.rfind(</highlight><highlight class="stringliteral">&quot;_&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(delim<sp/>==<sp/>string::npos)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/>Name<sp/>=<sp/>Name.substr(delim+1);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(Name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;SF&quot;</highlight><highlight class="normal"><sp/>||<sp/>Name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Eff&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Analysis::CalibrationDataUpdater::writeOutput(TObject*<sp/>in,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>Name,<sp/>TFile*<sp/>fOut)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="205"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>first<sp/>check<sp/>whether<sp/>the<sp/>output<sp/>directory<sp/>exists,<sp/>and<sp/>if<sp/>not,<sp/>create<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/>fOut-&gt;cd(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/>TDirectory*<sp/>tdir<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal">TDirectory*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(fOut);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>string::size_type<sp/>delim<sp/>=<sp/>Name.find(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(delim<sp/>!=<sp/>string::npos)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>dir<sp/>=<sp/>Name.substr(0,<sp/>delim);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>TDirectory*<sp/>newdir<sp/>=<sp/>tdir-&gt;GetDirectory(dir.c_str());</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>newdir)<sp/>newdir<sp/>=<sp/>tdir-&gt;mkdir(dir.c_str());</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>newdir-&gt;cd())<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_log<sp/>&lt;&lt;<sp/>MSG::WARNING<sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>Name<sp/>now:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>Name<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;;<sp/>pwd:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>gDirectory-&gt;GetPath()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;;<sp/>cd()<sp/>to<sp/>subdir<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>dir<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>failed!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>tdir<sp/>=<sp/>newdir;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>Name<sp/>=<sp/>Name.substr(delim+1,<sp/>string::npos);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>delim<sp/>=<sp/>Name.find(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>then<sp/>write<sp/>the<sp/>named<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/>m_log<sp/>&lt;&lt;<sp/>MSG::INFO<sp/>&lt;&lt;<sp/>name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>writing<sp/>object<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>Name<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>to<sp/>directory<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>gDirectory-&gt;GetPath()<sp/>&lt;&lt;<sp/>endreq;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/>in-&gt;Write(Name.c_str());</highlight></codeline>
+<codeline lineno="228"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="comment">//================<sp/>Finalisation<sp/>=================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal">StatusCode<sp/><ref refid="d9/df6/classAnalysis_1_1CalibrationDataUpdater_1a59ae6b5144a0ecf2046c13c2a54f1395" kindref="member">Analysis::CalibrationDataUpdater::finalize</ref>()</highlight></codeline>
+<codeline lineno="233"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Code<sp/>entered<sp/>here<sp/>will<sp/>be<sp/>executed<sp/>once<sp/>at<sp/>the<sp/>end<sp/>of<sp/>the<sp/>program<sp/>run.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="comment">//================<sp/>Execution<sp/>====================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal">StatusCode<sp/><ref refid="d9/df6/classAnalysis_1_1CalibrationDataUpdater_1a96d9395f801b4806dde7e0da08aa66a0" kindref="member">Analysis::CalibrationDataUpdater::execute</ref>()</highlight></codeline>
+<codeline lineno="241"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Code<sp/>entered<sp/>here<sp/>will<sp/>be<sp/>executed<sp/>once<sp/>per<sp/>event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode::SUCCESS;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="comment">//============================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CalibrationDataInterface/src/CalibrationDataUpdater.cxx"/>
+  </compounddef>
+</doxygen>

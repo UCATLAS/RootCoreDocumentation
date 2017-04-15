@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d5/d77/ObjectType_8cxx" kind="file">
+    <compoundname>ObjectType.cxx</compoundname>
+    <includes local="no">iostream</includes>
+    <includes refid="d8/d04/ObjectType_8h" local="yes">xAODBase/ObjectType.h</includes>
+    <incdepgraph>
+      <node id="340941">
+        <label>xAODBase/ObjectType.h</label>
+        <link refid="d8/d04/ObjectType_8h_source"/>
+        <childnode refid="340942" relation="include">
+        </childnode>
+      </node>
+      <node id="340939">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBase/Root/ObjectType.cxx</label>
+        <link refid="ObjectType.cxx"/>
+        <childnode refid="340940" relation="include">
+        </childnode>
+        <childnode refid="340941" relation="include">
+        </childnode>
+      </node>
+      <node id="340942">
+        <label>iosfwd</label>
+      </node>
+      <node id="340940">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="d5/d77/ObjectType_8cxx_1a469e362ce59d22deb6661f30bd9c55ed" prot="public" static="no">
+        <name>PRINT_TYPE</name>
+        <param><defname>TYPE</defname></param>
+        <initializer>case TYPE:                                   \
+      out &lt;&lt; #TYPE;                             \
+      break</initializer>
+        <briefdescription>
+<para>Helper macro for printing the object type as a string. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBase/Root/ObjectType.cxx" line="13" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBase/Root/ObjectType.cxx" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d5/d77/ObjectType_8cxx_1a340825eac6d6a01318101f9caadef780" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, xAOD::Type::ObjectType type)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434" kindref="member">xAOD::Type::ObjectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Convenience operator for printing the object type in a (debug) message. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function can be used in (debug) printouts to easily show the type name returned by an object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The STL stream to print to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type whose name to print in the stream </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The same stream that it received </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBase/Root/ObjectType.cxx" line="22" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBase/Root/ObjectType.cxx" bodystart="22" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>$Id:<sp/>ObjectType.cxx<sp/>618658<sp/>2014-09-26<sp/>09:31:10Z<sp/>krasznaa<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>System<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Local<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODBase/ObjectType.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#define<sp/>PRINT_TYPE(<sp/>TYPE<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"><sp/><sp/><sp/>case<sp/>TYPE:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>#TYPE;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>break</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">std::ostream&amp;<sp/>operator&lt;&lt;<sp/>(<sp/>std::ostream&amp;<sp/>out,<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434" kindref="member">xAOD::Type::ObjectType</ref><sp/>type<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(<sp/>type<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a8efcd873e2c0bfe30ea84f2d0cae396e" kindref="member" tooltip="An object not falling into any of the other categories.">xAOD::Type::Other</ref><sp/>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a91e4294b187515e405e4ca9930e246a0" kindref="member" tooltip="The object is a calorimeter cluster.">xAOD::Type::CaloCluster</ref><sp/>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a2c3009abc16936d9f1b2bdc544ebb926" kindref="member" tooltip="The object is a jet.">xAOD::Type::Jet</ref><sp/>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434ae086ef0a80c5e9b9b7e5238fd559598f" kindref="member" tooltip="The object is a particle-flow object.">xAOD::Type::ParticleFlow</ref><sp/>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434ab58838237ad48f68b7dad0298ab4db1b" kindref="member" tooltip="The object is a charged track particle.">xAOD::Type::TrackParticle</ref><sp/>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a358974b262ca2f9874337a4c67726b88" kindref="member" tooltip="The object is a neutral particle.">xAOD::Type::NeutralParticle</ref><sp/>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a0199381ad718edc5748453cf69eb0fed" kindref="member" tooltip="The object is an electron.">xAOD::Type::Electron</ref><sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434ab4340d8e5195d6c17d7f6147d8ce187f" kindref="member" tooltip="The object is a photon.">xAOD::Type::Photon</ref><sp/>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434af612e5722903badfe4fd0fd721fc4b13" kindref="member" tooltip="The object is a muon.">xAOD::Type::Muon</ref><sp/>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a0f85bdf366b6aa1f3c1308c12ddc5613" kindref="member" tooltip="The object is a tau (jet).">xAOD::Type::Tau</ref><sp/>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a2661e0512aac6f65cf0f17d9483d8f32" kindref="member" tooltip="The object is a vertex.">xAOD::Type::Vertex</ref><sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434aaf227f0a3af05d76e09b0c64b317ae4e" kindref="member" tooltip="The object is a b-tagging object.">xAOD::Type::BTag</ref><sp/>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a618a09052816d7593617f8454b409602" kindref="member" tooltip="The object is a truth particle.">xAOD::Type::TruthParticle</ref><sp/>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a5b0f069adfddc4d3dc241ea60cc23674" kindref="member" tooltip="The object is a truth vertex.">xAOD::Type::TruthVertex</ref><sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434aba8a635a8924b72d0953252ec3fde198" kindref="member" tooltip="The object is a truth event.">xAOD::Type::TruthEvent</ref><sp/>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a83dd7a792409c87f7e959b131e20dbff" kindref="member" tooltip="The object is a truth pileup event.">xAOD::Type::TruthPileupEvent</ref><sp/>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434ac7bc21e73bdee1b82bc1bb00172d1177" kindref="member" tooltip="The object is a stand-alone LVL2 muon.">xAOD::Type::L2StandAloneMuon</ref><sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434acaea0e265d406b7a060b05223f0d83d1" kindref="member" tooltip="The object is a LVL2 isolated muon.">xAOD::Type::L2IsoMuon</ref><sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434af1df079d37119eaf542bffcc2ffa2506" kindref="member" tooltip="The object is a combined LVL2 muon.">xAOD::Type::L2CombinedMuon</ref><sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434ac56570021bc2a9e609801d1e75aa566c" kindref="member" tooltip="The object is a LVL2 electron.">xAOD::Type::TrigElectron</ref><sp/>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434af8471796e932940c4a0ddfc77e6aba2c" kindref="member" tooltip="The object is a LVL2 photon.">xAOD::Type::TrigPhoton</ref><sp/>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a37f19aa7f918cb997b475e0afe4cfdf3" kindref="member" tooltip="The object is a LVL2 calorimeter cluster.">xAOD::Type::TrigCaloCluster</ref><sp/>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a72fb52877c045fa15373743b0ea6f2a0" kindref="member" tooltip="The object is a LVL2 EM cluster.">xAOD::Type::TrigEMCluster</ref><sp/>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434a7f00e36a640327bc26ef787d3885ea43" kindref="member" tooltip="The object is an event information one.">xAOD::Type::EventInfo</ref><sp/>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434ae0c391d61aa5e10fa4a1135ad9f69200" kindref="member" tooltip="The object is an event format one.">xAOD::Type::EventFormat</ref><sp/>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434ac8a41e4387c7b75e07a448db4915cd26" kindref="member" tooltip="Generic particle object, for analysis.">xAOD::Type::Particle</ref><sp/>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PRINT_TYPE(<sp/><ref refid="dd/dc8/namespacexAOD_1_1Type_1a96c48d2d85466ace623036af49f84434abec84f0e7ef40f9dab7b709b8df7d71d" kindref="member" tooltip="Particle composed of other particles.">xAOD::Type::CompositeParticle</ref><sp/>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;UNKNOWN&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>the<sp/>stream<sp/>object:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODBase/Root/ObjectType.cxx"/>
+  </compounddef>
+</doxygen>

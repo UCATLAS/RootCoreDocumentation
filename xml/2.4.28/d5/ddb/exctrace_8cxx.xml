@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d5/ddb/exctrace_8cxx" kind="file">
+    <compoundname>exctrace.cxx</compoundname>
+    <includes refid="d1/dcc/exctrace_8h" local="yes">CxxUtils/exctrace.h</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">cstdio</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">execinfo.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">dlfcn.h</includes>
+    <incdepgraph>
+      <node id="113407">
+        <label>CxxUtils/SealCommon.h</label>
+        <link refid="d1/dc7/SealCommon_8h"/>
+      </node>
+      <node id="113410">
+        <label>exception</label>
+      </node>
+      <node id="113406">
+        <label>CxxUtils/exctrace.h</label>
+        <link refid="d1/dcc/exctrace_8h"/>
+        <childnode refid="113407" relation="include">
+        </childnode>
+        <childnode refid="113408" relation="include">
+        </childnode>
+        <childnode refid="113410" relation="include">
+        </childnode>
+      </node>
+      <node id="113412">
+        <label>cstdio</label>
+      </node>
+      <node id="113415">
+        <label>unistd.h</label>
+      </node>
+      <node id="113413">
+        <label>cstdlib</label>
+      </node>
+      <node id="113409">
+        <label>cstddef</label>
+      </node>
+      <node id="113408">
+        <label>CxxUtils/SealDebug.h</label>
+        <link refid="d3/d3b/SealDebug_8h"/>
+        <childnode refid="113407" relation="include">
+        </childnode>
+        <childnode refid="113409" relation="include">
+        </childnode>
+      </node>
+      <node id="113405">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/exctrace.cxx</label>
+        <link refid="exctrace.cxx"/>
+        <childnode refid="113406" relation="include">
+        </childnode>
+        <childnode refid="113411" relation="include">
+        </childnode>
+        <childnode refid="113412" relation="include">
+        </childnode>
+        <childnode refid="113413" relation="include">
+        </childnode>
+        <childnode refid="113414" relation="include">
+        </childnode>
+        <childnode refid="113415" relation="include">
+        </childnode>
+        <childnode refid="113416" relation="include">
+        </childnode>
+      </node>
+      <node id="113414">
+        <label>execinfo.h</label>
+      </node>
+      <node id="113411">
+        <label>cstring</label>
+      </node>
+      <node id="113416">
+        <label>dlfcn.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="de/d12/namespaceCxxUtils">CxxUtils</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="d5/ddb/exctrace_8cxx_1a637e69199a7484f59162b931345efa70" prot="public" static="no">
+        <name>MYWRITELIT</name>
+        <param><defname>fd</defname></param>
+        <param><defname>str</defname></param>
+        <initializer>MYWRITE(fd,str,sizeof(str)-1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/exctrace.cxx" line="30" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/exctrace.cxx" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>$Id$</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/dcc/exctrace_8h" kindref="compound" tooltip="Generate stack trace backs from a caught exception.">CxxUtils/exctrace.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdio&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;execinfo.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dlfcn.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::strlen;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::sprintf;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::free;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Helper<sp/>to<sp/>write<sp/>literals</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>MYWRITELIT(fd,str)<sp/>MYWRITE(fd,str,sizeof(str)-1)</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">CxxUtils<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d12/namespaceCxxUtils_1a1b199b3c90529fef9ea3d0b89d9eeca0" kindref="member" tooltip="Print out information for the last exception.">exctrace</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::exception&amp;<sp/>e,<sp/><ref refid="d1/dc7/SealCommon_8h_1a98d936fe848403f33ff9cebfc9a38597" kindref="member">IOFD</ref><sp/>fd<sp/></highlight><highlight class="comment">/*=<sp/>IOFD_INVALID*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fd<sp/>==<sp/><ref refid="d1/dc7/SealCommon_8h_1a066e390969fb367df2540beba5bff9ca" kindref="member">IOFD_INVALID</ref>)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>fd<sp/>=<sp/><ref refid="d4/d62/classAthena_1_1DebugAids_1a18236de2282ce4125d44072c35146aa4" kindref="member">Athena::DebugAids::stacktraceFd</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>init<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>exctrace_last_depth<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/>exctrace_last_trace<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!init)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>init<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>exctrace_last_depth<sp/>=<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)dlsym<sp/>(RTLD_DEFAULT,<sp/></highlight><highlight class="stringliteral">&quot;exctrace_last_depth&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>exctrace_last_trace<sp/>=<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**)dlsym<sp/>(RTLD_DEFAULT,<sp/></highlight><highlight class="stringliteral">&quot;exctrace_last_trace&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>MYWRITELIT(fd,<sp/></highlight><highlight class="stringliteral">&quot;Exception:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>MYWRITE(fd,<sp/>e.what(),<sp/>strlen<sp/>(e.what()));</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(exctrace_last_depth<sp/>&amp;&amp;<sp/>exctrace_last_trace)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>MYWRITELIT(fd,<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Index<sp/>0<sp/>is<sp/>__cxa_throw.<sp/><sp/>Skip<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>*exctrace_last_depth;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>ip<sp/>=</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(exctrace_last_trace[i]);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>function<sp/>that<sp/>throws<sp/>may<sp/>have<sp/>the<sp/>call<sp/>to<sp/>__cxa_throw</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>as<sp/>the<sp/>last<sp/>instruction<sp/>in<sp/>the<sp/>function.<sp/><sp/>In<sp/>that<sp/>case,<sp/>the<sp/>IP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>see<sp/>here<sp/>will<sp/>be<sp/>one<sp/>beyond<sp/>the<sp/>end<sp/>of<sp/>the<sp/>function,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>we&apos;ll<sp/>report<sp/>the<sp/>wrong<sp/>function.<sp/><sp/>So<sp/>move<sp/>back<sp/>the<sp/>IP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>slightly<sp/>for<sp/>the<sp/>function<sp/>that<sp/>threw.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/>1)<sp/>--ip;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d4/d62/classAthena_1_1DebugAids_1a2ac7ba656d3f4292d2352fedb36460c2" kindref="member">Athena::DebugAids::stacktraceLine</ref><sp/>(fd,<sp/>ip);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>MYWRITELIT(fd,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(no<sp/>backtrace<sp/>available).\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>CxxUtils</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/exctrace.cxx"/>
+  </compounddef>
+</doxygen>

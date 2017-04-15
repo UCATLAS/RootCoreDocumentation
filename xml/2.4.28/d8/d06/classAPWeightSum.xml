@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d8/d06/classAPWeightSum" kind="class" prot="public">
+    <compoundname>APWeightSum</compoundname>
+    <derivedcompoundref refid="d9/dbd/classAPWeightSumEnsemble" prot="public" virt="non-virtual">APWeightSumEnsemble</derivedcompoundref>
+    <includes refid="d9/d4c/APWeightSum_8h" local="no">APWeightSum.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d8/d06/classAPWeightSum_1acb7293d4198dab12ccf57b929be55112" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref> * &gt;</type>
+        <definition>std::vector&lt; APWeightEntry* &gt; APWeightSum::_current_evt_weights</definition>
+        <argsstring></argsstring>
+        <name>_current_evt_weights</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds the expectancy values of the weights in the current event. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="53" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d06/classAPWeightSum_1a610f784ff4bd80c0211311f9e0917254" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; THnSparse * &gt;</type>
+        <definition>std::vector&lt; THnSparse* &gt; APWeightSum::_linear_uncert</definition>
+        <argsstring></argsstring>
+        <name>_linear_uncert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds all histograms for uncertainties. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="54" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d06/classAPWeightSum_1abf5ca57db0ae3eebe029ec0ad160d457" prot="protected" static="no" mutable="no">
+        <type>unsigned long int</type>
+        <definition>unsigned long int APWeightSum::_k_evt_orig</definition>
+        <argsstring></argsstring>
+        <name>_k_evt_orig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds the original amount of unweighted counts (&quot;sum of 1&apos;s&quot;). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="55" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d06/classAPWeightSum_1ad9aa86ecc988e7a934bddce83b991470" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double APWeightSum::_k_evt_weight</definition>
+        <argsstring></argsstring>
+        <name>_k_evt_weight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds the sum of weights. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="56" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d06/classAPWeightSum_1a2a72f24cd7d97c9ac0e69acf8679def5" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double APWeightSum::_k_evt_weight2</definition>
+        <argsstring></argsstring>
+        <name>_k_evt_weight2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds the sum of squared weights. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="57" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d06/classAPWeightSum_1a1e403ca536c4c62e2f8facebd1321b79" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double APWeightSum::_k_evt_weight_external</definition>
+        <argsstring></argsstring>
+        <name>_k_evt_weight_external</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds the sum of external weights (no trigger weighting). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="58" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d06/classAPWeightSum_1a5eb9c992587781905e0543a6f2c4fa86" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double APWeightSum::_variance</definition>
+        <argsstring></argsstring>
+        <name>_variance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds the variance. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="59" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d06/classAPWeightSum_1a754a96e9f371996c446e4d22f4cc894e" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double APWeightSum::_variance_nocorr</definition>
+        <argsstring></argsstring>
+        <name>_variance_nocorr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds the variance, assuming no correlations. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="60" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d06/classAPWeightSum_1a1eab3008b66549fdca839308c2f3f4b1" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double APWeightSum::_variance_fullcorr</definition>
+        <argsstring></argsstring>
+        <name>_variance_fullcorr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds the variance, assuming full correlation amongst objects. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="61" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d06/classAPWeightSum_1a0bec86316fab02681aec41329f2584fe" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double APWeightSum::_variance_sys</definition>
+        <argsstring></argsstring>
+        <name>_variance_sys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds the systematic variance (from systematics assigned to weights). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="62" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d06/classAPWeightSum_1ad23433b32d96a04aae5edc5c0d6c2bd7" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool APWeightSum::_isComputed</definition>
+        <argsstring></argsstring>
+        <name>_isComputed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="63" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/d06/classAPWeightSum_1af63a263264f112866060dc5921dc8e4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>APWeightSum::APWeightSum</definition>
+        <argsstring>()</argsstring>
+        <name>APWeightSum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="28" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSum.cxx" bodystart="13" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d06/classAPWeightSum_1a912e714d8fe7425746a0de0aa6cca0a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>APWeightSum::~APWeightSum</definition>
+        <argsstring>()</argsstring>
+        <name>~APWeightSum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="29" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSum.cxx" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d06/classAPWeightSum_1ad3da4e3440a423e6cbf62637e355a67d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void APWeightSum::AddWeightToEvt</definition>
+        <argsstring>(APWeightEntry *weight)</argsstring>
+        <name>AddWeightToEvt</name>
+        <reimplementedby refid="d9/dbd/classAPWeightSumEnsemble_1acc2f0c929b65da3d1c2dc183cedeffed">AddWeightToEvt</reimplementedby>
+        <param>
+          <type><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref> *</type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a weight to the sum of weights. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="30" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSum.cxx" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d06/classAPWeightSum_1af6212fe9eba3aa450e010370d9448884" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void APWeightSum::FinishEvt</definition>
+        <argsstring>(double ext_weight=1.0)</argsstring>
+        <name>FinishEvt</name>
+        <reimplementedby refid="d9/dbd/classAPWeightSumEnsemble_1af8abfdb7881c64202ba447a0917a1c73">FinishEvt</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>ext_weight</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Finishes the current event and calculates the event weight. Takes an optional external weight factor (e.g. mc weight). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="31" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSum.cxx" bodystart="74" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d06/classAPWeightSum_1a42f58413ffef3016cd7591788d083a5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void APWeightSum::AddEvt</definition>
+        <argsstring>(APEvtWeight *evt_weight, double ext_weight=1.0)</argsstring>
+        <name>AddEvt</name>
+        <param>
+          <type><ref refid="d8/d7f/classAPEvtWeight" kindref="compound">APEvtWeight</ref> *</type>
+          <declname>evt_weight</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ext_weight</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds an event with an externally calculated EvtWeight object. Takes an optional external weight factor (e.g. mc weight). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="32" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSum.cxx" bodystart="96" bodyend="448"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d06/classAPWeightSum_1a327ba7e81016e88e3388f39d6355921b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double APWeightSum::GetSumW</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSumW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the sum of weights. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="34" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSum.cxx" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d06/classAPWeightSum_1a0cde5ac3a03423005f27a4d80b8ce2e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double APWeightSum::GetSumW2</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSumW2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns sum of (weights^2). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="35" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSum.cxx" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d06/classAPWeightSum_1a0f501cf9ecfa814b3ffa659d457f4250" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double APWeightSum::GetSumWExternal</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSumWExternal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the sum of weights without taking into account the trigger weighting (external weights only) to allow switching trigger weighting on/off. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="36" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSum.cxx" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d06/classAPWeightSum_1aa12ab0231a0b3e4e26dad243fbe37c79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double APWeightSum::GetStdDev</definition>
+        <argsstring>()</argsstring>
+        <name>GetStdDev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the standard deviation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="37" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSum.cxx" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d06/classAPWeightSum_1a4d87acc9143fd3537d480944ebac0dcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double APWeightSum::GetVariance</definition>
+        <argsstring>()</argsstring>
+        <name>GetVariance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the variance. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="38" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSum.cxx" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d06/classAPWeightSum_1a5e1f50c8e00ee15114b029ce43a1d7f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double APWeightSum::GetVarianceNoCorr</definition>
+        <argsstring>()</argsstring>
+        <name>GetVarianceNoCorr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the variance, assuming no correlations. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="39" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSum.cxx" bodystart="57" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d06/classAPWeightSum_1a43a2a8ac1727e9c56b88830f669f8ac6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double APWeightSum::GetVarianceFullCorr</definition>
+        <argsstring>()</argsstring>
+        <name>GetVarianceFullCorr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the variance, assuming full correlation amongst objects. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="40" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSum.cxx" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d06/classAPWeightSum_1ac90060fd61bc7372ac4333d9c7ea5c48" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double APWeightSum::GetSysUncert</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSysUncert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the systematic uncertainty (from systematics assigned to weights). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="41" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSum.cxx" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d06/classAPWeightSum_1a581d861f00709d83c0c0116895cbd8b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long APWeightSum::GetKUnweighted</definition>
+        <argsstring>() const </argsstring>
+        <name>GetKUnweighted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the unweighted sum of entries. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="43" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSum.cxx" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d06/classAPWeightSum_1a715aa9a75486da70ce28d2bb0769659a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>THnSparse *</type>
+        <definition>THnSparse * APWeightSum::GetUncertHistogram</definition>
+        <argsstring>(APReweightBase *weighter)</argsstring>
+        <name>GetUncertHistogram</name>
+        <param>
+          <type><ref refid="d5/d8d/classAPReweightBase" kindref="compound">APReweightBase</ref> *</type>
+          <declname>weighter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns THnSparse holding the uncertainties for given <ref refid="d5/d8d/classAPReweightBase" kindref="compound">APReweightBase</ref> instance. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="45" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSum.cxx" bodystart="467" bodyend="474"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d06/classAPWeightSum_1a0e204b36b0425adfec9cb517c5962bc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; THnSparse * &gt;</type>
+        <definition>vector&lt; THnSparse * &gt; APWeightSum::GetAllUncertHistograms</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllUncertHistograms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns vector of THnSparses holding the uncertainties for all <ref refid="da/d0b/classAPReweight" kindref="compound">APReweight</ref> IDs. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="46" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSum.cxx" bodystart="476" bodyend="478"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="d8/d06/classAPWeightSum_1adcd91205ea827623fcaed86c04a500be" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void APWeightSum::Compute</definition>
+        <argsstring>()</argsstring>
+        <name>Compute</name>
+        <reimplementedby refid="d9/dbd/classAPWeightSumEnsemble_1a1c8e0dbfb9be16e39aa5eb9d49d2141c">Compute</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the final uncertainties including correlations. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="51" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APWeightSum.cxx" bodystart="450" bodyend="465"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class to calculate the sum of weights (&quot;weighted counter&quot;)</para><para>Calculates the sum of weights taking into account the underlying asymmetric probability distribution. This is done by modelling the pdf and then extracting the corresponding quantiles.</para><para><simplesect kind="author"><para><ulink url="mailto:fabian.Kohn@cern.ch">fabian.Kohn@cern.ch</ulink> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="807">
+        <label>APWeightSumEnsemble</label>
+        <link refid="d9/dbd/classAPWeightSumEnsemble"/>
+        <childnode refid="806" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="806">
+        <label>APWeightSum</label>
+        <link refid="d8/d06/classAPWeightSum"/>
+      </node>
+    </inheritancegraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" line="25" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APWeightSum.h" bodystart="25" bodyend="64"/>
+    <listofallmembers>
+      <member refid="d8/d06/classAPWeightSum_1acb7293d4198dab12ccf57b929be55112" prot="protected" virt="non-virtual"><scope>APWeightSum</scope><name>_current_evt_weights</name></member>
+      <member refid="d8/d06/classAPWeightSum_1ad23433b32d96a04aae5edc5c0d6c2bd7" prot="protected" virt="non-virtual"><scope>APWeightSum</scope><name>_isComputed</name></member>
+      <member refid="d8/d06/classAPWeightSum_1abf5ca57db0ae3eebe029ec0ad160d457" prot="protected" virt="non-virtual"><scope>APWeightSum</scope><name>_k_evt_orig</name></member>
+      <member refid="d8/d06/classAPWeightSum_1ad9aa86ecc988e7a934bddce83b991470" prot="protected" virt="non-virtual"><scope>APWeightSum</scope><name>_k_evt_weight</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a2a72f24cd7d97c9ac0e69acf8679def5" prot="protected" virt="non-virtual"><scope>APWeightSum</scope><name>_k_evt_weight2</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a1e403ca536c4c62e2f8facebd1321b79" prot="protected" virt="non-virtual"><scope>APWeightSum</scope><name>_k_evt_weight_external</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a610f784ff4bd80c0211311f9e0917254" prot="protected" virt="non-virtual"><scope>APWeightSum</scope><name>_linear_uncert</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a5eb9c992587781905e0543a6f2c4fa86" prot="protected" virt="non-virtual"><scope>APWeightSum</scope><name>_variance</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a1eab3008b66549fdca839308c2f3f4b1" prot="protected" virt="non-virtual"><scope>APWeightSum</scope><name>_variance_fullcorr</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a754a96e9f371996c446e4d22f4cc894e" prot="protected" virt="non-virtual"><scope>APWeightSum</scope><name>_variance_nocorr</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a0bec86316fab02681aec41329f2584fe" prot="protected" virt="non-virtual"><scope>APWeightSum</scope><name>_variance_sys</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a42f58413ffef3016cd7591788d083a5c" prot="public" virt="non-virtual"><scope>APWeightSum</scope><name>AddEvt</name></member>
+      <member refid="d8/d06/classAPWeightSum_1ad3da4e3440a423e6cbf62637e355a67d" prot="public" virt="non-virtual"><scope>APWeightSum</scope><name>AddWeightToEvt</name></member>
+      <member refid="d8/d06/classAPWeightSum_1af63a263264f112866060dc5921dc8e4e" prot="public" virt="non-virtual"><scope>APWeightSum</scope><name>APWeightSum</name></member>
+      <member refid="d8/d06/classAPWeightSum_1adcd91205ea827623fcaed86c04a500be" prot="protected" virt="non-virtual"><scope>APWeightSum</scope><name>Compute</name></member>
+      <member refid="d8/d06/classAPWeightSum_1af6212fe9eba3aa450e010370d9448884" prot="public" virt="non-virtual"><scope>APWeightSum</scope><name>FinishEvt</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a0e204b36b0425adfec9cb517c5962bc0" prot="public" virt="non-virtual"><scope>APWeightSum</scope><name>GetAllUncertHistograms</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a581d861f00709d83c0c0116895cbd8b5" prot="public" virt="non-virtual"><scope>APWeightSum</scope><name>GetKUnweighted</name></member>
+      <member refid="d8/d06/classAPWeightSum_1aa12ab0231a0b3e4e26dad243fbe37c79" prot="public" virt="non-virtual"><scope>APWeightSum</scope><name>GetStdDev</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a327ba7e81016e88e3388f39d6355921b" prot="public" virt="non-virtual"><scope>APWeightSum</scope><name>GetSumW</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a0cde5ac3a03423005f27a4d80b8ce2e0" prot="public" virt="non-virtual"><scope>APWeightSum</scope><name>GetSumW2</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a0f501cf9ecfa814b3ffa659d457f4250" prot="public" virt="non-virtual"><scope>APWeightSum</scope><name>GetSumWExternal</name></member>
+      <member refid="d8/d06/classAPWeightSum_1ac90060fd61bc7372ac4333d9c7ea5c48" prot="public" virt="non-virtual"><scope>APWeightSum</scope><name>GetSysUncert</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a715aa9a75486da70ce28d2bb0769659a" prot="public" virt="non-virtual"><scope>APWeightSum</scope><name>GetUncertHistogram</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a4d87acc9143fd3537d480944ebac0dcb" prot="public" virt="non-virtual"><scope>APWeightSum</scope><name>GetVariance</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a43a2a8ac1727e9c56b88830f669f8ac6" prot="public" virt="non-virtual"><scope>APWeightSum</scope><name>GetVarianceFullCorr</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a5e1f50c8e00ee15114b029ce43a1d7f4" prot="public" virt="non-virtual"><scope>APWeightSum</scope><name>GetVarianceNoCorr</name></member>
+      <member refid="d8/d06/classAPWeightSum_1a912e714d8fe7425746a0de0aa6cca0a3" prot="public" virt="virtual"><scope>APWeightSum</scope><name>~APWeightSum</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

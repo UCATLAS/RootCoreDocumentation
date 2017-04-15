@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d4/d62/classAthena_1_1DebugAids" kind="class" prot="public">
+    <compoundname>Athena::DebugAids</compoundname>
+    <includes refid="d3/d3b/SealDebug_8h" local="no">SealDebug.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d4/d62/classAthena_1_1DebugAids_1aeb79ec2998bb68017421cff4e0952681" prot="private" static="yes" mutable="no">
+        <type><ref refid="d1/dc7/SealCommon_8h_1a98d936fe848403f33ff9cebfc9a38597" kindref="member">IOFD</ref></type>
+        <definition>IOFD Athena::DebugAids::s_stackTraceFd</definition>
+        <argsstring></argsstring>
+        <name>s_stackTraceFd</name>
+        <initializer> IOFD_INVALID</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The default output file descriptor for <ref refid="d4/d62/classAthena_1_1DebugAids_1a81159b3d39447c2d9b939bd43d0d6066" kindref="member">stacktrace()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/SealDebug.h" line="67" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/SealDebug.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d4/d62/classAthena_1_1DebugAids_1a18236de2282ce4125d44072c35146aa4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/dc7/SealCommon_8h_1a98d936fe848403f33ff9cebfc9a38597" kindref="member">IOFD</ref></type>
+        <definition>IOFD Athena::DebugAids::stacktraceFd</definition>
+        <argsstring>(IOFD fd=IOFD_INVALID)</argsstring>
+        <name>stacktraceFd</name>
+        <param>
+          <type><ref refid="d1/dc7/SealCommon_8h_1a98d936fe848403f33ff9cebfc9a38597" kindref="member">IOFD</ref></type>
+          <declname>fd</declname>
+          <defval>IOFD_INVALID</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set and return the file descriptor for stack trace output.</para><para>If <emphasis>fd</emphasis> is the default invalid descriptor value, returns the current value without changing the setting. This value is only effective for <ref refid="d4/d62/classAthena_1_1DebugAids_1a81159b3d39447c2d9b939bd43d0d6066" kindref="member">stacktrace()</ref>, but can be overridden by the argument given to that function. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/SealDebug.h" line="58" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/SealDebug.cxx" bodystart="564" bodyend="573"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d62/classAthena_1_1DebugAids_1a81159b3d39447c2d9b939bd43d0d6066" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Athena::DebugAids::stacktrace</definition>
+        <argsstring>(IOFD fd=IOFD_INVALID)</argsstring>
+        <name>stacktrace</name>
+        <param>
+          <type><ref refid="d1/dc7/SealCommon_8h_1a98d936fe848403f33ff9cebfc9a38597" kindref="member">IOFD</ref></type>
+          <declname>fd</declname>
+          <defval>IOFD_INVALID</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Produce a stack trace.</para><para>Prints the current stack trace to file descriptor <emphasis>fd</emphasis> or if the default invalid descriptor, the currently registered stack trace descriptor as registered with <ref refid="d4/d62/classAthena_1_1DebugAids_1a18236de2282ce4125d44072c35146aa4" kindref="member">stacktraceFd()</ref>. Avoids unnecessary memory allocation so it should be safe to call this function even in dire situations. On some systems the implementation always outputs to the standard error and has no means for redirection. On these systems an attempt is made to redirect standard error momentarily elsewhere and then redirect standard error to the desired file descriptor, invoke the output, and redirect standard error back to its original location. If the redirection fails or the system has no stack tracing support, no stack trace is produced. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/SealDebug.h" line="59" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/SealDebug.cxx" bodystart="590" bodyend="902"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d62/classAthena_1_1DebugAids_1a5d2d4712ef013938c0acca646445371c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Athena::DebugAids::coredump</definition>
+        <argsstring>(int sig,...)</argsstring>
+        <name>coredump</name>
+        <param>
+          <type>int</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Drop a core dump and continue.</para><para>Creates a core file for the current program state and continues execution. <emphasis>sig</emphasis> should be the number of the signal from which the program should appear to have died; this should a fatal signal that does cause a core file to be created (or <computeroutput>SIGUSR1</computeroutput>).</para><para>This works by forking the process and then killing the child with the given signal; the signal is automatically unblocked in the child to make sure the sure the signal is delivered. Thus the function returns only once, in the parent process.</para><para>This function can be safely installed directly as a signal handler. Signal::handleFatal() will do so for <computeroutput>SIGUSR1</computeroutput> with suitable options.</para><para>Note that this function does not change core dump resource limits, not even for the forked child process. If core files are disabled through resource limits, no core file will be created despite your explicit request to create one.</para><para>This concept was taken from DDD, the Data Display Debugger. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/SealDebug.h" line="60" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/SealDebug.cxx" bodystart="927" bodyend="969"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d62/classAthena_1_1DebugAids_1a2ac7ba656d3f4292d2352fedb36460c2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Athena::DebugAids::stacktraceLine</definition>
+        <argsstring>(IOFD fd, unsigned long addr)</argsstring>
+        <name>stacktraceLine</name>
+        <param>
+          <type><ref refid="d1/dc7/SealCommon_8h_1a98d936fe848403f33ff9cebfc9a38597" kindref="member">IOFD</ref></type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write out stack trace line to FD. IP is the instruction pointer. (sss) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/SealDebug.h" line="63" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/SealDebug.cxx" bodystart="298" bodyend="441"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d62/classAthena_1_1DebugAids_1add06bd108cb322e07b356612a16c070a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Athena::DebugAids::setStackTraceAddr2Line</definition>
+        <argsstring>(const char *path)</argsstring>
+        <name>setStackTraceAddr2Line</name>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/SealDebug.h" line="64" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/SealDebug.cxx" bodystart="539" bodyend="542"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Utilities for debugging support. </para>    </detaileddescription>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/SealDebug.h" line="55" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/SealDebug.h" bodystart="54" bodyend="68"/>
+    <listofallmembers>
+      <member refid="d4/d62/classAthena_1_1DebugAids_1a5d2d4712ef013938c0acca646445371c" prot="public" virt="non-virtual"><scope>Athena::DebugAids</scope><name>coredump</name></member>
+      <member refid="d4/d62/classAthena_1_1DebugAids_1aeb79ec2998bb68017421cff4e0952681" prot="private" virt="non-virtual"><scope>Athena::DebugAids</scope><name>s_stackTraceFd</name></member>
+      <member refid="d4/d62/classAthena_1_1DebugAids_1add06bd108cb322e07b356612a16c070a" prot="public" virt="non-virtual"><scope>Athena::DebugAids</scope><name>setStackTraceAddr2Line</name></member>
+      <member refid="d4/d62/classAthena_1_1DebugAids_1a81159b3d39447c2d9b939bd43d0d6066" prot="public" virt="non-virtual"><scope>Athena::DebugAids</scope><name>stacktrace</name></member>
+      <member refid="d4/d62/classAthena_1_1DebugAids_1a18236de2282ce4125d44072c35146aa4" prot="public" virt="non-virtual"><scope>Athena::DebugAids</scope><name>stacktraceFd</name></member>
+      <member refid="d4/d62/classAthena_1_1DebugAids_1a2ac7ba656d3f4292d2352fedb36460c2" prot="public" virt="non-virtual"><scope>Athena::DebugAids</scope><name>stacktraceLine</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

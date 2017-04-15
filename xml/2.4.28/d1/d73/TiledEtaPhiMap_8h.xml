@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d1/d73/TiledEtaPhiMap_8h" kind="file">
+    <compoundname>TiledEtaPhiMap.h</compoundname>
+    <includes local="no">list</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">math.h</includes>
+    <includes refid="dc/da3/JetDistances_8h" local="yes">JetUtils/JetDistances.h</includes>
+    <includes refid="d3/d92/TiledEtaPhiMap_8icc" local="yes">JetUtils/TiledEtaPhiMap.icc</includes>
+    <includedby refid="db/d52/JetIsolationTool_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/JetMomentTools/JetIsolationTool.h</includedby>
+    <incdepgraph>
+      <node id="202055">
+        <label>list</label>
+      </node>
+      <node id="202060">
+        <label>cmath</label>
+      </node>
+      <node id="202059">
+        <label>JetUtils/JetDistances.h</label>
+        <link refid="dc/da3/JetDistances_8h_source"/>
+        <childnode refid="202060" relation="include">
+        </childnode>
+      </node>
+      <node id="202054">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetUtils/JetUtils/TiledEtaPhiMap.h</label>
+        <link refid="TiledEtaPhiMap.h"/>
+        <childnode refid="202055" relation="include">
+        </childnode>
+        <childnode refid="202056" relation="include">
+        </childnode>
+        <childnode refid="202057" relation="include">
+        </childnode>
+        <childnode refid="202058" relation="include">
+        </childnode>
+        <childnode refid="202059" relation="include">
+        </childnode>
+      </node>
+      <node id="202056">
+        <label>vector</label>
+      </node>
+      <node id="202058">
+        <label>math.h</label>
+      </node>
+      <node id="202057">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="202061">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetUtils/JetUtils/TiledEtaPhiMap.h</label>
+        <link refid="TiledEtaPhiMap.h"/>
+        <childnode refid="202062" relation="include">
+        </childnode>
+      </node>
+      <node id="202062">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetMomentTools/JetMomentTools/JetIsolationTool.h</label>
+        <link refid="db/d52/JetIsolationTool_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d1/d77/structJetTiledMap_1_1utils" prot="public">JetTiledMap::utils</innerclass>
+    <innerclass refid="d1/de5/classJetTiledMap_1_1Tile" prot="public">JetTiledMap::Tile</innerclass>
+    <innerclass refid="d4/d98/classJetTiledMap_1_1TiledEtaPhiMap" prot="public">JetTiledMap::TiledEtaPhiMap</innerclass>
+    <innernamespace refid="d2/dfc/namespaceJetTiledMap">JetTiledMap</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Define a fast lookup map for points on the eta-phi cylinder and related utilities. See TiledEtaPhiMap.</para><para><simplesect kind="author"><para>P-A Delsart </para></simplesect>
+<simplesect kind="date"><para>before 2010 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>emacs,<sp/>this<sp/>is<sp/>-*-<sp/>C++<sp/>-*-</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight><highlight class="preprocessor">#ifndef<sp/>JETUTIL_TILEDETAPHIMAP_H</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>JETUTIL_TILEDETAPHIMAP_H</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;JetUtils/JetDistances.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">JetTiledMap<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="d1/d77/structJetTiledMap_1_1utils" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d1/d77/structJetTiledMap_1_1utils" kindref="compound">utils</ref><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>DR2(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eta1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>phi1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eta2,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>phi2)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>deta<sp/>=<sp/>eta1<sp/>-<sp/>eta2;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>pi<sp/>=<sp/>acos(-1.0);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>twopi<sp/>=<sp/>2.0*pi;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dphi<sp/>=<sp/>phi1<sp/>-<sp/>phi2;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>dphi<sp/>&gt;<sp/>pi<sp/>)<sp/>dphi<sp/>-=<sp/>twopi;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>dphi<sp/>&lt;=<sp/>-pi<sp/>)<sp/>dphi<sp/>+=<sp/>twopi;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dphi*dphi<sp/>+<sp/>deta*deta;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>Directions<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="da/deb/structN" kindref="compound">N</ref>=0,<sp/>NE,E,SE,S,SW,<ref refid="db/d2c/structW" kindref="compound">W</ref>,NW</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>POINT,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DIST2&gt;</highlight></codeline>
+<codeline lineno="49" refid="d1/de5/classJetTiledMap_1_1Tile" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d1/de5/classJetTiledMap_1_1Tile" kindref="compound">Tile</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::list&lt;POINT&gt;<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::list&lt;POINT&gt;<sp/>tilecontainerbase_t;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>tilecontainerbase_t::iterator<sp/>iterator;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>tilecontainerbase_t::const_iterator<sp/>const_iterator;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::vector&lt;POINT&gt;<sp/>pointvec_t;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/de5/classJetTiledMap_1_1Tile" kindref="compound">Tile</ref>(){this-&gt;clear();</highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;i&lt;8;i++)<sp/>m_neighbour[i]=0;}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d1/de5/classJetTiledMap_1_1Tile_1a6a0f86f05cadb8d855ff7ae03838138e" kindref="member" tooltip="Fill a vector of all points from this tile within deltaR of POINT p. (r2 is R *squared*)...">fillPointsInDr2</ref>(POINT<sp/>&amp;p,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r2,<sp/>pointvec_t&amp;<sp/>points<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="d1/de5/classJetTiledMap_1_1Tile_1a4b7cb1f2daccccc89a29ffc36908dd69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="d1/de5/classJetTiledMap_1_1Tile" kindref="compound">Tile</ref><sp/><ref refid="d1/de5/classJetTiledMap_1_1Tile_1a4b7cb1f2daccccc89a29ffc36908dd69" kindref="member" tooltip="the void tile never contains any point.">voidTile</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/de5/classJetTiledMap_1_1Tile" kindref="compound">Tile&lt;POINT,DIST2&gt;</ref>*<sp/>m_neighbour[8];</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>DIST2<sp/>dr2;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>POINT<sp/>center;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>POINT,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DIST2<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>POINT::DR2&gt;</highlight></codeline>
+<codeline lineno="80" refid="d4/d98/classJetTiledMap_1_1TiledEtaPhiMap" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d4/d98/classJetTiledMap_1_1TiledEtaPhiMap" kindref="compound">TiledEtaPhiMap</ref><sp/>{<sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><sp/><ref refid="d1/de5/classJetTiledMap_1_1Tile" kindref="compound">Tile&lt;POINT, DIST2&gt;</ref><sp/><ref refid="d1/de5/classJetTiledMap_1_1Tile" kindref="compound">tile_t</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d98/classJetTiledMap_1_1TiledEtaPhiMap" kindref="compound">TiledEtaPhiMap</ref>():<sp/><sp/>m_etarange(10.0),<sp/>m_halfetarange(5.),<sp/>m_size(0)<sp/>{};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="d4/d98/classJetTiledMap_1_1TiledEtaPhiMap" kindref="compound">TiledEtaPhiMap</ref>(){}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rmax);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>insert(POINT<sp/>&amp;<sp/>p);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;POINT&gt;<sp/><ref refid="d4/d98/classJetTiledMap_1_1TiledEtaPhiMap_1a6403988b5941c1fc175c3cba85bf4209" kindref="member" tooltip="retrieve all points within deltaR of p. WARNING !! wrong results if r&amp;gt;rmax !">pointsInDr</ref>(POINT<sp/>&amp;p,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clear();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reset(){m_tiles.clear();m_size=0;}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size()</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_size;}<sp/>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setEtaRange(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r){m_etarange=r;<sp/>m_halfetarange<sp/>=<sp/>r/2;}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/>m_etarange<sp/>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/>m_halfetarange;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m_rmax;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>m_ndivX,<sp/>m_ndivY;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m_sizeX,m_sizeY;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_size;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="d4/d98/classJetTiledMap_1_1TiledEtaPhiMap_1a76745317df14ee2cc87766c7235390c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d4/d98/classJetTiledMap_1_1TiledEtaPhiMap_1a76745317df14ee2cc87766c7235390c6" kindref="member" tooltip="index of the tile containing p">tileIndex</ref>(POINT<sp/>&amp;p)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>indx<sp/>=<sp/>int(<sp/>(p.x()+m_halfetarange)/m_sizeX)<sp/>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(indx&lt;0)<sp/>indx=0;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(indx&gt;=static_cast&lt;int&gt;(m_ndivX))<sp/>indx=m_ndivX-1;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>indy<sp/>=<sp/>int((M_PI-p.y())/m_sizeY);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(indy&gt;=static_cast&lt;int&gt;(m_ndivY))<sp/>indy=m_ndivY-1;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d4/d98/classJetTiledMap_1_1TiledEtaPhiMap_1a1f32fbd3a7c498300c665ffd22d7dbe1" kindref="member" tooltip="retrieve the tile index from its integer coordinates.">tileIndex_i</ref>(indx,indy);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="d4/d98/classJetTiledMap_1_1TiledEtaPhiMap_1a1f32fbd3a7c498300c665ffd22d7dbe1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d4/d98/classJetTiledMap_1_1TiledEtaPhiMap_1a1f32fbd3a7c498300c665ffd22d7dbe1" kindref="member" tooltip="retrieve the tile index from its integer coordinates.">tileIndex_i</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ix,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iy)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ix*m_ndivY<sp/>+<sp/>iy;};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;tile_t&gt;<sp/>m_tiles;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;JetUtils/TiledEtaPhiMap.icc&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/JetUtils/JetUtils/TiledEtaPhiMap.h"/>
+  </compounddef>
+</doxygen>

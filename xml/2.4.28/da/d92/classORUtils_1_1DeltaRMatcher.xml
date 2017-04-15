@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="da/d92/classORUtils_1_1DeltaRMatcher" kind="class" prot="public">
+    <compoundname>ORUtils::DeltaRMatcher</compoundname>
+    <basecompoundref refid="dc/d62/classORUtils_1_1IParticleAssociator" prot="public" virt="non-virtual">ORUtils::IParticleAssociator</basecompoundref>
+    <includes refid="df/dd1/DeltaRMatcher_8h" local="no">DeltaRMatcher.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="da/d92/classORUtils_1_1DeltaRMatcher_1aea35b05db735acb09799a582426376b6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ORUtils::DeltaRMatcher::m_dR</definition>
+        <argsstring></argsstring>
+        <name>m_dR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/DeltaRMatcher.h" line="36" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/DeltaRMatcher.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d92/classORUtils_1_1DeltaRMatcher_1ac1aaa76dc542f2e0ed9f31e5396bca78" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ORUtils::DeltaRMatcher::m_useRapidity</definition>
+        <argsstring></argsstring>
+        <name>m_useRapidity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/DeltaRMatcher.h" line="37" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/DeltaRMatcher.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="da/d92/classORUtils_1_1DeltaRMatcher_1aad80a778245d9f10ace887076f8cbc3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ORUtils::DeltaRMatcher::DeltaRMatcher</definition>
+        <argsstring>(double dR, bool useRapidity=true)</argsstring>
+        <name>DeltaRMatcher</name>
+        <param>
+          <type>double</type>
+          <declname>dR</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>useRapidity</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/DeltaRMatcher.h" line="28" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/Root/DeltaRMatcher.cxx" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d92/classORUtils_1_1DeltaRMatcher_1af852199d4a76d9ff9e2f4c16fcf58db6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ORUtils::DeltaRMatcher::objectsMatch</definition>
+        <argsstring>(const xAOD::IParticle &amp;p1, const xAOD::IParticle &amp;p2) const override</argsstring>
+        <name>objectsMatch</name>
+        <reimplements refid="dc/d62/classORUtils_1_1IParticleAssociator_1aac27a7e728f8fc35b699a11f00fbd00e">objectsMatch</reimplements>
+        <param>
+          <type>const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">xAOD::IParticle</ref> &amp;</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">xAOD::IParticle</ref> &amp;</type>
+          <declname>p2</declname>
+        </param>
+        <briefdescription>
+<para>Check if particles match in dR. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/DeltaRMatcher.h" line="32" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/Root/DeltaRMatcher.cxx" bodystart="21" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Encapsulates the delta-R matching strategy. </para>    </briefdescription>
+    <detaileddescription>
+<para>I am considering abstracting matching with an interface. <simplesect kind="author"><para>Steve Farrell &lt;<ulink url="mailto:Steven.Farrell@cern.ch">Steven.Farrell@cern.ch</ulink>&gt; </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="5030">
+        <label>ORUtils::IParticleAssociator</label>
+        <link refid="dc/d62/classORUtils_1_1IParticleAssociator"/>
+      </node>
+      <node id="5029">
+        <label>ORUtils::DeltaRMatcher</label>
+        <link refid="da/d92/classORUtils_1_1DeltaRMatcher"/>
+        <childnode refid="5030" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5032">
+        <label>ORUtils::IParticleAssociator</label>
+        <link refid="dc/d62/classORUtils_1_1IParticleAssociator"/>
+      </node>
+      <node id="5031">
+        <label>ORUtils::DeltaRMatcher</label>
+        <link refid="da/d92/classORUtils_1_1DeltaRMatcher"/>
+        <childnode refid="5032" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/DeltaRMatcher.h" line="23" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/DeltaRMatcher.h" bodystart="22" bodyend="39"/>
+    <listofallmembers>
+      <member refid="da/d92/classORUtils_1_1DeltaRMatcher_1aad80a778245d9f10ace887076f8cbc3b" prot="public" virt="non-virtual"><scope>ORUtils::DeltaRMatcher</scope><name>DeltaRMatcher</name></member>
+      <member refid="da/d92/classORUtils_1_1DeltaRMatcher_1aea35b05db735acb09799a582426376b6" prot="private" virt="non-virtual"><scope>ORUtils::DeltaRMatcher</scope><name>m_dR</name></member>
+      <member refid="da/d92/classORUtils_1_1DeltaRMatcher_1ac1aaa76dc542f2e0ed9f31e5396bca78" prot="private" virt="non-virtual"><scope>ORUtils::DeltaRMatcher</scope><name>m_useRapidity</name></member>
+      <member refid="da/d92/classORUtils_1_1DeltaRMatcher_1af852199d4a76d9ff9e2f4c16fcf58db6" prot="public" virt="virtual"><scope>ORUtils::DeltaRMatcher</scope><name>objectsMatch</name></member>
+      <member refid="dc/d62/classORUtils_1_1IParticleAssociator_1ae1c5b822ac1ef133ac7e7f2815f8b762" prot="public" virt="virtual"><scope>ORUtils::DeltaRMatcher</scope><name>~IParticleAssociator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

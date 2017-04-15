@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d7/d24/classDataModel__detail_1_1CompareAndPrint" kind="class" prot="public">
+    <compoundname>DataModel_detail::CompareAndPrint</compoundname>
+    <includes refid="d5/da8/CompareAndPrint_8h" local="no">CompareAndPrint.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d7/d24/classDataModel__detail_1_1CompareAndPrint_1a905189ba2e21f64a5ead303d830bdae1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DataModel_detail::CompareAndPrint::m_quiet</definition>
+        <argsstring></argsstring>
+        <name>m_quiet</name>
+        <briefdescription>
+<para>Quiet flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/tools/CompareAndPrint.h" line="58" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/tools/CompareAndPrint.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d7/d24/classDataModel__detail_1_1CompareAndPrint_1af1bfd910cd8bca3985e4b9bfe7ffe26c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DataModel_detail::CompareAndPrint::CompareAndPrint</definition>
+        <argsstring>(bool quiet)</argsstring>
+        <name>CompareAndPrint</name>
+        <param>
+          <type>bool</type>
+          <declname>quiet</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>quiet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If <computeroutput>false</computeroutput>, then print a complaint if duplicate pointers are found. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/tools/CompareAndPrint.h" line="27" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/tools/CompareAndPrint.h" bodystart="26" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d24/classDataModel__detail_1_1CompareAndPrint_1aafbca41e71caf9fbc0b2e14bbf385959" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Element</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool DataModel_detail::CompareAndPrint::operator()</definition>
+        <argsstring>(Element *f, Element *s) const </argsstring>
+        <name>operator()</name>
+        <param>
+          <type>Element *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Element *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Compare two pointers. Maybe print a complaint if we find a duplicate. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First pointer to compare. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second pointer to compare. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/tools/CompareAndPrint.h" line="39" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/tools/CompareAndPrint.h" bodystart="38" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d24/classDataModel__detail_1_1CompareAndPrint_1ace8eb93e4a8fc2570c3bfc33a1c74cef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DataModel_detail::CompareAndPrint::warn</definition>
+        <argsstring>(const std::type_info &amp;ti, const void *f) const </argsstring>
+        <name>warn</name>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>Duplicate elements were found; print a warning. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>type_info</computeroutput> for the element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The element pointer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/tools/CompareAndPrint.h" line="53" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/Root/CompareAndPrint.cxx" bodystart="22" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper for <computeroutput>remove_duplicates</computeroutput>. </para>    </briefdescription>
+    <detaileddescription>
+<para>Functor to compare two pointers and optionally print a complaint if they&apos;re the same. </para>    </detaileddescription>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/tools/CompareAndPrint.h" line="19" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AthContainers/AthContainers/tools/CompareAndPrint.h" bodystart="18" bodyend="59"/>
+    <listofallmembers>
+      <member refid="d7/d24/classDataModel__detail_1_1CompareAndPrint_1af1bfd910cd8bca3985e4b9bfe7ffe26c" prot="public" virt="non-virtual"><scope>DataModel_detail::CompareAndPrint</scope><name>CompareAndPrint</name></member>
+      <member refid="d7/d24/classDataModel__detail_1_1CompareAndPrint_1a905189ba2e21f64a5ead303d830bdae1" prot="private" virt="non-virtual"><scope>DataModel_detail::CompareAndPrint</scope><name>m_quiet</name></member>
+      <member refid="d7/d24/classDataModel__detail_1_1CompareAndPrint_1aafbca41e71caf9fbc0b2e14bbf385959" prot="public" virt="non-virtual"><scope>DataModel_detail::CompareAndPrint</scope><name>operator()</name></member>
+      <member refid="d7/d24/classDataModel__detail_1_1CompareAndPrint_1ace8eb93e4a8fc2570c3bfc33a1c74cef" prot="public" virt="non-virtual"><scope>DataModel_detail::CompareAndPrint</scope><name>warn</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

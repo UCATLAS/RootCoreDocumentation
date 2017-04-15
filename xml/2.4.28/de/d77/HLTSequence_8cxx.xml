@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="de/d77/HLTSequence_8cxx" kind="file">
+    <compoundname>HLTSequence.cxx</compoundname>
+    <includes refid="db/d1d/HLTSequence_8h" local="yes">TrigConfHLTData/HLTSequence.h</includes>
+    <includes refid="df/d33/DiffStruct_8h" local="yes">TrigConfL1Data/DiffStruct.h</includes>
+    <includes refid="dc/d9c/HLTTriggerElement_8h" local="yes">TrigConfHLTData/HLTTriggerElement.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="yes">boost/lexical_cast.hpp</includes>
+    <incdepgraph>
+      <node id="309211">
+        <label>boost/lexical_cast.hpp</label>
+      </node>
+      <node id="309202">
+        <label>string</label>
+      </node>
+      <node id="309208">
+        <label>map</label>
+      </node>
+      <node id="309198">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTSequence.cxx</label>
+        <link refid="HLTSequence.cxx"/>
+        <childnode refid="309199" relation="include">
+        </childnode>
+        <childnode refid="309205" relation="include">
+        </childnode>
+        <childnode refid="309207" relation="include">
+        </childnode>
+        <childnode refid="309209" relation="include">
+        </childnode>
+        <childnode refid="309210" relation="include">
+        </childnode>
+        <childnode refid="309203" relation="include">
+        </childnode>
+        <childnode refid="309211" relation="include">
+        </childnode>
+      </node>
+      <node id="309200">
+        <label>TrigConfL1Data/TrigConfData.h</label>
+        <link refid="da/da8/TrigConfData_8h_source"/>
+        <childnode refid="309201" relation="include">
+        </childnode>
+        <childnode refid="309202" relation="include">
+        </childnode>
+      </node>
+      <node id="309203">
+        <label>fstream</label>
+      </node>
+      <node id="309207">
+        <label>TrigConfHLTData/HLTTriggerElement.h</label>
+        <link refid="dc/d9c/HLTTriggerElement_8h_source"/>
+        <childnode refid="309200" relation="include">
+        </childnode>
+        <childnode refid="309201" relation="include">
+        </childnode>
+        <childnode refid="309203" relation="include">
+        </childnode>
+        <childnode refid="309202" relation="include">
+        </childnode>
+        <childnode refid="309208" relation="include">
+        </childnode>
+      </node>
+      <node id="309199">
+        <label>TrigConfHLTData/HLTSequence.h</label>
+        <link refid="db/d1d/HLTSequence_8h_source"/>
+        <childnode refid="309200" relation="include">
+        </childnode>
+        <childnode refid="309201" relation="include">
+        </childnode>
+        <childnode refid="309203" relation="include">
+        </childnode>
+        <childnode refid="309202" relation="include">
+        </childnode>
+        <childnode refid="309204" relation="include">
+        </childnode>
+      </node>
+      <node id="309206">
+        <label>boost/unordered_map.hpp</label>
+      </node>
+      <node id="309204">
+        <label>vector</label>
+      </node>
+      <node id="309210">
+        <label>sstream</label>
+      </node>
+      <node id="309201">
+        <label>iosfwd</label>
+      </node>
+      <node id="309209">
+        <label>iostream</label>
+      </node>
+      <node id="309205">
+        <label>TrigConfL1Data/DiffStruct.h</label>
+        <link refid="df/d33/DiffStruct_8h_source"/>
+        <childnode refid="309206" relation="include">
+        </childnode>
+        <childnode refid="309202" relation="include">
+        </childnode>
+        <childnode refid="309204" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;TrigConfHLTData/HLTSequence.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TrigConfL1Data/DiffStruct.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TrigConfHLTData/HLTTriggerElement.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/lexical_cast.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">TrigConf;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="d5/df5/classTrigConf_1_1HLTSequence_1a1a923f7eb9585f0cfd4b0dce6fd01903" kindref="member" tooltip="default constructor">TrigConf::HLTSequence::HLTSequence</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/>m_outputTE<sp/>(<sp/>0<sp/>),</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/>m_topoStartTE<sp/>(<sp/>0<sp/>),</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/>m_level(<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><ref refid="d5/df5/classTrigConf_1_1HLTSequence_1a1a923f7eb9585f0cfd4b0dce6fd01903" kindref="member" tooltip="default constructor">TrigConf::HLTSequence::HLTSequence</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;HLTTriggerElement*&gt;&amp;<sp/>inputTEs,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/d7d/classTrigConf_1_1HLTTriggerElement" kindref="compound" tooltip="HLT trigger element configuration information.">HLTTriggerElement</ref>*<sp/>outputTE,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;string&gt;&amp;<sp/>algorithms)<sp/>:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/>m_inputTEs<sp/><sp/>(<sp/>inputTEs<sp/>),</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/>m_outputTE<sp/><sp/>(<sp/>outputTE<sp/>),</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/>m_algorithms(<sp/>algorithms<sp/>)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/>setName(outputTE-&gt;name());</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="d5/df5/classTrigConf_1_1HLTSequence_1a945fc6eb108dc38e62e223b1a0dc4422" kindref="member" tooltip="destructor">TrigConf::HLTSequence::~HLTSequence</ref>(<sp/>)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<ref refid="db/d7d/classTrigConf_1_1HLTTriggerElement" kindref="compound" tooltip="HLT trigger element configuration information.">HLTTriggerElement</ref>*<sp/>te<sp/>:<sp/>m_inputTEs)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>te;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_outputTE;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_topoStartTE;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">TrigConf::HLTSequence::set_outputTE(<sp/><ref refid="db/d7d/classTrigConf_1_1HLTTriggerElement" kindref="compound" tooltip="HLT trigger element configuration information.">HLTTriggerElement</ref>*<sp/>outputTE<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/>m_outputTE<sp/>=<sp/>outputTE;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/>setName(outputTE-&gt;name());</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">TrigConf::HLTSequence::hashId()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_outputTE-&gt;hashId();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TrigConf::HLTSequence::writeXML(std::ofstream<sp/>&amp;<sp/>xmlfile)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/>xmlfile<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;SEQUENCE&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/>xmlfile<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>output=\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_outputTE-&gt;name()<sp/><sp/>&lt;&lt;<sp/><sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/>xmlfile<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>input=\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>first<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<ref refid="db/d7d/classTrigConf_1_1HLTTriggerElement" kindref="compound" tooltip="HLT trigger element configuration information.">HLTTriggerElement</ref>*<sp/>te:<sp/>m_inputTEs)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(first)<sp/>{first=</highlight><highlight class="keyword">false</highlight><highlight class="normal">;}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{xmlfile<sp/>&lt;&lt;<sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>xmlfile<sp/>&lt;&lt;<sp/>te-&gt;name();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/>xmlfile<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/>xmlfile<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>algorithm=\&quot;&quot;</highlight><highlight class="normal">;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/>first<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>alg:<sp/>m_algorithms)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(first)<sp/>{first=</highlight><highlight class="keyword">false</highlight><highlight class="normal">;}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{xmlfile<sp/>&lt;&lt;<sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>xmlfile<sp/>&lt;&lt;<sp/>alg;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/>xmlfile<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_topoStartTE)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>xmlfile<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>topo_start_from=\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_topoStartTE-&gt;name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/>xmlfile<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;/&gt;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">std::string</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">TrigConf::HLTSequence::concise()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/>std::stringstream<sp/>str;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/>str<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;(&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/>vector&lt;TrigConf::HLTTriggerElement*&gt;::const_iterator<sp/>inputTE<sp/>=<sp/>m_inputTEs.begin();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>inputTE<sp/>!=<sp/>m_inputTEs.end();<sp/>inputTE++)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>&lt;&lt;<sp/>(*inputTE)-&gt;name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/>str<sp/>&lt;&lt;<sp/>outputTE()-&gt;name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>str.str();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><ref refid="d2/d81/classTrigConf_1_1DiffStruct" kindref="compound">TrigConf::DiffStruct</ref>*</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">TrigConf::HLTSequence::compareTo(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d5/df5/classTrigConf_1_1HLTSequence" kindref="compound" tooltip="HLT sequence configuration information.">HLTSequence</ref>*<sp/>o)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><ref refid="d2/d81/classTrigConf_1_1DiffStruct" kindref="compound">DiffStruct</ref><sp/>*<sp/>ds<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d2/d81/classTrigConf_1_1DiffStruct" kindref="compound">DiffStruct</ref>(</highlight><highlight class="stringliteral">&quot;SEQUENCE&quot;</highlight><highlight class="normal">,<sp/><ref refid="d6/db2/structTrigConf_1_1name" kindref="compound">name</ref>());</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/>ds-&gt;check(</highlight><highlight class="stringliteral">&quot;number_algs&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)algorithms().size(),<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)o-&gt;<ref refid="d5/df5/classTrigConf_1_1HLTSequence_1a4623399f71f27468aa420f2ae3fd65ed" kindref="member" tooltip="accessor to the list of algorithms">algorithms</ref>().size()<sp/>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/>ds-&gt;check(</highlight><highlight class="stringliteral">&quot;number_inputs&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)inputTEs().size(),<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)o-&gt;<ref refid="d5/df5/classTrigConf_1_1HLTSequence_1a74a23155a5012ea48df543ecc17556ab" kindref="member" tooltip="accessor to the list of input trigger elements">inputTEs</ref>().size()<sp/>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(algorithms().size()==o-&gt;<ref refid="d5/df5/classTrigConf_1_1HLTSequence_1a4623399f71f27468aa420f2ae3fd65ed" kindref="member" tooltip="accessor to the list of algorithms">algorithms</ref>().size())<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;algorithms().size();<sp/>++i)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ds-&gt;check(</highlight><highlight class="stringliteral">&quot;alg_&quot;</highlight><highlight class="normal"><sp/>+<sp/>boost::lexical_cast&lt;string,size_t&gt;(i),<sp/>algorithms()[i],<sp/>o-&gt;<ref refid="d5/df5/classTrigConf_1_1HLTSequence_1a4623399f71f27468aa420f2ae3fd65ed" kindref="member" tooltip="accessor to the list of algorithms">algorithms</ref>()[i]<sp/>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ds-&gt;empty())<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>ds;<sp/>ds=0;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ds;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><ref refid="d5/df5/classTrigConf_1_1HLTSequence_1ac03d4c700426af700f7f53de85b8afc8" kindref="member" tooltip="print method">TrigConf::HLTSequence::print</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>indent,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>detail)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(detail&gt;=4)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;HLTSequence<sp/>&quot;</highlight><highlight class="normal">;<sp/>printNameIdV();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(detail&gt;=5)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inputTEs<sp/><sp/>:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>first<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<ref refid="db/d7d/classTrigConf_1_1HLTTriggerElement" kindref="compound" tooltip="HLT trigger element configuration information.">HLTTriggerElement</ref>*<sp/>te:<sp/>m_inputTEs)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(first)<sp/>{first=</highlight><highlight class="keyword">false</highlight><highlight class="normal">;}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>*te;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_topoStartTE)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topoStartTE<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>*m_topoStartTE<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>algorithms:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>first<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uint<sp/>width<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>alg:<sp/>m_algorithms)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>width<sp/>+=<sp/>alg.size();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(first)<sp/>{first=</highlight><highlight class="keyword">false</highlight><highlight class="normal">;}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal">;<sp/>width+=2;<sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(width&gt;=140)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>width=0;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>alg;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outputTE<sp/><sp/><sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>outputTE()-&gt;name()<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal">std::ostream<sp/>&amp;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">TrigConf::operator&lt;&lt;(std::ostream<sp/>&amp;<sp/>o,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d5/df5/classTrigConf_1_1HLTSequence" kindref="compound" tooltip="HLT sequence configuration information.">TrigConf::HLTSequence</ref><sp/>&amp;<sp/>s)<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/>o<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;-<sp/>--<sp/>HLTSequence<sp/>printout<sp/>----------------------------------<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/>o<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;-<sp/>--<sp/>inputTEs<sp/>:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/>vector&lt;TrigConf::HLTTriggerElement*&gt;::const_iterator<sp/>inputTE<sp/>=<sp/>s.m_inputTEs.begin();</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>inputTE<sp/>!=<sp/>s.m_inputTEs.end();<sp/>inputTE++)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(inputTE<sp/>!=<sp/>s.m_inputTEs.begin())<sp/>o<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>o<sp/>&lt;&lt;<sp/>*(*inputTE);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(s.m_topoStartTE)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>o<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>o<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;-<sp/>--<sp/>topoStartTE<sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>o<sp/>&lt;&lt;<sp/>*s.m_topoStartTE;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/>o<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n-<sp/>--<sp/>algorithms&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/>vector&lt;std::string&gt;::const_iterator<sp/>algorithm<sp/>=<sp/>s.m_algorithms.begin();</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>algorithm<sp/>!=<sp/>s.m_algorithms.end();<sp/>algorithm++)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(algorithm<sp/>!=<sp/>s.m_algorithms.begin())<sp/>o<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>o<sp/>&lt;&lt;<sp/>*algorithm;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/>o<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n-<sp/>--<sp/>outputTE<sp/><sp/><sp/>:<sp/>&quot;</highlight><highlight class="normal">;<sp/>o<sp/>&lt;&lt;<sp/>*s.<ref refid="d5/df5/classTrigConf_1_1HLTSequence_1af416abaeb92faca0c29559e00f8ff6b4" kindref="member" tooltip="accessor to the list of output trigger elements (just 1)">outputTE</ref>();</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/>o<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n-<sp/>----------------------------------------------------------<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>o;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>HLTSequence::__str__()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/>stringstream<sp/>s;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/>s<sp/>&lt;&lt;<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s.str();</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfHLTData/Root/HLTSequence.cxx"/>
+  </compounddef>
+</doxygen>

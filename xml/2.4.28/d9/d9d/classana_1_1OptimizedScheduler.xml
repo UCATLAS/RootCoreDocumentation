@@ -1,0 +1,458 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d9/d9d/classana_1_1OptimizedScheduler" kind="class" prot="public">
+    <compoundname>ana::OptimizedScheduler</compoundname>
+    <basecompoundref refid="d8/d10/classana_1_1IToolScheduler" prot="public" virt="virtual">ana::IToolScheduler</basecompoundref>
+    <basecompoundref refid="d5/dbb/classasg_1_1AsgTool" prot="public" virt="virtual">asg::AsgTool</basecompoundref>
+    <includes refid="d7/d9e/OptimizedScheduler_8h" local="no">OptimizedScheduler.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d9/d9d/classana_1_1OptimizedScheduler_1a2bc9ff969e82e248403d581946420fbe" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="d0/df4/classana_1_1OptimizedTool" kindref="compound">OptimizedTool</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::unique_ptr&lt;OptimizedTool&gt; &gt; ana::OptimizedScheduler::m_tools</definition>
+        <argsstring></argsstring>
+        <name>m_tools</name>
+        <briefdescription>
+<para>description: the list of object definitions we are using </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="109" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d9d/classana_1_1OptimizedScheduler_1a9d18276c2a6620e23f267ea74da10ff2" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="d7/d1b/classana_1_1OptimizedStore" kindref="compound">OptimizedStore</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;OptimizedStore&gt; ana::OptimizedScheduler::m_master</definition>
+        <argsstring></argsstring>
+        <name>m_master</name>
+        <briefdescription>
+<para>description: the master object we are using </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="113" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d9d/classana_1_1OptimizedScheduler_1a6e930b314cedd19c2ff4321e958dbc00" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">CP::SystematicSet</ref> &gt;</type>
+        <definition>std::vector&lt;CP::SystematicSet&gt; ana::OptimizedScheduler::m_targetSystematics</definition>
+        <argsstring></argsstring>
+        <name>m_targetSystematics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>description: the list of nuisance parameter points we are evaluating </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="118" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d9d/classana_1_1OptimizedScheduler_1ab7bae5a1f8f2e8e470582bce19b705ff" prot="private" static="no" mutable="no">
+        <type>std::map&lt; <ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">CP::SystematicSet</ref>, std::unique_ptr&lt; <ref refid="df/dea/classana_1_1OptimizedObjects" kindref="compound">OptimizedObjects</ref> &gt; &gt;</type>
+        <definition>std::map&lt;CP::SystematicSet,std::unique_ptr&lt;OptimizedObjects&gt; &gt; ana::OptimizedScheduler::m_objectsMap</definition>
+        <argsstring></argsstring>
+        <name>m_objectsMap</name>
+        <briefdescription>
+<para>description: the map of event objects </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="122" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d9d/classana_1_1OptimizedScheduler_1ac2caf53954a53be394b45525980c527f" prot="private" static="no" mutable="no">
+        <type><ref refid="df/dea/classana_1_1OptimizedObjects" kindref="compound">OptimizedObjects</ref> *</type>
+        <definition>OptimizedObjects* ana::OptimizedScheduler::m_currentObjects</definition>
+        <argsstring></argsstring>
+        <name>m_currentObjects</name>
+        <briefdescription>
+<para>description: the current event objects </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="126" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d9d/classana_1_1OptimizedScheduler_1a0aafe19f2eca472cf3e00e94cb8df214" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ana::OptimizedScheduler::m_runNumber</definition>
+        <argsstring></argsstring>
+        <name>m_runNumber</name>
+        <briefdescription>
+<para>the current run number </para>        </briefdescription>
+        <detaileddescription>
+<para>this is used together with m_eventNumber to determine whether we started on a new event </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="134" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d9d/classana_1_1OptimizedScheduler_1a3a21435db77520051b2b66e5874d343e" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ana::OptimizedScheduler::m_eventNumber</definition>
+        <argsstring></argsstring>
+        <name>m_eventNumber</name>
+        <briefdescription>
+<para>the current event number </para>        </briefdescription>
+        <detaileddescription>
+<para>this is used together with m_runNumber to determine whether we started on a new event </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="142" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d9/d9d/classana_1_1OptimizedScheduler_1ab12519b91acb9399b72f44de876ebf71" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ana::OptimizedScheduler::testInvariant</definition>
+        <argsstring>() const </argsstring>
+        <name>testInvariant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: test the invariant of this object guarantee: no-fail </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="44" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/OptimizedScheduler.cxx" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d9d/classana_1_1OptimizedScheduler_1a289a2dfdd9ed02172e1e7ce9d9691280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ana::OptimizedScheduler::OptimizedScheduler</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>OptimizedScheduler</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: standard constructor guarantee: strong failures: out of memory II </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="51" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/OptimizedScheduler.cxx" bodystart="40" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d9d/classana_1_1OptimizedScheduler_1ab4047da20a4d4e29efc58b017bf84f03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ana::OptimizedScheduler::~OptimizedScheduler</definition>
+        <argsstring>()</argsstring>
+        <name>~OptimizedScheduler</name>
+        <briefdescription>
+<para>standard destructor </para>        </briefdescription>
+        <detaileddescription>
+<para>I defined my own destructor to break include file dependencies in <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref> <simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="61" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/OptimizedScheduler.cxx" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d9d/classana_1_1OptimizedScheduler_1ad0be3b5c2f9a46de9e48498c68dcc633" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode ana::OptimizedScheduler::initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>initialize</name>
+        <reimplements refid="d5/dbb/classasg_1_1AsgTool_1a55b3c013a3e54ae4c1d0d76de8e1e726">initialize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dummy implementation of the initialisation function</para><para>It&apos;s here to allow the dual-use tools to skip defining an initialisation function. Since many are doing so... </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="70" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/OptimizedScheduler.cxx" bodystart="57" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d9d/classana_1_1OptimizedScheduler_1ae8a38b448fe94fa03753fbca8a6a1686" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode ana::OptimizedScheduler::addTool</definition>
+        <argsstring>(IAnaTool *tool) override</argsstring>
+        <name>addTool</name>
+        <reimplements refid="d8/d10/classana_1_1IToolScheduler_1ac919278000c93345815d43611f8f54bf">addTool</reimplements>
+        <param>
+          <type><ref refid="dd/d79/classana_1_1IAnaTool" kindref="compound">IAnaTool</ref> *</type>
+          <declname>tool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: add another tool to the scheduler guarantee: strong failures: out of memory I </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="73" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/OptimizedScheduler.cxx" bodystart="92" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d9d/classana_1_1OptimizedScheduler_1a477cc50cec9f596105819bd26f862bad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">CP::SystematicSet</ref></type>
+        <definition>CP::SystematicSet ana::OptimizedScheduler::affectingSystematics</definition>
+        <argsstring>() const override</argsstring>
+        <name>affectingSystematics</name>
+        <reimplements refid="d8/d10/classana_1_1IToolScheduler_1ae89effa781846ba84ba38b5f264407d8">affectingSystematics</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>returns: the list of all systematics the tools can be affected by guarantee: strong failures: out of memory II </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="76" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/OptimizedScheduler.cxx" bodystart="104" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d9d/classana_1_1OptimizedScheduler_1a4ffc1ca1fffdfd83e59a9588c060f9f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">CP::SystematicSet</ref></type>
+        <definition>CP::SystematicSet ana::OptimizedScheduler::recommendedSystematics</definition>
+        <argsstring>() const override</argsstring>
+        <name>recommendedSystematics</name>
+        <reimplements refid="d8/d10/classana_1_1IToolScheduler_1a55a1ba97b684cdd9019e352985d1da68">recommendedSystematics</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>returns: the list of all systematics the tools recommend to use guarantee: strong failures: out of memory II </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="79" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/OptimizedScheduler.cxx" bodystart="119" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d9d/classana_1_1OptimizedScheduler_1a1aa655854ac2c0cb75665fbebca1a6e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode ana::OptimizedScheduler::applySystematicVariation</definition>
+        <argsstring>(const CP::SystematicSet &amp;systConfig) override</argsstring>
+        <name>applySystematicVariation</name>
+        <reimplements refid="d8/d10/classana_1_1IToolScheduler_1a3eae2e170228e6b81b69cabdc5131605">applySystematicVariation</reimplements>
+        <param>
+          <type>const <ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">CP::SystematicSet</ref> &amp;</type>
+          <declname>systConfig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: configure this tool for the given list of systematic variations. any requested systematics that are not affecting this tool will be silently ignored (unless they cause other errors). guarantee: basic failures: tool specific </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="83" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/OptimizedScheduler.cxx" bodystart="134" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d9d/classana_1_1OptimizedScheduler_1a29627368834251a00b1b00b5e160a8cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode ana::OptimizedScheduler::fillEventObjects</definition>
+        <argsstring>(IEventObjects *&amp;object) override</argsstring>
+        <name>fillEventObjects</name>
+        <reimplements refid="d8/d10/classana_1_1IToolScheduler_1a6267e6fb7b5a007e46d2b594337fc51e">fillEventObjects</reimplements>
+        <param>
+          <type><ref refid="d4/d77/classana_1_1IEventObjects" kindref="compound">IEventObjects</ref> *&amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: fill the event objects structure with the fully corrected objects for the current systematics guarantee: basic failures: tool specific warning: this should only be called once per event </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="87" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/OptimizedScheduler.cxx" bodystart="151" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d9d/classana_1_1OptimizedScheduler_1a3a2e191baff8b84f1f5314f0648a6839" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const std::vector&lt; <ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">CP::SystematicSet</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt; CP::SystematicSet &gt; &amp; ana::OptimizedScheduler::systematics</definition>
+        <argsstring>() const override</argsstring>
+        <name>systematics</name>
+        <reimplements refid="d8/d10/classana_1_1IToolScheduler_1ac91db6912e1b8ce8852994407003d8b2">systematics</reimplements>
+        <briefdescription>
+<para>the list of systematics configured </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>no-fail </para></simplesect>
+<simplesect kind="pre"><para><ref refid="d9/d9d/classana_1_1OptimizedScheduler_1ad0be3b5c2f9a46de9e48498c68dcc633" kindref="member">initialize()</ref> has been called </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="91" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/OptimizedScheduler.cxx" bodystart="187" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d9d/classana_1_1OptimizedScheduler_1a82bd46dcee7c1df1bd1924697a7a792b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode ana::OptimizedScheduler::setSystematics</definition>
+        <argsstring>(const std::vector&lt; CP::SystematicSet &gt; &amp;val_systematics) override</argsstring>
+        <name>setSystematics</name>
+        <reimplements refid="d8/d10/classana_1_1IToolScheduler_1a943a63e1f0b0545f9cdcded1892b8933">setSystematics</reimplements>
+        <param>
+          <type>const std::vector&lt; <ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">CP::SystematicSet</ref> &gt; &amp;</type>
+          <declname>val_systematics</declname>
+        </param>
+        <briefdescription>
+<para>set the value of <ref refid="d9/d9d/classana_1_1OptimizedScheduler_1a3a2e191baff8b84f1f5314f0648a6839" kindref="member">systematics</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>basic </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>systematics configuration error </para></simplesect>
+<simplesect kind="pre"><para><ref refid="d9/d9d/classana_1_1OptimizedScheduler_1ad0be3b5c2f9a46de9e48498c68dcc633" kindref="member">initialize()</ref> has been called </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="96" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/OptimizedScheduler.cxx" bodystart="196" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d9d/classana_1_1OptimizedScheduler_1a0dde1aee3a1f32d2a8327f539dc11ddb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="df/d7c/classana_1_1EventData" kindref="compound">EventData</ref></type>
+        <definition>EventData ana::OptimizedScheduler::getEventData</definition>
+        <argsstring>() const override</argsstring>
+        <name>getEventData</name>
+        <reimplements refid="d8/d10/classana_1_1IToolScheduler_1ad862f517492f358eb78445259190269e">getEventData</reimplements>
+        <briefdescription>
+<para>make an <ref refid="df/d7c/classana_1_1EventData" kindref="compound">EventData</ref> object describing the objects created </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para>out of memory II </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="99" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/OptimizedScheduler.cxx" bodystart="237" bodyend="248"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d9/d9d/classana_1_1OptimizedScheduler_1aed5d1cf5f07c76b410d8098c8783fc87" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ana::OptimizedScheduler::isNewEvent</definition>
+        <argsstring>()</argsstring>
+        <name>isNewEvent</name>
+        <briefdescription>
+<para>whether we are on a new event </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Guarantee</title><para>strong </para></simplesect>
+<simplesect kind="par"><title>Failures</title><para><ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> failures </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="151" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/Root/OptimizedScheduler.cxx" bodystart="171" bodyend="182"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The optimized tool scheduler.</para><para>Holds and manages the <ref refid="d7/d1b/classana_1_1OptimizedStore" kindref="compound">OptimizedStore</ref> and the OptimizedTools. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="15456">
+        <label>ana::OptimizedScheduler</label>
+        <link refid="d9/d9d/classana_1_1OptimizedScheduler"/>
+        <childnode refid="15457" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15459" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15459">
+        <label>asg::AsgTool</label>
+        <link refid="d5/dbb/classasg_1_1AsgTool"/>
+        <childnode refid="15458" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15458">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="15457">
+        <label>ana::IToolScheduler</label>
+        <link refid="d8/d10/classana_1_1IToolScheduler"/>
+        <childnode refid="15458" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15460">
+        <label>ana::OptimizedScheduler</label>
+        <link refid="d9/d9d/classana_1_1OptimizedScheduler"/>
+        <childnode refid="15461" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15463" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15464" relation="usage">
+          <edgelabel>m_currentObjects</edgelabel>
+        </childnode>
+      </node>
+      <node id="15470">
+        <label>StoreGateSvc</label>
+        <link refid="dd/d95/classStoreGateSvc"/>
+      </node>
+      <node id="15467">
+        <label>string</label>
+      </node>
+      <node id="15471">
+        <label>ana::OptimizedStore::InfoType</label>
+        <link refid="d3/d60/structana_1_1OptimizedStore_1_1InfoType"/>
+        <childnode refid="15466" relation="usage">
+          <edgelabel>systematics</edgelabel>
+        </childnode>
+      </node>
+      <node id="15463">
+        <label>asg::AsgTool</label>
+        <link refid="d5/dbb/classasg_1_1AsgTool"/>
+        <childnode refid="15462" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15462">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="15469">
+        <label>ana::OptimizedStore::Pimpl</label>
+        <link refid="dd/ddb/structana_1_1OptimizedStore_1_1Pimpl"/>
+        <childnode refid="15470" relation="usage">
+          <edgelabel>store</edgelabel>
+        </childnode>
+        <childnode refid="15471" relation="usage">
+          <edgelabel>types</edgelabel>
+        </childnode>
+      </node>
+      <node id="15465">
+        <label>ana::IEventObjects</label>
+        <link refid="d4/d77/classana_1_1IEventObjects"/>
+      </node>
+      <node id="15468">
+        <label>ana::OptimizedStore</label>
+        <link refid="d7/d1b/classana_1_1OptimizedStore"/>
+        <childnode refid="15469" relation="usage">
+          <edgelabel>pimpl</edgelabel>
+        </childnode>
+      </node>
+      <node id="15466">
+        <label>CP::SystematicSet</label>
+        <link refid="d4/d52/classCP_1_1SystematicSet"/>
+        <childnode refid="15467" relation="usage">
+          <edgelabel>m_joinedName</edgelabel>
+        </childnode>
+      </node>
+      <node id="15461">
+        <label>ana::IToolScheduler</label>
+        <link refid="d8/d10/classana_1_1IToolScheduler"/>
+        <childnode refid="15462" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15464">
+        <label>ana::OptimizedObjects</label>
+        <link refid="df/dea/classana_1_1OptimizedObjects"/>
+        <childnode refid="15465" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15466" relation="usage">
+          <edgelabel>m_systematics</edgelabel>
+        </childnode>
+        <childnode refid="15468" relation="usage">
+          <edgelabel>m_master</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" line="33" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedScheduler.h" bodystart="32" bodyend="152"/>
+    <listofallmembers>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1ae8a38b448fe94fa03753fbca8a6a1686" prot="public" virt="virtual"><scope>ana::OptimizedScheduler</scope><name>addTool</name></member>
+      <member refid="d8/d10/classana_1_1IToolScheduler_1afd6cb82b774e5b2dcf4323247c0a3542" prot="public" virt="non-virtual"><scope>ana::OptimizedScheduler</scope><name>addTools</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1a477cc50cec9f596105819bd26f862bad" prot="public" virt="virtual"><scope>ana::OptimizedScheduler</scope><name>affectingSystematics</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1a1aa655854ac2c0cb75665fbebca1a6e1" prot="public" virt="virtual"><scope>ana::OptimizedScheduler</scope><name>applySystematicVariation</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a47f02c756c6d6026d03e0d4d68d82a94" prot="public" virt="non-virtual"><scope>ana::OptimizedScheduler</scope><name>AsgTool</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1a29627368834251a00b1b00b5e160a8cb" prot="public" virt="virtual"><scope>ana::OptimizedScheduler</scope><name>fillEventObjects</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1a0dde1aee3a1f32d2a8327f539dc11ddb" prot="public" virt="virtual"><scope>ana::OptimizedScheduler</scope><name>getEventData</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a5d9d9eae0988784fb6c257e0a2440ca6" prot="public" virt="non-virtual"><scope>ana::OptimizedScheduler</scope><name>getProperty</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1ad0be3b5c2f9a46de9e48498c68dcc633" prot="public" virt="virtual"><scope>ana::OptimizedScheduler</scope><name>initialize</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1aed5d1cf5f07c76b410d8098c8783fc87" prot="private" virt="non-virtual"><scope>ana::OptimizedScheduler</scope><name>isNewEvent</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1ac2caf53954a53be394b45525980c527f" prot="private" virt="non-virtual"><scope>ana::OptimizedScheduler</scope><name>m_currentObjects</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1a3a21435db77520051b2b66e5874d343e" prot="private" virt="non-virtual"><scope>ana::OptimizedScheduler</scope><name>m_eventNumber</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1a9d18276c2a6620e23f267ea74da10ff2" prot="private" virt="non-virtual"><scope>ana::OptimizedScheduler</scope><name>m_master</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1ab7bae5a1f8f2e8e470582bce19b705ff" prot="private" virt="non-virtual"><scope>ana::OptimizedScheduler</scope><name>m_objectsMap</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1a0aafe19f2eca472cf3e00e94cb8df214" prot="private" virt="non-virtual"><scope>ana::OptimizedScheduler</scope><name>m_runNumber</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1a6e930b314cedd19c2ff4321e958dbc00" prot="private" virt="non-virtual"><scope>ana::OptimizedScheduler</scope><name>m_targetSystematics</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1a2bc9ff969e82e248403d581946420fbe" prot="private" virt="non-virtual"><scope>ana::OptimizedScheduler</scope><name>m_tools</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a3aeba8f7ad5ade0197f5848fe9e4480e" prot="public" virt="non-virtual"><scope>ana::OptimizedScheduler</scope><name>msg_level_name</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1a289a2dfdd9ed02172e1e7ce9d9691280" prot="public" virt="non-virtual"><scope>ana::OptimizedScheduler</scope><name>OptimizedScheduler</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1af1aac990b958e92bf38123318d926e67" prot="public" virt="pure-virtual" ambiguityscope="ana::"><scope>ana::OptimizedScheduler</scope><name>print</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1af4cc6ba53b6505045c2866d4e30e821d" prot="public" virt="virtual" ambiguityscope="asg::AsgTool::"><scope>ana::OptimizedScheduler</scope><name>print</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1a4ffc1ca1fffdfd83e59a9588c060f9f0" prot="public" virt="virtual"><scope>ana::OptimizedScheduler</scope><name>recommendedSystematics</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1a82bd46dcee7c1df1bd1924697a7a792b" prot="public" virt="virtual"><scope>ana::OptimizedScheduler</scope><name>setSystematics</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1a3a2e191baff8b84f1f5314f0648a6839" prot="public" virt="virtual"><scope>ana::OptimizedScheduler</scope><name>systematics</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1ab12519b91acb9399b72f44de876ebf71" prot="public" virt="non-virtual"><scope>ana::OptimizedScheduler</scope><name>testInvariant</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1abf22f7aa60258c67b79cf67bf70a3a5b" prot="public" virt="non-virtual"><scope>ana::OptimizedScheduler</scope><name>~AsgTool</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1a77b49d52f1f8c272cb665b8309d6082d" prot="public" virt="virtual"><scope>ana::OptimizedScheduler</scope><name>~IAsgTool</name></member>
+      <member refid="d9/d9d/classana_1_1OptimizedScheduler_1ab4047da20a4d4e29efc58b017bf84f03" prot="public" virt="non-virtual"><scope>ana::OptimizedScheduler</scope><name>~OptimizedScheduler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,2912 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="de/d95/classxAOD_1_1TEvent" kind="class" prot="public">
+    <compoundname>xAOD::TEvent</compoundname>
+    <basecompoundref refid="de/daf/classxAOD_1_1TVirtualEvent" prot="public" virt="non-virtual">xAOD::TVirtualEvent</basecompoundref>
+    <derivedcompoundref refid="d9/d22/classTEventClass" prot="public" virt="non-virtual">TEventClass</derivedcompoundref>
+    <derivedcompoundref refid="d1/ddf/classxAOD_1_1TPyEvent" prot="public" virt="non-virtual">xAOD::TPyEvent</derivedcompoundref>
+    <includes refid="de/d44/TEvent_8h" local="no">TEvent.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Setup functions</header>
+      <description><para><anchor id="_1amgrp148f5a910b58aab554d2c77cc8bf6ebc"/> </para></description>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a373125b7b2774de9464afa65b8f413cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::readFrom</definition>
+        <argsstring>(::TFile *file, Bool_t useTreeCache=kTRUE, const char *treeName=EVENT_TREE_NAME)</argsstring>
+        <name>readFrom</name>
+        <param>
+          <type>::TFile *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>Bool_t</type>
+          <declname>useTreeCache</declname>
+          <defval>kTRUE</defval>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>treeName</declname>
+          <defval><ref refid="de/d95/classxAOD_1_1TEvent_1a3e39fc579b4d1f6c423334caf4fbdd90" kindref="member">EVENT_TREE_NAME</ref></defval>
+        </param>
+        <briefdescription>
+<para>Connect the object to a new input file. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function takes care of connecting the event object to a new input file. It reads in the metadata of the input file needed for reading the file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the file being read </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>useTreeCache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag for turning on/off the usage of TTreeCache </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>treeName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the input tree </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if successful, <computeroutput>kFALSE</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="108" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="339" bodyend="475"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a9aba64d79df826d8f9d1220f727b97ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::readFrom</definition>
+        <argsstring>(::TTree *tree, Bool_t useTreeCache=kTRUE)</argsstring>
+        <name>readFrom</name>
+        <param>
+          <type>::TTree *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>Bool_t</type>
+          <declname>useTreeCache</declname>
+          <defval>kTRUE</defval>
+        </param>
+        <briefdescription>
+<para>Connect the object to a new input tree/chain. </para>        </briefdescription>
+        <detaileddescription>
+<para>This version of the function sets up the object to readin information from a tree/chain. Using it with a TTree pointer makes not much sense, but using it with a TChain pointer could be a very valid usage mode.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to a TTree or a TChain </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>useTreeCache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag for switching TTreeCache usage on/off </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if successful, <computeroutput>kFALSE</computeroutput> when not </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="110" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="485" bodyend="560"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a692abe196e60b809f2c57e7930d9401e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::writeTo</definition>
+        <argsstring>(::TFile *file, Int_t autoFlush=200, const char *treeName=EVENT_TREE_NAME)</argsstring>
+        <name>writeTo</name>
+        <param>
+          <type>::TFile *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>Int_t</type>
+          <declname>autoFlush</declname>
+          <defval>200</defval>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>treeName</declname>
+          <defval><ref refid="de/d95/classxAOD_1_1TEvent_1a3e39fc579b4d1f6c423334caf4fbdd90" kindref="member">EVENT_TREE_NAME</ref></defval>
+        </param>
+        <briefdescription>
+<para>Connect the object to an output file. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function should be called on a file opened be the user, before any event processing would occur. It sets up the output event tree.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file that the event data should be written to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>autoFlush</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auto-flush setting to use on the output TTree </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>treeName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the output event tree </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if successful, <computeroutput>kFALSE</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="113" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="570" bodyend="604"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a4ac4ee0bf6d12a151be6e909e27e3fcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::finishWritingTo</definition>
+        <argsstring>(::TFile *file)</argsstring>
+        <name>finishWritingTo</name>
+        <param>
+          <type>::TFile *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Finish writing to an output file. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function needs to be called when the user is done writing events to a file, before (s)he would close the file itself.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file that the event data is written to </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if successful, <computeroutput>kFALSE</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="115" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="612" bodyend="731"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a5423ace77c19aaf271c63334e32b2174" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xAOD::TEvent::setActive</definition>
+        <argsstring>() const </argsstring>
+        <name>setActive</name>
+        <briefdescription>
+<para>Set this event object as the currently active one. </para>        </briefdescription>
+        <detaileddescription>
+<para>Setting <ref refid="de/d95/classxAOD_1_1TEvent" kindref="compound">TEvent</ref> objects happens automatically when reading a file, but when writing a file from scratch, the code doesn&apos;t necessarily know which <ref refid="de/d95/classxAOD_1_1TEvent" kindref="compound">TEvent</ref> object a given smart pointer should &quot;belong to&quot;. This function helps the user with setting this up. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="118" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="738" bodyend="747"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1ab10bcece69a8bc7fb3f388f96feaacfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xAOD::TEvent::setAuxItemList</definition>
+        <argsstring>(const std::string &amp;containerKey, const std::string &amp;itemList)</argsstring>
+        <name>setAuxItemList</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>containerKey</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>itemList</declname>
+        </param>
+        <briefdescription>
+<para>Configure which dynamic variables to write out for a given store. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function receives the rules for selecting which dynamic auxiliary branches should be written for a given container, in the exact same format in which we need to set it in the <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref> output ItemList.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>containerKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the auxiliary container in question </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>itemList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable list according to the ... formatting rules </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="122" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="756" bodyend="775"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1accb2d6fd8b3886f4d66453de233d7615" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::addListener</definition>
+        <argsstring>(TVirtualIncidentListener *listener)</argsstring>
+        <name>addListener</name>
+        <param>
+          <type><ref refid="dc/d1b/classxAOD_1_1TVirtualIncidentListener" kindref="compound">TVirtualIncidentListener</ref> *</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+<para>Register an incident listener object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function works pretty much like IIncidentSvc::addListener does in <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref>. It tells the <ref refid="de/d95/classxAOD_1_1TEvent" kindref="compound">TEvent</ref> object that when certain &quot;interesting
+       incidents&quot; happen, a given object should be notified about it.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the object that should be notified </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The usual <ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref> types </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="125" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="784" bodyend="812"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a7180825a285c43d7eefdf7f83f3b7854" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::removeListener</definition>
+        <argsstring>(TVirtualIncidentListener *listener)</argsstring>
+        <name>removeListener</name>
+        <param>
+          <type><ref refid="dc/d1b/classxAOD_1_1TVirtualIncidentListener" kindref="compound">TVirtualIncidentListener</ref> *</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+<para>Remove an incident listener object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function allows us to remove a listener when for instance a metadata tool is deleted during a job.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the listener that should be removed </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The usual <ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref> types </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="127" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="820" bodyend="839"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1af41ced199a022abb83fd90c9398a3703" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xAOD::TEvent::clearListeners</definition>
+        <argsstring>()</argsstring>
+        <name>clearListeners</name>
+        <briefdescription>
+<para>Remove all listeners from the object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function can be used to remove all the listeners from the internal list. Should not be necessary under regular circumstances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="129" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="844" bodyend="848"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a73379b221c401b4e36bd5fda6ceb92a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::addNameRemap</definition>
+        <argsstring>(const std::string &amp;onfile, const std::string &amp;newName)</argsstring>
+        <name>addNameRemap</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>onfile</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>newName</declname>
+        </param>
+        <briefdescription>
+<para>Add a name re-mapping rule. </para>        </briefdescription>
+        <detaileddescription>
+<para>The names of containers can change during the lifetime of the experiment. One such change happened after the DC14 exercise, when many containers got a new name. (Like &quot;ElectronCollection&quot; became simply &quot;Electrons&quot;.)</para><para>This function allows us to create aliases with which certain containers should be accessible. So that the analyser would be able to access older files, while using the latest container name(s).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>onfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the container as it was saved into the input file </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The alias with which the object/container should be accessible </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The usual <ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref> types </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>Save the new name association: </para>        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="133" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="864" bodyend="892"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1ad0b83b386f685df6f4d3d91a077916c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xAOD::TEvent::clearNameRemap</definition>
+        <argsstring>()</argsstring>
+        <name>clearNameRemap</name>
+        <briefdescription>
+<para>Clear the current name re-mapping. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function simply clears out any existing name remapping declarations. In case the remapping rules need to be changed in the code in some complicated way. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="135" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="898" bodyend="902"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1aa15c26c79f5b47394f678c34b2e18e66" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xAOD::TEvent::printNameRemap</definition>
+        <argsstring>() const </argsstring>
+        <name>printNameRemap</name>
+        <briefdescription>
+<para>Print the current name re-mapping rules. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function can be used for debugging, to check what container/object name remapping rules are in place for the current <ref refid="de/d95/classxAOD_1_1TEvent" kindref="compound">TEvent</ref> object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="137" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="907" bodyend="927"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Event data accessor/modifier functions</header>
+      <description><para><anchor id="_1amgrpf8124c4e51f9708a3eb2942c90303691"/> </para></description>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a3b92c86df4409b99960328dd263792ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type>::Bool_t</type>
+        <definition>Bool_t xAOD::TEvent::contains</definition>
+        <argsstring>(const std::string &amp;key)</argsstring>
+        <name>contains</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Function checking if an object is available from the store. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function works pretty much like StoreGateSvc::contains. It can be used to check if an object with a given type having a given key can be retrieved from the event.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) of the object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the object is available, <computeroutput>kFALSE</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="146" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.icc" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1aca57bfb6ea9448c94cadcd2456f82609" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type>::Bool_t</type>
+        <definition>Bool_t xAOD::TEvent::transientContains</definition>
+        <argsstring>(const std::string &amp;key) const </argsstring>
+        <name>transientContains</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Function checking if an object is already in memory. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function works pretty much like StoreGateSvc::transientContains. It doesn&apos;t try to do any I/O operations, it just checks if an object of a given type, with a given key, is already in memory.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) of the object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the object is already in memory, <computeroutput>kFALSE</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="149" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.icc" bodystart="37" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a85e9bb280df774885102075cbf7b8e06" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::retrieve</definition>
+        <argsstring>(const T *&amp;obj, const std::string &amp;key)</argsstring>
+        <name>retrieve</name>
+        <param>
+          <type>const <ref refid="d1/def/classT" kindref="compound">T</ref> *&amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve either an input or an output object from the event. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function needs to be used when retrieving an object either from the input or the output object list. The returned object can not be modified.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer that will be set to the object requested </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) of the object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the operation was successful, <computeroutput>kFALSE</computeroutput> if it wasn&apos;t </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="153" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.icc" bodystart="53" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1aa602e807821e403a6443c11060174916" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::retrieve</definition>
+        <argsstring>(T *&amp;obj, const std::string &amp;key)</argsstring>
+        <name>retrieve</name>
+        <param>
+          <type><ref refid="d1/def/classT" kindref="compound">T</ref> *&amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve an output object from the event. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function can be used to retrieve an object from the output list. Since only output objects are considered, the function returns a non-const object, allowing downstream code to modify an object that was put into the event somewhere upstream.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer that will be set to the object requested </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) of the object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the operation was successful, <computeroutput>kFALSE</computeroutput> if it wasn&apos;t </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="156" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.icc" bodystart="92" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1af90403dbebbccf4397b29191c4437cad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::record</definition>
+        <argsstring>(T *obj, const std::string &amp;key,::Int_t basketSize=32000,::Int_t splitLevel=0)</argsstring>
+        <name>record</name>
+        <param>
+          <type><ref refid="d1/def/classT" kindref="compound">T</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>basketSize</declname>
+          <defval>32000</defval>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>splitLevel</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Add an output object to the event. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function can be used to add an object to the output. The function takes posession of the object, so the user code must not delete an object that was added to an event.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the object to be added to the event </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) to give the object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>basketSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Basket size for the branch created from the object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>splitLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The split level of the branch to create </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the operation was successful, <computeroutput>kFALSE</computeroutput> if it wasn&apos;t </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="161" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.icc" bodystart="121" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1ad5cdd02952e6d42895a1cba88339a6f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::record</definition>
+        <argsstring>(std::unique_ptr&lt; T &gt; obj, const std::string &amp;key,::Int_t basketSize=32000,::Int_t splitLevel=0)</argsstring>
+        <name>record</name>
+        <param>
+          <type>std::unique_ptr&lt; <ref refid="d1/def/classT" kindref="compound">T</ref> &gt;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>basketSize</declname>
+          <defval>32000</defval>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>splitLevel</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Add an output object to the event, explicitly taking ownership of it. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used to add an object to the output. As the interface clearly states, the function takes posession of the object given to it. Since the user must give up ownership of the object in order to call this function, it doesn&apos;t even need to be said that the user must not delete the object by hand after calling this function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Smart pointer to the object to tbe added to the event </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) to give the object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>basketSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Basket size for the branch created from the object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>splitLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The split level of the branch to create </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the operation was successful, <computeroutput>kFALSE</computeroutput> if it wasn&apos;t </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="165" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.icc" bodystart="142" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1adfccdc9e624b57b3e4619e33c6034f7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dc/d05/classSG_1_1IAuxStore" kindref="compound">SG::IAuxStore</ref> *</type>
+        <definition>SG::IAuxStore* xAOD::TEvent::recordAux</definition>
+        <argsstring>(const std::string &amp;key, SG::IAuxStoreHolder::AuxStoreType type=SG::IAuxStoreHolder::AST_ContainerStore, Int_t basketSize=32000, Int_t splitLevel=0)</argsstring>
+        <name>recordAux</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="dc/d42/classSG_1_1IAuxStoreHolder_1a52b405d522a75932698443c3f01611f9" kindref="member">SG::IAuxStoreHolder::AuxStoreType</ref></type>
+          <declname>type</declname>
+          <defval>SG::IAuxStoreHolder::AST_ContainerStore</defval>
+        </param>
+        <param>
+          <type>Int_t</type>
+          <declname>basketSize</declname>
+          <defval>32000</defval>
+        </param>
+        <param>
+          <type>Int_t</type>
+          <declname>splitLevel</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Add an auxiliary store object to the output. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="172"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a800c972b17c29c69253e2a80cf959621" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::copy</definition>
+        <argsstring>(const std::string &amp;key,::Int_t basketSize=32000,::Int_t splitLevel=0)</argsstring>
+        <name>copy</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>basketSize</declname>
+          <defval>32000</defval>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>splitLevel</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Copy an object directly from the input to the output. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function can be used to easily copy a given object/container to the output, without modifying the contents of it. It only needs to be called on the interface object/container, the copying of the auxiliary data is done automatically, and is steered by the SetAuxItemList function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) of the object/container to copy </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>basketSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional size for the basket associated with the output branch </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>splitLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional split level of the output branch </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="176" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1017" bodyend="1124"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a395b577a2d21f7b45c125539c7a3cf0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::copy</definition>
+        <argsstring>(::Int_t basketSize=32000,::Int_t splitLevel=0)</argsstring>
+        <name>copy</name>
+        <param>
+          <type>::Int_t</type>
+          <declname>basketSize</declname>
+          <defval>32000</defval>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>splitLevel</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Copy all (ROOT readable) objects directly from the input to the output. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is here to make it easy to write code that skims an input file into an output file without applying any modification to the events.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>basketSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional size for the basket associated with the output branch </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>splitLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional split level of the output branch </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="d1/da4/classxAOD_1_1TReturnCode_1a8f212da971e112f15d8bd5bf49c4ed0aadf30f5028ade4d2f7dce8ab294d8400f" kindref="member">xAOD::TReturnCode::kSuccess</ref></computeroutput> if the copy was successful, or <computeroutput><ref refid="d1/da4/classxAOD_1_1TReturnCode_1a8f212da971e112f15d8bd5bf49c4ed0aa65103d5e226744ccf3bf1f920cac2075" kindref="member">xAOD::TReturnCode::kFailure</ref></computeroutput> if not </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="178" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1135" bodyend="1178"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Metadata accessor/modifier functions</header>
+      <description><para><anchor id="_1amgrp19f62ace08f2e25a52e5dc8ac8a87bd4"/> </para></description>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a2dbd8245101cc85a034a28ca4ca47701" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type>::Bool_t</type>
+        <definition>Bool_t xAOD::TEvent::containsMeta</definition>
+        <argsstring>(const std::string &amp;key)</argsstring>
+        <name>containsMeta</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Function checking if a meta-object is available from the store. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function works pretty much like StoreGateSvc::contains for metadata objects. It can be used to check if a metadata object with a given type having a given key can be (const) retrieved.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) of the metadata object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the object is available, <computeroutput>kFALSE</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="187" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.icc" bodystart="167" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1ac9868d2dcd71329f9f11ac3725a2ad16" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type>::Bool_t</type>
+        <definition>Bool_t xAOD::TEvent::transientContainsMeta</definition>
+        <argsstring>(const std::string &amp;key) const </argsstring>
+        <name>transientContainsMeta</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Function checking if a meta-object is already in memory. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function works pretty much like StoreGateSvc::transientContains for metadata objects. It doesn&apos;t try to do any I/O operations, it just checks if an object of a given type, with a given key, can be retrieved in non-const mode.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) of the metadata object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the object is available for modifications, <computeroutput>kFALSE</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="190" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.icc" bodystart="182" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a6eeaa9ae4eb9c2a91706f767de96ea45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::retrieveMetaInput</definition>
+        <argsstring>(const T *&amp;obj, const std::string &amp;key)</argsstring>
+        <name>retrieveMetaInput</name>
+        <param>
+          <type>const <ref refid="d1/def/classT" kindref="compound">T</ref> *&amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve an input metadata object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function can be used to retrieve an object from the input metadata list.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer that will be set to the object requested </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) of the object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The usual <ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref> values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="194" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.icc" bodystart="196" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1aa10977469fe765f8d9fe5acd0b064b8d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::retrieveMetaOutput</definition>
+        <argsstring>(const T *&amp;obj, const std::string &amp;key)</argsstring>
+        <name>retrieveMetaOutput</name>
+        <param>
+          <type>const <ref refid="d1/def/classT" kindref="compound">T</ref> *&amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve an output metadata object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function can be used to retrieve an object from the output metadata list.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer that will be set to the object requested </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) of the object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The usual <ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref> values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="198" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.icc" bodystart="222" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a2c562dc4d26e317f0e32221e07c20cd7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::retrieveMetaOutput</definition>
+        <argsstring>(T *&amp;obj, const std::string &amp;key)</argsstring>
+        <name>retrieveMetaOutput</name>
+        <param>
+          <type><ref refid="d1/def/classT" kindref="compound">T</ref> *&amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve an output metadata object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function can be used to retrieve an object from the output metadata list.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer that will be set to the object requested </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) of the object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The usual <ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref> values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="201" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.icc" bodystart="248" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a11dfdb955bd84935502353a0a7616b75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::recordMeta</definition>
+        <argsstring>(T *obj, const std::string &amp;key,::Int_t basketSize=32000,::Int_t splitLevel=1)</argsstring>
+        <name>recordMeta</name>
+        <param>
+          <type><ref refid="d1/def/classT" kindref="compound">T</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>basketSize</declname>
+          <defval>32000</defval>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>splitLevel</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Add an object to the output file&apos;s metadata. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function can be used to add a metadata object to the output. The function takes posession of the object, so the user code must not delete an object that was added to the output.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the object to be added to the output metadata </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) to give the object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>basketSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Basket size for the branch created from the object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>splitLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The split level of the branch to create </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the operation was successful, <computeroutput>kFALSE</computeroutput> if it wasn&apos;t </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="207" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.icc" bodystart="277" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1af23ea51439ea4c963a5d0ba8e4e9a2e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::recordMeta</definition>
+        <argsstring>(std::unique_ptr&lt; T &gt; obj, const std::string &amp;key,::Int_t basketSize=32000,::Int_t splitLevel=1)</argsstring>
+        <name>recordMeta</name>
+        <param>
+          <type>std::unique_ptr&lt; <ref refid="d1/def/classT" kindref="compound">T</ref> &gt;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>basketSize</declname>
+          <defval>32000</defval>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>splitLevel</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add an object to the output file&apos;s metadata, explicitly taking ownership of it</para><para>This function can be used to add a metadata object to the output. As the interface clearly states, the function takes posession of the object given to it. So it&apos;s not even worth mentioning that the user must not delete the object after giving it to this function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Smart pointer to the object to be added to the output metadata </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) to give the object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>basketSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Basket size for the branch created from the object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>splitLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The split level of the branch to create </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the operation was successful, <computeroutput>kFALSE</computeroutput> if it wasn&apos;t </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="213" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.icc" bodystart="298" bodyend="313"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Persistent data accessor/modifier functions</header>
+      <description><para><anchor id="_1amgrp05b38731af6ec43bbd3b5f40de550f00"/> </para></description>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1abd190a2cfceeeb52c454ed8436c92540" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>::Long64_t</type>
+        <definition>Long64_t xAOD::TEvent::getEntries</definition>
+        <argsstring>() const </argsstring>
+        <name>getEntries</name>
+        <briefdescription>
+<para>Get how many entries are available from the current input file(s). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of events in the input file(s) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="221" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1182" bodyend="1197"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1ab89adb4667489d2782dabd4b69203e32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>::Int_t</type>
+        <definition>Int_t xAOD::TEvent::getEntry</definition>
+        <argsstring>(::Long64_t entry,::Int_t getall=0)</argsstring>
+        <name>getEntry</name>
+        <param>
+          <type>::Long64_t</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>getall</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Function loading a given entry of the input TTree. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used to move to looking at a new entry from the input tree. It doesn&apos;t do any I/O operation at this point, it just remembers which entry the objects should be loaded from later on.</para><para>Unless one calls the function with <computeroutput>getall==1</computeroutput>. In that case all input is force-read. This is necessary when writing out an event that was processed in a load-on-request manner.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entry</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entry from the input tree to load </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>getall</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter deciding if partial reading should be used or not. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes read, or a negative number in case of an error </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="223" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1213" bodyend="1321"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a524c782f48073dc3bbabf6161b8f831d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>::Long64_t</type>
+        <definition>Long64_t xAOD::TEvent::getFiles</definition>
+        <argsstring>() const </argsstring>
+        <name>getFiles</name>
+        <briefdescription>
+<para>Get how many files are available on the currently defined input. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function can be used to get the number of input files that the object currently knows about. This is meant to be used to collect the metadata from each of the input files, or to access the metadata using a transient tree. (<ref refid="dc/d70/classxAOD_1_1TMetaTree" kindref="compound">xAOD::TMetaTree</ref>)</para><para><simplesect kind="return"><para>The number of input files when reading from a TChain, 1 when reading from a TFile, and 0 if the object is not connected to any input </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="226" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1332" bodyend="1341"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a6090a27de542ccd6c8d87489732ce0d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>::Int_t</type>
+        <definition>Int_t xAOD::TEvent::getFile</definition>
+        <argsstring>(::Long64_t file,::Int_t getall=0)</argsstring>
+        <name>getFile</name>
+        <param>
+          <type>::Long64_t</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>getall</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Load the first event for a given file from the input TChain. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function can be used to iterate over the input files specified for the object. It should be most useful for collecting metadata about a set of input files, if there&apos;s no regular event loop done to process them.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file number to load </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>getall</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If set to 1, all connected branches are loaded </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of read bytes on success, or a negative number on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="228" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1352" bodyend="1380"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a5bfccceade4a0564484eea0a9e092b80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>::Int_t</type>
+        <definition>Int_t xAOD::TEvent::fill</definition>
+        <argsstring>()</argsstring>
+        <name>fill</name>
+        <briefdescription>
+<para>Function filling one event into the output tree. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function needs to be called by the user at the end of processing each event that is meant to be written out.</para><para><simplesect kind="return"><para>The number of bytes written if successful, a negative number if not </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="231" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1388" bodyend="1460"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a27fcd1edf34e12da56e514b70fb6e694" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="d8/d1f/classxAOD_1_1EventFormat__v1" kindref="compound">EventFormat</ref> *</type>
+        <definition>const EventFormat * xAOD::TEvent::inputEventFormat</definition>
+        <argsstring>() const </argsstring>
+        <name>inputEventFormat</name>
+        <briefdescription>
+<para>Get information about the input objects. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function makes it possible for the user to investigate the contents of the input file that the object is currently connected to.</para><para>Notice that this doesn&apos;t necessarily mean that all the objects for which metadata is stored, would necessarily be part of the input TTree that this object is connected to.</para><para><simplesect kind="return"><para>The event format object if a file is being read, or a null pointer if no input file is connected at the moment. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="234" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1473" bodyend="1484"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a475b2d4560d9a0f6855ef9c0c26c32e5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="d8/d1f/classxAOD_1_1EventFormat__v1" kindref="compound">EventFormat</ref> *</type>
+        <definition>const EventFormat * xAOD::TEvent::outputEventFormat</definition>
+        <argsstring>() const </argsstring>
+        <name>outputEventFormat</name>
+        <briefdescription>
+<para>Get information about the output objects. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function makes it possible for the user to investigate the content that is being written to the output file.</para><para>Notice that this doesn&apos;t necessarily mean that all the objects for which metadata is stored, would necessarily be part of the output TTree that this object is connected to.</para><para><simplesect kind="return"><para>The event format object if a file is being written, or a null pointer if not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="236" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1496" bodyend="1507"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Functions implementing the TVirtualEvent interface</header>
+      <description><para><anchor id="_1amgrp908aa779f936c1e0530b23b9dc916d1e"/> </para></description>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a7b3a78b610dd33ba349531486f958839" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t xAOD::TEvent::getHash</definition>
+        <argsstring>(const std::string &amp;key) const </argsstring>
+        <name>getHash</name>
+        <reimplements refid="de/daf/classxAOD_1_1TVirtualEvent_1a20307a270fb83f3c5f1f2a968fbcb277">getHash</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Function returning the hash describing an object name. </para>        </briefdescription>
+        <detaileddescription>
+<para>This helper function is mostly needed by the smart pointers of the <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> EDM. Right now it very simply just calculates the hash just based on the key given to the function. But later on it might be good to do some tests here, checking if the event format knows about the specified key or not. This is why it&apos;s not made to be a static function</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String key to turn into a hash </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d4/dc4/structA" kindref="compound">A</ref> hash corresponding to the specified string key </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="244" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1519" bodyend="1532"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1aa81f959071f880d07a04a09c0e6b0bbc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t xAOD::TEvent::getKey</definition>
+        <argsstring>(const void *obj) const </argsstring>
+        <name>getKey</name>
+        <reimplements refid="de/daf/classxAOD_1_1TVirtualEvent_1afeed4071e264f8f63b143559116f1414">getKey</reimplements>
+        <param>
+          <type>const void *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+<para>Function returning the hash describing a known object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used by the smart pointer code to find the identifier of an object that&apos;s already in the event in some way.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the object that we want to look up </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The hashed identifier of the object, or 0 if the object was not found in the event </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="246" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1541" bodyend="1545"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a8e4aabaa53c49136df759661ce08fb24" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; xAOD::TEvent::getName</definition>
+        <argsstring>(const void *obj) const </argsstring>
+        <name>getName</name>
+        <reimplements refid="de/daf/classxAOD_1_1TVirtualEvent_1aafb152ed0046dead3d38806ff9942321">getName</reimplements>
+        <param>
+          <type>const void *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+<para>Function returning the key describing a known object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used by the smart pointer code to find the identifier of an object that&apos;s already in the event in some way.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the object that we want to look up </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The name of the object, or an empty string if the object was not found in the event </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="248" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1554" bodyend="1593"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1aaebd5a0daefc75bf086bd0c893ce67e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; xAOD::TEvent::getName</definition>
+        <argsstring>(uint32_t hash) const </argsstring>
+        <name>getName</name>
+        <reimplements refid="de/daf/classxAOD_1_1TVirtualEvent_1aaf5d7d2ba194607ec7e948ca6ec2c75c">getName</reimplements>
+        <param>
+          <type>uint32_t</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+<para>Function returning the key describing a known object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used primarily when getting the string key of a smart pointer that we read in from a file, or access it in memory.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hashed key for the container/object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The name of the object, or an empty string if the object was not found in the event </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="250" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1602" bodyend="1624"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a6531ff42179b78d04acf432a2b4c1e73" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void *</type>
+        <definition>void * xAOD::TEvent::getOutputObject</definition>
+        <argsstring>(uint32_t key, const std::type_info &amp;ti)</argsstring>
+        <name>getOutputObject</name>
+        <reimplements refid="de/daf/classxAOD_1_1TVirtualEvent_1a01237dfd919b5a35d3e92f129fb5251b">getOutputObject</reimplements>
+        <param>
+          <type>uint32_t</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <briefdescription>
+<para>Function for retrieving an output object in a non-template way. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used by the <ref refid="de/daf/classxAOD_1_1TVirtualEvent" kindref="compound">TVirtualEvent</ref> interface to access an output object with a given hashed key. The function looks up the string key belonging to the hash, and then calls the other GetOutputObject(...) function in the class with that parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hashed key of the output object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type description of the object requested </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d4/dc4/structA" kindref="compound">A</ref> pointer to the requested object, or a null pointer in case of failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="255" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1636" bodyend="1647"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a35fa4683373b12d39cb8b64a8535a8a6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const void *</type>
+        <definition>const void * xAOD::TEvent::getInputObject</definition>
+        <argsstring>(uint32_t key, const std::type_info &amp;ti, bool silent=false)</argsstring>
+        <name>getInputObject</name>
+        <reimplements refid="de/daf/classxAOD_1_1TVirtualEvent_1ac3539de95ecf27c2b4de67b0aeffd5a4">getInputObject</reimplements>
+        <param>
+          <type>uint32_t</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>silent</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Function for retrieving an input object in a non-template way. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used by the <ref refid="de/daf/classxAOD_1_1TVirtualEvent" kindref="compound">TVirtualEvent</ref> interface to access an input object with a given hashed key. The function looks up the string key belonging to the hash, and then calls the other GetInputObject(...) function in the class with that parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hashed key of the input object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type description of the object requested </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>silent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Switch for being silent about failures or not </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d4/dc4/structA" kindref="compound">A</ref> pointer to the requested object, or a null pointer in case of failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="259" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1660" bodyend="1674"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348" prot="public" static="no">
+        <name>EAuxMode</name>
+        <enumvalue id="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348af23745a46dccaeaa88c5adf53064ac85" prot="public">
+          <name>kBranchAccess</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>Access auxiliary data branch-by-branch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348aeafc802359754d9d902f97791f20d9ec" prot="public">
+          <name>kClassAccess</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>Access auxiliary data using the aux containers. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348a89f268521007c479d536d29ee506ee82" prot="public">
+          <name>kAthenaAccess</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+<para>Access containers/objects like <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref> does. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348ac615fe9e9be98902506b3dd228718777" prot="public">
+          <name>kUndefinedAccess</name>
+          <initializer> 3</initializer>
+          <briefdescription>
+<para>Undefined, to be selected by the object. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Auxiliary store &quot;mode&quot;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="78" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="78" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="de/d95/classxAOD_1_1TEvent_1a2f00f30ebeac247b31b9861705668d62" prot="protected" static="no">
+        <type>std::map&lt; std::string, <ref refid="d1/db4/classxAOD_1_1TVirtualManager" kindref="compound">TVirtualManager</ref> * &gt;</type>
+        <definition>typedef std::map&lt; std::string, TVirtualManager* &gt; xAOD::TEvent::Object_t</definition>
+        <argsstring></argsstring>
+        <name>Object_t</name>
+        <briefdescription>
+<para>Definition of the internal data structure type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="324" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/d95/classxAOD_1_1TEvent_1a43414b3a090df7d3d74896ae1fffbecf" prot="protected" static="no">
+        <type>std::vector&lt; <ref refid="dc/d1b/classxAOD_1_1TVirtualIncidentListener" kindref="compound">TVirtualIncidentListener</ref> * &gt;</type>
+        <definition>typedef std::vector&lt; TVirtualIncidentListener* &gt; xAOD::TEvent::Listener_t</definition>
+        <argsstring></argsstring>
+        <name>Listener_t</name>
+        <briefdescription>
+<para>Definition of the structure type holding on to listeners. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="326" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="de/d95/classxAOD_1_1TEvent_1a4bf8e6738fcd7c58a7e8a8c97833e303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class xAOD::TEventBranch</definition>
+        <argsstring></argsstring>
+        <name>xAOD::TEventBranch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="71" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="de/d95/classxAOD_1_1TEvent_1ab483a8c39e7e0bd70a3e59a2160f9e47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class xAOD::TMetaBranch</definition>
+        <argsstring></argsstring>
+        <name>xAOD::TMetaBranch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="72" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="de/d95/classxAOD_1_1TEvent_1aa7aca3125cb14b4f8f72426766a09521" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class xAOD::TFileMerger</definition>
+        <argsstring></argsstring>
+        <name>xAOD::TFileMerger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="73" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="de/d95/classxAOD_1_1TEvent_1adfa6f5c012f86a7894310e2cc33c27f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class xAOD::TTreeMgr</definition>
+        <argsstring></argsstring>
+        <name>xAOD::TTreeMgr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="74" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="de/d95/classxAOD_1_1TEvent_1adc74b459fb5e6b2b739524be92ff7a3f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend::TTree *</type>
+        <definition>::TTree* MakeTransientTree</definition>
+        <argsstring>(TEvent &amp;, const char *)</argsstring>
+        <name>MakeTransientTree</name>
+        <param>
+          <type><ref refid="de/d95/classxAOD_1_1TEvent" kindref="compound">TEvent</ref> &amp;</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="70"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1a177e76fe678eecd0466d7afb7ba562b2" prot="protected" static="yes" mutable="no">
+        <type>const ::Int_t</type>
+        <definition>const ::Int_t xAOD::TEvent::CACHE_SIZE</definition>
+        <argsstring></argsstring>
+        <name>CACHE_SIZE</name>
+        <initializer> 30000000</initializer>
+        <briefdescription>
+<para>Size of a possible TTreeCache (30 MB). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="329" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="329" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1a3e39fc579b4d1f6c423334caf4fbdd90" prot="protected" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char * xAOD::TEvent::EVENT_TREE_NAME</definition>
+        <argsstring></argsstring>
+        <name>EVENT_TREE_NAME</name>
+        <initializer> &quot;CollectionTree&quot;</initializer>
+        <briefdescription>
+<para>Name of the event tree. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="331" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="331" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1a97868adbe4c855aac493a884b7281342" prot="protected" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char * xAOD::TEvent::METADATA_TREE_NAME</definition>
+        <argsstring></argsstring>
+        <name>METADATA_TREE_NAME</name>
+        <initializer> &quot;MetaData&quot;</initializer>
+        <briefdescription>
+<para>Name of the metadata tree. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="333" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1aba33525320422fe631fdffb6bfd8250e" prot="protected" static="no" mutable="no">
+        <type><ref refid="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348" kindref="member">EAuxMode</ref></type>
+        <definition>EAuxMode xAOD::TEvent::m_auxMode</definition>
+        <argsstring></argsstring>
+        <name>m_auxMode</name>
+        <briefdescription>
+<para>The auxiliary access mode. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="336" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1af0774c98c338f567726e476079bd68e0" prot="protected" static="no" mutable="no">
+        <type>::TTree *</type>
+        <definition>::TTree* xAOD::TEvent::m_inTree</definition>
+        <argsstring></argsstring>
+        <name>m_inTree</name>
+        <briefdescription>
+<para>The tree that we are reading from. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="339" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="339" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1a457ea1a0296188ab4c2683f413503e5b" prot="protected" static="no" mutable="no">
+        <type>::Bool_t</type>
+        <definition>::Bool_t xAOD::TEvent::m_inTreeMissing</definition>
+        <argsstring></argsstring>
+        <name>m_inTreeMissing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Internal status flag showing that an input file is open, but it doesn&apos;t contain an event tree </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="342" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="342" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1aafa9a2205929bde88ae711a11d586923" prot="protected" static="no" mutable="no">
+        <type>::TChain *</type>
+        <definition>::TChain* xAOD::TEvent::m_inChain</definition>
+        <argsstring></argsstring>
+        <name>m_inChain</name>
+        <briefdescription>
+<para>The (optional) chain provided as input. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="344" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1a56f8810830ad139a0b344cb1fee4a525" prot="protected" static="no" mutable="no">
+        <type><ref refid="d1/d3a/classxAOD_1_1TChainStateTracker" kindref="compound">TChainStateTracker</ref> *</type>
+        <definition>TChainStateTracker* xAOD::TEvent::m_inChainTracker</definition>
+        <argsstring></argsstring>
+        <name>m_inChainTracker</name>
+        <briefdescription>
+<para>Optional object for tracking the state changes of an input TChain. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="346" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="346" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1ae3ae06f2fd647b0b0fe846662a331877" prot="protected" static="no" mutable="no">
+        <type>::Int_t</type>
+        <definition>::Int_t xAOD::TEvent::m_inTreeNumber</definition>
+        <argsstring></argsstring>
+        <name>m_inTreeNumber</name>
+        <briefdescription>
+<para>The number of the currently open tree in the input chain. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="348" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1a0bf3238ce2963b019b4a6a2664c9a772" prot="protected" static="no" mutable="no">
+        <type>::TTree *</type>
+        <definition>::TTree* xAOD::TEvent::m_inMetaTree</definition>
+        <argsstring></argsstring>
+        <name>m_inMetaTree</name>
+        <briefdescription>
+<para>Pointer to the metadata tree in the input file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="350" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1a87b756043440ee2b409f18dbe85b2661" prot="protected" static="no" mutable="no">
+        <type>::Long64_t</type>
+        <definition>::Long64_t xAOD::TEvent::m_entry</definition>
+        <argsstring></argsstring>
+        <name>m_entry</name>
+        <briefdescription>
+<para>The entry to look at from the input tree. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="352" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1ab8df2448fd37047f8b3bbfc1314dfa6d" prot="protected" static="no" mutable="no">
+        <type>::TTree *</type>
+        <definition>::TTree* xAOD::TEvent::m_outTree</definition>
+        <argsstring></argsstring>
+        <name>m_outTree</name>
+        <briefdescription>
+<para>The tree that we are writing to. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="355" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="355" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1a5f11f9c197313172dfbc3ab7d6fdd7a3" prot="protected" static="no" mutable="no">
+        <type><ref refid="de/d95/classxAOD_1_1TEvent_1a2f00f30ebeac247b31b9861705668d62" kindref="member">Object_t</ref></type>
+        <definition>Object_t xAOD::TEvent::m_inputObjects</definition>
+        <argsstring></argsstring>
+        <name>m_inputObjects</name>
+        <briefdescription>
+<para>Collection of all the managed input objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="358" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="358" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1aa73cbe561d2fd0825b0484b0fa76595a" prot="protected" static="no" mutable="no">
+        <type><ref refid="de/d95/classxAOD_1_1TEvent_1a2f00f30ebeac247b31b9861705668d62" kindref="member">Object_t</ref></type>
+        <definition>Object_t xAOD::TEvent::m_outputObjects</definition>
+        <argsstring></argsstring>
+        <name>m_outputObjects</name>
+        <briefdescription>
+<para>Collection of all the managed output object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="360" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="360" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1a5d1ec20e0c86ab4a126c29bc6311cbdb" prot="protected" static="no" mutable="no">
+        <type><ref refid="de/d95/classxAOD_1_1TEvent_1a2f00f30ebeac247b31b9861705668d62" kindref="member">Object_t</ref></type>
+        <definition>Object_t xAOD::TEvent::m_inputMetaObjects</definition>
+        <argsstring></argsstring>
+        <name>m_inputMetaObjects</name>
+        <briefdescription>
+<para>Collection of all the managed input meta-objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="363" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="363" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1af17643d5caadf331d8a225d0b16480a9" prot="protected" static="no" mutable="no">
+        <type><ref refid="de/d95/classxAOD_1_1TEvent_1a2f00f30ebeac247b31b9861705668d62" kindref="member">Object_t</ref></type>
+        <definition>Object_t xAOD::TEvent::m_outputMetaObjects</definition>
+        <argsstring></argsstring>
+        <name>m_outputMetaObjects</name>
+        <briefdescription>
+<para>Collection of all the managed output meta-objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="365" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1a33fb279f8388adb372dc2fe6cee3853a" prot="protected" static="no" mutable="no">
+        <type><ref refid="d8/d1f/classxAOD_1_1EventFormat__v1" kindref="compound">EventFormat</ref></type>
+        <definition>EventFormat xAOD::TEvent::m_inputEventFormat</definition>
+        <argsstring></argsstring>
+        <name>m_inputEventFormat</name>
+        <briefdescription>
+<para>Format of the current input file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="368" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1aa73f670758ea2312e5a46578e2b54633" prot="protected" static="no" mutable="no">
+        <type><ref refid="d8/d1f/classxAOD_1_1EventFormat__v1" kindref="compound">EventFormat</ref> *</type>
+        <definition>EventFormat* xAOD::TEvent::m_outputEventFormat</definition>
+        <argsstring></argsstring>
+        <name>m_outputEventFormat</name>
+        <briefdescription>
+<para>Format of the current output file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="370" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="370" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1a924534d472b779bbba478398267b1492" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::set&lt; std::string &gt; &gt;</type>
+        <definition>std::map&lt; std::string, std::set&lt; std::string &gt; &gt; xAOD::TEvent::m_auxItemList</definition>
+        <argsstring></argsstring>
+        <name>m_auxItemList</name>
+        <briefdescription>
+<para>Rules for selecting which auxiliary branches to write. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="373" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="373" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1a0ba74360390114e8403d10db4a06539a" prot="protected" static="no" mutable="no">
+        <type><ref refid="de/d95/classxAOD_1_1TEvent_1a43414b3a090df7d3d74896ae1fffbecf" kindref="member">Listener_t</ref></type>
+        <definition>Listener_t xAOD::TEvent::m_listeners</definition>
+        <argsstring></argsstring>
+        <name>m_listeners</name>
+        <briefdescription>
+<para>Listeners who should be notified when certain incidents happen. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="376" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d95/classxAOD_1_1TEvent_1ac4e32464c6c34f916579623adf15dff4" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt; std::string, std::string &gt; xAOD::TEvent::m_nameRemapping</definition>
+        <argsstring></argsstring>
+        <name>m_nameRemapping</name>
+        <briefdescription>
+<para>Container name re-mapping rules. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="379" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="379" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1ac03a76128877ca2a1868459e7aefb3ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xAOD::TEvent::TEvent</definition>
+        <argsstring>(EAuxMode mode=kUndefinedAccess)</argsstring>
+        <name>TEvent</name>
+        <param>
+          <type><ref refid="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348" kindref="member">EAuxMode</ref></type>
+          <declname>mode</declname>
+          <defval>kUndefinedAccess</defval>
+        </param>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="86" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="111" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1afa1f6359cbe7f51d7e6d7429d1ec6246" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xAOD::TEvent::TEvent</definition>
+        <argsstring>(::TFile *file, EAuxMode mode=kUndefinedAccess)</argsstring>
+        <name>TEvent</name>
+        <param>
+          <type>::TFile *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348" kindref="member">EAuxMode</ref></type>
+          <declname>mode</declname>
+          <defval>kUndefinedAccess</defval>
+        </param>
+        <briefdescription>
+<para>Constructor connecting the object to an input TFile. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="88" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="144" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a06a11c1af17642cd028fbe9aaab396f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xAOD::TEvent::TEvent</definition>
+        <argsstring>(::TTree *tree, EAuxMode mode=kUndefinedAccess)</argsstring>
+        <name>TEvent</name>
+        <param>
+          <type>::TTree *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type><ref refid="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348" kindref="member">EAuxMode</ref></type>
+          <declname>mode</declname>
+          <defval>kUndefinedAccess</defval>
+        </param>
+        <briefdescription>
+<para>Constructor connecting the objects to an input TTree/TChain. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="90" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="180" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1ac47957dd21554ec6f330cfef7831f188" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xAOD::TEvent::~TEvent</definition>
+        <argsstring>()</argsstring>
+        <name>~TEvent</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="92" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="216" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1aabfff91ec84a5800dd2c3604b0c6cba8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348" kindref="member">EAuxMode</ref></type>
+        <definition>TEvent::EAuxMode xAOD::TEvent::auxMode</definition>
+        <argsstring>() const </argsstring>
+        <name>auxMode</name>
+        <briefdescription>
+<para>Get what auxiliary access mode the object was constructed with. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The auxiliary data access mode currently in use </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="95" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="253" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a4fd1eb020c74eb58022c9ae16acf055a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xAOD::TEvent::dump</definition>
+        <argsstring>()</argsstring>
+        <name>dump</name>
+        <briefdescription>
+<para>Function creating a user-readable dump of the current input. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function behaves exactly like StoreGateSvc::dump(). It doesn&apos;t actually print anything to the screen, it just returns a user readable dump of the contents of the current input file/chain.</para><para>It is a pretty dumb implementation for the moment. Should be made nicer later on.</para><para><simplesect kind="return"><para>The user-readable contents of the current input file/chain </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="98" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="267" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1ab3b84f477bea7e6ce0f01bd5c80e3a84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xAOD::TEvent::printIOStats</definition>
+        <argsstring>() const </argsstring>
+        <name>printIOStats</name>
+        <briefdescription>
+<para>Function printing the I/O statistics of the current process. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a convenience function for printing basic I/O information about the current job. It can be called at the end of a job to get an overview of what the job did exactly I/O-wise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="101" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="322" bodyend="328"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1acd034bd40657d54925b8ee5172cf5683" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::initStats</definition>
+        <argsstring>()</argsstring>
+        <name>initStats</name>
+        <briefdescription>
+<para>Function to initialise the statistics for all Tree content. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used internally to initialise the reading of an input file. It prepares the &quot;monitoring information&quot; in memory that gets filled while the code is running, with information about <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> I/O.</para><para><simplesect kind="return"><para><computeroutput><ref refid="d1/da4/classxAOD_1_1TReturnCode_1a8f212da971e112f15d8bd5bf49c4ed0aadf30f5028ade4d2f7dce8ab294d8400f" kindref="member">TReturnCode::kSuccess</ref></computeroutput> if the function is successful, or <computeroutput>TReturnCode::kFaulure</computeroutput> if not </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="264" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1683" bodyend="1795"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a13f364fdccff9db65b7b1c75f92b129e" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * xAOD::TEvent::getOutputObject</definition>
+        <argsstring>(const std::string &amp;key, const std::type_info &amp;ti,::Bool_t metadata=kFALSE) const </argsstring>
+        <name>getOutputObject</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <param>
+          <type>::Bool_t</type>
+          <declname>metadata</declname>
+          <defval>kFALSE</defval>
+        </param>
+        <briefdescription>
+<para>Function for retrieving an output object in a non-template way. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function does the heavy lifting of retrieving object from the list of output objects. While it returns a typeless pointer, that pointer can be cast directly to the type described by the second parameter in the caller code.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) of the object to retrieve </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type as which the object is to be retrieved </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>metadata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag deciding whether we&apos;re looking for a metadata or event data object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d4/dc4/structA" kindref="compound">A</ref> pointer to the output object if successful, or a null pointer if not </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="268" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1809" bodyend="1864"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a45544b1015d0baa8665db4b9b6be7c07" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const void *</type>
+        <definition>const void * xAOD::TEvent::getInputObject</definition>
+        <argsstring>(const std::string &amp;key, const std::type_info &amp;ti,::Bool_t silent=kFALSE,::Bool_t metadata=kFALSE)</argsstring>
+        <name>getInputObject</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <param>
+          <type>::Bool_t</type>
+          <declname>silent</declname>
+          <defval>kFALSE</defval>
+        </param>
+        <param>
+          <type>::Bool_t</type>
+          <declname>metadata</declname>
+          <defval>kFALSE</defval>
+        </param>
+        <briefdescription>
+<para>Function for retrieving an input object in a non-template way. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the function doing the heavy lifting to retrieve objects from the input file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) of the object to retrieve </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type as which the object is to be retrieved </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>silent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to <computeroutput>kTRUE</computeroutput> to make the code fail silently in case the object can&apos;t be retrieved </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>metadata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag deciding whether we&apos;re looking for a metadata or event data object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d4/dc4/structA" kindref="compound">A</ref> pointer to the input object if successful, or a null pointer if not </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="273" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="1878" bodyend="1982"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1ac4608877b90a9cd5e0b69b96e13d1537" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::record</definition>
+        <argsstring>(void *obj, const std::string &amp;typeName, const std::string &amp;key,::Int_t basketSize,::Int_t splitLevel,::Bool_t overwrite=kFALSE,::Bool_t metadata=kFALSE,::Bool_t isOwner=kTRUE)</argsstring>
+        <name>record</name>
+        <param>
+          <type>void *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>typeName</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>basketSize</declname>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>splitLevel</declname>
+        </param>
+        <param>
+          <type>::Bool_t</type>
+          <declname>overwrite</declname>
+          <defval>kFALSE</defval>
+        </param>
+        <param>
+          <type>::Bool_t</type>
+          <declname>metadata</declname>
+          <defval>kFALSE</defval>
+        </param>
+        <param>
+          <type>::Bool_t</type>
+          <declname>isOwner</declname>
+          <defval>kTRUE</defval>
+        </param>
+        <briefdescription>
+<para>Internal function for recording an object into the output. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the function doing the heavy lifting when recording a new object into the output tree/file. It makes sure that the object is saved together with all of its dynamic auxiliary data if it has any.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="d4/dc4/structA" kindref="compound">A</ref> typeless pointer to the object that we want to record </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>typeName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type name of the output object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) of the object to record </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>basketSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The basket size of the output branch </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>splitLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The split level of the output branch </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>overwrite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag selecting if it is allowed to overwrite an already existing object (used internally) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>metadata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag selecting if we are writing an event or a metadata object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isOwner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag selecting if we should take ownership of the object or not </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the operation was successful, or <computeroutput>kFALSE</computeroutput> if it was not </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="280" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="2002" bodyend="2148"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a7c1f7efc453071b3ebdceb05f7428129" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::record</definition>
+        <argsstring>(TAuxStore *store, const std::string &amp;key,::Int_t basketSize,::Int_t splitLevel,::Bool_t ownsStore=kFALSE)</argsstring>
+        <name>record</name>
+        <param>
+          <type><ref refid="d7/d77/classxAOD_1_1TAuxStore" kindref="compound">TAuxStore</ref> *</type>
+          <declname>store</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>basketSize</declname>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>splitLevel</declname>
+        </param>
+        <param>
+          <type>::Bool_t</type>
+          <declname>ownsStore</declname>
+          <defval>kFALSE</defval>
+        </param>
+        <briefdescription>
+<para>Internal function for adding an auxiliary store object to the output. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used internally when copying an object with its auxiliary store from the input file, and branch access mode is activated for the event object.</para><para>The assumption is that the store object already knows what prefix it should be using. The key parameter only specifies under what ID the object should be handled in the output object list.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>store</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The store object to connect to the output </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The &quot;key&quot; with which to record the object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>basketSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The basket size of the output branches </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>splitLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The split level of the output branches </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the operation was successful, or <computeroutput>kFALSE</computeroutput> if it was not </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="284" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="2165" bodyend="2235"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a18508911dd4e3f41edf596d628645300" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::connectBranch</definition>
+        <argsstring>(const std::string &amp;key,::Bool_t silent=kFALSE)</argsstring>
+        <name>connectBranch</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>::Bool_t</type>
+          <declname>silent</declname>
+          <defval>kFALSE</defval>
+        </param>
+        <briefdescription>
+<para>Function setting up access to a particular branch. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is one of the more important functions of the class. It connects the event object to a given branch of the input TTree.</para><para>The type that is read in to memory is not actually determined by the type written to the tree itself, but from the <ref refid="dd/d44/namespacexAOD_1a256b02d21e647e351cc53c9370a068ef" kindref="member">xAOD::EventFormat</ref> object. Which is there to make it possible to possibly use ROOT read rules in the future to read a different type than what&apos;s on disk.</para><para>Everything else is fairly basic ROOT stuff, the code just has to make sure that the memory management is set up correctly for the created object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the branch to connect to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>silent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to <computeroutput>kTRUE</computeroutput> to make the code fail silently in case the branch can&apos;t be connected to </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the connection was successful, or <computeroutput>kFALSE</computeroutput> if it was not </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="287" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="2255" bodyend="2418"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1ae433bd1c9085c34f565b8a76c0904903" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::connectMetaBranch</definition>
+        <argsstring>(const std::string &amp;key,::Bool_t silent=kFALSE)</argsstring>
+        <name>connectMetaBranch</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>::Bool_t</type>
+          <declname>silent</declname>
+          <defval>kFALSE</defval>
+        </param>
+        <briefdescription>
+<para>Function setting up access to a branch in the metadata tree. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the function doing the heavy lifting with creating metadata objects in memory out of the payload of the input file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key (branch name) of the metadata object to retrieve </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>silent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to <computeroutput>kTRUE</computeroutput> to make the code fail silently in case the branch can&apos;t be connected to </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The usual <ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref> types </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="290" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="2428" bodyend="2530"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1ad297f837defba9d9645eb7e721ec2cf7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::connectAux</definition>
+        <argsstring>(const std::string &amp;prefix,::Bool_t standalone)</argsstring>
+        <name>connectAux</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type>::Bool_t</type>
+          <declname>standalone</declname>
+        </param>
+        <briefdescription>
+<para>Function setting up access to a set of auxiliary branches. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used internally to connect an auxiliary object to the input. Based on the configuration of the object it will either use <ref refid="d7/d77/classxAOD_1_1TAuxStore" kindref="compound">TAuxStore</ref>, or the EDM object that was used to write the auxiliary information in <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>prefix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The prefix (main branch name) of the auxiliary data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>standalone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="dd/dc8/namespacexAOD_1_1Type" kindref="compound">Type</ref> of the auxiliary store that should be created </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the connection was successful, or <computeroutput>kFALSE</computeroutput> if it was not </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="292" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="2542" bodyend="2649"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a50894896f849e66ae67bae010ba01a92" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::connectMetaAux</definition>
+        <argsstring>(const std::string &amp;prefix,::Bool_t standalone)</argsstring>
+        <name>connectMetaAux</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type>::Bool_t</type>
+          <declname>standalone</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function setting up access to a set of auxiliary branches for a metadata object</para><para>This function is used internally to connect an auxiliary metadata object to the input. Based on the configuration of the object it will either use <ref refid="d7/d77/classxAOD_1_1TAuxStore" kindref="compound">TAuxStore</ref>, or the EDM object that was used to write the auxiliary information in <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>prefix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The prefix (main branch name) of the auxiliary data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>standalone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="dd/dc8/namespacexAOD_1_1Type" kindref="compound">Type</ref> of the auxiliary store that should be created </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The usual <ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref> types </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="296" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="2660" bodyend="2762"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a86fb514054574fb9883bdd9b3ae761aa" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::setUpDynamicStore</definition>
+        <argsstring>(TObjectManager &amp;mgr,::TTree *tree)</argsstring>
+        <name>setUpDynamicStore</name>
+        <param>
+          <type><ref refid="d9/d8e/classxAOD_1_1TObjectManager" kindref="compound">TObjectManager</ref> &amp;</type>
+          <declname>mgr</declname>
+        </param>
+        <param>
+          <type>::TTree *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function adding dynamic variable reading capabilities to an auxiliary store object</para><para>This function is used by connectBranch(...) and connectMetaBranch(...) to set up auxiliary store type objects correctly for accessing dynamic variables from the input file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mgr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object manager of the auxiliary store object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tree to read dynamic variables from </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The usual <computeroutput><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></computeroutput> types </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="299" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="2772" bodyend="2843"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1aa50ebfd4ab78b080eb845a20dc3bbb37" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::setAuxStore</definition>
+        <argsstring>(TObjectManager &amp;mgr,::Bool_t metadata=kFALSE)</argsstring>
+        <name>setAuxStore</name>
+        <param>
+          <type><ref refid="d9/d8e/classxAOD_1_1TObjectManager" kindref="compound">TObjectManager</ref> &amp;</type>
+          <declname>mgr</declname>
+        </param>
+        <param>
+          <type>::Bool_t</type>
+          <declname>metadata</declname>
+          <defval>kFALSE</defval>
+        </param>
+        <briefdescription>
+<para>Function connecting a <ref refid="d3/d78/structDV" kindref="compound">DV</ref> object to its auxiliary store. </para>        </briefdescription>
+        <detaileddescription>
+<para>Every time a <ref refid="d0/d4d/classDataVector" kindref="compound">DataVector</ref> is read in from the input for a new TTree entry, one needs to re-connect it with its auxiliary store. This function takes care of this.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mgr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The manager object of the <ref refid="d3/d78/structDV" kindref="compound">DV</ref> container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>metadata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag specifying whether we&apos;re dealing with a metadata or event data object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the setup was successful, or <computeroutput>kFALSE</computeroutput> if it was not </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="302" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="2855" bodyend="3016"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a970c28d37f542b3096e7ac2588fc21c8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/da4/classxAOD_1_1TReturnCode" kindref="compound">TReturnCode</ref></type>
+        <definition>TReturnCode xAOD::TEvent::putAux</definition>
+        <argsstring>(::TTree &amp;outTree, TVirtualManager &amp;mgr,::Int_t basketSize=32000,::Int_t splitLevel=0,::Bool_t metadata=kFALSE)</argsstring>
+        <name>putAux</name>
+        <param>
+          <type>::TTree &amp;</type>
+          <declname>outTree</declname>
+        </param>
+        <param>
+          <type><ref refid="d1/db4/classxAOD_1_1TVirtualManager" kindref="compound">TVirtualManager</ref> &amp;</type>
+          <declname>mgr</declname>
+          <defname>vmgr</defname>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>basketSize</declname>
+          <defval>32000</defval>
+        </param>
+        <param>
+          <type>::Int_t</type>
+          <declname>splitLevel</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>::Bool_t</type>
+          <declname>metadata</declname>
+          <defval>kFALSE</defval>
+        </param>
+        <briefdescription>
+<para>Function saving the dynamically created auxiliary properties. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used internally to set up the writing of the auxiliary store variables that were dynamically created on an object. (And not statically defined to be part of that object.)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outTree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The TTree to put the auxiliary branches into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mgr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object manager of the output object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>basketSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer associated with the branches </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>splitLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The split level to use for the created branches </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>metadata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag specifying whether the info written is metadata or not </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the setup was successful, or <computeroutput>kFALSE</computeroutput> if it was not </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="306" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="3031" bodyend="3242"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a2d259a3afab00a5961ce1348b4602d8b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>::Bool_t</type>
+        <definition>Bool_t xAOD::TEvent::contains</definition>
+        <argsstring>(const std::string &amp;key, const std::type_info &amp;ti,::Bool_t metadata=kFALSE)</argsstring>
+        <name>contains</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <param>
+          <type>::Bool_t</type>
+          <declname>metadata</declname>
+          <defval>kFALSE</defval>
+        </param>
+        <briefdescription>
+<para>Internal function checking if an object is in the input. </para>        </briefdescription>
+        <detaileddescription>
+<para>Created a non-template version of the call internally to be able to use it from xAOD::MakeTransientTree.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key to check </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the object to check </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>metadata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag deciding whether we are looking for a metadata object or not </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if such an object is held by the event object at the moment, <computeroutput>kFALSE</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="316" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="3330" bodyend="3336"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a1dbaade3e5b746d14c852a21bce9791e" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>::Bool_t</type>
+        <definition>Bool_t xAOD::TEvent::transientContains</definition>
+        <argsstring>(const std::string &amp;key, const std::type_info &amp;ti,::Bool_t metadata=kFALSE) const </argsstring>
+        <name>transientContains</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <param>
+          <type>::Bool_t</type>
+          <declname>metadata</declname>
+          <defval>kFALSE</defval>
+        </param>
+        <briefdescription>
+<para>Internal function checking if an object is already in memory. </para>        </briefdescription>
+        <detaileddescription>
+<para>Internal function checking if an object of a given type, with a given key is held in memory by the event object. It&apos;s this function doing the heavy lifting for the public template function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key/branch name of the object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type description of the object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>metadata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag deciding whether we are looking for a metadata object or not </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if such a modifiable object is held by the event object at the moment, <computeroutput>kFALSE</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="320" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="3349" bodyend="3354"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1ab53119c4628eb7ecc7c66c08e5d85406" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>::Bool_t</type>
+        <definition>Bool_t xAOD::TEvent::hasAuxStore</definition>
+        <argsstring>(const TObjectManager &amp;mgr)</argsstring>
+        <name>hasAuxStore</name>
+        <param>
+          <type>const <ref refid="d9/d8e/classxAOD_1_1TObjectManager" kindref="compound">TObjectManager</ref> &amp;</type>
+          <declname>mgr</declname>
+        </param>
+        <briefdescription>
+<para>Function checking if a given object may have an auxiliary store. </para>        </briefdescription>
+        <detaileddescription>
+<para>Since the code needs to check in a few places whether a given object has an auxiliary store, and as this check may change slightly over time, it seemed to be a good idea to outsource this check into this function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mgr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The manager of the object that should be checked </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the object can have an auxiliary store, <computeroutput>kFALSE</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="308" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="3252" bodyend="3264"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1a2431da212c47749feadfa4a8904f7ee6" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>::Bool_t</type>
+        <definition>Bool_t xAOD::TEvent::isAuxStore</definition>
+        <argsstring>(const TObjectManager &amp;mgr)</argsstring>
+        <name>isAuxStore</name>
+        <param>
+          <type>const <ref refid="d9/d8e/classxAOD_1_1TObjectManager" kindref="compound">TObjectManager</ref> &amp;</type>
+          <declname>mgr</declname>
+        </param>
+        <briefdescription>
+<para>Function checking if a given object may be an auxiliary store. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used to decide if a given object is an auxiliary store type or not.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mgr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The manager of the object that should be checked </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the object is an auxiliary store, <computeroutput>kFALSE</computeroutput> if it is not </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="310" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="3273" bodyend="3284"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d95/classxAOD_1_1TEvent_1ac3f5e026371a0cee2a7d833def66f800" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>::Bool_t</type>
+        <definition>Bool_t xAOD::TEvent::isStandalone</definition>
+        <argsstring>(const TObjectManager &amp;mgr)</argsstring>
+        <name>isStandalone</name>
+        <param>
+          <type>const <ref refid="d9/d8e/classxAOD_1_1TObjectManager" kindref="compound">TObjectManager</ref> &amp;</type>
+          <declname>mgr</declname>
+        </param>
+        <briefdescription>
+<para>Function checking if an object is standalone (not a container). </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is used to figure out while setting up the reading of the TTree in kBranchAccess mode, what to tell the underlying <ref refid="d7/d77/classxAOD_1_1TAuxStore" kindref="compound">TAuxStore</ref> object, what kind of store it needs to be. It&apos;s done in pretty much the same way in which hasAuxStore(...) decides if the object in question can have an auxiliary store.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mgr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The manager of the object that should be checked </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>kTRUE</computeroutput> if the object is a standalone one, <computeroutput>kFALSE</computeroutput> if it is a container </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="312" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/Root/TEvent.cxx" bodystart="3296" bodyend="3318"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Tool for accessing <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> files outside of <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>Proper access to <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> files in ROOT (outside of <ref refid="d5/dc5/namespaceAthena" kindref="compound">Athena</ref>) needs to be done through such an object. It takes care of reading and writing <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> files together with their file format metadata, setting up smart pointers correctly, etc.</para><para>For a detailed description of the usage of this class, see: &lt;Link to be added here...&gt;</para><para><simplesect kind="author"><para>Attila Krasznahorkay &lt;<ulink url="mailto:Attila.Krasznahorkay@cern.ch">Attila.Krasznahorkay@cern.ch</ulink>&gt;</para></simplesect>
+<simplesect kind="rcs"><title>Revision</title><para>746122 </para></simplesect>
+<simplesect kind="rcs"><title>Date</title><para>2016-05-11 12:11:31 +0200 (Wed, 11 May 2016) </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="19724">
+        <label>xAOD::TVirtualEvent</label>
+        <link refid="de/daf/classxAOD_1_1TVirtualEvent"/>
+      </node>
+      <node id="19726">
+        <label>xAOD::TPyEvent</label>
+        <link refid="d1/ddf/classxAOD_1_1TPyEvent"/>
+        <childnode refid="19723" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19723">
+        <label>xAOD::TEvent</label>
+        <link refid="de/d95/classxAOD_1_1TEvent"/>
+        <childnode refid="19724" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19725">
+        <label>TEventClass</label>
+        <link refid="d9/d22/classTEventClass"/>
+        <childnode refid="19723" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="19728">
+        <label>xAOD::TVirtualEvent</label>
+        <link refid="de/daf/classxAOD_1_1TVirtualEvent"/>
+      </node>
+      <node id="19727">
+        <label>xAOD::TEvent</label>
+        <link refid="de/d95/classxAOD_1_1TEvent"/>
+        <childnode refid="19728" relation="public-inheritance">
+        </childnode>
+        <childnode refid="19729" relation="usage">
+          <edgelabel>m_inChainTracker</edgelabel>
+        </childnode>
+        <childnode refid="19730" relation="usage">
+          <edgelabel>m_outputEventFormat</edgelabel>
+          <edgelabel>m_inputEventFormat</edgelabel>
+        </childnode>
+      </node>
+      <node id="19730">
+        <label>xAOD::EventFormat_v1</label>
+        <link refid="d8/d1f/classxAOD_1_1EventFormat__v1"/>
+      </node>
+      <node id="19729">
+        <label>xAOD::TChainStateTracker</label>
+        <link refid="d1/d3a/classxAOD_1_1TChainStateTracker"/>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" line="67" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccess/xAODRootAccess/TEvent.h" bodystart="67" bodyend="381"/>
+    <listofallmembers>
+      <member refid="de/d95/classxAOD_1_1TEvent_1accb2d6fd8b3886f4d66453de233d7615" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>addListener</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a73379b221c401b4e36bd5fda6ceb92a8" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>addNameRemap</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1aabfff91ec84a5800dd2c3604b0c6cba8" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>auxMode</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a177e76fe678eecd0466d7afb7ba562b2" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>CACHE_SIZE</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1af41ced199a022abb83fd90c9398a3703" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>clearListeners</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1ad0b83b386f685df6f4d3d91a077916c9" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>clearNameRemap</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1ad297f837defba9d9645eb7e721ec2cf7" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>connectAux</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a18508911dd4e3f41edf596d628645300" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>connectBranch</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a50894896f849e66ae67bae010ba01a92" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>connectMetaAux</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1ae433bd1c9085c34f565b8a76c0904903" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>connectMetaBranch</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a3b92c86df4409b99960328dd263792ed" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>contains</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a2d259a3afab00a5961ce1348b4602d8b" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>contains</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a2dbd8245101cc85a034a28ca4ca47701" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>containsMeta</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a800c972b17c29c69253e2a80cf959621" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>copy</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a395b577a2d21f7b45c125539c7a3cf0d" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>copy</name></member>
+      <member refid="de/daf/classxAOD_1_1TVirtualEvent_1a3362f02e7067005d0a8739a76b8699af" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>DEFAULT_KEY</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a4fd1eb020c74eb58022c9ae16acf055a" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>dump</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>EAuxMode</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a3e39fc579b4d1f6c423334caf4fbdd90" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>EVENT_TREE_NAME</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a5bfccceade4a0564484eea0a9e092b80" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>fill</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a4ac4ee0bf6d12a151be6e909e27e3fcf" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>finishWritingTo</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1abd190a2cfceeeb52c454ed8436c92540" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>getEntries</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1ab89adb4667489d2782dabd4b69203e32" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>getEntry</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a6090a27de542ccd6c8d87489732ce0d6" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>getFile</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a524c782f48073dc3bbabf6161b8f831d" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>getFiles</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a7b3a78b610dd33ba349531486f958839" prot="public" virt="virtual"><scope>xAOD::TEvent</scope><name>getHash</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a35fa4683373b12d39cb8b64a8535a8a6" prot="protected" virt="virtual"><scope>xAOD::TEvent</scope><name>getInputObject</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a45544b1015d0baa8665db4b9b6be7c07" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>getInputObject</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1aa81f959071f880d07a04a09c0e6b0bbc" prot="public" virt="virtual"><scope>xAOD::TEvent</scope><name>getKey</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a8e4aabaa53c49136df759661ce08fb24" prot="public" virt="virtual"><scope>xAOD::TEvent</scope><name>getName</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1aaebd5a0daefc75bf086bd0c893ce67e3" prot="public" virt="virtual"><scope>xAOD::TEvent</scope><name>getName</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a6531ff42179b78d04acf432a2b4c1e73" prot="protected" virt="virtual"><scope>xAOD::TEvent</scope><name>getOutputObject</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a13f364fdccff9db65b7b1c75f92b129e" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>getOutputObject</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1ab53119c4628eb7ecc7c66c08e5d85406" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>hasAuxStore</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1acd034bd40657d54925b8ee5172cf5683" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>initStats</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a27fcd1edf34e12da56e514b70fb6e694" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>inputEventFormat</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a2431da212c47749feadfa4a8904f7ee6" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>isAuxStore</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1ac3f5e026371a0cee2a7d833def66f800" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>isStandalone</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348a89f268521007c479d536d29ee506ee82" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>kAthenaAccess</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348af23745a46dccaeaa88c5adf53064ac85" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>kBranchAccess</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348aeafc802359754d9d902f97791f20d9ec" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>kClassAccess</name></member>
+      <member refid="de/daf/classxAOD_1_1TVirtualEvent_1ac1fd1bc3868f94eebe897bfb20a9711c" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>KEY_MASK</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a02e3b91306a978cdbe478a5bdf03b348ac615fe9e9be98902506b3dd228718777" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>kUndefinedAccess</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a43414b3a090df7d3d74896ae1fffbecf" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>Listener_t</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a924534d472b779bbba478398267b1492" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_auxItemList</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1aba33525320422fe631fdffb6bfd8250e" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_auxMode</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a87b756043440ee2b409f18dbe85b2661" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_entry</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1aafa9a2205929bde88ae711a11d586923" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_inChain</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a56f8810830ad139a0b344cb1fee4a525" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_inChainTracker</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a0bf3238ce2963b019b4a6a2664c9a772" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_inMetaTree</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a33fb279f8388adb372dc2fe6cee3853a" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_inputEventFormat</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a5d1ec20e0c86ab4a126c29bc6311cbdb" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_inputMetaObjects</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a5f11f9c197313172dfbc3ab7d6fdd7a3" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_inputObjects</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1af0774c98c338f567726e476079bd68e0" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_inTree</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a457ea1a0296188ab4c2683f413503e5b" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_inTreeMissing</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1ae3ae06f2fd647b0b0fe846662a331877" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_inTreeNumber</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a0ba74360390114e8403d10db4a06539a" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_listeners</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1ac4e32464c6c34f916579623adf15dff4" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_nameRemapping</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1aa73f670758ea2312e5a46578e2b54633" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_outputEventFormat</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1af17643d5caadf331d8a225d0b16480a9" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_outputMetaObjects</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1aa73cbe561d2fd0825b0484b0fa76595a" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_outputObjects</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1ab8df2448fd37047f8b3bbfc1314dfa6d" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>m_outTree</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1adc74b459fb5e6b2b739524be92ff7a3f" prot="private" virt="non-virtual"><scope>xAOD::TEvent</scope><name>MakeTransientTree</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a97868adbe4c855aac493a884b7281342" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>METADATA_TREE_NAME</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a2f00f30ebeac247b31b9861705668d62" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>Object_t</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a475b2d4560d9a0f6855ef9c0c26c32e5" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>outputEventFormat</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1ab3b84f477bea7e6ce0f01bd5c80e3a84" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>printIOStats</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1aa15c26c79f5b47394f678c34b2e18e66" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>printNameRemap</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a970c28d37f542b3096e7ac2588fc21c8" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>putAux</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a373125b7b2774de9464afa65b8f413cb" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>readFrom</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a9aba64d79df826d8f9d1220f727b97ea" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>readFrom</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1af90403dbebbccf4397b29191c4437cad" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>record</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1ad5cdd02952e6d42895a1cba88339a6f4" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>record</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1ac4608877b90a9cd5e0b69b96e13d1537" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>record</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a7c1f7efc453071b3ebdceb05f7428129" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>record</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1adfccdc9e624b57b3e4619e33c6034f7d" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>recordAux</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a11dfdb955bd84935502353a0a7616b75" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>recordMeta</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1af23ea51439ea4c963a5d0ba8e4e9a2e8" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>recordMeta</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a7180825a285c43d7eefdf7f83f3b7854" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>removeListener</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a85e9bb280df774885102075cbf7b8e06" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>retrieve</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1aa602e807821e403a6443c11060174916" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>retrieve</name></member>
+      <member refid="de/daf/classxAOD_1_1TVirtualEvent_1a94499a88472a8790df1b8cd62a1d6f5e" prot="public" virt="non-virtual" ambiguityscope="xAOD::TVirtualEvent::"><scope>xAOD::TEvent</scope><name>retrieve</name></member>
+      <member refid="de/daf/classxAOD_1_1TVirtualEvent_1a5b3f12a23600a60b2f3f09d00072acb5" prot="public" virt="non-virtual" ambiguityscope="xAOD::TVirtualEvent::"><scope>xAOD::TEvent</scope><name>retrieve</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a6eeaa9ae4eb9c2a91706f767de96ea45" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>retrieveMetaInput</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1aa10977469fe765f8d9fe5acd0b064b8d" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>retrieveMetaOutput</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a2c562dc4d26e317f0e32221e07c20cd7" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>retrieveMetaOutput</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a5423ace77c19aaf271c63334e32b2174" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>setActive</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1ab10bcece69a8bc7fb3f388f96feaacfd" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>setAuxItemList</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1aa50ebfd4ab78b080eb845a20dc3bbb37" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>setAuxStore</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a86fb514054574fb9883bdd9b3ae761aa" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>setUpDynamicStore</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1ac03a76128877ca2a1868459e7aefb3ad" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>TEvent</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1afa1f6359cbe7f51d7e6d7429d1ec6246" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>TEvent</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a06a11c1af17642cd028fbe9aaab396f2" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>TEvent</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1aca57bfb6ea9448c94cadcd2456f82609" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>transientContains</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a1dbaade3e5b746d14c852a21bce9791e" prot="protected" virt="non-virtual"><scope>xAOD::TEvent</scope><name>transientContains</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1ac9868d2dcd71329f9f11ac3725a2ad16" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>transientContainsMeta</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a692abe196e60b809f2c57e7930d9401e" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>writeTo</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1a4bf8e6738fcd7c58a7e8a8c97833e303" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>xAOD::TEventBranch</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1aa7aca3125cb14b4f8f72426766a09521" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>xAOD::TFileMerger</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1ab483a8c39e7e0bd70a3e59a2160f9e47" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>xAOD::TMetaBranch</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1adfa6f5c012f86a7894310e2cc33c27f7" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>xAOD::TTreeMgr</name></member>
+      <member refid="de/d95/classxAOD_1_1TEvent_1ac47957dd21554ec6f330cfef7831f188" prot="public" virt="non-virtual"><scope>xAOD::TEvent</scope><name>~TEvent</name></member>
+      <member refid="de/daf/classxAOD_1_1TVirtualEvent_1a0c24fe2a750f564472e38cbae1240a05" prot="public" virt="virtual"><scope>xAOD::TEvent</scope><name>~TVirtualEvent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

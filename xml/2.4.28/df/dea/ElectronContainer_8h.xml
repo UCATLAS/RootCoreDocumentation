@@ -1,0 +1,1773 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="df/dea/ElectronContainer_8h" kind="file">
+    <compoundname>ElectronContainer.h</compoundname>
+    <includes refid="dc/db4/Electron_8h" local="yes">xAODEgamma/Electron.h</includes>
+    <includes refid="dc/d7f/ElectronContainer__v1_8h" local="yes">xAODEgamma/versions/ElectronContainer_v1.h</includes>
+    <includes refid="d6/d20/xAODCore_2xAODCore_2CLASS__DEF_8h" local="yes">xAODCore/CLASS_DEF.h</includes>
+    <includedby refid="d0/dd7/EleEleOverlapTool_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/EleEleOverlapTool.h</includedby>
+    <includedby refid="da/db7/EleJetOverlapTool_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/EleJetOverlapTool.h</includedby>
+    <includedby refid="db/dfa/EleMuSharedTrkOverlapTool_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/EleMuSharedTrkOverlapTool.h</includedby>
+    <includedby refid="d9/d96/IOverlapRemovalTool_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/IOverlapRemovalTool.h</includedby>
+    <includedby refid="dd/d7a/IOverlapRemovalToolLegacy_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/IOverlapRemovalToolLegacy.h</includedby>
+    <includedby refid="d4/da8/TauLooseEleOverlapTool_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/TauLooseEleOverlapTool.h</includedby>
+    <includedby refid="d7/dfa/OverlapRemovalTester_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/util/OverlapRemovalTester.cxx</includedby>
+    <includedby refid="da/dd8/OverlapRemovalTesterLegacy_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/util/OverlapRemovalTesterLegacy.cxx</includedby>
+    <includedby refid="da/d33/xExampleEDM_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CPAnalysisExamples/CPAnalysisExamples/xExampleEDM.h</includedby>
+    <includedby refid="d2/d78/Test____EgammaCalibrationAndSmearingTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CPAnalysisExamples/src/Test__EgammaCalibrationAndSmearingTool.cxx</includedby>
+    <includedby refid="dd/d83/Test____TrackLinkTest_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CPAnalysisExamples/src/Test__TrackLinkTest.cxx</includedby>
+    <includedby refid="d0/d34/ut__ath__EgammaCalibrationAndSmearingTool__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CPAnalysisExamples/test/ut_ath_EgammaCalibrationAndSmearingTool_test.cxx</includedby>
+    <includedby refid="df/da7/run__ut__accessDataAndCpTools_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CPAnalysisExamples/util/run_ut_accessDataAndCpTools.cxx</includedby>
+    <includedby refid="d0/d2e/run__ut__accessDataAndCpTools__v20_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CPAnalysisExamples/util/run_ut_accessDataAndCpTools_v20.cxx</includedby>
+    <includedby refid="df/d0b/testClusterMVACalib_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/egammaMVACalib/util/testClusterMVACalib.cxx</includedby>
+    <includedby refid="d8/d1c/EleChargeAlg_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronEfficiencyCorrection/src/EleChargeAlg.cxx</includedby>
+    <includedby refid="d6/db6/testAthenaElectronAlg_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronEfficiencyCorrection/src/testAthenaElectronAlg.cxx</includedby>
+    <includedby refid="db/d1c/testCorrelationModels_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronEfficiencyCorrection/util/testCorrelationModels.cxx</includedby>
+    <includedby refid="dd/d39/testEgChargeCorr_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronEfficiencyCorrection/util/testEgChargeCorr.cxx</includedby>
+    <includedby refid="de/dcb/testEgEfficiencyCorr_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronEfficiencyCorrection/util/testEgEfficiencyCorr.cxx</includedby>
+    <includedby refid="dd/d7a/testEgEfficiencyCorrWithoutFile_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronEfficiencyCorrection/util/testEgEfficiencyCorrWithoutFile.cxx</includedby>
+    <includedby refid="df/d28/CalibratedEgammaProvider_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonFourMomentumCorrection/src/CalibratedEgammaProvider.h</includedby>
+    <includedby refid="d7/d8c/dumpAllSystematics_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonFourMomentumCorrection/src/dumpAllSystematics.cxx</includedby>
+    <includedby refid="df/d3e/testAthenaEgammaCalibTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonFourMomentumCorrection/src/testAthenaEgammaCalibTool.cxx</includedby>
+    <includedby refid="d5/dd3/testEgammaCalibTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonFourMomentumCorrection/util/testEgammaCalibTool.cxx</includedby>
+    <includedby refid="d7/d38/EGammaAmbiguityTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonSelectorTools/Root/EGammaAmbiguityTool.cxx</includedby>
+    <includedby refid="d1/d78/testEGChargeIDSelector_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonSelectorTools/util/testEGChargeIDSelector.cxx</includedby>
+    <includedby refid="df/d02/testEGIdentificationPoints_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonSelectorTools/util/testEGIdentificationPoints.cxx</includedby>
+    <includedby refid="d1/d49/testEMAmbiguityResolver_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonSelectorTools/util/testEMAmbiguityResolver.cxx</includedby>
+    <includedby refid="dc/dc8/IFsrPhotonTool_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/FsrUtils/FsrUtils/IFsrPhotonTool.h</includedby>
+    <includedby refid="db/d56/TestIsolationAthenaAlg_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/IsolationSelection/src/TestIsolationAthenaAlg.cxx</includedby>
+    <includedby refid="d7/d8d/TestIsolationCloseByCorrAthenaAlg_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/IsolationSelection/src/TestIsolationCloseByCorrAthenaAlg.cxx</includedby>
+    <includedby refid="d3/d70/testIsolationCloseByCorrectionTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/IsolationSelection/util/testIsolationCloseByCorrectionTool.cxx</includedby>
+    <includedby refid="d0/d90/testIsolationSelectionTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/IsolationSelection/util/testIsolationSelectionTool.cxx</includedby>
+    <includedby refid="dd/d86/testClassifier_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MCTruthClassifier/util/testClassifier.cxx</includedby>
+    <includedby refid="d2/db2/METHelpers_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METHelpers.cxx</includedby>
+    <includedby refid="df/d92/METMaker_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METMaker.cxx</includedby>
+    <includedby refid="de/d35/METRebuilder_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/Root/METRebuilder.cxx</includedby>
+    <includedby refid="db/dbe/METMakerAlg_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/METUtilities/src/METMakerAlg.cxx</includedby>
+    <includedby refid="d3/d94/IElectronRemovalTool_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/IElectronRemovalTool.h</includedby>
+    <includedby refid="d0/dd6/ElectronRemovalTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/Root/ElectronRemovalTool.cxx</includedby>
+    <includedby refid="d6/d02/xAODInclude_8h" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/xAODInclude.h</includedby>
+    <includedby refid="d0/d03/AthExample_8cxx" local="no">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/src/AthExample.cxx</includedby>
+    <includedby refid="d4/d67/ut__OutputToolXAOD_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/test/ut_OutputToolXAOD.cxx</includedby>
+    <includedby refid="dd/d4b/ApplySUSYTools_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/src/ApplySUSYTools.cxx</includedby>
+    <includedby refid="df/dae/SUSYToolsAlg_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/src/SUSYToolsAlg.cxx</includedby>
+    <includedby refid="d1/d7a/ISUSYObjDef__xAODTool_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/ISUSYObjDef_xAODTool.h</includedby>
+    <includedby refid="de/db8/SUSYToolsTester_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/util/SUSYToolsTester.cxx</includedby>
+    <includedby refid="db/d7b/TauOverlappingElectronLLHDecorator_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauOverlappingElectronLLHDecorator.h</includedby>
+    <includedby refid="da/d2a/TrigGlobEffCorrExample0_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/util/TrigGlobEffCorrExample0.cxx</includedby>
+    <includedby refid="d0/d14/TrigGlobEffCorrExample1_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/util/TrigGlobEffCorrExample1.cxx</includedby>
+    <includedby refid="d2/dc6/TrigGlobEffCorrExample2_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/util/TrigGlobEffCorrExample2.cxx</includedby>
+    <includedby refid="d8/d23/TrigGlobEffCorrExample3a_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/util/TrigGlobEffCorrExample3a.cxx</includedby>
+    <includedby refid="d3/dee/TrigGlobEffCorrExample3b_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/util/TrigGlobEffCorrExample3b.cxx</includedby>
+    <includedby refid="db/d07/TrigGlobEffCorrExample3c_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/util/TrigGlobEffCorrExample3c.cxx</includedby>
+    <includedby refid="df/d13/TrigGlobEffCorrExample3d_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/util/TrigGlobEffCorrExample3d.cxx</includedby>
+    <includedby refid="dc/df1/TrigGlobEffCorrExample3e_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/util/TrigGlobEffCorrExample3e.cxx</includedby>
+    <includedby refid="da/d80/TrigGlobEffCorrValidation_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigGlobalEfficiencyCorrection/util/TrigGlobEffCorrValidation.cxx</includedby>
+    <includedby refid="d7/d82/EgammaTruthxAODHelpers_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/Root/EgammaTruthxAODHelpers.cxx</includedby>
+    <includedby refid="d1/dad/xAODEgammaCLIDs_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/Root/xAODEgammaCLIDs.cxx</includedby>
+    <includedby refid="d5/dc2/xAODEgammaDict_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/xAODEgammaDict.h</includedby>
+    <includedby refid="d9/de9/TestAthenaConstraintFit_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ZMassConstraint/src/TestAthenaConstraintFit.cxx</includedby>
+    <incdepgraph>
+      <node id="368368">
+        <label>list</label>
+      </node>
+      <node id="368377">
+        <label>AthContainers/tools/DVL_algorithms.icc</label>
+        <link refid="df/daa/DVL__algorithms_8icc"/>
+        <childnode refid="368362" relation="include">
+        </childnode>
+        <childnode refid="368369" relation="include">
+        </childnode>
+        <childnode refid="368277" relation="include">
+        </childnode>
+        <childnode refid="368358" relation="include">
+        </childnode>
+        <childnode refid="368284" relation="include">
+        </childnode>
+      </node>
+      <node id="368362">
+        <label>AthContainers/tools/DVLNoBase.h</label>
+        <link refid="d7/d92/DVLNoBase_8h"/>
+      </node>
+      <node id="368322">
+        <label>boost/thread/mutex.hpp</label>
+      </node>
+      <node id="368384">
+        <label>AthContainers/tools/DVLDataBucket.h</label>
+        <link refid="d4/d16/DVLDataBucket_8h"/>
+        <childnode refid="368385" relation="include">
+        </childnode>
+        <childnode refid="368363" relation="include">
+        </childnode>
+        <childnode refid="368291" relation="include">
+        </childnode>
+        <childnode refid="368386" relation="include">
+        </childnode>
+      </node>
+      <node id="368324">
+        <label>CxxUtils/unordered_map.h</label>
+        <link refid="db/daa/unordered__map_8h"/>
+        <childnode refid="368283" relation="include">
+        </childnode>
+        <childnode refid="368285" relation="include">
+        </childnode>
+        <childnode refid="368291" relation="include">
+        </childnode>
+        <childnode refid="368292" relation="include">
+        </childnode>
+      </node>
+      <node id="368325">
+        <label>AthContainers/AuxTypeRegistry.icc</label>
+        <link refid="d8/df3/AuxTypeRegistry_8icc"/>
+      </node>
+      <node id="368294">
+        <label>AthContainersInterfaces/IAuxStore.h</label>
+        <link refid="d6/d3e/IAuxStore_8h"/>
+        <childnode refid="368279" relation="include">
+        </childnode>
+        <childnode refid="368281" relation="include">
+        </childnode>
+        <childnode refid="368295" relation="include">
+        </childnode>
+        <childnode refid="368293" relation="include">
+        </childnode>
+      </node>
+      <node id="368396">
+        <label>EventPrimitives/EventPrimitives.h</label>
+        <link refid="d1/d54/EventPrimitives_8h_source"/>
+        <childnode refid="368397" relation="include">
+        </childnode>
+        <childnode refid="368398" relation="include">
+        </childnode>
+        <childnode refid="368399" relation="include">
+        </childnode>
+      </node>
+      <node id="368290">
+        <label>boost/type_traits/remove_const.hpp</label>
+      </node>
+      <node id="368292">
+        <label>functional</label>
+      </node>
+      <node id="368359">
+        <label>boost/version.hpp</label>
+      </node>
+      <node id="368289">
+        <label>limits</label>
+      </node>
+      <node id="368295">
+        <label>SGTools/BaseInfo.h</label>
+      </node>
+      <node id="368320">
+        <label>boost/thread/tss.hpp</label>
+      </node>
+      <node id="368286">
+        <label>iterator</label>
+      </node>
+      <node id="368347">
+        <label>xAODCaloEvent/versions/CaloClusterBadChannelData_v1.h</label>
+        <link refid="d5/d3a/CaloClusterBadChannelData__v1_8h_source"/>
+        <childnode refid="368344" relation="include">
+        </childnode>
+        <childnode refid="368305" relation="include">
+        </childnode>
+      </node>
+      <node id="368308">
+        <label>AthContainersInterfaces/AuxDataOption.h</label>
+        <link refid="d1/dc5/AuxDataOption_8h"/>
+        <childnode refid="368268" relation="include">
+        </childnode>
+        <childnode refid="368309" relation="include">
+        </childnode>
+      </node>
+      <node id="368349">
+        <label>CaloEvent/CaloRecoStatus.h</label>
+      </node>
+      <node id="368400">
+        <label>CxxUtils/final.h</label>
+        <link refid="da/d9b/final_8h"/>
+      </node>
+      <node id="368383">
+        <label>SGTools/ClassName.h</label>
+      </node>
+      <node id="368389">
+        <label>AthContainers/DataVector.icc</label>
+        <link refid="da/de6/DataVector_8icc"/>
+        <childnode refid="368390" relation="include">
+        </childnode>
+        <childnode refid="368357" relation="include">
+        </childnode>
+        <childnode refid="368289" relation="include">
+        </childnode>
+        <childnode refid="368292" relation="include">
+        </childnode>
+        <childnode refid="368391" relation="include">
+        </childnode>
+      </node>
+      <node id="368332">
+        <label>AthContainers/exceptions.h</label>
+        <link refid="d4/d03/exceptions_8h"/>
+        <childnode refid="368280" relation="include">
+        </childnode>
+        <childnode refid="368333" relation="include">
+        </childnode>
+        <childnode refid="368334" relation="include">
+        </childnode>
+        <childnode refid="368300" relation="include">
+        </childnode>
+        <childnode refid="368268" relation="include">
+        </childnode>
+      </node>
+      <node id="368304">
+        <label>AthContainers/tools/AuxDataTraits.h</label>
+        <link refid="d3/d5a/AuxDataTraits_8h"/>
+        <childnode refid="368305" relation="include">
+        </childnode>
+        <childnode refid="368287" relation="include">
+        </childnode>
+      </node>
+      <node id="368267">
+        <label>stdint.h</label>
+      </node>
+      <node id="368369">
+        <label>AthContainers/tools/DVLCast.h</label>
+        <link refid="df/d5c/DVLCast_8h"/>
+        <childnode refid="368289" relation="include">
+        </childnode>
+        <childnode refid="368370" relation="include">
+        </childnode>
+        <childnode refid="368300" relation="include">
+        </childnode>
+        <childnode refid="368287" relation="include">
+        </childnode>
+        <childnode refid="368281" relation="include">
+        </childnode>
+      </node>
+      <node id="368355">
+        <label>AthContainers/IndexTrackingPolicy.h</label>
+        <link refid="d0/da5/IndexTrackingPolicy_8h"/>
+      </node>
+      <node id="368301">
+        <label>AthContainersInterfaces/IAuxTypeVectorFactory.h</label>
+        <link refid="d4/d2c/IAuxTypeVectorFactory_8h"/>
+        <childnode refid="368281" relation="include">
+        </childnode>
+        <childnode refid="368300" relation="include">
+        </childnode>
+      </node>
+      <node id="368271">
+        <label>RVersion.h</label>
+      </node>
+      <node id="368263">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/ElectronContainer.h</label>
+        <link refid="ElectronContainer.h"/>
+        <childnode refid="368264" relation="include">
+        </childnode>
+        <childnode refid="368412" relation="include">
+        </childnode>
+        <childnode refid="368350" relation="include">
+        </childnode>
+      </node>
+      <node id="368415">
+        <label>xAODEgamma/EgammaFwd.h</label>
+        <link refid="dc/d0f/EgammaFwd_8h_source"/>
+      </node>
+      <node id="368282">
+        <label>CxxUtils/unordered_set.h</label>
+        <link refid="df/d26/unordered__set_8h"/>
+        <childnode refid="368283" relation="include">
+        </childnode>
+        <childnode refid="368291" relation="include">
+        </childnode>
+        <childnode refid="368292" relation="include">
+        </childnode>
+      </node>
+      <node id="368352">
+        <label>xAODCaloEvent/versions/CaloClusterContainer_v1.h</label>
+        <link refid="d8/dda/CaloClusterContainer__v1_8h_source"/>
+        <childnode refid="368353" relation="include">
+        </childnode>
+        <childnode refid="368392" relation="include">
+        </childnode>
+        <childnode refid="368342" relation="include">
+        </childnode>
+      </node>
+      <node id="368288">
+        <label>cmath</label>
+      </node>
+      <node id="368336">
+        <label>cassert</label>
+      </node>
+      <node id="368360">
+        <label>boost/mpl/if.hpp</label>
+      </node>
+      <node id="368379">
+        <label>boost/static_assert.hpp</label>
+      </node>
+      <node id="368334">
+        <label>stdexcept</label>
+      </node>
+      <node id="368323">
+        <label>boost/thread/thread.hpp</label>
+      </node>
+      <node id="368398">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="368366">
+        <label>boost/type_traits/is_pointer.hpp</label>
+      </node>
+      <node id="368404">
+        <label>xAODTracking/VertexContainerFwd.h</label>
+        <link refid="d0/dc4/VertexContainerFwd_8h_source"/>
+        <childnode refid="368353" relation="include">
+        </childnode>
+        <childnode refid="368405" relation="include">
+        </childnode>
+      </node>
+      <node id="368410">
+        <label>xAODTracking/TrackParticleContainerFwd.h</label>
+        <link refid="de/dea/TrackParticleContainerFwd_8h_source"/>
+        <childnode refid="368353" relation="include">
+        </childnode>
+        <childnode refid="368392" relation="include">
+        </childnode>
+        <childnode refid="368411" relation="include">
+        </childnode>
+      </node>
+      <node id="368374">
+        <label>boost/iterator/iterator_adaptor.hpp</label>
+      </node>
+      <node id="368276">
+        <label>TLorentzVector.h</label>
+      </node>
+      <node id="368344">
+        <label>CaloGeoHelpers/CaloSampling.h</label>
+        <link refid="d7/d85/CaloSampling_8h_source"/>
+        <childnode refid="368268" relation="include">
+        </childnode>
+        <childnode refid="368345" relation="include">
+        </childnode>
+      </node>
+      <node id="368268">
+        <label>string</label>
+      </node>
+      <node id="368326">
+        <label>AthContainers/AuxVectorData.h</label>
+        <link refid="d9/df2/AuxVectorData_8h"/>
+        <childnode refid="368280" relation="include">
+        </childnode>
+        <childnode refid="368279" relation="include">
+        </childnode>
+        <childnode refid="368308" relation="include">
+        </childnode>
+        <childnode refid="368304" relation="include">
+        </childnode>
+        <childnode refid="368296" relation="include">
+        </childnode>
+        <childnode refid="368327" relation="include">
+        </childnode>
+        <childnode refid="368328" relation="include">
+        </childnode>
+        <childnode refid="368311" relation="include">
+        </childnode>
+        <childnode refid="368305" relation="include">
+        </childnode>
+        <childnode refid="368285" relation="include">
+        </childnode>
+        <childnode refid="368287" relation="include">
+        </childnode>
+        <childnode refid="368329" relation="include">
+        </childnode>
+        <childnode refid="368330" relation="include">
+        </childnode>
+        <childnode refid="368318" relation="include">
+        </childnode>
+        <childnode refid="368331" relation="include">
+        </childnode>
+      </node>
+      <node id="368299">
+        <label>AthContainersInterfaces/IAuxTypeVector.h</label>
+        <link refid="d8/d0e/IAuxTypeVector_8h"/>
+        <childnode refid="368281" relation="include">
+        </childnode>
+        <childnode refid="368300" relation="include">
+        </childnode>
+      </node>
+      <node id="368403">
+        <label>versions/TrackParticle_v1.h</label>
+        <link refid="d2/d7f/TrackParticle__v1_8h_source"/>
+        <childnode refid="368343" relation="include">
+        </childnode>
+        <childnode refid="368267" relation="include">
+        </childnode>
+        <childnode refid="368266" relation="include">
+        </childnode>
+        <childnode refid="368353" relation="include">
+        </childnode>
+        <childnode refid="368275" relation="include">
+        </childnode>
+        <childnode refid="368401" relation="include">
+        </childnode>
+        <childnode refid="368404" relation="include">
+        </childnode>
+        <childnode refid="368406" relation="include">
+        </childnode>
+        <childnode refid="368407" relation="include">
+        </childnode>
+      </node>
+      <node id="368329">
+        <label>AthContainers/tools/likely.h</label>
+        <link refid="d6/dd6/likely_8h"/>
+      </node>
+      <node id="368371">
+        <label>AthContainers/tools/DVLIterator.h</label>
+        <link refid="d3/dc7/DVLIterator_8h_source"/>
+        <childnode refid="368354" relation="include">
+        </childnode>
+        <childnode refid="368369" relation="include">
+        </childnode>
+        <childnode refid="368372" relation="include">
+        </childnode>
+        <childnode refid="368374" relation="include">
+        </childnode>
+        <childnode refid="368359" relation="include">
+        </childnode>
+        <childnode refid="368286" relation="include">
+        </childnode>
+        <childnode refid="368287" relation="include">
+        </childnode>
+      </node>
+      <node id="368264">
+        <label>xAODEgamma/Electron.h</label>
+        <link refid="dc/db4/Electron_8h_source"/>
+        <childnode refid="368265" relation="include">
+        </childnode>
+      </node>
+      <node id="368385">
+        <label>SGTools/DataBucket.h</label>
+      </node>
+      <node id="368394">
+        <label>xAODPrimitives/IsolationType.h</label>
+        <link refid="d2/d36/IsolationType_8h_source"/>
+      </node>
+      <node id="368386">
+        <label>AthContainers/tools/DVLDataBucket.icc</label>
+        <link refid="d3/d21/DVLDataBucket_8icc"/>
+        <childnode refid="368387" relation="include">
+        </childnode>
+      </node>
+      <node id="368393">
+        <label>xAODPrimitives/IsolationCorrection.h</label>
+        <link refid="d3/de5/xAODPrimitives_2xAODPrimitives_2IsolationCorrection_8h_source"/>
+        <childnode refid="368343" relation="include">
+        </childnode>
+        <childnode refid="368305" relation="include">
+        </childnode>
+      </node>
+      <node id="368387">
+        <label>SGTools/IRegisterTransient.h</label>
+      </node>
+      <node id="368272">
+        <label>RootMetaSelection.h</label>
+      </node>
+      <node id="368315">
+        <label>AthContainers/tools/AuxTypeVector.icc</label>
+        <link refid="d5/d84/AuxTypeVector_8icc"/>
+      </node>
+      <node id="368416">
+        <label>xAODEgamma/ElectronContainerFwd.h</label>
+        <link refid="de/d36/ElectronContainerFwd_8h_source"/>
+        <childnode refid="368353" relation="include">
+        </childnode>
+        <childnode refid="368417" relation="include">
+        </childnode>
+        <childnode refid="368414" relation="include">
+        </childnode>
+      </node>
+      <node id="368376">
+        <label>AthContainers/tools/DVL_algorithms.h</label>
+        <link refid="d0/d7a/DVL__algorithms_8h"/>
+        <childnode refid="368371" relation="include">
+        </childnode>
+        <childnode refid="368286" relation="include">
+        </childnode>
+        <childnode refid="368284" relation="include">
+        </childnode>
+        <childnode refid="368377" relation="include">
+        </childnode>
+      </node>
+      <node id="368330">
+        <label>AthContainers/tools/assume.h</label>
+        <link refid="d2/d20/assume_8h"/>
+      </node>
+      <node id="368312">
+        <label>AthContainers/PackedContainer.icc</label>
+        <link refid="d1/d0c/PackedContainer_8icc"/>
+      </node>
+      <node id="368372">
+        <label>AthContainers/tools/ElementProxy.h</label>
+        <link refid="db/d26/ElementProxy_8h"/>
+        <childnode refid="368354" relation="include">
+        </childnode>
+        <childnode refid="368270" relation="include">
+        </childnode>
+        <childnode refid="368291" relation="include">
+        </childnode>
+        <childnode refid="368373" relation="include">
+        </childnode>
+      </node>
+      <node id="368278">
+        <label>AthContainersInterfaces/IAuxElement.h</label>
+        <link refid="dd/d7a/IAuxElement_8h"/>
+      </node>
+      <node id="368270">
+        <label>AthLinks/tools/selection_ns.h</label>
+        <link refid="d3/dec/selection__ns_8h"/>
+        <childnode refid="368271" relation="include">
+        </childnode>
+        <childnode refid="368272" relation="include">
+        </childnode>
+      </node>
+      <node id="368328">
+        <label>AthenaKernel/IThinningSvc.h</label>
+      </node>
+      <node id="368321">
+        <label>boost/atomic.hpp</label>
+      </node>
+      <node id="368411">
+        <label>xAODTracking/TrackParticleFwd.h</label>
+        <link refid="d1/dc4/TrackParticleFwd_8h_source"/>
+      </node>
+      <node id="368370">
+        <label>limits.h</label>
+      </node>
+      <node id="368413">
+        <label>xAODEgamma/versions/EgammaContainer_v1.h</label>
+        <link refid="d0/d71/EgammaContainer__v1_8h_source"/>
+        <childnode refid="368353" relation="include">
+        </childnode>
+        <childnode refid="368392" relation="include">
+        </childnode>
+        <childnode refid="368274" relation="include">
+        </childnode>
+        <childnode refid="368414" relation="include">
+        </childnode>
+      </node>
+      <node id="368364">
+        <label>AthContainers/tools/ClassID.h</label>
+        <link refid="de/de2/ClassID_8h"/>
+        <childnode refid="368365" relation="include">
+        </childnode>
+      </node>
+      <node id="368307">
+        <label>AthContainers/PackedParameters.h</label>
+        <link refid="d4/d43/PackedParameters_8h"/>
+        <childnode refid="368308" relation="include">
+        </childnode>
+        <childnode refid="368289" relation="include">
+        </childnode>
+        <childnode refid="368267" relation="include">
+        </childnode>
+        <childnode refid="368310" relation="include">
+        </childnode>
+      </node>
+      <node id="368280">
+        <label>AthContainersInterfaces/AuxTypes.h</label>
+        <link refid="d1/dea/AuxTypes_8h"/>
+        <childnode refid="368281" relation="include">
+        </childnode>
+        <childnode refid="368282" relation="include">
+        </childnode>
+      </node>
+      <node id="368414">
+        <label>xAODEgamma/EgammaContainerFwd.h</label>
+        <link refid="d3/d76/EgammaContainerFwd_8h_source"/>
+        <childnode refid="368353" relation="include">
+        </childnode>
+        <childnode refid="368392" relation="include">
+        </childnode>
+        <childnode refid="368415" relation="include">
+        </childnode>
+      </node>
+      <node id="368269">
+        <label>AthLinks/ElementLinkBase.h</label>
+        <link refid="d0/d16/ElementLinkBase_8h_source"/>
+        <childnode refid="368267" relation="include">
+        </childnode>
+      </node>
+      <node id="368399">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="368283">
+        <label>CxxUtils/hashtable.h</label>
+        <link refid="dd/d16/hashtable_8h"/>
+        <childnode refid="368284" relation="include">
+        </childnode>
+        <childnode refid="368285" relation="include">
+        </childnode>
+        <childnode refid="368286" relation="include">
+        </childnode>
+        <childnode refid="368281" relation="include">
+        </childnode>
+        <childnode refid="368287" relation="include">
+        </childnode>
+        <childnode refid="368288" relation="include">
+        </childnode>
+        <childnode refid="368289" relation="include">
+        </childnode>
+        <childnode refid="368268" relation="include">
+        </childnode>
+        <childnode refid="368290" relation="include">
+        </childnode>
+      </node>
+      <node id="368357">
+        <label>AthContainers/tools/ATHCONTAINERS_ASSERT.h</label>
+        <link refid="de/d6b/ATHCONTAINERS__ASSERT_8h"/>
+        <childnode refid="368336" relation="include">
+        </childnode>
+      </node>
+      <node id="368275">
+        <label>xAODBase/IParticle.h</label>
+        <link refid="d5/dac/IParticle_8h_source"/>
+        <childnode refid="368276" relation="include">
+        </childnode>
+        <childnode refid="368277" relation="include">
+        </childnode>
+        <childnode refid="368337" relation="include">
+        </childnode>
+        <childnode refid="368295" relation="include">
+        </childnode>
+      </node>
+      <node id="368337">
+        <label>ObjectType.h</label>
+        <link refid="d8/d04/ObjectType_8h_source"/>
+        <childnode refid="368338" relation="include">
+        </childnode>
+      </node>
+      <node id="368342">
+        <label>xAODCaloEvent/versions/CaloCluster_v1.h</label>
+        <link refid="dc/d4b/CaloCluster__v1_8h_source"/>
+        <childnode refid="368267" relation="include">
+        </childnode>
+        <childnode refid="368343" relation="include">
+        </childnode>
+        <childnode refid="368275" relation="include">
+        </childnode>
+        <childnode refid="368344" relation="include">
+        </childnode>
+        <childnode refid="368346" relation="include">
+        </childnode>
+        <childnode refid="368266" relation="include">
+        </childnode>
+        <childnode refid="368348" relation="include">
+        </childnode>
+        <childnode refid="368349" relation="include">
+        </childnode>
+      </node>
+      <node id="368373">
+        <label>AthContainers/tools/ElementProxy.icc</label>
+        <link refid="d6/d70/ElementProxy_8icc"/>
+        <childnode refid="368369" relation="include">
+        </childnode>
+        <childnode refid="368357" relation="include">
+        </childnode>
+      </node>
+      <node id="368265">
+        <label>xAODEgamma/versions/Electron_v1.h</label>
+        <link refid="df/d27/Electron__v1_8h_source"/>
+        <childnode refid="368266" relation="include">
+        </childnode>
+        <childnode refid="368274" relation="include">
+        </childnode>
+        <childnode refid="368340" relation="include">
+        </childnode>
+        <childnode refid="368401" relation="include">
+        </childnode>
+        <childnode refid="368402" relation="include">
+        </childnode>
+        <childnode refid="368408" relation="include">
+        </childnode>
+        <childnode refid="368400" relation="include">
+        </childnode>
+        <childnode refid="368311" relation="include">
+        </childnode>
+      </node>
+      <node id="368300">
+        <label>typeinfo</label>
+      </node>
+      <node id="368401">
+        <label>xAODTracking/TrackingPrimitives.h</label>
+        <link refid="d2/d4c/TrackingPrimitives_8h_source"/>
+        <childnode refid="368396" relation="include">
+        </childnode>
+      </node>
+      <node id="368335">
+        <label>AthContainers/AuxElement.icc</label>
+        <link refid="d2/d37/AuxElement_8icc"/>
+        <childnode refid="368329" relation="include">
+        </childnode>
+        <childnode refid="368336" relation="include">
+        </childnode>
+      </node>
+      <node id="368341">
+        <label>xAODCaloEvent/CaloCluster.h</label>
+        <link refid="db/d88/CaloCluster_8h_source"/>
+        <childnode refid="368342" relation="include">
+        </childnode>
+        <childnode refid="368350" relation="include">
+        </childnode>
+      </node>
+      <node id="368353">
+        <label>AthContainers/DataVector.h</label>
+        <link refid="d7/dd6/DataVector_8h"/>
+        <childnode refid="368332" relation="include">
+        </childnode>
+        <childnode refid="368354" relation="include">
+        </childnode>
+        <childnode refid="368355" relation="include">
+        </childnode>
+        <childnode refid="368356" relation="include">
+        </childnode>
+        <childnode refid="368362" relation="include">
+        </childnode>
+        <childnode refid="368363" relation="include">
+        </childnode>
+        <childnode refid="368369" relation="include">
+        </childnode>
+        <childnode refid="368371" relation="include">
+        </childnode>
+        <childnode refid="368375" relation="include">
+        </childnode>
+        <childnode refid="368376" relation="include">
+        </childnode>
+        <childnode refid="368372" relation="include">
+        </childnode>
+        <childnode refid="368378" relation="include">
+        </childnode>
+        <childnode refid="368270" relation="include">
+        </childnode>
+        <childnode refid="368379" relation="include">
+        </childnode>
+        <childnode refid="368380" relation="include">
+        </childnode>
+        <childnode refid="368374" relation="include">
+        </childnode>
+        <childnode refid="368305" relation="include">
+        </childnode>
+        <childnode refid="368300" relation="include">
+        </childnode>
+        <childnode refid="368292" relation="include">
+        </childnode>
+        <childnode refid="368381" relation="include">
+        </childnode>
+        <childnode refid="368284" relation="include">
+        </childnode>
+        <childnode refid="368334" relation="include">
+        </childnode>
+        <childnode refid="368286" relation="include">
+        </childnode>
+        <childnode refid="368295" relation="include">
+        </childnode>
+        <childnode refid="368382" relation="include">
+        </childnode>
+        <childnode refid="368384" relation="include">
+        </childnode>
+        <childnode refid="368388" relation="include">
+        </childnode>
+        <childnode refid="368389" relation="include">
+        </childnode>
+      </node>
+      <node id="368343">
+        <label>bitset</label>
+      </node>
+      <node id="368310">
+        <label>AthContainers/PackedParameters.icc</label>
+        <link refid="db/d30/PackedParameters_8icc"/>
+      </node>
+      <node id="368273">
+        <label>AthLinks/tools/TypeTools.h</label>
+        <link refid="dd/db1/TypeTools_8h_source"/>
+      </node>
+      <node id="368327">
+        <label>AthenaKernel/ILockable.h</label>
+      </node>
+      <node id="368297">
+        <label>AthLinks/DataLinkBase.h</label>
+        <link refid="db/da8/DataLinkBase_8h_source"/>
+        <childnode refid="368267" relation="include">
+        </childnode>
+      </node>
+      <node id="368309">
+        <label>AthContainersInterfaces/AuxDataOption.icc</label>
+        <link refid="db/d68/AuxDataOption_8icc"/>
+      </node>
+      <node id="368314">
+        <label>boost/type_traits/is_arithmetic.hpp</label>
+      </node>
+      <node id="368363">
+        <label>AthContainers/tools/DVLInfo.h</label>
+        <link refid="d3/d2e/DVLInfo_8h"/>
+        <childnode refid="368364" relation="include">
+        </childnode>
+        <childnode refid="368356" relation="include">
+        </childnode>
+        <childnode refid="368300" relation="include">
+        </childnode>
+        <childnode refid="368281" relation="include">
+        </childnode>
+        <childnode refid="368290" relation="include">
+        </childnode>
+        <childnode refid="368366" relation="include">
+        </childnode>
+        <childnode refid="368313" relation="include">
+        </childnode>
+        <childnode refid="368367" relation="include">
+        </childnode>
+      </node>
+      <node id="368293">
+        <label>SGTools/CLASS_DEF.h</label>
+      </node>
+      <node id="368397">
+        <label>unistd.h</label>
+      </node>
+      <node id="368382">
+        <label>AthContainers/ClassName.h</label>
+        <link refid="dd/d6b/AthContainers_2AthContainers_2ClassName_8h_source"/>
+        <childnode refid="368383" relation="include">
+        </childnode>
+      </node>
+      <node id="368298">
+        <label>AthContainers/AuxTypeRegistry.h</label>
+        <link refid="db/d7f/AuxTypeRegistry_8h"/>
+        <childnode refid="368280" relation="include">
+        </childnode>
+        <childnode refid="368299" relation="include">
+        </childnode>
+        <childnode refid="368301" relation="include">
+        </childnode>
+        <childnode refid="368302" relation="include">
+        </childnode>
+        <childnode refid="368316" relation="include">
+        </childnode>
+        <childnode refid="368318" relation="include">
+        </childnode>
+        <childnode refid="368281" relation="include">
+        </childnode>
+        <childnode refid="368300" relation="include">
+        </childnode>
+        <childnode refid="368305" relation="include">
+        </childnode>
+        <childnode refid="368324" relation="include">
+        </childnode>
+        <childnode refid="368325" relation="include">
+        </childnode>
+      </node>
+      <node id="368305">
+        <label>vector</label>
+      </node>
+      <node id="368392">
+        <label>xAODBase/IParticleContainer.h</label>
+        <link refid="dd/d2d/IParticleContainer_8h_source"/>
+        <childnode refid="368353" relation="include">
+        </childnode>
+        <childnode refid="368275" relation="include">
+        </childnode>
+        <childnode refid="368293" relation="include">
+        </childnode>
+      </node>
+      <node id="368390">
+        <label>AthContainers/tools/CompareAndPrint.h</label>
+        <link refid="d5/da8/CompareAndPrint_8h_source"/>
+        <childnode refid="368284" relation="include">
+        </childnode>
+        <childnode refid="368300" relation="include">
+        </childnode>
+      </node>
+      <node id="368391">
+        <label>AthContainers/tools/DVLEltBaseInfo.icc</label>
+        <link refid="dd/d5e/DVLEltBaseInfo_8icc"/>
+      </node>
+      <node id="368346">
+        <label>xAODCaloEvent/CaloClusterBadChannelData.h</label>
+        <link refid="d1/d93/CaloClusterBadChannelData_8h_source"/>
+        <childnode refid="368347" relation="include">
+        </childnode>
+      </node>
+      <node id="368285">
+        <label>utility</label>
+      </node>
+      <node id="368388">
+        <label>SGTools/DataBucketTraitFwd.h</label>
+      </node>
+      <node id="368311">
+        <label>CxxUtils/override.h</label>
+        <link refid="de/d0e/override_8h"/>
+      </node>
+      <node id="368274">
+        <label>xAODEgamma/versions/Egamma_v1.h</label>
+        <link refid="d9/d42/Egamma__v1_8h_source"/>
+        <childnode refid="368266" relation="include">
+        </childnode>
+        <childnode refid="368275" relation="include">
+        </childnode>
+        <childnode refid="368339" relation="include">
+        </childnode>
+        <childnode refid="368340" relation="include">
+        </childnode>
+        <childnode refid="368341" relation="include">
+        </childnode>
+        <childnode refid="368351" relation="include">
+        </childnode>
+        <childnode refid="368393" relation="include">
+        </childnode>
+        <childnode refid="368394" relation="include">
+        </childnode>
+        <childnode refid="368395" relation="include">
+        </childnode>
+        <childnode refid="368396" relation="include">
+        </childnode>
+        <childnode refid="368400" relation="include">
+        </childnode>
+        <childnode refid="368311" relation="include">
+        </childnode>
+        <childnode refid="368267" relation="include">
+        </childnode>
+      </node>
+      <node id="368351">
+        <label>xAODCaloEvent/CaloClusterContainer.h</label>
+        <link refid="da/dc3/CaloClusterContainer_8h_source"/>
+        <childnode refid="368341" relation="include">
+        </childnode>
+        <childnode refid="368352" relation="include">
+        </childnode>
+        <childnode refid="368350" relation="include">
+        </childnode>
+      </node>
+      <node id="368405">
+        <label>xAODTracking/VertexFwd.h</label>
+        <link refid="d9/ddd/VertexFwd_8h_source"/>
+      </node>
+      <node id="368361">
+        <label>AthContainers/AuxVectorBase.icc</label>
+        <link refid="d4/d50/AuxVectorBase_8icc"/>
+      </node>
+      <node id="368319">
+        <label>boost/thread/shared_mutex.hpp</label>
+      </node>
+      <node id="368303">
+        <label>AthContainersInterfaces/IAuxSetOption.h</label>
+        <link refid="d7/d7e/IAuxSetOption_8h"/>
+      </node>
+      <node id="368318">
+        <label>AthContainers/tools/threading.h</label>
+        <link refid="d7/d22/threading_8h"/>
+        <childnode refid="368319" relation="include">
+        </childnode>
+        <childnode refid="368320" relation="include">
+        </childnode>
+        <childnode refid="368321" relation="include">
+        </childnode>
+        <childnode refid="368322" relation="include">
+        </childnode>
+        <childnode refid="368323" relation="include">
+        </childnode>
+      </node>
+      <node id="368345">
+        <label>CaloGeoHelpers/CaloSampling.def</label>
+      </node>
+      <node id="368338">
+        <label>iosfwd</label>
+      </node>
+      <node id="368287">
+        <label>cstdlib</label>
+      </node>
+      <node id="368402">
+        <label>xAODTracking/TrackParticle.h</label>
+        <link refid="d2/d15/TrackParticle_8h_source"/>
+        <childnode refid="368403" relation="include">
+        </childnode>
+        <childnode refid="368350" relation="include">
+        </childnode>
+      </node>
+      <node id="368381">
+        <label>iostream</label>
+      </node>
+      <node id="368333">
+        <label>CxxUtils/noreturn.h</label>
+        <link refid="de/d6f/noreturn_8h"/>
+      </node>
+      <node id="368409">
+        <label>xAODTracking/versions/TrackParticleContainer_v1.h</label>
+        <link refid="d7/d3b/TrackParticleContainer__v1_8h_source"/>
+        <childnode refid="368267" relation="include">
+        </childnode>
+        <childnode refid="368353" relation="include">
+        </childnode>
+        <childnode refid="368403" relation="include">
+        </childnode>
+        <childnode refid="368410" relation="include">
+        </childnode>
+      </node>
+      <node id="368279">
+        <label>AthContainersInterfaces/IConstAuxStore.h</label>
+        <link refid="d7/d3a/IConstAuxStore_8h"/>
+        <childnode refid="368280" relation="include">
+        </childnode>
+        <childnode refid="368281" relation="include">
+        </childnode>
+        <childnode refid="368293" relation="include">
+        </childnode>
+      </node>
+      <node id="368281">
+        <label>cstddef</label>
+      </node>
+      <node id="368331">
+        <label>AthContainers/AuxVectorData.icc</label>
+        <link refid="da/de7/AuxVectorData_8icc"/>
+        <childnode refid="368298" relation="include">
+        </childnode>
+        <childnode refid="368294" relation="include">
+        </childnode>
+        <childnode refid="368279" relation="include">
+        </childnode>
+        <childnode refid="368329" relation="include">
+        </childnode>
+        <childnode refid="368330" relation="include">
+        </childnode>
+      </node>
+      <node id="368340">
+        <label>xAODEgamma/EgammaEnums.h</label>
+        <link refid="d4/d8f/EgammaEnums_8h_source"/>
+      </node>
+      <node id="368367">
+        <label>AthContainers/tools/DVLInfo.icc</label>
+        <link refid="da/d83/DVLInfo_8icc"/>
+        <childnode refid="368354" relation="include">
+        </childnode>
+        <childnode refid="368305" relation="include">
+        </childnode>
+        <childnode refid="368368" relation="include">
+        </childnode>
+        <childnode refid="368336" relation="include">
+        </childnode>
+        <childnode refid="368287" relation="include">
+        </childnode>
+        <childnode refid="368295" relation="include">
+        </childnode>
+      </node>
+      <node id="368302">
+        <label>AthContainers/tools/AuxTypeVector.h</label>
+        <link refid="d6/dd2/AuxTypeVector_8h"/>
+        <childnode refid="368299" relation="include">
+        </childnode>
+        <childnode refid="368303" relation="include">
+        </childnode>
+        <childnode refid="368304" relation="include">
+        </childnode>
+        <childnode refid="368306" relation="include">
+        </childnode>
+        <childnode refid="368311" relation="include">
+        </childnode>
+        <childnode refid="368300" relation="include">
+        </childnode>
+        <childnode refid="368305" relation="include">
+        </childnode>
+        <childnode refid="368284" relation="include">
+        </childnode>
+        <childnode refid="368267" relation="include">
+        </childnode>
+        <childnode refid="368313" relation="include">
+        </childnode>
+        <childnode refid="368314" relation="include">
+        </childnode>
+        <childnode refid="368315" relation="include">
+        </childnode>
+      </node>
+      <node id="368406">
+        <label>TrkParameters/TrackParameters.h</label>
+      </node>
+      <node id="368339">
+        <label>xAODEgamma/EgammaDefs.h</label>
+        <link refid="dd/d34/EgammaDefs_8h_source"/>
+        <childnode refid="368267" relation="include">
+        </childnode>
+      </node>
+      <node id="368417">
+        <label>xAODEgamma/ElectronFwd.h</label>
+        <link refid="db/d18/ElectronFwd_8h_source"/>
+      </node>
+      <node id="368313">
+        <label>boost/type_traits/is_base_of.hpp</label>
+      </node>
+      <node id="368356">
+        <label>AthContainers/AuxVectorBase.h</label>
+        <link refid="d7/d18/AuxVectorBase_8h"/>
+        <childnode refid="368326" relation="include">
+        </childnode>
+        <childnode refid="368354" relation="include">
+        </childnode>
+        <childnode refid="368355" relation="include">
+        </childnode>
+        <childnode refid="368277" relation="include">
+        </childnode>
+        <childnode refid="368298" relation="include">
+        </childnode>
+        <childnode refid="368332" relation="include">
+        </childnode>
+        <childnode refid="368357" relation="include">
+        </childnode>
+        <childnode refid="368294" relation="include">
+        </childnode>
+        <childnode refid="368358" relation="include">
+        </childnode>
+        <childnode refid="368305" relation="include">
+        </childnode>
+        <childnode refid="368361" relation="include">
+        </childnode>
+      </node>
+      <node id="368395">
+        <label>xAODPrimitives/IsolationFlavour.h</label>
+        <link refid="da/d23/IsolationFlavour_8h_source"/>
+      </node>
+      <node id="368350">
+        <label>xAODCore/CLASS_DEF.h</label>
+        <link refid="d6/d20/xAODCore_2xAODCore_2CLASS__DEF_8h"/>
+        <childnode refid="368293" relation="include">
+        </childnode>
+      </node>
+      <node id="368317">
+        <label>AthContainers/tools/AuxTypeVectorFactory.icc</label>
+        <link refid="dc/d02/AuxTypeVectorFactory_8icc"/>
+      </node>
+      <node id="368306">
+        <label>AthContainers/PackedContainer.h</label>
+        <link refid="d6/dda/PackedContainer_8h"/>
+        <childnode refid="368303" relation="include">
+        </childnode>
+        <childnode refid="368307" relation="include">
+        </childnode>
+        <childnode refid="368311" relation="include">
+        </childnode>
+        <childnode refid="368305" relation="include">
+        </childnode>
+        <childnode refid="368312" relation="include">
+        </childnode>
+      </node>
+      <node id="368284">
+        <label>algorithm</label>
+      </node>
+      <node id="368348">
+        <label>CaloEvent/CaloClusterCellLinkContainer.h</label>
+      </node>
+      <node id="368378">
+        <label>AthContainers/tools/IsMostDerivedFlag.h</label>
+        <link refid="d5/dfa/IsMostDerivedFlag_8h"/>
+      </node>
+      <node id="368407">
+        <label>TrkTrack/TrackCollection.h</label>
+      </node>
+      <node id="368412">
+        <label>xAODEgamma/versions/ElectronContainer_v1.h</label>
+        <link refid="dc/d7f/ElectronContainer__v1_8h_source"/>
+        <childnode refid="368353" relation="include">
+        </childnode>
+        <childnode refid="368265" relation="include">
+        </childnode>
+        <childnode refid="368413" relation="include">
+        </childnode>
+        <childnode refid="368416" relation="include">
+        </childnode>
+      </node>
+      <node id="368277">
+        <label>AthContainers/AuxElement.h</label>
+        <link refid="d1/d6f/AuxElement_8h"/>
+        <childnode refid="368278" relation="include">
+        </childnode>
+        <childnode refid="368279" relation="include">
+        </childnode>
+        <childnode refid="368294" relation="include">
+        </childnode>
+        <childnode refid="368296" relation="include">
+        </childnode>
+        <childnode refid="368298" relation="include">
+        </childnode>
+        <childnode refid="368326" relation="include">
+        </childnode>
+        <childnode refid="368304" relation="include">
+        </childnode>
+        <childnode refid="368332" relation="include">
+        </childnode>
+        <childnode refid="368329" relation="include">
+        </childnode>
+        <childnode refid="368281" relation="include">
+        </childnode>
+        <childnode refid="368335" relation="include">
+        </childnode>
+      </node>
+      <node id="368296">
+        <label>AthLinks/DataLink.h</label>
+        <link refid="da/de8/DataLink_8h_source"/>
+        <childnode refid="368267" relation="include">
+        </childnode>
+        <childnode refid="368268" relation="include">
+        </childnode>
+        <childnode refid="368297" relation="include">
+        </childnode>
+        <childnode refid="368270" relation="include">
+        </childnode>
+      </node>
+      <node id="368375">
+        <label>AthContainers/tools/DVL_iter_swap.h</label>
+        <link refid="d6/ddb/DVL__iter__swap_8h"/>
+        <childnode refid="368371" relation="include">
+        </childnode>
+        <childnode refid="368357" relation="include">
+        </childnode>
+        <childnode refid="368286" relation="include">
+        </childnode>
+      </node>
+      <node id="368354">
+        <label>AthContainers/OwnershipPolicy.h</label>
+        <link refid="d3/da4/OwnershipPolicy_8h_source"/>
+      </node>
+      <node id="368266">
+        <label>AthLinks/ElementLink.h</label>
+        <link refid="dc/d24/ElementLink_8h_source"/>
+        <childnode refid="368267" relation="include">
+        </childnode>
+        <childnode refid="368268" relation="include">
+        </childnode>
+        <childnode refid="368269" relation="include">
+        </childnode>
+        <childnode refid="368270" relation="include">
+        </childnode>
+        <childnode refid="368273" relation="include">
+        </childnode>
+      </node>
+      <node id="368408">
+        <label>xAODTracking/TrackParticleContainer.h</label>
+        <link refid="da/d31/TrackParticleContainer_8h_source"/>
+        <childnode refid="368402" relation="include">
+        </childnode>
+        <childnode refid="368409" relation="include">
+        </childnode>
+        <childnode refid="368350" relation="include">
+        </childnode>
+      </node>
+      <node id="368365">
+        <label>GaudiKernel/ClassID.h</label>
+      </node>
+      <node id="368380">
+        <label>boost/type_traits.hpp</label>
+      </node>
+      <node id="368291">
+        <label>memory</label>
+      </node>
+      <node id="368316">
+        <label>AthContainers/tools/AuxTypeVectorFactory.h</label>
+        <link refid="dc/d69/AuxTypeVectorFactory_8h"/>
+        <childnode refid="368301" relation="include">
+        </childnode>
+        <childnode refid="368302" relation="include">
+        </childnode>
+        <childnode refid="368317" relation="include">
+        </childnode>
+      </node>
+      <node id="368358">
+        <label>AthContainersInterfaces/AuxStore_traits.h</label>
+        <link refid="dd/d70/AuxStore__traits_8h"/>
+        <childnode refid="368278" relation="include">
+        </childnode>
+        <childnode refid="368294" relation="include">
+        </childnode>
+        <childnode refid="368279" relation="include">
+        </childnode>
+        <childnode refid="368313" relation="include">
+        </childnode>
+        <childnode refid="368359" relation="include">
+        </childnode>
+        <childnode refid="368360" relation="include">
+        </childnode>
+        <childnode refid="368268" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="368442">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/FsrUtils/src/ToolTester.h</label>
+        <link refid="d8/d82/FsrUtils_2src_2ToolTester_8h_source"/>
+      </node>
+      <node id="368435">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CPAnalysisExamples/CPAnalysisExamples/ToolExamplesAlg.h</label>
+        <link refid="d4/d75/ToolExamplesAlg_8h_source"/>
+      </node>
+      <node id="368471">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/EventSelectHasVertex.h</label>
+        <link refid="d7/d76/EventSelectHasVertex_8h_source"/>
+      </node>
+      <node id="368447">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/ElectronTool.h</label>
+        <link refid="d8/d3e/ElectronTool_8h_source"/>
+      </node>
+      <node id="368443">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/IElectronRemovalTool.h</label>
+        <link refid="d3/d94/IElectronRemovalTool_8h_source"/>
+        <childnode refid="368444" relation="include">
+        </childnode>
+        <childnode refid="368445" relation="include">
+        </childnode>
+      </node>
+      <node id="368475">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/ValidationHists.h</label>
+        <link refid="db/dcc/ValidationHists_8h_source"/>
+      </node>
+      <node id="368436">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/IOverlapRemovalToolLegacy.h</label>
+        <link refid="dd/d7a/IOverlapRemovalToolLegacy_8h_source"/>
+        <childnode refid="368422" relation="include">
+        </childnode>
+      </node>
+      <node id="368433">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYToolsDict.h</label>
+        <link refid="dc/ded/SUSYToolsDict_8h_source"/>
+      </node>
+      <node id="368432">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/SUSYObjDef_xAOD.h</label>
+        <link refid="d0/daf/SUSYObjDef__xAOD_8h_source"/>
+        <childnode refid="368433" relation="include">
+        </childnode>
+      </node>
+      <node id="368472">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/KinSelectTool.h</label>
+        <link refid="d1/d09/KinSelectTool_8h_source"/>
+      </node>
+      <node id="368459">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/AnaToolCorrect.h</label>
+        <link refid="dc/d11/AnaToolCorrect_8h_source"/>
+        <childnode refid="368447" relation="include">
+        </childnode>
+        <childnode refid="368448" relation="include">
+        </childnode>
+        <childnode refid="368460" relation="include">
+        </childnode>
+        <childnode refid="368461" relation="include">
+        </childnode>
+        <childnode refid="368462" relation="include">
+        </childnode>
+        <childnode refid="368463" relation="include">
+        </childnode>
+        <childnode refid="368464" relation="include">
+        </childnode>
+        <childnode refid="368465" relation="include">
+        </childnode>
+        <childnode refid="368466" relation="include">
+        </childnode>
+      </node>
+      <node id="368423">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/OverlapRemovalTool.h</label>
+        <link refid="dd/dd9/OverlapRemovalTool_8h_source"/>
+        <childnode refid="368424" relation="include">
+        </childnode>
+        <childnode refid="368425" relation="include">
+        </childnode>
+      </node>
+      <node id="368454">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/QuickAna.h</label>
+        <link refid="de/d4d/QuickAna_8h_source"/>
+      </node>
+      <node id="368418">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/ElectronContainer.h</label>
+        <link refid="ElectronContainer.h"/>
+        <childnode refid="368419" relation="include">
+        </childnode>
+        <childnode refid="368420" relation="include">
+        </childnode>
+        <childnode refid="368421" relation="include">
+        </childnode>
+        <childnode refid="368422" relation="include">
+        </childnode>
+        <childnode refid="368436" relation="include">
+        </childnode>
+        <childnode refid="368437" relation="include">
+        </childnode>
+        <childnode refid="368430" relation="include">
+        </childnode>
+        <childnode refid="368424" relation="include">
+        </childnode>
+        <childnode refid="368438" relation="include">
+        </childnode>
+        <childnode refid="368439" relation="include">
+        </childnode>
+        <childnode refid="368440" relation="include">
+        </childnode>
+        <childnode refid="368443" relation="include">
+        </childnode>
+        <childnode refid="368446" relation="include">
+        </childnode>
+        <childnode refid="368477" relation="include">
+        </childnode>
+        <childnode refid="368480" relation="include">
+        </childnode>
+        <childnode refid="368485" relation="include">
+        </childnode>
+      </node>
+      <node id="368450">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/EventObjects.h</label>
+        <link refid="d8/db0/EventObjects_8h_source"/>
+        <childnode refid="368451" relation="include">
+        </childnode>
+      </node>
+      <node id="368481">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauSelectionTool.h</label>
+        <link refid="d2/df7/TauSelectionTool_8h_source"/>
+        <childnode refid="368482" relation="include">
+        </childnode>
+        <childnode refid="368483" relation="include">
+        </childnode>
+        <childnode refid="368484" relation="include">
+        </childnode>
+      </node>
+      <node id="368444">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/ElectronRemovalTool.h</label>
+        <link refid="dc/d1f/ElectronRemovalTool_8h_source"/>
+        <childnode refid="368445" relation="include">
+        </childnode>
+      </node>
+      <node id="368428">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/OverlapRemovalInit.h</label>
+        <link refid="d1/d57/OverlapRemovalInit_8h"/>
+        <childnode refid="368429" relation="include">
+        </childnode>
+        <childnode refid="368430" relation="include">
+        </childnode>
+        <childnode refid="368431" relation="include">
+        </childnode>
+      </node>
+      <node id="368482">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CPAnalysisExamples/CPAnalysisExamples/MyToolProvider.h</label>
+        <link refid="d0/db6/MyToolProvider_8h_source"/>
+      </node>
+      <node id="368427">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/ToolBox.h</label>
+        <link refid="d0/de8/ToolBox_8h_source"/>
+        <childnode refid="368428" relation="include">
+        </childnode>
+        <childnode refid="368429" relation="include">
+        </childnode>
+        <childnode refid="368431" relation="include">
+        </childnode>
+        <childnode refid="368432" relation="include">
+        </childnode>
+      </node>
+      <node id="368474">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/TriggerTool.h</label>
+        <link refid="d5/d1a/TriggerTool_8h_source"/>
+      </node>
+      <node id="368468">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/HZZElectronTool.h</label>
+        <link refid="d6/dd1/HZZElectronTool_8h_source"/>
+      </node>
+      <node id="368451">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/ToolScheduler.h</label>
+        <link refid="d0/d63/ToolScheduler_8h_source"/>
+      </node>
+      <node id="368441">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/FsrUtils/FsrUtils/FsrPhotonTool.h</label>
+        <link refid="d2/d7c/FsrPhotonTool_8h_source"/>
+      </node>
+      <node id="368484">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauEfficiencyCorrectionsTool.h</label>
+        <link refid="dd/dd4/TauEfficiencyCorrectionsTool_8h_source"/>
+        <childnode refid="368482" relation="include">
+        </childnode>
+        <childnode refid="368483" relation="include">
+        </childnode>
+      </node>
+      <node id="368438">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CPAnalysisExamples/CPAnalysisExamples/xExampleEDM.h</label>
+        <link refid="da/d33/xExampleEDM_8h_source"/>
+      </node>
+      <node id="368462">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/PhotonTool.h</label>
+        <link refid="dd/d84/PhotonTool_8h_source"/>
+      </node>
+      <node id="368439">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonFourMomentumCorrection/src/CalibratedEgammaProvider.h</label>
+        <link refid="df/d28/CalibratedEgammaProvider_8h_source"/>
+      </node>
+      <node id="368446">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/xAODInclude.h</label>
+        <link refid="d6/d02/xAODInclude_8h_source"/>
+        <childnode refid="368447" relation="include">
+        </childnode>
+        <childnode refid="368448" relation="include">
+        </childnode>
+        <childnode refid="368449" relation="include">
+        </childnode>
+        <childnode refid="368453" relation="include">
+        </childnode>
+        <childnode refid="368455" relation="include">
+        </childnode>
+        <childnode refid="368456" relation="include">
+        </childnode>
+        <childnode refid="368431" relation="include">
+        </childnode>
+        <childnode refid="368457" relation="include">
+        </childnode>
+        <childnode refid="368458" relation="include">
+        </childnode>
+        <childnode refid="368473" relation="include">
+        </childnode>
+        <childnode refid="368474" relation="include">
+        </childnode>
+        <childnode refid="368475" relation="include">
+        </childnode>
+        <childnode refid="368476" relation="include">
+        </childnode>
+      </node>
+      <node id="368434">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/src/OverlapRemovalTestAlg.h</label>
+        <link refid="df/d39/OverlapRemovalTestAlg_8h_source"/>
+      </node>
+      <node id="368473">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/SusyORTool.h</label>
+        <link refid="d0/d8a/SusyORTool_8h_source"/>
+      </node>
+      <node id="368463">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/TauTool.h</label>
+        <link refid="db/d37/TauTool_8h_source"/>
+      </node>
+      <node id="368461">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/MuonTool.h</label>
+        <link refid="d9/dc8/MuonTool_8h_source"/>
+      </node>
+      <node id="368477">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/SUSYTools/ISUSYObjDef_xAODTool.h</label>
+        <link refid="d1/d7a/ISUSYObjDef__xAODTool_8h_source"/>
+        <childnode refid="368478" relation="include">
+        </childnode>
+        <childnode refid="368479" relation="include">
+        </childnode>
+        <childnode refid="368432" relation="include">
+        </childnode>
+      </node>
+      <node id="368445">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/PhotonVertexSelectionDict.h</label>
+        <link refid="d1/d12/PhotonVertexSelectionDict_8h_source"/>
+      </node>
+      <node id="368448">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/FatJetTool.h</label>
+        <link refid="d6/d96/FatJetTool_8h_source"/>
+      </node>
+      <node id="368483">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauAnalysisToolsDict.h</label>
+        <link refid="d8/d1b/TauAnalysisToolsDict_8h_source"/>
+      </node>
+      <node id="368467">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/AnaToolSelect.h</label>
+        <link refid="dd/d58/AnaToolSelect_8h_source"/>
+        <childnode refid="368447" relation="include">
+        </childnode>
+        <childnode refid="368448" relation="include">
+        </childnode>
+        <childnode refid="368468" relation="include">
+        </childnode>
+        <childnode refid="368469" relation="include">
+        </childnode>
+        <childnode refid="368460" relation="include">
+        </childnode>
+        <childnode refid="368461" relation="include">
+        </childnode>
+        <childnode refid="368462" relation="include">
+        </childnode>
+        <childnode refid="368463" relation="include">
+        </childnode>
+        <childnode refid="368464" relation="include">
+        </childnode>
+        <childnode refid="368465" relation="include">
+        </childnode>
+        <childnode refid="368466" relation="include">
+        </childnode>
+      </node>
+      <node id="368422">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/IOverlapRemovalTool.h</label>
+        <link refid="d9/d96/IOverlapRemovalTool_8h_source"/>
+        <childnode refid="368423" relation="include">
+        </childnode>
+        <childnode refid="368426" relation="include">
+        </childnode>
+        <childnode refid="368427" relation="include">
+        </childnode>
+        <childnode refid="368434" relation="include">
+        </childnode>
+        <childnode refid="368435" relation="include">
+        </childnode>
+      </node>
+      <node id="368421">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/EleMuSharedTrkOverlapTool.h</label>
+        <link refid="db/dfa/EleMuSharedTrkOverlapTool_8h_source"/>
+      </node>
+      <node id="368431">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/ORTool.h</label>
+        <link refid="da/d69/ORTool_8h_source"/>
+      </node>
+      <node id="368426">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/OverlapRemovalToolLegacy.h</label>
+        <link refid="d9/def/OverlapRemovalToolLegacy_8h_source"/>
+        <childnode refid="368423" relation="include">
+        </childnode>
+      </node>
+      <node id="368429">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/src/ORToolBoxTestAlg.h</label>
+        <link refid="dc/ded/ORToolBoxTestAlg_8h_source"/>
+      </node>
+      <node id="368469">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/HZZMuonTool.h</label>
+        <link refid="db/d87/HZZMuonTool_8h_source"/>
+      </node>
+      <node id="368478">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/src/ApplySUSYTools.h</label>
+        <link refid="dd/dcc/ApplySUSYTools_8h_source"/>
+      </node>
+      <node id="368437">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/TauLooseEleOverlapTool.h</label>
+        <link refid="d4/da8/TauLooseEleOverlapTool_8h_source"/>
+      </node>
+      <node id="368424">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/util/OverlapRemovalTesterLegacy.cxx</label>
+        <link refid="da/dd8/OverlapRemovalTesterLegacy_8cxx"/>
+      </node>
+      <node id="368465">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/TopMuonTool.h</label>
+        <link refid="d6/d41/TopMuonTool_8h_source"/>
+      </node>
+      <node id="368430">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/util/OverlapRemovalTester.cxx</label>
+        <link refid="d7/dfa/OverlapRemovalTester_8cxx"/>
+      </node>
+      <node id="368479">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/SUSYTools/src/SUSYToolsAlg.h</label>
+        <link refid="d4/dd2/SUSYToolsAlg_8h_source"/>
+      </node>
+      <node id="368419">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/EleEleOverlapTool.h</label>
+        <link refid="d0/dd7/EleEleOverlapTool_8h_source"/>
+      </node>
+      <node id="368440">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/FsrUtils/FsrUtils/IFsrPhotonTool.h</label>
+        <link refid="dc/dc8/IFsrPhotonTool_8h_source"/>
+        <childnode refid="368441" relation="include">
+        </childnode>
+        <childnode refid="368442" relation="include">
+        </childnode>
+      </node>
+      <node id="368420">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/EleJetOverlapTool.h</label>
+        <link refid="da/db7/EleJetOverlapTool_8h_source"/>
+      </node>
+      <node id="368457">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OutputTool.h</label>
+        <link refid="de/dc7/OutputTool_8h_source"/>
+      </node>
+      <node id="368460">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/JetTool.h</label>
+        <link refid="d9/d25/JetTool_8h_source"/>
+      </node>
+      <node id="368453">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IQuickAna.h</label>
+        <link refid="d4/dd5/IQuickAna_8h_source"/>
+        <childnode refid="368454" relation="include">
+        </childnode>
+      </node>
+      <node id="368485">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/xAODEgammaDict.h</label>
+        <link refid="d5/dc2/xAODEgammaDict_8h_source"/>
+      </node>
+      <node id="368455">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/KinObjectSelect.h</label>
+        <link refid="dc/d78/KinObjectSelect_8h_source"/>
+      </node>
+      <node id="368456">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/LegacyORTool.h</label>
+        <link refid="d7/d53/LegacyORTool_8h_source"/>
+      </node>
+      <node id="368425">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/TopOverlapRemovalTool.h</label>
+        <link refid="df/d4d/TopOverlapRemovalTool_8h_source"/>
+      </node>
+      <node id="368476">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/xAODHelpers.h</label>
+        <link refid="d0/d05/QuickAna_2QuickAna_2xAODHelpers_8h_source"/>
+      </node>
+      <node id="368452">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/OptimizedObjects.h</label>
+        <link refid="da/db5/OptimizedObjects_8h_source"/>
+      </node>
+      <node id="368480">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TauAnalysisTools/TauAnalysisTools/TauOverlappingElectronLLHDecorator.h</label>
+        <link refid="db/d7b/TauOverlappingElectronLLHDecorator_8h_source"/>
+        <childnode refid="368481" relation="include">
+        </childnode>
+      </node>
+      <node id="368464">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/TopElectronTool.h</label>
+        <link refid="d0/d9d/TopElectronTool_8h_source"/>
+      </node>
+      <node id="368470">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/EventSelectBaseTool.h</label>
+        <link refid="d0/d31/EventSelectBaseTool_8h_source"/>
+      </node>
+      <node id="368449">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/IEventObjects.h</label>
+        <link refid="d0/d2d/IEventObjects_8h_source"/>
+        <childnode refid="368450" relation="include">
+        </childnode>
+        <childnode refid="368452" relation="include">
+        </childnode>
+      </node>
+      <node id="368466">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/TruthJetTools.h</label>
+        <link refid="d1/d76/TruthJetTools_8h_source"/>
+      </node>
+      <node id="368458">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/QuickAna/QuickAna/SelectionData.h</label>
+        <link refid="de/d7f/SelectionData_8h_source"/>
+        <childnode refid="368459" relation="include">
+        </childnode>
+        <childnode refid="368467" relation="include">
+        </childnode>
+        <childnode refid="368470" relation="include">
+        </childnode>
+        <childnode refid="368471" relation="include">
+        </childnode>
+        <childnode refid="368472" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="dd/d44/namespacexAOD">xAOD</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Dear<sp/>emacs,<sp/>this<sp/>is<sp/>-*-<sp/>c++<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>ElectronContainer.h<sp/>652975<sp/>2015-03-10<sp/>14:14:13Z<sp/>christos<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>XAODEGAMMA_ELECTRONCONTAINER_H</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>XAODEGAMMA_ELECTRONCONTAINER_H</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Local<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODEgamma/Electron.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODEgamma/versions/ElectronContainer_v1.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">xAOD<sp/>{</highlight></codeline>
+<codeline lineno="12" refid="dd/d44/namespacexAOD_1a313b350dfe3799672f72c35b57c428a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="d0/d4d/classDataVector" kindref="compound" tooltip="Derived DataVector&amp;lt;T&amp;gt;.">ElectronContainer_v1</ref><sp/><ref refid="d0/d4d/classDataVector" kindref="compound" tooltip="Derived DataVector&amp;lt;T&amp;gt;.">ElectronContainer</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Set<sp/>up<sp/>a<sp/>CLID<sp/>for<sp/>the<sp/>container:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d6/d20/xAODCore_2xAODCore_2CLASS__DEF_8h" kindref="compound" tooltip="File providing the different SG_BASE macros.">xAODCore/CLASS_DEF.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">CLASS_DEF(<sp/><ref refid="d0/d4d/classDataVector" kindref="compound" tooltip="Derived DataVector&amp;lt;T&amp;gt;.">xAOD::ElectronContainer</ref><sp/>,<sp/>1087532415<sp/>,<sp/>1<sp/>)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>XAODEGAMMA_ELECTRONCONTAINER_H</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODEgamma/xAODEgamma/ElectronContainer.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,283 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d1/d99/pointer__list_8icc" kind="file">
+    <compoundname>pointer_list.icc</compoundname>
+    <includes local="no">cassert</includes>
+    <includes local="no">algorithm</includes>
+    <includedby refid="df/d5b/pointer__list_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/pointer_list.h</includedby>
+    <incdepgraph>
+      <node id="110739">
+        <label>cassert</label>
+      </node>
+      <node id="110738">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/pointer_list.icc</label>
+        <link refid="pointer_list.icc"/>
+        <childnode refid="110739" relation="include">
+        </childnode>
+        <childnode refid="110740" relation="include">
+        </childnode>
+      </node>
+      <node id="110740">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="110742">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/pointer_list.h</label>
+        <link refid="df/d5b/pointer__list_8h"/>
+      </node>
+      <node id="110741">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/pointer_list.icc</label>
+        <link refid="pointer_list.icc"/>
+        <childnode refid="110742" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="de/d12/namespaceCxxUtils">CxxUtils</innernamespace>
+    <briefdescription>
+<para><ref refid="d4/dc4/structA" kindref="compound">A</ref> fast way to store a variable-sized collection of pointers. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>scott snyder &lt;<ulink url="mailto:snyder@bnl.gov">snyder@bnl.gov</ulink>&gt; </para></simplesect>
+<simplesect kind="date"><para>Oct, 2009, from earlier code. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>$Id$</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">CxxUtils<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block_1a02c5f01d64721b2dc2eb323537251c50" kindref="member" tooltip="Size in bytes of a block holding nelt elements. (excluding the end-pointer).">pointer_list_base::list_block::size</ref><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nelt)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(list_block)<sp/>+<sp/>nelt<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block_1a9114d9d3599d90b47839cf4fe50d62b7" kindref="member" tooltip="The element type we store.">value_type</ref>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//****************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">pointer_list_base::list_block*</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator_1a1c3a179a632545cbfca821603e35f594" kindref="member" tooltip="Allocate a new block.">pointer_list_base::allocator::allocate</ref>()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>a<sp/>new<sp/>chunk<sp/>if<sp/>needed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_nthis<sp/>==<sp/>m_nblock)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>refill();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;m_chunks-&gt;m_blocks[(m_nthis++)<sp/>*<sp/>(m_nelt+1)];</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator_1a66bf563d60cdcbbafdd1dcae18ecbb21" kindref="member">pointer_list_base::allocator::nelt</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="52"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_nelt;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator_1a8fe3059d4e568e9cbff5cd49746fe52a" kindref="member" tooltip="Return the current number of allocated chunks.">pointer_list_base::allocator::nchunks</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="63"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_nchunks;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator_1af4b432441532660a66c86a330f8e4da8" kindref="member" tooltip="Test if P is pointing at the end-pointer of a block.">pointer_list_base::allocator::at_end</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>p)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="75"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(reinterpret_cast&lt;unsigned<sp/>long&gt;(p)<sp/>&amp;<sp/>m_end_mask)<sp/>==<sp/>m_end_offs;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>NELT&gt;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><ref refid="d2/dde/classCxxUtils_1_1pointer__list_1_1allocator_1a8125283241eb78c460d17b694358563d" kindref="member" tooltip="Constructor.">pointer_list&lt;NELT&gt;::allocator::allocator</ref><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nblock<sp/></highlight><highlight class="comment">/*=<sp/>100*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>:<sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1aa3ff405565087c57b138bc2c93b7d089" kindref="member" tooltip="Constructor. pool gives the allocator for this container.">pointer_list_base</ref>::allocator<sp/>(NELT,<sp/>nblock,<sp/>END_MASK,<sp/>END_OFFS)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>NELT&gt;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><ref refid="d2/dde/classCxxUtils_1_1pointer__list_1_1allocator_1a31a2d4347ccb4071abd4754f78c6ce95" kindref="member" tooltip="Test if P is pointing at the end-pointer of a block.">pointer_list&lt;NELT&gt;::allocator::at_end_static</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>p)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(reinterpret_cast&lt;unsigned<sp/>long&gt;(p)<sp/>&amp;<sp/>END_MASK)<sp/>==<sp/><ref refid="d2/dde/classCxxUtils_1_1pointer__list_1_1allocator_1a187138b32cd2032d251a29d581599e7b" kindref="member" tooltip="Constants to use to test if we&amp;#39;re at the end of a block.">END_OFFS</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="comment">//****************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>NELT&gt;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><ref refid="d1/d43/DataList_8h_1a2f4af3db6bca5dc8d962d673635f0865" kindref="member" tooltip="List equality comparison.">pointer_list&lt;NELT&gt;::iterator::operator== </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>iterator&amp;<sp/>other)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="114"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_p<sp/>==<sp/>other.m_p;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>NELT&gt;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator_1afcf9a05aa8c59ba52910519e998704b4" kindref="member" tooltip="Inequality comparison.">pointer_list&lt;NELT&gt;::iterator::operator!= </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>iterator&amp;<sp/>other)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="126"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_p<sp/>!=<sp/>other.m_p;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>NELT&gt;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>pointer_list&lt;NELT&gt;::iterator::reference</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator_1a848044a0559931d4f51e5fc7239557c5" kindref="member" tooltip="Dereference.">pointer_list&lt;NELT&gt;::iterator::operator*</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="138"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*m_p;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>NELT&gt;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>pointer_list&lt;NELT&gt;::iterator&amp;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator_1ab845a719084384df2b6b9d61f8476f55" kindref="member" tooltip="Advance (pre-increment).">pointer_list&lt;NELT&gt;::iterator::operator++</ref>()</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Move<sp/>forward.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>++m_p;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we&apos;ve<sp/>hit<sp/>the<sp/>end,<sp/>chain<sp/>to<sp/>the<sp/>next<sp/>block,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>there<sp/>is<sp/>one.<sp/><sp/>Otherwise,<sp/>stay<sp/>at<sp/>the<sp/>end;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>that<sp/>will<sp/>be<sp/>where<sp/>the<sp/>end<sp/>iterator<sp/>points.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d2/dde/classCxxUtils_1_1pointer__list_1_1allocator_1a31a2d4347ccb4071abd4754f78c6ce95" kindref="member" tooltip="Test if P is pointing at the end-pointer of a block.">pointer_list::allocator::at_end_static</ref><sp/>(m_p))<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>list_block*<sp/>next<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal">list_block*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(*m_p);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(next)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_p<sp/>=<sp/>&amp;next-&gt;m_data[0];</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>NELT&gt;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>pointer_list&lt;NELT&gt;::iterator</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator_1ab845a719084384df2b6b9d61f8476f55" kindref="member" tooltip="Advance (pre-increment).">pointer_list&lt;NELT&gt;::iterator::operator++</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>iterator<sp/>ret<sp/>=<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>++*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>NELT&gt;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal">pointer_list&lt;NELT&gt;::iterator::iterator<sp/>(value_type*<sp/>p)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>:<sp/>m_p<sp/>(p)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="comment">//****************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1aa3ff405565087c57b138bc2c93b7d089" kindref="member" tooltip="Constructor. pool gives the allocator for this container.">pointer_list_base::pointer_list_base</ref><sp/>(pool_type&amp;<sp/>pool)</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>:<sp/>m_head<sp/>(0),</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>m_insert<sp/>(0),</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>m_size<sp/>(0),</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>m_pool<sp/>(pool)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a0b50edbe29554cab55604475de9ba892" kindref="member" tooltip="Add a new element to the end of the container. O(1).">pointer_list_base::push_back</ref><sp/>(value_type<sp/>p)</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>container<sp/>is<sp/>empty,<sp/>allocate<sp/>the<sp/>first<sp/>block.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a26839e41df177ff3adb6daa55b863bb7" kindref="member" tooltip="The first block in the list.">m_head</ref>)</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a729fb5db811798fb3043eebe2ef04769" kindref="member" tooltip="Allocate the first block of the list.">firstblock</ref>();</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Otherwise,<sp/>if<sp/>we&apos;re<sp/>at<sp/>the<sp/>end<sp/>of<sp/>the<sp/>current<sp/>block,<sp/>allocate<sp/>a<sp/>new<sp/>one.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1abdf98cef31e29230e927bc54fa4b5568" kindref="member" tooltip="The list allocator.">m_pool</ref>.<ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator_1af4b432441532660a66c86a330f8e4da8" kindref="member" tooltip="Test if P is pointing at the end-pointer of a block.">at_end</ref><sp/>(<ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a41cb1b04f47a7bc8139085917f87e575" kindref="member" tooltip="The current insertion point in the list.">m_insert</ref>))</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a3f02d69a29905525ae631cb382b9b275" kindref="member">nextblock</ref>();</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>the<sp/>value<sp/>to<sp/>the<sp/>list.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/>*<ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a41cb1b04f47a7bc8139085917f87e575" kindref="member" tooltip="The current insertion point in the list.">m_insert</ref><sp/>=<sp/>p;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/>++<ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a41cb1b04f47a7bc8139085917f87e575" kindref="member" tooltip="The current insertion point in the list.">m_insert</ref>;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/>++<ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a86eacb0b846710d79b15e8c731359bcc" kindref="member" tooltip="The current list size.">m_size</ref>;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we&apos;re<sp/>at<sp/>the<sp/>end<sp/>of<sp/>this<sp/>block,<sp/>and<sp/>a<sp/>following<sp/>block<sp/>exists,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>move<sp/>to<sp/>the<sp/>following<sp/>block.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1abdf98cef31e29230e927bc54fa4b5568" kindref="member" tooltip="The list allocator.">m_pool</ref>.<ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator_1af4b432441532660a66c86a330f8e4da8" kindref="member" tooltip="Test if P is pointing at the end-pointer of a block.">at_end</ref><sp/>(<ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a41cb1b04f47a7bc8139085917f87e575" kindref="member" tooltip="The current insertion point in the list.">m_insert</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a05ce8c634f52db796a226f7d106d880d" kindref="member" tooltip="The stored element type.">value_type</ref><sp/>next<sp/>=<sp/>*<ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a41cb1b04f47a7bc8139085917f87e575" kindref="member" tooltip="The current insertion point in the list.">m_insert</ref>;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(next)</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a41cb1b04f47a7bc8139085917f87e575" kindref="member" tooltip="The current insertion point in the list.">m_insert</ref><sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a05ce8c634f52db796a226f7d106d880d" kindref="member" tooltip="The stored element type.">value_type</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(next);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1ad99ddada4b5778e2b1ed27dc66e9b412" kindref="member" tooltip="The current size of the container. O(1).">pointer_list_base::size</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="243"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a86eacb0b846710d79b15e8c731359bcc" kindref="member" tooltip="The current list size.">m_size</ref>;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1aabc1382cca7d249203c993f1676690fc" kindref="member" tooltip="Test to see if the container is empty.">pointer_list_base::empty</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="253"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a86eacb0b846710d79b15e8c731359bcc" kindref="member" tooltip="The current list size.">m_size</ref><sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>NELT&gt;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><ref refid="d1/d88/classCxxUtils_1_1pointer__list_1a663398abeab589c3cad3c664be099ec5" kindref="member" tooltip="Constructor. pool gives the allocator for this container.">pointer_list&lt;NELT&gt;::pointer_list</ref><sp/>(pool_type&amp;<sp/>pool)</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/>:<sp/>pointer_list_base<sp/>(pool)</highlight></codeline>
+<codeline lineno="266"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>NELT&gt;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>pointer_list&lt;NELT&gt;::iterator<sp/><ref refid="d1/d88/classCxxUtils_1_1pointer__list_1a15a2c627c51efb3ae20c2f105b37b914" kindref="member" tooltip="Iterator at the beginning of the container.">pointer_list&lt;NELT&gt;::begin</ref>()</highlight></codeline>
+<codeline lineno="276"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>by<sp/>pointing<sp/>at<sp/>the<sp/>first<sp/>element</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>(or<sp/>null,<sp/>if<sp/>the<sp/>container&apos;s<sp/>empty).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>iterator<sp/>(<ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a26839e41df177ff3adb6daa55b863bb7" kindref="member" tooltip="The first block in the list.">m_head</ref><sp/>?<sp/>&amp;<ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a26839e41df177ff3adb6daa55b863bb7" kindref="member" tooltip="The first block in the list.">m_head</ref>-&gt;<ref refid="d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block_1a73022173a8f7db3d38b398c18777100d" kindref="member">m_data</ref>[0]<sp/>:<sp/>0);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>NELT&gt;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>pointer_list&lt;NELT&gt;::iterator<sp/><ref refid="d1/d88/classCxxUtils_1_1pointer__list_1a3755fcb76a4052c866e9a0b402e869a7" kindref="member" tooltip="Iterator at the end of the container.">pointer_list&lt;NELT&gt;::end</ref>()</highlight></codeline>
+<codeline lineno="289"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Point<sp/>at<sp/>the<sp/>current<sp/>insertion<sp/>point.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>(This<sp/>will<sp/>be<sp/>null<sp/>if<sp/>the<sp/>container&apos;s<sp/>empty.)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>iterator<sp/>(<ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a41cb1b04f47a7bc8139085917f87e575" kindref="member" tooltip="The current insertion point in the list.">m_insert</ref>);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>NELT&gt;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d1/d88/classCxxUtils_1_1pointer__list_1a6d6f01e5893dbe81e3bcb243783c3f8c" kindref="member" tooltip="Erase one element. O(n).">pointer_list&lt;NELT&gt;::erase</ref><sp/>(iterator<sp/>it)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>just<sp/>copy<sp/>the<sp/>elements<sp/>back<sp/>by<sp/>one.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/>iterator<sp/>next<sp/>=<sp/>it;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/>++next;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/>next<sp/>=<sp/>std::copy<sp/>(next,<sp/><ref refid="d1/d88/classCxxUtils_1_1pointer__list_1a3755fcb76a4052c866e9a0b402e869a7" kindref="member" tooltip="Iterator at the end of the container.">end</ref>(),<sp/>it);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>New<sp/>insertion<sp/>point<sp/>is<sp/>where<sp/>the<sp/>copy<sp/>stopped.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a41cb1b04f47a7bc8139085917f87e575" kindref="member" tooltip="The current insertion point in the list.">m_insert</ref><sp/>=<sp/>next.m_p;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>One<sp/>less<sp/>element.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/>--<ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a86eacb0b846710d79b15e8c731359bcc" kindref="member" tooltip="The current list size.">m_size</ref>;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>CxxXUtils</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/pointer_list.icc"/>
+  </compounddef>
+</doxygen>

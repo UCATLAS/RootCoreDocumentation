@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="de/d5e/Muctpi_8cxx" kind="file">
+    <compoundname>Muctpi.cxx</compoundname>
+    <includes refid="d5/d9f/Muctpi_8h" local="yes">TrigConfL1Data/Muctpi.h</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="310232">
+        <label>TrigConfL1Data/Muctpi.h</label>
+        <link refid="d5/d9f/Muctpi_8h_source"/>
+        <childnode refid="310233" relation="include">
+        </childnode>
+        <childnode refid="310234" relation="include">
+        </childnode>
+      </node>
+      <node id="310234">
+        <label>TrigConfL1Data/L1DataBaseclass.h</label>
+        <link refid="d8/db1/L1DataBaseclass_8h_source"/>
+        <childnode refid="310235" relation="include">
+        </childnode>
+      </node>
+      <node id="310233">
+        <label>string</label>
+      </node>
+      <node id="310235">
+        <label>TrigConfL1Data/TrigConfData.h</label>
+        <link refid="da/da8/TrigConfData_8h_source"/>
+        <childnode refid="310236" relation="include">
+        </childnode>
+        <childnode refid="310233" relation="include">
+        </childnode>
+      </node>
+      <node id="310236">
+        <label>iosfwd</label>
+      </node>
+      <node id="310237">
+        <label>iostream</label>
+      </node>
+      <node id="310231">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfL1Data/Root/Muctpi.cxx</label>
+        <link refid="Muctpi.cxx"/>
+        <childnode refid="310232" relation="include">
+        </childnode>
+        <childnode refid="310237" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;TrigConfL1Data/Muctpi.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">TrigConf::Muctpi::Muctpi()<sp/>:</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/>L1DataBaseclass(),<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/>m_LowptThreshold(0),</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/>m_HighptThreshold(0),</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/>m_MaxCand(0)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">TrigConf::Muctpi::~Muctpi()<sp/>{}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">TrigConf::Muctpi::print(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>indent,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*detail*/</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Muctpi:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\tlvl1<sp/>master<sp/>table<sp/>id:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>lvl1MasterTableId()<sp/>&lt;&lt;<sp/>endl;<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/>printNameIdV(indent);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\tlow<sp/>pt<sp/>threshold:<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_LowptThreshold<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\thigh<sp/>pt<sp/>threshold:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_HighptThreshold<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>indent<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\tmaximal<sp/>cadidates:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_MaxCand<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}<sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">TrigConf::Muctpi::writeXML(std::ostream<sp/>&amp;<sp/>xmlfile,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>indentLevel,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>indentWidth)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/>indent(xmlfile,<sp/>indentLevel,<sp/>indentWidth)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&lt;MuctpiInfo<sp/>name=\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>name()<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;<sp/>low_pt=\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_LowptThreshold<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;<sp/>high_pt=\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_HighptThreshold</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;<sp/>max_cand=\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_MaxCand<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;/&gt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TrigConfL1Data/Root/Muctpi.cxx"/>
+  </compounddef>
+</doxygen>

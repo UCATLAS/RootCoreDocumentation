@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="de/daf/classxAOD_1_1TVirtualEvent" kind="class" prot="public">
+    <compoundname>xAOD::TVirtualEvent</compoundname>
+    <derivedcompoundref refid="de/d95/classxAOD_1_1TEvent" prot="public" virt="non-virtual">xAOD::TEvent</derivedcompoundref>
+    <includes refid="d7/d85/TVirtualEvent_8h" local="no">TVirtualEvent.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="de/daf/classxAOD_1_1TVirtualEvent_1a3362f02e7067005d0a8739a76b8699af" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t xAOD::TVirtualEvent::DEFAULT_KEY</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_KEY</name>
+        <initializer> 0xffffffff</initializer>
+        <briefdescription>
+<para>Key for retrieving the &quot;default&quot; object of a given type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.h" line="36" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/daf/classxAOD_1_1TVirtualEvent_1ac1fd1bc3868f94eebe897bfb20a9711c" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t xAOD::TVirtualEvent::KEY_MASK</definition>
+        <argsstring></argsstring>
+        <name>KEY_MASK</name>
+        <initializer> 0x3fffffff</initializer>
+        <briefdescription>
+<para>Mask for the keys, used mostly internally. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.h" line="38" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="de/daf/classxAOD_1_1TVirtualEvent_1a0c24fe2a750f564472e38cbae1240a05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual xAOD::TVirtualEvent::~TVirtualEvent</definition>
+        <argsstring>()</argsstring>
+        <name>~TVirtualEvent</name>
+        <briefdescription>
+<para>Virtual destructor to make vtable happy. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.h" line="33" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.h" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="de/daf/classxAOD_1_1TVirtualEvent_1a94499a88472a8790df1b8cd62a1d6f5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool xAOD::TVirtualEvent::retrieve</definition>
+        <argsstring>(const T *&amp;obj, uint32_t key=DEFAULT_KEY, bool silent=false)</argsstring>
+        <name>retrieve</name>
+        <param>
+          <type>const <ref refid="d1/def/classT" kindref="compound">T</ref> *&amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>key</declname>
+          <defval><ref refid="de/daf/classxAOD_1_1TVirtualEvent_1a3362f02e7067005d0a8739a76b8699af" kindref="member">DEFAULT_KEY</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>silent</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Function retrieving an object from the event (constant version). </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the function used by all the smart pointers to get access to objects in the event.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer that should be set [output] </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hashed key of the object to retrieve </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>silent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>When set to <computeroutput>true</computeroutput>, failure is handled silently </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the operation was successful, <computeroutput>false</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.h" line="43" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.icc" bodystart="21" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="de/daf/classxAOD_1_1TVirtualEvent_1a5b3f12a23600a60b2f3f09d00072acb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename <ref refid="d1/def/classT" kindref="compound">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool xAOD::TVirtualEvent::retrieve</definition>
+        <argsstring>(const T *&amp;obj, const std::string &amp;key, bool silent=false)</argsstring>
+        <name>retrieve</name>
+        <param>
+          <type>const <ref refid="d1/def/classT" kindref="compound">T</ref> *&amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>silent</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Function retrieving an object from the event (constant version). </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a convenience function for human users for getting access to an existing object, using a string key instead of a hashed identifier.</para><para>Internally it just creates a hash from the key, and perform the retrieve with that.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer that should be set [output] </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key of the object to retrieve </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the operation was successful, <computeroutput>false</computeroutput> otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.h" line="47" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.icc" bodystart="56" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="de/daf/classxAOD_1_1TVirtualEvent_1a20307a270fb83f3c5f1f2a968fbcb277" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint32_t</type>
+        <definition>virtual uint32_t xAOD::TVirtualEvent::getHash</definition>
+        <argsstring>(const std::string &amp;key) const =0</argsstring>
+        <name>getHash</name>
+        <reimplementedby refid="de/d95/classxAOD_1_1TEvent_1a7b3a78b610dd33ba349531486f958839">getHash</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Function returning the hash describing an object&apos;s name/key. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="de/daf/classxAOD_1_1TVirtualEvent_1afeed4071e264f8f63b143559116f1414" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint32_t</type>
+        <definition>virtual uint32_t xAOD::TVirtualEvent::getKey</definition>
+        <argsstring>(const void *obj) const =0</argsstring>
+        <name>getKey</name>
+        <reimplementedby refid="de/d95/classxAOD_1_1TEvent_1aa81f959071f880d07a04a09c0e6b0bbc">getKey</reimplementedby>
+        <param>
+          <type>const void *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+<para>Function returning the hash describing a known object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="de/daf/classxAOD_1_1TVirtualEvent_1aafb152ed0046dead3d38806ff9942321" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const std::string &amp;</type>
+        <definition>virtual const std::string&amp; xAOD::TVirtualEvent::getName</definition>
+        <argsstring>(const void *obj) const =0</argsstring>
+        <name>getName</name>
+        <reimplementedby refid="de/d95/classxAOD_1_1TEvent_1a8e4aabaa53c49136df759661ce08fb24">getName</reimplementedby>
+        <param>
+          <type>const void *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+<para>Function returning the key describing a known object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="de/daf/classxAOD_1_1TVirtualEvent_1aaf5d7d2ba194607ec7e948ca6ec2c75c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const std::string &amp;</type>
+        <definition>virtual const std::string&amp; xAOD::TVirtualEvent::getName</definition>
+        <argsstring>(uint32_t hash) const =0</argsstring>
+        <name>getName</name>
+        <reimplementedby refid="de/d95/classxAOD_1_1TEvent_1aaebd5a0daefc75bf086bd0c893ce67e3">getName</reimplementedby>
+        <param>
+          <type>uint32_t</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+<para>Function returning the key describing a known object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.h" line="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="de/daf/classxAOD_1_1TVirtualEvent_1a01237dfd919b5a35d3e92f129fb5251b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void *</type>
+        <definition>virtual void* xAOD::TVirtualEvent::getOutputObject</definition>
+        <argsstring>(uint32_t key, const std::type_info &amp;ti)=0</argsstring>
+        <name>getOutputObject</name>
+        <reimplementedby refid="de/d95/classxAOD_1_1TEvent_1a6531ff42179b78d04acf432a2b4c1e73">getOutputObject</reimplementedby>
+        <param>
+          <type>uint32_t</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <briefdescription>
+<para>Function for retrieving an output object in a non-template way. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="de/daf/classxAOD_1_1TVirtualEvent_1ac3539de95ecf27c2b4de67b0aeffd5a4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>const void *</type>
+        <definition>virtual const void* xAOD::TVirtualEvent::getInputObject</definition>
+        <argsstring>(uint32_t key, const std::type_info &amp;ti, bool silent=false)=0</argsstring>
+        <name>getInputObject</name>
+        <reimplementedby refid="de/d95/classxAOD_1_1TEvent_1a35fa4683373b12d39cb8b64a8535a8a6">getInputObject</reimplementedby>
+        <param>
+          <type>uint32_t</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>ti</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>silent</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Function for retrieving an input object in a non-template way. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.h" line="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base interface for getting objects out of the input file. </para>    </briefdescription>
+    <detaileddescription>
+<para>In order for the smart pointers not to depend on the full <ref refid="de/d95/classxAOD_1_1TEvent" kindref="compound">xAOD::TEvent</ref> class, this interface collects all the functionality that is needed by the smart pointers to access the input objects.</para><para><simplesect kind="author"><para>Attila Krasznahorkay &lt;<ulink url="mailto:Attila.Krasznahorkay@cern.ch">Attila.Krasznahorkay@cern.ch</ulink>&gt;</para></simplesect>
+<simplesect kind="rcs"><title>Revision</title><para>682043 </para></simplesect>
+<simplesect kind="rcs"><title>Date</title><para>2015-07-10 11:21:12 +0200 (Fri, 10 Jul 2015) </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="22470">
+        <label>xAOD::TVirtualEvent</label>
+        <link refid="de/daf/classxAOD_1_1TVirtualEvent"/>
+      </node>
+      <node id="22473">
+        <label>xAOD::TPyEvent</label>
+        <link refid="d1/ddf/classxAOD_1_1TPyEvent"/>
+        <childnode refid="22471" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="22471">
+        <label>xAOD::TEvent</label>
+        <link refid="de/d95/classxAOD_1_1TEvent"/>
+        <childnode refid="22470" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="22472">
+        <label>TEventClass</label>
+        <link refid="d9/d22/classTEventClass"/>
+        <childnode refid="22471" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.h" line="29" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODRootAccessInterfaces/xAODRootAccessInterfaces/TVirtualEvent.h" bodystart="29" bodyend="67"/>
+    <listofallmembers>
+      <member refid="de/daf/classxAOD_1_1TVirtualEvent_1a3362f02e7067005d0a8739a76b8699af" prot="public" virt="non-virtual"><scope>xAOD::TVirtualEvent</scope><name>DEFAULT_KEY</name></member>
+      <member refid="de/daf/classxAOD_1_1TVirtualEvent_1a20307a270fb83f3c5f1f2a968fbcb277" prot="public" virt="pure-virtual"><scope>xAOD::TVirtualEvent</scope><name>getHash</name></member>
+      <member refid="de/daf/classxAOD_1_1TVirtualEvent_1ac3539de95ecf27c2b4de67b0aeffd5a4" prot="protected" virt="pure-virtual"><scope>xAOD::TVirtualEvent</scope><name>getInputObject</name></member>
+      <member refid="de/daf/classxAOD_1_1TVirtualEvent_1afeed4071e264f8f63b143559116f1414" prot="public" virt="pure-virtual"><scope>xAOD::TVirtualEvent</scope><name>getKey</name></member>
+      <member refid="de/daf/classxAOD_1_1TVirtualEvent_1aafb152ed0046dead3d38806ff9942321" prot="public" virt="pure-virtual"><scope>xAOD::TVirtualEvent</scope><name>getName</name></member>
+      <member refid="de/daf/classxAOD_1_1TVirtualEvent_1aaf5d7d2ba194607ec7e948ca6ec2c75c" prot="public" virt="pure-virtual"><scope>xAOD::TVirtualEvent</scope><name>getName</name></member>
+      <member refid="de/daf/classxAOD_1_1TVirtualEvent_1a01237dfd919b5a35d3e92f129fb5251b" prot="protected" virt="pure-virtual"><scope>xAOD::TVirtualEvent</scope><name>getOutputObject</name></member>
+      <member refid="de/daf/classxAOD_1_1TVirtualEvent_1ac1fd1bc3868f94eebe897bfb20a9711c" prot="public" virt="non-virtual"><scope>xAOD::TVirtualEvent</scope><name>KEY_MASK</name></member>
+      <member refid="de/daf/classxAOD_1_1TVirtualEvent_1a94499a88472a8790df1b8cd62a1d6f5e" prot="public" virt="non-virtual"><scope>xAOD::TVirtualEvent</scope><name>retrieve</name></member>
+      <member refid="de/daf/classxAOD_1_1TVirtualEvent_1a5b3f12a23600a60b2f3f09d00072acb5" prot="public" virt="non-virtual"><scope>xAOD::TVirtualEvent</scope><name>retrieve</name></member>
+      <member refid="de/daf/classxAOD_1_1TVirtualEvent_1a0c24fe2a750f564472e38cbae1240a05" prot="public" virt="virtual"><scope>xAOD::TVirtualEvent</scope><name>~TVirtualEvent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

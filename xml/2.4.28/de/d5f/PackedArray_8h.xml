@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="de/d5f/PackedArray_8h" kind="file">
+    <compoundname>PackedArray.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">cstddef</includes>
+    <includedby refid="d7/d07/PackedArray_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/PackedArray.cxx</includedby>
+    <includedby refid="dc/dfd/PackedArray__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/test/PackedArray_test.cxx</includedby>
+    <incdepgraph>
+      <node id="110717">
+        <label>vector</label>
+      </node>
+      <node id="110718">
+        <label>cstddef</label>
+      </node>
+      <node id="110716">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/PackedArray.h</label>
+        <link refid="PackedArray.h"/>
+        <childnode refid="110717" relation="include">
+        </childnode>
+        <childnode refid="110718" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="110720">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/test/PackedArray_test.cxx</label>
+        <link refid="dc/dfd/PackedArray__test_8cxx"/>
+      </node>
+      <node id="110719">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/PackedArray.h</label>
+        <link refid="PackedArray.h"/>
+        <childnode refid="110720" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d2/dad/classCxxUtils_1_1PackedArray" prot="public">CxxUtils::PackedArray</innerclass>
+    <innerclass refid="d3/d59/classCxxUtils_1_1PackedArray_1_1proxy" prot="public">CxxUtils::PackedArray::proxy</innerclass>
+    <innernamespace refid="de/d12/namespaceCxxUtils">CxxUtils</innernamespace>
+    <briefdescription>
+<para>An array of unsigned values of some bit size, packed tightly. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>scott snyder &lt;<ulink url="mailto:snyder@bnl.gov">snyder@bnl.gov</ulink>&gt; </para></simplesect>
+<simplesect kind="date"><para>Feb, 2007 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>This<sp/>file&apos;s<sp/>extension<sp/>implies<sp/>that<sp/>it&apos;s<sp/>C,<sp/>but<sp/>it&apos;s<sp/>really<sp/>-*-<sp/>C++<sp/>-*-.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>PackedArray.h,v<sp/>1.2<sp/>2007-06-14<sp/>22:38:48<sp/>ssnyder<sp/>Exp<sp/>$</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight><highlight class="preprocessor">#ifndef<sp/>CXXUTILS_PACKEDARRAY_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CXXUTILS_PACKEDARRAY_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">CxxUtils<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="d2/dad/classCxxUtils_1_1PackedArray" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d2/dad/classCxxUtils_1_1PackedArray" kindref="compound" tooltip="An array of unsigned values of some bit size, packed tightly.">PackedArray</ref></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Type<sp/>of<sp/>the<sp/>underlying<sp/>vector<sp/>holding<sp/>the<sp/>data.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;unsigned<sp/>int&gt;<sp/>basetype;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Standard<sp/>STL<sp/>container<sp/>typedefs.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size_type;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value_type;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>basetype::allocator_type<sp/>allocator_type;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="d3/d59/classCxxUtils_1_1PackedArray_1_1proxy" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d3/d59/classCxxUtils_1_1PackedArray_1_1proxy" kindref="compound" tooltip="proxy class for representing an lvalue to an element of PackedArray.">proxy</ref></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56" refid="d3/d59/classCxxUtils_1_1PackedArray_1_1proxy_1aedb7be18d3614a3ef5911bd2f76001e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d59/classCxxUtils_1_1PackedArray_1_1proxy_1aedb7be18d3614a3ef5911bd2f76001e3" kindref="member" tooltip="Constructor, from a PackedArray and index n.">proxy</ref><sp/>(<ref refid="d2/dad/classCxxUtils_1_1PackedArray" kindref="compound" tooltip="An array of unsigned values of some bit size, packed tightly.">PackedArray</ref>&amp;<sp/>arr,<sp/>size_type<sp/>n)<sp/>:<sp/>m_arr<sp/>(arr),<sp/>m_n<sp/>(n)<sp/>{}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="d3/d59/classCxxUtils_1_1PackedArray_1_1proxy_1acaf1d969e79b60c2b7a69306ff069449" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d59/classCxxUtils_1_1PackedArray_1_1proxy_1acaf1d969e79b60c2b7a69306ff069449" kindref="member" tooltip="Retrieve the element referenced by the proxy.">operator value_type</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_arr.<ref refid="d2/dad/classCxxUtils_1_1PackedArray_1a9ba7922bd02894fca2ff37c0f79b60ec" kindref="member" tooltip="Return the entry at index n.">get</ref><sp/>(m_n);<sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="d3/d59/classCxxUtils_1_1PackedArray_1_1proxy_1ada4b27f33c7cf7f29a78c28ee2636c32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d59/classCxxUtils_1_1PackedArray_1_1proxy" kindref="compound" tooltip="proxy class for representing an lvalue to an element of PackedArray.">proxy</ref>&amp;<sp/><ref refid="d3/d59/classCxxUtils_1_1PackedArray_1_1proxy_1ada4b27f33c7cf7f29a78c28ee2636c32" kindref="member" tooltip="Set the element referenced by the proxy to v.">operator= </ref>(value_type<sp/>v)<sp/>{<sp/>m_arr.<ref refid="d2/dad/classCxxUtils_1_1PackedArray_1ae7de942bfcab31d447d6f538b9af4660" kindref="member" tooltip="Set the entry at index n.">set</ref><sp/>(m_n,<sp/>v);<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray" kindref="compound" tooltip="An array of unsigned values of some bit size, packed tightly.">PackedArray</ref>&amp;<sp/>m_arr;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>size_type<sp/>m_n;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1a8635baf7ca8b369dc589dd676a99ada8" kindref="member" tooltip="Constructor.">PackedArray</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1a7e0ce2643308d9bafb06c718dd654ca4" kindref="member" tooltip="Return the bitsize of the container.">bitsize</ref>,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>allocator_type&amp;<sp/>allocator<sp/>=<sp/>allocator_type());</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1a8635baf7ca8b369dc589dd676a99ada8" kindref="member" tooltip="Constructor.">PackedArray</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bitsize,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size_type<sp/>n,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value_type<sp/>val<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>allocator_type&amp;<sp/>allocator<sp/>=<sp/>allocator_type());</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1aa22f36beb2d58ab292b3279b53a99388" kindref="member" tooltip="Set the container to multiple copies of the same value.">assign</ref><sp/>(size_type<sp/>n,<sp/>value_type<sp/>u);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>allocator_type<sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1a26d189125282ac33fbc4d7ebb8fa55f8" kindref="member" tooltip="Returns the allocator of the underlying vector.">get_allocator</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>size_type<sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1a14a94d68468785bd879aad6bb11cdd72" kindref="member" tooltip="Returns the number of elements in the collection.">size</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>size_type<sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1aa16e46c9361d4068cb9079c6fd9332d1" kindref="member" tooltip="Returns the size() of the largest possible collection.">max_size</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>size_type<sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1ad98897a69438ff0fd403c8b15f50e53c" kindref="member" tooltip="Returns the total number of elements that the collection can hold before needing...">capacity</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1a910eaa0dc483ad3de182412c450abc87" kindref="member" tooltip="Resizes the collection to the specified number of elements.">resize</ref><sp/>(size_type<sp/>sz,<sp/>value_type<sp/>c<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1ad4ccffe8f87d1ce9ba976ec2235493f0" kindref="member" tooltip="Returns true if the collection is empty.">empty</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1ae0a70e013bcf51f200085dd52160ed49" kindref="member" tooltip="Attempt to preallocate enough memory for a specified number of elements.">reserve</ref><sp/>(size_type<sp/>n);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>value_type<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(size_type<sp/>n)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(size_type<sp/>n,<sp/>value_type<sp/>val);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>value_type<sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1ac8fcbf2e04b66208b3a3d5963c39699d" kindref="member" tooltip="Access an element, as an rvalue.">operator[]</ref>(size_type<sp/>n)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>proxy<sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1ac8fcbf2e04b66208b3a3d5963c39699d" kindref="member" tooltip="Access an element, as an rvalue.">operator[]</ref>(size_type<sp/>n);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>value_type<sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1aa396f5d6b37d788babd6dec4178d25f9" kindref="member" tooltip="Access an element, as an rvalue.">at</ref>(size_type<sp/>n)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>proxy<sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1aa396f5d6b37d788babd6dec4178d25f9" kindref="member" tooltip="Access an element, as an rvalue.">at</ref>(size_type<sp/>n);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/>value_type<sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1a58ef50783b1e53493de2db72eb0fea78" kindref="member" tooltip="Access the first element in the collection as an rvalue.">front</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>value_type<sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1a0c9798626d33866ff351676aa96779bd" kindref="member" tooltip="Access the last element in the collection as an rvalue.">back</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/>proxy<sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1a58ef50783b1e53493de2db72eb0fea78" kindref="member" tooltip="Access the first element in the collection as an rvalue.">front</ref>();</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/>proxy<sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1a0c9798626d33866ff351676aa96779bd" kindref="member" tooltip="Access the last element in the collection as an rvalue.">back</ref>();</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1aacc10e0ade6ee9865447712497b73359" kindref="member" tooltip="Add an element to the end of the collection.">push_back</ref><sp/>(value_type<sp/>x);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1ad2f168a6a1068d3f80fb5aa65ceb9d98" kindref="member" tooltip="Remove the last element from the collection.">pop_back</ref>();</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1ab59e60439cfa8d3922a928f7e328e627" kindref="member" tooltip="Swap this collection with another.">swap</ref><sp/>(<ref refid="d2/dad/classCxxUtils_1_1PackedArray" kindref="compound" tooltip="An array of unsigned values of some bit size, packed tightly.">PackedArray</ref>&amp;<sp/>other);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1a20429677f6445adba5fc120ba87baeda" kindref="member" tooltip="Erase all the elements in the collection.">clear</ref>();</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1a1a411b8c31cb1119611fd39bc1fae431" kindref="member" tooltip="Change the bitsize of the container.">set_bitsize</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bitsize);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d2/dad/classCxxUtils_1_1PackedArray_1a7e0ce2643308d9bafb06c718dd654ca4" kindref="member" tooltip="Return the bitsize of the container.">bitsize</ref><sp/>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_bitsize;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/>size_type<sp/>m_size;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/>value_type<sp/>m_mask;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/>basetype<sp/>m_vec;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nbase<sp/>(size_type<sp/>n)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>tondx<sp/>(size_type<sp/>n)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tooff<sp/>(size_type<sp/>n)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/>value_type<sp/>doget<sp/>(size_type<sp/>ndx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>off)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>doset<sp/>(size_type<sp/>ndx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>off,<sp/>value_type<sp/>v);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>range_check<sp/>(size_type<sp/>n)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>CxxUtils</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>not<sp/>CXXUTILS_PACKEDARRAY_H</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/PackedArray.h"/>
+  </compounddef>
+</doxygen>

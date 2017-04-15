@@ -1,0 +1,344 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d9/dc5/classAPReweightND" kind="class" prot="public">
+    <compoundname>APReweightND</compoundname>
+    <basecompoundref refid="d5/d8d/classAPReweightBase" prot="public" virt="non-virtual">APReweightBase</basecompoundref>
+    <includes refid="dd/d0f/APReweightND_8h" local="no">APReweightND.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d9/dc5/classAPReweightND_1a092c2e8c6d1f31d2b234321f0869bc49" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int APReweightND::_n_dim</definition>
+        <argsstring></argsstring>
+        <name>_n_dim</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds the amount of dimensions. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="49" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc5/classAPReweightND_1a16c05c1f2d617b7bd0dab7cd66bffb87" prot="private" static="no" mutable="no">
+        <type>THnSparse *</type>
+        <definition>THnSparse* APReweightND::_denominator_hist</definition>
+        <argsstring></argsstring>
+        <name>_denominator_hist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds the original denominator histogram. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="50" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc5/classAPReweightND_1a7b49df9a6beefdacc3d737d06851d0bd" prot="private" static="no" mutable="no">
+        <type>THnSparse *</type>
+        <definition>THnSparse* APReweightND::_numerator_hist</definition>
+        <argsstring></argsstring>
+        <name>_numerator_hist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds the original numerator histogram. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="51" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc5/classAPReweightND_1a78d44a1375c4af9cffab73a351104c3f" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::vector&lt; int &gt;, <ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref> * &gt;</type>
+        <definition>std::map&lt; std::vector&lt;int&gt; , APWeightEntry* &gt; APReweightND::_weights</definition>
+        <argsstring></argsstring>
+        <name>_weights</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds all weight entries. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="52" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc5/classAPReweightND_1a81857bb86266776bb1529832e7c13f53" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; TAxis * &gt;</type>
+        <definition>std::vector&lt; TAxis* &gt; APReweightND::_axes</definition>
+        <argsstring></argsstring>
+        <name>_axes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds all axes of the <ref refid="d9/dc5/classAPReweightND" kindref="compound">APReweightND</ref> instance (from input histograms). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="53" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d9/dc5/classAPReweightND_1a8559624f7097cc63c2eaec5cf6888d04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>APReweightND::APReweightND</definition>
+        <argsstring>()</argsstring>
+        <name>APReweightND</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="28" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweightND.cxx" bodystart="13" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/dc5/classAPReweightND_1a8e52bdafeb85a3301bd60338f15218ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>APReweightND::APReweightND</definition>
+        <argsstring>(THnSparse *denominator_in, THnSparse *numerator_in, bool isTrig=false)</argsstring>
+        <name>APReweightND</name>
+        <param>
+          <type>THnSparse *</type>
+          <declname>denominator_in</declname>
+        </param>
+        <param>
+          <type>THnSparse *</type>
+          <declname>numerator_in</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isTrig</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for histograms (numerator/denominator) to read in. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="29" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweightND.cxx" bodystart="22" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/dc5/classAPReweightND_1a79d420fe472ee1c913837149e33bd2b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>APReweightND::~APReweightND</definition>
+        <argsstring>()</argsstring>
+        <name>~APReweightND</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="30" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweightND.cxx" bodystart="96" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/dc5/classAPReweightND_1aaf2f20f7beafecbe14782a084d7ecbd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void APReweightND::ReadEfficiency</definition>
+        <argsstring>(THnSparse *efficiency_in, THnSparse *err_low_in, THnSparse *err_high_in=0)</argsstring>
+        <name>ReadEfficiency</name>
+        <param>
+          <type>THnSparse *</type>
+          <declname>efficiency_in</declname>
+        </param>
+        <param>
+          <type>THnSparse *</type>
+          <declname>err_low_in</declname>
+        </param>
+        <param>
+          <type>THnSparse *</type>
+          <declname>err_high_in</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read efficiencies and upper/lower uncertainty (if numerator/denominator not applicable (e.g. Bootstrap)). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="32" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweightND.cxx" bodystart="73" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/dc5/classAPReweightND_1a513e055f3e6495f4e59380f8ed913581" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref> *</type>
+        <definition>APWeightEntry * APReweightND::GetBinWeight</definition>
+        <argsstring>(const int bin[])</argsstring>
+        <name>GetBinWeight</name>
+        <param>
+          <type>const int</type>
+          <declname>bin</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get Weight entry for a given n-tuple of bin numbers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="34" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweightND.cxx" bodystart="110" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/dc5/classAPReweightND_1acffa64bae6d55a24135ab079475bfc65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/d16/classAPWeightEntry" kindref="compound">APWeightEntry</ref> *</type>
+        <definition>APWeightEntry * APReweightND::GetWeight</definition>
+        <argsstring>(double value[])</argsstring>
+        <name>GetWeight</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get Weight entry for a given n-tuple of values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="35" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweightND.cxx" bodystart="126" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/dc5/classAPReweightND_1a65933a104022d38e1ec3f0be618528a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double APReweightND::GetSampleScale</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSampleScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get scale factor that was calculated from sample sizes upon instantiation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="37" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweightND.cxx" bodystart="145" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/dc5/classAPReweightND_1a8575e333c652ee6d92ee76fc68bc6973" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int APReweightND::NBins</definition>
+        <argsstring>() const </argsstring>
+        <name>NBins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get amount of bins. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="38" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweightND.cxx" bodystart="149" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/dc5/classAPReweightND_1a7e5ca2b07a4dd30542dfe338c20ce93d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>THnSparse *</type>
+        <definition>THnSparse * APReweightND::GetDenominatorHist</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDenominatorHist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get original denominator histogram. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="40" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweightND.cxx" bodystart="137" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/dc5/classAPReweightND_1a92b67e33a347eea088105b502a4b03e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>THnSparse *</type>
+        <definition>THnSparse * APReweightND::GetNumeratorHist</definition>
+        <argsstring>() const </argsstring>
+        <name>GetNumeratorHist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get original numerator histogram. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="41" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweightND.cxx" bodystart="141" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/dc5/classAPReweightND_1a6c995bcb7539fd7686e5f5fe2ddf2273" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void APReweightND::SetSystUncert</definition>
+        <argsstring>(double rel_uncert)</argsstring>
+        <name>SetSystUncert</name>
+        <param>
+          <type>double</type>
+          <declname>rel_uncert</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the global relative (!) systematic uncertainty of all efficiencies/weights. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="43" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweightND.cxx" bodystart="155" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/dc5/classAPReweightND_1a03755a71d213b165a9aa00d6e669d03c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void APReweightND::SetQuietMode</definition>
+        <argsstring>(bool isQuiet=true)</argsstring>
+        <name>SetQuietMode</name>
+        <param>
+          <type>bool</type>
+          <declname>isQuiet</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the flag to turn off messages. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="44" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/Root/APReweightND.cxx" bodystart="162" bodyend="164"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class to store n-dimensionally parameterized weight maps</para><para>Stores a n-dimensional parameterization of APWeightEntries from numerator and denominator histograms or from an efficiency histogram and uncertainties.</para><para><simplesect kind="author"><para><ulink url="mailto:fabian.Kohn@cern.ch">fabian.Kohn@cern.ch</ulink> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="797">
+        <label>APReweightND</label>
+        <link refid="d9/dc5/classAPReweightND"/>
+        <childnode refid="798" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="798">
+        <label>APReweightBase</label>
+        <link refid="d5/d8d/classAPReweightBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="799">
+        <label>APReweightND</label>
+        <link refid="d9/dc5/classAPReweightND"/>
+        <childnode refid="800" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="801">
+        <label>APWeightEntry</label>
+        <link refid="d1/d16/classAPWeightEntry"/>
+      </node>
+      <node id="800">
+        <label>APReweightBase</label>
+        <link refid="d5/d8d/classAPReweightBase"/>
+        <childnode refid="801" relation="usage">
+          <edgelabel>_empty_weight</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" line="25" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ReweightUtils/ReweightUtils/APReweightND.h" bodystart="25" bodyend="54"/>
+    <listofallmembers>
+      <member refid="d9/dc5/classAPReweightND_1a81857bb86266776bb1529832e7c13f53" prot="private" virt="non-virtual"><scope>APReweightND</scope><name>_axes</name></member>
+      <member refid="d9/dc5/classAPReweightND_1a16c05c1f2d617b7bd0dab7cd66bffb87" prot="private" virt="non-virtual"><scope>APReweightND</scope><name>_denominator_hist</name></member>
+      <member refid="d5/d8d/classAPReweightBase_1ad15d436b3818e80a88cd9dd7ddbac6c8" prot="protected" virt="non-virtual"><scope>APReweightND</scope><name>_empty_weight</name></member>
+      <member refid="d5/d8d/classAPReweightBase_1a3257ca3dca895cb399a11226a5edb508" prot="protected" virt="non-virtual"><scope>APReweightND</scope><name>_ID</name></member>
+      <member refid="d5/d8d/classAPReweightBase_1a7662580ec2cef7f62400ce5b7a915487" prot="protected" virt="non-virtual"><scope>APReweightND</scope><name>_isQuiet</name></member>
+      <member refid="d5/d8d/classAPReweightBase_1aaa9eeec4436a6d116d26ee3987cf0fc8" prot="protected" virt="non-virtual"><scope>APReweightND</scope><name>_isTrig</name></member>
+      <member refid="d9/dc5/classAPReweightND_1a092c2e8c6d1f31d2b234321f0869bc49" prot="private" virt="non-virtual"><scope>APReweightND</scope><name>_n_dim</name></member>
+      <member refid="d5/d8d/classAPReweightBase_1ae49b7fc94df672109c194d7774881d42" prot="protected" virt="non-virtual"><scope>APReweightND</scope><name>_NID</name></member>
+      <member refid="d9/dc5/classAPReweightND_1a7b49df9a6beefdacc3d737d06851d0bd" prot="private" virt="non-virtual"><scope>APReweightND</scope><name>_numerator_hist</name></member>
+      <member refid="d5/d8d/classAPReweightBase_1a33b2bc5e6e743b11af4a79c15d024a40" prot="protected" virt="non-virtual"><scope>APReweightND</scope><name>_scale</name></member>
+      <member refid="d5/d8d/classAPReweightBase_1a25eebdd0c6c79c4a8a9d54f834fc64b9" prot="protected" virt="non-virtual"><scope>APReweightND</scope><name>_syst_uncert_global</name></member>
+      <member refid="d9/dc5/classAPReweightND_1a78d44a1375c4af9cffab73a351104c3f" prot="private" virt="non-virtual"><scope>APReweightND</scope><name>_weights</name></member>
+      <member refid="d5/d8d/classAPReweightBase_1add7effc895a068c8a8b79cfbea667cd3" prot="public" virt="non-virtual"><scope>APReweightND</scope><name>APReweightBase</name></member>
+      <member refid="d9/dc5/classAPReweightND_1a8559624f7097cc63c2eaec5cf6888d04" prot="public" virt="non-virtual"><scope>APReweightND</scope><name>APReweightND</name></member>
+      <member refid="d9/dc5/classAPReweightND_1a8e52bdafeb85a3301bd60338f15218ef" prot="public" virt="non-virtual"><scope>APReweightND</scope><name>APReweightND</name></member>
+      <member refid="d9/dc5/classAPReweightND_1a513e055f3e6495f4e59380f8ed913581" prot="public" virt="non-virtual"><scope>APReweightND</scope><name>GetBinWeight</name></member>
+      <member refid="d9/dc5/classAPReweightND_1a7e5ca2b07a4dd30542dfe338c20ce93d" prot="public" virt="non-virtual"><scope>APReweightND</scope><name>GetDenominatorHist</name></member>
+      <member refid="d5/d8d/classAPReweightBase_1a11f0f5d34d75dc0e42e93c79cd868c3b" prot="public" virt="non-virtual"><scope>APReweightND</scope><name>GetID</name></member>
+      <member refid="d9/dc5/classAPReweightND_1a92b67e33a347eea088105b502a4b03e8" prot="public" virt="non-virtual"><scope>APReweightND</scope><name>GetNumeratorHist</name></member>
+      <member refid="d9/dc5/classAPReweightND_1a65933a104022d38e1ec3f0be618528a3" prot="public" virt="non-virtual"><scope>APReweightND</scope><name>GetSampleScale</name></member>
+      <member refid="d9/dc5/classAPReweightND_1acffa64bae6d55a24135ab079475bfc65" prot="public" virt="non-virtual"><scope>APReweightND</scope><name>GetWeight</name></member>
+      <member refid="d9/dc5/classAPReweightND_1a8575e333c652ee6d92ee76fc68bc6973" prot="public" virt="non-virtual"><scope>APReweightND</scope><name>NBins</name></member>
+      <member refid="d9/dc5/classAPReweightND_1aaf2f20f7beafecbe14782a084d7ecbd3" prot="public" virt="non-virtual"><scope>APReweightND</scope><name>ReadEfficiency</name></member>
+      <member refid="d9/dc5/classAPReweightND_1a03755a71d213b165a9aa00d6e669d03c" prot="public" virt="non-virtual"><scope>APReweightND</scope><name>SetQuietMode</name></member>
+      <member refid="d9/dc5/classAPReweightND_1a6c995bcb7539fd7686e5f5fe2ddf2273" prot="public" virt="non-virtual"><scope>APReweightND</scope><name>SetSystUncert</name></member>
+      <member refid="d5/d8d/classAPReweightBase_1af222b80414145bc9c6cbae6ff5da7aa8" prot="public" virt="virtual"><scope>APReweightND</scope><name>~APReweightBase</name></member>
+      <member refid="d9/dc5/classAPReweightND_1a79d420fe472ee1c913837149e33bd2b6" prot="public" virt="virtual"><scope>APReweightND</scope><name>~APReweightND</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

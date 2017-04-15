@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="da/d92/SGassert_8h" kind="file">
+    <compoundname>SGassert.h</compoundname>
+    <includes local="no">cassert</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="302684">
+        <label>cassert</label>
+      </node>
+      <node id="302685">
+        <label>iostream</label>
+      </node>
+      <node id="302683">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TestTools/TestTools/SGassert.h</label>
+        <link refid="SGassert.h"/>
+        <childnode refid="302684" relation="include">
+        </childnode>
+        <childnode refid="302685" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="da/d92/SGassert_8h_1ade306cf28bf01a4ca7baf9871514ddfe" prot="public" static="no">
+        <name>SGASSERT</name>
+        <param><defname>TRUEEXPR</defname></param>
+        <initializer>assert(TRUEEXPR)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TestTools/TestTools/SGassert.h" line="18" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TestTools/TestTools/SGassert.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="da/d92/SGassert_8h_1a5938b99cbdaa4543b76155c11129449d" prot="public" static="no">
+        <name>SGASSERTERROR</name>
+        <param><defname>FALSEEXPR</defname></param>
+        <initializer>std::cerr &lt;&lt; &quot;Now we expect to see an error message:&quot; &lt;&lt; std::endl \
+              &lt;&lt; &quot;----Error <ref refid="d8/dd0/structMessage" kindref="compound">Message</ref> Starts---&gt;&gt;&quot; &lt;&lt; std::endl; \
+    assert(!(FALSEEXPR));                                      \
+    std::cerr&lt;&lt; &quot;&lt;&lt;---Error <ref refid="d8/dd0/structMessage" kindref="compound">Message</ref> Ends-------&quot; &lt;&lt; std::endl</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TestTools/TestTools/SGassert.h" line="23" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TestTools/TestTools/SGassert.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>macro<sp/>to<sp/>assert<sp/>an<sp/>error<sp/>condition</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>----------------------------------</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>ATLAS<sp/>Collaboration</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>SGassert.h,v<sp/>1.2<sp/>2005-11-29<sp/>00:51:33<sp/>calaf<sp/>Exp<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TEST_SGASSERT_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/>define<sp/>TEST_SGASSERT_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>NDEBUG</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SGASSERT(<sp/>TRUEEXPR<sp/>)<sp/>assert(TRUEEXPR)</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SGASSERTERROR(<sp/>FALSEEXPR<sp/>)<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/>&quot;Now<sp/>we<sp/>expect<sp/>to<sp/>see<sp/>an<sp/>error<sp/>message:&quot;<sp/>&lt;&lt;<sp/>std::endl<sp/>\</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>&quot;----Error<sp/>Message<sp/>Starts---&gt;&gt;&quot;<sp/>&lt;&lt;<sp/>std::endl;<sp/>\</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>assert(!(FALSEEXPR));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>std::cerr&lt;&lt;<sp/>&quot;&lt;&lt;---Error<sp/>Message<sp/>Ends-------&quot;<sp/>&lt;&lt;<sp/>std::endl</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>TEST_SGASSERT_H</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TestTools/TestTools/SGassert.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="df/d5b/pointer__list_8h" kind="file">
+    <compoundname>pointer_list.h</compoundname>
+    <includes local="yes">boost/static_assert.hpp</includes>
+    <includes local="no">iterator</includes>
+    <includes refid="d1/d99/pointer__list_8icc" local="yes">CxxUtils/pointer_list.icc</includes>
+    <includedby refid="d3/d17/pointer__list_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/pointer_list.cxx</includedby>
+    <includedby refid="d9/dc8/pointer__list__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/test/pointer_list_test.cxx</includedby>
+    <incdepgraph>
+      <node id="110733">
+        <label>iterator</label>
+      </node>
+      <node id="110731">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/pointer_list.h</label>
+        <link refid="pointer_list.h"/>
+        <childnode refid="110732" relation="include">
+        </childnode>
+        <childnode refid="110733" relation="include">
+        </childnode>
+        <childnode refid="110734" relation="include">
+        </childnode>
+      </node>
+      <node id="110735">
+        <label>cassert</label>
+      </node>
+      <node id="110732">
+        <label>boost/static_assert.hpp</label>
+      </node>
+      <node id="110734">
+        <label>CxxUtils/pointer_list.icc</label>
+        <link refid="d1/d99/pointer__list_8icc"/>
+        <childnode refid="110735" relation="include">
+        </childnode>
+        <childnode refid="110736" relation="include">
+        </childnode>
+      </node>
+      <node id="110736">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="d1/d6f/classCxxUtils_1_1pointer__list__base" prot="public">CxxUtils::pointer_list_base</innerclass>
+    <innerclass refid="d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block" prot="public">CxxUtils::pointer_list_base::list_block</innerclass>
+    <innerclass refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator" prot="public">CxxUtils::pointer_list_base::allocator</innerclass>
+    <innerclass refid="de/d3c/structCxxUtils_1_1pointer__list__base_1_1allocator_1_1chunk" prot="private">CxxUtils::pointer_list_base::allocator::chunk</innerclass>
+    <innerclass refid="d1/d88/classCxxUtils_1_1pointer__list" prot="public">CxxUtils::pointer_list</innerclass>
+    <innerclass refid="d2/dde/classCxxUtils_1_1pointer__list_1_1allocator" prot="public">CxxUtils::pointer_list::allocator</innerclass>
+    <innerclass refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator" prot="public">CxxUtils::pointer_list::iterator</innerclass>
+    <innernamespace refid="de/d12/namespaceCxxUtils">CxxUtils</innernamespace>
+    <briefdescription>
+<para><ref refid="d4/dc4/structA" kindref="compound">A</ref> fast way to store a variable-sized collection of pointers. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>scott snyder &lt;<ulink url="mailto:snyder@bnl.gov">snyder@bnl.gov</ulink>&gt; </para></simplesect>
+<simplesect kind="date"><para>Oct, 2009, from earlier code. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>This<sp/>file&apos;s<sp/>extension<sp/>implies<sp/>that<sp/>it&apos;s<sp/>C,<sp/>but<sp/>it&apos;s<sp/>really<sp/>-*-<sp/>C++<sp/>-*-.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id$</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight><highlight class="preprocessor">#ifndef<sp/>CXXUTILS_POINTER_LIST_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CXXUTILS_POINTER_LIST_H</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/static_assert.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">CxxUtils<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="d1/d6f/classCxxUtils_1_1pointer__list__base" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base" kindref="compound" tooltip="A fast way to store a variable-sized collection of pointers.">pointer_list_base</ref></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62" refid="d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block" kindref="compound" tooltip="A single block in the list.">list_block</ref></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>ulong;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block_1a9114d9d3599d90b47839cf4fe50d62b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block_1a9114d9d3599d90b47839cf4fe50d62b7" kindref="member" tooltip="The element type we store.">value_type</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block_1a73022173a8f7db3d38b398c18777100d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block_1a9114d9d3599d90b47839cf4fe50d62b7" kindref="member" tooltip="The element type we store.">value_type</ref><sp/><ref refid="d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block_1a73022173a8f7db3d38b398c18777100d" kindref="member">m_data</ref>[1];</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block_1a02c5f01d64721b2dc2eb323537251c50" kindref="member" tooltip="Size in bytes of a block holding nelt elements. (excluding the end-pointer).">size</ref><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nelt);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator" kindref="compound" tooltip="Very simple allocator for use with pointer_list.">allocator</ref></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator_1a156f16467a071282081194b293dd43e4" kindref="member" tooltip="Constructor.">allocator</ref><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator_1a66bf563d60cdcbbafdd1dcae18ecbb21" kindref="member">nelt</ref>,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nblock,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>end_mask,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>end_offs);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator_1a9da8fcf7ab6ee39343629dd19d46b9cf" kindref="member" tooltip="Destructor. Deletes all blocks from this allocator.">~allocator</ref>();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block" kindref="compound" tooltip="A single block in the list.">list_block</ref>*<sp/><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator_1a1c3a179a632545cbfca821603e35f594" kindref="member" tooltip="Allocate a new block.">allocate</ref>();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator_1a66bf563d60cdcbbafdd1dcae18ecbb21" kindref="member">nelt</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator_1a8fe3059d4e568e9cbff5cd49746fe52a" kindref="member" tooltip="Return the current number of allocated chunks.">nchunks</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator_1af4b432441532660a66c86a330f8e4da8" kindref="member" tooltip="Test if P is pointing at the end-pointer of a block.">at_end</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>p)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>refill();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">chunk</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>chunk*<sp/>m_next;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block" kindref="compound" tooltip="A single block in the list.">list_block</ref>*<sp/>m_blocks;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>m_nelt;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>m_nblock;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>chunk*<sp/>m_chunks;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>m_nthis;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>m_nchunks;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m_end_mask;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m_end_offs;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1aaef14c875027b24d7b0487afd154ac6c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator" kindref="compound" tooltip="Very simple allocator for use with pointer_list.">allocator</ref><sp/><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator" kindref="compound" tooltip="Very simple allocator for use with pointer_list.">pool_type</ref>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a05ce8c634f52db796a226f7d106d880d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block_1a9114d9d3599d90b47839cf4fe50d62b7" kindref="member" tooltip="The element type we store.">list_block::value_type</ref><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a05ce8c634f52db796a226f7d106d880d" kindref="member" tooltip="The stored element type.">value_type</ref>;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1aa3ff405565087c57b138bc2c93b7d089" kindref="member" tooltip="Constructor. pool gives the allocator for this container.">pointer_list_base</ref><sp/>(<ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator" kindref="compound" tooltip="Very simple allocator for use with pointer_list.">pool_type</ref>&amp;<sp/>pool);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a0b50edbe29554cab55604475de9ba892" kindref="member" tooltip="Add a new element to the end of the container. O(1).">push_back</ref><sp/>(<ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a05ce8c634f52db796a226f7d106d880d" kindref="member" tooltip="The stored element type.">value_type</ref><sp/>p);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1ad99ddada4b5778e2b1ed27dc66e9b412" kindref="member" tooltip="The current size of the container. O(1).">size</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a576e42bb370de83f7c35adb55196ddba" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1aabc1382cca7d249203c993f1676690fc" kindref="member" tooltip="Test to see if the container is empty.">empty</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="188" refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a26839e41df177ff3adb6daa55b863bb7" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block" kindref="compound" tooltip="A single block in the list.">list_block</ref>*<sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a26839e41df177ff3adb6daa55b863bb7" kindref="member" tooltip="The first block in the list.">m_head</ref>;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a41cb1b04f47a7bc8139085917f87e575" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a05ce8c634f52db796a226f7d106d880d" kindref="member" tooltip="The stored element type.">value_type</ref>*<sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a41cb1b04f47a7bc8139085917f87e575" kindref="member" tooltip="The current insertion point in the list.">m_insert</ref>;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a86eacb0b846710d79b15e8c731359bcc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a86eacb0b846710d79b15e8c731359bcc" kindref="member" tooltip="The current list size.">m_size</ref>;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1abdf98cef31e29230e927bc54fa4b5568" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator" kindref="compound" tooltip="Very simple allocator for use with pointer_list.">allocator</ref>&amp;<sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1abdf98cef31e29230e927bc54fa4b5568" kindref="member" tooltip="The list allocator.">m_pool</ref>;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a729fb5db811798fb3043eebe2ef04769" kindref="member" tooltip="Allocate the first block of the list.">firstblock</ref><sp/>();</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a3f02d69a29905525ae631cb382b9b275" kindref="member">nextblock</ref><sp/>();</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><ref refid="d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block" kindref="compound" tooltip="A single block in the list.">list_block</ref>*<sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1ad70f16a03ccd3148a7bc401cf25011e1" kindref="member" tooltip="Allocate a new block.">getblock</ref>();</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>NELT<sp/>=<sp/>15&gt;</highlight></codeline>
+<codeline lineno="237" refid="d1/d88/classCxxUtils_1_1pointer__list" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d1/d88/classCxxUtils_1_1pointer__list" kindref="compound" tooltip="A fast way to store a variable-sized collection of pointers.">pointer_list</ref></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base" kindref="compound" tooltip="A fast way to store a variable-sized collection of pointers.">pointer_list_base</ref></highlight></codeline>
+<codeline lineno="239"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="242" refid="d1/d88/classCxxUtils_1_1pointer__list_1aeec2b005d8f592c4e380b50caaf78417" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a05ce8c634f52db796a226f7d106d880d" kindref="member" tooltip="The stored element type.">pointer_list_base::value_type</ref><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a05ce8c634f52db796a226f7d106d880d" kindref="member" tooltip="The stored element type.">value_type</ref>;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251" refid="d2/dde/classCxxUtils_1_1pointer__list_1_1allocator" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator" kindref="compound" tooltip="Very simple allocator for use with pointer_list.">allocator</ref></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base" kindref="compound" tooltip="A fast way to store a variable-sized collection of pointers.">pointer_list_base</ref>::<ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator" kindref="compound" tooltip="Very simple allocator for use with pointer_list.">allocator</ref></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/dde/classCxxUtils_1_1pointer__list_1_1allocator_1a13c9109bd8b7142bbecaf5518e3a9287" kindref="member" tooltip="Verify that NELT is one less than a power of two.">BOOST_STATIC_ASSERT</ref><sp/>(((NELT+1)<sp/>&amp;<sp/>NELT)<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259" refid="d2/dde/classCxxUtils_1_1pointer__list_1_1allocator_1a187138b32cd2032d251a29d581599e7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="d2/dde/classCxxUtils_1_1pointer__list_1_1allocator_1a187138b32cd2032d251a29d581599e7b" kindref="member" tooltip="Constants to use to test if we&amp;#39;re at the end of a block.">END_OFFS</ref><sp/>=<sp/>NELT<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a05ce8c634f52db796a226f7d106d880d" kindref="member" tooltip="The stored element type.">value_type</ref>);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>END_MASK<sp/>=<sp/><ref refid="d2/dde/classCxxUtils_1_1pointer__list_1_1allocator_1a187138b32cd2032d251a29d581599e7b" kindref="member" tooltip="Constants to use to test if we&amp;#39;re at the end of a block.">END_OFFS</ref><sp/>|<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a05ce8c634f52db796a226f7d106d880d" kindref="member" tooltip="The stored element type.">value_type</ref>)-1);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/dde/classCxxUtils_1_1pointer__list_1_1allocator_1a8125283241eb78c460d17b694358563d" kindref="member" tooltip="Constructor.">allocator</ref><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nblock<sp/>=<sp/>100);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d2/dde/classCxxUtils_1_1pointer__list_1_1allocator_1a31a2d4347ccb4071abd4754f78c6ce95" kindref="member" tooltip="Test if P is pointing at the end-pointer of a block.">at_end_static</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>p);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277" refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator" kindref="compound" tooltip="Forward iterator over the list.">iterator</ref></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::<ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator" kindref="compound" tooltip="Forward iterator over the list.">iterator</ref>&lt;std::forward_iterator_tag,<sp/>value_type&gt;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::iterator&lt;std::forward_iterator_tag,<sp/>value_type&gt;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>base;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>base::iterator_category<sp/>iterator_category;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>base::difference_type<sp/><sp/><sp/>difference_type;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>base::pointer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pointer;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>base::reference<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reference;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator_1a197419cf4a9b9ba24a975087b12b4d18" kindref="member" tooltip="Equality comparison.">operator== </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator" kindref="compound" tooltip="Forward iterator over the list.">iterator</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator_1afcf9a05aa8c59ba52910519e998704b4" kindref="member" tooltip="Inequality comparison.">operator!= </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator" kindref="compound" tooltip="Forward iterator over the list.">iterator</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>reference<sp/><ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator_1a848044a0559931d4f51e5fc7239557c5" kindref="member" tooltip="Dereference.">operator*</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator" kindref="compound" tooltip="Forward iterator over the list.">iterator</ref>&amp;<sp/><ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator_1ab845a719084384df2b6b9d61f8476f55" kindref="member" tooltip="Advance (pre-increment).">operator++</ref>();</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator" kindref="compound" tooltip="Forward iterator over the list.">iterator</ref><sp/><ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator_1ab845a719084384df2b6b9d61f8476f55" kindref="member" tooltip="Advance (pre-increment).">operator++</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator" kindref="compound" tooltip="Forward iterator over the list.">iterator</ref><sp/>(<ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a05ce8c634f52db796a226f7d106d880d" kindref="member" tooltip="The stored element type.">value_type</ref>*<sp/>p);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/d6f/classCxxUtils_1_1pointer__list__base_1a05ce8c634f52db796a226f7d106d880d" kindref="member" tooltip="The stored element type.">value_type</ref>*<sp/>m_p;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d1/d88/classCxxUtils_1_1pointer__list" kindref="compound" tooltip="A fast way to store a variable-sized collection of pointers.">pointer_list</ref>;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314" refid="d1/d88/classCxxUtils_1_1pointer__list_1a44e32621d06865bce5b34b53dea5fb3c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator" kindref="compound" tooltip="Very simple allocator for use with pointer_list.">allocator</ref><sp/><ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator" kindref="compound" tooltip="Very simple allocator for use with pointer_list.">pool_type</ref>;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><ref refid="d1/d88/classCxxUtils_1_1pointer__list_1a663398abeab589c3cad3c664be099ec5" kindref="member" tooltip="Constructor. pool gives the allocator for this container.">pointer_list</ref><sp/>(<ref refid="d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator" kindref="compound" tooltip="Very simple allocator for use with pointer_list.">pool_type</ref>&amp;<sp/>pool);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator" kindref="compound" tooltip="Forward iterator over the list.">iterator</ref><sp/><ref refid="d1/d88/classCxxUtils_1_1pointer__list_1a15a2c627c51efb3ae20c2f105b37b914" kindref="member" tooltip="Iterator at the beginning of the container.">begin</ref>();</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator" kindref="compound" tooltip="Forward iterator over the list.">iterator</ref><sp/><ref refid="d1/d88/classCxxUtils_1_1pointer__list_1a3755fcb76a4052c866e9a0b402e869a7" kindref="member" tooltip="Iterator at the end of the container.">end</ref>();</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d1/d88/classCxxUtils_1_1pointer__list_1a6d6f01e5893dbe81e3bcb243783c3f8c" kindref="member" tooltip="Erase one element. O(n).">erase</ref><sp/>(<ref refid="d3/d1c/classCxxUtils_1_1pointer__list_1_1iterator" kindref="compound" tooltip="Forward iterator over the list.">iterator</ref><sp/>it);</highlight></codeline>
+<codeline lineno="327"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>CxxUtils</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/d99/pointer__list_8icc" kindref="compound" tooltip="A fast way to store a variable-sized collection of pointers.">CxxUtils/pointer_list.icc</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>not<sp/>CXXUTILS_POINTER_LIST_H</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/CxxUtils/pointer_list.h"/>
+  </compounddef>
+</doxygen>

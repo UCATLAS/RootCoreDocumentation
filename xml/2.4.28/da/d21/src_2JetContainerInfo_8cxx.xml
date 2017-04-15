@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="da/d21/src_2JetContainerInfo_8cxx" kind="file">
+    <compoundname>JetContainerInfo.cxx</compoundname>
+    <includes refid="d8/d2a/JetContainerInfo_8h" local="yes">xAODJet/JetContainerInfo.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">map</includes>
+    <incdepgraph>
+      <node id="382817">
+        <label>string</label>
+      </node>
+      <node id="382818">
+        <label>map</label>
+      </node>
+      <node id="382815">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODJet/src/JetContainerInfo.cxx</label>
+        <link refid="src/JetContainerInfo.cxx"/>
+        <childnode refid="382816" relation="include">
+        </childnode>
+        <childnode refid="382817" relation="include">
+        </childnode>
+        <childnode refid="382818" relation="include">
+        </childnode>
+      </node>
+      <node id="382816">
+        <label>xAODJet/JetContainerInfo.h</label>
+        <link refid="d8/d2a/JetContainerInfo_8h_source"/>
+        <childnode refid="382817" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="dd/d44/namespacexAOD">xAOD</innernamespace>
+    <innernamespace refid="d8/d6d/namespacexAOD_1_1JetAlgorithmType">xAOD::JetAlgorithmType</innernamespace>
+    <innernamespace refid="d8/d9c/namespacexAOD_1_1JetInput">xAOD::JetInput</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;xAODJet/JetContainerInfo.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">xAOD<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">JetAlgorithmType<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>ID&gt;<sp/>nameToIDmap;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;ID,<sp/>std::string&gt;<sp/>idToNamemap;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>c_unknonwAlg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;UnknwonAlg&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initMap(){</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>inited<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(inited)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>name<sp/>in<sp/>the<sp/>atlas<sp/>convention</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[</highlight><highlight class="stringliteral">&quot;Kt&quot;</highlight><highlight class="normal">]<sp/>=<sp/>JetAlgorithmType::kt_algorithm;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[</highlight><highlight class="stringliteral">&quot;CamKt&quot;</highlight><highlight class="normal">]<sp/>=<sp/>JetAlgorithmType::cambridge_algorithm;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[</highlight><highlight class="stringliteral">&quot;AntiKt&quot;</highlight><highlight class="normal">]<sp/>=<sp/>JetAlgorithmType::antikt_algorithm;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[</highlight><highlight class="stringliteral">&quot;GenKt&quot;</highlight><highlight class="normal">]<sp/>=<sp/>JetAlgorithmType::genkt_algorithm;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[</highlight><highlight class="stringliteral">&quot;CamKtPassive&quot;</highlight><highlight class="normal">]<sp/>=<sp/>JetAlgorithmType::cambridge_for_passive_algorithm;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[</highlight><highlight class="stringliteral">&quot;GenKtPassive&quot;</highlight><highlight class="normal">]<sp/>=<sp/>JetAlgorithmType::genkt_for_passive_algorithm;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[</highlight><highlight class="stringliteral">&quot;EEKt&quot;</highlight><highlight class="normal">]<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JetAlgorithmType::ee_kt_algorithm;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[</highlight><highlight class="stringliteral">&quot;EEGenKt&quot;</highlight><highlight class="normal">]<sp/>=<sp/>JetAlgorithmType::ee_genkt_algorithm;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>name<sp/>as<sp/>in<sp/>fastjet<sp/>(lower<sp/>case)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[</highlight><highlight class="stringliteral">&quot;kt&quot;</highlight><highlight class="normal">]<sp/>=<sp/>JetAlgorithmType::kt_algorithm;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[</highlight><highlight class="stringliteral">&quot;cambridge&quot;</highlight><highlight class="normal">]<sp/>=<sp/>JetAlgorithmType::cambridge_algorithm;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[</highlight><highlight class="stringliteral">&quot;antikt&quot;</highlight><highlight class="normal">]<sp/>=<sp/>JetAlgorithmType::antikt_algorithm;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[</highlight><highlight class="stringliteral">&quot;genkt&quot;</highlight><highlight class="normal">]<sp/>=<sp/>JetAlgorithmType::genkt_algorithm;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[</highlight><highlight class="stringliteral">&quot;cambridge_for_passive&quot;</highlight><highlight class="normal">]<sp/>=<sp/>JetAlgorithmType::cambridge_for_passive_algorithm;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[</highlight><highlight class="stringliteral">&quot;genkt_for_passive&quot;</highlight><highlight class="normal">]<sp/>=<sp/>JetAlgorithmType::genkt_for_passive_algorithm;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[</highlight><highlight class="stringliteral">&quot;ee_kt&quot;</highlight><highlight class="normal">]<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JetAlgorithmType::ee_kt_algorithm;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[</highlight><highlight class="stringliteral">&quot;ee_genkt&quot;</highlight><highlight class="normal">]<sp/>=<sp/>JetAlgorithmType::ee_genkt_algorithm;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[</highlight><highlight class="stringliteral">&quot;FastJetPlugin&quot;</highlight><highlight class="normal">]<sp/>=<sp/>JetAlgorithmType::plugin_algorithm;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToIDmap[c_unknonwAlg]<sp/>=<sp/>JetAlgorithmType::undefined_jet_algorithm;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>ID&gt;::iterator<sp/>it<sp/>=<sp/>nameToIDmap.begin();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>ID&gt;::iterator<sp/>itE<sp/>=<sp/>nameToIDmap.end();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/>;<sp/>it!=itE;<sp/>++it)<sp/>idToNamemap[<sp/>it-&gt;second<sp/>]<sp/>=<sp/>it-&gt;first;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>algName(ID<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>initMap();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>idToNamemap.find(<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>)<sp/>!=<sp/>idToNamemap.end()<sp/>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>idToNamemap[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c_unknonwAlg;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>ID<sp/>algId(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>n){</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>initMap();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>nameToIDmap.find(<sp/>n<sp/>)<sp/>!=<sp/>nameToIDmap.end()<sp/>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nameToIDmap[n];</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>undefined_jet_algorithm;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>}</highlight><highlight class="comment">//<sp/>JetAlgorithmType<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">JetInput<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>Type&gt;<sp/>nameToTypemap;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;Type,<sp/>std::string&gt;<sp/>typeToNamemap;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>c_unCategorized<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Uncategorized&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initMap(){</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>inited<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(inited)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>name<sp/>in<sp/>the<sp/>atlas<sp/>convention</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToTypemap[</highlight><highlight class="stringliteral">&quot;LCTopo&quot;</highlight><highlight class="normal">]<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LCTopo;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToTypemap[</highlight><highlight class="stringliteral">&quot;EMTopo&quot;</highlight><highlight class="normal">]<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EMTopo;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToTypemap[</highlight><highlight class="stringliteral">&quot;LCTopoOrigin&quot;</highlight><highlight class="normal">]<sp/>=<sp/><sp/>LCTopoOrigin;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToTypemap[</highlight><highlight class="stringliteral">&quot;EMTopoOrigin&quot;</highlight><highlight class="normal">]<sp/>=<sp/><sp/>EMTopoOrigin;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToTypemap[</highlight><highlight class="stringliteral">&quot;TopoTower&quot;</highlight><highlight class="normal">]<sp/>=<sp/><sp/><sp/><sp/><sp/>TopoTower;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToTypemap[</highlight><highlight class="stringliteral">&quot;Tower&quot;</highlight><highlight class="normal">]<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tower;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToTypemap[</highlight><highlight class="stringliteral">&quot;Truth&quot;</highlight><highlight class="normal">]<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Truth;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToTypemap[</highlight><highlight class="stringliteral">&quot;Track&quot;</highlight><highlight class="normal">]<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Track;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToTypemap[</highlight><highlight class="stringliteral">&quot;PFlow&quot;</highlight><highlight class="normal">]<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PFlow;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nameToTypemap[c_unCategorized]<sp/>=<sp/>Uncategorized;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>Type&gt;::iterator<sp/>it<sp/>=<sp/>nameToTypemap.begin();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>Type&gt;::iterator<sp/>itE<sp/>=<sp/>nameToTypemap.end();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/>;<sp/>it!=itE;<sp/>++it)<sp/>typeToNamemap[<sp/>it-&gt;second<sp/>]<sp/>=<sp/>it-&gt;first;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>typeName(Type<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>initMap();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>typeToNamemap.find(<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>)<sp/>!=<sp/>typeToNamemap.end()<sp/>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>typeToNamemap[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c_unCategorized<sp/>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>Type<sp/>inputType(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>n){</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>initMap();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>nameToTypemap.find(<sp/>n<sp/>)<sp/>!=<sp/>nameToTypemap.end()<sp/>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nameToTypemap[n];</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Uncategorized;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODJet/src/JetContainerInfo.cxx"/>
+  </compounddef>
+</doxygen>

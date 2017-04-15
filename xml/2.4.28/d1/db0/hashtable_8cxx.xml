@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d1/db0/hashtable_8cxx" kind="file">
+    <compoundname>hashtable.cxx</compoundname>
+    <includes refid="dd/d16/hashtable_8h" local="yes">CxxUtils/hashtable.h</includes>
+    <incdepgraph>
+      <node id="113438">
+        <label>boost/type_traits/remove_const.hpp</label>
+      </node>
+      <node id="113436">
+        <label>limits</label>
+      </node>
+      <node id="113432">
+        <label>iterator</label>
+      </node>
+      <node id="113435">
+        <label>cmath</label>
+      </node>
+      <node id="113437">
+        <label>string</label>
+      </node>
+      <node id="113429">
+        <label>CxxUtils/hashtable.h</label>
+        <link refid="dd/d16/hashtable_8h"/>
+        <childnode refid="113430" relation="include">
+        </childnode>
+        <childnode refid="113431" relation="include">
+        </childnode>
+        <childnode refid="113432" relation="include">
+        </childnode>
+        <childnode refid="113433" relation="include">
+        </childnode>
+        <childnode refid="113434" relation="include">
+        </childnode>
+        <childnode refid="113435" relation="include">
+        </childnode>
+        <childnode refid="113436" relation="include">
+        </childnode>
+        <childnode refid="113437" relation="include">
+        </childnode>
+        <childnode refid="113438" relation="include">
+        </childnode>
+      </node>
+      <node id="113428">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/hashtable.cxx</label>
+        <link refid="hashtable.cxx"/>
+        <childnode refid="113429" relation="include">
+        </childnode>
+      </node>
+      <node id="113431">
+        <label>utility</label>
+      </node>
+      <node id="113434">
+        <label>cstdlib</label>
+      </node>
+      <node id="113433">
+        <label>cstddef</label>
+      </node>
+      <node id="113430">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="dc/d40/namespaceCxxUtils__Internal">CxxUtils_Internal</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>$Id:<sp/>hashtable.cxx,v<sp/>1.1.1.1<sp/>2008-09-10<sp/>04:02:52<sp/>binet<sp/>Exp<sp/>$</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dd/d16/hashtable_8h" kindref="compound" tooltip="This is the TR1 hashtable implementation from gcc4, adapted to build in Atlas. Once...">CxxUtils/hashtable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">CxxUtils_Internal<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>X::n_primes;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>X::primes[X::n_primes<sp/>+<sp/>1]<sp/>=</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>2ul,<sp/>3ul,<sp/>5ul,<sp/>7ul,<sp/>11ul,<sp/>13ul,<sp/>17ul,<sp/>19ul,<sp/>23ul,<sp/>29ul,<sp/>31ul,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>37ul,<sp/>41ul,<sp/>43ul,<sp/>47ul,<sp/>53ul,<sp/>59ul,<sp/>61ul,<sp/>67ul,<sp/>71ul,<sp/>73ul,<sp/>79ul,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>83ul,<sp/>89ul,<sp/>97ul,<sp/>103ul,<sp/>109ul,<sp/>113ul,<sp/>127ul,<sp/>137ul,<sp/>139ul,<sp/>149ul,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>157ul,<sp/>167ul,<sp/>179ul,<sp/>193ul,<sp/>199ul,<sp/>211ul,<sp/>227ul,<sp/>241ul,<sp/>257ul,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>277ul,<sp/>293ul,<sp/>313ul,<sp/>337ul,<sp/>359ul,<sp/>383ul,<sp/>409ul,<sp/>439ul,<sp/>467ul,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>503ul,<sp/>541ul,<sp/>577ul,<sp/>619ul,<sp/>661ul,<sp/>709ul,<sp/>761ul,<sp/>823ul,<sp/>887ul,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>953ul,<sp/>1031ul,<sp/>1109ul,<sp/>1193ul,<sp/>1289ul,<sp/>1381ul,<sp/>1493ul,<sp/>1613ul,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>1741ul,<sp/>1879ul,<sp/>2029ul,<sp/>2179ul,<sp/>2357ul,<sp/>2549ul,<sp/>2753ul,<sp/>2971ul,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>3209ul,<sp/>3469ul,<sp/>3739ul,<sp/>4027ul,<sp/>4349ul,<sp/>4703ul,<sp/>5087ul,<sp/>5503ul,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>5953ul,<sp/>6427ul,<sp/>6949ul,<sp/>7517ul,<sp/>8123ul,<sp/>8783ul,<sp/>9497ul,<sp/>10273ul,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>11113ul,<sp/>12011ul,<sp/>12983ul,<sp/>14033ul,<sp/>15173ul,<sp/>16411ul,<sp/>17749ul,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>19183ul,<sp/>20753ul,<sp/>22447ul,<sp/>24281ul,<sp/>26267ul,<sp/>28411ul,<sp/>30727ul,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>33223ul,<sp/>35933ul,<sp/>38873ul,<sp/>42043ul,<sp/>45481ul,<sp/>49201ul,<sp/>53201ul,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>57557ul,<sp/>62233ul,<sp/>67307ul,<sp/>72817ul,<sp/>78779ul,<sp/>85229ul,<sp/>92203ul,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>99733ul,<sp/>107897ul,<sp/>116731ul,<sp/>126271ul,<sp/>136607ul,<sp/>147793ul,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>159871ul,<sp/>172933ul,<sp/>187091ul,<sp/>202409ul,<sp/>218971ul,<sp/>236897ul,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>256279ul,<sp/>277261ul,<sp/>299951ul,<sp/>324503ul,<sp/>351061ul,<sp/>379787ul,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>410857ul,<sp/>444487ul,<sp/>480881ul,<sp/>520241ul,<sp/>562841ul,<sp/>608903ul,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>658753ul,<sp/>712697ul,<sp/>771049ul,<sp/>834181ul,<sp/>902483ul,<sp/>976369ul,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>1056323ul,<sp/>1142821ul,<sp/>1236397ul,<sp/>1337629ul,<sp/>1447153ul,<sp/>1565659ul,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>1693859ul,<sp/>1832561ul,<sp/>1982627ul,<sp/>2144977ul,<sp/>2320627ul,<sp/>2510653ul,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>2716249ul,<sp/>2938679ul,<sp/>3179303ul,<sp/>3439651ul,<sp/>3721303ul,<sp/>4026031ul,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>4355707ul,<sp/>4712381ul,<sp/>5098259ul,<sp/>5515729ul,<sp/>5967347ul,<sp/>6456007ul,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>6984629ul,<sp/>7556579ul,<sp/>8175383ul,<sp/>8844859ul,<sp/>9569143ul,<sp/>10352717ul,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>11200489ul,<sp/>12117689ul,<sp/>13109983ul,<sp/>14183539ul,<sp/>15345007ul,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>16601593ul,<sp/>17961079ul,<sp/>19431899ul,<sp/>21023161ul,<sp/>22744717ul,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>24607243ul,<sp/>26622317ul,<sp/>28802401ul,<sp/>31160981ul,<sp/>33712729ul,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>36473443ul,<sp/>39460231ul,<sp/>42691603ul,<sp/>46187573ul,<sp/>49969847ul,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>54061849ul,<sp/>58488943ul,<sp/>63278561ul,<sp/>68460391ul,<sp/>74066549ul,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>80131819ul,<sp/>86693767ul,<sp/>93793069ul,<sp/>101473717ul,<sp/>109783337ul,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>118773397ul,<sp/>128499677ul,<sp/>139022417ul,<sp/>150406843ul,<sp/>162723577ul,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>176048909ul,<sp/>190465427ul,<sp/>206062531ul,<sp/>222936881ul,<sp/>241193053ul,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>260944219ul,<sp/>282312799ul,<sp/>305431229ul,<sp/>330442829ul,<sp/>357502601ul,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>386778277ul,<sp/>418451333ul,<sp/>452718089ul,<sp/>489790921ul,<sp/>529899637ul,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>573292817ul,<sp/>620239453ul,<sp/>671030513ul,<sp/>725980837ul,<sp/>785430967ul,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>849749479ul,<sp/>919334987ul,<sp/>994618837ul,<sp/>1076067617ul,<sp/>1164186217ul,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>1259520799ul,<sp/>1362662261ul,<sp/>1474249943ul,<sp/>1594975441ul,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>1725587117ul,<sp/>1866894511ul,<sp/>2019773507ul,<sp/>2185171673ul,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>2364114217ul,<sp/>2557710269ul,<sp/>2767159799ul,<sp/>2993761039ul,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>3238918481ul,<sp/>3504151727ul,<sp/>3791104843ul,<sp/>4101556399ul,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>4294967291ul,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>4294967291ul<sp/></highlight><highlight class="comment">//<sp/>sentinel<sp/>so<sp/>we<sp/>don&apos;t<sp/>have<sp/>to<sp/>test<sp/>result<sp/>of<sp/>lower_bound</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>CxxUtils_Internal</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/CxxUtils/Root/hashtable.cxx"/>
+  </compounddef>
+</doxygen>

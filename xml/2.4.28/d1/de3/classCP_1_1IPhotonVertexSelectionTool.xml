@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d1/de3/classCP_1_1IPhotonVertexSelectionTool" kind="class" prot="public">
+    <compoundname>CP::IPhotonVertexSelectionTool</compoundname>
+    <basecompoundref refid="d4/d20/classasg_1_1IAsgTool" prot="public" virt="virtual">asg::IAsgTool</basecompoundref>
+    <derivedcompoundref refid="d2/d3c/classCP_1_1PhotonVertexSelectionTool" prot="public" virt="virtual">CP::PhotonVertexSelectionTool</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/de3/classCP_1_1IPhotonVertexSelectionTool_1aa7b3a870ce926878d3b7f05e37d2c6cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>StatusCode</type>
+        <definition>virtual StatusCode CP::IPhotonVertexSelectionTool::getVertex</definition>
+        <argsstring>(const xAOD::EgammaContainer &amp;egammas, const xAOD::Vertex *&amp;vertex, bool ignoreConv=false)=0</argsstring>
+        <name>getVertex</name>
+        <reimplementedby refid="d2/d3c/classCP_1_1PhotonVertexSelectionTool_1a0bee75f18585bc06bd0351227363abba">getVertex</reimplementedby>
+        <param>
+          <type>const <ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::EgammaContainer</ref> &amp;</type>
+          <declname>egammas</declname>
+        </param>
+        <param>
+          <type>const <ref refid="db/dd1/classxAOD_1_1Vertex__v1" kindref="compound">xAOD::Vertex</ref> *&amp;</type>
+          <declname>vertex</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ignoreConv</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Declare the interface that the class provides. </para>        </briefdescription>
+        <detaileddescription>
+<para>Given a list of photons, return the most likely vertex based on MVA likelihood </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/IPhotonVertexSelectionTool.h" line="29"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/de3/classCP_1_1IPhotonVertexSelectionTool_1a46726fd95e8f336a54446ab99457cca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; std::pair&lt; const <ref refid="db/dd1/classxAOD_1_1Vertex__v1" kindref="compound">xAOD::Vertex</ref> *, float &gt; &gt; &amp;</type>
+        <definition>virtual std::vector&lt;std::pair&lt;const xAOD::Vertex*, float&gt; &gt;&amp; CP::IPhotonVertexSelectionTool::getVertex</definition>
+        <argsstring>(const xAOD::EgammaContainer &amp;egammas, bool ignoreConv=false)=0</argsstring>
+        <name>getVertex</name>
+        <reimplementedby refid="d2/d3c/classCP_1_1PhotonVertexSelectionTool_1abed477ef94313ada2cb2347e81326006">getVertex</reimplementedby>
+        <param>
+          <type>const <ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::EgammaContainer</ref> &amp;</type>
+          <declname>egammas</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ignoreConv</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Given a list of photons, return the MLPs of all vertices in the event sorted in descending order </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/IPhotonVertexSelectionTool.h" line="33"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/de3/classCP_1_1IPhotonVertexSelectionTool_1aa2727391ef681201abab617b5c97cd66" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int CP::IPhotonVertexSelectionTool::getCase</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getCase</name>
+        <reimplementedby refid="d2/d3c/classCP_1_1PhotonVertexSelectionTool_1add58ebc30f25d6aa550cf3c7d4aef033">getCase</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the last case treated: 0=conv track associated to vertex, 1=at least one conv track with Si hits, 2=no tracks with Si hits or conversions ignored </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/IPhotonVertexSelectionTool.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/de3/classCP_1_1IPhotonVertexSelectionTool_1a92924eb5c69a81bffab34387290a79eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const <ref refid="db/dd1/classxAOD_1_1Vertex__v1" kindref="compound">xAOD::Vertex</ref> *</type>
+        <definition>virtual const xAOD::Vertex* CP::IPhotonVertexSelectionTool::getPrimaryVertexFromConv</definition>
+        <argsstring>(const xAOD::PhotonContainer *photons) const =0</argsstring>
+        <name>getPrimaryVertexFromConv</name>
+        <reimplementedby refid="d2/d3c/classCP_1_1PhotonVertexSelectionTool_1ae8d62767b51a9722ea5626fc609a4a76">getPrimaryVertexFromConv</reimplementedby>
+        <param>
+          <type>const <ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::PhotonContainer</ref> *</type>
+          <declname>photons</declname>
+        </param>
+        <briefdescription>
+<para>Get possible vertex directly associated with photon conversions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/IPhotonVertexSelectionTool.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/de3/classCP_1_1IPhotonVertexSelectionTool_1a3fab5b05f68f017e7262fc0dcff67b63" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const <ref refid="de/d06/classCP_1_1IPhotonPointingTool" kindref="compound">CP::IPhotonPointingTool</ref> *</type>
+        <definition>virtual const CP::IPhotonPointingTool* CP::IPhotonVertexSelectionTool::photonPointingTool</definition>
+        <argsstring>() const =0</argsstring>
+        <name>photonPointingTool</name>
+        <reimplementedby refid="d2/d3c/classCP_1_1PhotonVertexSelectionTool_1ab51d899d9fff725c729671176694cc2d">photonPointingTool</reimplementedby>
+        <briefdescription>
+<para>Get access to the photon pointing tool. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/IPhotonVertexSelectionTool.h" line="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10429">
+        <label>CP::IPhotonVertexSelectionTool</label>
+        <link refid="d1/de3/classCP_1_1IPhotonVertexSelectionTool"/>
+        <childnode refid="10430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10431">
+        <label>CP::PhotonVertexSelectionTool</label>
+        <link refid="d2/d3c/classCP_1_1PhotonVertexSelectionTool"/>
+        <childnode refid="10429" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10430">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10432">
+        <label>CP::IPhotonVertexSelectionTool</label>
+        <link refid="d1/de3/classCP_1_1IPhotonVertexSelectionTool"/>
+        <childnode refid="10433" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10433">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/IPhotonVertexSelectionTool.h" line="22" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/PhotonVertexSelection/PhotonVertexSelection/IPhotonVertexSelectionTool.h" bodystart="22" bodyend="47"/>
+    <listofallmembers>
+      <member refid="d1/de3/classCP_1_1IPhotonVertexSelectionTool_1aa2727391ef681201abab617b5c97cd66" prot="public" virt="pure-virtual"><scope>CP::IPhotonVertexSelectionTool</scope><name>getCase</name></member>
+      <member refid="d1/de3/classCP_1_1IPhotonVertexSelectionTool_1a92924eb5c69a81bffab34387290a79eb" prot="public" virt="pure-virtual"><scope>CP::IPhotonVertexSelectionTool</scope><name>getPrimaryVertexFromConv</name></member>
+      <member refid="d1/de3/classCP_1_1IPhotonVertexSelectionTool_1aa7b3a870ce926878d3b7f05e37d2c6cb" prot="public" virt="pure-virtual"><scope>CP::IPhotonVertexSelectionTool</scope><name>getVertex</name></member>
+      <member refid="d1/de3/classCP_1_1IPhotonVertexSelectionTool_1a46726fd95e8f336a54446ab99457cca9" prot="public" virt="pure-virtual"><scope>CP::IPhotonVertexSelectionTool</scope><name>getVertex</name></member>
+      <member refid="d1/de3/classCP_1_1IPhotonVertexSelectionTool_1a3fab5b05f68f017e7262fc0dcff67b63" prot="public" virt="pure-virtual"><scope>CP::IPhotonVertexSelectionTool</scope><name>photonPointingTool</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1af1aac990b958e92bf38123318d926e67" prot="public" virt="pure-virtual"><scope>CP::IPhotonVertexSelectionTool</scope><name>print</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1a77b49d52f1f8c272cb665b8309d6082d" prot="public" virt="virtual"><scope>CP::IPhotonVertexSelectionTool</scope><name>~IAsgTool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

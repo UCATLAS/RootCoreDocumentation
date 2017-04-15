@@ -1,0 +1,1538 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d3/d8c/classInDet_1_1InDetTrackSelectionTool" kind="class" prot="public">
+    <compoundname>InDet::InDetTrackSelectionTool</compoundname>
+    <basecompoundref refid="dc/d6b/classInDet_1_1IInDetTrackSelectionTool" prot="public" virt="virtual">InDet::IInDetTrackSelectionTool</basecompoundref>
+    <basecompoundref refid="d5/dbb/classasg_1_1AsgTool" prot="public" virt="non-virtual">asg::AsgTool</basecompoundref>
+    <includes refid="d7/de0/InDetTrackSelectionTool_8h" local="no">InDetTrackSelectionTool.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Function(s) implementing the asg::IAsgTool interface</header>
+      <description><para><anchor id="_1amgrp10701b8a3fd2d74bb818dc23a9d2755e"/> </para></description>
+      <memberdef kind="function" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a72695b48cea40064fe9f89a3bcd4b5ce" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode InDet::InDetTrackSelectionTool::initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>initialize</name>
+        <reimplements refid="d5/dbb/classasg_1_1AsgTool_1a55b3c013a3e54ae4c1d0d76de8e1e726">initialize</reimplements>
+        <briefdescription>
+<para>Function initialising the tool. </para>        </briefdescription>
+        <detaileddescription>
+<para>Initializes the selection tool, setting up the cut objects as well as any additional tools it needs.</para><para>In athena, this is called automatically after the user has set the properties and so it must set the cut level without overwriting any additional cuts that have been set.</para><para>In standalone root, the cut levels can be set in a more or less intuitive way. After setting the cut levels and providing any additional configuration, this initialize() function must be called explicitly. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="51" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/Root/InDetTrackSelectionTool.cxx" bodystart="172" bodyend="662"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a6f8a9bfaf040fd5f237edc94a5f365a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>StatusCode</type>
+        <definition>StatusCode InDet::InDetTrackSelectionTool::finalize</definition>
+        <argsstring>() override</argsstring>
+        <name>finalize</name>
+        <reimplements refid="dc/d6b/classInDet_1_1IInDetTrackSelectionTool_1a1429bc877b543e3f580a7f1dcbae582b">finalize</reimplements>
+        <briefdescription>
+<para>Function finalizing the tool. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="53" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/Root/InDetTrackSelectionTool.cxx" bodystart="664" bodyend="682"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Function(s) implementing the IAsgSelectionTool interface</header>
+      <description><para><anchor id="_1amgrp71e615a362191997270192210c596127"/> </para></description>
+      <memberdef kind="function" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1abd38a3e93384be58609b61f90d1cf50e" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="d0/d75/classRoot_1_1TAccept" kindref="compound">Root::TAccept</ref> &amp;</type>
+        <definition>const Root::TAccept &amp; InDet::InDetTrackSelectionTool::getTAccept</definition>
+        <argsstring>() const override</argsstring>
+        <name>getTAccept</name>
+        <reimplements refid="dc/d6b/classInDet_1_1IInDetTrackSelectionTool_1a5cf6be769d117d3617632fbe7abcf313">getTAccept</reimplements>
+        <briefdescription>
+<para>Get an object describing the &quot;selection steps&quot; of the tool. </para>        </briefdescription>
+        <detaileddescription>
+<para>Accessor function to the tool&apos;s <ref refid="d0/d75/classRoot_1_1TAccept" kindref="compound">Root::TAccept</ref> object, which stores the result of the last accept(...) call. The <ref refid="d3/df8/classTAccept" kindref="compound">TAccept</ref> object itself is expensive to copy, and so should be accessed by const reference. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="61" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/Root/InDetTrackSelectionTool.cxx" bodystart="689" bodyend="692"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a9883ae6605b2b06e748e1f695cd1b572" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="d0/d75/classRoot_1_1TAccept" kindref="compound">Root::TAccept</ref> &amp;</type>
+        <definition>const Root::TAccept &amp; InDet::InDetTrackSelectionTool::accept</definition>
+        <argsstring>(const xAOD::IParticle *) const override</argsstring>
+        <name>accept</name>
+        <reimplements refid="dc/d6b/classInDet_1_1IInDetTrackSelectionTool_1a789817b15da32c8af5be76b0eccc7db0">accept</reimplements>
+        <param>
+          <type>const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">xAOD::IParticle</ref> *</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+<para>Get the decision using a generic IParticle pointer. </para>        </briefdescription>
+        <detaileddescription>
+<para>Function that returns the result of the cut through the <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">xAOD::IParticle</ref> interface.</para><para>This is included to implement the AsgSelectionTool interface. It is not the recommended way of using the tool. If the IParticle is an <ref refid="dd/d44/namespacexAOD_1a795ac8d2e30fdc75f7c9266766629005" kindref="member">xAOD::TrackParticle</ref>, then it will return the result of the explicitly <ref refid="dd/d44/namespacexAOD_1a795ac8d2e30fdc75f7c9266766629005" kindref="member">xAOD::TrackParticle</ref> version below, with no vertex provided.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">xAOD::IParticle</ref> pointer. If it is of type <ref refid="dd/d44/namespacexAOD_1a795ac8d2e30fdc75f7c9266766629005" kindref="member">xAOD::TrackParticle</ref>, then it will be cast as such and funnelled into the corresponding function. If it is of some different type, then the particle will not pass. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="64" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/Root/InDetTrackSelectionTool.cxx" bodystart="706" bodyend="722"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Function(s) implementing the IInDetTrackSelectionTool interface</header>
+      <description><para><anchor id="_1amgrp1d3f2cd921abfdb4d2d5b38cf05f9132"/> </para></description>
+      <memberdef kind="function" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aea339fcb7c9fbedf5730e160515ee3b3" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="d0/d75/classRoot_1_1TAccept" kindref="compound">Root::TAccept</ref> &amp;</type>
+        <definition>const Root::TAccept &amp; InDet::InDetTrackSelectionTool::accept</definition>
+        <argsstring>(const xAOD::TrackParticle &amp;track, const xAOD::Vertex *vertex=nullptr) const override</argsstring>
+        <name>accept</name>
+        <reimplements refid="dc/d6b/classInDet_1_1IInDetTrackSelectionTool_1a4526f334def05847cc6c37a899e70612">accept</reimplements>
+        <param>
+          <type>const <ref refid="d9/d1d/classxAOD_1_1TrackParticle__v1" kindref="compound">xAOD::TrackParticle</ref> &amp;</type>
+          <declname>track</declname>
+          <defname>trk</defname>
+        </param>
+        <param>
+          <type>const <ref refid="db/dd1/classxAOD_1_1Vertex__v1" kindref="compound">xAOD::Vertex</ref> *</type>
+          <declname>vertex</declname>
+          <defname>vtx</defname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Get the decision for a specific track object. </para>        </briefdescription>
+        <detaileddescription>
+<para>Function that returns the result of the cuts applied to a track in the <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> framework.</para><para>The workhorse function of the tool that checks whether or not a track passes, and also can provide some information about why the track failed when it does. First it accesses all the data it needs from the track (but does not retrieve info it won&apos;t need to check) by looping over its InDet::TrackAccessors. It then loops over its cut families, each of which is composed of one or more InDet::TrackCuts, storing whether or not the track passes all the corresponding cuts. This design allows functionality to be added to the tool without increasing overhead in the main loop for users who don&apos;t need it. This eliminates the need for several multiple versions of the tool.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="dd/d44/namespacexAOD_1a795ac8d2e30fdc75f7c9266766629005" kindref="member">xAOD::TrackParticle</ref> in question. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vtx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional pointer to a <ref refid="dd/d44/namespacexAOD_1a81f1081bff020653ddc591a2ede11ded" kindref="member">xAOD::Vertex</ref> that can be provided if the user wishes to cut on z0 with respect to the vertex&apos;s position. Note that this does not affect d0 cuts. If a vertex is not provided then the z0 cuts are performed with respect to the beamspot. More information can be found at the InDetTrackingDC14 TWiki. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d4/dc4/structA" kindref="compound">A</ref> <ref refid="d0/d75/classRoot_1_1TAccept" kindref="compound">Root::TAccept</ref> object that can be treated as a boolean for a simple pass/fail. It does store more detailed information about which cuts passed and which failed, by organizing the results into cut families. For example, TAccept::getCutResult(&quot;Z0SinTheta&quot;) will be true if the track passed cuts on Z0*Sin(theta), its uncertainty, and its significance. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="73" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/Root/InDetTrackSelectionTool.cxx" bodystart="750" bodyend="794"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a44be2f11716bd7d5f66743c7494e6db5" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="d0/d75/classRoot_1_1TAccept" kindref="compound">Root::TAccept</ref> &amp;</type>
+        <definition>const Root::TAccept &amp; InDet::InDetTrackSelectionTool::accept</definition>
+        <argsstring>(const Trk::Track &amp;track, const Trk::Vertex *vertex=nullptr) const override</argsstring>
+        <name>accept</name>
+        <reimplements refid="dc/d6b/classInDet_1_1IInDetTrackSelectionTool_1a0926f2a2fe0067088d4743882dd4443e">accept</reimplements>
+        <param>
+          <type>const Trk::Track &amp;</type>
+          <declname>track</declname>
+        </param>
+        <param>
+          <type>const Trk::Vertex *</type>
+          <declname>vertex</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that returns the result of the cuts to a Trk::Track.</para><para>This version of accept() is included to allow the tool to be used in full-blown athena on Trk::Tracks. It is supposed to have identical functionality to the user as the <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> version above, but of course it does need to access track information differently. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="77" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/Root/InDetTrackSelectionTool.cxx" bodystart="805" bodyend="880"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ae14577da661005dbe17a735c88c955d2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class TrackCut</definition>
+        <argsstring></argsstring>
+        <name>TrackCut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="32" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1affeb0d9f08448b2b27a54156c1168b82" prot="private" static="no" mutable="no">
+        <type>void the cut level is best set through the CutLevel</type>
+        <definition>virtual void the cut level is best set through the CutLevel InDet::InDetTrackSelectionTool::property</definition>
+        <argsstring></argsstring>
+        <name>property</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="83" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a5511436dc90a631678a50f5562a2685f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool InDet::InDetTrackSelectionTool::m_isInitialized</definition>
+        <argsstring></argsstring>
+        <name>m_isInitialized</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="86" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ab500c2367fe462241b03c85e0937e38f" prot="private" static="no" mutable="yes">
+        <type>bool</type>
+        <definition>bool InDet::InDetTrackSelectionTool::m_warnInit</definition>
+        <argsstring></argsstring>
+        <name>m_warnInit</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="87" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a0912b38fcf779d90acc9335000c6f017" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::shared_ptr&lt; <ref refid="d4/dd1/classInDet_1_1TrackAccessor" kindref="compound">TrackAccessor</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt; std::string, std::shared_ptr&lt;TrackAccessor&gt; &gt; InDet::InDetTrackSelectionTool::m_trackAccessors</definition>
+        <argsstring></argsstring>
+        <name>m_trackAccessors</name>
+        <briefdescription>
+<para>list of the accessors that need to be run for each track </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="92" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1abc5fe0f9f02c88627963a057db375570" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::vector&lt; std::unique_ptr&lt; <ref refid="d0/d6e/classInDet_1_1TrackCut" kindref="compound">TrackCut</ref> &gt; &gt; &gt;</type>
+        <definition>std::map&lt; std::string, std::vector&lt; std::unique_ptr&lt;TrackCut&gt; &gt; &gt; InDet::InDetTrackSelectionTool::m_trackCuts</definition>
+        <argsstring></argsstring>
+        <name>m_trackCuts</name>
+        <briefdescription>
+<para>First element is the name of the cut family, second element is the set of cuts. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="95" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aac3ed25b01a3beb66a9b616a9b79f53c" prot="private" static="no" mutable="yes">
+        <type>ULong64_t</type>
+        <definition>ULong64_t InDet::InDetTrackSelectionTool::m_numTracksProcessed</definition>
+        <argsstring></argsstring>
+        <name>m_numTracksProcessed</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+<para>a counter of the number of tracks proccessed </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="97" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a29a8fd36f1391df567eb1a5238c0cce8" prot="private" static="no" mutable="yes">
+        <type>ULong64_t</type>
+        <definition>ULong64_t InDet::InDetTrackSelectionTool::m_numTracksPassed</definition>
+        <argsstring></argsstring>
+        <name>m_numTracksPassed</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+<para>a counter of the number of tracks that passed all cuts </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="98" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a7a5cfa9339ffd4839d52b8e492e5ea64" prot="private" static="no" mutable="yes">
+        <type>std::vector&lt; ULong64_t &gt;</type>
+        <definition>std::vector&lt;ULong64_t&gt; InDet::InDetTrackSelectionTool::m_numTracksPassedCuts</definition>
+        <argsstring></argsstring>
+        <name>m_numTracksPassedCuts</name>
+        <briefdescription>
+<para>tracks the number of tracks that passed each cut family </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="99" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a4defd2783b122f368b3e1335c1f28b8b" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_minPt</definition>
+        <argsstring></argsstring>
+        <name>m_minPt</name>
+        <initializer> -1.</initializer>
+        <briefdescription>
+<para>Minimum p_T of tracks. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="104" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a1a3e941a3d291ca5b73c6dbfc996b87f" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_maxAbsEta</definition>
+        <argsstring></argsstring>
+        <name>m_maxAbsEta</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Maximum magnitude of pseudorapidity. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="105" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a891dae4364fc1af1b87d4f505eb8bb73" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_maxZ0SinTheta</definition>
+        <argsstring></argsstring>
+        <name>m_maxZ0SinTheta</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Maximum |z0*sin(theta)| of tracks. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="106" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a3a8836ccf4101a59a865c27db6f91967" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_maxZ0</definition>
+        <argsstring></argsstring>
+        <name>m_maxZ0</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Maximum |z0| of tracks. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="107" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a3a43d80bf1b4787f220681f0204df088" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_maxD0</definition>
+        <argsstring></argsstring>
+        <name>m_maxD0</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Maximum |d0| of tracks. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="108" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a2552a07f27f0e92f3e67ec0020b76a58" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_maxSigmaD0</definition>
+        <argsstring></argsstring>
+        <name>m_maxSigmaD0</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Maximum sigma of d0. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="109" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a8da0365b68aa9ab008f6acf05c233f83" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_maxSigmaZ0</definition>
+        <argsstring></argsstring>
+        <name>m_maxSigmaZ0</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Maximum sigma of z0. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="110" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a425a31ba1cedbe3f6c25d894a6d71fca" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_maxSigmaZ0SinTheta</definition>
+        <argsstring></argsstring>
+        <name>m_maxSigmaZ0SinTheta</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Maximum sigma of z0*sin(theta). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="111" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a30aca88e6edb8d2ae97b8a5ff9592446" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_maxD0overSigmaD0</definition>
+        <argsstring></argsstring>
+        <name>m_maxD0overSigmaD0</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Maximum |d0|/sigma_d0 of tracks. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="112" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a9777765281b38854b10ea966be1041fb" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_maxZ0overSigmaZ0</definition>
+        <argsstring></argsstring>
+        <name>m_maxZ0overSigmaZ0</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Maximum |z0|/sigma_z0 of tracks. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="113" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a3e06155392f96ca7792aa96b1ddc6dc7" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_maxZ0SinThetaoverSigmaZ0SinTheta</definition>
+        <argsstring></argsstring>
+        <name>m_maxZ0SinThetaoverSigmaZ0SinTheta</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Maximum |z0*sin(theta)|/sigma_z0sinTheta. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="114" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a166aa564b2bc780239f5588a28e9ef5d" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNInnermostLayerHits</definition>
+        <argsstring></argsstring>
+        <name>m_minNInnermostLayerHits</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Minimum number of innermost pixel layer hits. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="115" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aca6e9c8f2e0716861697f87f4b5815a0" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNNextToInnermostLayerHits</definition>
+        <argsstring></argsstring>
+        <name>m_minNNextToInnermostLayerHits</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Minimum number of next to innermost pixel layer hits. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="116" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a86f051a38074b099e940c211ddd63311" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNBothInnermostLayersHits</definition>
+        <argsstring></argsstring>
+        <name>m_minNBothInnermostLayersHits</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Minimum number of two innermost pixel layer hits. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="117" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a3c0934f0da40bf04d794555ef9d5354a" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_maxNInnermostLayerSharedHits</definition>
+        <argsstring></argsstring>
+        <name>m_maxNInnermostLayerSharedHits</name>
+        <initializer> LOCAL_MAX_INT</initializer>
+        <briefdescription>
+<para>Maximum number of shared innermost pixel layer hits. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="118" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ab67993ea2f478c9e9e041df50b34420e" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_useMinBiasInnermostLayersCut</definition>
+        <argsstring></argsstring>
+        <name>m_useMinBiasInnermostLayersCut</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+<para>Use the Minimum-Bias definition of the IBL/BL cut. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="119" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a4b0c354a701573db4bfffbd8392ca21b" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNSiHits</definition>
+        <argsstring></argsstring>
+        <name>m_minNSiHits</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Minimum number of silicon hits (pixel + SCT). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="120" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ad14999861436d666417d709e0b67fb8d" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_maxNSiSharedHits</definition>
+        <argsstring></argsstring>
+        <name>m_maxNSiSharedHits</name>
+        <initializer> LOCAL_MAX_INT</initializer>
+        <briefdescription>
+<para>Maximum number of silicon sensors shared with other track. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="121" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a13072dd663b9f198fe08eafa8012be7d" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNSiHitsIfSiSharedHits</definition>
+        <argsstring></argsstring>
+        <name>m_minNSiHitsIfSiSharedHits</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Minimum number of silicon hits if the track has shared hits. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="122" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a587f2ec7162300fea6e9922e6c92e9b9" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_maxNSiHoles</definition>
+        <argsstring></argsstring>
+        <name>m_maxNSiHoles</name>
+        <initializer> LOCAL_MAX_INT</initializer>
+        <briefdescription>
+<para>Maximum number of silicon sensors without a hit. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="123" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aa3b6ea932021fb87cf4984caea18b7e7" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNPixelHits</definition>
+        <argsstring></argsstring>
+        <name>m_minNPixelHits</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Minimum number of pixel hits. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="124" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a9e3a9c4dd53054c2a6770699d5c15e55" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_maxNPixelSharedHits</definition>
+        <argsstring></argsstring>
+        <name>m_maxNPixelSharedHits</name>
+        <initializer> LOCAL_MAX_INT</initializer>
+        <briefdescription>
+<para>Maximum number of pixels shared with other track. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="125" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ab05d9850c68487e117983e20775c0c25" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_maxNPixelHoles</definition>
+        <argsstring></argsstring>
+        <name>m_maxNPixelHoles</name>
+        <initializer> LOCAL_MAX_INT</initializer>
+        <briefdescription>
+<para>Maximum number of pixel layers without a hit. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="126" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1afd01c55f268edf3eb6ed2d3d00665440" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_minEtaForStrictNSiHitsCut</definition>
+        <argsstring></argsstring>
+        <name>m_minEtaForStrictNSiHitsCut</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Eta cutoff above which a tighter cut on NSiHits applies. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="127" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a1b9059bfb33ad01fd0affdfbe3143d5d" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNSiHitsAboveEtaCutoff</definition>
+        <argsstring></argsstring>
+        <name>m_minNSiHitsAboveEtaCutoff</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Tighter cut on NSiHits above a certain eta. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="128" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ab8c027c2f3cbe33fea9fca1ce1d68728" prot="private" static="no" mutable="no">
+        <type>Bool_t</type>
+        <definition>Bool_t InDet::InDetTrackSelectionTool::m_maxOneSharedModule</definition>
+        <argsstring></argsstring>
+        <name>m_maxOneSharedModule</name>
+        <initializer> false</initializer>
+        <briefdescription>
+<para>Flag whether to reject if more than one of 1 shared pixel hit or 2 shared SCT hits. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="129" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ad4e8a9ca19dadfe6b77f532bf2d62ce3" prot="private" static="no" mutable="no">
+        <type>Bool_t</type>
+        <definition>Bool_t InDet::InDetTrackSelectionTool::m_useEtaDependentMaxChiSq</definition>
+        <argsstring></argsstring>
+        <name>m_useEtaDependentMaxChiSq</name>
+        <initializer> false</initializer>
+        <briefdescription>
+<para>Flag whether we use the eta-dependent chi^2/dof cut. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="130" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ac713db50a61864583ebe363290b97c65" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_minP</definition>
+        <argsstring></argsstring>
+        <name>m_minP</name>
+        <initializer> -1.</initializer>
+        <briefdescription>
+<para>Minimum p = p_T/cos(theta). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="131" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1abf8367a4effd7d52605d4040f60c6cc1" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNSiHitsPhysical</definition>
+        <argsstring></argsstring>
+        <name>m_minNSiHitsPhysical</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Minimum number of physical (pixel + SCT) hits (no dead sensors). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="132" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a19ee48e742e0a3f7d4bde3cda1bd0957" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNPixelHitsPhysical</definition>
+        <argsstring></argsstring>
+        <name>m_minNPixelHitsPhysical</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Minimum number of physical pixel hits (no dead sensors). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="133" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a68f1b566434b8f511474ecb84a3adf2b" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNSctHitsPhysical</definition>
+        <argsstring></argsstring>
+        <name>m_minNSctHitsPhysical</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Minimum number of physical SCT hits (no dead sensors). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="134" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a3701dde9075a48bc4d2f5408685827cd" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNSctHits</definition>
+        <argsstring></argsstring>
+        <name>m_minNSctHits</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Minimum number of SCT hits (plus dead sensors). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="135" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ad88ee5f7aa2be617034e4abcdaf0c209" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_maxNSctSharedHits</definition>
+        <argsstring></argsstring>
+        <name>m_maxNSctSharedHits</name>
+        <initializer> LOCAL_MAX_INT</initializer>
+        <briefdescription>
+<para>Maximum number of SCT sensors shared with another track. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="136" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a063ada9576175ff19cab7d8ab205e152" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_maxNSctHoles</definition>
+        <argsstring></argsstring>
+        <name>m_maxNSctHoles</name>
+        <initializer> LOCAL_MAX_INT</initializer>
+        <briefdescription>
+<para>Maximum number of holes in SCT. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="137" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aa8eb84ccf2085b3e913f69ef70b0481b" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_maxNSctDoubleHoles</definition>
+        <argsstring></argsstring>
+        <name>m_maxNSctDoubleHoles</name>
+        <initializer> LOCAL_MAX_INT</initializer>
+        <briefdescription>
+<para>Maximum number of double holes in SCT. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="138" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a12b3322c129a7bdc829d91ee821c826f" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_maxTrtEtaAcceptance</definition>
+        <argsstring></argsstring>
+        <name>m_maxTrtEtaAcceptance</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Pseudorapidity below which TRT hit cuts will not be applied. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="139" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a35acfed4ca8c3223974a1a4a8b5cedc1" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_maxEtaForTrtHitCuts</definition>
+        <argsstring></argsstring>
+        <name>m_maxEtaForTrtHitCuts</name>
+        <initializer> -1.</initializer>
+        <briefdescription>
+<para>Pseudorapidity above which TRT hit cuts will not be applied. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="140" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aa6e7ebd0618dda6a34fa4e0b39d6f7ef" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNTrtHits</definition>
+        <argsstring></argsstring>
+        <name>m_minNTrtHits</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Minimum number of TRT hits. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="141" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aad614a7d397050eb0a46fdb13b1b67e7" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNTrtHitsPlusOutliers</definition>
+        <argsstring></argsstring>
+        <name>m_minNTrtHitsPlusOutliers</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Minimum number of TRT hits plus outliers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="142" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a658a40d826eb3205b5b957f729bbab04" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNTrtHighThresholdHits</definition>
+        <argsstring></argsstring>
+        <name>m_minNTrtHighThresholdHits</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Minimum number of high E TRT hits. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="143" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ac8b1dc3a269695b08d99fadd6e2e0cb0" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNTrtHighThresholdHitsPlusOutliers</definition>
+        <argsstring></argsstring>
+        <name>m_minNTrtHighThresholdHitsPlusOutliers</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Minimum number of high E TRT hits including outliers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="144" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a68217589658333cab1caf0a13f93bae6" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_maxTrtHighEFraction</definition>
+        <argsstring></argsstring>
+        <name>m_maxTrtHighEFraction</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Maximum fraction of TRT hits that are high threshold. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="145" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a4e59d1f4f4b957b57c729e7c7eaf3837" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_maxTrtHighEFractionWithOutliers</definition>
+        <argsstring></argsstring>
+        <name>m_maxTrtHighEFractionWithOutliers</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Maximum fraction of TRT hits that are high threshold, including outliers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="146" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a3878467f6126373cce615ca628ac00ed" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_maxTrtOutlierFraction</definition>
+        <argsstring></argsstring>
+        <name>m_maxTrtOutlierFraction</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Maximum fraction of TRT outliers over TRT hits + outliers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="147" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ab8aed47498059d80fcd61802f7d5440b" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_maxChiSq</definition>
+        <argsstring></argsstring>
+        <name>m_maxChiSq</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Maximum fit chi squared. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="148" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a992d4f80b7552bb8360fcf6b7f78b4fa" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_maxChiSqperNdf</definition>
+        <argsstring></argsstring>
+        <name>m_maxChiSqperNdf</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Maximum chi squared per degree of freedom. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="149" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a314447aa5288ab9cd85a0a0cd4709acf" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_minProb</definition>
+        <argsstring></argsstring>
+        <name>m_minProb</name>
+        <initializer> -1.</initializer>
+        <briefdescription>
+<para>Minimum fit probability. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="150" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1af1788f691477b4275847edeef5875bfc" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_minPtForProbCut</definition>
+        <argsstring></argsstring>
+        <name>m_minPtForProbCut</name>
+        <initializer> LOCAL_MAX_DOUBLE</initializer>
+        <briefdescription>
+<para>Pt above which a Prob(chiSq, ndf) cut is applied. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="151" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a6c89c3fa5f6e3755f5aa47195484c970" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_minProbAbovePtCutoff</definition>
+        <argsstring></argsstring>
+        <name>m_minProbAbovePtCutoff</name>
+        <initializer> -1.</initializer>
+        <briefdescription>
+<para>Minimum probability above Pt cutoff. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="152" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ada6c82bcc5028f627033697d635c002e" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNUsedHitsdEdx</definition>
+        <argsstring></argsstring>
+        <name>m_minNUsedHitsdEdx</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Minimum number of dEdx hits used. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="153" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a3248f93339a041511a7ebe0628b5fedb" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNOverflowHitsdEdx</definition>
+        <argsstring></argsstring>
+        <name>m_minNOverflowHitsdEdx</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Minimum number of IBL overflow hits for dEdx. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="154" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aa559a35f06294eba2f5a851abc1091ef" prot="private" static="no" mutable="no">
+        <type>Bool_t</type>
+        <definition>Bool_t InDet::InDetTrackSelectionTool::m_eProbHTonlyForXe</definition>
+        <argsstring></argsstring>
+        <name>m_eProbHTonlyForXe</name>
+        <initializer> false</initializer>
+        <briefdescription>
+<para>Flag whether to only check eProbabilityHT if all TRT hits are Xenon hits. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="155" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a77323b4b581e0979b8e56ed862169dec" prot="private" static="no" mutable="no">
+        <type>Double_t</type>
+        <definition>Double_t InDet::InDetTrackSelectionTool::m_minEProbabilityHT</definition>
+        <argsstring></argsstring>
+        <name>m_minEProbabilityHT</name>
+        <initializer> -1.</initializer>
+        <briefdescription>
+<para>Minimum eProbabiltyHT. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="156" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aa58d8aae9304a072b64f55bbf3c5bbeb" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_useExperimentalInnermostLayersCut</definition>
+        <argsstring></argsstring>
+        <name>m_useExperimentalInnermostLayersCut</name>
+        <initializer> false</initializer>
+        <briefdescription>
+<para>use (NPixHoles == 0) but allow 1 hole if a BLayer hit is expected but not present </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="157" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1afc71c4de153da4375794b7912d8fd98c" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNSiHitsMod</definition>
+        <argsstring></argsstring>
+        <name>m_minNSiHitsMod</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Minimum number of Si hits, with pixel hits counting twice. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="159" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a4a22bf34c2bf962fb2022cd8c44f21cd" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNSiHitsModTop</definition>
+        <argsstring></argsstring>
+        <name>m_minNSiHitsModTop</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Min number of Si hits on top half (pixel counting twice). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="160" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a3fe1d6ffd5770c6c2986e36b54648b8a" prot="private" static="no" mutable="no">
+        <type>Int_t</type>
+        <definition>Int_t InDet::InDetTrackSelectionTool::m_minNSiHitsModBottom</definition>
+        <argsstring></argsstring>
+        <name>m_minNSiHitsModBottom</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>Min number of Si hits on bottom half (pixel counting twice). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="161" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1afdd89d95f8ad5afeef643dad3c47b9cd" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Double_t &gt;</type>
+        <definition>std::vector&lt; Double_t &gt; InDet::InDetTrackSelectionTool::m_vecEtaCutoffsForSiHitsCut</definition>
+        <argsstring></argsstring>
+        <name>m_vecEtaCutoffsForSiHitsCut</name>
+        <briefdescription>
+<para>Above each of these eta levels a new SCT hits + pix hits will be applied. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="163" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a78d6a7c29fc41cb4da171394b1dd556e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Int_t &gt;</type>
+        <definition>std::vector&lt; Int_t &gt; InDet::InDetTrackSelectionTool::m_vecMinNSiHitsAboveEta</definition>
+        <argsstring></argsstring>
+        <name>m_vecMinNSiHitsAboveEta</name>
+        <briefdescription>
+<para>the minimum Si hits above each eta level </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="164" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a7be92614a2be88eb318db25f4109e998" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Double_t &gt;</type>
+        <definition>std::vector&lt; Double_t &gt; InDet::InDetTrackSelectionTool::m_vecEtaCutoffsForPtCut</definition>
+        <argsstring></argsstring>
+        <name>m_vecEtaCutoffsForPtCut</name>
+        <briefdescription>
+<para>Above each of these eta levels a new pT cut will be applied. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="165" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a6c5c5040ddaa6a6d154574533233635c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Double_t &gt;</type>
+        <definition>std::vector&lt; Double_t &gt; InDet::InDetTrackSelectionTool::m_vecMinPtAboveEta</definition>
+        <argsstring></argsstring>
+        <name>m_vecMinPtAboveEta</name>
+        <briefdescription>
+<para>the minimum transverse momentum above each eta level </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="166" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a306845aef2236c19d49beca61289fe3a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Double_t &gt;</type>
+        <definition>std::vector&lt; Double_t &gt; InDet::InDetTrackSelectionTool::m_vecPtCutoffsForSctHitsCut</definition>
+        <argsstring></argsstring>
+        <name>m_vecPtCutoffsForSctHitsCut</name>
+        <briefdescription>
+<para>Above each of these pT levels a new SCT hits + dead sensors will be applied. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="168" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a5e690e64b3df1ba74a121206b5a5ae7b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Int_t &gt;</type>
+        <definition>std::vector&lt; Int_t &gt; InDet::InDetTrackSelectionTool::m_vecMinNSctHitsAbovePt</definition>
+        <argsstring></argsstring>
+        <name>m_vecMinNSctHitsAbovePt</name>
+        <briefdescription>
+<para>the minimum SCT hits above each pt level </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="169" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a965e86c0dfba036fe6c0e26c91ccc8ab" prot="private" static="no" mutable="yes">
+        <type><ref refid="d0/d75/classRoot_1_1TAccept" kindref="compound">Root::TAccept</ref></type>
+        <definition>Root::TAccept InDet::InDetTrackSelectionTool::m_accept</definition>
+        <argsstring></argsstring>
+        <name>m_accept</name>
+        <briefdescription>
+<para>Object used to store the last decision. </para>        </briefdescription>
+        <detaileddescription>
+<para>Object that stores detailed selection information </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="172" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a059208e540f35f9d44f42f70e8eca895" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string InDet::InDetTrackSelectionTool::m_cutLevel</definition>
+        <argsstring></argsstring>
+        <name>m_cutLevel</name>
+        <briefdescription>
+<para>The string version of the cut level so that it can be set via jobOptions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="176" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a47e829a7e48e86a9254b5dfc0aeac518" prot="private" static="no" mutable="no">
+        <type>Bool_t</type>
+        <definition>Bool_t InDet::InDetTrackSelectionTool::m_initTrkTools</definition>
+        <argsstring></argsstring>
+        <name>m_initTrkTools</name>
+        <initializer> false</initializer>
+        <briefdescription>
+<para>Whether to initialize the Trk::Track tools. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="182" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a86d22e52862a271a61b1db9dc64abece" prot="private" static="no" mutable="no">
+        <type>Bool_t</type>
+        <definition>Bool_t InDet::InDetTrackSelectionTool::m_trackSumToolAvailable</definition>
+        <argsstring></argsstring>
+        <name>m_trackSumToolAvailable</name>
+        <initializer> false</initializer>
+        <briefdescription>
+<para>Whether the summary tool is available. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="183" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a0caa6348e1060dba709d51d7feb77e39" prot="private" static="no" mutable="no">
+        <type>ToolHandle&lt; Trk::ITrackSummaryTool &gt;</type>
+        <definition>ToolHandle&lt;Trk::ITrackSummaryTool&gt; InDet::InDetTrackSelectionTool::m_trackSumTool</definition>
+        <argsstring></argsstring>
+        <name>m_trackSumTool</name>
+        <briefdescription>
+<para>Track summary tool. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="184" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a87a49ff7908bb0cd5a2b5c2ce3a0a97a" prot="private" static="no" mutable="no">
+        <type>ToolHandle&lt; Trk::IExtrapolator &gt;</type>
+        <definition>ToolHandle&lt;Trk::IExtrapolator&gt; InDet::InDetTrackSelectionTool::m_extrapolator</definition>
+        <argsstring></argsstring>
+        <name>m_extrapolator</name>
+        <briefdescription>
+<para>Extrapolator tool. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="185" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ae8168dbbfc6359d742b8d51ec7f0333a" prot="private" static="yes" mutable="no">
+        <type>constexpr Double_t</type>
+        <definition>constexpr Double_t InDet::InDetTrackSelectionTool::LOCAL_MAX_DOUBLE</definition>
+        <argsstring></argsstring>
+        <name>LOCAL_MAX_DOUBLE</name>
+        <initializer> 1.0e16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="101" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aee0ecde4c4b4299edc42b2fdf91bcee2" prot="private" static="yes" mutable="no">
+        <type>constexpr Int_t</type>
+        <definition>constexpr Int_t InDet::InDetTrackSelectionTool::LOCAL_MAX_INT</definition>
+        <argsstring></argsstring>
+        <name>LOCAL_MAX_INT</name>
+        <initializer> std::numeric_limits&lt;Int_t&gt;::max()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="102" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ad0e0731ff4216803ad884706674546d2" prot="private" static="yes" mutable="no">
+        <type>const std::unordered_map&lt; std::string, CutLevel &gt;</type>
+        <definition>const std::unordered_map&lt; std::string, InDet::CutLevel &gt; InDet::InDetTrackSelectionTool::s_mapCutLevel</definition>
+        <argsstring></argsstring>
+        <name>s_mapCutLevel</name>
+        <initializer>
+  {
+    {&quot;NoCut&quot;, InDet::CutLevel::NoCut},
+    {&quot;Loose&quot;, InDet::CutLevel::Loose},
+    {&quot;LoosePrimary&quot;, InDet::CutLevel::LoosePrimary},
+    {&quot;TightPrimary&quot;, InDet::CutLevel::TightPrimary},
+    {&quot;LooseMuon&quot;, InDet::CutLevel::LooseMuon},
+    {&quot;LooseElectron&quot;, InDet::CutLevel::LooseElectron},
+    {&quot;LooseTau&quot;, InDet::CutLevel::LooseTau},
+    {&quot;MinBias&quot;, InDet::CutLevel::MinBias},
+    {&quot;HILoose&quot;, InDet::CutLevel::HILoose},
+    {&quot;HITight&quot;, InDet::CutLevel::HITight}
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="179" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1acfc7f66efdf695b5df3ddcdbf98826be" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void InDet::InDetTrackSelectionTool::setCutLevel</definition>
+        <argsstring>(InDet::CutLevel level, Bool_t overwrite=true) override __attribute__((deprecated(&quot;For consistency with the athena interface</argsstring>
+        <name>setCutLevel</name>
+        <reimplements refid="dc/d6b/classInDet_1_1IInDetTrackSelectionTool_1aa72f9859eb9e716e88ff35608d5b90aa">setCutLevel</reimplements>
+        <param>
+          <type>InDet::CutLevel</type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>Bool_t</type>
+          <declname>overwrite</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to set the cut level within standalone ROOT</para><para>This function can be used to set the cut selection of the tool to a pre-defined level, as definied in the twiki for InDetTrackingPerformanceGuidelines. It is left public for use in standalone ROOT. In athena, this should be set through the jobOptions via the &quot;CutLevel&quot; property instead.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CutLevel enumeration that picks the preset level to set the cuts to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>overwrite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="d4/dc4/structA" kindref="compound">A</ref> boolean (default true) that indicates whether to force an overwrite of each cut. If false, this function does not change the cut levels if they have been altered from their default (no cut) value. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="83" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/Root/InDetTrackSelectionTool.cxx" bodystart="899" bodyend="909"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1abb1c7d343676ea3242f0bd270bab2bdf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InDet::InDetTrackSelectionTool::setCutLevelPrivate</definition>
+        <argsstring>(InDet::CutLevel level, Bool_t overwrite=true)</argsstring>
+        <name>setCutLevelPrivate</name>
+        <param>
+          <type>InDet::CutLevel</type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>Bool_t</type>
+          <declname>overwrite</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="90" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/Root/InDetTrackSelectionTool.cxx" bodystart="911" bodyend="1091"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Implementation of the track selector tool </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="10065">
+        <label>asg::AsgTool</label>
+        <link refid="d5/dbb/classasg_1_1AsgTool"/>
+        <childnode refid="10064" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10064">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="10063">
+        <label>IAsgSelectionTool</label>
+        <link refid="d9/db3/classIAsgSelectionTool"/>
+        <childnode refid="10064" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10062">
+        <label>InDet::IInDetTrackSelectionTool</label>
+        <link refid="dc/d6b/classInDet_1_1IInDetTrackSelectionTool"/>
+        <childnode refid="10063" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10061">
+        <label>InDet::InDetTrackSelectionTool</label>
+        <link refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool"/>
+        <childnode refid="10062" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10065" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10072">
+        <label>string</label>
+      </node>
+      <node id="10073">
+        <label>Root::TAccept</label>
+        <link refid="d0/d75/classRoot_1_1TAccept"/>
+      </node>
+      <node id="10070">
+        <label>asg::AsgTool</label>
+        <link refid="d5/dbb/classasg_1_1AsgTool"/>
+        <childnode refid="10069" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10069">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="10068">
+        <label>IAsgSelectionTool</label>
+        <link refid="d9/db3/classIAsgSelectionTool"/>
+        <childnode refid="10069" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10067">
+        <label>InDet::IInDetTrackSelectionTool</label>
+        <link refid="dc/d6b/classInDet_1_1IInDetTrackSelectionTool"/>
+        <childnode refid="10068" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10071">
+        <label>void</label>
+      </node>
+      <node id="10066">
+        <label>InDet::InDetTrackSelectionTool</label>
+        <link refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool"/>
+        <childnode refid="10067" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10070" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10071" relation="usage">
+          <edgelabel>property</edgelabel>
+        </childnode>
+        <childnode refid="10072" relation="usage">
+          <edgelabel>m_cutLevel</edgelabel>
+        </childnode>
+        <childnode refid="10073" relation="usage">
+          <edgelabel>m_accept</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" line="30" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/InDetTrackSelectionTool/InDetTrackSelectionTool/InDetTrackSelectionTool.h" bodystart="28" bodyend="189"/>
+    <listofallmembers>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a9883ae6605b2b06e748e1f695cd1b572" prot="private" virt="virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>accept</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aea339fcb7c9fbedf5730e160515ee3b3" prot="private" virt="virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>accept</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a44be2f11716bd7d5f66743c7494e6db5" prot="private" virt="virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>accept</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a47f02c756c6d6026d03e0d4d68d82a94" prot="public" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>AsgTool</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a6f8a9bfaf040fd5f237edc94a5f365a5" prot="private" virt="virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>finalize</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a5d9d9eae0988784fb6c257e0a2440ca6" prot="public" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>getProperty</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1abd38a3e93384be58609b61f90d1cf50e" prot="private" virt="virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>getTAccept</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a72695b48cea40064fe9f89a3bcd4b5ce" prot="private" virt="virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>initialize</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ae8168dbbfc6359d742b8d51ec7f0333a" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>LOCAL_MAX_DOUBLE</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aee0ecde4c4b4299edc42b2fdf91bcee2" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>LOCAL_MAX_INT</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a965e86c0dfba036fe6c0e26c91ccc8ab" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_accept</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a059208e540f35f9d44f42f70e8eca895" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_cutLevel</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aa559a35f06294eba2f5a851abc1091ef" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_eProbHTonlyForXe</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a87a49ff7908bb0cd5a2b5c2ce3a0a97a" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_extrapolator</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a47e829a7e48e86a9254b5dfc0aeac518" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_initTrkTools</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a5511436dc90a631678a50f5562a2685f" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_isInitialized</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a1a3e941a3d291ca5b73c6dbfc996b87f" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxAbsEta</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ab8aed47498059d80fcd61802f7d5440b" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxChiSq</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a992d4f80b7552bb8360fcf6b7f78b4fa" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxChiSqperNdf</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a3a43d80bf1b4787f220681f0204df088" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxD0</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a30aca88e6edb8d2ae97b8a5ff9592446" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxD0overSigmaD0</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a35acfed4ca8c3223974a1a4a8b5cedc1" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxEtaForTrtHitCuts</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a3c0934f0da40bf04d794555ef9d5354a" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxNInnermostLayerSharedHits</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ab05d9850c68487e117983e20775c0c25" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxNPixelHoles</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a9e3a9c4dd53054c2a6770699d5c15e55" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxNPixelSharedHits</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aa8eb84ccf2085b3e913f69ef70b0481b" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxNSctDoubleHoles</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a063ada9576175ff19cab7d8ab205e152" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxNSctHoles</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ad88ee5f7aa2be617034e4abcdaf0c209" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxNSctSharedHits</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a587f2ec7162300fea6e9922e6c92e9b9" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxNSiHoles</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ad14999861436d666417d709e0b67fb8d" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxNSiSharedHits</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ab8c027c2f3cbe33fea9fca1ce1d68728" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxOneSharedModule</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a2552a07f27f0e92f3e67ec0020b76a58" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxSigmaD0</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a8da0365b68aa9ab008f6acf05c233f83" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxSigmaZ0</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a425a31ba1cedbe3f6c25d894a6d71fca" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxSigmaZ0SinTheta</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a12b3322c129a7bdc829d91ee821c826f" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxTrtEtaAcceptance</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a68217589658333cab1caf0a13f93bae6" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxTrtHighEFraction</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a4e59d1f4f4b957b57c729e7c7eaf3837" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxTrtHighEFractionWithOutliers</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a3878467f6126373cce615ca628ac00ed" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxTrtOutlierFraction</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a3a8836ccf4101a59a865c27db6f91967" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxZ0</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a9777765281b38854b10ea966be1041fb" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxZ0overSigmaZ0</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a891dae4364fc1af1b87d4f505eb8bb73" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxZ0SinTheta</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a3e06155392f96ca7792aa96b1ddc6dc7" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_maxZ0SinThetaoverSigmaZ0SinTheta</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a77323b4b581e0979b8e56ed862169dec" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minEProbabilityHT</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1afd01c55f268edf3eb6ed2d3d00665440" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minEtaForStrictNSiHitsCut</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a86f051a38074b099e940c211ddd63311" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNBothInnermostLayersHits</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a166aa564b2bc780239f5588a28e9ef5d" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNInnermostLayerHits</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aca6e9c8f2e0716861697f87f4b5815a0" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNNextToInnermostLayerHits</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a3248f93339a041511a7ebe0628b5fedb" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNOverflowHitsdEdx</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aa3b6ea932021fb87cf4984caea18b7e7" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNPixelHits</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a19ee48e742e0a3f7d4bde3cda1bd0957" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNPixelHitsPhysical</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a3701dde9075a48bc4d2f5408685827cd" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNSctHits</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a68f1b566434b8f511474ecb84a3adf2b" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNSctHitsPhysical</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a4b0c354a701573db4bfffbd8392ca21b" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNSiHits</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a1b9059bfb33ad01fd0affdfbe3143d5d" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNSiHitsAboveEtaCutoff</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a13072dd663b9f198fe08eafa8012be7d" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNSiHitsIfSiSharedHits</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1afc71c4de153da4375794b7912d8fd98c" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNSiHitsMod</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a3fe1d6ffd5770c6c2986e36b54648b8a" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNSiHitsModBottom</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a4a22bf34c2bf962fb2022cd8c44f21cd" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNSiHitsModTop</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1abf8367a4effd7d52605d4040f60c6cc1" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNSiHitsPhysical</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a658a40d826eb3205b5b957f729bbab04" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNTrtHighThresholdHits</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ac8b1dc3a269695b08d99fadd6e2e0cb0" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNTrtHighThresholdHitsPlusOutliers</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aa6e7ebd0618dda6a34fa4e0b39d6f7ef" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNTrtHits</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aad614a7d397050eb0a46fdb13b1b67e7" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNTrtHitsPlusOutliers</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ada6c82bcc5028f627033697d635c002e" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minNUsedHitsdEdx</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ac713db50a61864583ebe363290b97c65" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minP</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a314447aa5288ab9cd85a0a0cd4709acf" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minProb</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a6c89c3fa5f6e3755f5aa47195484c970" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minProbAbovePtCutoff</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a4defd2783b122f368b3e1335c1f28b8b" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minPt</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1af1788f691477b4275847edeef5875bfc" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_minPtForProbCut</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a29a8fd36f1391df567eb1a5238c0cce8" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_numTracksPassed</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a7a5cfa9339ffd4839d52b8e492e5ea64" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_numTracksPassedCuts</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aac3ed25b01a3beb66a9b616a9b79f53c" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_numTracksProcessed</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a0912b38fcf779d90acc9335000c6f017" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_trackAccessors</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1abc5fe0f9f02c88627963a057db375570" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_trackCuts</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a0caa6348e1060dba709d51d7feb77e39" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_trackSumTool</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a86d22e52862a271a61b1db9dc64abece" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_trackSumToolAvailable</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ad4e8a9ca19dadfe6b77f532bf2d62ce3" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_useEtaDependentMaxChiSq</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1aa58d8aae9304a072b64f55bbf3c5bbeb" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_useExperimentalInnermostLayersCut</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ab67993ea2f478c9e9e041df50b34420e" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_useMinBiasInnermostLayersCut</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a7be92614a2be88eb318db25f4109e998" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_vecEtaCutoffsForPtCut</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1afdd89d95f8ad5afeef643dad3c47b9cd" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_vecEtaCutoffsForSiHitsCut</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a5e690e64b3df1ba74a121206b5a5ae7b" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_vecMinNSctHitsAbovePt</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a78d6a7c29fc41cb4da171394b1dd556e" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_vecMinNSiHitsAboveEta</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a6c5c5040ddaa6a6d154574533233635c" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_vecMinPtAboveEta</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1a306845aef2236c19d49beca61289fe3a" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_vecPtCutoffsForSctHitsCut</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ab500c2367fe462241b03c85e0937e38f" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>m_warnInit</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1a3aeba8f7ad5ade0197f5848fe9e4480e" prot="public" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>msg_level_name</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1af1aac990b958e92bf38123318d926e67" prot="public" virt="pure-virtual" ambiguityscope="InDet::"><scope>InDet::InDetTrackSelectionTool</scope><name>print</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1af4cc6ba53b6505045c2866d4e30e821d" prot="public" virt="virtual" ambiguityscope="asg::AsgTool::"><scope>InDet::InDetTrackSelectionTool</scope><name>print</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1affeb0d9f08448b2b27a54156c1168b82" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>property</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ad0e0731ff4216803ad884706674546d2" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>s_mapCutLevel</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1acfc7f66efdf695b5df3ddcdbf98826be" prot="private" virt="virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>setCutLevel</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1abb1c7d343676ea3242f0bd270bab2bdf" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>setCutLevelPrivate</name></member>
+      <member refid="d3/d8c/classInDet_1_1InDetTrackSelectionTool_1ae14577da661005dbe17a735c88c955d2" prot="private" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>TrackCut</name></member>
+      <member refid="d5/dbb/classasg_1_1AsgTool_1abf22f7aa60258c67b79cf67bf70a3a5b" prot="public" virt="non-virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>~AsgTool</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1a77b49d52f1f8c272cb665b8309d6082d" prot="public" virt="virtual"><scope>InDet::InDetTrackSelectionTool</scope><name>~IAsgTool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

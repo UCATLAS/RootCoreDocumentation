@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d4/db2/classORUtils_1_1MuJetGhostDRMatcher" kind="class" prot="public">
+    <compoundname>ORUtils::MuJetGhostDRMatcher</compoundname>
+    <basecompoundref refid="dc/d62/classORUtils_1_1IParticleAssociator" prot="public" virt="non-virtual">ORUtils::IParticleAssociator</basecompoundref>
+    <basecompoundref refid="d1/d97/classasg_1_1AsgMessaging" prot="public" virt="non-virtual">asg::AsgMessaging</basecompoundref>
+    <includes refid="d7/d40/MuJetGhostDRMatcher_8h" local="no">MuJetGhostDRMatcher.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d4/db2/classORUtils_1_1MuJetGhostDRMatcher_1a7e7dc51aeff84d905bcc1350db531a84" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="dc/d62/classORUtils_1_1IParticleAssociator" kindref="compound">IParticleAssociator</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;IParticleAssociator&gt; ORUtils::MuJetGhostDRMatcher::m_drMatcher</definition>
+        <argsstring></argsstring>
+        <name>m_drMatcher</name>
+        <briefdescription>
+<para>The delta-R matcher. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/MuJetGhostDRMatcher.h" line="42" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/MuJetGhostDRMatcher.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d4/db2/classORUtils_1_1MuJetGhostDRMatcher_1a0aa6031b5fac7a03718615bd2b384f52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ORUtils::MuJetGhostDRMatcher::MuJetGhostDRMatcher</definition>
+        <argsstring>(double dR, bool useRapidity=true)</argsstring>
+        <name>MuJetGhostDRMatcher</name>
+        <param>
+          <type>double</type>
+          <declname>dR</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>useRapidity</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Constructor takes same arguments as the <ref refid="da/d92/classORUtils_1_1DeltaRMatcher" kindref="compound">DeltaRMatcher</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/MuJetGhostDRMatcher.h" line="33" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/Root/MuJetGhostDRMatcher.cxx" bodystart="20" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/db2/classORUtils_1_1MuJetGhostDRMatcher_1a4c41b09af553dbca35f96c72e42eabf9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ORUtils::MuJetGhostDRMatcher::objectsMatch</definition>
+        <argsstring>(const xAOD::IParticle &amp;mu, const xAOD::IParticle &amp;jet) const override</argsstring>
+        <name>objectsMatch</name>
+        <reimplements refid="dc/d62/classORUtils_1_1IParticleAssociator_1aac27a7e728f8fc35b699a11f00fbd00e">objectsMatch</reimplements>
+        <param>
+          <type>const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">xAOD::IParticle</ref> &amp;</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/d4c/classxAOD_1_1IParticle" kindref="compound">xAOD::IParticle</ref> &amp;</type>
+          <declname>jet</declname>
+        </param>
+        <briefdescription>
+<para>Check for a match via ghost association or delta-R. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/MuJetGhostDRMatcher.h" line="37" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/Root/MuJetGhostDRMatcher.cxx" bodystart="29" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Matches a muon to a jet via ghost association or a delta-R. </para>    </briefdescription>
+    <detaileddescription>
+<para>Ghost association is done by looking for the muon&apos;s ID track in the jet&apos;s list of ghost tracks. The Delta-R matching is implemented via the <ref refid="da/d92/classORUtils_1_1DeltaRMatcher" kindref="compound">DeltaRMatcher</ref>. The final result is a match if either the ghost association or the delta-R succeeds.</para><para><simplesect kind="author"><para>Steve Farrell &lt;<ulink url="mailto:Steven.Farrell@cern.ch">Steven.Farrell@cern.ch</ulink>&gt; </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="14490">
+        <label>ORUtils::IParticleAssociator</label>
+        <link refid="dc/d62/classORUtils_1_1IParticleAssociator"/>
+      </node>
+      <node id="14491">
+        <label>asg::AsgMessaging</label>
+        <link refid="d1/d97/classasg_1_1AsgMessaging"/>
+      </node>
+      <node id="14489">
+        <label>ORUtils::MuJetGhostDRMatcher</label>
+        <link refid="d4/db2/classORUtils_1_1MuJetGhostDRMatcher"/>
+        <childnode refid="14490" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14491" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="14493">
+        <label>ORUtils::IParticleAssociator</label>
+        <link refid="dc/d62/classORUtils_1_1IParticleAssociator"/>
+      </node>
+      <node id="14494">
+        <label>asg::AsgMessaging</label>
+        <link refid="d1/d97/classasg_1_1AsgMessaging"/>
+      </node>
+      <node id="14492">
+        <label>ORUtils::MuJetGhostDRMatcher</label>
+        <link refid="d4/db2/classORUtils_1_1MuJetGhostDRMatcher"/>
+        <childnode refid="14493" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14494" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/MuJetGhostDRMatcher.h" line="28" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/AssociationUtils/AssociationUtils/MuJetGhostDRMatcher.h" bodystart="26" bodyend="44"/>
+    <listofallmembers>
+      <member refid="d1/d97/classasg_1_1AsgMessaging_1aa6e565de0931b6458b932cbb6a8ec55f" prot="public" virt="non-virtual"><scope>ORUtils::MuJetGhostDRMatcher</scope><name>AsgMessaging</name></member>
+      <member refid="d1/d97/classasg_1_1AsgMessaging_1ab1e1c2857d74fd5d60ba77d85cdaa26c" prot="public" virt="non-virtual"><scope>ORUtils::MuJetGhostDRMatcher</scope><name>AsgMessaging</name></member>
+      <member refid="d4/db2/classORUtils_1_1MuJetGhostDRMatcher_1a7e7dc51aeff84d905bcc1350db531a84" prot="private" virt="non-virtual"><scope>ORUtils::MuJetGhostDRMatcher</scope><name>m_drMatcher</name></member>
+      <member refid="d1/d97/classasg_1_1AsgMessaging_1ade3c4b8227d4dd544df9b5aee53363c3" prot="public" virt="non-virtual"><scope>ORUtils::MuJetGhostDRMatcher</scope><name>msg</name></member>
+      <member refid="d1/d97/classasg_1_1AsgMessaging_1a7dd4e350bc2d52f0200257bd22eae53b" prot="public" virt="non-virtual"><scope>ORUtils::MuJetGhostDRMatcher</scope><name>msg</name></member>
+      <member refid="d1/d97/classasg_1_1AsgMessaging_1af52f582970fc09501ead498c285ebb32" prot="public" virt="non-virtual"><scope>ORUtils::MuJetGhostDRMatcher</scope><name>msgLvl</name></member>
+      <member refid="d4/db2/classORUtils_1_1MuJetGhostDRMatcher_1a0aa6031b5fac7a03718615bd2b384f52" prot="public" virt="non-virtual"><scope>ORUtils::MuJetGhostDRMatcher</scope><name>MuJetGhostDRMatcher</name></member>
+      <member refid="d4/db2/classORUtils_1_1MuJetGhostDRMatcher_1a4c41b09af553dbca35f96c72e42eabf9" prot="public" virt="virtual"><scope>ORUtils::MuJetGhostDRMatcher</scope><name>objectsMatch</name></member>
+      <member refid="dc/d62/classORUtils_1_1IParticleAssociator_1ae1c5b822ac1ef133ac7e7f2815f8b762" prot="public" virt="virtual"><scope>ORUtils::MuJetGhostDRMatcher</scope><name>~IParticleAssociator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

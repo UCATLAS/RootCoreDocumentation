@@ -1,0 +1,428 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool" kind="class" prot="public">
+    <compoundname>CP::IMuonCalibrationAndSmearingTool</compoundname>
+    <basecompoundref refid="d4/d20/classasg_1_1IAsgTool" prot="public" virt="virtual">asg::IAsgTool</basecompoundref>
+    <basecompoundref refid="d4/d5c/classCP_1_1ISystematicsTool" prot="public" virt="virtual">CP::ISystematicsTool</basecompoundref>
+    <derivedcompoundref refid="d1/d75/classCP_1_1MuonCalibrationAndSmearingTool" prot="public" virt="virtual">CP::MuonCalibrationAndSmearingTool</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a65765fc1d47804bb9077563a1ef1169d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CorrectionCode</ref></type>
+        <definition>virtual CorrectionCode CP::IMuonCalibrationAndSmearingTool::applyCorrection</definition>
+        <argsstring>(xAOD::Muon &amp;mu)=0</argsstring>
+        <name>applyCorrection</name>
+        <reimplementedby refid="d1/d75/classCP_1_1MuonCalibrationAndSmearingTool_1a2d15d0ebb2f51381c528f5cc1048dc13">applyCorrection</reimplementedby>
+        <param>
+          <type><ref refid="d2/d30/classxAOD_1_1Muon__v1" kindref="compound">xAOD::Muon</ref> &amp;</type>
+          <declname>mu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/MuonMomentumCorrections/IMuonCalibrationAndSmearingTool.h" line="27"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a9b357e81c1b63160d9577c4c0f21eef0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CorrectionCode</ref></type>
+        <definition>virtual CorrectionCode CP::IMuonCalibrationAndSmearingTool::correctedCopy</definition>
+        <argsstring>(const xAOD::Muon &amp;input, xAOD::Muon *&amp;output)=0</argsstring>
+        <name>correctedCopy</name>
+        <reimplementedby refid="d1/d75/classCP_1_1MuonCalibrationAndSmearingTool_1a5393ccf3fc968267b11545bb1ef09a18">correctedCopy</reimplementedby>
+        <param>
+          <type>const <ref refid="d2/d30/classxAOD_1_1Muon__v1" kindref="compound">xAOD::Muon</ref> &amp;</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/d30/classxAOD_1_1Muon__v1" kindref="compound">xAOD::Muon</ref> *&amp;</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/MuonMomentumCorrections/IMuonCalibrationAndSmearingTool.h" line="29"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a3ad673faec64ce97ec1d42a5651ff2ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool CP::IMuonCalibrationAndSmearingTool::isAffectedBySystematic</definition>
+        <argsstring>(const SystematicVariation &amp;systematic) const =0</argsstring>
+        <name>isAffectedBySystematic</name>
+        <reimplements refid="d4/d5c/classCP_1_1ISystematicsTool_1a04aa5fb3e693dc6536b27354c7b2c71e">isAffectedBySystematic</reimplements>
+        <reimplementedby refid="d1/d75/classCP_1_1MuonCalibrationAndSmearingTool_1af8fd55a642f91dee085c8fb8b2f8c2ed">isAffectedBySystematic</reimplementedby>
+        <param>
+          <type>const <ref refid="dd/d2d/classCP_1_1SystematicVariation" kindref="compound">SystematicVariation</ref> &amp;</type>
+          <declname>systematic</declname>
+        </param>
+        <briefdescription>
+<para>returns: whether this tool is affected by the given systematics </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/MuonMomentumCorrections/IMuonCalibrationAndSmearingTool.h" line="31"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a95fc97d442c142fdbeca8c0f46788847" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">SystematicSet</ref></type>
+        <definition>virtual SystematicSet CP::IMuonCalibrationAndSmearingTool::affectingSystematics</definition>
+        <argsstring>() const =0</argsstring>
+        <name>affectingSystematics</name>
+        <reimplements refid="d4/d5c/classCP_1_1ISystematicsTool_1abc7cfc4bece0b5aaf372e75c33ba2122">affectingSystematics</reimplements>
+        <reimplementedby refid="d1/d75/classCP_1_1MuonCalibrationAndSmearingTool_1ac9992a7e2256aa9175a145d2d40fc46f">affectingSystematics</reimplementedby>
+        <briefdescription>
+<para>returns: the list of all systematics this tool can be affected by </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/MuonMomentumCorrections/IMuonCalibrationAndSmearingTool.h" line="33"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a6426e5873644042bd67c8c113c8211f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">SystematicSet</ref></type>
+        <definition>virtual SystematicSet CP::IMuonCalibrationAndSmearingTool::recommendedSystematics</definition>
+        <argsstring>() const =0</argsstring>
+        <name>recommendedSystematics</name>
+        <reimplements refid="d4/d5c/classCP_1_1ISystematicsTool_1a6d2b283af1c21f9d40588ef87eb6c4b3">recommendedSystematics</reimplements>
+        <reimplementedby refid="d1/d75/classCP_1_1MuonCalibrationAndSmearingTool_1aa9fb2e541b2568f99cd852840a28a859">recommendedSystematics</reimplementedby>
+        <briefdescription>
+<para>returns: the list of all systematics this tool recommends to use </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/MuonMomentumCorrections/IMuonCalibrationAndSmearingTool.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a8b7aa2c7142d55f55e44ed4b9a57a924" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d1/d38/classCP_1_1SystematicCode" kindref="compound">SystematicCode</ref></type>
+        <definition>virtual SystematicCode CP::IMuonCalibrationAndSmearingTool::applySystematicVariation</definition>
+        <argsstring>(const SystematicSet &amp;systConfig)=0</argsstring>
+        <name>applySystematicVariation</name>
+        <reimplements refid="d4/d5c/classCP_1_1ISystematicsTool_1a73f35f85955411a7e14cb208721a242d">applySystematicVariation</reimplements>
+        <reimplementedby refid="d1/d75/classCP_1_1MuonCalibrationAndSmearingTool_1aa47fea8ac84670ec5548642e175bd55b">applySystematicVariation</reimplementedby>
+        <param>
+          <type>const <ref refid="d4/d52/classCP_1_1SystematicSet" kindref="compound">SystematicSet</ref> &amp;</type>
+          <declname>systConfig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effects: configure this tool for the given list of systematic variations. any requested systematics that are not affecting this tool will be silently ignored (unless they cause other errors). failures: systematic unknown failures: requesting multiple variations on the same systematic (e.g. up &amp; down) failures: requesting an unsupported variation on an otherwise supported systematic (e.g. a 2 sigma variation and the tool only supports 1 sigma variations) failures: unsupported combination of supported systematic failures: other tool specific errors </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/MuonMomentumCorrections/IMuonCalibrationAndSmearingTool.h" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a4ea583df24e7c083fe26ca54bbc912a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void CP::IMuonCalibrationAndSmearingTool::setRandomSeed</definition>
+        <argsstring>(unsigned seed)=0</argsstring>
+        <name>setRandomSeed</name>
+        <reimplementedby refid="d1/d75/classCP_1_1MuonCalibrationAndSmearingTool_1a24d3bed44afc4a8c9de1de2cd5701bb1">setRandomSeed</reimplementedby>
+        <param>
+          <type>unsigned</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/MuonMomentumCorrections/IMuonCalibrationAndSmearingTool.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a3b1d9d28c15a30872e9f80af443a007a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double CP::IMuonCalibrationAndSmearingTool::expectedResolution</definition>
+        <argsstring>(const std::string &amp;DetType, xAOD::Muon &amp;mu, const bool mc) const =0</argsstring>
+        <name>expectedResolution</name>
+        <reimplementedby refid="d1/d75/classCP_1_1MuonCalibrationAndSmearingTool_1a18526e70b348cbdd3312dc9345f70450">expectedResolution</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>DetType</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/d30/classxAOD_1_1Muon__v1" kindref="compound">xAOD::Muon</ref> &amp;</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>mc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/MuonMomentumCorrections/IMuonCalibrationAndSmearingTool.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a691aa102e80cec12359205a39c9d1a49" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double CP::IMuonCalibrationAndSmearingTool::expectedResolution</definition>
+        <argsstring>(const int DetType, xAOD::Muon &amp;mu, const bool mc) const =0</argsstring>
+        <name>expectedResolution</name>
+        <reimplementedby refid="d1/d75/classCP_1_1MuonCalibrationAndSmearingTool_1a7e161d8bc28f4767f980c15505f5f83b">expectedResolution</reimplementedby>
+        <param>
+          <type>const int</type>
+          <declname>DetType</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/d30/classxAOD_1_1Muon__v1" kindref="compound">xAOD::Muon</ref> &amp;</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>mc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/MuonMomentumCorrections/IMuonCalibrationAndSmearingTool.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1ac0c3f1964e8db79f33c5099a2d99f834" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CorrectionCode</ref></type>
+        <definition>virtual CorrectionCode CP::IMuonCalibrationAndSmearingTool::applyStatCombination</definition>
+        <argsstring>(const ElementLink&lt; xAOD::TrackParticleContainer &gt; &amp;inDetTrackParticle, const ElementLink&lt; xAOD::TrackParticleContainer &gt; &amp;extrTrackParticle, int charge, AmgVector(5)&amp;parsCB, AmgSymMatrix(5)&amp;covCB, double &amp;chi2)=0</argsstring>
+        <name>applyStatCombination</name>
+        <reimplementedby refid="d1/d75/classCP_1_1MuonCalibrationAndSmearingTool_1a8ff0f0e28f08b9402c327bd377bf037e">applyStatCombination</reimplementedby>
+        <param>
+          <type>const <ref refid="d6/d6e/classElementLink" kindref="compound">ElementLink</ref>&lt; <ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::TrackParticleContainer</ref> &gt; &amp;</type>
+          <declname>inDetTrackParticle</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d6/d6e/classElementLink" kindref="compound">ElementLink</ref>&lt; <ref refid="d0/d4d/classDataVector" kindref="compound">xAOD::TrackParticleContainer</ref> &gt; &amp;</type>
+          <declname>extrTrackParticle</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>charge</declname>
+        </param>
+        <param>
+          <type>AmgVector(5)&amp;</type>
+          <declname>parsCB</declname>
+        </param>
+        <param>
+          <type>AmgSymMatrix(5)&amp;</type>
+          <declname>covCB</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>chi2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/MuonMomentumCorrections/IMuonCalibrationAndSmearingTool.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a654842ec2d45f420fd0bfcee64611d07" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CorrectionCode</ref></type>
+        <definition>virtual CorrectionCode CP::IMuonCalibrationAndSmearingTool::applyStatCombination</definition>
+        <argsstring>(xAOD::Muon &amp;mu)=0</argsstring>
+        <name>applyStatCombination</name>
+        <reimplementedby refid="d1/d75/classCP_1_1MuonCalibrationAndSmearingTool_1a7651ebc10514270c641b12ce70f22d70">applyStatCombination</reimplementedby>
+        <param>
+          <type><ref refid="d2/d30/classxAOD_1_1Muon__v1" kindref="compound">xAOD::Muon</ref> &amp;</type>
+          <declname>mu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/MuonMomentumCorrections/IMuonCalibrationAndSmearingTool.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a6b23161ec544ee5816b76e89fe69d1a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void CP::IMuonCalibrationAndSmearingTool::setUseStatCombination</definition>
+        <argsstring>(bool flag)=0</argsstring>
+        <name>setUseStatCombination</name>
+        <reimplementedby refid="d1/d75/classCP_1_1MuonCalibrationAndSmearingTool_1ad10d6ffb7eea1d94ad2c8d4833dda5ed">setUseStatCombination</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/MuonMomentumCorrections/IMuonCalibrationAndSmearingTool.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a6dbcbb0078ab40686d3c7caf85f8385d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CorrectionCode</ref></type>
+        <definition>virtual CorrectionCode CP::IMuonCalibrationAndSmearingTool::applySagittaBiasCorrectionAuto</definition>
+        <argsstring>(const int DetType, xAOD::Muon &amp;mu, bool isMC, const unsigned int SytCase)=0</argsstring>
+        <name>applySagittaBiasCorrectionAuto</name>
+        <reimplementedby refid="d1/d75/classCP_1_1MuonCalibrationAndSmearingTool_1a2dabe619acec13bcba9494afa5638197">applySagittaBiasCorrectionAuto</reimplementedby>
+        <param>
+          <type>const int</type>
+          <declname>DetType</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/d30/classxAOD_1_1Muon__v1" kindref="compound">xAOD::Muon</ref> &amp;</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isMC</declname>
+        </param>
+        <param>
+          <type>const unsigned int</type>
+          <declname>SytCase</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/MuonMomentumCorrections/IMuonCalibrationAndSmearingTool.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1ab220918a0e43e800e22d0c6c7973de14" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CorrectionCode</ref></type>
+        <definition>virtual CorrectionCode CP::IMuonCalibrationAndSmearingTool::CorrectForCharge</definition>
+        <argsstring>(double p2, double &amp;pt, int q, bool isMC)=0</argsstring>
+        <name>CorrectForCharge</name>
+        <reimplementedby refid="d1/d75/classCP_1_1MuonCalibrationAndSmearingTool_1a874a1be19669b7fb6e4c8425b50235a1">CorrectForCharge</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>p2</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isMC</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/MuonMomentumCorrections/IMuonCalibrationAndSmearingTool.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a934f6f688b3a7686a890687fb83e1760" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="db/d8a/classCP_1_1CorrectionCode" kindref="compound">CorrectionCode</ref></type>
+        <definition>virtual CorrectionCode CP::IMuonCalibrationAndSmearingTool::applyiSagittaBiasCorrection</definition>
+        <argsstring>(const unsigned int SgCorrType, xAOD::Muon &amp;mu, unsigned int iter, bool stop, bool isMC)=0</argsstring>
+        <name>applyiSagittaBiasCorrection</name>
+        <reimplementedby refid="d1/d75/classCP_1_1MuonCalibrationAndSmearingTool_1a6e496bb53cb73eb389826b0bd2bb37b3">applyiSagittaBiasCorrection</reimplementedby>
+        <param>
+          <type>const unsigned int</type>
+          <declname>SgCorrType</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/d30/classxAOD_1_1Muon__v1" kindref="compound">xAOD::Muon</ref> &amp;</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>stop</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isMC</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/MuonMomentumCorrections/IMuonCalibrationAndSmearingTool.h" line="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="9999">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="10001">
+        <label>CP::MuonCalibrationAndSmearingTool</label>
+        <link refid="d1/d75/classCP_1_1MuonCalibrationAndSmearingTool"/>
+        <childnode refid="9998" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9998">
+        <label>CP::IMuonCalibrationAndSmearingTool</label>
+        <link refid="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool"/>
+        <childnode refid="9999" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10000" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10000">
+        <label>CP::ISystematicsTool</label>
+        <link refid="d4/d5c/classCP_1_1ISystematicsTool"/>
+        <childnode refid="9999" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10003">
+        <label>asg::IAsgTool</label>
+        <link refid="d4/d20/classasg_1_1IAsgTool"/>
+      </node>
+      <node id="10002">
+        <label>CP::IMuonCalibrationAndSmearingTool</label>
+        <link refid="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool"/>
+        <childnode refid="10003" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10004" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10004">
+        <label>CP::ISystematicsTool</label>
+        <link refid="d4/d5c/classCP_1_1ISystematicsTool"/>
+        <childnode refid="10003" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/MuonMomentumCorrections/IMuonCalibrationAndSmearingTool.h" line="20" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/MuonMomentumCorrections/MuonMomentumCorrections/IMuonCalibrationAndSmearingTool.h" bodystart="20" bodyend="60"/>
+    <listofallmembers>
+      <member refid="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a95fc97d442c142fdbeca8c0f46788847" prot="public" virt="pure-virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>affectingSystematics</name></member>
+      <member refid="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a65765fc1d47804bb9077563a1ef1169d" prot="public" virt="pure-virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>applyCorrection</name></member>
+      <member refid="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a934f6f688b3a7686a890687fb83e1760" prot="public" virt="pure-virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>applyiSagittaBiasCorrection</name></member>
+      <member refid="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a6dbcbb0078ab40686d3c7caf85f8385d" prot="public" virt="pure-virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>applySagittaBiasCorrectionAuto</name></member>
+      <member refid="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1ac0c3f1964e8db79f33c5099a2d99f834" prot="public" virt="pure-virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>applyStatCombination</name></member>
+      <member refid="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a654842ec2d45f420fd0bfcee64611d07" prot="public" virt="pure-virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>applyStatCombination</name></member>
+      <member refid="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a8b7aa2c7142d55f55e44ed4b9a57a924" prot="public" virt="pure-virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>applySystematicVariation</name></member>
+      <member refid="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a9b357e81c1b63160d9577c4c0f21eef0" prot="public" virt="pure-virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>correctedCopy</name></member>
+      <member refid="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1ab220918a0e43e800e22d0c6c7973de14" prot="public" virt="pure-virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>CorrectForCharge</name></member>
+      <member refid="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a3b1d9d28c15a30872e9f80af443a007a" prot="public" virt="pure-virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>expectedResolution</name></member>
+      <member refid="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a691aa102e80cec12359205a39c9d1a49" prot="public" virt="pure-virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>expectedResolution</name></member>
+      <member refid="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a3ad673faec64ce97ec1d42a5651ff2ef" prot="public" virt="pure-virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>isAffectedBySystematic</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1af1aac990b958e92bf38123318d926e67" prot="public" virt="pure-virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>print</name></member>
+      <member refid="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a6426e5873644042bd67c8c113c8211f4" prot="public" virt="pure-virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>recommendedSystematics</name></member>
+      <member refid="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a4ea583df24e7c083fe26ca54bbc912a6" prot="public" virt="pure-virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>setRandomSeed</name></member>
+      <member refid="d0/dde/classCP_1_1IMuonCalibrationAndSmearingTool_1a6b23161ec544ee5816b76e89fe69d1a6" prot="public" virt="pure-virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>setUseStatCombination</name></member>
+      <member refid="d4/d20/classasg_1_1IAsgTool_1a77b49d52f1f8c272cb665b8309d6082d" prot="public" virt="virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>~IAsgTool</name></member>
+      <member refid="d4/d5c/classCP_1_1ISystematicsTool_1a18391a9c9b1789aa9045082bcd65c6ee" prot="public" virt="virtual"><scope>CP::IMuonCalibrationAndSmearingTool</scope><name>~ISystematicsTool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

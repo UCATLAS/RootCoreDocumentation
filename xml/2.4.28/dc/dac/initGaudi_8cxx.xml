@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="dc/dac/initGaudi_8cxx" kind="file">
+    <compoundname>initGaudi.cxx</compoundname>
+    <includes refid="d3/d9b/initGaudi_8h" local="yes">TestTools/initGaudi.h</includes>
+    <includes local="yes">GaudiKernel/Bootstrap.h</includes>
+    <includes local="yes">GaudiKernel/IProperty.h</includes>
+    <includes local="yes">GaudiKernel/ISvcManager.h</includes>
+    <includes local="yes">GaudiKernel/ISvcLocator.h</includes>
+    <includes local="yes">GaudiKernel/IAppMgrUI.h</includes>
+    <includes local="yes">GaudiKernel/SmartIF.h</includes>
+    <incdepgraph>
+      <node id="302645">
+        <label>GaudiKernel/ISvcLocator.h</label>
+      </node>
+      <node id="302642">
+        <label>GaudiKernel/Bootstrap.h</label>
+      </node>
+      <node id="302640">
+        <label>TestTools/initGaudi.h</label>
+        <link refid="d3/d9b/initGaudi_8h"/>
+        <childnode refid="302641" relation="include">
+        </childnode>
+      </node>
+      <node id="302641">
+        <label>string</label>
+      </node>
+      <node id="302646">
+        <label>GaudiKernel/IAppMgrUI.h</label>
+      </node>
+      <node id="302647">
+        <label>GaudiKernel/SmartIF.h</label>
+      </node>
+      <node id="302639">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TestTools/src/initGaudi.cxx</label>
+        <link refid="initGaudi.cxx"/>
+        <childnode refid="302640" relation="include">
+        </childnode>
+        <childnode refid="302642" relation="include">
+        </childnode>
+        <childnode refid="302643" relation="include">
+        </childnode>
+        <childnode refid="302644" relation="include">
+        </childnode>
+        <childnode refid="302645" relation="include">
+        </childnode>
+        <childnode refid="302646" relation="include">
+        </childnode>
+        <childnode refid="302647" relation="include">
+        </childnode>
+      </node>
+      <node id="302643">
+        <label>GaudiKernel/IProperty.h</label>
+      </node>
+      <node id="302644">
+        <label>GaudiKernel/ISvcManager.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="d3/d3a/namespaceAthena__test">Athena_test</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>minimal<sp/>gaudi<sp/>initialization<sp/>for<sp/>AthenaServices<sp/>unit<sp/>testing</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>------------------------------------------------------------</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>ATLAS<sp/>Collaboration</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>initGaudi.cxx,v<sp/>1.5<sp/>2005-05-04<sp/>00:39:51<sp/>calaf<sp/>Exp<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//&lt;&lt;&lt;&lt;&lt;&lt;<sp/>INCLUDES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;&gt;&gt;&gt;&gt;&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d3/d9b/initGaudi_8h" kindref="compound" tooltip="minimal gaudi initialization for AthenaServices unit testing">TestTools/initGaudi.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GaudiKernel/Bootstrap.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GaudiKernel/IProperty.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GaudiKernel/ISvcManager.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GaudiKernel/ISvcLocator.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GaudiKernel/IAppMgrUI.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GaudiKernel/SmartIF.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::cout;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::endl;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::string;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="d3/d3a/namespaceAthena__test" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Athena_test<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d3/d3a/namespaceAthena__test_1a7bf7e13353dfa6431705e601cb554478" kindref="member" tooltip="minimal gaudi initialization for AthenaServices unit testing">initGaudi</ref>(ISvcLocator*&amp;<sp/>pSvcLoc)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d3/d3a/namespaceAthena__test_1a7bf7e13353dfa6431705e601cb554478" kindref="member" tooltip="minimal gaudi initialization for AthenaServices unit testing">initGaudi</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">(),<sp/>pSvcLoc);<sp/></highlight><highlight class="comment">//wily<sp/>hack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d3/d3a/namespaceAthena__test_1a7bf7e13353dfa6431705e601cb554478" kindref="member" tooltip="minimal gaudi initialization for AthenaServices unit testing">initGaudi</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>jobOptsFile,<sp/>ISvcLocator*&amp;<sp/>pSvcLoc)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>jobOptsPath<sp/>=<sp/>jobOptsFile;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(access<sp/>(jobOptsPath.c_str(),<sp/>R_OK)<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>jobOptsPath<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;../share/&quot;</highlight><highlight class="normal">+jobOptsFile;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>noJobOpts(jobOptsFile.empty());</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!noJobOpts)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n\nInitializing<sp/>Gaudi<sp/>ApplicationMgr<sp/>using<sp/>job<sp/>opts<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>jobOptsPath<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>an<sp/>instance<sp/>of<sp/>an<sp/>application<sp/>manager</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>IInterface*<sp/>iface<sp/>=<sp/>Gaudi::createApplicationMgr();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>0<sp/>==<sp/>iface<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Fatal<sp/>error<sp/>while<sp/>creating<sp/>the<sp/>ApplicationMgr<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>SmartIF&lt;ISvcManager&gt;<sp/>svcMgr(iface);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>SmartIF&lt;IAppMgrUI&gt;<sp/>appMgr(iface);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>SmartIF&lt;IProperty&gt;<sp/>propMgr(iface);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>SmartIF&lt;ISvcLocator&gt;<sp/>svcLoc(iface);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!svcLoc.isValid()<sp/>||<sp/>!appMgr.isValid()<sp/>||<sp/>!svcMgr.isValid()<sp/>||<sp/>!propMgr.isValid())<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Fatal<sp/>error<sp/>while<sp/>creating<sp/>the<sp/>AppMgr<sp/>smart<sp/>if<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>pSvcLoc<sp/>=<sp/>svcLoc.pRef();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>(propMgr-&gt;setProperty(<sp/></highlight><highlight class="stringliteral">&quot;EvtSel&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;NONE&quot;</highlight><highlight class="normal"><sp/>)).ignore();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(noJobOpts)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(propMgr-&gt;setProperty(<sp/></highlight><highlight class="stringliteral">&quot;JobOptionsType&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;NONE&quot;</highlight><highlight class="normal"><sp/>)).ignore();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(propMgr-&gt;setProperty(<sp/></highlight><highlight class="stringliteral">&quot;JobOptionsType&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;FILE&quot;</highlight><highlight class="normal"><sp/>)).ignore();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(propMgr-&gt;setProperty(<sp/></highlight><highlight class="stringliteral">&quot;JobOptionsPath&quot;</highlight><highlight class="normal">,<sp/>jobOptsPath<sp/>)).ignore();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((appMgr-&gt;configure()).isSuccess()<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>(appMgr-&gt;initialize()).isSuccess())<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;ApplicationMgr<sp/>Ready&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Fatal<sp/>error<sp/>while<sp/>initializing<sp/>the<sp/>AppMgr&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/TestTools/src/initGaudi.cxx"/>
+  </compounddef>
+</doxygen>

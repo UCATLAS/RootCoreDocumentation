@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="db/daa/P4Sorters_8h" kind="file">
+    <compoundname>P4Sorters.h</compoundname>
+    <includes refid="d9/d77/P4AscendingSorters_8h" local="yes">FourMomUtils/P4AscendingSorters.h</includes>
+    <includes refid="d7/dbe/P4DescendingSorters_8h" local="yes">FourMomUtils/P4DescendingSorters.h</includes>
+    <includedby refid="df/dfa/FourMomUtilsDict_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/FourMomUtils/FourMomUtils/FourMomUtilsDict.h</includedby>
+    <includedby refid="d4/ddd/P4Sorters_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/FourMomUtils/src/P4Sorters.cxx</includedby>
+    <includedby refid="d1/d2e/FourMomUtils_2src_2Thrust_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/FourMomUtils/src/Thrust.cxx</includedby>
+    <incdepgraph>
+      <node id="131425">
+        <label>functional</label>
+      </node>
+      <node id="131423">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/FourMomUtils/FourMomUtils/P4Sorters.h</label>
+        <link refid="P4Sorters.h"/>
+        <childnode refid="131424" relation="include">
+        </childnode>
+        <childnode refid="131429" relation="include">
+        </childnode>
+      </node>
+      <node id="131426">
+        <label>cmath</label>
+      </node>
+      <node id="131428">
+        <label>EventKernel/I4Momentum.h</label>
+      </node>
+      <node id="131427">
+        <label>CxxUtils/fpcompare.h</label>
+        <link refid="df/df0/fpcompare_8h"/>
+        <childnode refid="131426" relation="include">
+        </childnode>
+        <childnode refid="131425" relation="include">
+        </childnode>
+      </node>
+      <node id="131429">
+        <label>FourMomUtils/P4DescendingSorters.h</label>
+        <link refid="d7/dbe/P4DescendingSorters_8h_source"/>
+        <childnode refid="131425" relation="include">
+        </childnode>
+        <childnode refid="131426" relation="include">
+        </childnode>
+        <childnode refid="131427" relation="include">
+        </childnode>
+        <childnode refid="131428" relation="include">
+        </childnode>
+      </node>
+      <node id="131424">
+        <label>FourMomUtils/P4AscendingSorters.h</label>
+        <link refid="d9/d77/P4AscendingSorters_8h_source"/>
+        <childnode refid="131425" relation="include">
+        </childnode>
+        <childnode refid="131426" relation="include">
+        </childnode>
+        <childnode refid="131427" relation="include">
+        </childnode>
+        <childnode refid="131428" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="131430">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/FourMomUtils/FourMomUtils/P4Sorters.h</label>
+        <link refid="P4Sorters.h"/>
+        <childnode refid="131431" relation="include">
+        </childnode>
+      </node>
+      <node id="131431">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/FourMomUtils/FourMomUtils/FourMomUtilsDict.h</label>
+        <link refid="df/dfa/FourMomUtilsDict_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="2"><highlight class="comment">//<sp/>P4Sorters.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Header<sp/>file<sp/>for<sp/>class<sp/>P4Sorters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>S.Binet&lt;binet@cern.ch&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight><highlight class="preprocessor">#ifndef<sp/>FOURMOMUTILS_P4SORTERS_H</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FOURMOMUTILS_P4SORTERS_H</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>STL<sp/>includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>AthAnalysisBase/ManaCore<sp/>doesn&apos;t<sp/>currently<sp/>include<sp/>the<sp/>Trigger<sp/>Service</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>XAOD_ANALYSIS</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FourMomUtils<sp/>includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;FourMomUtils/P4AscendingSorters.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;FourMomUtils/P4DescendingSorters.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//&gt;<sp/>FOURMOMUTILS_P4SORTERS_H</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/FourMomUtils/FourMomUtils/P4Sorters.h"/>
+  </compounddef>
+</doxygen>

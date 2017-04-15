@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="de/dda/ElectronSelectorHelpers_8h" kind="file">
+    <compoundname>ElectronSelectorHelpers.h</compoundname>
+    <includes refid="db/d18/ElectronFwd_8h" local="yes">xAODEgamma/ElectronFwd.h</includes>
+    <includes refid="d1/dc4/TrackParticleFwd_8h" local="yes">xAODTracking/TrackParticleFwd.h</includes>
+    <includes local="no">cstddef</includes>
+    <includedby refid="dd/d9e/AsgElectronIsEMSelector_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonSelectorTools/Root/AsgElectronIsEMSelector.cxx</includedby>
+    <includedby refid="d4/de0/AsgElectronLikelihoodTool_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonSelectorTools/Root/AsgElectronLikelihoodTool.cxx</includedby>
+    <includedby refid="d9/d97/ElectronSelectorHelpers_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonSelectorTools/Root/ElectronSelectorHelpers.cxx</includedby>
+    <incdepgraph>
+      <node id="123437">
+        <label>xAODTracking/TrackParticleFwd.h</label>
+        <link refid="d1/dc4/TrackParticleFwd_8h_source"/>
+      </node>
+      <node id="123435">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonSelectorTools/ElectronPhotonSelectorTools/ElectronSelectorHelpers.h</label>
+        <link refid="ElectronSelectorHelpers.h"/>
+        <childnode refid="123436" relation="include">
+        </childnode>
+        <childnode refid="123437" relation="include">
+        </childnode>
+        <childnode refid="123438" relation="include">
+        </childnode>
+      </node>
+      <node id="123438">
+        <label>cstddef</label>
+      </node>
+      <node id="123436">
+        <label>xAODEgamma/ElectronFwd.h</label>
+        <link refid="db/d18/ElectronFwd_8h_source"/>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="d0/d08/namespaceElectronSelectorHelpers">ElectronSelectorHelpers</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Dear<sp/>emacs,<sp/>this<sp/>is<sp/>-*-c++-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__ELECTRONSELECTORHELPERS__</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__ELECTRONSELECTORHELPERS__</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Atlas<sp/>includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODEgamma/ElectronFwd.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xAODTracking/TrackParticleFwd.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ElectronSelectorHelpers{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>std::size_t<sp/>numberOfPixelHitsAndDeadSensors(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d9/d1d/classxAOD_1_1TrackParticle__v1" kindref="compound">xAOD::TrackParticle</ref><sp/>*tp);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>std::size_t<sp/>numberOfSCTHitsAndDeadSensors(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d9/d1d/classxAOD_1_1TrackParticle__v1" kindref="compound">xAOD::TrackParticle</ref><sp/>*tp);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>std::size_t<sp/>numberOfSiliconHitsAndDeadSensors(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d9/d1d/classxAOD_1_1TrackParticle__v1" kindref="compound">xAOD::TrackParticle</ref><sp/>*tp);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(that<sp/>is,<sp/>if<sp/>innermost<sp/>layer<sp/>is<sp/>masked<sp/>off,<sp/>look<sp/>at<sp/>the<sp/>next</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>to<sp/>innermost<sp/>layer.<sp/>If<sp/>both<sp/>are<sp/>off,<sp/>then<sp/>return<sp/>true)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>passBLayerRequirement(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d9/d1d/classxAOD_1_1TrackParticle__v1" kindref="compound">xAOD::TrackParticle</ref><sp/>*tp);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/ElectronPhotonSelectorTools/ElectronPhotonSelectorTools/ElectronSelectorHelpers.h"/>
+  </compounddef>
+</doxygen>

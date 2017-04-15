@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.1">
+  <compounddef id="d3/d6e/PrintHelpers_8h" kind="file">
+    <compoundname>PrintHelpers.h</compoundname>
+    <includes local="no">iosfwd</includes>
+    <includedby refid="dd/da8/PrintHelpers_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/Root/PrintHelpers.cxx</includedby>
+    <includedby refid="d5/d62/inc__tools__PrintHelpers_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/test/inc_tools_PrintHelpers.cxx</includedby>
+    <includedby refid="de/d66/ut__xaodcore__clearDecorations__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/test/ut_xaodcore_clearDecorations_test.cxx</includedby>
+    <includedby refid="d5/d82/ut__xaodcore__printhelpers__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/test/ut_xaodcore_printhelpers_test.cxx</includedby>
+    <includedby refid="da/de5/ut__xaodcore__safedeepcopy__test_8cxx" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/test/ut_xaodcore_safedeepcopy_test.cxx</includedby>
+    <includedby refid="d2/d26/xAODCoreRflxDict_8h" local="yes">/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/xAODCoreRflxDict.h</includedby>
+    <incdepgraph>
+      <node id="362361">
+        <label>iosfwd</label>
+      </node>
+      <node id="362360">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/tools/PrintHelpers.h</label>
+        <link refid="PrintHelpers.h"/>
+        <childnode refid="362361" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="362364">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/xAODCoreDict.h</label>
+        <link refid="dd/daa/xAODCoreDict_8h_source"/>
+      </node>
+      <node id="362362">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/tools/PrintHelpers.h</label>
+        <link refid="PrintHelpers.h"/>
+        <childnode refid="362363" relation="include">
+        </childnode>
+      </node>
+      <node id="362363">
+        <label>/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/xAODCoreRflxDict.h</label>
+        <link refid="d2/d26/xAODCoreRflxDict_8h_source"/>
+        <childnode refid="362364" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="dd/d59/namespaceSG">SG</innernamespace>
+    <innernamespace refid="dd/d44/namespacexAOD">xAOD</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d3/d6e/PrintHelpers_8h_1a0556e0969cb4224875acf2835ba85b6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, const SG::AuxElement &amp;obj)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dc/db0/classSG_1_1AuxElement" kindref="compound">SG::AuxElement</ref> &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator printing the payload of an <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> object</para><para>This function can be used to quickly get an idea about the payload held by any type of <ref refid="dd/d44/namespacexAOD" kindref="compound">xAOD</ref> object. It prints the type and name of each auxiliary variable associated with the object. And for some simple types (primitives and some vectors of primitives) it even prints the values of these variables.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The stream to write the information to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object to write the information about </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The same stream object that was given to the function </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>Helper macro to make the code slightly shorter </para>        </inbodydescription>
+        <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/tools/PrintHelpers.h" line="26" bodyfile="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/Root/PrintHelpers.cxx" bodystart="31" bodyend="134"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Dear<sp/>emacs,<sp/>this<sp/>is<sp/>-*-<sp/>c++<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>PrintHelpers.h<sp/>646509<sp/>2015-02-12<sp/>16:43:18Z<sp/>krasznaa<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>XAODCORE_TOOLS_PRINTHELPERS_H</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>XAODCORE_TOOLS_PRINTHELPERS_H</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>System<sp/>include(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iosfwd&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Forward<sp/>declaration(s):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SG<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AuxElement;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">std::ostream&amp;<sp/>operator&lt;&lt;<sp/>(<sp/>std::ostream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dc/db0/classSG_1_1AuxElement" kindref="compound" tooltip="Base class for elements of a container that can have aux data.">SG::AuxElement</ref>&amp;<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">xAOD<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/d44/namespacexAOD_1a75480f79a4e9470abdb56aaf2480b28a" kindref="member">dump</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dc/db0/classSG_1_1AuxElement" kindref="compound" tooltip="Base class for elements of a container that can have aux data.">SG::AuxElement</ref>&amp;<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>xAOD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>XAODCORE_TOOLS_PRINTHELPERS_H</highlight></codeline>
+    </programlisting>
+    <location file="/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.4.28/xAODCore/xAODCore/tools/PrintHelpers.h"/>
+  </compounddef>
+</doxygen>
