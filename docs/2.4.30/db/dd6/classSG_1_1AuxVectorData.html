@@ -60,18 +60,11 @@ Inheritance diagram for SG::AuxVectorData:</div>
  <div class="center">
   <img src="../../db/dd6/classSG_1_1AuxVectorData.gif" usemap="#SG::AuxVectorData_map" alt=""/>
   <map id="SG::AuxVectorData_map" name="SG::AuxVectorData_map">
-<area href="../../dc/dfb/classSG_1_1AuxElementData.html" alt="SG::AuxElementData" shape="rect" coords="0,56,264,80"/>
+<area href="../../dc/dfb/classSG_1_1AuxElementData.html" alt="SG::AuxElementData" shape="rect" coords="137,56,401,80"/>
 <area href="../../dd/da5/classSG_1_1AuxVectorBase.html" alt="SG::AuxVectorBase" shape="rect" coords="548,56,812,80"/>
-<area href="../../dd/da5/classSG_1_1AuxVectorBase.html" alt="SG::AuxVectorBase" shape="rect" coords="1096,56,1360,80"/>
-<area href="../../d6/d8d/classSG_1_1AuxVectorData__test.html" alt="SG::AuxVectorData_test" shape="rect" coords="1370,56,1634,80"/>
-<area href="../../da/d62/classSG_1_1AuxElementPrivateData.html" alt="SG::AuxElementPrivateData" shape="rect" coords="274,112,538,136"/>
-<area href="../../d5/dde/classSG_1_1AuxElementStandaloneData.html" alt="SG::AuxElementStandaloneData" shape="rect" coords="274,168,538,192"/>
-<area href="../../d0/d91/classDataVector_3_01T_00_01DataModel__detail_1_1NoBase_01_4.html" alt="DataVector&lt; T, DataModel_detail::NoBase &gt;" shape="rect" coords="822,112,1086,136"/>
-<area href="../../d1/daa/classmyvec2.html" alt="myvec2" shape="rect" coords="822,168,1086,192"/>
-<area href="../../d8/db3/classSG_1_1AuxVectorBase__test.html" alt="SG::AuxVectorBase_test" shape="rect" coords="822,224,1086,248"/>
-<area href="../../d0/d91/classDataVector_3_01T_00_01DataModel__detail_1_1NoBase_01_4.html" alt="DataVector&lt; T, DataModel_detail::NoBase &gt;" shape="rect" coords="1370,112,1634,136"/>
-<area href="../../d1/daa/classmyvec2.html" alt="myvec2" shape="rect" coords="1370,168,1634,192"/>
-<area href="../../d8/db3/classSG_1_1AuxVectorBase__test.html" alt="SG::AuxVectorBase_test" shape="rect" coords="1370,224,1634,248"/>
+<area href="../../da/d62/classSG_1_1AuxElementPrivateData.html" alt="SG::AuxElementPrivateData" shape="rect" coords="0,112,264,136"/>
+<area href="../../d5/dde/classSG_1_1AuxElementStandaloneData.html" alt="SG::AuxElementStandaloneData" shape="rect" coords="274,112,538,136"/>
+<area href="../../d0/d91/classDataVector_3_01T_00_01DataModel__detail_1_1NoBase_01_4.html" alt="DataVector&lt; T, DataModel_detail::NoBase &gt;" shape="rect" coords="548,112,812,136"/>
 </map>
  </div>
 </div>
@@ -199,7 +192,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>setOption</b> (const 
 <p>It's a little tricky to make this class thread-safe without spoiling the optimizations in getDataArray. This section outlines some of the considerations that went into the chosen solution.</p>
 <p>First, by `thread-safe', we mean that getDataArray can be called in different threads without problems. This is necessary to allow simultaneous reads of the container. We make no attempt to any synchronization on modifications to the container, such as adding elements. Such operations must be synchronized externally. This is the same sort of thread semantics that the STL containers supply. So our considerations of thread-safety involve only the management of the cache vector.</p>
 <p>Second, reads (of the cache vector) are very common (and inlined), while modifications of it are uncommon (and handled by out-of-line code). Thus, we would like reading to be entirely lock-free. If we need to make modifications, though, we can do whatever locking we need. Making the reader lock-free, though, is complicated by the fact that the cache vector may relocate in memory if is expanded.</p>
-<p><a class="el" href="../../d4/dc4/structA.html">A</a> way forward is suggested by read-copy-update (<a class="el" href="../../d9/d83/namespaceRCU.html">RCU</a>) synchronization. The idea there is that when you want to change some structure, you copy it and work on the copy. When the modifications are done, the new structure is copied to the old one in such a manner that at any instant in time, any reader will see a consistent version of the structure (even though it may not be the most recent one).</p>
+<p>A way forward is suggested by read-copy-update (<a class="el" href="../../d9/d83/namespaceRCU.html">RCU</a>) synchronization. The idea there is that when you want to change some structure, you copy it and work on the copy. When the modifications are done, the new structure is copied to the old one in such a manner that at any instant in time, any reader will see a consistent version of the structure (even though it may not be the most recent one).</p>
 <p>For this case, we can store the vector as a length and a pointer to the beginning. When we want to access AUXID, we first compare it to the length. If that's ok, then we test the pointer at index AUXID. If that's non-null, we go ahead and use it; if either test fails, we go to the out-of-line code.</p>
 <p>The out-of-line code can then take out a lock and will in the new pointer in the vector. If it is necessary to expand the the vector, we allocate a new one and copy the old vector to the new one. Then we update the values: first, the pointer, then the length. This ensures that the inline code will always see something consistent. Then we must delay freeing the old vector until we're sure that no thread can possibly be using it anymore. For now, we just avoid deleting the old vectors until the container itself is deleted; the memory wasted by this should be negligible in the context of reconstruction.</p>
 <p>This allows the inline part of the code to avoid locking. However, there is an additional critical <a class="el" href="../../dd/d39/namespacedetail.html">detail</a>. We have a test like this:</p>
@@ -228,7 +221,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>setOption</b> (const 
 <p>Return the capacity of the container. </p>
 <p>This is used when we need to create a new aux data vector. </p>
 
-<p>Implemented in <a class="el" href="../../d0/d91/classDataVector_3_01T_00_01DataModel__detail_1_1NoBase_01_4.html#a236a9f58b14de59ef54c5107dfcff5dc">DataVector&lt; T, DataModel_detail::NoBase &gt;</a>, <a class="el" href="../../dc/dfb/classSG_1_1AuxElementData.html#a299e4488cfcb6a08e7611fde899defbc">SG::AuxElementData</a>, <a class="el" href="../../dd/da5/classSG_1_1AuxVectorBase.html#ad2ff11b7c4c2099a845990132dd76e4f">SG::AuxVectorBase</a>, <a class="el" href="../../d8/db3/classSG_1_1AuxVectorBase__test.html#a8fc5d6bb424ff267020798b274a1c24b">SG::AuxVectorBase_test</a>, <a class="el" href="../../d6/d8d/classSG_1_1AuxVectorData__test.html#a29972d73e174308991213df92daa44cd">SG::AuxVectorData_test</a>, and <a class="el" href="../../d1/daa/classmyvec2.html#a552da2700707da09ee2441da8dac3a09">myvec2</a>.</p>
+<p>Implemented in <a class="el" href="../../d0/d91/classDataVector_3_01T_00_01DataModel__detail_1_1NoBase_01_4.html#a236a9f58b14de59ef54c5107dfcff5dc">DataVector&lt; T, DataModel_detail::NoBase &gt;</a>, and <a class="el" href="../../dc/dfb/classSG_1_1AuxElementData.html#a299e4488cfcb6a08e7611fde899defbc">SG::AuxElementData</a>.</p>
 
 </div>
 </div>
@@ -1200,7 +1193,7 @@ template&lt;class T &gt; </div>
 <p>Return the size of the container. </p>
 <p>This is used when we need to create a new aux data vector. </p>
 
-<p>Implemented in <a class="el" href="../../d0/d91/classDataVector_3_01T_00_01DataModel__detail_1_1NoBase_01_4.html#a258f5c8833dc8e1d659960784c468f25">DataVector&lt; T, DataModel_detail::NoBase &gt;</a>, <a class="el" href="../../dc/dfb/classSG_1_1AuxElementData.html#a5521e3f733358f3f5f97993d6d1766b1">SG::AuxElementData</a>, <a class="el" href="../../dd/da5/classSG_1_1AuxVectorBase.html#acb5fc1c8f606bd9fe52610b48ebb4c34">SG::AuxVectorBase</a>, <a class="el" href="../../d8/db3/classSG_1_1AuxVectorBase__test.html#a1d585341390c46dcdfe0b257af171858">SG::AuxVectorBase_test</a>, <a class="el" href="../../d6/d8d/classSG_1_1AuxVectorData__test.html#ae4c6a90d1ad764572d6d15a69ec03368">SG::AuxVectorData_test</a>, and <a class="el" href="../../d1/daa/classmyvec2.html#ace96982b38e658c8d586e715608ecdad">myvec2</a>.</p>
+<p>Implemented in <a class="el" href="../../d0/d91/classDataVector_3_01T_00_01DataModel__detail_1_1NoBase_01_4.html#a258f5c8833dc8e1d659960784c468f25">DataVector&lt; T, DataModel_detail::NoBase &gt;</a>, and <a class="el" href="../../dc/dfb/classSG_1_1AuxElementData.html#a5521e3f733358f3f5f97993d6d1766b1">SG::AuxElementData</a>.</p>
 
 </div>
 </div>

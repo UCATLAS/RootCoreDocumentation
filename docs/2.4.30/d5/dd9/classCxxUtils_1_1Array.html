@@ -75,7 +75,7 @@ Inheritance diagram for CxxUtils::Array&lt; N &gt;:</div>
 <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8716c5726c944e8ba55f90a576949e3"></a><!-- doxytag: member="CxxUtils::Array::const_iterator" ref="af8716c5726c944e8ba55f90a576949e3" args="" -->
 typedef <a class="el" href="../../d5/d27/classCxxUtils_1_1ArrayIteratorChooser.html">ArrayIteratorChooser</a><br class="typebreak"/>
-&lt; <a class="el" href="../../da/deb/structN.html">N</a> &gt;::<a class="el" href="../../d4/d75/classCxxUtils_1_1ArrayIterator.html">const_iterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html#af8716c5726c944e8ba55f90a576949e3">const_iterator</a></td></tr>
+&lt; N &gt;::<a class="el" href="../../d4/d75/classCxxUtils_1_1ArrayIterator.html">const_iterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html#af8716c5726c944e8ba55f90a576949e3">const_iterator</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The iterator for this container. <br/></td></tr>
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html#a140a13141f4e7584684e60437a5e9396">Array</a> ()</td></tr>
@@ -88,7 +88,7 @@ typedef <a class="el" href="../../d5/d27/classCxxUtils_1_1ArrayIteratorChooser.h
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return the array shape.  <a href="#ad4a962d70962e83f293e00daf146d7ed"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html#a682d671307b58eb66a706a2af76cfb84">size</a> (unsigned int dim=0) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return the size of the array along one dimension.  <a href="#a682d671307b58eb66a706a2af76cfb84"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">Array</a>&lt; <a class="el" href="../../da/deb/structN.html">N</a>-1 &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html#af8fb023d8d5e219d961478c123efff70">operator[]</a> (unsigned int i) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">Array</a>&lt; N-1 &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html#af8fb023d8d5e219d961478c123efff70">operator[]</a> (unsigned int i) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html" title="Read-only multidimensional array.">Array</a> indexing.  <a href="#af8fb023d8d5e219d961478c123efff70"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const Arrayelt *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html#aa6809b294f82601ec1753535c40b09be">ptr</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return a direct pointer to array elements.  <a href="#aa6809b294f82601ec1753535c40b09be"></a><br/></td></tr>
@@ -115,7 +115,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>ArrayIterator&lt; N+
  class CxxUtils::Array&lt; N &gt;</h3>
 
 <p>Read-only multidimensional array. </p>
-<p><a class="el" href="../../d4/dc4/structA.html">A</a> <code>WriteableArray</code> together with an <code>Arrayrep</code>.</p>
+<p>A <code>WriteableArray</code> together with an <code>Arrayrep</code>.</p>
 <p>Read-only multidimensional array, specialized for <code>N=0</code>.</p>
 <p><code>Array&lt;N&gt;</code> provides read-only access to an array. Indexing with [] returns an <code><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html" title="Read-only multidimensional array.">Array</a>&lt;N-1&gt;</code>. <code><a class="el" href="../../df/d88/classCxxUtils_1_1Array_3_010_01_4.html">Array&lt;0&gt;</a></code> is special; it doesn't support indexing, but does support implicit conversion to the element type, <code>Arrayelt</code>. The <code><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html" title="Read-only multidimensional array.">Array</a></code> classes do not own their storage (and thus indexing does not require a complete copy). Rather, the complete data for the array are stored in an instance of <code>Arrayrep</code>. An <code><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html" title="Read-only multidimensional array.">Array</a></code> holds a pointer to an <code>Arrayrep</code> and an offset into the data.</p>
 <p>This is a specialization of <code><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html" title="Read-only multidimensional array.">Array</a></code> for the case <code>N=0</code>, i.e., a scalar. It does not support indexing, but it does support implicit conversions to <code>Arrayelt</code>, as well as an explicit conversion to an integer.</p>
@@ -128,7 +128,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>ArrayIterator&lt; N+
 template&lt;unsigned int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; <a class="el" href="../../da/deb/structN.html">N</a> &gt;::<a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">Array</a> </td>
+          <td class="memname"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; N &gt;::<a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">Array</a> </td>
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
@@ -151,7 +151,7 @@ template&lt;unsigned int N&gt; </div>
 template&lt;unsigned int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; <a class="el" href="../../da/deb/structN.html">N</a> &gt;::<a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">Array</a> </td>
+          <td class="memname"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; N &gt;::<a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">Array</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d4/dc1/structCaloRec_1_1Arrayrep.html">Arrayrep</a> &amp;&nbsp;</td>
           <td class="paramname"> <em>rep</em></td>
@@ -169,7 +169,7 @@ template&lt;unsigned int N&gt; </div>
   </table>
   </dd>
 </dl>
-<p>Initialize an array from an <code>Arrayrep</code>. The new array will represent the entire <code>Arrayrep</code>. The dimension <code><a class="el" href="../../da/deb/structN.html">N</a></code> must match the length of the <code>Arrayrep's</code> shape. </p>
+<p>Initialize an array from an <code>Arrayrep</code>. The new array will represent the entire <code>Arrayrep</code>. The dimension <code>N</code> must match the length of the <code>Arrayrep's</code> shape. </p>
 
 </div>
 </div>
@@ -180,7 +180,7 @@ template&lt;unsigned int N&gt; </div>
 template&lt;unsigned int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; <a class="el" href="../../da/deb/structN.html">N</a> &gt;::<a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">Array</a> </td>
+          <td class="memname"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; N &gt;::<a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">Array</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d4/dc1/structCaloRec_1_1Arrayrep.html">Arrayrep</a> &amp;&nbsp;</td>
           <td class="paramname"> <em>rep</em>, </td>
@@ -220,7 +220,7 @@ template&lt;unsigned int N&gt; </div>
 template&lt;unsigned int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">Array</a>&lt; <a class="el" href="../../da/deb/structN.html">N</a> &gt;::<a class="el" href="../../d4/d75/classCxxUtils_1_1ArrayIterator.html">const_iterator</a> <a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; <a class="el" href="../../da/deb/structN.html">N</a> &gt;::begin </td>
+          <td class="memname"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">Array</a>&lt; N &gt;::<a class="el" href="../../d4/d75/classCxxUtils_1_1ArrayIterator.html">const_iterator</a> <a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; N &gt;::begin </td>
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
@@ -242,7 +242,7 @@ template&lt;unsigned int N&gt; </div>
 template&lt;unsigned int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">Array</a>&lt; <a class="el" href="../../da/deb/structN.html">N</a> &gt;::<a class="el" href="../../d4/d75/classCxxUtils_1_1ArrayIterator.html">const_iterator</a> <a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; <a class="el" href="../../da/deb/structN.html">N</a> &gt;::end </td>
+          <td class="memname"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">Array</a>&lt; N &gt;::<a class="el" href="../../d4/d75/classCxxUtils_1_1ArrayIterator.html">const_iterator</a> <a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; N &gt;::end </td>
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
@@ -264,7 +264,7 @@ template&lt;unsigned int N&gt; </div>
 template&lt;unsigned int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">Array</a>&lt; <a class="el" href="../../da/deb/structN.html">N</a>-1 &gt; <a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; <a class="el" href="../../da/deb/structN.html">N</a> &gt;::operator[] </td>
+          <td class="memname"><a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">Array</a>&lt; N-1 &gt; <a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; N &gt;::operator[] </td>
           <td>(</td>
           <td class="paramtype">unsigned int&nbsp;</td>
           <td class="paramname"> <em>i</em></td>
@@ -283,7 +283,7 @@ template&lt;unsigned int N&gt; </div>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The <em>i'th</em> <code>N-1</code> dimensional subarray in the array.</dd></dl>
-<p>Note that this operation is not available if <code><a class="el" href="../../da/deb/structN.html">N</a></code> is 0. </p>
+<p>Note that this operation is not available if <code>N</code> is 0. </p>
 
 <p>Reimplemented in <a class="el" href="../../dc/dcc/classCxxUtils_1_1WritableArray.html#adab6a71e4ccba671ea22b151c406ffbf">CxxUtils::WritableArray&lt; N &gt;</a>.</p>
 
@@ -296,7 +296,7 @@ template&lt;unsigned int N&gt; </div>
 template&lt;unsigned int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const Arrayelt * <a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; <a class="el" href="../../da/deb/structN.html">N</a> &gt;::ptr </td>
+          <td class="memname">const Arrayelt * <a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; N &gt;::ptr </td>
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
@@ -307,8 +307,8 @@ template&lt;unsigned int N&gt; </div>
 <div class="memdoc">
 
 <p>Return a direct pointer to array elements. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="../../d4/dc4/structA.html">A</a> pointer to the first array elements.</dd></dl>
-<p>Subsequent elements follow in standard <a class="el" href="../../db/db2/structC.html">C</a> indexing order. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A pointer to the first array elements.</dd></dl>
+<p>Subsequent elements follow in standard C indexing order. </p>
 
 </div>
 </div>
@@ -319,7 +319,7 @@ template&lt;unsigned int N&gt; </div>
 template&lt;unsigned int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; unsigned int &gt; <a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; <a class="el" href="../../da/deb/structN.html">N</a> &gt;::shape </td>
+          <td class="memname">std::vector&lt; unsigned int &gt; <a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; N &gt;::shape </td>
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
@@ -342,7 +342,7 @@ template&lt;unsigned int N&gt; </div>
 template&lt;unsigned int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int <a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; <a class="el" href="../../da/deb/structN.html">N</a> &gt;::size </td>
+          <td class="memname">unsigned int <a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; N &gt;::size </td>
           <td>(</td>
           <td class="paramtype">unsigned int&nbsp;</td>
           <td class="paramname"> <em>dim</em> = <code>0</code></td>
@@ -379,7 +379,7 @@ template&lt;unsigned int N&gt; </div>
 template&lt;unsigned int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; <a class="el" href="../../da/deb/structN.html">N</a> &gt;::valid </td>
+          <td class="memname">bool <a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; N &gt;::valid </td>
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
@@ -402,7 +402,7 @@ template&lt;unsigned int N&gt; </div>
 template&lt;unsigned int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="../../d4/dc1/structCaloRec_1_1Arrayrep.html">Arrayrep</a>* <a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; <a class="el" href="../../da/deb/structN.html">N</a> &gt;::<a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html#af055e952849ac49b2e122b8ba0ae04b3">m_rep</a><code> [protected]</code></td>
+          <td class="memname">const <a class="el" href="../../d4/dc1/structCaloRec_1_1Arrayrep.html">Arrayrep</a>* <a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html">CxxUtils::Array</a>&lt; N &gt;::<a class="el" href="../../d5/dd9/classCxxUtils_1_1Array.html#af055e952849ac49b2e122b8ba0ae04b3">m_rep</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>

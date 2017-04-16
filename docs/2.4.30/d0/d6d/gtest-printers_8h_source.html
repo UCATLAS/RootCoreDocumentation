@@ -324,7 +324,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00279"></a>00279 
 <a name="l00280"></a>00280 <span class="comment">// Array.</span>
 <a name="l00281"></a>00281 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ToPr<span class="keywordtype">int</span>, <span class="keywordtype">size_t</span> N, <span class="keyword">typename</span> OtherOperand&gt;
-<a name="l00282"></a><a class="code" href="../../d6/db8/classtesting_1_1internal_1_1FormatForComparison_3_01ToPrint[N]_00_01OtherOperand_01_4.html">00282</a> <span class="keyword">class </span><a class="code" href="../../d6/db1/classtesting_1_1internal_1_1FormatForComparison.html">FormatForComparison</a>&lt;ToPrint[<a class="code" href="../../da/deb/structN.html">N</a>], OtherOperand&gt; {
+<a name="l00282"></a><a class="code" href="../../d6/db8/classtesting_1_1internal_1_1FormatForComparison_3_01ToPrint[N]_00_01OtherOperand_01_4.html">00282</a> <span class="keyword">class </span><a class="code" href="../../d6/db1/classtesting_1_1internal_1_1FormatForComparison.html">FormatForComparison</a>&lt;ToPrint[N], OtherOperand&gt; {
 <a name="l00283"></a>00283  <span class="keyword">public</span>:
 <a name="l00284"></a>00284   static ::std::string Format(<span class="keyword">const</span> ToPrint* value) {
 <a name="l00285"></a>00285     <span class="keywordflow">return</span> <a class="code" href="../../d6/db1/classtesting_1_1internal_1_1FormatForComparison.html">FormatForComparison&lt;const ToPrint*, OtherOperand&gt;::Format</a>(value);
@@ -414,7 +414,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00369"></a>00369 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> C&gt;
 <a name="l00370"></a>00370 <span class="keywordtype">void</span> DefaultPrintTo(IsContainer <span class="comment">/* dummy */</span>,
 <a name="l00371"></a>00371                     false_type <span class="comment">/* is not a pointer */</span>,
-<a name="l00372"></a>00372                     <span class="keyword">const</span> <a class="code" href="../../db/db2/structC.html">C</a>&amp; container, ::std::ostream* os) {
+<a name="l00372"></a>00372                     <span class="keyword">const</span> C&amp; container, ::std::ostream* os) {
 <a name="l00373"></a>00373   <span class="keyword">const</span> <span class="keywordtype">size_t</span> kMaxCount = 32;  <span class="comment">// The maximum number of elements to print.</span>
 <a name="l00374"></a>00374   *os &lt;&lt; <span class="charliteral">&apos;{&apos;</span>;
 <a name="l00375"></a>00375   <span class="keywordtype">size_t</span> count = 0;
@@ -789,11 +789,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00744"></a>00744 
 <a name="l00745"></a>00745 <span class="comment">// Implements printing an array type T[N].</span>
 <a name="l00746"></a>00746 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">size_t</span> N&gt;
-<a name="l00747"></a><a class="code" href="../../da/db6/classtesting_1_1internal_1_1UniversalPrinter_3_01T[N]_4.html">00747</a> <span class="keyword">class </span><a class="code" href="../../d6/d16/classtesting_1_1internal_1_1UniversalPrinter.html">UniversalPrinter</a>&lt;<a class="code" href="../../d1/def/classT.html">T</a>[<a class="code" href="../../da/deb/structN.html">N</a>]&gt; {
+<a name="l00747"></a><a class="code" href="../../da/db6/classtesting_1_1internal_1_1UniversalPrinter_3_01T[N]_4.html">00747</a> <span class="keyword">class </span><a class="code" href="../../d6/d16/classtesting_1_1internal_1_1UniversalPrinter.html">UniversalPrinter</a>&lt;<a class="code" href="../../d1/def/classT.html">T</a>[N]&gt; {
 <a name="l00748"></a>00748  <span class="keyword">public</span>:
 <a name="l00749"></a>00749   <span class="comment">// Prints the given array, omitting some elements when there are too</span>
 <a name="l00750"></a>00750   <span class="comment">// many.</span>
-<a name="l00751"></a>00751   <span class="keyword">static</span> <span class="keywordtype">void</span> Print(<span class="keyword">const</span> <a class="code" href="../../d1/def/classT.html">T</a> (&amp;a)[<a class="code" href="../../da/deb/structN.html">N</a>], ::std::ostream* os) {
+<a name="l00751"></a>00751   <span class="keyword">static</span> <span class="keywordtype">void</span> Print(<span class="keyword">const</span> <a class="code" href="../../d1/def/classT.html">T</a> (&amp;a)[N], ::std::ostream* os) {
 <a name="l00752"></a>00752     UniversalPrintArray(a, N, os);
 <a name="l00753"></a>00753   }
 <a name="l00754"></a>00754 };
@@ -837,9 +837,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00792"></a>00792   }
 <a name="l00793"></a>00793 };
 <a name="l00794"></a>00794 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">size_t</span> N&gt;
-<a name="l00795"></a><a class="code" href="../../dd/d96/classtesting_1_1internal_1_1UniversalTersePrinter_3_01T[N]_4.html">00795</a> <span class="keyword">class </span><a class="code" href="../../d3/dae/classtesting_1_1internal_1_1UniversalTersePrinter.html">UniversalTersePrinter</a>&lt;<a class="code" href="../../d1/def/classT.html">T</a>[<a class="code" href="../../da/deb/structN.html">N</a>]&gt; {
+<a name="l00795"></a><a class="code" href="../../dd/d96/classtesting_1_1internal_1_1UniversalTersePrinter_3_01T[N]_4.html">00795</a> <span class="keyword">class </span><a class="code" href="../../d3/dae/classtesting_1_1internal_1_1UniversalTersePrinter.html">UniversalTersePrinter</a>&lt;<a class="code" href="../../d1/def/classT.html">T</a>[N]&gt; {
 <a name="l00796"></a>00796  <span class="keyword">public</span>:
-<a name="l00797"></a>00797   <span class="keyword">static</span> <span class="keywordtype">void</span> Print(<span class="keyword">const</span> <a class="code" href="../../d1/def/classT.html">T</a> (&amp;value)[<a class="code" href="../../da/deb/structN.html">N</a>], ::std::ostream* os) {
+<a name="l00797"></a>00797   <span class="keyword">static</span> <span class="keywordtype">void</span> Print(<span class="keyword">const</span> <a class="code" href="../../d1/def/classT.html">T</a> (&amp;value)[N], ::std::ostream* os) {
 <a name="l00798"></a>00798     <a class="code" href="../../d6/d16/classtesting_1_1internal_1_1UniversalPrinter.html">UniversalPrinter&lt;T[N]&gt;::Print</a>(value, os);
 <a name="l00799"></a>00799   }
 <a name="l00800"></a>00800 };
@@ -968,13 +968,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00923"></a>00923   <span class="keyword">static</span> <span class="keywordtype">void</span> PrintPrefixTo(<span class="keyword">const</span> Tuple&amp; t, ::std::ostream* os) {
 <a name="l00924"></a>00924     TuplePrefixPrinter&lt;N - 1&gt;::PrintPrefixTo(t, os);
 <a name="l00925"></a>00925     GTEST_INTENTIONAL_CONST_COND_PUSH_()
-<a name="l00926"></a>00926     if (<a class="code" href="../../da/deb/structN.html">N</a> &gt; 1) {
+<a name="l00926"></a>00926     if (N &gt; 1) {
 <a name="l00927"></a>00927     GTEST_INTENTIONAL_CONST_COND_POP_()
 <a name="l00928"></a>00928       *os &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;
 <a name="l00929"></a>00929     }
 <a name="l00930"></a>00930     UniversalPrinter&lt;
-<a name="l00931"></a>00931         <span class="keyword">typename</span> TuplePolicy&lt;Tuple&gt;::template tuple_element&lt;<a class="code" href="../../da/deb/structN.html">N</a> - 1&gt;::type&gt;
-<a name="l00932"></a>00932         ::Print(TuplePolicy&lt;Tuple&gt;::template <span class="keyword">get</span>&lt;<a class="code" href="../../da/deb/structN.html">N</a> - 1&gt;(t), os);
+<a name="l00931"></a>00931         <span class="keyword">typename</span> TuplePolicy&lt;Tuple&gt;::template tuple_element&lt;N - 1&gt;::type&gt;
+<a name="l00932"></a>00932         ::Print(TuplePolicy&lt;Tuple&gt;::template <span class="keyword">get</span>&lt;N - 1&gt;(t), os);
 <a name="l00933"></a>00933   }
 <a name="l00934"></a>00934 
 <a name="l00935"></a>00935   <span class="comment">// Tersely prints the first N fields of a tuple to a string vector,</span>

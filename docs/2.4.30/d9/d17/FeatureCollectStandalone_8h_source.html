@@ -104,7 +104,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00063"></a>00063     
 <a name="l00064"></a>00064 
 <a name="l00065"></a>00065     <span class="keyword">template</span>&lt;<span class="keyword">typename</span> REQUESTED,<span class="keyword">typename</span> STORED, <span class="keyword">typename</span> CONTAINER&gt;
-<a name="l00066"></a>00066     std::vector&lt;Trig::Feature&lt;REQUESTED&gt; &gt; typedGet(<span class="keyword">const</span> std::vector&lt;TypelessFeature&gt;&amp; features, <a class="code" href="../../d9/d08/classHLT_1_1TrigNavStructure.html">HLT::TrigNavStructure</a>* navigation, <a class="code" href="../../dd/d95/classStoreGateSvc.html" title="Dummy implementation useful for simple testing.">EventPtr_t</a> store,<span class="keyword">const</span> std::string&amp; container_name = <a class="code" href="../../d0/dbd/structClassID__traits.html">ClassID_traits&lt;CONTAINER&gt;::typeName</a>());
+<a name="l00066"></a>00066     std::vector&lt;Trig::Feature&lt;REQUESTED&gt; &gt; typedGet(<span class="keyword">const</span> std::vector&lt;TypelessFeature&gt;&amp; features, <a class="code" href="../../d9/d08/classHLT_1_1TrigNavStructure.html">HLT::TrigNavStructure</a>* navigation, EventPtr_t store,<span class="keyword">const</span> std::string&amp; container_name = <a class="code" href="../../d0/dbd/structClassID__traits.html">ClassID_traits&lt;CONTAINER&gt;::typeName</a>());
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068 
 <a name="l00070"></a>00070     
@@ -132,7 +132,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00092"></a>00092 
 <a name="l00093"></a>00093 
 <a name="l00094"></a>00094     <span class="keyword">template</span>&lt;<span class="keyword">typename</span> STORED&gt;
-<a name="l00095"></a>00095     std::shared_ptr&lt;const STORED&gt; filter_if(boost::mpl::bool_&lt;true&gt; <a class="code" href="../../db/d0a/structis__same.html" title="relationships between types [4.6].">is_same</a>, std::shared_ptr&lt;const STORED&gt;&amp; original,<span class="keyword">const</span> <a class="code" href="../../d9/d20/classTrigPassBits.html">TrigPassBits</a>* bits){ 
+<a name="l00095"></a>00095     std::shared_ptr&lt;const STORED&gt; filter_if(boost::mpl::bool_&lt;true&gt; is_same, std::shared_ptr&lt;const STORED&gt;&amp; original,<span class="keyword">const</span> <a class="code" href="../../d9/d20/classTrigPassBits.html">TrigPassBits</a>* bits){ 
 <a name="l00096"></a>00096       (void)is_same;
 <a name="l00097"></a>00097 
 <a name="l00098"></a>00098 
@@ -160,7 +160,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00120"></a>00120     }
 <a name="l00121"></a>00121 
 <a name="l00122"></a>00122     <span class="keyword">template</span>&lt;<span class="keyword">typename</span> REQUESTED,<span class="keyword">typename</span> STORED, <span class="keyword">typename</span> CONTAINER&gt;
-<a name="l00123"></a>00123     std::vector&lt;Trig::Feature&lt;REQUESTED&gt; &gt; typedGet(<span class="keyword">const</span> std::vector&lt;TypelessFeature&gt;&amp; features, <a class="code" href="../../d9/d08/classHLT_1_1TrigNavStructure.html">HLT::TrigNavStructure</a>* navigation, <a class="code" href="../../dd/d95/classStoreGateSvc.html" title="Dummy implementation useful for simple testing.">EventPtr_t</a> store, <span class="keyword">const</span> std::string&amp; container_name) {
+<a name="l00123"></a>00123     std::vector&lt;Trig::Feature&lt;REQUESTED&gt; &gt; typedGet(<span class="keyword">const</span> std::vector&lt;TypelessFeature&gt;&amp; features, <a class="code" href="../../d9/d08/classHLT_1_1TrigNavStructure.html">HLT::TrigNavStructure</a>* navigation, EventPtr_t store, <span class="keyword">const</span> std::string&amp; container_name) {
 <a name="l00124"></a>00124       std::vector&lt;Trig::Feature&lt;REQUESTED&gt; &gt; typedvec;
 <a name="l00125"></a>00125 
 <a name="l00126"></a>00126       <span class="keywordflow">for</span>(<span class="keyword">auto</span> feature : features){
@@ -220,7 +220,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00180"></a>00180   <span class="keyword">template</span>&lt;&gt;
 <a name="l00181"></a><a class="code" href="../../d9/d4e/classHLT_1_1TypedHolder_3_01TrigRoiDescriptor_00_01TrigRoiDescriptorCollection_01_4.html">00181</a>   <span class="keyword">class </span><a class="code" href="../../d3/d2b/classHLT_1_1TypedHolder.html" title="doubly templated class interfacing access to feature containers in StoreGate.">TypedHolder</a>&lt;<a class="code" href="../../de/dc9/classTrigRoiDescriptor.html" title="Describes the Region of Ineterest geometry It has basically 9 parameters.">TrigRoiDescriptor</a>,<a class="code" href="../../de/df5/classTrigRoiDescriptorCollection.html">TrigRoiDescriptorCollection</a>&gt; : <span class="keyword">public</span> <a class="code" href="../../d1/de7/classHLT_1_1TypelessHolder.html">TypelessHolder</a>, <span class="keyword">public</span> asg::AsgMessaging {
 <a name="l00182"></a>00182   <span class="keyword">public</span>:
-<a name="l00183"></a>00183     <a class="code" href="../../d3/d2b/classHLT_1_1TypedHolder.html" title="doubly templated class interfacing access to feature containers in StoreGate.">TypedHolder</a>(<span class="keyword">const</span> <a class="code" href="../../d8/d7d/classHLT_1_1BaseHolder.html">BaseHolder</a>&amp; baseholder, <a class="code" href="../../dd/d95/classStoreGateSvc.html" title="Dummy implementation useful for simple testing.">EventPtr</a> store, <span class="keyword">const</span> std::string&amp; container_name = <span class="stringliteral">&quot;&quot;</span>) 
+<a name="l00183"></a>00183     <a class="code" href="../../d3/d2b/classHLT_1_1TypedHolder.html" title="doubly templated class interfacing access to feature containers in StoreGate.">TypedHolder</a>(<span class="keyword">const</span> <a class="code" href="../../d8/d7d/classHLT_1_1BaseHolder.html">BaseHolder</a>&amp; baseholder, EventPtr store, <span class="keyword">const</span> std::string&amp; container_name = <span class="stringliteral">&quot;&quot;</span>) 
 <a name="l00184"></a>00184       : <a class="code" href="../../d1/de7/classHLT_1_1TypelessHolder.html">TypelessHolder</a>(baseholder.typeClid(),baseholder.label(),baseholder.subTypeIndex()), 
 <a name="l00185"></a>00185     <a class="code" href="../../d1/d97/classasg_1_1AsgMessaging.html">asg::AsgMessaging</a>(<span class="stringliteral">&quot;TypedHolder&quot;</span>),
 <a name="l00186"></a>00186     m_store(store){
@@ -264,7 +264,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00224"></a>00224       <span class="keywordflow">return</span> StatusCode::SUCCESS;    
 <a name="l00225"></a>00225     }
 <a name="l00226"></a>00226   <span class="keyword">private</span>:
-<a name="l00227"></a>00227     <a class="code" href="../../dd/d95/classStoreGateSvc.html" title="Dummy implementation useful for simple testing.">EventPtr</a> m_store;
+<a name="l00227"></a>00227     EventPtr m_store;
 <a name="l00228"></a>00228   };
 <a name="l00229"></a>00229 }
 <a name="l00230"></a>00230 

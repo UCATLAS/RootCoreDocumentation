@@ -96,15 +96,15 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00051"></a>00051 <span class="keyword">class </span>InvokeHelper;
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R&gt;
-<a name="l00054"></a><a class="code" href="../../dd/d91/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_4_01_4.html">00054</a> <span class="keyword">class </span>InvokeHelper&lt;<a class="code" href="../../d8/df7/structR.html">R</a>, ::testing::tuple&lt;&gt; &gt; {
+<a name="l00054"></a><a class="code" href="../../dd/d91/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_4_01_4.html">00054</a> <span class="keyword">class </span>InvokeHelper&lt;R, ::testing::tuple&lt;&gt; &gt; {
 <a name="l00055"></a>00055  <span class="keyword">public</span>:
 <a name="l00056"></a>00056   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Function&gt;
-<a name="l00057"></a>00057   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> Invoke(Function function, const ::testing::tuple&lt;&gt;&amp;) {
+<a name="l00057"></a>00057   <span class="keyword">static</span> R Invoke(Function function, const ::testing::tuple&lt;&gt;&amp;) {
 <a name="l00058"></a>00058            <span class="keywordflow">return</span> function();
 <a name="l00059"></a>00059   }
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Class, <span class="keyword">typename</span> MethodPtr&gt;
-<a name="l00062"></a>00062   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> InvokeMethod(Class* obj_ptr,
+<a name="l00062"></a>00062   <span class="keyword">static</span> R InvokeMethod(Class* obj_ptr,
 <a name="l00063"></a>00063                         MethodPtr method_ptr,
 <a name="l00064"></a>00064                         const ::testing::tuple&lt;&gt;&amp;) {
 <a name="l00065"></a>00065            <span class="keywordflow">return</span> (obj_ptr-&gt;*method_ptr)();
@@ -112,15 +112,15 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00067"></a>00067 };
 <a name="l00068"></a>00068 
 <a name="l00069"></a>00069 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> A1&gt;
-<a name="l00070"></a><a class="code" href="../../d7/d44/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_01_4_01_4.html">00070</a> <span class="keyword">class </span>InvokeHelper&lt;<a class="code" href="../../d8/df7/structR.html">R</a>, ::testing::tuple&lt;A1&gt; &gt; {
+<a name="l00070"></a><a class="code" href="../../d7/d44/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_01_4_01_4.html">00070</a> <span class="keyword">class </span>InvokeHelper&lt;R, ::testing::tuple&lt;A1&gt; &gt; {
 <a name="l00071"></a>00071  <span class="keyword">public</span>:
 <a name="l00072"></a>00072   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Function&gt;
-<a name="l00073"></a>00073   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> Invoke(Function function, const ::testing::tuple&lt;A1&gt;&amp; args) {
+<a name="l00073"></a>00073   <span class="keyword">static</span> R Invoke(Function function, const ::testing::tuple&lt;A1&gt;&amp; args) {
 <a name="l00074"></a>00074            <span class="keywordflow">return</span> function(get&lt;0&gt;(args));
 <a name="l00075"></a>00075   }
 <a name="l00076"></a>00076 
 <a name="l00077"></a>00077   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Class, <span class="keyword">typename</span> MethodPtr&gt;
-<a name="l00078"></a>00078   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> InvokeMethod(Class* obj_ptr,
+<a name="l00078"></a>00078   <span class="keyword">static</span> R InvokeMethod(Class* obj_ptr,
 <a name="l00079"></a>00079                         MethodPtr method_ptr,
 <a name="l00080"></a>00080                         const ::testing::tuple&lt;A1&gt;&amp; args) {
 <a name="l00081"></a>00081            <span class="keywordflow">return</span> (obj_ptr-&gt;*method_ptr)(get&lt;0&gt;(args));
@@ -128,15 +128,15 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00083"></a>00083 };
 <a name="l00084"></a>00084 
 <a name="l00085"></a>00085 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2&gt;
-<a name="l00086"></a><a class="code" href="../../d1/de5/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_01_4_01_4.html">00086</a> <span class="keyword">class </span>InvokeHelper&lt;<a class="code" href="../../d8/df7/structR.html">R</a>, ::testing::tuple&lt;A1, A2&gt; &gt; {
+<a name="l00086"></a><a class="code" href="../../d1/de5/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_01_4_01_4.html">00086</a> <span class="keyword">class </span>InvokeHelper&lt;R, ::testing::tuple&lt;A1, A2&gt; &gt; {
 <a name="l00087"></a>00087  <span class="keyword">public</span>:
 <a name="l00088"></a>00088   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Function&gt;
-<a name="l00089"></a>00089   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> Invoke(Function function, const ::testing::tuple&lt;A1, A2&gt;&amp; args) {
+<a name="l00089"></a>00089   <span class="keyword">static</span> R Invoke(Function function, const ::testing::tuple&lt;A1, A2&gt;&amp; args) {
 <a name="l00090"></a>00090            <span class="keywordflow">return</span> function(get&lt;0&gt;(args), get&lt;1&gt;(args));
 <a name="l00091"></a>00091   }
 <a name="l00092"></a>00092 
 <a name="l00093"></a>00093   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Class, <span class="keyword">typename</span> MethodPtr&gt;
-<a name="l00094"></a>00094   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> InvokeMethod(Class* obj_ptr,
+<a name="l00094"></a>00094   <span class="keyword">static</span> R InvokeMethod(Class* obj_ptr,
 <a name="l00095"></a>00095                         MethodPtr method_ptr,
 <a name="l00096"></a>00096                         const ::testing::tuple&lt;A1, A2&gt;&amp; args) {
 <a name="l00097"></a>00097            <span class="keywordflow">return</span> (obj_ptr-&gt;*method_ptr)(get&lt;0&gt;(args), get&lt;1&gt;(args));
@@ -144,15 +144,15 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00099"></a>00099 };
 <a name="l00100"></a>00100 
 <a name="l00101"></a>00101 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3&gt;
-<a name="l00102"></a><a class="code" href="../../d3/dad/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_01_4_01_4.html">00102</a> <span class="keyword">class </span>InvokeHelper&lt;<a class="code" href="../../d8/df7/structR.html">R</a>, ::testing::tuple&lt;A1, A2, A3&gt; &gt; {
+<a name="l00102"></a><a class="code" href="../../d3/dad/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_01_4_01_4.html">00102</a> <span class="keyword">class </span>InvokeHelper&lt;R, ::testing::tuple&lt;A1, A2, A3&gt; &gt; {
 <a name="l00103"></a>00103  <span class="keyword">public</span>:
 <a name="l00104"></a>00104   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Function&gt;
-<a name="l00105"></a>00105   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> Invoke(Function function, const ::testing::tuple&lt;A1, A2, A3&gt;&amp; args) {
+<a name="l00105"></a>00105   <span class="keyword">static</span> R Invoke(Function function, const ::testing::tuple&lt;A1, A2, A3&gt;&amp; args) {
 <a name="l00106"></a>00106            <span class="keywordflow">return</span> function(get&lt;0&gt;(args), get&lt;1&gt;(args), get&lt;2&gt;(args));
 <a name="l00107"></a>00107   }
 <a name="l00108"></a>00108 
 <a name="l00109"></a>00109   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Class, <span class="keyword">typename</span> MethodPtr&gt;
-<a name="l00110"></a>00110   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> InvokeMethod(Class* obj_ptr,
+<a name="l00110"></a>00110   <span class="keyword">static</span> R InvokeMethod(Class* obj_ptr,
 <a name="l00111"></a>00111                         MethodPtr method_ptr,
 <a name="l00112"></a>00112                         const ::testing::tuple&lt;A1, A2, A3&gt;&amp; args) {
 <a name="l00113"></a>00113            <span class="keywordflow">return</span> (obj_ptr-&gt;*method_ptr)(get&lt;0&gt;(args), get&lt;1&gt;(args),
@@ -161,17 +161,17 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00116"></a>00116 };
 <a name="l00117"></a>00117 
 <a name="l00118"></a>00118 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3, <span class="keyword">typename</span> A4&gt;
-<a name="l00119"></a><a class="code" href="../../da/d00/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_01A4_01_4_01_4.html">00119</a> <span class="keyword">class </span>InvokeHelper&lt;<a class="code" href="../../d8/df7/structR.html">R</a>, ::testing::tuple&lt;A1, A2, A3, A4&gt; &gt; {
+<a name="l00119"></a><a class="code" href="../../da/d00/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_01A4_01_4_01_4.html">00119</a> <span class="keyword">class </span>InvokeHelper&lt;R, ::testing::tuple&lt;A1, A2, A3, A4&gt; &gt; {
 <a name="l00120"></a>00120  <span class="keyword">public</span>:
 <a name="l00121"></a>00121   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Function&gt;
-<a name="l00122"></a>00122   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> Invoke(Function function, const ::testing::tuple&lt;A1, A2, A3,
+<a name="l00122"></a>00122   <span class="keyword">static</span> R Invoke(Function function, const ::testing::tuple&lt;A1, A2, A3,
 <a name="l00123"></a>00123       A4&gt;&amp; args) {
 <a name="l00124"></a>00124            <span class="keywordflow">return</span> function(get&lt;0&gt;(args), get&lt;1&gt;(args), get&lt;2&gt;(args),
 <a name="l00125"></a>00125                get&lt;3&gt;(args));
 <a name="l00126"></a>00126   }
 <a name="l00127"></a>00127 
 <a name="l00128"></a>00128   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Class, <span class="keyword">typename</span> MethodPtr&gt;
-<a name="l00129"></a>00129   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> InvokeMethod(Class* obj_ptr,
+<a name="l00129"></a>00129   <span class="keyword">static</span> R InvokeMethod(Class* obj_ptr,
 <a name="l00130"></a>00130                         MethodPtr method_ptr,
 <a name="l00131"></a>00131                         const ::testing::tuple&lt;A1, A2, A3, A4&gt;&amp; args) {
 <a name="l00132"></a>00132            <span class="keywordflow">return</span> (obj_ptr-&gt;*method_ptr)(get&lt;0&gt;(args), get&lt;1&gt;(args),
@@ -179,19 +179,19 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00134"></a>00134   }
 <a name="l00135"></a>00135 };
 <a name="l00136"></a>00136 
-<a name="l00137"></a>00137 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="../../d8/df7/structR.html">R</a>, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3, <span class="keyword">typename</span> A4,
+<a name="l00137"></a>00137 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3, <span class="keyword">typename</span> A4,
 <a name="l00138"></a>00138     <span class="keyword">typename</span> A5&gt;
-<a name="l00139"></a><a class="code" href="../../d9/d93/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_01A4_00_01A5_01_4_01_4.html">00139</a> <span class="keyword">class </span>InvokeHelper&lt;<a class="code" href="../../d8/df7/structR.html">R</a>, ::testing::tuple&lt;A1, A2, A3, A4, A5&gt; &gt; {
+<a name="l00139"></a><a class="code" href="../../d9/d93/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_01A4_00_01A5_01_4_01_4.html">00139</a> <span class="keyword">class </span>InvokeHelper&lt;R, ::testing::tuple&lt;A1, A2, A3, A4, A5&gt; &gt; {
 <a name="l00140"></a>00140  <span class="keyword">public</span>:
 <a name="l00141"></a>00141   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Function&gt;
-<a name="l00142"></a>00142   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> Invoke(Function function, const ::testing::tuple&lt;A1, A2, A3, A4,
+<a name="l00142"></a>00142   <span class="keyword">static</span> R Invoke(Function function, const ::testing::tuple&lt;A1, A2, A3, A4,
 <a name="l00143"></a>00143       A5&gt;&amp; args) {
 <a name="l00144"></a>00144            <span class="keywordflow">return</span> function(get&lt;0&gt;(args), get&lt;1&gt;(args), get&lt;2&gt;(args),
 <a name="l00145"></a>00145                get&lt;3&gt;(args), get&lt;4&gt;(args));
 <a name="l00146"></a>00146   }
 <a name="l00147"></a>00147 
 <a name="l00148"></a>00148   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Class, <span class="keyword">typename</span> MethodPtr&gt;
-<a name="l00149"></a>00149   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> InvokeMethod(Class* obj_ptr,
+<a name="l00149"></a>00149   <span class="keyword">static</span> R InvokeMethod(Class* obj_ptr,
 <a name="l00150"></a>00150                         MethodPtr method_ptr,
 <a name="l00151"></a>00151                         const ::testing::tuple&lt;A1, A2, A3, A4, A5&gt;&amp; args) {
 <a name="l00152"></a>00152            <span class="keywordflow">return</span> (obj_ptr-&gt;*method_ptr)(get&lt;0&gt;(args), get&lt;1&gt;(args),
@@ -199,19 +199,19 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00154"></a>00154   }
 <a name="l00155"></a>00155 };
 <a name="l00156"></a>00156 
-<a name="l00157"></a>00157 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="../../d8/df7/structR.html">R</a>, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3, <span class="keyword">typename</span> A4,
+<a name="l00157"></a>00157 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3, <span class="keyword">typename</span> A4,
 <a name="l00158"></a>00158     <span class="keyword">typename</span> A5, <span class="keyword">typename</span> A6&gt;
-<a name="l00159"></a><a class="code" href="../../d8/d0a/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_01A4_00_01A5_00_01A6_01_4_01_4.html">00159</a> <span class="keyword">class </span>InvokeHelper&lt;<a class="code" href="../../d8/df7/structR.html">R</a>, ::testing::tuple&lt;A1, A2, A3, A4, A5, A6&gt; &gt; {
+<a name="l00159"></a><a class="code" href="../../d8/d0a/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_01A4_00_01A5_00_01A6_01_4_01_4.html">00159</a> <span class="keyword">class </span>InvokeHelper&lt;R, ::testing::tuple&lt;A1, A2, A3, A4, A5, A6&gt; &gt; {
 <a name="l00160"></a>00160  <span class="keyword">public</span>:
 <a name="l00161"></a>00161   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Function&gt;
-<a name="l00162"></a>00162   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> Invoke(Function function, const ::testing::tuple&lt;A1, A2, A3, A4, A5,
+<a name="l00162"></a>00162   <span class="keyword">static</span> R Invoke(Function function, const ::testing::tuple&lt;A1, A2, A3, A4, A5,
 <a name="l00163"></a>00163       A6&gt;&amp; args) {
 <a name="l00164"></a>00164            <span class="keywordflow">return</span> function(get&lt;0&gt;(args), get&lt;1&gt;(args), get&lt;2&gt;(args),
 <a name="l00165"></a>00165                get&lt;3&gt;(args), get&lt;4&gt;(args), get&lt;5&gt;(args));
 <a name="l00166"></a>00166   }
 <a name="l00167"></a>00167 
 <a name="l00168"></a>00168   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Class, <span class="keyword">typename</span> MethodPtr&gt;
-<a name="l00169"></a>00169   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> InvokeMethod(Class* obj_ptr,
+<a name="l00169"></a>00169   <span class="keyword">static</span> R InvokeMethod(Class* obj_ptr,
 <a name="l00170"></a>00170                         MethodPtr method_ptr,
 <a name="l00171"></a>00171                         const ::testing::tuple&lt;A1, A2, A3, A4, A5, A6&gt;&amp; args) {
 <a name="l00172"></a>00172            <span class="keywordflow">return</span> (obj_ptr-&gt;*method_ptr)(get&lt;0&gt;(args), get&lt;1&gt;(args),
@@ -219,19 +219,19 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00174"></a>00174   }
 <a name="l00175"></a>00175 };
 <a name="l00176"></a>00176 
-<a name="l00177"></a>00177 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="../../d8/df7/structR.html">R</a>, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3, <span class="keyword">typename</span> A4,
+<a name="l00177"></a>00177 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3, <span class="keyword">typename</span> A4,
 <a name="l00178"></a>00178     <span class="keyword">typename</span> A5, <span class="keyword">typename</span> A6, <span class="keyword">typename</span> A7&gt;
-<a name="l00179"></a><a class="code" href="../../d7/d7e/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_b7816aa3474ddb9fa0fd012d718c7441.html">00179</a> <span class="keyword">class </span>InvokeHelper&lt;<a class="code" href="../../d8/df7/structR.html">R</a>, ::testing::tuple&lt;A1, A2, A3, A4, A5, A6, A7&gt; &gt; {
+<a name="l00179"></a><a class="code" href="../../d7/d7e/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_b7816aa3474ddb9fa0fd012d718c7441.html">00179</a> <span class="keyword">class </span>InvokeHelper&lt;R, ::testing::tuple&lt;A1, A2, A3, A4, A5, A6, A7&gt; &gt; {
 <a name="l00180"></a>00180  <span class="keyword">public</span>:
 <a name="l00181"></a>00181   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Function&gt;
-<a name="l00182"></a>00182   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> Invoke(Function function, const ::testing::tuple&lt;A1, A2, A3, A4, A5,
+<a name="l00182"></a>00182   <span class="keyword">static</span> R Invoke(Function function, const ::testing::tuple&lt;A1, A2, A3, A4, A5,
 <a name="l00183"></a>00183       A6, A7&gt;&amp; args) {
 <a name="l00184"></a>00184            <span class="keywordflow">return</span> function(get&lt;0&gt;(args), get&lt;1&gt;(args), get&lt;2&gt;(args),
 <a name="l00185"></a>00185                get&lt;3&gt;(args), get&lt;4&gt;(args), get&lt;5&gt;(args), get&lt;6&gt;(args));
 <a name="l00186"></a>00186   }
 <a name="l00187"></a>00187 
 <a name="l00188"></a>00188   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Class, <span class="keyword">typename</span> MethodPtr&gt;
-<a name="l00189"></a>00189   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> InvokeMethod(Class* obj_ptr,
+<a name="l00189"></a>00189   <span class="keyword">static</span> R InvokeMethod(Class* obj_ptr,
 <a name="l00190"></a>00190                         MethodPtr method_ptr,
 <a name="l00191"></a>00191                         const ::testing::tuple&lt;A1, A2, A3, A4, A5, A6,
 <a name="l00192"></a>00192                             A7&gt;&amp; args) {
@@ -241,12 +241,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00196"></a>00196   }
 <a name="l00197"></a>00197 };
 <a name="l00198"></a>00198 
-<a name="l00199"></a>00199 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="../../d8/df7/structR.html">R</a>, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3, <span class="keyword">typename</span> A4,
+<a name="l00199"></a>00199 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3, <span class="keyword">typename</span> A4,
 <a name="l00200"></a>00200     <span class="keyword">typename</span> A5, <span class="keyword">typename</span> A6, <span class="keyword">typename</span> A7, <span class="keyword">typename</span> A8&gt;
-<a name="l00201"></a><a class="code" href="../../da/d26/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_c3256b948e767f440ca72203dbf5e97c.html">00201</a> <span class="keyword">class </span>InvokeHelper&lt;<a class="code" href="../../d8/df7/structR.html">R</a>, ::testing::tuple&lt;A1, A2, A3, A4, A5, A6, A7, A8&gt; &gt; {
+<a name="l00201"></a><a class="code" href="../../da/d26/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_c3256b948e767f440ca72203dbf5e97c.html">00201</a> <span class="keyword">class </span>InvokeHelper&lt;R, ::testing::tuple&lt;A1, A2, A3, A4, A5, A6, A7, A8&gt; &gt; {
 <a name="l00202"></a>00202  <span class="keyword">public</span>:
 <a name="l00203"></a>00203   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Function&gt;
-<a name="l00204"></a>00204   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> Invoke(Function function, const ::testing::tuple&lt;A1, A2, A3, A4, A5,
+<a name="l00204"></a>00204   <span class="keyword">static</span> R Invoke(Function function, const ::testing::tuple&lt;A1, A2, A3, A4, A5,
 <a name="l00205"></a>00205       A6, A7, A8&gt;&amp; args) {
 <a name="l00206"></a>00206            <span class="keywordflow">return</span> function(get&lt;0&gt;(args), get&lt;1&gt;(args), get&lt;2&gt;(args),
 <a name="l00207"></a>00207                get&lt;3&gt;(args), get&lt;4&gt;(args), get&lt;5&gt;(args), get&lt;6&gt;(args),
@@ -254,7 +254,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00209"></a>00209   }
 <a name="l00210"></a>00210 
 <a name="l00211"></a>00211   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Class, <span class="keyword">typename</span> MethodPtr&gt;
-<a name="l00212"></a>00212   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> InvokeMethod(Class* obj_ptr,
+<a name="l00212"></a>00212   <span class="keyword">static</span> R InvokeMethod(Class* obj_ptr,
 <a name="l00213"></a>00213                         MethodPtr method_ptr,
 <a name="l00214"></a>00214                         const ::testing::tuple&lt;A1, A2, A3, A4, A5, A6, A7,
 <a name="l00215"></a>00215                             A8&gt;&amp; args) {
@@ -264,12 +264,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00219"></a>00219   }
 <a name="l00220"></a>00220 };
 <a name="l00221"></a>00221 
-<a name="l00222"></a>00222 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="../../d8/df7/structR.html">R</a>, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3, <span class="keyword">typename</span> A4,
+<a name="l00222"></a>00222 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3, <span class="keyword">typename</span> A4,
 <a name="l00223"></a>00223     <span class="keyword">typename</span> A5, <span class="keyword">typename</span> A6, <span class="keyword">typename</span> A7, <span class="keyword">typename</span> A8, <span class="keyword">typename</span> A9&gt;
-<a name="l00224"></a><a class="code" href="../../df/d4e/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_84580538a045b2e1759bc29528d8207c.html">00224</a> <span class="keyword">class </span>InvokeHelper&lt;<a class="code" href="../../d8/df7/structR.html">R</a>, ::testing::tuple&lt;A1, A2, A3, A4, A5, A6, A7, A8, A9&gt; &gt; {
+<a name="l00224"></a><a class="code" href="../../df/d4e/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_84580538a045b2e1759bc29528d8207c.html">00224</a> <span class="keyword">class </span>InvokeHelper&lt;R, ::testing::tuple&lt;A1, A2, A3, A4, A5, A6, A7, A8, A9&gt; &gt; {
 <a name="l00225"></a>00225  <span class="keyword">public</span>:
 <a name="l00226"></a>00226   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Function&gt;
-<a name="l00227"></a>00227   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> Invoke(Function function, const ::testing::tuple&lt;A1, A2, A3, A4, A5,
+<a name="l00227"></a>00227   <span class="keyword">static</span> R Invoke(Function function, const ::testing::tuple&lt;A1, A2, A3, A4, A5,
 <a name="l00228"></a>00228       A6, A7, A8, A9&gt;&amp; args) {
 <a name="l00229"></a>00229            <span class="keywordflow">return</span> function(get&lt;0&gt;(args), get&lt;1&gt;(args), get&lt;2&gt;(args),
 <a name="l00230"></a>00230                get&lt;3&gt;(args), get&lt;4&gt;(args), get&lt;5&gt;(args), get&lt;6&gt;(args),
@@ -277,7 +277,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00232"></a>00232   }
 <a name="l00233"></a>00233 
 <a name="l00234"></a>00234   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Class, <span class="keyword">typename</span> MethodPtr&gt;
-<a name="l00235"></a>00235   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> InvokeMethod(Class* obj_ptr,
+<a name="l00235"></a>00235   <span class="keyword">static</span> R InvokeMethod(Class* obj_ptr,
 <a name="l00236"></a>00236                         MethodPtr method_ptr,
 <a name="l00237"></a>00237                         const ::testing::tuple&lt;A1, A2, A3, A4, A5, A6, A7, A8,
 <a name="l00238"></a>00238                             A9&gt;&amp; args) {
@@ -287,14 +287,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00242"></a>00242   }
 <a name="l00243"></a>00243 };
 <a name="l00244"></a>00244 
-<a name="l00245"></a>00245 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="../../d8/df7/structR.html">R</a>, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3, <span class="keyword">typename</span> A4,
+<a name="l00245"></a>00245 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3, <span class="keyword">typename</span> A4,
 <a name="l00246"></a>00246     <span class="keyword">typename</span> A5, <span class="keyword">typename</span> A6, <span class="keyword">typename</span> A7, <span class="keyword">typename</span> A8, <span class="keyword">typename</span> A9,
 <a name="l00247"></a>00247     <span class="keyword">typename</span> A10&gt;
-<a name="l00248"></a><a class="code" href="../../d8/de1/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_4b05aa1103fc4c073e11060d6839ad21.html">00248</a> <span class="keyword">class </span>InvokeHelper&lt;<a class="code" href="../../d8/df7/structR.html">R</a>, ::testing::tuple&lt;A1, A2, A3, A4, A5, A6, A7, A8, A9,
+<a name="l00248"></a><a class="code" href="../../d8/de1/classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_4b05aa1103fc4c073e11060d6839ad21.html">00248</a> <span class="keyword">class </span>InvokeHelper&lt;R, ::testing::tuple&lt;A1, A2, A3, A4, A5, A6, A7, A8, A9,
 <a name="l00249"></a>00249     A10&gt; &gt; {
 <a name="l00250"></a>00250  <span class="keyword">public</span>:
 <a name="l00251"></a>00251   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Function&gt;
-<a name="l00252"></a>00252   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> Invoke(Function function, const ::testing::tuple&lt;A1, A2, A3, A4, A5,
+<a name="l00252"></a>00252   <span class="keyword">static</span> R Invoke(Function function, const ::testing::tuple&lt;A1, A2, A3, A4, A5,
 <a name="l00253"></a>00253       A6, A7, A8, A9, A10&gt;&amp; args) {
 <a name="l00254"></a>00254            <span class="keywordflow">return</span> function(get&lt;0&gt;(args), get&lt;1&gt;(args), get&lt;2&gt;(args),
 <a name="l00255"></a>00255                get&lt;3&gt;(args), get&lt;4&gt;(args), get&lt;5&gt;(args), get&lt;6&gt;(args),
@@ -302,7 +302,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00257"></a>00257   }
 <a name="l00258"></a>00258 
 <a name="l00259"></a>00259   <span class="keyword">template</span> &lt;<span class="keyword">class</span> Class, <span class="keyword">typename</span> MethodPtr&gt;
-<a name="l00260"></a>00260   <span class="keyword">static</span> <a class="code" href="../../d8/df7/structR.html">R</a> InvokeMethod(Class* obj_ptr,
+<a name="l00260"></a>00260   <span class="keyword">static</span> R InvokeMethod(Class* obj_ptr,
 <a name="l00261"></a>00261                         MethodPtr method_ptr,
 <a name="l00262"></a>00262                         const ::testing::tuple&lt;A1, A2, A3, A4, A5, A6, A7, A8,
 <a name="l00263"></a>00263                             A9, A10&gt;&amp; args) {
@@ -2179,59 +2179,59 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l02134"></a>02134 <span class="comment">// internal/custom/callback-actions.h header.</span>
 <a name="l02135"></a>02135 
 <a name="l02136"></a>02136 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> F&gt;
-<a name="l02137"></a>02137 <a class="code" href="../../d8/df7/structR.html">R</a> InvokeArgumentAdl(<a class="code" href="../../d2/d4c/structtesting_1_1internal_1_1invoke__argument_1_1AdlTag.html">AdlTag</a>, F f) {
+<a name="l02137"></a>02137 R InvokeArgumentAdl(<a class="code" href="../../d2/d4c/structtesting_1_1internal_1_1invoke__argument_1_1AdlTag.html">AdlTag</a>, F f) {
 <a name="l02138"></a>02138   <span class="keywordflow">return</span> f();
 <a name="l02139"></a>02139 }
 <a name="l02140"></a>02140 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> F, <span class="keyword">typename</span> A1&gt;
-<a name="l02141"></a>02141 <a class="code" href="../../d8/df7/structR.html">R</a> InvokeArgumentAdl(AdlTag, F f, A1 a1) {
+<a name="l02141"></a>02141 R InvokeArgumentAdl(AdlTag, F f, A1 a1) {
 <a name="l02142"></a>02142   <span class="keywordflow">return</span> f(a1);
 <a name="l02143"></a>02143 }
 <a name="l02144"></a>02144 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> F, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2&gt;
-<a name="l02145"></a>02145 <a class="code" href="../../d8/df7/structR.html">R</a> InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2) {
+<a name="l02145"></a>02145 R InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2) {
 <a name="l02146"></a>02146   <span class="keywordflow">return</span> f(a1, a2);
 <a name="l02147"></a>02147 }
 <a name="l02148"></a>02148 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> F, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3&gt;
-<a name="l02149"></a>02149 <a class="code" href="../../d8/df7/structR.html">R</a> InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2, A3 a3) {
+<a name="l02149"></a>02149 R InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2, A3 a3) {
 <a name="l02150"></a>02150   <span class="keywordflow">return</span> f(a1, a2, a3);
 <a name="l02151"></a>02151 }
-<a name="l02152"></a>02152 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="../../d8/df7/structR.html">R</a>, <span class="keyword">typename</span> F, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3,
+<a name="l02152"></a>02152 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> F, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3,
 <a name="l02153"></a>02153     <span class="keyword">typename</span> A4&gt;
-<a name="l02154"></a>02154 <a class="code" href="../../d8/df7/structR.html">R</a> InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2, A3 a3, A4 a4) {
+<a name="l02154"></a>02154 R InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2, A3 a3, A4 a4) {
 <a name="l02155"></a>02155   <span class="keywordflow">return</span> f(a1, a2, a3, a4);
 <a name="l02156"></a>02156 }
-<a name="l02157"></a>02157 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="../../d8/df7/structR.html">R</a>, <span class="keyword">typename</span> F, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3,
+<a name="l02157"></a>02157 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> F, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3,
 <a name="l02158"></a>02158     <span class="keyword">typename</span> A4, <span class="keyword">typename</span> A5&gt;
-<a name="l02159"></a>02159 <a class="code" href="../../d8/df7/structR.html">R</a> InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5) {
+<a name="l02159"></a>02159 R InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5) {
 <a name="l02160"></a>02160   <span class="keywordflow">return</span> f(a1, a2, a3, a4, a5);
 <a name="l02161"></a>02161 }
-<a name="l02162"></a>02162 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="../../d8/df7/structR.html">R</a>, <span class="keyword">typename</span> F, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3,
+<a name="l02162"></a>02162 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> F, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3,
 <a name="l02163"></a>02163     <span class="keyword">typename</span> A4, <span class="keyword">typename</span> A5, <span class="keyword">typename</span> A6&gt;
-<a name="l02164"></a>02164 <a class="code" href="../../d8/df7/structR.html">R</a> InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6) {
+<a name="l02164"></a>02164 R InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6) {
 <a name="l02165"></a>02165   <span class="keywordflow">return</span> f(a1, a2, a3, a4, a5, a6);
 <a name="l02166"></a>02166 }
-<a name="l02167"></a>02167 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="../../d8/df7/structR.html">R</a>, <span class="keyword">typename</span> F, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3,
+<a name="l02167"></a>02167 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> F, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3,
 <a name="l02168"></a>02168     <span class="keyword">typename</span> A4, <span class="keyword">typename</span> A5, <span class="keyword">typename</span> A6, <span class="keyword">typename</span> A7&gt;
-<a name="l02169"></a>02169 <a class="code" href="../../d8/df7/structR.html">R</a> InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6,
+<a name="l02169"></a>02169 R InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6,
 <a name="l02170"></a>02170     A7 a7) {
 <a name="l02171"></a>02171   <span class="keywordflow">return</span> f(a1, a2, a3, a4, a5, a6, a7);
 <a name="l02172"></a>02172 }
-<a name="l02173"></a>02173 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="../../d8/df7/structR.html">R</a>, <span class="keyword">typename</span> F, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3,
+<a name="l02173"></a>02173 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> F, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3,
 <a name="l02174"></a>02174     <span class="keyword">typename</span> A4, <span class="keyword">typename</span> A5, <span class="keyword">typename</span> A6, <span class="keyword">typename</span> A7, <span class="keyword">typename</span> A8&gt;
-<a name="l02175"></a>02175 <a class="code" href="../../d8/df7/structR.html">R</a> InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6,
+<a name="l02175"></a>02175 R InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6,
 <a name="l02176"></a>02176     A7 a7, A8 a8) {
 <a name="l02177"></a>02177   <span class="keywordflow">return</span> f(a1, a2, a3, a4, a5, a6, a7, a8);
 <a name="l02178"></a>02178 }
-<a name="l02179"></a>02179 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="../../d8/df7/structR.html">R</a>, <span class="keyword">typename</span> F, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3,
+<a name="l02179"></a>02179 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> F, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3,
 <a name="l02180"></a>02180     <span class="keyword">typename</span> A4, <span class="keyword">typename</span> A5, <span class="keyword">typename</span> A6, <span class="keyword">typename</span> A7, <span class="keyword">typename</span> A8,
 <a name="l02181"></a>02181     <span class="keyword">typename</span> A9&gt;
-<a name="l02182"></a>02182 <a class="code" href="../../d8/df7/structR.html">R</a> InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6,
+<a name="l02182"></a>02182 R InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6,
 <a name="l02183"></a>02183     A7 a7, A8 a8, A9 a9) {
 <a name="l02184"></a>02184   <span class="keywordflow">return</span> f(a1, a2, a3, a4, a5, a6, a7, a8, a9);
 <a name="l02185"></a>02185 }
-<a name="l02186"></a>02186 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="../../d8/df7/structR.html">R</a>, <span class="keyword">typename</span> F, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3,
+<a name="l02186"></a>02186 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> F, <span class="keyword">typename</span> A1, <span class="keyword">typename</span> A2, <span class="keyword">typename</span> A3,
 <a name="l02187"></a>02187     <span class="keyword">typename</span> A4, <span class="keyword">typename</span> A5, <span class="keyword">typename</span> A6, <span class="keyword">typename</span> A7, <span class="keyword">typename</span> A8,
 <a name="l02188"></a>02188     <span class="keyword">typename</span> A9, <span class="keyword">typename</span> A10&gt;
-<a name="l02189"></a>02189 <a class="code" href="../../d8/df7/structR.html">R</a> InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6,
+<a name="l02189"></a>02189 R InvokeArgumentAdl(AdlTag, F f, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6,
 <a name="l02190"></a>02190     A7 a7, A8 a8, A9 a9, A10 a10) {
 <a name="l02191"></a>02191   <span class="keywordflow">return</span> f(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
 <a name="l02192"></a>02192 }

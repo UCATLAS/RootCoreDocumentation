@@ -89,7 +89,7 @@ double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
 <li>The library version includes extra code that we don't really need to handle the case where abs(angle) &gt; 2^63. (Runtime penalty, though, is moving the FPU status word to $eax and one taken branch.)</li>
 </ul>
 <ul>
-<li>Most importantly, though, the library function takes pointers into which the results are stored. Playing with this, i was unable to prevent the calculated values from being spilled to memory. With the definition used below, we don't necessarily spill to memory. <a class="el" href="../../d4/dc4/structA.html">A</a> sequence like</li>
+<li>Most importantly, though, the library function takes pointers into which the results are stored. Playing with this, i was unable to prevent the calculated values from being spilled to memory. With the definition used below, we don't necessarily spill to memory. A sequence like</li>
 </ul>
 <p><a class="el" href="../../d4/d12/structCxxUtils_1_1sincos.html" title="Helper to simultaneously calculate sin and cos of the same angle.">sincos</a> sc (ang); double a = sc.apply (x, y)</p>
 <p>can be calculated entirely in the FPU register file, with no spills. </p>

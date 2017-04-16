@@ -107,10 +107,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <dl class="author"><dt><b>Author:</b></dt><dd>scott snyder </dd></dl>
 <dl class="date"><dt><b>Date:</b></dt><dd>Sep 2008 The functions contained here can be used to work around one of the effects of the brain-damage of the x87 FPU.</dd></dl>
 <p>Brief summary: If you're writing a comparison function for sort, where the comparison depends on computed floating-point values, eg:</p>
-<div class="fragment"><pre class="fragment">    <span class="keywordtype">bool</span> compare (IParticle* a, IParticle* b)
+<div class="fragment"><pre class="fragment">    <span class="keywordtype">bool</span> <a class="code" href="../../da/d8a/namespaceAmg.html#ab845c2de1ce866d4b91a11fc7c1a9ca8">compare</a> (IParticle* a, IParticle* b)
     { <span class="keywordflow">return</span> a-&gt;pt() &gt; b-&gt;pt(); }
 </pre></div><p>then you should replace the comparison with a call to one of the functions in this file:</p>
-<div class="fragment"><pre class="fragment">    <span class="keywordtype">bool</span> compare (IParticle* a, IParticle* b)
+<div class="fragment"><pre class="fragment">    <span class="keywordtype">bool</span> <a class="code" href="../../da/d8a/namespaceAmg.html#ab845c2de1ce866d4b91a11fc7c1a9ca8">compare</a> (IParticle* a, IParticle* b)
     { <span class="keywordflow">return</span> CxxUtils::fpcompare::greater (a-&gt;pt(), b-&gt;pt()); }
 </pre></div><p>Longer explanation:</p>
 <p>An expression like this (where pt() returns a double):</p>
@@ -119,7 +119,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <p>call a-&gt;pt() save result from FPU to a double stack temporary call b-&gt;pt() load the temporary back into the FPU do the comparison</p>
 <p>If pt() returns a result with the extra precision bits used (so that the value changes when rounded to a double), then it is possible for this comparison to return true for the case where a==b. This violates the assumptions that std::sort makes of the comparison function, and can cause a crash (possibly even silently wrong results!).</p>
 <p>As a fix, we force both parameters into something that has been declared <code>volatile</code>. That forces them to be spilled to memory, ensuring that they are both correctly rounded for the declared data type. The comparison is then done on these rounded values.</p>
-<p>We condition this on the parameter <code>__FLT_EVAL_METHOD__</code> being 2. This is defined in the <a class="el" href="../../db/db2/structC.html">C</a> standard; a value of 2 means that all FP calculations are done as long double. For other cases, we leave out the <code>volatile</code> qualifiers; this should result in the functions being inlined completely away.</p>
+<p>We condition this on the parameter <code>__FLT_EVAL_METHOD__</code> being 2. This is defined in the C standard; a value of 2 means that all FP calculations are done as long double. For other cases, we leave out the <code>volatile</code> qualifiers; this should result in the functions being inlined completely away.</p>
 <p>In addition to the free functions in the <code>CxxUtils::fpcompare</code> namespace. we define corresponding functionals in the <code>CxxUtils::fpcompare_fn</code> namespace.</p>
 <p>It's also worth pointing out that exactly the same issue arises if one uses a floating-point value as the key for a STL associative container. In that case, this comparison instability may cause the container to become corrupted. While it's probably best to avoid using floats for associative container keys in the first place, if you do have to do that, you can work around this problem by using one of the above functionals as the container's comparison type. </p>
 </div>

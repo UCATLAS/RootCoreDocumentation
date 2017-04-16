@@ -93,7 +93,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00130"></a><a class="code" href="../../d5/dd9/classCxxUtils_1_1Array.html">00130</a> <span class="keyword">class </span><a class="code" href="../../d5/dd9/classCxxUtils_1_1Array.html" title="Read-only multidimensional array.">Array</a>
 <a name="l00131"></a>00131 {
 <a name="l00132"></a>00132 <span class="keyword">public</span>:
-<a name="l00134"></a>00134   <span class="keyword">enum</span> { NDIM = <a class="code" href="../../da/deb/structN.html">N</a> };
+<a name="l00134"></a>00134   <span class="keyword">enum</span> { NDIM = N };
 <a name="l00135"></a>00135 
 <a name="l00137"></a><a class="code" href="../../d5/dd9/classCxxUtils_1_1Array.html#af8716c5726c944e8ba55f90a576949e3">00137</a>   <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="../../d4/d75/classCxxUtils_1_1ArrayIterator.html" title="Iterator class for Array&amp;lt;N&amp;gt;.">ArrayIteratorChooser&lt;N&gt;::const_iterator</a> <a class="code" href="../../d4/d75/classCxxUtils_1_1ArrayIterator.html" title="Iterator class for Array&amp;lt;N&amp;gt;.">const_iterator</a>;
 <a name="l00138"></a>00138 
@@ -108,7 +108,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00176"></a>00176 
 <a name="l00183"></a>00183   <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d5/dd9/classCxxUtils_1_1Array.html#a682d671307b58eb66a706a2af76cfb84" title="Return the size of the array along one dimension.">size</a> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dim = 0) <span class="keyword">const</span>;
 <a name="l00184"></a>00184 
-<a name="l00193"></a>00193   <a class="code" href="../../d5/dd9/classCxxUtils_1_1Array.html" title="Read-only multidimensional array.">Array</a>&lt;<a class="code" href="../../da/deb/structN.html">N</a>-1&gt; <a class="code" href="../../d5/dd9/classCxxUtils_1_1Array.html#af8fb023d8d5e219d961478c123efff70" title="Array indexing.">operator[] </a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i) <span class="keyword">const</span>;
+<a name="l00193"></a>00193   <a class="code" href="../../d5/dd9/classCxxUtils_1_1Array.html" title="Read-only multidimensional array.">Array</a>&lt;N-1&gt; <a class="code" href="../../d5/dd9/classCxxUtils_1_1Array.html#af8fb023d8d5e219d961478c123efff70" title="Array indexing.">operator[] </a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i) <span class="keyword">const</span>;
 <a name="l00194"></a>00194 
 <a name="l00201"></a>00201   <span class="keyword">const</span> Arrayelt* <a class="code" href="../../d5/dd9/classCxxUtils_1_1Array.html#aa6809b294f82601ec1753535c40b09be" title="Return a direct pointer to array elements.">ptr</a> () <span class="keyword">const</span>;
 <a name="l00202"></a>00202 
@@ -124,8 +124,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00229"></a>00229   <a class="code" href="../../d5/dd9/classCxxUtils_1_1Array.html#a140a13141f4e7584684e60437a5e9396" title="Default constructor.">Array</a> (<span class="keyword">const</span> <a class="code" href="../../d4/dc1/structCaloRec_1_1Arrayrep.html" title="Representation class for Array&amp;#39;s.">Arrayrep</a>&amp; rep, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> offs);
 <a name="l00230"></a>00230 
 <a name="l00231"></a>00231   <span class="comment">// These classes need to call the above protected constructor.</span>
-<a name="l00232"></a>00232   <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../d5/dd9/classCxxUtils_1_1Array.html" title="Read-only multidimensional array.">Array</a>&lt;<a class="code" href="../../da/deb/structN.html">N</a>+1&gt;;
-<a name="l00233"></a>00233   <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../d4/d75/classCxxUtils_1_1ArrayIterator.html" title="Iterator class for Array&amp;lt;N&amp;gt;.">ArrayIterator</a>&lt;<a class="code" href="../../da/deb/structN.html">N</a>+1&gt;;
+<a name="l00232"></a>00232   <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../d5/dd9/classCxxUtils_1_1Array.html" title="Read-only multidimensional array.">Array</a>&lt;N+1&gt;;
+<a name="l00233"></a>00233   <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../d4/d75/classCxxUtils_1_1ArrayIterator.html" title="Iterator class for Array&amp;lt;N&amp;gt;.">ArrayIterator</a>&lt;N+1&gt;;
 <a name="l00234"></a>00234 
 <a name="l00237"></a><a class="code" href="../../d5/dd9/classCxxUtils_1_1Array.html#af055e952849ac49b2e122b8ba0ae04b3">00237</a>   <span class="keyword">const</span> <a class="code" href="../../d4/dc1/structCaloRec_1_1Arrayrep.html" title="Representation class for Array&amp;#39;s.">Arrayrep</a>* <a class="code" href="../../d5/dd9/classCxxUtils_1_1Array.html#af055e952849ac49b2e122b8ba0ae04b3">m_rep</a>;
 <a name="l00238"></a>00238 
@@ -174,7 +174,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00363"></a>00363 {
 <a name="l00364"></a>00364 <span class="keyword">public</span>:
 <a name="l00365"></a>00365   <span class="comment">// Typedefs.</span>
-<a name="l00367"></a>00367 <span class="comment"></span>  <span class="keyword">typedef</span> std::iterator&lt;std::random_access_iterator_tag, <span class="keyword">const</span> <a class="code" href="../../d5/dd9/classCxxUtils_1_1Array.html" title="Read-only multidimensional array.">Array</a>&lt;<a class="code" href="../../da/deb/structN.html">N</a>-1&gt; &gt;
+<a name="l00367"></a>00367 <span class="comment"></span>  <span class="keyword">typedef</span> std::iterator&lt;std::random_access_iterator_tag, <span class="keyword">const</span> <a class="code" href="../../d5/dd9/classCxxUtils_1_1Array.html" title="Read-only multidimensional array.">Array</a>&lt;N-1&gt; &gt;
 <a name="l00368"></a><a class="code" href="../../d4/d75/classCxxUtils_1_1ArrayIterator.html#a895d4b79a337768e0559df2a9dd9e0c5">00368</a>              <a class="code" href="../../d4/d75/classCxxUtils_1_1ArrayIterator.html#a895d4b79a337768e0559df2a9dd9e0c5" title="Shorthand for the base class.">base_iterator</a>;
 <a name="l00369"></a>00369 
 <a name="l00371"></a><a class="code" href="../../d4/d75/classCxxUtils_1_1ArrayIterator.html#a59c949ae57c0738fd55a01ad3bde4a7b">00371</a>   <span class="keyword">typedef</span> <span class="keyword">typename</span> base_iterator::iterator_category <a class="code" href="../../d4/d75/classCxxUtils_1_1ArrayIterator.html#a59c949ae57c0738fd55a01ad3bde4a7b" title="Standard iterator_category typedef, from the base class.">iterator_category</a>;
@@ -281,7 +281,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00631"></a>00631 <span class="keyword">public</span>:
 <a name="l00640"></a>00640   <a class="code" href="../../dc/dcc/classCxxUtils_1_1WritableArray.html#a4778235225a438be0da4d631c935b1cb" title="Constructor.">WritableArray</a> (<a class="code" href="../../d4/dc1/structCaloRec_1_1Arrayrep.html" title="Representation class for Array&amp;#39;s.">Arrayrep</a>&amp; rep);
 <a name="l00641"></a>00641 
-<a name="l00650"></a>00650   <a class="code" href="../../dc/dcc/classCxxUtils_1_1WritableArray.html" title="Read-write multidimensional array.">WritableArray</a>&lt;<a class="code" href="../../da/deb/structN.html">N</a>-1&gt; <a class="code" href="../../dc/dcc/classCxxUtils_1_1WritableArray.html#adab6a71e4ccba671ea22b151c406ffbf" title="Array indexing.">operator[] </a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i) <span class="keyword">const</span>;
+<a name="l00650"></a>00650   <a class="code" href="../../dc/dcc/classCxxUtils_1_1WritableArray.html" title="Read-write multidimensional array.">WritableArray</a>&lt;N-1&gt; <a class="code" href="../../dc/dcc/classCxxUtils_1_1WritableArray.html#adab6a71e4ccba671ea22b151c406ffbf" title="Array indexing.">operator[] </a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i) <span class="keyword">const</span>;
 <a name="l00651"></a>00651 
 <a name="l00658"></a>00658   Arrayelt* <a class="code" href="../../dc/dcc/classCxxUtils_1_1WritableArray.html#a24eeb1d0d270acf2a89c73e9c1ce5f8f" title="Return a direct pointer to array elements.">ptr</a> ();
 <a name="l00659"></a>00659 

@@ -396,7 +396,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00351"></a>00351 <span class="comment">// DecayArray&lt;T&gt;::type turns an array type U[N] to const U* and preserves</span>
 <a name="l00352"></a>00352 <span class="comment">// other types.  Useful for saving a copy of a function argument.</span>
 <a name="l00353"></a><a class="code" href="../../d3/d2d/structtesting_1_1internal_1_1DecayArray.html">00353</a> <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code" href="../../d3/d2d/structtesting_1_1internal_1_1DecayArray.html">DecayArray</a> { <span class="keyword">typedef</span> <a class="code" href="../../d1/def/classT.html">T</a> <a class="code" href="../../d1/def/classT.html">type</a>; };  <span class="comment">// NOLINT</span>
-<a name="l00354"></a><a class="code" href="../../d0/d2d/structtesting_1_1internal_1_1DecayArray_3_01T[N]_4.html">00354</a> <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">size_t</span> N&gt; <span class="keyword">struct </span><a class="code" href="../../d3/d2d/structtesting_1_1internal_1_1DecayArray.html">DecayArray</a>&lt;<a class="code" href="../../d1/def/classT.html">T</a>[<a class="code" href="../../da/deb/structN.html">N</a>]&gt; {
+<a name="l00354"></a><a class="code" href="../../d0/d2d/structtesting_1_1internal_1_1DecayArray_3_01T[N]_4.html">00354</a> <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">size_t</span> N&gt; <span class="keyword">struct </span><a class="code" href="../../d3/d2d/structtesting_1_1internal_1_1DecayArray.html">DecayArray</a>&lt;<a class="code" href="../../d1/def/classT.html">T</a>[N]&gt; {
 <a name="l00355"></a>00355   <span class="keyword">typedef</span> <span class="keyword">const</span> <a class="code" href="../../d1/def/classT.html">T</a>* <a class="code" href="../../d1/def/classT.html">type</a>;
 <a name="l00356"></a>00356 };
 <a name="l00357"></a>00357 <span class="comment">// Sometimes people use arrays whose size is not available at the use site</span>
@@ -464,7 +464,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00419"></a>00419 
 <a name="l00420"></a>00420 <span class="comment">// This specialization is used when RawContainer is a native array type.</span>
 <a name="l00421"></a>00421 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Element, <span class="keywordtype">size_t</span> N&gt;
-<a name="l00422"></a><a class="code" href="../../d4/d65/classtesting_1_1internal_1_1StlContainerView_3_01Element[N]_4.html">00422</a> <span class="keyword">class </span><a class="code" href="../../d7/d68/classtesting_1_1internal_1_1StlContainerView.html">StlContainerView</a>&lt;Element[<a class="code" href="../../da/deb/structN.html">N</a>]&gt; {
+<a name="l00422"></a><a class="code" href="../../d4/d65/classtesting_1_1internal_1_1StlContainerView_3_01Element[N]_4.html">00422</a> <span class="keyword">class </span><a class="code" href="../../d7/d68/classtesting_1_1internal_1_1StlContainerView.html">StlContainerView</a>&lt;Element[N]&gt; {
 <a name="l00423"></a>00423  <span class="keyword">public</span>:
 <a name="l00424"></a>00424   <span class="keyword">typedef</span> GTEST_REMOVE_CONST_(Element) RawElement;
 <a name="l00425"></a>00425   <span class="keyword">typedef</span> <a class="code" href="../../d6/de6/classtesting_1_1internal_1_1NativeArray.html">internal::NativeArray&lt;RawElement&gt;</a> <a class="code" href="../../d6/de6/classtesting_1_1internal_1_1NativeArray.html">type</a>;
@@ -475,7 +475,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00430"></a>00430   <span class="comment">// ConstReference() has to return a reference to a local variable.</span>
 <a name="l00431"></a>00431   <span class="keyword">typedef</span> <span class="keyword">const</span> <a class="code" href="../../d6/de6/classtesting_1_1internal_1_1NativeArray.html">type</a> <a class="code" href="../../d6/de6/classtesting_1_1internal_1_1NativeArray.html">const_reference</a>;
 <a name="l00432"></a>00432 
-<a name="l00433"></a>00433   <span class="keyword">static</span> <a class="code" href="../../d6/de6/classtesting_1_1internal_1_1NativeArray.html">const_reference</a> ConstReference(<span class="keyword">const</span> Element (&amp;array)[<a class="code" href="../../da/deb/structN.html">N</a>]) {
+<a name="l00433"></a>00433   <span class="keyword">static</span> <a class="code" href="../../d6/de6/classtesting_1_1internal_1_1NativeArray.html">const_reference</a> ConstReference(<span class="keyword">const</span> Element (&amp;array)[N]) {
 <a name="l00434"></a>00434     <span class="comment">// Ensures that Element is not a const type.</span>
 <a name="l00435"></a>00435     testing::StaticAssertTypeEq&lt;Element, RawElement&gt;();
 <a name="l00436"></a>00436 <span class="preprocessor">#if GTEST_OS_SYMBIAN</span>

@@ -95,7 +95,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 <ul>
 <li>ISOCRITERIA : encode the method used to find isolation particles (IsoKR, IsoDelta, IsoFixedCone, IsoFixedArea, Iso6To8, signification detailed below)</li>
 <li>NN : encode the value of the main parameter of ISOCRITERIA : the actual parameter used is NN/10. (same convetion as jet radius in JetContainer names)</li>
-<li>VAR : encode the variable to be calculated (Per, Par, SumPt, <a class="el" href="../../dc/dec/structP.html">P</a>, significations detailed below)</li>
+<li>VAR : encode the variable to be calculated (Per, Par, SumPt, P, significations detailed below)</li>
 </ul>
 <p>The resulting attribute name is simply the identifier string with ':' removed. Example "IsoKR:11:Perp" -&gt; "IsoKR11Perp"</p>
 <p>The input particles container from which constituents come from must be specified in the ConstituentContainer property. This must correspond to an IParticleContainer in the event store. (longer term : make it possible to pass PseudoJetContainer)</p>
@@ -105,7 +105,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 <li>the dependency on the calibration state of the constituents</li>
 <li>the calculation time (looking up the full input container for each jet constituents can be *very* slow) These are solved at the cost of increased complexity (internal helper classes, usage of a special fast lookup map), details in the .cxx file.</li>
 </ul>
-<p>WARNING : currently works well only for LCTopoJets, TrackJets, TruthJets AND small <a class="el" href="../../d8/df7/structR.html">R</a> jets (<a class="el" href="../../d8/df7/structR.html">R</a> ~&lt;0.8)</p>
+<p>WARNING : currently works well only for LCTopoJets, TrackJets, TruthJets AND small R jets (R ~&lt;0.8)</p>
 <p>WARNING: The constituents are pseudojets objtained from a pseudojet getter. This should be the same pseudojet getter used in the jet finding. The isolation tool must be run in the same job as the jet finding.</p>
 <p>Isolation Criteria ("param" below is the main parameter) :</p>
 <ul>
@@ -120,7 +120,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 <li>Perp : iso4Vec.Perp( jetDirection )</li>
 <li>Par : iso4Vec.Dot( jetDirection )</li>
 <li>SumPt : sum Pt of 4-vec contibuting to iso4Vec</li>
-<li><a class="el" href="../../dc/dec/structP.html">P</a> : iso4Vec.Vect().Mag() </li>
+<li>P : iso4Vec.Vect().Mag() </li>
 </ul>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="aa68076a8a26454735b2234898aef9375"></a><!-- doxytag: member="JetIsolationTool::initialize" ref="aa68076a8a26454735b2234898aef9375" args="()" -->

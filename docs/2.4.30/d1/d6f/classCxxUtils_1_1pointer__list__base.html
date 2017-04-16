@@ -50,7 +50,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div>
 <div class="contents">
 <h1>CxxUtils::pointer_list_base Class Reference</h1><!-- doxytag: class="CxxUtils::pointer_list_base" -->
-<p><a class="el" href="../../d4/dc4/structA.html">A</a> fast way to store a variable-sized collection of pointers.  
+<p>A fast way to store a variable-sized collection of pointers.  
 <a href="#_details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../df/d5b/pointer__list_8h_source.html">pointer_list.h</a>&gt;</code></p>
@@ -71,7 +71,7 @@ Inheritance diagram for CxxUtils::pointer_list_base:</div>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator.html">allocator</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Very simple <a class="el" href="../../d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator.html" title="Very simple allocator for use with pointer_list.">allocator</a> for use with <code><a class="el" href="../../d1/d88/classCxxUtils_1_1pointer__list.html" title="A fast way to store a variable-sized collection of pointers.">pointer_list</a></code>.  <a href="../../d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block.html">list_block</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="../../d4/dc4/structA.html">A</a> single block in the list.  <a href="../../d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block.html#_details">More...</a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">A single block in the list.  <a href="../../d8/d02/structCxxUtils_1_1pointer__list__base_1_1list__block.html#_details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2>Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaef14c875027b24d7b0487afd154ac6c"></a><!-- doxytag: member="CxxUtils::pointer_list_base::pool_type" ref="aaef14c875027b24d7b0487afd154ac6c" args="" -->
 typedef <a class="el" href="../../d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator.html">allocator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d6f/classCxxUtils_1_1pointer__list__base.html#aaef14c875027b24d7b0487afd154ac6c">pool_type</a></td></tr>
@@ -115,7 +115,7 @@ size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The list <a class="el" href="../../d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator.html" title="Very simple allocator for use with pointer_list.">allocator</a>. <br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p><a class="el" href="../../d4/dc4/structA.html">A</a> fast way to store a variable-sized collection of pointers. </p>
+<p>A fast way to store a variable-sized collection of pointers. </p>
 <p>See <code><a class="el" href="../../d1/d88/classCxxUtils_1_1pointer__list.html" title="A fast way to store a variable-sized collection of pointers.">pointer_list</a></code> below for a summary.</p>
 <p>Some extra <a class="el" href="../../dd/d39/namespacedetail.html">detail</a>: The list is a set of fixed-size blocks, each holding (by default) 15 pointers. At the end of each block is another pointer used to form a a linked list. We used to mark this last pointer by setting the low bit as a sentinel. But now that we control our own <a class="el" href="../../d9/d49/classCxxUtils_1_1pointer__list__base_1_1allocator.html" title="Very simple allocator for use with pointer_list.">allocator</a> we can instead just insist that the blocks have a size that's a power of 2 and are fully aligned. We can then test the low bits of the address to tell if we're looking at the last pointer of a block.</p>
 <p>We then need to keep pointers to the head block, and to the current insertion position. To insert, we see if the insertion position is pointing at a block end. If so, we allocate another block, chain to it, and reset the insertion position to the beginning of the new block. Then store the pointer in the insertion position and bump it. Iterators are just pointers to the stored pointers. We use the end positions to tell when to chain to a new block. The insertion point gives the end iterator.</p>

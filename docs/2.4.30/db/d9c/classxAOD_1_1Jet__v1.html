@@ -256,7 +256,7 @@ virtual <a class="el" href="../../dd/dc8/namespacexAOD_1_1Type.html#a96c48d2d854
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The type of the object as a simple enumeration. <br/></td></tr>
 <tr><td colspan="2"><h2>Jet constituents access</h2></td></tr>
 <tr><td colspan="2"><p><a class="anchor" id="amgrp438081985c5b022713beded25142d029"></a> Access to the jet constituents. Constiuents are stored internally as <a class="el" href="../../d5/d4c/classxAOD_1_1IParticle.html">IParticle</a>. <a class="el" href="../../db/d9c/classxAOD_1_1Jet__v1.html#a721b12f3807003778da21a255a17b192" title="Return a vector of consituents. The object behaves like vector&lt;const IParticle*&gt;...">getConstituents()</a> returns a special object : <a class="el" href="../../d5/d83/classxAOD_1_1JetConstituentVector.html" title="A vector of jet constituents at the scale used during jet finding.">JetConstituentVector</a>. The default 4-vectors of the constituents (ex: clusters) possibly differ from the 4-vector used in the jet finding procedure (ex: when find jets with non calibrated "EM scale" clusters). The <a class="el" href="../../d5/d83/classxAOD_1_1JetConstituentVector.html" title="A vector of jet constituents at the scale used during jet finding.">JetConstituentVector</a> behaves almost exactly as a simple vector&lt;const IParticle*&gt; AND guarantees that the 4-vectors it contains correpond to the 4-vector used at jet finding time. See the <a class="el" href="../../de/dd4/JetConstituentVector_8h_source.html">JetConstituentVector.h</a> header for more details</p>
-<p><a class="el" href="../../d4/dc4/structA.html">A</a> direct access method <a class="el" href="../../db/d9c/classxAOD_1_1Jet__v1.html#a41f4ea0cc3eca4fa8af335ecf8fbd38f" title="Direct access to constituents. *WARNING* expert use only.">rawConstituent()</a> is provided for experts usage only. jet finding. </p>
+<p>A direct access method <a class="el" href="../../db/d9c/classxAOD_1_1Jet__v1.html#a41f4ea0cc3eca4fa8af335ecf8fbd38f" title="Direct access to constituents. *WARNING* expert use only.">rawConstituent()</a> is provided for experts usage only. jet finding. </p>
 <br/><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18b9f77dafa785d312962e80a59ec263"></a><!-- doxytag: member="xAOD::Jet_v1::addConstituent" ref="a18b9f77dafa785d312962e80a59ec263" args="(const ElementLink&lt; IParticleContainer &gt; &amp;link, float weight=1.0)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9c/classxAOD_1_1Jet__v1.html#a18b9f77dafa785d312962e80a59ec263">addConstituent</a> (const <a class="el" href="../../d6/d6e/classElementLink.html">ElementLink</a>&lt; <a class="el" href="../../d0/d4d/classDataVector.html">IParticleContainer</a> &gt; &amp;link, float weight=1.0)</td></tr>
@@ -289,7 +289,7 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>setNumConstituents</b
 <p>Jet is a generic class used to represent any "types" of hadronic jet within the Atlas Software. The various "types" of jets include for example jets build from calorimeter cluster or from reconstructed tracks or from truth particle, etc... The Jet class provides 4 main features :</p>
 <ul>
 <li>list of constituents. This list is build by the jet finding algorithm and is the physical definition of the jet object. Methods are provided to set and access constituents as <a class="el" href="../../d5/d4c/classxAOD_1_1IParticle.html">IParticle</a> objects.</li>
-<li>4-momentum. Accessed through the inherited <a class="el" href="../../d5/d4c/classxAOD_1_1IParticle.html">IParticle</a> interface. <a class="el" href="../../d4/dc4/structA.html">A</a> Jet 4-mom is not necessarily the sum of its constituents 4-mom (for ex. if a calibration has been applied).</li>
+<li>4-momentum. Accessed through the inherited <a class="el" href="../../d5/d4c/classxAOD_1_1IParticle.html">IParticle</a> interface. A Jet 4-mom is not necessarily the sum of its constituents 4-mom (for ex. if a calibration has been applied).</li>
 <li>Signal States : Jets can hold several other 4-momentum representing various calibration states (primarily used for calo jets). See also P4SignalState</li>
 <li>Attributes : depending on its "type" several other attributes can be added to a jet.<ul>
 <li>numbers, vector of numbers : access through the get/setAttribute functions</li>
@@ -349,7 +349,7 @@ Attila Krasznahorkay &lt;<a href="mailto:Attila.Krasznahorkay@cern.ch">Attila.Kr
       </table>
 </div>
 <div class="memdoc">
-<p>Add an <a class="el" href="../../d5/d4c/classxAOD_1_1IParticle.html">IParticle</a> as as constituent. Warning ! <a class="el" href="../../d4/dc4/structA.html">A</a> link to the *original* container of this particle p will be used internally. Thus one can not persistify correctly constituents from a container in VIEW mode. </p>
+<p>Add an <a class="el" href="../../d5/d4c/classxAOD_1_1IParticle.html">IParticle</a> as as constituent. Warning ! A link to the *original* container of this particle p will be used internally. Thus one can not persistify correctly constituents from a container in VIEW mode. </p>
 
 </div>
 </div>

@@ -680,7 +680,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00647"></a>00647     <span class="keyword">typedef</span> std::size_t result_type;
 <a name="l00648"></a>00648 
 <a name="l00649"></a>00649     result_type
-<a name="l00650"></a>00650     operator() (first_argument_type r, second_argument_type <a class="code" href="../../da/deb/structN.html">N</a>)<span class="keyword"> const</span>
+<a name="l00650"></a>00650     operator() (first_argument_type r, second_argument_type N)<span class="keyword"> const</span>
 <a name="l00651"></a>00651 <span class="keyword">    </span>{ <span class="keywordflow">return</span> r % N; }
 <a name="l00652"></a>00652   };
 <a name="l00653"></a>00653 
@@ -733,7 +733,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00700"></a>00700   {
 <a name="l00701"></a>00701     <span class="keyword">template</span>&lt;<span class="keyword">typename</span> X, <span class="keyword">typename</span> Y&gt;
 <a name="l00702"></a>00702       <span class="keywordtype">bool</span>
-<a name="l00703"></a>00703       operator()(<a class="code" href="../../d9/d9e/structCxxUtils__Internal_1_1X.html">X</a> x, <a class="code" href="../../de/d29/structY.html">Y</a> y)
+<a name="l00703"></a>00703       operator()(<a class="code" href="../../d9/d9e/structCxxUtils__Internal_1_1X.html">X</a> x, Y y)
 <a name="l00704"></a>00704       { <span class="keywordflow">return</span> x &lt; y; }
 <a name="l00705"></a>00705   };
 <a name="l00706"></a>00706 
@@ -812,8 +812,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00779"></a>00779   prime_rehash_policy::
 <a name="l00780"></a>00780   next_bkt(std::size_t n)<span class="keyword"> const</span>
 <a name="l00781"></a>00781 <span class="keyword">  </span>{
-<a name="l00782"></a>00782     <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>* <span class="keyword">const</span> last = <a class="code" href="../../d3/d24/structX.html">X</a><span class="comment">/*&lt;0&gt;*/</span>::primes + <a class="code" href="../../d3/d24/structX.html">X</a><span class="comment">/*&lt;0&gt;*/</span>::n_primes; <span class="comment">// sss</span>
-<a name="l00783"></a>00783     <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>* p = std::lower_bound (<a class="code" href="../../d3/d24/structX.html">X</a><span class="comment">/*&lt;0&gt;*/</span>::primes, last, n); <span class="comment">// sss</span>
+<a name="l00782"></a>00782     <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>* <span class="keyword">const</span> last = X<span class="comment">/*&lt;0&gt;*/</span>::primes + X<span class="comment">/*&lt;0&gt;*/</span>::n_primes; <span class="comment">// sss</span>
+<a name="l00783"></a>00783     <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>* p = std::lower_bound (X<span class="comment">/*&lt;0&gt;*/</span>::primes, last, n); <span class="comment">// sss</span>
 <a name="l00784"></a>00784     m_next_resize = <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(std::ceil(static_cast&lt;float&gt;(*p) * m_max_load_factor)); <span class="comment">// sss</span>
 <a name="l00785"></a>00785     <span class="keywordflow">return</span> *p;
 <a name="l00786"></a>00786   }
@@ -824,9 +824,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00791"></a>00791   prime_rehash_policy::
 <a name="l00792"></a>00792   bkt_for_elements(std::size_t n)<span class="keyword"> const</span>
 <a name="l00793"></a>00793 <span class="keyword">  </span>{
-<a name="l00794"></a>00794     <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>* <span class="keyword">const</span> last = <a class="code" href="../../d3/d24/structX.html">X</a><span class="comment">/*&lt;0&gt;*/</span>::primes + <a class="code" href="../../d3/d24/structX.html">X</a><span class="comment">/*&lt;0&gt;*/</span>::n_primes; <span class="comment">// sss</span>
+<a name="l00794"></a>00794     <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>* <span class="keyword">const</span> last = X<span class="comment">/*&lt;0&gt;*/</span>::primes + X<span class="comment">/*&lt;0&gt;*/</span>::n_primes; <span class="comment">// sss</span>
 <a name="l00795"></a>00795     <span class="keyword">const</span> <span class="keywordtype">float</span> min_bkts = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(n) / m_max_load_factor; <span class="comment">// sss</span>
-<a name="l00796"></a>00796     <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>* p = std::lower_bound (<a class="code" href="../../d3/d24/structX.html">X</a><span class="comment">/*&lt;0&gt;*/</span>::primes, last, <span class="comment">// sss</span>
+<a name="l00796"></a>00796     <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>* p = std::lower_bound (X<span class="comment">/*&lt;0&gt;*/</span>::primes, last, <span class="comment">// sss</span>
 <a name="l00797"></a>00797                            min_bkts, lt());
 <a name="l00798"></a>00798     m_next_resize = <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(std::ceil(static_cast&lt;float&gt;(*p) * m_max_load_factor)); <span class="comment">// sss</span>
 <a name="l00799"></a>00799     <span class="keywordflow">return</span> *p;
@@ -851,8 +851,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00818"></a>00818     <span class="keywordflow">if</span> (min_bkts &gt; n_bkt)
 <a name="l00819"></a>00819       {
 <a name="l00820"></a>00820         min_bkts = std::max (min_bkts, m_growth_factor * static_cast&lt;float&gt;(n_bkt)); <span class="comment">// sss</span>
-<a name="l00821"></a>00821         <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>* <span class="keyword">const</span> last = <a class="code" href="../../d3/d24/structX.html">X</a><span class="comment">/*&lt;0&gt;*/</span>::primes + <a class="code" href="../../d3/d24/structX.html">X</a><span class="comment">/*&lt;0&gt;*/</span>::n_primes; <span class="comment">// sss</span>
-<a name="l00822"></a>00822         <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>* p = std::lower_bound (<a class="code" href="../../d3/d24/structX.html">X</a><span class="comment">/*&lt;0&gt;*/</span>::primes, last, <span class="comment">// sss</span>
+<a name="l00821"></a>00821         <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>* <span class="keyword">const</span> last = X<span class="comment">/*&lt;0&gt;*/</span>::primes + X<span class="comment">/*&lt;0&gt;*/</span>::n_primes; <span class="comment">// sss</span>
+<a name="l00822"></a>00822         <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>* p = std::lower_bound (X<span class="comment">/*&lt;0&gt;*/</span>::primes, last, <span class="comment">// sss</span>
 <a name="l00823"></a>00823                                min_bkts, lt());
 <a name="l00824"></a>00824         m_next_resize = 
 <a name="l00825"></a>00825           <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(std::ceil(static_cast&lt;float&gt;(*p) * m_max_load_factor)); <span class="comment">// sss</span>
@@ -973,7 +973,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00940"></a>00940 <span class="keyword">      </span>{ <span class="keywordflow">return</span> 0; }
 <a name="l00941"></a>00941   
 <a name="l00942"></a>00942       std::size_t
-<a name="l00943"></a>00943       bucket_index(<span class="keyword">const</span> Key&amp; k, hash_code_t, std::size_t <a class="code" href="../../da/deb/structN.html">N</a>)<span class="keyword"> const</span>
+<a name="l00943"></a>00943       bucket_index(<span class="keyword">const</span> Key&amp; k, hash_code_t, std::size_t N)<span class="keyword"> const</span>
 <a name="l00944"></a>00944 <span class="keyword">      </span>{ <span class="keywordflow">return</span> m_ranged_hash (k, N); }
 <a name="l00945"></a>00945 
 <a name="l00946"></a>00946       std::size_t
@@ -1049,7 +1049,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01016"></a>01016 <span class="keyword">      </span>{ <span class="keywordflow">return</span> m_h1(k); }
 <a name="l01017"></a>01017       
 <a name="l01018"></a>01018       std::size_t
-<a name="l01019"></a>01019       bucket_index(<span class="keyword">const</span> Key&amp;, hash_code_t c, std::size_t <a class="code" href="../../da/deb/structN.html">N</a>)<span class="keyword"> const</span>
+<a name="l01019"></a>01019       bucket_index(<span class="keyword">const</span> Key&amp;, hash_code_t c, std::size_t N)<span class="keyword"> const</span>
 <a name="l01020"></a>01020 <span class="keyword">      </span>{ <span class="keywordflow">return</span> m_h2 (c, N); }
 <a name="l01021"></a>01021 
 <a name="l01022"></a>01022       std::size_t
@@ -1111,7 +1111,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01078"></a>01078 <span class="keyword">      </span>{ <span class="keywordflow">return</span> m_h1(k); }
 <a name="l01079"></a>01079   
 <a name="l01080"></a>01080       std::size_t
-<a name="l01081"></a>01081       bucket_index(<span class="keyword">const</span> Key&amp;, hash_code_t c, std::size_t <a class="code" href="../../da/deb/structN.html">N</a>)<span class="keyword"> const</span>
+<a name="l01081"></a>01081       bucket_index(<span class="keyword">const</span> Key&amp;, hash_code_t c, std::size_t N)<span class="keyword"> const</span>
 <a name="l01082"></a>01082 <span class="keyword">      </span>{ <span class="keywordflow">return</span> m_h2 (c, N); }
 <a name="l01083"></a>01083 
 <a name="l01084"></a>01084       std::size_t
@@ -1516,7 +1516,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01483"></a>01483   <span class="comment">// Definitions of class template hashtable&apos;s out-of-line member functions.</span>
 <a name="l01484"></a>01484   
 <a name="l01485"></a>01485   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01486"></a>01486        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01486"></a>01486        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01487"></a>01487        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01488"></a>01488        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01489"></a>01489     <span class="keyword">typename</span> <a class="code" href="../../de/d63/classSG_1_1hashtable.html">hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::node</a>*
@@ -1538,7 +1538,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01505"></a>01505     }
 <a name="l01506"></a>01506 
 <a name="l01507"></a>01507   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01508"></a>01508        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01508"></a>01508        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01509"></a>01509        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01510"></a>01510        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01511"></a>01511     <span class="keywordtype">void</span>
@@ -1550,7 +1550,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01517"></a>01517     }
 <a name="l01518"></a>01518 
 <a name="l01519"></a>01519   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01520"></a>01520        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01520"></a>01520        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01521"></a>01521        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01522"></a>01522        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01523"></a>01523     <span class="keywordtype">void</span>
@@ -1571,7 +1571,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01538"></a>01538     }
 <a name="l01539"></a>01539 
 <a name="l01540"></a>01540   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01541"></a>01541        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01541"></a>01541        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01542"></a>01542        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01543"></a>01543        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01544"></a>01544     <span class="keyword">typename</span> hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::node**
@@ -1589,7 +1589,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01556"></a>01556     }
 <a name="l01557"></a>01557 
 <a name="l01558"></a>01558   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01559"></a>01559        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01559"></a>01559        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01560"></a>01560        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01561"></a>01561        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01562"></a>01562     <span class="keywordtype">void</span>
@@ -1601,7 +1601,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01568"></a>01568     }
 <a name="l01569"></a>01569 
 <a name="l01570"></a>01570   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01571"></a>01571        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01571"></a>01571        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01572"></a>01572        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01573"></a>01573        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01574"></a>01574     hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::
@@ -1623,7 +1623,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01590"></a>01590     }
 <a name="l01591"></a>01591 
 <a name="l01592"></a>01592   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01593"></a>01593        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01593"></a>01593        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01594"></a>01594        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01595"></a>01595        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01596"></a>01596     <span class="keyword">template</span>&lt;<span class="keyword">typename</span> InIter&gt;
@@ -1661,7 +1661,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01628"></a>01628       }
 <a name="l01629"></a>01629   
 <a name="l01630"></a>01630   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01631"></a>01631        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01631"></a>01631        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01632"></a>01632        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01633"></a>01633        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01634"></a>01634     hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::
@@ -1700,7 +1700,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01667"></a>01667     }
 <a name="l01668"></a>01668 
 <a name="l01669"></a>01669   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01670"></a>01670        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01670"></a>01670        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01671"></a>01671        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01672"></a>01672        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01673"></a>01673     hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;&amp;
@@ -1713,7 +1713,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01680"></a>01680     }
 <a name="l01681"></a>01681 
 <a name="l01682"></a>01682   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01683"></a>01683        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01683"></a>01683        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01684"></a>01684        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01685"></a>01685        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01686"></a>01686     hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::
@@ -1724,7 +1724,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01691"></a>01691     }
 <a name="l01692"></a>01692 
 <a name="l01693"></a>01693   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01694"></a>01694        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01694"></a>01694        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01695"></a>01695        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01696"></a>01696        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01697"></a>01697     <span class="keywordtype">void</span>
@@ -1745,7 +1745,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01712"></a>01712     }
 <a name="l01713"></a>01713 
 <a name="l01714"></a>01714   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01715"></a>01715        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01715"></a>01715        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01716"></a>01716        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01717"></a>01717        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01718"></a>01718     <span class="keywordtype">void</span>
@@ -1759,7 +1759,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01726"></a>01726     }
 <a name="l01727"></a>01727 
 <a name="l01728"></a>01728   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01729"></a>01729        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01729"></a>01729        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01730"></a>01730        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01731"></a>01731        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01732"></a>01732     <span class="keyword">typename</span> hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::iterator
@@ -1773,7 +1773,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01740"></a>01740     }
 <a name="l01741"></a>01741   
 <a name="l01742"></a>01742   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01743"></a>01743        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01743"></a>01743        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01744"></a>01744        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01745"></a>01745        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01746"></a>01746     <span class="keyword">typename</span> hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::const_iterator
@@ -1787,7 +1787,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01754"></a>01754     }
 <a name="l01755"></a>01755   
 <a name="l01756"></a>01756   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01757"></a>01757        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01757"></a>01757        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01758"></a>01758        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01759"></a>01759        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01760"></a>01760     <span class="keyword">typename</span> hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::size_type
@@ -1798,18 +1798,18 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01765"></a>01765       std::size_t n = this-&gt;bucket_index(k, code, this-&gt;bucket_count());
 <a name="l01766"></a>01766       <span class="keywordtype">size_t</span> result = 0;
 <a name="l01767"></a>01767       <span class="keywordflow">for</span> (node* p = m_buckets[n]; p ; p = p-&gt;m_next)
-<a name="l01768"></a>01768     <span class="keywordflow">if</span> (this-&gt;compare(k, code, p))
+<a name="l01768"></a>01768     <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../da/d8a/namespaceAmg.html#ab845c2de1ce866d4b91a11fc7c1a9ca8">compare</a>(k, code, p))
 <a name="l01769"></a>01769       ++result;
 <a name="l01770"></a>01770       <span class="keywordflow">return</span> result;
 <a name="l01771"></a>01771     }
 <a name="l01772"></a>01772 
 <a name="l01773"></a>01773   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01774"></a>01774        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01774"></a>01774        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01775"></a>01775        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01776"></a>01776        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
-<a name="l01777"></a>01777     std::pair&lt;<span class="keyword">typename</span> hashtable&lt;K, V, <a class="code" href="../../d4/dc4/structA.html">A</a>, Ex, Eq, H1,
+<a name="l01777"></a>01777     std::pair&lt;<span class="keyword">typename</span> hashtable&lt;K, V, A, Ex, Eq, H1,
 <a name="l01778"></a>01778                  H2, H, RP, c, ci, u&gt;::iterator,
-<a name="l01779"></a>01779           <span class="keyword">typename</span> hashtable&lt;K, V, <a class="code" href="../../d4/dc4/structA.html">A</a>, Ex, Eq, H1,
+<a name="l01779"></a>01779           <span class="keyword">typename</span> hashtable&lt;K, V, A, Ex, Eq, H1,
 <a name="l01780"></a>01780                  H2, H, RP, c, ci, u&gt;::iterator&gt;
 <a name="l01781"></a>01781     hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::
 <a name="l01782"></a>01782     equal_range(<span class="keyword">const</span> key_type&amp; k)
@@ -1837,12 +1837,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01804"></a>01804     }
 <a name="l01805"></a>01805 
 <a name="l01806"></a>01806   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01807"></a>01807        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01807"></a>01807        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01808"></a>01808        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01809"></a>01809        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
-<a name="l01810"></a>01810     std::pair&lt;<span class="keyword">typename</span> hashtable&lt;K, V, <a class="code" href="../../d4/dc4/structA.html">A</a>, Ex, Eq, H1,
+<a name="l01810"></a>01810     std::pair&lt;<span class="keyword">typename</span> hashtable&lt;K, V, A, Ex, Eq, H1,
 <a name="l01811"></a>01811                  H2, H, RP, c, ci, u&gt;::const_iterator,
-<a name="l01812"></a>01812           <span class="keyword">typename</span> hashtable&lt;K, V, <a class="code" href="../../d4/dc4/structA.html">A</a>, Ex, Eq, H1,
+<a name="l01812"></a>01812           <span class="keyword">typename</span> hashtable&lt;K, V, A, Ex, Eq, H1,
 <a name="l01813"></a>01813                  H2, H, RP, c, ci, u&gt;::const_iterator&gt;
 <a name="l01814"></a>01814     hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::
 <a name="l01815"></a>01815     equal_range(<span class="keyword">const</span> key_type&amp; k)<span class="keyword"> const</span>
@@ -1856,7 +1856,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01823"></a>01823     {
 <a name="l01824"></a>01824       node* p1 = p-&gt;m_next;
 <a name="l01825"></a>01825       <span class="keywordflow">for</span> (; p1 ; p1 = p1-&gt;m_next)
-<a name="l01826"></a>01826         <span class="keywordflow">if</span> (!this-&gt;compare(k, code, p1))
+<a name="l01826"></a>01826         <span class="keywordflow">if</span> (!this-&gt;<a class="code" href="../../da/d8a/namespaceAmg.html#ab845c2de1ce866d4b91a11fc7c1a9ca8">compare</a>(k, code, p1))
 <a name="l01827"></a>01827           <span class="keywordflow">break</span>;
 <a name="l01828"></a>01828 
 <a name="l01829"></a>01829       const_iterator first(p, head);
@@ -1872,7 +1872,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01839"></a>01839   <span class="comment">// Find the node whose key compares equal to k, beginning the search</span>
 <a name="l01840"></a>01840   <span class="comment">// at p (usually the head of a bucket).  Return nil if no node is found.</span>
 <a name="l01841"></a>01841   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01842"></a>01842        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01842"></a>01842        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01843"></a>01843        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01844"></a>01844        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01845"></a>01845     <span class="keyword">typename</span> hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::node* 
@@ -1888,10 +1888,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01855"></a>01855 
 <a name="l01856"></a>01856   <span class="comment">// Insert v if no element with its key is already present.</span>
 <a name="l01857"></a>01857   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01858"></a>01858        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01858"></a>01858        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01859"></a>01859        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01860"></a>01860        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
-<a name="l01861"></a>01861     std::pair&lt;<span class="keyword">typename</span> hashtable&lt;K, V, <a class="code" href="../../d4/dc4/structA.html">A</a>, Ex, Eq, H1,
+<a name="l01861"></a>01861     std::pair&lt;<span class="keyword">typename</span> hashtable&lt;K, V, A, Ex, Eq, H1,
 <a name="l01862"></a>01862                  H2, H, RP, c, ci, u&gt;::iterator, <span class="keywordtype">bool</span>&gt;
 <a name="l01863"></a>01863     hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::
 <a name="l01864"></a>01864     insert(<span class="keyword">const</span> value_type&amp; v, CxxUtils_Internal<span class="comment">/*std::tr1*/</span>::true_type) <span class="comment">// sss</span>
@@ -1933,7 +1933,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01900"></a>01900   
 <a name="l01901"></a>01901   <span class="comment">// Insert v unconditionally.</span>
 <a name="l01902"></a>01902   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01903"></a>01903        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01903"></a>01903        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01904"></a>01904        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01905"></a>01905        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01906"></a>01906     <span class="keyword">typename</span> hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::iterator
@@ -1969,7 +1969,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01936"></a>01936 
 <a name="l01937"></a>01937   <span class="comment">// For erase(iterator) and erase(const_iterator).</span>
 <a name="l01938"></a>01938   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01939"></a>01939        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01939"></a>01939        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01940"></a>01940        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01941"></a>01941        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01942"></a>01942     <span class="keywordtype">void</span>
@@ -1995,7 +1995,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01962"></a>01962     }
 <a name="l01963"></a>01963 
 <a name="l01964"></a>01964   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01965"></a>01965        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01965"></a>01965        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01966"></a>01966        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01967"></a>01967        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01968"></a>01968     <span class="keyword">template</span>&lt;<span class="keyword">typename</span> InIter&gt;
@@ -2014,7 +2014,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01981"></a>01981       }
 <a name="l01982"></a>01982 
 <a name="l01983"></a>01983   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01984"></a>01984        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01984"></a>01984        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l01985"></a>01985        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l01986"></a>01986        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l01987"></a>01987     <span class="keyword">typename</span> hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::iterator
@@ -2029,7 +2029,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l01996"></a>01996     }
 <a name="l01997"></a>01997   
 <a name="l01998"></a>01998   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l01999"></a>01999        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l01999"></a>01999        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l02000"></a>02000        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l02001"></a>02001        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l02002"></a>02002     <span class="keyword">typename</span> hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::const_iterator
@@ -2044,7 +2044,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l02011"></a>02011     }
 <a name="l02012"></a>02012 
 <a name="l02013"></a>02013   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l02014"></a>02014        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l02014"></a>02014        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l02015"></a>02015        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l02016"></a>02016        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l02017"></a>02017     <span class="keyword">typename</span> hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::size_type
@@ -2056,10 +2056,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l02023"></a>02023       size_type result = 0;
 <a name="l02024"></a>02024       
 <a name="l02025"></a>02025       node** slot = m_buckets + n;
-<a name="l02026"></a>02026       <span class="keywordflow">while</span> (*slot &amp;&amp; ! this-&gt;compare(k, code, *slot))
+<a name="l02026"></a>02026       <span class="keywordflow">while</span> (*slot &amp;&amp; ! this-&gt;<a class="code" href="../../da/d8a/namespaceAmg.html#ab845c2de1ce866d4b91a11fc7c1a9ca8">compare</a>(k, code, *slot))
 <a name="l02027"></a>02027     slot = &amp;((*slot)-&gt;m_next);
 <a name="l02028"></a>02028 
-<a name="l02029"></a>02029       <span class="keywordflow">while</span> (*slot &amp;&amp; this-&gt;compare(k, code, *slot))
+<a name="l02029"></a>02029       <span class="keywordflow">while</span> (*slot &amp;&amp; this-&gt;<a class="code" href="../../da/d8a/namespaceAmg.html#ab845c2de1ce866d4b91a11fc7c1a9ca8">compare</a>(k, code, *slot))
 <a name="l02030"></a>02030     {
 <a name="l02031"></a>02031       node* n = *slot;
 <a name="l02032"></a>02032       *slot = n-&gt;m_next;
@@ -2075,7 +2075,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l02042"></a>02042   <span class="comment">// structure, but it&apos;s not clear that it&apos;s worth doing.  It probably</span>
 <a name="l02043"></a>02043   <span class="comment">// wouldn&apos;t even be an optimization unless the load factor is large.</span>
 <a name="l02044"></a>02044   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l02045"></a>02045        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l02045"></a>02045        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l02046"></a>02046        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l02047"></a>02047        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l02048"></a>02048     <span class="keyword">typename</span> hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::iterator
@@ -2088,7 +2088,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l02055"></a>02055     }
 <a name="l02056"></a>02056   
 <a name="l02057"></a>02057   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l02058"></a>02058        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l02058"></a>02058        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l02059"></a>02059        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l02060"></a>02060        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l02061"></a>02061     <span class="keyword">typename</span> hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::const_iterator
@@ -2101,7 +2101,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l02068"></a>02068     }
 <a name="l02069"></a>02069 
 <a name="l02070"></a>02070   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l02071"></a>02071        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l02071"></a>02071        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l02072"></a>02072        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l02073"></a>02073        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l02074"></a>02074     <span class="keywordtype">void</span>
@@ -2113,7 +2113,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l02080"></a>02080     }
 <a name="l02081"></a>02081 
 <a name="l02082"></a>02082   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l02083"></a>02083        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l02083"></a>02083        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l02084"></a>02084        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l02085"></a>02085        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l02086"></a>02086     <span class="keywordtype">void</span>
@@ -2126,12 +2126,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l02093"></a>02093     }
 <a name="l02094"></a>02094 
 <a name="l02095"></a>02095   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V, 
-<a name="l02096"></a>02096        <span class="keyword">typename</span> <a class="code" href="../../d4/dc4/structA.html">A</a>, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
+<a name="l02096"></a>02096        <span class="keyword">typename</span> A, <span class="keyword">typename</span> Ex, <span class="keyword">typename</span> Eq,
 <a name="l02097"></a>02097        <span class="keyword">typename</span> H1, <span class="keyword">typename</span> H2, <span class="keyword">typename</span> H, <span class="keyword">typename</span> RP,
 <a name="l02098"></a>02098        <span class="keywordtype">bool</span> c, <span class="keywordtype">bool</span> ci, <span class="keywordtype">bool</span> u&gt;
 <a name="l02099"></a>02099     <span class="keywordtype">void</span>
 <a name="l02100"></a>02100     hashtable&lt;K, V, A, Ex, Eq, H1, H2, H, RP, c, ci, u&gt;::
-<a name="l02101"></a>02101     m_rehash(size_type <a class="code" href="../../da/deb/structN.html">N</a>)
+<a name="l02101"></a>02101     m_rehash(size_type N)
 <a name="l02102"></a>02102     {
 <a name="l02103"></a>02103       node** new_array = m_allocate_buckets (N);
 <a name="l02104"></a>02104       <span class="keywordflow">try</span>

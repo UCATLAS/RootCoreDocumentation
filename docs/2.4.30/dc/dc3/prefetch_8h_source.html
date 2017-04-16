@@ -86,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00082"></a>00082   <span class="keyword">const</span> <span class="keywordtype">char</span>* pp = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span> (ptr);
 <a name="l00083"></a>00083 
 <a name="l00084"></a>00084   <span class="comment">// The compiler will unroll this loop for small N.</span>
-<a name="l00085"></a>00085   <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="../../da/deb/structN.html">N</a>; i += CacheLineSize)
+<a name="l00085"></a>00085   <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; N; i += CacheLineSize)
 <a name="l00086"></a>00086     <a class="code" href="../../de/d12/namespaceCxxUtils.html#abfc11f0c6320559e2a85f8dfabc4ab35" title="Generic prefetch method.">prefetchOne</a> (pp + i);
 <a name="l00087"></a>00087 
 <a name="l00088"></a>00088   <span class="comment">// Issue a prefetch for the last byte as well, in case it crosses</span>

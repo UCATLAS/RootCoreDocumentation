@@ -63,7 +63,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d9a/classCxxUtils_1_1ClassName_1_1ExcMissingVariable.html">ExcMissingVariable</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Exception to signal a missing variable.  <a href="../../de/d9a/classCxxUtils_1_1ClassName_1_1ExcMissingVariable.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d02/classCxxUtils_1_1ClassName_1_1Rules.html">Rules</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="../../d4/dc4/structA.html">A</a> set of transformation rules to use with <code><a class="el" href="../../d2/df5/classCxxUtils_1_1ClassName.html" title="Recursively separate out template arguments in a C++ class name.">ClassName</a></code>.  <a href="../../dd/d02/classCxxUtils_1_1ClassName_1_1Rules.html#_details">More...</a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">A set of transformation rules to use with <code><a class="el" href="../../d2/df5/classCxxUtils_1_1ClassName.html" title="Recursively separate out template arguments in a C++ class name.">ClassName</a></code>.  <a href="../../dd/d02/classCxxUtils_1_1ClassName_1_1Rules.html#_details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2>Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8152d9ea3ca2a3217c43be8a4d645c14"></a><!-- doxytag: member="CxxUtils::ClassName::match_t" ref="a8152d9ea3ca2a3217c43be8a4d645c14" args="" -->
 typedef std::map&lt; std::string, <br class="typebreak"/>
@@ -128,7 +128,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 
  <a class="code" href="../../d0/d4d/classDataVector.html" title="Derived DataVector&amp;lt;T&amp;gt;.">DataVector&lt;Foo, DataModel_detail::NoBase&gt;</a>
    -&gt; <a class="code" href="../../d0/d4d/classDataVector.html" title="Derived DataVector&amp;lt;T&amp;gt;.">DataVector&lt;Foo&gt;</a>
-</pre></div><p>In slightly more <a class="el" href="../../dd/d39/namespacedetail.html">detail</a>: this class analyzes C++ class names. <a class="el" href="../../d4/dc4/structA.html">A</a> name like</p>
+</pre></div><p>In slightly more <a class="el" href="../../dd/d39/namespacedetail.html">detail</a>: this class analyzes C++ class names. A name like</p>
 <div class="fragment"><pre class="fragment">   A::B&lt;int, double&gt; 
 </pre></div><p>is broken down like this:</p>
 <ul>
@@ -136,20 +136,20 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <li>Namespace: `A`.</li>
 <li>Template arguments: `int` and `double`.</li>
 </ul>
-<p>This is done recursively; both the namespace and template argument pieces can be further broken down like this. <a class="el" href="../../d4/dc4/structA.html">A</a> name can also be marked as `const', but no other parsing of C-like declarators is done.</p>
+<p>This is done recursively; both the namespace and template argument pieces can be further broken down like this. A name can also be marked as `const', but no other parsing of C-like declarators is done.</p>
 <p>Parsed names can be matched against simple patterns like this:</p>
 <div class="fragment"><pre class="fragment">  A::B&lt;$T&gt;
 </pre></div><p>and the variable `T` gets set to the corresponding piece of the type being matched. For example, given the above pattern,</p>
 <ul>
 <li>`AC&lt;int&gt;` matches with `T` set to `int`.</li>
-<li>`A<a class="el" href="../../db/db2/structC.html">C</a>&lt;const Foo&lt;Bar&gt; &gt;` matches with `T` set to `const Foo&lt;Bar&gt;`.</li>
+<li>`AC&lt;const Foo&lt;Bar&gt; &gt;` matches with `T` set to `const Foo&lt;Bar&gt;`.</li>
 </ul>
-<p>If the pattern were `A<a class="el" href="../../d9/db3/structB.html">B</a>&lt;const $t&gt;=""&gt;`, then `AB&lt;const int&gt;` would match with `T` set to `int`, but `AB&lt;int&gt;` would not match.</p>
+<p>If the pattern were `AB&lt;const $t&gt;=""&gt;`, then `AB&lt;const int&gt;` would match with `T` set to `int`, but `AB&lt;int&gt;` would not match.</p>
 <p>However, the root name of a pattern may not be a variable; for example, you can't use `A$T&lt;int&gt;` as a pattern.</p>
 <p>You can also substitute variables back into a pattern; for example,</p>
 <ul>
-<li>`T=int` into `A<a class="el" href="../../d9/db3/structB.html">B</a>&lt; $t&gt;=""&gt;` gives `AB&lt;int&gt;`.</li>
-<li>`T=const int` into `A<a class="el" href="../../d9/db3/structB.html">B</a>&lt; $t&gt;=""&gt;` gives `AB&lt;const int&gt;`.</li>
+<li>`T=int` into `AB&lt; $t&gt;=""&gt;` gives `AB&lt;int&gt;`.</li>
+<li>`T=const int` into `AB&lt; $t&gt;=""&gt;` gives `AB&lt;const int&gt;`.</li>
 <li>`T=const int` into `AB&lt;const int&gt;` gives `AB&lt;const int&gt;`. </li>
 </ul>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -420,7 +420,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 
 <p>Return the namespace-qualified name of the expression. </p>
 <p>Return the root name of the expression.</p>
-<p>In `AB&lt;C&gt;`, this is `A<a class="el" href="../../d9/db3/structB.html">B</a>`.</p>
+<p>In `AB&lt;C&gt;`, this is `AB`.</p>
 <p>In `AB&lt;C&gt;`, the root name is `B`. </p>
 
 </div>

@@ -93,7 +93,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00048"></a>00048     <span class="comment">//    std::unique_ptr&lt;TrackCut&gt;&amp; operator[](size_t i) {return m_cuts.at(i);}</span>
 <a name="l00049"></a>00049     std::unique_ptr&lt;TrackCut&gt;&amp; Cut(<span class="keywordtype">size_t</span> i) {<span class="keywordflow">return</span> m_cuts.at(i);}
 <a name="l00050"></a>00050   <span class="keyword">private</span>:
-<a name="l00051"></a>00051     std::array&lt; std::unique_ptr&lt;TrackCut&gt; , <a class="code" href="../../da/deb/structN.html">N</a> &gt; m_cuts;
+<a name="l00051"></a>00051     std::array&lt; std::unique_ptr&lt;TrackCut&gt; , N &gt; m_cuts;
 <a name="l00052"></a>00052   }; <span class="comment">// class OrCut</span>
 <a name="l00053"></a>00053 
 <a name="l00054"></a>00054   <span class="comment">// ---------------- MaxSummaryValueCut ----------------</span>
@@ -140,7 +140,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00095"></a>00095   <span class="keyword">private</span>:
 <a name="l00096"></a>00096     std::function&lt;bool(const std::array&lt;uint8_t,N&gt;&amp;)&gt; m_func;
 <a name="l00097"></a>00097     std::array&lt; xAOD::SummaryType, N&gt; m_summaryTypes;
-<a name="l00098"></a>00098     std::array&lt; std::shared_ptr&lt;SummaryAccessor&gt;,<a class="code" href="../../da/deb/structN.html">N</a> &gt; m_summaryAccessors;
+<a name="l00098"></a>00098     std::array&lt; std::shared_ptr&lt;SummaryAccessor&gt;,N &gt; m_summaryAccessors;
 <a name="l00099"></a>00099     <span class="keyword">mutable</span> std::array&lt;uint8_t,N&gt; m_results; <span class="comment">// member variable to store the results</span>
 <a name="l00100"></a>00100   }; <span class="comment">// class FuncSummaryValueCut</span>
 <a name="l00101"></a>00101   
@@ -316,12 +316,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00271"></a>00271   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, T (xAOD::TrackParticle::*Func)() const&gt;
 <a name="l00272"></a><a class="code" href="../../de/d31/classInDet_1_1MinCut.html">00272</a>   <span class="keyword">class </span><a class="code" href="../../de/d31/classInDet_1_1MinCut.html">MinCut</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="../../d0/d6e/classInDet_1_1TrackCut.html">TrackCut</a> {
 <a name="l00273"></a>00273   <span class="keyword">public</span>:
-<a name="l00274"></a>00274     <a class="code" href="../../de/d31/classInDet_1_1MinCut.html">MinCut</a>(<a class="code" href="../../d3/d8c/classInDet_1_1InDetTrackSelectionTool.html">InDetTrackSelectionTool</a>*, T min, std::string accName);
-<a name="l00275"></a>00275     <span class="keywordtype">void</span> setMinValue(T min) {m_minValue = min;}
+<a name="l00274"></a>00274     <a class="code" href="../../de/d31/classInDet_1_1MinCut.html">MinCut</a>(<a class="code" href="../../d3/d8c/classInDet_1_1InDetTrackSelectionTool.html">InDetTrackSelectionTool</a>*, <a class="code" href="../../d1/def/classT.html">T</a> min, std::string accName);
+<a name="l00275"></a>00275     <span class="keywordtype">void</span> setMinValue(<a class="code" href="../../d1/def/classT.html">T</a> min) {m_minValue = min;}
 <a name="l00276"></a>00276     <span class="keyword">virtual</span> StatusCode initialize();
 <a name="l00277"></a>00277     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> result() <span class="keyword">const</span>;
 <a name="l00278"></a>00278   <span class="keyword">private</span>:
-<a name="l00279"></a>00279     T m_minValue;
+<a name="l00279"></a>00279     <a class="code" href="../../d1/def/classT.html">T</a> m_minValue;
 <a name="l00280"></a>00280     std::string m_accName;
 <a name="l00281"></a>00281     std::shared_ptr&lt; FuncAccessor&lt;T, Func&gt; &gt; m_accessor;
 <a name="l00282"></a>00282   };

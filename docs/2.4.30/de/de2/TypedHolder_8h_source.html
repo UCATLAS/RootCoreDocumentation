@@ -65,12 +65,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00020"></a>00020 <span class="preprocessor">#include &quot;AsgTools/AsgToolsConf.h&quot;</span>
 <a name="l00021"></a>00021 <span class="preprocessor">#ifdef ASGTOOL_STANDALONE</span>
 <a name="l00022"></a>00022 <span class="preprocessor"></span><span class="preprocessor">#include &quot;AsgTools/SgTEvent.h&quot;</span>
-<a name="l00023"></a>00023 <span class="keyword">typedef</span> <a class="code" href="../../d2/dd3/classasg_1_1SgTEvent.html">asg::SgTEvent</a>* <a class="code" href="../../dd/d95/classStoreGateSvc.html" title="Dummy implementation useful for simple testing.">EventPtr</a>;
+<a name="l00023"></a>00023 <span class="keyword">typedef</span> <a class="code" href="../../d2/dd3/classasg_1_1SgTEvent.html">asg::SgTEvent</a>* EventPtr;
 <a name="l00024"></a>00024 <span class="preprocessor">#endif //ASGTOOL_STANDALONE</span>
 <a name="l00025"></a>00025 <span class="preprocessor"></span>
 <a name="l00026"></a>00026 <span class="preprocessor">#ifdef ASGTOOL_ATHENA</span>
 <a name="l00027"></a>00027 <span class="preprocessor"></span><span class="preprocessor">#include &quot;StoreGate/StoreGateSvc.h&quot;</span>
-<a name="l00028"></a>00028 <span class="keyword">typedef</span> <a class="code" href="../../dd/d95/classStoreGateSvc.html" title="Dummy implementation useful for simple testing.">StoreGateSvc</a>* <a class="code" href="../../dd/d95/classStoreGateSvc.html" title="Dummy implementation useful for simple testing.">EventPtr</a>;
+<a name="l00028"></a>00028 <span class="keyword">typedef</span> StoreGateSvc* EventPtr;
 <a name="l00029"></a>00029 <span class="preprocessor">#endif //ASGTOOL_ATHENA</span>
 <a name="l00030"></a>00030 <span class="preprocessor"></span>
 <a name="l00031"></a>00031 <span class="preprocessor">#include &quot;AsgTools/AsgMessaging.h&quot;</span>
@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00062"></a>00062   <span class="keyword">public</span>:
 <a name="l00066"></a>00066     <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T,<span class="keywordtype">bool</span> value&gt; <span class="keyword">using</span> StatusCode_if = <span class="keyword">typename</span> std::enable_if&lt;boost::is_same&lt;T,CONTAINER&gt;::value == value,StatusCode&gt;::type;
 <a name="l00067"></a>00067 
-<a name="l00072"></a><a class="code" href="../../d3/d2b/classHLT_1_1TypedHolder.html#aaf7ecd9c31fb51caf55086e51d237930">00072</a>     <a class="code" href="../../d3/d2b/classHLT_1_1TypedHolder.html" title="doubly templated class interfacing access to feature containers in StoreGate.">TypedHolder</a>(<span class="keyword">const</span> <a class="code" href="../../d8/d7d/classHLT_1_1BaseHolder.html">BaseHolder</a>&amp; baseholder, <a class="code" href="../../dd/d95/classStoreGateSvc.html" title="Dummy implementation useful for simple testing.">EventPtr</a> store, <span class="keyword">const</span> std::string&amp; container_name = <a class="code" href="../../d0/dbd/structClassID__traits.html">ClassID_traits&lt;CONTAINER&gt;::typeName</a>()) 
+<a name="l00072"></a><a class="code" href="../../d3/d2b/classHLT_1_1TypedHolder.html#aaf7ecd9c31fb51caf55086e51d237930">00072</a>     <a class="code" href="../../d3/d2b/classHLT_1_1TypedHolder.html" title="doubly templated class interfacing access to feature containers in StoreGate.">TypedHolder</a>(<span class="keyword">const</span> <a class="code" href="../../d8/d7d/classHLT_1_1BaseHolder.html">BaseHolder</a>&amp; baseholder, EventPtr store, <span class="keyword">const</span> std::string&amp; container_name = <a class="code" href="../../d0/dbd/structClassID__traits.html">ClassID_traits&lt;CONTAINER&gt;::typeName</a>()) 
 <a name="l00073"></a>00073       : <a class="code" href="../../d1/de7/classHLT_1_1TypelessHolder.html">TypelessHolder</a>(baseholder.typeClid(),baseholder.label(),baseholder.subTypeIndex()), 
 <a name="l00074"></a>00074     asg::<a class="code" href="../../d1/d97/classasg_1_1AsgMessaging.html#aa6e565de0931b6458b932cbb6a8ec55f" title="Constructor with a name.">AsgMessaging</a>(<span class="stringliteral">&quot;TypedHolder&quot;</span>),
 <a name="l00075"></a>00075     m_store(store),
@@ -108,7 +108,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00079"></a>00079       m_key = HLTNavDetails::formatSGkey(<span class="stringliteral">&quot;HLT&quot;</span>,container_name,this-&gt;label());
 <a name="l00080"></a>00080     }
 <a name="l00081"></a>00081     
-<a name="l00085"></a><a class="code" href="../../d3/d2b/classHLT_1_1TypedHolder.html#a788d73d3e9d01aee04f0fd049630bc3c">00085</a>     <a class="code" href="../../d3/d2b/classHLT_1_1TypedHolder.html" title="doubly templated class interfacing access to feature containers in StoreGate.">TypedHolder</a>(<span class="keyword">const</span> <a class="code" href="../../d1/de7/classHLT_1_1TypelessHolder.html">TypelessHolder</a>&amp; typeless, <a class="code" href="../../dd/d95/classStoreGateSvc.html" title="Dummy implementation useful for simple testing.">EventPtr</a> store, <span class="keyword">const</span> std::string&amp; container_name = <a class="code" href="../../d0/dbd/structClassID__traits.html">ClassID_traits&lt;CONTAINER&gt;::typeName</a>()) 
+<a name="l00085"></a><a class="code" href="../../d3/d2b/classHLT_1_1TypedHolder.html#a788d73d3e9d01aee04f0fd049630bc3c">00085</a>     <a class="code" href="../../d3/d2b/classHLT_1_1TypedHolder.html" title="doubly templated class interfacing access to feature containers in StoreGate.">TypedHolder</a>(<span class="keyword">const</span> <a class="code" href="../../d1/de7/classHLT_1_1TypelessHolder.html">TypelessHolder</a>&amp; typeless, EventPtr store, <span class="keyword">const</span> std::string&amp; container_name = <a class="code" href="../../d0/dbd/structClassID__traits.html">ClassID_traits&lt;CONTAINER&gt;::typeName</a>()) 
 <a name="l00086"></a>00086       : <a class="code" href="../../d1/de7/classHLT_1_1TypelessHolder.html">TypelessHolder</a>(typeless),
 <a name="l00087"></a>00087     asg::<a class="code" href="../../d1/d97/classasg_1_1AsgMessaging.html#aa6e565de0931b6458b932cbb6a8ec55f" title="Constructor with a name.">AsgMessaging</a>(<span class="stringliteral">&quot;TypedHolder&quot;</span>),
 <a name="l00088"></a>00088     m_store(store),
@@ -186,7 +186,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00175"></a>00175     }
 <a name="l00176"></a>00176     
 <a name="l00177"></a>00177     TypedHolder(){;}
-<a name="l00178"></a>00178     <a class="code" href="../../dd/d95/classStoreGateSvc.html" title="Dummy implementation useful for simple testing.">EventPtr</a> m_store;
+<a name="l00178"></a>00178     EventPtr m_store;
 <a name="l00179"></a>00179     <span class="keyword">const</span> CONTAINER* m_cont;
 <a name="l00180"></a>00180     std::string m_key;
 <a name="l00181"></a>00181   };    

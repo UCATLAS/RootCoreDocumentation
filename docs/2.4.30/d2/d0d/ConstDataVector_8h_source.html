@@ -56,13 +56,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00068"></a>00068 
 <a name="l00072"></a>00072 <span class="keyword">template</span> &lt;<span class="keyword">class</span> DV&gt;
 <a name="l00073"></a><a class="code" href="../../de/db1/classConstDataVector.html">00073</a> <span class="keyword">class </span><a class="code" href="../../de/db1/classConstDataVector.html" title="DataVector adapter that acts like it holds const pointers.">ConstDataVector</a>
-<a name="l00074"></a>00074   : <span class="keyword">private</span> <a class="code" href="../../d3/d78/structDV.html">DV</a>
+<a name="l00074"></a>00074   : <span class="keyword">private</span> DV
 <a name="l00075"></a>00075 {
 <a name="l00076"></a>00076 <span class="keyword">public</span>:
 <a name="l00078"></a><a class="code" href="../../de/db1/classConstDataVector.html#a0b7cdd6c8969c3dbdbbb23eabfb4d524">00078</a>   <span class="keyword">typedef</span> <span class="keyword">typename</span> DV::size_type                <a class="code" href="../../de/db1/classConstDataVector.html#a0b7cdd6c8969c3dbdbbb23eabfb4d524" title="Basic types, forwarded from the base.">size_type</a>;
 <a name="l00079"></a>00079   <span class="keyword">typedef</span> <span class="keyword">typename</span> DV::difference_type          difference_type;
 <a name="l00080"></a>00080   <span class="keyword">typedef</span> <span class="keyword">typename</span> DV::allocator_type           allocator_type;
-<a name="l00081"></a>00081   <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="../../d1/def/classT.html">DV::base_value_type</a>          base_value_type;
+<a name="l00081"></a>00081   <span class="keyword">typedef</span> <span class="keyword">typename</span> DV::base_value_type          base_value_type;
 <a name="l00082"></a>00082   <span class="keyword">typedef</span> <span class="keyword">typename</span> DV::BaseContainer            BaseContainer;
 <a name="l00083"></a>00083   <span class="keyword">typedef</span> <span class="keyword">typename</span> DV::DVL_BASE                 DVL_BASE;
 <a name="l00084"></a>00084   <span class="keyword">typedef</span> <span class="keyword">typename</span> DV::const_iterator           const_iterator;
@@ -292,7 +292,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00706"></a>00706 <span class="preprocessor"></span>
 <a name="l00707"></a>00707 
 <a name="l00708"></a>00708 <span class="keyword">public</span>:
-<a name="l00712"></a>00712   <span class="keyword">const</span> <a class="code" href="../../d3/d78/structDV.html">DV</a>* <a class="code" href="../../de/db1/classConstDataVector.html#afc25e0985e21c58a97654203aa8c2635" title="Return a pointer to this object, as a const DataVector.">asDataVector</a>() <span class="keyword">const</span>;
+<a name="l00712"></a>00712   <span class="keyword">const</span> DV* <a class="code" href="../../de/db1/classConstDataVector.html#afc25e0985e21c58a97654203aa8c2635" title="Return a pointer to this object, as a const DataVector.">asDataVector</a>() <span class="keyword">const</span>;
 <a name="l00713"></a>00713 
 <a name="l00714"></a>00714 
 <a name="l00722"></a>00722   <span class="keywordtype">void</span> <a class="code" href="../../de/db1/classConstDataVector.html#a12fe9d9af90d3aa4afbe056fe433a5cc" title="Reset indices / reorder aux data after elements have been permuted.">resortAux</a> (<a class="code" href="../../d5/d70/classDataModel__detail_1_1iterator.html" title="(Non-const) Iterator class for DataVector/DataList. ">iterator</a> <span class="comment">/*beg*/</span>, <a class="code" href="../../d5/d70/classDataModel__detail_1_1iterator.html" title="(Non-const) Iterator class for DataVector/DataList. ">iterator</a> <span class="comment">/*end*/</span>);
@@ -365,7 +365,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00874"></a>00874 <span class="preprocessor">#include &quot;SGTools/ClassID_traits.h&quot;</span>
 <a name="l00875"></a>00875 
 <a name="l00880"></a>00880 <span class="keyword">template</span> &lt;<span class="keyword">class</span> DV&gt;
-<a name="l00881"></a><a class="code" href="../../df/dbb/structClassID__traits_3_01ConstDataVector_3_01DV_01_4_01_4.html">00881</a> <span class="keyword">struct </span><a class="code" href="../../d0/dbd/structClassID__traits.html">ClassID_traits</a>&lt;<a class="code" href="../../de/db1/classConstDataVector.html" title="DataVector adapter that acts like it holds const pointers.">ConstDataVector</a>&lt;<a class="code" href="../../d3/d78/structDV.html">DV</a>&gt; &gt;
+<a name="l00881"></a><a class="code" href="../../df/dbb/structClassID__traits_3_01ConstDataVector_3_01DV_01_4_01_4.html">00881</a> <span class="keyword">struct </span><a class="code" href="../../d0/dbd/structClassID__traits.html">ClassID_traits</a>&lt;<a class="code" href="../../de/db1/classConstDataVector.html" title="DataVector adapter that acts like it holds const pointers.">ConstDataVector</a>&lt;DV&gt; &gt;
 <a name="l00882"></a>00882   : <span class="keyword">public</span> <a class="code" href="../../d0/dbd/structClassID__traits.html">ClassID_traits</a>&lt;DV&gt;
 <a name="l00883"></a>00883 {
 <a name="l00884"></a>00884 <span class="keyword">public</span>:
@@ -392,7 +392,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00921"></a>00921 
 <a name="l00922"></a>00922 
 <a name="l00930"></a>00930 <span class="keyword">template</span> &lt;<span class="keyword">class</span> DV, <span class="keyword">class</span> U&gt;
-<a name="l00931"></a><a class="code" href="../../d6/d86/structSG_1_1DataBucketTrait_3_01ConstDataVector_3_01DV_01_4_00_01U_01_4.html">00931</a> <span class="keyword">struct </span>DataBucketTrait&lt;<a class="code" href="../../de/db1/classConstDataVector.html" title="DataVector adapter that acts like it holds const pointers.">ConstDataVector</a>&lt;<a class="code" href="../../d3/d78/structDV.html">DV</a>&gt;, U&gt;
+<a name="l00931"></a><a class="code" href="../../d6/d86/structSG_1_1DataBucketTrait_3_01ConstDataVector_3_01DV_01_4_00_01U_01_4.html">00931</a> <span class="keyword">struct </span>DataBucketTrait&lt;<a class="code" href="../../de/db1/classConstDataVector.html" title="DataVector adapter that acts like it holds const pointers.">ConstDataVector</a>&lt;DV&gt;, U&gt;
 <a name="l00932"></a>00932 {
 <a name="l00933"></a>00933   <span class="keyword">typedef</span> <a class="code" href="../../d3/d46/classSG_1_1DVLConstDataVectorBucket.html" title="DataBucket class for ConstDataVector.">SG::DVLConstDataVectorBucket&lt;DV&gt;</a> <a class="code" href="../../d3/d46/classSG_1_1DVLConstDataVectorBucket.html" title="DataBucket class for ConstDataVector.">type</a>;
 <a name="l00934"></a>00934   <span class="keyword">static</span> <span class="keywordtype">void</span> init() { DV::dvlinfo(); }
@@ -400,7 +400,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00936"></a>00936 
 <a name="l00937"></a>00937 
 <a name="l00942"></a>00942 <span class="keyword">template</span> &lt;<span class="keyword">class</span> DV&gt;
-<a name="l00943"></a><a class="code" href="../../d4/dc5/classSG_1_1BaseInfo_3_01ConstDataVector_3_01DV_01_4_01_4.html">00943</a> <span class="keyword">class </span>BaseInfo&lt;<a class="code" href="../../de/db1/classConstDataVector.html" title="DataVector adapter that acts like it holds const pointers.">ConstDataVector</a>&lt;<a class="code" href="../../d3/d78/structDV.html">DV</a>&gt; &gt;
+<a name="l00943"></a><a class="code" href="../../d4/dc5/classSG_1_1BaseInfo_3_01ConstDataVector_3_01DV_01_4_01_4.html">00943</a> <span class="keyword">class </span>BaseInfo&lt;<a class="code" href="../../de/db1/classConstDataVector.html" title="DataVector adapter that acts like it holds const pointers.">ConstDataVector</a>&lt;DV&gt; &gt;
 <a name="l00944"></a>00944   : <span class="keyword">public</span> BaseInfo&lt;DV&gt;
 <a name="l00945"></a>00945 {
 <a name="l00946"></a>00946 };

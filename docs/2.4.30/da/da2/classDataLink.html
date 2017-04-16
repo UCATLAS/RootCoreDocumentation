@@ -258,7 +258,7 @@ template&lt;typename STORABLE &gt; </div>
 <p>This constructor can be used to create a valid object based on a reference to an existing object, that's already part of the current event. In case the object can not be found in the current event, the constructor throws an exception.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td><a class="el" href="../../d4/dc4/structA.html">A</a> constant reference to the object that the smart pointer should point to </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>A constant reference to the object that the smart pointer should point to </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>event</em>&nbsp;</td><td>Pointer to an alternative TVirtualEvent object </td></tr>
   </table>
   </dd>
@@ -297,7 +297,7 @@ template&lt;typename STORABLE &gt; </div>
 <p>This constructor can be used to create a valid object based on a pointer to an existing object, that's already part of the current event. In case the object can not be found in the current event, the constructor throws an exception.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td><a class="el" href="../../d4/dc4/structA.html">A</a> constant pointer to the object that the smart pointer should point to </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>A constant pointer to the object that the smart pointer should point to </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>event</em>&nbsp;</td><td>Pointer to an alternative TVirtualEvent object </td></tr>
   </table>
   </dd>
@@ -336,7 +336,7 @@ template&lt;typename STORABLE &gt; </div>
 <p>This is probably the most convenient version of the constructors. It receives a string identifier (branch name) for the object that the smart pointer should reference.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td><a class="el" href="../../d4/dc4/structA.html">A</a> string identifier for the object to be referenced </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>A string identifier for the object to be referenced </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>event</em>&nbsp;</td><td>Pointer to an alternative TVirtualEvent object </td></tr>
   </table>
   </dd>
@@ -375,7 +375,7 @@ template&lt;typename STORABLE &gt; </div>
 <p>This is the most cost-effective of the constructors after the default one. It relies on the user knowing exactly what hashed key to ask for for the target object.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td><a class="el" href="../../d4/dc4/structA.html">A</a> hashed key identifying the object to be referenced </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>A hashed key identifying the object to be referenced </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>event</em>&nbsp;</td><td>Pointer to an alternative TVirtualEvent object </td></tr>
   </table>
   </dd>
@@ -434,7 +434,7 @@ template&lt;class STORABLE &gt; </div>
 
 <p>Get a constant pointer to the referenced object. </p>
 <p>This function is doing most of the heavy lifting. It interacts with the TVirtualEvent object to deliver a pointer to the target object to the user.</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="../../d4/dc4/structA.html">A</a> constant pointer to the target object if available, a null pointer if not </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A constant pointer to the target object if available, a null pointer if not </dd></dl>
 
 <p><p>Default key, calculated just once: </p>
 </p>
@@ -484,7 +484,7 @@ template&lt;class STORABLE &gt; </div>
 
 <p>Get a reference to the target object. May throw an exception. </p>
 <p>This operator can be used to get a constant reference to the object. In most cases though one should probably use the -&gt; operator instead. The code throws an exception if the target object is not available.</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="../../d4/dc4/structA.html">A</a> constant reference to the target object if available </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A constant reference to the target object if available </dd></dl>
 
 </div>
 </div>
@@ -561,7 +561,7 @@ template&lt;typename STORABLE &gt; </div>
 <p>This is one of the more convenient functions. It sets up the smart pointer using a user-readable string idetifier for the target object.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td><a class="el" href="../../d4/dc4/structA.html">A</a> string identifier (branch name) for the target object </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>A string identifier (branch name) for the target object </td></tr>
   </table>
   </dd>
 </dl>
@@ -587,7 +587,7 @@ template&lt;class STORABLE &gt; </div>
 
 <p>Prepare the object to be written out. </p>
 <p>This function is just here to enable us compiling the same EDM code as we do offline. We don't actually need to prepare this object for being written out, it's always in a consistent state.</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="../../d4/dc4/structA.html">A</a> dummy value. Just to have the same signature as the offline function. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A dummy value. Just to have the same signature as the offline function. </dd></dl>
 
 </div>
 </div>
@@ -614,7 +614,7 @@ template&lt;typename STORABLE &gt; </div>
 <p>The function will throw an exception if the supplied object can't be found in the current event.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td><a class="el" href="../../d4/dc4/structA.html">A</a> reference to the target object </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>A reference to the target object </td></tr>
   </table>
   </dd>
 </dl>
