@@ -6,8 +6,8 @@ git status -uno
 # make directories and copy over
 #mkdir -p xml/${ABV}
 mkdir -p docs/${ABV}
-#git rm -rf xml/${ABV}
-git rm -rf docs/${ABV}
+#git rm -rf xml/${ABV}/*
+git rm -rf docs/${ABV}/*
 #cp -R temp/${ABV}/xml/* xml/${ABV}/.
 cp -R temp/${ABV}/html/* docs/${ABV}/.
 cp -R temp/rootcore_${ABV}.tag tagfiles/rootcore_${ABV}.tag
